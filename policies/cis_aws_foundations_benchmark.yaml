@@ -1,0 +1,58 @@
+id: 74406460-05fb-4057-b646-f3f8c1e5d56f
+policyId: CIS
+policyName:  CIS Amazon Web Services Foundations
+description: >
+  The CIS Security Benchmarks program provides well-defined, unbiased, consensus-based
+  industry best practices to help organizations assess and improve their security
+enabled: true
+rules:
+  - avoid_use_of_root_account.yaml
+  - mfa_with_console_password.yaml
+  - disable_unused_credentials_after_90_days.yaml
+  - rotate_access_keys_every_90_days.yaml
+  - iam_password_policy_requires_uppercase_letter.yaml
+  - iam_password_policy_requires_lowercase_letter.yaml
+  - iam_password_policy_require_symbol.yaml
+  - iam_password_policy_require_number.yaml
+  - iam_password_policy_requires_min_length_14.yaml
+  - iam_password_policy_prevents_password_reuse.yaml
+  - iam_password_policy_passwords_rotation_or_expiration.yaml
+  - no_root_account_access_key.yaml
+  - mfa_enabled_for_root_account.yaml
+  - hardware_mfa_enabled_for_root_account.yaml
+  - aws_account_security_questions_registered.yaml
+  - iam_policies_attached_only_to_groups_or_roles.yaml
+  - maintain_current_contact_details.yaml
+  - security_contact_information_registered.yaml
+  - iam_roles_for_resource_access_from_instances.yaml
+  - support_role_is_created.yaml
+  - no_access_keys_initially.yaml
+  - no_full_administrative_privileges_policies.yaml
+  - cloudtrail_enabled_in_all_regions.yaml
+  - cloudtrail_log_file_validation_enabled.yaml
+  - s3_bucket_cloudtrail_logs_not_publicly_accessible.yaml
+  - trails_integrated_with_cloudwatch_logs.yaml
+  - aws_config_enabled_in_all_regions.yaml
+  - s3_bucket_access_logging_enabled.yaml
+  - cloudtrail_logs_encrypted_using_kms_cmks.yaml
+  - rotation_for_customer_created_cmks.yaml
+  - flow_logging_enabled_in_all_vpcs.yaml
+  - metric_filter_and_alarm_unauthorized_api_calls.yaml
+  - metric_filter_and_alarm_console_sign_in_without_mfa.yaml
+  - metric_filter_and_alarm_root_account_usage.yaml
+  - metric_filter_and_alarm_iam_policy_changes.yaml
+  - metric_filter_and_alarm_cloudtrail_config_changes.yaml
+  - metric_filter_and_alarm_aws_mc_auth_failures.yaml
+  - metric_filter_and_alarm_disabling_deletion_cmks.yaml
+  - metric_filter_and_alarm_s3_buckets_policy_changes.yaml
+  - metric_filter_and_alarm_s3_buckets_policy_changes.yaml
+  - metric_filter_and_alarm_security_group_changes.yaml
+  - metric_filter_and_alarm_nacl_changes.yaml
+  - metric_filter_and_alarm_gateways_changes.yaml
+  - metric_filter_and_alarm_route_table_changes.yaml
+  - metric_filter_and_alarm_vpc_changes.yaml
+  - no_unrestricted_ssh_access.yaml
+  - no_unrestricted_tcp_udp_access.yaml
+  - default_security_groups_restrict_all_traffic.yaml
+  - peering_vpc_routing_tables_least_access.yaml
+version: 0.1.3

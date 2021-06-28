@@ -1,0 +1,46 @@
+id: 3f2a6c76-edd8-4e6f-b0e1-5213acbfebda
+ruleId: aws_026
+type: asset
+ruleName: >
+  Ensure CloudTrail trails are integrated with CloudWatch Logs
+description: >
+  AWS CloudTrail is a web service that records AWS API calls made in a given AWS account.
+  The recorded information includes the identity of the API caller, the time of the API call, the
+  source IP address of the API caller, the request parameters, and the response elements
+  returned by the AWS service. CloudTrail uses Amazon S3 for log file storage and delivery,
+  so log files are stored durably. In addition to capturing CloudTrail logs within a specified S3
+  bucket for long term analysis, realtime analysis can be performed by configuring CloudTrail
+  to send logs to CloudWatch Logs. For a trail that is enabled in all regions in an account,
+  CloudTrail sends log files from all those regions to a CloudWatch Logs log group. It is
+  recommended that CloudTrail logs be sent to CloudWatch Logs
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id
+  FROM assets
+  WHERE resource_type = 'AWS::CloudTrail::Trail'
+    AND (supplementary_configuration->'trailDetails'->'trail'->'cloudWatchLogsLogGroupArn' = 'null'
+         OR supplementary_configuration->'status'->'latestCloudWatchLogsDeliveryTime' = 'null'
+         OR TO_TIMESTAMP(supplementary_configuration->'status'->>'latestCloudWatchLogsDeliveryTime', 'YYYY-MM-DDTHH24:MI:SS') < now() - '1 day' :: interval);
+remediation: >
+  Perform the following to establish the prescribed state:
+  Via the AWS management Console
+    1. Sign in to the AWS Management Console and open the CloudTrail console at
+    https://console.aws.amazon.com/cloudtrail/
+    2. Under All Buckets, click on the target bucket you wish to evaluate
+    3. Click Properties on the top right of the console
+    4. Click Trails in the left menu
+    5. Click on each trail where no CloudWatch Logs are defined
+    6. Go to the CloudWatch Logs section and click on Configure
+    7. Define a new or select an existing log group
+    8. Click on Continue
+    9. Configure IAM Role which will deliver CloudTrail events to CloudWatch Logs
+      o Create/Select an IAM Role and Policy Name
+      o Click Allow to continue
+  Via CLI
+    aws cloudtrail update-trail --name <trail_name> --cloudwatch-logs-log-grouparn <cloudtrail_log_group_arn> --cloudwatch-logs-role-arn
+    <cloudtrail_cloudwatchLogs_role_arn>
+
+remediationDocURLs:
+  - https://docs.openraven.com/remediations/integrate_CloudTrails_with_CloudWatch_logs
+version: 0.1.3
