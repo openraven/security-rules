@@ -1,0 +1,38 @@
+id: bd76fc0a-6158-4b28-bed8-0beeef079223
+ruleId: aws_019
+type: asset
+ruleName: >
+  Ensure IAM instance roles are used for AWS resource access from instances
+description: >
+  AWS access from within AWS instances can be done by either encoding AWS keys into AWS
+  API calls or by assigning the instance to a role which has an appropriate permissions policy
+  for the required access. "AWS Access" means accessing the APIs of AWS in order to access
+  AWS resources or manage AWS account resources.
+manualControl: true
+severity: high
+enabled: true
+remediation: >
+  IAM roles can only be associated at the launch of an instance. To remediate an instance to
+  add it to a role you must create a new instance.
+  If the instance has no external dependencies on its current private ip or public addresses
+  are elastic IPs:
+    1. In AWS IAM create a new role. Assign a permissions policy if needed permissions
+    are already known.
+    2. In the AWS console launch a new instance with identical settings to the existing
+    instance, and ensure that the newly created role is selected.
+    3. Shutdown both the existing instance and the new instance.
+    4. Detach disks from both instances.
+    5. Attach the existing instance disks to the new instance.
+    6. Boot the new instance and you should have the same machine, but with the
+    associated role.
+  Note: if your environment has dependencies on a dynamically assigned PRIVATE IP
+  address you can create an AMI from the existing instance, destroy the old one and then
+  when launching from the AMI, manually assign the previous private IP address.
+  Note: if your environment has dependencies on a dynamically assigned PUBLIC IP address
+  there is not a way ensure the address is retained and assign an instance role. Dependencies
+  on dynamically assigned public IP addresses are a bad practice and, if possible, you may
+  wish to rebuild the instance with a new elastic IP address and make the investment to
+  remediate affected systems while assigning the system to a role.
+remediationDocURLs:
+  - https://docs.openraven.com/remediations/ensure_IAM_roles_used_for_resource_access_from_instances
+version: 0.1.3

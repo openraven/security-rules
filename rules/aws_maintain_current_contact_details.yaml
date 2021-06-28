@@ -1,0 +1,34 @@
+id: 4c27ebae-abf6-4533-beef-c955c0082edc
+ruleId: aws_017
+type: asset
+ruleName: >
+  Maintain current contact details
+description: >
+  Ensure contact email and telephone details for AWS accounts are current and map to more
+  than one individual in your organization.
+  An AWS account supports a number of contact details, and AWS will use these to contact
+  the account owner if activity judged to be in breach of Acceptable Use Policy or indicative
+  of likely security compromise is observed by the AWS Abuse team. Contact details should
+  not be for a single individual, as circumstances may arise where that individual is
+  unavailable. Email contact details should point to a mail alias which forwards email to
+  multiple individuals within the organization; where feasible, phone contact details should
+  point to a PABX hunt group or other call-forwarding system.
+manualControl: true
+severity: high
+enabled: true
+remediation: >
+  This activity can only be performed via the AWS Console, with a user who has permission
+  to read and write Billing information (aws-portal:*Billing ).
+    - Sign in to the AWS Management Console and open the Billing and Cost Management
+      console at https://console.aws.amazon.com/billing/home#/.
+    - On the navigation bar, choose your account name, and then choose My Account.
+    - On the Account Settings page, next to Account Settings, choose Edit.
+    - Next to the field that you need to update, choose Edit.
+    - After you have entered your changes, choose Save changes.
+    - After you have made your changes, choose Done.
+    - To edit your contact information, under Contact Information, choose Edit.
+    - For the fields that you want to change, type your updated information, and then
+      choose Update.
+remediationDocURLs:
+  - https://docs.openraven.com/remediations/maintain_current_contact_details
+version: 0.1.3
