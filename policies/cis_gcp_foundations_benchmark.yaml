@@ -1,0 +1,10 @@
+id: d8792397-239e-4028-9539-7b3771ba929f
+policyId: CIS GCP
+policyName:  CIS Google Cloud Platform Foundation
+description: >
+  The CIS Security Benchmarks program provides well-defined, unbiased, consensus-based
+  industry best practices to help organizations assess and improve their security
+enabled: true
+rules:
+  - gcp_service_account_no_user_managed_keys.yaml
+version: 0.1.3
