@@ -7,5 +7,5 @@ description: >
 enabled: true
 rules:
   - gcp_service_account_no_user_managed_keys.yaml
-  - gcp_IAM_users__not_assigned_the_Service_Account_User_or_Service_Account_Token_Creator _roles at _level.yaml
+  - no_project_level_service_account_user_or_token_for_iam_user.yaml
 version: 0.1.3
