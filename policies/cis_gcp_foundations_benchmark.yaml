@@ -7,4 +7,5 @@ description: >
 enabled: true
 rules:
   - gcp_service_account_no_user_managed_keys.yaml
+  - gcp_instances_dont_use_default_service_account.yaml
 version: 0.1.3
