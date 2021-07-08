@@ -1,6 +1,7 @@
 id: 74406460-05fb-4057-b646-f3f8c1e5d56f
 policyId: CIS
 policyName:  CIS Amazon Web Services Foundations
+cloudProvider: AWS
 description: >
   The CIS Security Benchmarks program provides well-defined, unbiased, consensus-based
   industry best practices to help organizations assess and improve their security
