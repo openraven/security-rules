@@ -1,0 +1,27 @@
+id: acffd4d7-0fe4-4750-a155-6c6fc35f133f
+ruleId: aws_51
+type: asset
+ruleName: >
+  Ensure that S3 Bucket restrict public access by ACL and poolicy
+description: >
+  S3 Buckets should not be reachable outside of the project by default,
+  violation if that rule could cause major vulnerabilities and data loss
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id
+    FROM assets
+   WHERE resource_type = 'AWS::S3::Bucket'
+     AND (supplementary_configuration ->> 'isPublicByACL' <> 'false'
+        OR supplementary_configuration ->> 'isPublicByPolicy' <> 'false')
+remediation: >
+  Perform the following to restrict public access to S3 bucket
+    1. Sign in to the AWS Management Console and open the S3 console at https://console.aws.amazon.com/s3.
+    2. On the left side menu find option "Block Public Access settings for this account"
+    3. Edit and click on required level of restriction. Block all public access is preferable. Will set it globaly
+    4. Open bucket, then open tab Permnissions
+    5. Find "Access control list (ACL)" part and ensure bucket owner is only have access
+    6. Find "Bucket policy" check for any public configuration like "principal": * etc
+    7. Reference: https://docs.amazonaws.cn/en_us/AmazonS3/latest/userguide/access-control-block-public-access.html
+    8. Reference: https://aws.amazon.com/s3/features/block-public-access/
+
