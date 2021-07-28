@@ -1,0 +1,28 @@
+id: 3f6d5049-58e9-4bf0-b653-989b0545537e
+ruleId: aws_52
+type: asset
+ruleName: >
+  Ensure that GuardDuty enabled for required region
+description: >
+  By enabling GuardDuty you will get threat detection service that continuously monitors for
+  malicious activity and unauthorized behavior to protect your AWS accounts, workloads, and data stored in Amazon S3
+  by event logs analysis.
+  We are excluding verification for aws-global region from possible regions for GuardDuty
+severity: high
+enabled: true
+sql: >
+  SELECT 'No GuardDuty detector enabled in discovered regions: ' || STRING_AGG(reg.region_global, ', ') as asset_id
+    FROM (SELECT distinct region as region_global
+            FROM assets
+           WHERE region != 'aws-global') reg
+    LEFT JOIN (SELECT region
+                 FROM assets a
+                WHERE resource_type = 'AWS::GuardDuty::Detector'
+                  AND "configuration" ->> 'status' = 'ENABLED') a
+    ON (reg.region_global = a.region or region is null)
+  WHERE region is null
+remediation: >
+  Perform the following steps under the below link to enable GuardDuty:
+  https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_settingup.html
+
+
