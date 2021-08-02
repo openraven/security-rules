@@ -36,13 +36,13 @@ remediation: >
     1. Sign in to the AWS Management Console and open the IAM console at
     https://console.aws.amazon.com/iam/.
     2. In the left navigation pane, click on Users
-  3. For each user
-    1. Select the user
-    2. Click on the Permissions tab
-    3. Expand Managed Policies
-    4. Click Detach Policy for each policy
-    5. Expand Inline Policies
-    6. Click Remove Policy for each policy
+    3. For each user
+      1. Select the user
+      2. Click on the Permissions tab
+      3. Expand Managed Policies
+      4. Click Detach Policy for each policy
+      5. Expand Inline Policies
+      6. Click Remove Policy for each policy
 remediationDocURLs:
   - https://docs.openraven.com/remediations/detach_IAM_policies_from_users
 version: 0.1.3
