@@ -8,9 +8,9 @@ description: >
   which increase risks and leads to Ransomware violations.
   This rule checks Attached policies only. The Inline policies verified under the respective rule.
 severity: high
-enabled: false
+enabled: true
 sql: >
-  SELECT a.asset_id
+  SELECT DISTINCT a.asset_id
   FROM assets a, LATERAL (
       SELECT value ->> 'arn' as attached_policy_arn
       FROM jsonb_array_elements(a.supplementary_configuration -> 'attachedPolicies')
