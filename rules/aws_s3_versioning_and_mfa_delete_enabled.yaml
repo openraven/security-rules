@@ -1,0 +1,29 @@
+id: 8706258d-c0cb-42fd-af28-b1ee42efd868
+ruleId: aws_50
+type: asset
+ruleName: >
+  Ensure that S3 Bucket has MFA option enabled for changing Bucket Versioning settings and permanently deleting object versions
+description: >
+  S3 Buckets should be protected from ransomware attacks, by configuring versioning and MFA Delete,
+  in order to disallow immediate bucket content removal to encryption, or any other harmful modifications
+  Disabled versioning is also considered as violation by this rule since attacker may make the bucket vulnerable
+  by disabling object versioning with the s3:PutBucketVersioning permission
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id, supplementary_configuration -> 'versioning' ->> 'status'
+    FROM assets
+   WHERE resource_type = 'AWS::S3::Bucket'
+     AND (supplementary_configuration -> 'versioning' ->> 'status' is null
+        OR supplementary_configuration -> 'versioning' ->> 'status' <> 'Enabled'
+        OR supplementary_configuration -> 'versioning' ->> 'mfaDelete' is null
+        OR supplementary_configuration -> 'versioning' ->> 'mfaDelete' <> 'Enabled')
+remediation: >
+  Perform the following to enable S3 bucket versioning and enable mfaDevice
+    1. Sign in to the AWS Management Console and open the S3 console at https://console.aws.amazon.com/s3.
+    2. Under All Buckets click on the target S3 bucket
+    3. Click on Properties tab
+    4. Find "Bucket Versioning" section
+    5. Click Edit and enable versioning
+    6. Follow AWS instruction to add MFA Delete option via CLI or SDK
+       https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html

@@ -1,0 +1,15 @@
+id: c8f4d501-3358-49fc-9260-9943efc9e654
+policyId: Ransomware AWS
+policyName: Ransomware policy for Amazon Web Services Foundations
+cloudProvider: AWS
+description: >
+  Ransomware policy asses systems for potential vulnerabilities
+  which allow attackers to decrypt valuable and business critical data
+enabled: true
+rules:
+  - aws_guard_duty_enabled.yaml
+  - aws_security_hub_enabled.yaml
+  - aws_s3_deny_public_access_enabled.yaml
+  - aws_s3_versioning_and_mfa_delete_enabled.yaml
+  - aws_iam_stale_roles_ap_with_s3_access.yaml
+  - aws_iam_stale_roles_ip_with_s3_access.yaml
