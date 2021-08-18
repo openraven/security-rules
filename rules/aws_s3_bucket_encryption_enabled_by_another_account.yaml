@@ -1,0 +1,34 @@
+id: 9ea14a0e-1319-47cb-a417-9553ffa50109
+ruleId: aws_059
+type: asset
+ruleName: >
+  Ensure S3 bucket has no server-side encryption being enabled by another account
+description: >
+  S3 bucket policies have the ability to enforce any uploaded file to be encrypted with AES256,
+  or forcing any uploaded file to be encrypted with a specific AWS KMS key.
+  In case in specified KMS Key belongs to a different account it leads to a high risk of encryption of the data
+  without ability to further decrypt it by not owned cross-account KMS Key
+severity: high
+enabled: true
+sql: >
+  SELECT s3bucket.asset_id
+    FROM assets s3bucket,
+    LATERAL (
+        SELECT value AS ssec
+        FROM jsonb_array_elements(s3bucket.supplementary_configuration -> 'serverSideEncryptionConfiguration' -> 'rules')
+    ) arr
+    WHERE s3bucket.resource_type = 'AWS::S3::Bucket'
+      AND arr.ssec ->> 'bucketKeyEnabled' = 'true'
+      AND arr.ssec -> 'applyServerSideEncryptionByDefault' ->> 'sseAlgorithm' = 'aws:kms'
+      AND arr.ssec -> 'applyServerSideEncryptionByDefault' ->> 'kmsMasterKeyID' NOT LIKE '%:'||s3bucket.account_id||':%'
+remediation: >
+  Perform the following to enable S3 bucket logging:
+  Via the Management Console
+    1. Sign in to the AWS Management Console and open the S3 console at https://console.aws.amazon.com/s3.
+    2. In the Buckets list, choose the name of the bucket that you want.
+    3. Choose Properties.
+    4. Under Default encryption, choose Edit.
+    5. Remove cross-account KMS Key and specify account related KMS Key for data encryption
+remediationDocURLs:
+  - https://docs.aws.amazon.com/AmazonS3/latest/userguide/default-bucket-encryption.html
+version: 0.1.3
