@@ -4,10 +4,10 @@ type: asset
 ruleName: >
   Ensure S3 bucket has no server-side encryption being enabled by another account
 description: >
-  S3 bucket policies have the ability to enforce any uploaded file to be encrypted with AES256,
+  S3 bucket policies allow uploaded files to be encrypted with AES256,
   or forcing any uploaded file to be encrypted with a specific AWS KMS key.
-  In case in specified KMS Key belongs to a different account it leads to a high risk of encryption of the data
-  without ability to further decrypt it by not owned cross-account KMS Key
+  In the case when a specified KMS Key belongs to a different account it leads to a high risk of encryption of the data
+  without the ability to decrypt it.
 severity: high
 enabled: true
 sql: >
