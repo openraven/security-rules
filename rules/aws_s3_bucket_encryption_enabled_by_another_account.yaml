@@ -18,7 +18,6 @@ sql: >
         FROM jsonb_array_elements(s3bucket.supplementary_configuration -> 'serverSideEncryptionConfiguration' -> 'rules')
     ) arr
     WHERE s3bucket.resource_type = 'AWS::S3::Bucket'
-      AND arr.ssec ->> 'bucketKeyEnabled' = 'true'
       AND arr.ssec -> 'applyServerSideEncryptionByDefault' ->> 'sseAlgorithm' = 'aws:kms'
       AND arr.ssec -> 'applyServerSideEncryptionByDefault' ->> 'kmsMasterKeyID' NOT LIKE '%:'||s3bucket.account_id||':%'
 remediation: >
