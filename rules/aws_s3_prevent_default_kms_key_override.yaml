@@ -11,7 +11,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT s3bucket.asset_id,
+  SELECT s3bucket.asset_id
     FROM assets s3bucket
     JOIN LATERAL (
         SELECT value AS ssec
