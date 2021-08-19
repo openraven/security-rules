@@ -15,5 +15,5 @@ rules:
   - aws_iam_stale_roles_ip_with_s3_access.yaml
   - aws_ec2_ebs_volume_with_no_snapshot.yaml
   - aws_ssm_manage_all_ec2_instances.yaml
-  - aws_s3_bucket_encryption_enabled.yaml
+  - aws_s3_prevent_default_kms_key_override.yaml
   - aws_s3_bucket_encryption_enabled_by_another_account.yaml
