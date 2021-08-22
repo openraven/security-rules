@@ -35,6 +35,6 @@ remediation: >
       have not been used.
   Via CLI
     aws iam delete-access-key
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/no_initial_access_key_for_IAM_with_console_password
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/no_initial_access_key_for_IAM_with_console_password
 version: 0.1.3

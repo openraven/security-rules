@@ -78,6 +78,6 @@ remediation: >
       `<console_signin_failure_metric>` --statistic Sum --period 300 --threshold 1
       --comparison-operator GreaterThanOrEqualToThreshold --evaluation-periods 1 --
       namespace 'CISBenchmark' --alarm-actions <sns_topic_arn>
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/log_metric_filter_and_alarm_for_AWS_MC_auth_failures
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/log_metric_filter_and_alarm_for_AWS_MC_auth_failures
 version: 0.1.3

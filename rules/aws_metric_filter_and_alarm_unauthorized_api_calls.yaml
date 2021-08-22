@@ -77,6 +77,6 @@ remediation: >
       `<unauthorized_api_calls_metric>` --statistic Sum --period 300 --threshold 1
       --comparison-operator GreaterThanOrEqualToThreshold --evaluation-periods 1 --
       namespace 'CISBenchmark' --alarm-actions <sns_topic_arn>
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/log_metric_filter_and_alarm_for_unauthorized_API_calls
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/log_metric_filter_and_alarm_for_unauthorized_API_calls
 version: 0.1.3

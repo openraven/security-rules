@@ -34,6 +34,6 @@ remediation: >
     If the task fails, you can choose View details or View Resources from the notifications to learn why the deletion failed.
     If the deletion fails because the role is using the service's resources, then the notification includes a list of resources, if the service returns that information.
     You can then clean up the resources and submit the deletion again.
-remediationDocURLs:
-  - https://aws.amazon.com/blogs/security/identify-unused-iam-roles-remove-confidently-last-used-timestamp/
+# remediationDocURLs:
+# - https://aws.amazon.com/blogs/security/identify-unused-iam-roles-remove-confidently-last-used-timestamp/
   - https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#delete-service-linked-role

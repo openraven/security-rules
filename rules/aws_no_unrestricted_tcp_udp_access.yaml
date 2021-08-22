@@ -42,6 +42,6 @@ remediation: >
     6. Identify the rules to be removed
     7. Click the x in the Remove column
     8. Click Save
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/ensure_limited_TCP_UDP_ingress
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/ensure_limited_TCP_UDP_ingress
 version: 0.1.3

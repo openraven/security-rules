@@ -55,6 +55,6 @@ remediation: >
     8. If the Edit bucket policy button is present, click it.
     9. Remove any Statement having an Effect set to Allow and a Principal set to "*" or
     {"AWS" : "*"}.
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/ensure_CloudTrail_logs_S3_bucket_not_publicly_accessible
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/ensure_CloudTrail_logs_S3_bucket_not_publicly_accessible
 version: 0.1.3

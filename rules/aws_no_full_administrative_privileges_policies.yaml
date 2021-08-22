@@ -57,6 +57,6 @@ remediation: >
      aws iam detach-group-policy --group-name <iam_group> --policy-arn <policy_arn>
     4. Detach the policy from all IAM Roles:
      aws iam detach-role-policy --role-name <iam_role> --policy-arn <policy_arn>
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/no_full_admin_privileges_IAM_policies_created
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/no_full_admin_privileges_IAM_policies_created
 version: 0.1.3

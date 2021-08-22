@@ -39,6 +39,6 @@ remediation: >
     8. Choose Next Step . The MFA device is now associated with the AWS account. The next
     time you use your AWS account credentials to sign in, you must type a code from the
     hardware MFA device.
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/enable_hardware_MFA_for_root_account
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/enable_hardware_MFA_for_root_account
 version: 0.1.3

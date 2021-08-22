@@ -81,6 +81,6 @@ remediation: >
       aws cloudwatch put-metric-alarm --alarm-name `<aws_config_changes_alarm>` -
       -metric-name `<aws_config_changes_metric>` --statistic Sum --period 300 --
       threshold 1 --comparison-operator GreaterThanOrEqualToThreshold --evaluationperiods 1 --namespace 'CISBenchmark' --alarm-actions <sns_topic_arn>
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/log_metric_filter_and_alarm_for_AWS_Config_config_changes
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/log_metric_filter_and_alarm_for_AWS_Config_config_changes
 version: 0.1.3

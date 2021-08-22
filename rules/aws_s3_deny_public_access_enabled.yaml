@@ -24,4 +24,6 @@ remediation: >
     6. Find "Bucket policy" check for any public configuration like "principal": * etc
     7. Reference: https://docs.amazonaws.cn/en_us/AmazonS3/latest/userguide/access-control-block-public-access.html
     8. Reference: https://aws.amazon.com/s3/features/block-public-access/
-
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/unused_credentials
+version: 0.1.3

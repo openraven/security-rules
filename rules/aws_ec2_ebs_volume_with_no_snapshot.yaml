@@ -31,5 +31,5 @@ remediation: >
     (Optional) Enter a description for the snapshot.
     (Optional) Choose Add Tag to add tags to your snapshot. For each tag, provide a tag key and a tag value.
   6. Choose Create Snapshot.
-remediationDocURLs:
-  - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-snapshot.html
+# remediationDocURLs:
+# - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-snapshot.html

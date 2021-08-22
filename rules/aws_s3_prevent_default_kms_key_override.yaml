@@ -37,8 +37,8 @@ remediation: >
     6. Add policy Condition statement where you define the KMS Key to be matched for Statement with s3:PutObject permission
     7. Condition example for Allow effect for:
        "Condition":{"StringEquals":{"s3:x-amz-server-side-encryption-aws-kms-key-id":"arn:aws:kms:REGION:ACCOUNT-ID:key\/KEY-ID"}}}
-remediationDocURLs:
-  - https://rhinosecuritylabs.com/aws/s3-ransomware-part-2-prevention-and-defense/#:~:text=Another%20feature%20of,be%20found%20here.
-  - https://docs.aws.amazon.com/AmazonS3/latest/userguide/add-bucket-policy.html
-  - https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html
+# remediationDocURLs:
+#  - https://rhinosecuritylabs.com/aws/s3-ransomware-part-2-prevention-and-defense/#:~:text=Another%20feature%20of,be%20found%20here.
+# - https://docs.aws.amazon.com/AmazonS3/latest/userguide/add-bucket-policy.html
+# - https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html
 version: 0.1.3

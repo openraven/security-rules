@@ -52,6 +52,6 @@ remediation: >
     the logs to a cheaper storage service rather than simply deleting them. See the following
     AWS resource to manage CloudWatch Logs retention periods:
       1. http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/SettingLogRetention.html
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/ensure_flow_logging_enabled_in_all_VPCs
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/ensure_flow_logging_enabled_in_all_VPCs
 version: 0.1.3

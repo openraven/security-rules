@@ -43,6 +43,6 @@ remediation: >
       4. Click Detach Policy for each policy
       5. Expand Inline Policies
       6. Click Remove Policy for each policy
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/detach_IAM_policies_from_users
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/detach_IAM_policies_from_users
 version: 0.1.3

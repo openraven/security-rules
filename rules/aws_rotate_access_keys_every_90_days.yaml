@@ -36,6 +36,6 @@ remediation: >
     aws iam update-access-key
     aws iam create-access-key
     aws iam delete-access-key
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/rotate_keys
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/rotate_keys
 version: 0.1.3

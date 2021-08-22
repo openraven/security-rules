@@ -33,6 +33,6 @@ remediation: >
   on dynamically assigned public IP addresses are a bad practice and, if possible, you may
   wish to rebuild the instance with a new elastic IP address and make the investment to
   remediate affected systems while assigning the system to a role.
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/ensure_IAM_roles_used_for_resource_access_from_instances
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/ensure_IAM_roles_used_for_resource_access_from_instances
 version: 0.1.3

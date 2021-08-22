@@ -47,6 +47,6 @@ remediation: >
     aws cloudtrail update-trail --name <trail_name> --is-multi-region-trail
   Note: Creating CloudTrail via CLI without providing any overriding options configures
     Management Events to set All type of Read/Writes by default.
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/enable_global_trail
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/enable_global_trail
 version: 0.1.3

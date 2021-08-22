@@ -43,6 +43,6 @@ remediation: >
       1. In the Manage MFA Device wizard, in the Authentication Code 1 box, type the onetime password that currently appears in the virtual MFA device. Wait up to 30
       seconds for the device to generate a new one-time password. Then type the second
       one-time password into the Authentication Code 2 box. Choose Active Virtual MFA.
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/enable_MFA_for_root_account
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/enable_MFA_for_root_account
 version: 0.1.3

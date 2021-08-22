@@ -26,7 +26,6 @@ remediation: >
     3. On the welcome page, Security standards lists the security standards that Security Hub supports.
     4. To enable a standard, select its check box.. To disable a standard, clear its check box.
     5. Choose Enable Security Hub.
-  For details visit: https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-enable.html
-
-
-
+# remediationDocURLs:
+# - https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-enable.html
+version: 0.1.3

@@ -29,6 +29,6 @@ remediation: >
     4. Under Default encryption, choose Edit.
     5. Remove cross-account KMS Key and specify account related KMS Key for data encryption
     6. Consider rule aws_058 aws_s3_prevent_default_kms_key_override.yaml remediation to prevent such violation on future
-remediationDocURLs:
-  - https://docs.aws.amazon.com/AmazonS3/latest/userguide/default-bucket-encryption.html
+# remediationDocURLs:
+# - https://docs.aws.amazon.com/AmazonS3/latest/userguide/default-bucket-encryption.html
 version: 0.1.3

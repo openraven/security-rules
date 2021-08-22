@@ -39,6 +39,6 @@ remediation: >
       arn:aws:iam::012345678912:role/myConfigRole
     3. Run this command to start the configuration recorder:
       start-configuration-recorder --configuration-recorder-name <value>
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/enable_AWS_Config_in_all_regions
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/enable_AWS_Config_in_all_regions
 version: 0.1.3

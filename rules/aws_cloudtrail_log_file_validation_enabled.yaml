@@ -31,6 +31,6 @@ remediation: >
   Note that periodic validation of logs using these digests can be performed by running the following command:
     aws cloudtrail validate-logs --trail-arn <trail_arn> --start-time
     <start_time> --end-time <end_time>
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/enable_CloudTrail_log_file_validation
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/enable_CloudTrail_log_file_validation
 version: 0.1.3

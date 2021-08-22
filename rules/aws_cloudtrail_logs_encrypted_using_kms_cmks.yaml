@@ -42,6 +42,6 @@ remediation: >
     <cloudtrail_kms_key>
     aws kms put-key-policy --key-id <cloudtrail_kms_key> --policy
     <cloudtrail_kms_key_policy>
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/enable_KMS_log_encryption
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/enable_KMS_log_encryption
 version: 0.1.3

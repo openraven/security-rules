@@ -34,6 +34,6 @@ remediation: >
     aws iam create-role --role-name <aws_support_iam_role> --assume-rolepolicy-document file:///tmp/TrustPolicy.json
     - Attach 'AWSSupportAccess' managed policy to the created IAM role:
     aws iam attach-role-policy --policy-arn <iam_policy_arn> --role-name <aws_support_iam_role>
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/ensure_support_role_is_created
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/ensure_support_role_is_created
 version: 0.1.3

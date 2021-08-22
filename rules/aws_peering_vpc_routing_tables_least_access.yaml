@@ -20,6 +20,6 @@ remediation: >
     2. Create a new compliant route:
       aws ec2 create-route --route-table-id <route_table_id> --destination-cidrblock <compliant_destination_CIDR> --vpc-peering-connection-id
       <peering_connection_id>
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/ensure_peering_VPC_routing_tables_are_least_access
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/ensure_peering_VPC_routing_tables_are_least_access
 version: 0.1.3
