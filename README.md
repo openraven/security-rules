@@ -1,2 +1,3 @@
-# cspm-kb
-Magpie CSPM Policy Knowledge Base
+See the security rules wiki for all docuemntation
+
+https://github.com/openraven/security-rules/wiki
