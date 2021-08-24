@@ -18,3 +18,4 @@ rules:
   - aws_s3_prevent_default_kms_key_override.yaml
   - aws_s3_bucket_encryption_enabled_by_another_account.yaml
   - aws_security_groups_botnet_access_permitted.yaml
+  
