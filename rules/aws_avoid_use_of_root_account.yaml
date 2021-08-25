@@ -12,6 +12,6 @@ enabled: true
 remediation: >
   Follow the remediation instructions of the Ensure IAM policies are attached only to
   groups or roles recommendation
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/avoid_use_of_root_account
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/avoid_use_of_root_account
 version: 0.1.3

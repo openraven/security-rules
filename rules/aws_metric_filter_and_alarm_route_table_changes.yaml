@@ -82,6 +82,6 @@ remediation: >
       -threshold 1 --comparison-operator GreaterThanOrEqualToThreshold --
       evaluation-periods 1 --namespace 'CISBenchmark' --alarm-actions
       <sns_topic_arn>
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/log_metric_filter_and_alarm_for_route_table_changes
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/log_metric_filter_and_alarm_for_route_table_changes
 version: 0.1.3

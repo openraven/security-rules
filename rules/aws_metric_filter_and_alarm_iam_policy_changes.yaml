@@ -87,6 +87,6 @@ remediation: >
       metric-name `<iam_changes_metric>` --statistic Sum --period 300 --threshold
       1 --comparison-operator GreaterThanOrEqualToThreshold --evaluation-periods 1
       --namespace 'CISBenchmark' --alarm-actions <sns_topic_arn>
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/log_metric_filter_and_alarm_for_IAM_policy_changes
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/log_metric_filter_and_alarm_for_IAM_policy_changes
 version: 0.1.3

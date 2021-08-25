@@ -1,0 +1,33 @@
+id: 3b08bd0c-d0c6-429f-b5c6-b155786f2966
+policyId: aws_ransomware_recovery
+policyName: AWS Ransomware Recovery
+cloudProvider: AWS
+description: >
+The AWS Ransomware Recovery policy analyzes accounts for logging and backup configurations to determine if it would be possible to understand what happened in an attack and to adequately restore if compromised.
+enabled: true
+rules:
+# rules for logging
+  - aws_s3_bucket_access_logging_enabled.yaml
+  - aws_trails_integrated_with_cloudwatch_logs.yaml
+  - aws_cloudtrail_log_file_validation_enabled.yaml
+  - aws_cloudtrail_logs_encrypted_using_kms_cmks.yaml
+  - aws_flow_logging_enabled_in_all_vpcs.yaml
+  - aws_cloudtrail_enabled_in_all_regions.yaml
+  - aws_metric_filter_and_alarm_unauthorized_api_calls.yaml
+  - aws_metric_filter_and_alarm_console_sign_in_without_mfa.yaml
+  - aws_metric_filter_and_alarm_root_account_usage.yaml
+  - aws_metric_filter_and_alarm_iam_policy_changes.yaml
+  - aws_metric_filter_and_alarm_cloudtrail_config_changes.yaml
+  - aws_metric_filter_and_alarm_aws_mc_auth_failures.yaml
+  - aws_metric_filter_and_alarm_disabling_deletion_cmks.yaml
+  - aws_metric_filter_and_alarm_s3_buckets_policy_changes.yaml
+  - aws_metric_filter_and_alarm_s3_buckets_policy_changes.yaml
+  - aws_metric_filter_and_alarm_security_group_changes.yaml
+  - aws_metric_filter_and_alarm_nacl_changes.yaml
+  - aws_metric_filter_and_alarm_gateways_changes.yaml
+  - aws_metric_filter_and_alarm_route_table_changes.yaml
+  - aws_metric_filter_and_alarm_vpc_changes.yaml
+
+# rules for backup (to be added)
+
+version:

@@ -24,5 +24,6 @@ remediation: >
   3. Navigate to and choose your EC2 instance from the list.
   4. In the Actions menu, choose Security, Modify IAM role.
   5. For IAM role, select the instance profile you created for that perspective
-remediationDocURLs:
-  - https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html
+# remediationDocURLs:
+# - https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html
+version: 0.1.3

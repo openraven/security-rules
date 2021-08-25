@@ -26,4 +26,7 @@ remediation: >
     4. Find "Bucket Versioning" section
     5. Click Edit and enable versioning
     6. Follow AWS instruction to add MFA Delete option via CLI or SDK
-       https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/unused_credentials
+# https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html
+  version: 0.1.3

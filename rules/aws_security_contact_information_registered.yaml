@@ -18,6 +18,6 @@ remediation: >
     4. Enter contact information in the Security section
   Note: Consider specifying an internal email distribution list to ensure emails are regularly
   monitored by more than one individual.
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/ensure_security_contact_information_registered
+# remediationDocURLs:
+#  - https://docs.openraven.com/remediations/ensure_security_contact_information_registered
 version: 0.1.3

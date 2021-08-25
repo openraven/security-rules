@@ -77,6 +77,6 @@ remediation: >
       `<disable_or_delete_cmk_changes_alarm>` --metric-name
       `<disable_or_delete_cmk_changes_metric>` --statistic Sum --period 300 --
       threshold 1 --comparison-operator GreaterThanOrEqualToThreshold --evaluationperiods 1 --namespace 'CISBenchmark' --alarm-actions <sns_topic_arn>
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/log_metric_filter_and_alarm_for_disabling_deletion_CMKs
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/log_metric_filter_and_alarm_for_disabling_deletion_CMKs
 version: 0.1.3

@@ -43,6 +43,6 @@ remediation: >
   Recommended:
     IAM groups allow you to edit the "name" field. After remediating default groups rules for all
     VPCs in all regions, edit this field to add text similar to "DO NOT USE. DO NOT ADD RULES"
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/default_sec_group_restrict_traffic
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/default_sec_group_restrict_traffic
 version: 0.1.3

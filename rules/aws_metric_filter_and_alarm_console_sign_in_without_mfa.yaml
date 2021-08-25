@@ -78,6 +78,6 @@ remediation: >
       --threshold 1 --comparison-operator GreaterThanOrEqualToThreshold --
       evaluation-periods 1 --namespace 'CISBenchmark' --alarm-actions
       <sns_topic_arn>
-remediationDocURLs:
-  - https://docs.openraven.com/remediations/log_metric_filter_and_alarm_for_Management_Console_sign_in_without_MFA
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/log_metric_filter_and_alarm_for_Management_Console_sign_in_without_MFA
 version: 0.1.3

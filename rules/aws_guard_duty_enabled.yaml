@@ -24,5 +24,6 @@ sql: >
 remediation: >
   Perform the following steps under the below link to enable GuardDuty:
   https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_settingup.html
-
-
+# remediationDocURLs:
+# - https://docs.openraven.com/remediations/unused_credentials
+version: 0.1.3
