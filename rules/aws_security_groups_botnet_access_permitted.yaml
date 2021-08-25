@@ -1,12 +1,10 @@
 id: c9e120b6-04e5-11ec-9a03-0242ac130003 
-ruleId: aws_sg_botnet_access
+ruleId: aws_sg_c2_access
 type: asset
 ruleName: >
-  Security group allows outobund access to known botnet C&C addresses
+  AWS security group allows access to known command and control destinations
 description: >
-  Security group ingress and egress rules should be locked down to the minimal set of permitted IP
-  ranges.  This rule checks that security groups do not allow IP egress to known botnet command and control
-  IP addresses.
+  The AWS security group allows access to destinations that are known or suspected of being command and control systems used in ransomware and botnet attacks.
 severity: medium
 enabled: true
 sql: >
