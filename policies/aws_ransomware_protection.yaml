@@ -32,5 +32,5 @@ rules:
 - aws_no_unrestricted_tcp_udp_access.yaml
 - aws_default_security_groups_restrict_all_traffic.yaml
 - aws_peering_vpc_routing_tables_least_access.yaml
-- aws_security_groups_botnet_access_permitted.yaml
+- aws_security_groups_c2_access_permitted.yaml
 version:
