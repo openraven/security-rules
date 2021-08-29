@@ -1,5 +1,5 @@
-id: b1dc3919-5146-4bbc-93d4-7e16b6a2e684
-ruleId: aws_057
+# id: b1dc3919-5146-4bbc-93d4-7e16b6a2e684
+ruleId: opnrvn-r-58
 type: asset
 ruleName: >
   Ensure all EC2 instances are managed by SSM
@@ -18,12 +18,6 @@ sql: >
    WHERE ec2.resource_type = 'AWS::EC2::Instance'
      AND ec2.configuration -> 'state' ->> 'name' = 'running'
      AND ssm.resource_id IS NULL;
-remediation: >
-  1. Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
-  2. In the navigation pane, under Instances, choose Instances.
-  3. Navigate to and choose your EC2 instance from the list.
-  4. In the Actions menu, choose Security, Modify IAM role.
-  5. For IAM role, select the instance profile you created for that perspective
-# remediationDocURLs:
-# - https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html
-version: 0.1.3
+# remediation:
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

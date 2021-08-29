@@ -22,7 +22,7 @@ rules:
 - opnrvn-r-12.yaml
 - opnrvn-r-20.yaml
 - opnrvn-r-21.yaml
-- aws_support_role_is_created.yaml
+- opnrvn-r-59.yaml
 - opnrvn-r-41.yaml
 - opnrvn-r-42.yaml
 - opnrvn-r-49.yaml
@@ -32,5 +32,5 @@ rules:
 - opnrvn-r-45.yaml
 - opnrvn-r-7.yaml
 - opnrvn-r-46.yaml
-- aws_security_groups_c2_access_permitted.yaml
+- opnrvn-r-56.yaml
 version: 0.9

@@ -25,13 +25,13 @@ rules:
 - opnrvn-r-24.yaml
 - opnrvn-r-55.yaml
 - opnrvn-r-21.yaml
-- aws_support_role_is_created.yaml
+- opnrvn-r-59.yaml
 - opnrvn-r-41.yaml
 - opnrvn-r-42.yaml
 - opnrvn-r-3.yaml
 - opnrvn-r-4.yaml
 - opnrvn-r-50.yaml
-- aws_trails_integrated_with_cloudwatch_logs.yaml
+- opnrvn-r-60.yaml
 - opnrvn-r-6.yaml
 - opnrvn-r-49.yaml
 - opnrvn-r-5.yaml

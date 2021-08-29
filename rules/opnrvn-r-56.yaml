@@ -1,5 +1,5 @@
-id: c9e120b6-04e5-11ec-9a03-0242ac130003 
-ruleId: aws_sg_c2_access
+#id: c9e120b6-04e5-11ec-9a03-0242ac130003
+ruleId: opnrvn-r-56
 type: asset
 ruleName: >
   AWS security group allows access to known command and control destinations
@@ -624,11 +624,6 @@ eval: >
               findings.append({'asset_id': sg['asset_id']})  
               break          
     return findings
-remediation: >
-  In the AWS Management Console, go to EC2->Security Groups. For each group found by this rule:
-  1) Select the given rule
-  2) Choose the 'Outbound Rules' tab
-  3) Click 'Edit outbound rules'
-  4) Edit any CIDR / IP addresses and minimize the permitted scope to just the minimum required for connectivity.
-remediationDocURLs:
-version: 0.1.0
+remediation:
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

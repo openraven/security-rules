@@ -1,5 +1,5 @@
-id: 2a66998e-64c2-4ce7-9bf4-c667f06d1efb
-ruleId: aws_53
+# id: 2a66998e-64c2-4ce7-9bf4-c667f06d1efb
+ruleId: opnrvn-r-57
 type: asset
 ruleName: >
   Ensure that SecurityHub enabled for required region
@@ -19,13 +19,6 @@ sql: >
                HAVING resource_type = 'AWS::SecurityHub::StandardsSubscription' AND count(*) > 0) a
     ON (reg.region_global = a.region or a.region is null)
   WHERE region is null
-remediation: >
-  Perform the following to enable SecurityHub:
-    1. Use the credentials of the IAM identity to sign in to the Security Hub console.
-    2. When you open the Security Hub console for the first time, choose Get Started.
-    3. On the welcome page, Security standards lists the security standards that Security Hub supports.
-    4. To enable a standard, select its check box.. To disable a standard, clear its check box.
-    5. Choose Enable Security Hub.
-# remediationDocURLs:
-# - https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-enable.html
-version: 0.1.3
+# remediation:
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
