@@ -1,5 +1,5 @@
-id: d8792397-239e-4028-9539-7b3771ba929f
-policyId: gcp_cis_benchmarks
+# vid: d8792397-239e-4028-9539-7b3771ba929f
+policyId: opnrvn-p-2
 policyName:  CIS Google Cloud Platform Foundation
 cloudProvider: GCP
 description: >
@@ -10,4 +10,4 @@ rules:
   - gcp_service_account_no_user_managed_keys.yaml
   - gcp_instances_dont_use_default_service_account.yaml
   - gcp_no_project_level_service_account_user_or_token_for_iam_user.yaml
-version:
+version: 0.9

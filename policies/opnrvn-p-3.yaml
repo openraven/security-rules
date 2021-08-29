@@ -1,5 +1,5 @@
-id: c7811936-5c08-4c89-9a2d-faba659e855e
-policyId: aws_ransomware_protection
+# id: c7811936-5c08-4c89-9a2d-faba659e855e
+policyId: opnrvn-p-3
 policyName: AWS Ransomware Protection
 cloudProvider: AWS
 description: >
@@ -33,4 +33,4 @@ rules:
 - aws_default_security_groups_restrict_all_traffic.yaml
 - aws_peering_vpc_routing_tables_least_access.yaml
 - aws_security_groups_c2_access_permitted.yaml
-version:
+version: 0.9

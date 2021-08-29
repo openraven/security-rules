@@ -1,5 +1,5 @@
-id: 8b075bf8-0804-46d0-8255-13c1cb89587d
-policyId: aws_ransomware_ioc
+# id: 8b075bf8-0804-46d0-8255-13c1cb89587d
+policyId: opnrvn-p-5
 policyName: AWS Ransomware Indicators of Compromise
 cloudProvider: AWS
 description: >
@@ -7,4 +7,4 @@ The AWS Ransomware Indicators of Compromise policy analyzes accounts for signs t
 enabled: true
 rules:
   - aws_s3_bucket_encryption_enabled_by_another_account.yaml
-version:
+version: 0.9

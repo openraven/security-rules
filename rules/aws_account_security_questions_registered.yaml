@@ -1,5 +1,5 @@
-id: cb1b52e0-110c-4887-8ba4-901904938080
-ruleId: aws_015
+# id: cb1b52e0-110c-4887-8ba4-901904938080
+ruleId: opnrvn-r-1
 type: asset
 ruleName: >
   Ensure security questions are registered in the AWS account
@@ -10,20 +10,6 @@ description: >
 manualControl: true
 severity: high
 enabled: true
-remediation: >
-  Perform the following in the AWS Management Console:
-    1. Login to the AWS Account as root
-    2. Click on the <Root_Account_Name> from the top right of the console
-    3. From the drop-down menu Click My Account
-    4. Scroll down to the Configure Security Questions section
-    5. Click on Edit
-    6. Click on each Question
-      - From the drop-down select an appropriate question
-      - Click on the Answer section
-      - Enter an appropriate answer
-        o Follow process for all 3 questions
-    7. Click Update when complete
-    8. Place Questions and Answers and place in a secure physical location
-# remediationDocURLs:
-# - https://docs.openraven.com/remediations/ensure_AWS_account_security_questions_registered
-version: 0.1.3
+# remediation:
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
