@@ -11,7 +11,7 @@ rules:
   - aws_trails_integrated_with_cloudwatch_logs.yaml
   - opnrvn-r-4.yaml
   - opnrvn-r-5.yaml
-  - aws_flow_logging_enabled_in_all_vpcs.yaml
+  - opnrvn-r-10.yaml
   - opnrvn-r-3.yaml
   - aws_metric_filter_and_alarm_unauthorized_api_calls.yaml
   - aws_metric_filter_and_alarm_console_sign_in_without_mfa.yaml

@@ -1,5 +1,5 @@
-id: 1f4045c2-739b-413f-80db-cf4d560835a1
-ruleId: aws_056
+# id: 1f4045c2-739b-413f-80db-cf4d560835a1
+ruleId: opnrvn-r-9
 type: asset
 ruleName: >
   Ensure all EC2 EBS Volumes has snapshots
@@ -22,14 +22,6 @@ sql: >
   AND ec2.configuration -> 'state' ->> 'name' = 'running'
   AND arr.ebs_device ->> 'status' = 'attached'
   AND snap.configuration ->> 'snapshotId' is null
-remediation: >
-  1. Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
-  2. Choose Snapshots under Elastic Block Store in the navigation pane.
-  3. Choose Create Snapshot.
-  4. For Select resource type, choose Volume.
-  5. For Volume, select the volume.
-    (Optional) Enter a description for the snapshot.
-    (Optional) Choose Add Tag to add tags to your snapshot. For each tag, provide a tag key and a tag value.
-  6. Choose Create Snapshot.
-# remediationDocURLs:
-# - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-snapshot.html
+# remediation:
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

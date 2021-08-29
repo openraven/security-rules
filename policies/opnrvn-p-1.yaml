@@ -8,7 +8,7 @@ enabled: true
 rules:
 - opnrvn-r-2.yaml
 - aws_mfa_with_console_password.yaml
-- aws_disable_unused_credentials_after_90_days.yaml
+- opnrvn-r-8.yaml
 - aws_rotate_access_keys_every_90_days.yaml
 - aws_iam_password_policy_requires_uppercase_letter.yaml
 - aws_iam_password_policy_requires_lowercase_letter.yaml
@@ -36,7 +36,7 @@ rules:
 - aws_s3_bucket_access_logging_enabled.yaml
 - opnrvn-r-5.yaml
 - aws_rotation_for_customer_created_cmks.yaml
-- aws_flow_logging_enabled_in_all_vpcs.yaml
+- opnrvn-r-10.yaml
 - aws_metric_filter_and_alarm_unauthorized_api_calls.yaml
 - aws_metric_filter_and_alarm_console_sign_in_without_mfa.yaml
 - aws_metric_filter_and_alarm_root_account_usage.yaml
