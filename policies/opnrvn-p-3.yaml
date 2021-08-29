@@ -21,7 +21,7 @@ rules:
 - aws_mfa_enabled_for_root_account.yaml
 - opnrvn-r-12.yaml
 - opnrvn-r-20.yaml
-- aws_iam_roles_for_resource_access_from_instances.yaml
+- opnrvn-r-21.yaml
 - aws_support_role_is_created.yaml
 - aws_no_access_keys_initially.yaml
 - aws_no_full_administrative_privileges_policies.yaml

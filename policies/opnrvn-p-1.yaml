@@ -22,9 +22,9 @@ rules:
 - opnrvn-r-12.yaml
 - opnrvn-r-1.yaml
 - opnrvn-r-20.yaml
-- aws_maintain_current_contact_details.yaml
+- opnrvn-r-24.yaml
 - aws_security_contact_information_registered.yaml
-- aws_iam_roles_for_resource_access_from_instances.yaml
+- opnrvn-r-21.yaml
 - aws_support_role_is_created.yaml
 - aws_no_access_keys_initially.yaml
 - aws_no_full_administrative_privileges_policies.yaml
