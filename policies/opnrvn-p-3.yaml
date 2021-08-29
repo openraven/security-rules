@@ -6,7 +6,7 @@ description: >
 The AWS Ransomware Protection policy analyzes accounts for configurations that harden services from ransomware attacks.
 enabled: false
 rules:
-- aws_avoid_use_of_root_account.yaml
+- opnrvn-r-2.yaml
 - aws_mfa_with_console_password.yaml
 - aws_disable_unused_credentials_after_90_days.yaml
 - aws_rotate_access_keys_every_90_days.yaml

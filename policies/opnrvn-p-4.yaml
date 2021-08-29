@@ -12,7 +12,7 @@ rules:
   - aws_cloudtrail_log_file_validation_enabled.yaml
   - aws_cloudtrail_logs_encrypted_using_kms_cmks.yaml
   - aws_flow_logging_enabled_in_all_vpcs.yaml
-  - aws_cloudtrail_enabled_in_all_regions.yaml
+  - opnrvn-r-4.yaml
   - aws_metric_filter_and_alarm_unauthorized_api_calls.yaml
   - aws_metric_filter_and_alarm_console_sign_in_without_mfa.yaml
   - aws_metric_filter_and_alarm_root_account_usage.yaml
