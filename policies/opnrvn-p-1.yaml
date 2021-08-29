@@ -32,7 +32,7 @@ rules:
 - opnrvn-r-4.yaml
 - aws_s3_bucket_cloudtrail_logs_not_publicly_accessible.yaml
 - aws_trails_integrated_with_cloudwatch_logs.yaml
-- aws_config_enabled_in_all_regions.yaml
+- opnrvn-r-6.yaml
 - aws_s3_bucket_access_logging_enabled.yaml
 - opnrvn-r-5.yaml
 - aws_rotation_for_customer_created_cmks.yaml
@@ -53,6 +53,6 @@ rules:
 - aws_metric_filter_and_alarm_vpc_changes.yaml
 - aws_no_unrestricted_ssh_access.yaml
 - aws_no_unrestricted_tcp_udp_access.yaml
-- aws_default_security_groups_restrict_all_traffic.yaml
+- opnrvn-r-7.yaml
 - aws_peering_vpc_routing_tables_least_access.yaml
 version: 0.9

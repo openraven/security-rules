@@ -30,7 +30,7 @@ rules:
 - aws_rotation_for_customer_created_cmks.yaml
 - aws_no_unrestricted_ssh_access.yaml
 - aws_no_unrestricted_tcp_udp_access.yaml
-- aws_default_security_groups_restrict_all_traffic.yaml
+- opnrvn-r-7.yaml
 - aws_peering_vpc_routing_tables_least_access.yaml
 - aws_security_groups_c2_access_permitted.yaml
 version: 0.9
