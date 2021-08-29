@@ -13,10 +13,10 @@ rules:
 - aws_iam_password_policy_requires_uppercase_letter.yaml
 - aws_iam_password_policy_requires_lowercase_letter.yaml
 - aws_iam_password_policy_require_symbol.yaml
-- aws_iam_password_policy_require_number.yaml
+- opnrvn-r-15.yaml
 - aws_iam_password_policy_requires_min_length_14.yaml
-- aws_iam_password_policy_prevents_password_reuse.yaml
-- aws_iam_password_policy_passwords_rotation_or_expiration.yaml
+- opnrvn-r-14.yaml
+- opnrvn-r-13.yaml
 - aws_no_root_account_access_key.yaml
 - aws_mfa_enabled_for_root_account.yaml
 - opnrvn-r-12.yaml

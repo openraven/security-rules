@@ -1,5 +1,5 @@
-id: 9a63958d-1d15-4e26-8604-2004b32c9be7
-ruleId: aws_008
+# id: 9a63958d-1d15-4e26-8604-2004b32c9be7
+ruleId: opnrvn-r-15
 type: asset
 ruleName: >
   Ensure IAM password policy require at least one number
@@ -28,6 +28,5 @@ remediation: >
    aws iam update-account-password-policy --require-numbers
   Note: All commands starting with "aws iam update-account-password-policy" have be
      combined into a single command in order to all of them to take effect
-# remediationDocURLs:
-# - https://docs.openraven.com/remediations/enable_password_number_requirement
-version: 0.1.3
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
