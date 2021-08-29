@@ -26,7 +26,7 @@ rules:
 - aws_no_access_keys_initially.yaml
 - aws_no_full_administrative_privileges_policies.yaml
 - aws_s3_bucket_access_logging_enabled.yaml
-- aws_cloudtrail_logs_encrypted_using_kms_cmks.yaml
+- opnrvn-r-5.yaml
 - aws_rotation_for_customer_created_cmks.yaml
 - aws_no_unrestricted_ssh_access.yaml
 - aws_no_unrestricted_tcp_udp_access.yaml

@@ -9,8 +9,8 @@ rules:
 # rules for logging
   - aws_s3_bucket_access_logging_enabled.yaml
   - aws_trails_integrated_with_cloudwatch_logs.yaml
-  - aws_cloudtrail_log_file_validation_enabled.yaml
-  - aws_cloudtrail_logs_encrypted_using_kms_cmks.yaml
+  - opnrvn-r-4.yaml
+  - opnrvn-r-5.yaml
   - aws_flow_logging_enabled_in_all_vpcs.yaml
   - opnrvn-r-3.yaml
   - aws_metric_filter_and_alarm_unauthorized_api_calls.yaml
