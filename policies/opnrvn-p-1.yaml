@@ -17,7 +17,7 @@ rules:
 - opnrvn-r-18.yaml
 - opnrvn-r-14.yaml
 - opnrvn-r-13.yaml
-- aws_no_root_account_access_key.yaml
+- opnrvn-r-43.yaml
 - opnrvn-r-39.yaml
 - opnrvn-r-12.yaml
 - opnrvn-r-1.yaml
@@ -26,8 +26,8 @@ rules:
 - aws_security_contact_information_registered.yaml
 - opnrvn-r-21.yaml
 - aws_support_role_is_created.yaml
-- aws_no_access_keys_initially.yaml
-- aws_no_full_administrative_privileges_policies.yaml
+- opnrvn-r-41.yaml
+- opnrvn-r-42.yaml
 - opnrvn-r-3.yaml
 - opnrvn-r-4.yaml
 - aws_s3_bucket_cloudtrail_logs_not_publicly_accessible.yaml
@@ -51,8 +51,8 @@ rules:
 - opnrvn-r-30.yaml
 - opnrvn-r-34.yaml
 - opnrvn-r-38.yaml
-- aws_no_unrestricted_ssh_access.yaml
-- aws_no_unrestricted_tcp_udp_access.yaml
+- opnrvn-r-44.yaml
+- opnrvn-r-45.yaml
 - opnrvn-r-7.yaml
 - aws_peering_vpc_routing_tables_least_access.yaml
 version: 0.9
