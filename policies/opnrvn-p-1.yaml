@@ -19,7 +19,7 @@ rules:
 - aws_iam_password_policy_passwords_rotation_or_expiration.yaml
 - aws_no_root_account_access_key.yaml
 - aws_mfa_enabled_for_root_account.yaml
-- aws_hardware_mfa_enabled_for_root_account.yaml
+- opnrvn-r-12.yaml
 - opnrvn-r-1.yaml
 - aws_iam_policies_attached_only_to_groups_or_roles.yaml
 - aws_maintain_current_contact_details.yaml
