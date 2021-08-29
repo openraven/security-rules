@@ -1,5 +1,5 @@
-id: d964fe48-3465-4c5d-9e62-865055eca9e7
-ruleId: aws_002
+# id: d964fe48-3465-4c5d-9e62-865055eca9e7
+ruleId: opnrvn-r-40
 type: asset
 ruleName: >
   Ensure multi-factor authentication (MFA) is enabled for all IAM users
@@ -18,13 +18,6 @@ sql: >
   WHERE resource_type = 'AWS::IAM::CredentialsReport'
     AND configuration->>'password_enabled' = 'true'
     AND configuration->>'mfa_active' = 'false';
-remediation: >
-  Perform the following to enable MFA:
-    1. Sign in to the AWS Management Console and open the IAM console at https://console.aws.amazon.com/iam/.
-    2. In the navigation pane, choose Users.
-    3. In the User Name list, choose the name of the intended MFA user.
-    4. Choose the Security Credentials tab, and then choose Manage MFA Device.
-    5. In the Manage MFA Device wizard, choose A virtual MFA device, and then choose Next Step.
-# remediationDocURLs:
-# - https://docs.openraven.com/remediations/enable_mfa
-version: 0.1.3
+remediation:
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

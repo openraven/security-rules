@@ -7,7 +7,7 @@ The AWS CIS Security Benchmarks policy analyzes accounts for configurations reco
 enabled: true
 rules:
 - opnrvn-r-2.yaml
-- aws_mfa_with_console_password.yaml
+- opnrvn-r-40.yaml
 - opnrvn-r-8.yaml
 - aws_rotate_access_keys_every_90_days.yaml
 - opnrvn-r-19.yaml
@@ -18,7 +18,7 @@ rules:
 - opnrvn-r-14.yaml
 - opnrvn-r-13.yaml
 - aws_no_root_account_access_key.yaml
-- aws_mfa_enabled_for_root_account.yaml
+- opnrvn-r-39.yaml
 - opnrvn-r-12.yaml
 - opnrvn-r-1.yaml
 - opnrvn-r-20.yaml
@@ -37,20 +37,20 @@ rules:
 - opnrvn-r-5.yaml
 - aws_rotation_for_customer_created_cmks.yaml
 - opnrvn-r-10.yaml
-- aws_metric_filter_and_alarm_unauthorized_api_calls.yaml
+- opnrvn-r-37.yaml
 - opnrvn-r-28.yaml
-- aws_metric_filter_and_alarm_root_account_usage.yaml
+- opnrvn-r-33.yaml
 - opnrvn-r-31.yaml
 - opnrvn-r-27.yaml
 - opnrvn-r-26.yaml
 - opnrvn-r-29.yaml
-- aws_metric_filter_and_alarm_s3_buckets_policy_changes.yaml
-- aws_metric_filter_and_alarm_s3_buckets_policy_changes.yaml
-- aws_metric_filter_and_alarm_security_group_changes.yaml
+- opnrvn-r-35.yaml
+- opnrvn-r-35.yaml
+- opnrvn-r-36.yaml
 - opnrvn-r-32.yaml
 - opnrvn-r-30.yaml
-- aws_metric_filter_and_alarm_route_table_changes.yaml
-- aws_metric_filter_and_alarm_vpc_changes.yaml
+- opnrvn-r-34.yaml
+- opnrvn-r-38.yaml
 - aws_no_unrestricted_ssh_access.yaml
 - aws_no_unrestricted_tcp_udp_access.yaml
 - opnrvn-r-7.yaml

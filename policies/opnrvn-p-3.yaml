@@ -7,7 +7,7 @@ The AWS Ransomware Protection policy analyzes accounts for configurations that h
 enabled: false
 rules:
 - opnrvn-r-2.yaml
-- aws_mfa_with_console_password.yaml
+- opnrvn-r-40.yaml
 - opnrvn-r-8.yaml
 - aws_rotate_access_keys_every_90_days.yaml
 - opnrvn-r-19.yaml
@@ -18,7 +18,7 @@ rules:
 - opnrvn-r-14.yaml
 - opnrvn-r-13.yaml
 - aws_no_root_account_access_key.yaml
-- aws_mfa_enabled_for_root_account.yaml
+- opnrvn-r-39.yaml
 - opnrvn-r-12.yaml
 - opnrvn-r-20.yaml
 - opnrvn-r-21.yaml
