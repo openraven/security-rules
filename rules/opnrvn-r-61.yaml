@@ -1,0 +1,21 @@
+# id: ab8866f8-e24e-4e2c-bca9-344834d1b817
+ruleId: opnrvn-r-61
+type: asset
+ruleName: >
+  Ensure that instances are not configured to use the default service account
+description: >
+  It is recommended to configure your instance to not use the default Compute Engine
+  service account because it has the Editor role on the project.
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id
+  FROM
+    (SELECT asset_id,
+            jsonb_array_elements(jsonb_array_elements(supplementary_configuration->'instances')->'serviceAccounts') AS service_accounts
+     FROM assets
+     WHERE resource_type = 'GCP::ComputeEngine::Zone') get_email
+  WHERE service_accounts->>'email' ILIKE '%-compute@developer.gserviceaccount.com'
+# remediation:
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

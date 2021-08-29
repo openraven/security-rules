@@ -7,7 +7,7 @@ description: >
   industry best practices to help organizations assess and improve their security
 enabled: true
 rules:
-  - gcp_service_account_no_user_managed_keys.yaml
-  - gcp_instances_dont_use_default_service_account.yaml
-  - gcp_no_project_level_service_account_user_or_token_for_iam_user.yaml
+  - opnrvn-r-63.yaml
+  - opnrvn-r-61.yaml
+  - opnrvn-r-62.yaml
 version: 0.9
