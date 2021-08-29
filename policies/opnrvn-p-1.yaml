@@ -23,7 +23,7 @@ rules:
 - opnrvn-r-1.yaml
 - opnrvn-r-20.yaml
 - opnrvn-r-24.yaml
-- aws_security_contact_information_registered.yaml
+- opnrvn-r-55.yaml
 - opnrvn-r-21.yaml
 - aws_support_role_is_created.yaml
 - opnrvn-r-41.yaml

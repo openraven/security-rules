@@ -1,0 +1,19 @@
+# id: acffd4d7-0fe4-4750-a155-6c6fc35f133f
+ruleId: opnrvn-r-52
+type: asset
+ruleName: >
+  Ensure that S3 Bucket restrict public access by ACL and policy
+description: >
+  S3 Buckets should not be reachable outside of the project by default,
+  violation if that rule could cause major vulnerabilities and data loss
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id
+    FROM assets
+   WHERE resource_type = 'AWS::S3::Bucket'
+     AND (supplementary_configuration ->> 'isPublicByACL' <> 'false'
+        OR supplementary_configuration ->> 'isPublicByPolicy' <> 'false')
+# remediation:
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

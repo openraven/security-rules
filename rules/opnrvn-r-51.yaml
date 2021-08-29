@@ -1,5 +1,5 @@
-id: 9ea14a0e-1319-47cb-a417-9553ffa50109
-ruleId: aws_059
+# id: 9ea14a0e-1319-47cb-a417-9553ffa50109
+ruleId: opnrvn-r-51
 type: asset
 ruleName: >
   Ensure S3 bucket has no server-side encryption being enabled by another account
@@ -20,15 +20,6 @@ sql: >
     WHERE s3bucket.resource_type = 'AWS::S3::Bucket'
       AND arr.ssec -> 'applyServerSideEncryptionByDefault' ->> 'sseAlgorithm' = 'aws:kms'
       AND arr.ssec -> 'applyServerSideEncryptionByDefault' ->> 'kmsMasterKeyID' NOT LIKE '%:'||s3bucket.account_id||':%'
-remediation: >
-  Perform the following to clear cross-account KMS Key on S3
-  Via the Management Console
-    1. Sign in to the AWS Management Console and open the S3 console at https://console.aws.amazon.com/s3.
-    2. In the Buckets list, choose the name of the bucket that you want.
-    3. Choose Properties.
-    4. Under Default encryption, choose Edit.
-    5. Remove cross-account KMS Key and specify account related KMS Key for data encryption
-    6. Consider rule aws_058 aws_s3_prevent_default_kms_key_override.yaml remediation to prevent such violation on future
-# remediationDocURLs:
-# - https://docs.aws.amazon.com/AmazonS3/latest/userguide/default-bucket-encryption.html
-version: 0.1.3
+# remediation:
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
