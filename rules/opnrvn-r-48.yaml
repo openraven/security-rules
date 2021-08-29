@@ -1,5 +1,5 @@
-id: 379ea727-2b8c-420b-9933-3a157707b931
-ruleId: aws_030
+#id: 379ea727-2b8c-420b-9933-3a157707b931
+ruleId: opnrvn-r-48
 type: asset
 ruleName: >
   Ensure rotation for customer created CMKs is enabled
@@ -17,17 +17,6 @@ sql: >
   FROM assets
   WHERE resource_type = 'AWS::Kms::Key'
     AND supplementary_configuration->'rotation'->'keyRotationEnabled' != 'true';
-remediation: >
-  Via the Management Console:
-    1. Sign in to the AWS Management Console and open the IAM console at
-    https://console.aws.amazon.com/iam.
-    2. In the left navigation pane, choose Encryption Keys .
-    3. Select a customer created master key (CMK)
-    4. Under the Key Policy section, move down to Key Rotation .
-    5. Check the Rotate this key every year checkbox.
-  Via CLI
-    1. Run the following command to enable key rotation:
-     aws kms enable-key-rotation --key-id <kms_key_id>
-# remediationDocURLs:
-# - https://docs.openraven.com/remediations/enable_rotation_for_customer_created_CMKs
-version: 0.1.3
+# remediation:
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

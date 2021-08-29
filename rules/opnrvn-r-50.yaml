@@ -1,5 +1,5 @@
-id: db49efe5-c020-4165-9149-9cbb3cedfbf0
-ruleId: aws_025
+# id: db49efe5-c020-4165-9149-9cbb3cedfbf0
+ruleId: opnrvn-r-50
 type: asset
 ruleName: >
   Ensure the S3 bucket used to store CloudTrail logs is not publicly accessible
@@ -40,21 +40,6 @@ sql: >
   UNION
   SELECT asset_id
   FROM check_buckets_policy_statements;
-remediation: >
-  Perform the following to remove any public access that has been granted to the bucket via
-  an ACL or S3 bucket policy:
-    1. Go to Amazon S3 console at https://console.aws.amazon.com/s3/home
-    2. Right-click on the bucket and click Properties
-    3. In the Properties pane, click the Permissions tab.
-    4. The tab shows a list of grants, one row per grant, in the bucket ACL. Each row
-    identifies the grantee and the permissions granted.
-    5. Select the row that grants permission to Everyone or Any Authenticated User
-    6. Uncheck all the permissions granted to Everyone or Any Authenticated User (click
-    x to delete the row).
-    7. Click Save to save the ACL.
-    8. If the Edit bucket policy button is present, click it.
-    9. Remove any Statement having an Effect set to Allow and a Principal set to "*" or
-    {"AWS" : "*"}.
-# remediationDocURLs:
-# - https://docs.openraven.com/remediations/ensure_CloudTrail_logs_S3_bucket_not_publicly_accessible
-version: 0.1.3
+# remediation:
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

@@ -9,7 +9,7 @@ rules:
 - opnrvn-r-2.yaml
 - opnrvn-r-40.yaml
 - opnrvn-r-8.yaml
-- aws_rotate_access_keys_every_90_days.yaml
+- opnrvn-r-47.yaml
 - opnrvn-r-19.yaml
 - opnrvn-r-17.yaml
 - opnrvn-r-16.yaml
@@ -25,12 +25,12 @@ rules:
 - aws_support_role_is_created.yaml
 - opnrvn-r-41.yaml
 - opnrvn-r-42.yaml
-- aws_s3_bucket_access_logging_enabled.yaml
+- opnrvn-r-49.yaml
 - opnrvn-r-5.yaml
-- aws_rotation_for_customer_created_cmks.yaml
+- opnrvn-r-48.yaml
 - opnrvn-r-44.yaml
 - opnrvn-r-45.yaml
 - opnrvn-r-7.yaml
-- aws_peering_vpc_routing_tables_least_access.yaml
+- opnrvn-r-46.yaml
 - aws_security_groups_c2_access_permitted.yaml
 version: 0.9

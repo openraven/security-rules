@@ -7,7 +7,7 @@ The AWS Ransomware Recovery policy analyzes accounts for logging and backup conf
 enabled: true
 rules:
 # rules for logging
-  - aws_s3_bucket_access_logging_enabled.yaml
+  - opnrvn-r-49.yaml
   - aws_trails_integrated_with_cloudwatch_logs.yaml
   - opnrvn-r-4.yaml
   - opnrvn-r-5.yaml

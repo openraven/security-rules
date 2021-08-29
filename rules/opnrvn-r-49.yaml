@@ -1,5 +1,5 @@
-id: 10b14b8e-f19d-4f8e-bcf1-d9a7b701ea59
-ruleId: aws_028
+# id: 10b14b8e-f19d-4f8e-bcf1-d9a7b701ea59
+ruleId: opnrvn-r-49
 type: asset
 ruleName: >
   Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket
@@ -21,18 +21,6 @@ sql: >
        WHERE resource_type = 'AWS::S3::Bucket'
          AND s3bucket.resource_name = cloudtrail.supplementary_configuration->'trailDetails'->'trail'->>'s3BucketName'
          AND s3bucket.supplementary_configuration->'bucketLoggingConfiguration'->'loggingEnabled' != 'null');
-remediation: >
-  Perform the following to enable S3 bucket logging:
-  Via the Management Console
-    1. Sign in to the AWS Management Console and open the S3 console at https://console.aws.amazon.com/s3.
-    2. Under All Buckets click on the target S3 bucket
-    3. Click on Properties in the top right of the console
-    4. Under Bucket: <s3_bucket_for_cloudtrail> click on Logging
-    5. Configure bucket logging
-      1. Click on Enabled checkbox
-      2. Select Target Bucket from list
-      3. Enter a Target Prefix
-    6. Click Save
-# remediationDocURLs:
-# - https://docs.openraven.com/remediations/enable_CloudTrail_S3_bucket_access_logging_for
-version: 0.1.3
+# remediation:
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

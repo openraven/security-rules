@@ -1,5 +1,5 @@
-id: a2c83730-a2eb-40ce-a378-846577a0f4a2
-ruleId: aws_004
+# id: a2c83730-a2eb-40ce-a378-846577a0f4a2
+ruleId: opnrvn-r-47
 type: asset
 ruleName: >
   Ensure access keys are rotated every 90 days or less
@@ -18,24 +18,6 @@ sql: >
          AND TO_TIMESTAMP(configuration->>'access_key_1_last_rotated', 'YYYY-MM-DDTHH24:MI:SS') < now() - '90 days' :: interval)
     OR (configuration->>'access_key_2_active' = 'true'
         AND TO_TIMESTAMP(configuration->>'access_key_2_last_used_date', 'YYYY-MM-DDTHH24:MI:SS') < now() - '90 days' :: interval));
-remediation: >
-  Perform the following to rotate access keys:
-    1. Login to the AWS Management Console:
-    2. Click Services
-    3. Click IAM
-    4. Click on Users
-    5. Click on Security Credentials
-    6. As an Administrator
-      - Click on Make Inactive for keys that have not been rotated in 90 Days
-    7. As an IAM User
-      - Click on Make Inactive or Delete for keys which have not been rotated or used in 90 Days
-    8. Click on Create Access Key
-    9. Update programmatic call with new Access Key credentials
-
-  Or Via CLI:
-    aws iam update-access-key
-    aws iam create-access-key
-    aws iam delete-access-key
-# remediationDocURLs:
-# - https://docs.openraven.com/remediations/rotate_keys
-version: 0.1.3
+# remediation:
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
