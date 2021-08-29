@@ -1,13 +1,12 @@
 # vid: d8792397-239e-4028-9539-7b3771ba929f
 policyId: opnrvn-p-2
-policyName:  CIS Google Cloud Platform Foundation
+policyName:  Google Cloud Security Best Practices
 cloudProvider: GCP
 description: >
-  The CIS Security Benchmarks program provides well-defined, unbiased, consensus-based
-  industry best practices to help organizations assess and improve their security
+  Google Cloud Security Best Practices analyzes accounts for security best practices and is modelled on guidance published by the Center for Information Security.
 enabled: true
 rules:
-  - opnrvn-r-63.yaml
-  - opnrvn-r-61.yaml
-  - opnrvn-r-62.yaml
+- opnrvn-r-58.yaml
+- opnrvn-r-59.yaml
+- opnrvn-r-60.yaml
 version: 0.9
