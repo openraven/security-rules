@@ -28,7 +28,7 @@ rules:
 - aws_support_role_is_created.yaml
 - aws_no_access_keys_initially.yaml
 - aws_no_full_administrative_privileges_policies.yaml
-- opnrvn-r-4.yaml
+- opnrvn-r-3.yaml
 - aws_cloudtrail_log_file_validation_enabled.yaml
 - aws_s3_bucket_cloudtrail_logs_not_publicly_accessible.yaml
 - aws_trails_integrated_with_cloudwatch_logs.yaml
