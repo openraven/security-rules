@@ -10,4 +10,5 @@ rules:
   - gcp_service_account_no_user_managed_keys.yaml
   - gcp_instances_dont_use_default_service_account.yaml
   - gcp_no_project_level_service_account_user_or_token_for_iam_user.yaml
+  - gcp_service_account_keys_rotation.yaml
 version:
