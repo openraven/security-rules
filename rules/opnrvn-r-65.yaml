@@ -16,4 +16,4 @@ sql: >
   WHERE key->>'keyType' = 'USER_MANAGED';
 # remediation: 
 1remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.1.3
+version: 0.9
