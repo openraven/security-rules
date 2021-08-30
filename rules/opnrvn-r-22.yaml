@@ -1,0 +1,27 @@
+# id: c8f4d501-3358-49fc-9260-9943efc9e654
+ruleId: opnrvn-r-22
+type: asset
+ruleName: >
+  Ensure there no stale roles with Attached Policies for S3 access
+description: >
+  Avoid stale roles which could cause access leakage and uncontrolled manipulation with S3 bucket data
+  which increase risks and leads to Ransomware violations.
+  This rule checks Attached policies only. The Inline policies verified under the respective rule.
+severity: high
+enabled: true
+sql: >
+  SELECT DISTINCT a.asset_id
+  FROM assets a, LATERAL (
+      SELECT value ->> 'arn' as attached_policy_arn
+      FROM jsonb_array_elements(a.supplementary_configuration -> 'attachedPolicies')
+  ) arr
+  JOIN assets policy ON (arr.attached_policy_arn = policy.asset_id)
+  WHERE a.resource_type = 'AWS::IAM::Role'
+  AND (policy.supplementary_configuration::text like '%"s3:%'
+      OR policy.supplementary_configuration::text like '%"arn:aws:s3%')
+  AND a.configuration ->> 'roleLastUsed' IS NOT NULL
+  AND (a.configuration -> 'roleLastUsed' ->> 'lastUsedDate' IS NULL
+      OR now() - INTERVAL '60 DAYS' > to_timestamp(a.configuration -> 'roleLastUsed' ->> 'lastUsedDate', 'YYYY-MM-DDTHH:MI:SS'))
+# remediation:
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

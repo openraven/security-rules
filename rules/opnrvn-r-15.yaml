@@ -1,0 +1,32 @@
+# id: 9a63958d-1d15-4e26-8604-2004b32c9be7
+ruleId: opnrvn-r-15
+type: asset
+ruleName: >
+  Ensure IAM password policy require at least one number
+description: >
+  Password policies are, in part, used to enforce password complexity requirements. IAM
+  password policies can be used to ensure password are comprised of different character
+  sets. It is recommended that the password policy require at least one number
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id
+  FROM assets
+  WHERE resource_type = 'AWS::IAM::Account'
+    AND (supplementary_configuration->'passwordPolicy' = 'null'
+         OR supplementary_configuration->'passwordPolicy'->'requireNumbers' = 'false');
+remediation: >
+  Perform the following to set the password policy as prescribed:
+  Via AWS Console
+    1. Login to AWS Console (with appropriate permissions to View Identity Access
+    Management Account Settings)
+    2. Go to IAM Service on the AWS Console
+    3. Click on Account Settings on the Left Pane
+    4. Check "Require at least one number"
+    5. Click "Apply password policy"
+  Via CLI
+   aws iam update-account-password-policy --require-numbers
+  Note: All commands starting with "aws iam update-account-password-policy" have be
+     combined into a single command in order to all of them to take effect
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

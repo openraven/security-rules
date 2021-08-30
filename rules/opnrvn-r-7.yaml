@@ -1,0 +1,27 @@
+# id: 55b62465-1bdb-4388-9adf-b88d5e83812b
+ruleId: opnrvn-r-7
+type: asset
+ruleName: >
+  Ensure the default security group of every VPC restricts all traffic
+description: >
+  A VPC comes with a default security group whose initial settings deny all inbound traffic,
+  allow all outbound traffic, and allow all traffic between instances assigned to the security
+  group. If you don't specify a security group when you launch an instance, the instance is
+  automatically assigned to this default security group. Security groups provide stateful
+  filtering of ingress/egress network traffic to AWS resources. It is recommended that the
+  default security group restrict all traffic.
+  The default VPC in every region should have its default security group updated to comply.
+  Any newly created VPCs will automatically contain a default security group that will need
+  remediation to comply with this recommendation.
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id
+  FROM assets
+  WHERE resource_type = 'AWS::EC2::SecurityGroup'
+    AND resource_name = 'default'
+    AND (jsonb_array_length(configuration->'ipPermissions') > 0
+         OR jsonb_array_length(configuration->'ipPermissionsEgress') > 0);
+# remediation:
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

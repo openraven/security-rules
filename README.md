@@ -1,6 +1,4 @@
 
-# @GIANT WIP
+# Please see https://github.com/openraven/security-rules/wiki
 
-See the security rules wiki for all docuemntation
 
-https://github.com/openraven/security-rules/wiki

@@ -1,0 +1,20 @@
+# id: 12ac08c9-9309-44d4-b6ae-98d15db5becd
+ruleId: opnrvn-r-13
+type: asset
+ruleName: >
+  Ensure IAM password policy expires passwords within 90 days or less
+description: >
+  IAM password policies can require passwords to be rotated or expired after a given
+  number of days. It is recommended that the password policy expire passwords after 90
+  days or less
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id
+  FROM assets
+  WHERE resource_type = 'AWS::IAM::Account'
+    AND (supplementary_configuration->'passwordPolicy'->'maxPasswordAge' = 'null'
+         OR supplementary_configuration->'passwordPolicy'->'maxPasswordAge' > '90');
+remediation: >
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

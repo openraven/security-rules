@@ -1,0 +1,45 @@
+# id: db49efe5-c020-4165-9149-9cbb3cedfbf0
+ruleId: opnrvn-r-50
+type: asset
+ruleName: >
+  Ensure the S3 bucket used to store CloudTrail logs is not publicly accessible
+description: >
+  CloudTrail logs a record of every API call made in your AWS account. These logs file are
+  stored in an S3 bucket. It is recommended that the bucket policy, or access control list
+  (ACL), applied to the S3 bucket that CloudTrail logs to prevents public access to the
+  CloudTrail logs.
+severity: high
+enabled: true
+sql: >
+  WITH
+  get_buckets_acl_configs AS (
+    SELECT buckets.asset_id,
+        jsonb_array_elements(buckets.supplementary_configuration->'bucketACLConfiguration'->'grants') AS bucket_grants,
+        (buckets.supplementary_configuration->>'bucketPolicy')::JSONB as bucket_policy
+    FROM assets trails, assets buckets
+    WHERE trails.resource_type = 'AWS::CloudTrail::Trail' AND
+      buckets.resource_type = 'AWS::S3::Bucket' AND
+      trails.supplementary_configuration->'trailDetails'->'trail'->>'s3BucketName' = buckets.resource_name
+  ),
+  check_buckets_grantee_uri AS (
+    SELECT asset_id
+    FROM get_buckets_acl_configs
+    WHERE bucket_grants->'grantee'->>'uri' IS NOT NULL AND
+      (bucket_grants->'grantee'->>'uri' = 'http://acs.amazonaws.com/groups/global/AllUsers' OR
+       bucket_grants->'grantee'->>'uri' = 'http://acs.amazonaws.com/groups/global/AuthenticatedUsers')
+  ),
+  check_buckets_policy_statements AS (
+    SELECT asset_id
+    FROM get_buckets_acl_configs
+    WHERE (bucket_policy->'Statement'->>'Effect' = 'Allow' AND bucket_policy->'Statement'->>'Principal' = '*') OR
+        (bucket_policy->'Statement'->>'Effect' = 'Allow' AND bucket_policy->'Statement'->'Principal'->>'AWS' = '*')
+  )
+
+  SELECT asset_id
+  FROM check_buckets_grantee_uri
+  UNION
+  SELECT asset_id
+  FROM check_buckets_policy_statements;
+# remediation:
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

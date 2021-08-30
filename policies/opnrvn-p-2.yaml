@@ -1,0 +1,14 @@
+# vid: d8792397-239e-4028-9539-7b3771ba929f
+policyId: opnrvn-p-2
+policyName:  Google Cloud Security Best Practices
+cloudProvider: GCP
+description: >
+  Google Cloud Security Best Practices analyzes accounts for security best practices and is modelled on guidance published by the Center for Information Security.
+enabled: true
+rules:
+- opnrvn-r-58.yaml
+- opnrvn-r-59.yaml
+- opnrvn-r-60.yaml
+- opnrvn-r-64.yaml
+- opnrvn-r-65.yaml
+version: 0.9

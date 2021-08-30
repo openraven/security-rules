@@ -1,0 +1,24 @@
+# id: 3111574f-4af8-4fac-bd68-839f9f8d6477
+ruleId: opnrvn-r-62
+type: asset
+ruleName: >
+  Ensure that IAM users are not assigned the Service Account User or
+  Service Account Token Creator roles at project level
+description: >
+  It is recommended to assign the Service Account User (iam.serviceAccountUser) and
+  Service Account Token Creator (iam.serviceAccountTokenCreator) roles to a user for
+  a specific service account rather than assigning the role to a user at project level
+severity: high
+enabled: true
+sql: >
+  SELECT CONCAT(binding->>'role_', ' exists in ', asset_id) AS asset_id
+  FROM
+    (SELECT asset_id,
+            jsonb_array_elements(supplementary_configuration->'iamPolicy'->'bindings_') AS binding
+     from assets
+     WHERE resource_type = 'GCP::ResourceManager::Project') AS bindings
+  WHERE binding->>'role_' = 'roles/iam.serviceAccountTokenCreator'
+    OR binding->>'role_' = 'roles/iam.serviceAccountUser'
+# remediation:
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.1.3

@@ -1,0 +1,23 @@
+# id: d964fe48-3465-4c5d-9e62-865055eca9e7
+ruleId: opnrvn-r-40
+type: asset
+ruleName: >
+  Ensure multi-factor authentication (MFA) is enabled for all IAM users
+  that have a console password
+description: >
+  Multi-Factor Authentication (MFA) adds an extra layer of protection on top of a user name
+  and password. With MFA enabled, when a user signs in to an AWS website, they will be
+  prompted for their user name and password as well as for an authentication code from
+  their AWS MFA device. It is recommended that MFA be enabled for all accounts that have a
+  console password.
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id
+  FROM assets
+  WHERE resource_type = 'AWS::IAM::CredentialsReport'
+    AND configuration->>'password_enabled' = 'true'
+    AND configuration->>'mfa_active' = 'false';
+remediation:
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
