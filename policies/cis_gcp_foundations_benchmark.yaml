@@ -7,8 +7,12 @@ description: >
   industry best practices to help organizations assess and improve their security
 enabled: true
 rules:
-  - gcp_service_account_no_user_managed_keys.yaml
+  - gcp_1_2_iam_mfa_enabled_for_non_service_accounts.yaml
+  - gcp_1_3_security_key_enforcement_is_enabled.yaml
+  - gcp_1_4_service_account_no_user_managed_keys.yaml
+  - gcp_1_5_no_admin_rights_for_service_account.yaml
   - gcp_instances_dont_use_default_service_account.yaml
-  - gcp_no_project_level_service_account_user_or_token_for_iam_user.yaml
-  - gcp_service_account_keys_rotation.yaml
+  - gcp_1_6_no_project_level_service_account_user_or_token_for_iam_user.yaml
+  - gcp_1_7_iam_service_account_keys_rotation.yaml
+  - gcp_1_8_separation_of_duties_for_users.yaml
 version:
