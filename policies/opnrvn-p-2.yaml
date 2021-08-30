@@ -9,4 +9,6 @@ rules:
 - opnrvn-r-58.yaml
 - opnrvn-r-59.yaml
 - opnrvn-r-60.yaml
+- opnrvn-r-64.yaml
+- opnrvn-r-65.yaml
 version: 0.9
