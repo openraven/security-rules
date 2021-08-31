@@ -1,0 +1,21 @@
+ruleId: opnrvn-r-75
+type: asset
+ruleName: >
+  Ensure API keys are rotated every 90 days
+description: >
+  Once a key is stolen, it has no expiration, meaning it may be used indefinitely unless the project owner revokes or regenerates the key.
+  Rotating API keys will reduce the window of opportunity for an access key that is associated with a compromised or terminated account to be used.
+  API keys should be rotated to ensure that data cannot be accessed with an old key that might have been lost, cracked, or stolen.
+manualControl: true
+severity: high
+enabled: true
+remediation: >
+  From Console
+    1. Go to APIs & Services\Credentials using https://console.cloud.google.com/apis/credentials
+    2. In the section API Keys, Click the API Key Name. The API Key properties display on a new page.
+    3. Click REGENERATE KEY to rotate API key.
+    4. Click Save.
+    5. Repeat steps 2,3,4 for every API key that has not been rotated in the last 90 days.
+    Note: Do not set HTTP referrers to wild-cards (* or *.[TLD] or .[TLD]/) allowing access to any/wide HTTP referrer(s)
+    Do not set IP addresses and referrer to any host (0.0.0.0 or 0.0.0.0/0 or ::0)
+version: 0.9

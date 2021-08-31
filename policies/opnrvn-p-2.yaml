@@ -15,4 +15,10 @@ rules:
 - opnrvn-r-67.yaml # CIS 1.5
 - opnrvn-r-68.yaml # CIS 1.8
 - opnrvn-r-69.yaml # CIS 1.9
+- opnrvn-r-70.yaml # CIS 1.10
+- opnrvn-r-71.yaml # CIS 1.11
+- opnrvn-r-72.yaml # CIS 1.12
+- opnrvn-r-73.yaml # CIS 1.13
+- opnrvn-r-74.yaml # CIS 1.14
+- opnrvn-r-75.yaml # CIS 1.15
 version: 0.9

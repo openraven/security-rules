@@ -2,7 +2,7 @@
 ruleId: opnrvn-r-69
 type: asset
 ruleName: >
-  Ensure that Cloud KMS cryptokeys are not anonymously or publicly accessible (Automated)
+  Ensure that Cloud KMS cryptokeys are not anonymously or publicly accessible
 description: >
   Granting permissions to allUsers or allAuthenticatedUsers allows anyone to access the dataset.
   Such access might not be desirable if sensitive data is stored at the location.
