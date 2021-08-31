@@ -28,6 +28,5 @@ sql: >
     OR (configuration->>'access_key_2_active' = 'true'
         AND configuration->>'access_key_2_last_used_date' IS NULL
         AND TO_TIMESTAMP(configuration->>'access_key_2_last_rotated', 'YYYY-MM-DDTHH24:MI:SS') < now() - '90 days' :: interval));
-remediation:
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

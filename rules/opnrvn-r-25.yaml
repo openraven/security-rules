@@ -52,6 +52,5 @@ sql: >
       (SELECT *
        FROM get_topic_subscribers_confirmed
        WHERE subscribers_number = '0');
-# remediation:
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

@@ -25,6 +25,5 @@ sql: >
             FROM jsonb_array_elements(supplementary_configuration->'eventSelectors'->'eventSelectors') eventSelector
             WHERE eventSelector->>'includeManagementEvents' = 'true'
               AND eventSelector->>'readWriteType' = 'All'));
-# remediation:
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

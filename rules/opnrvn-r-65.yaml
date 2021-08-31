@@ -10,9 +10,5 @@ description: >
 manualControl: true
 severity: high
 enabled: true
-remediation: >
-  For each Google Cloud Platform project:
-  1. Identify non-service accounts.
-  2. Setup multi-factor authentication for each account.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

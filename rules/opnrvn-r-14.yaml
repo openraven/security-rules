@@ -14,6 +14,5 @@ sql: >
   WHERE resource_type = 'AWS::IAM::Account'
     AND (supplementary_configuration->'passwordPolicy' = 'null'
          OR supplementary_configuration->'passwordPolicy'->'passwordReusePrevention' != '24');
-# remediation:
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

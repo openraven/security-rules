@@ -21,6 +21,5 @@ sql: >
          AND configuration->'recordingGroup'->'includeGlobalResourceTypes' = 'true'
          AND supplementary_configuration->'status'->'recording' = 'true'
          AND supplementary_configuration->'status'->>'lastStatus' = 'SUCCESS');
-# remediation:
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

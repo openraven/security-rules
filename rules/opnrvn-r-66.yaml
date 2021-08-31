@@ -14,9 +14,5 @@ description: >
 manualControl: true
 severity: high
 enabled: true
-remediation: >
-  1. Identify users with the Organization Administrator role.
-  2. Setup Security Key Enforcement for each account.
-  3. For additional info: https://cloud.google.com/security-key/
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

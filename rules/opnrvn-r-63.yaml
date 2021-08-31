@@ -14,6 +14,6 @@ sql: >
       FROM assets
      WHERE resource_type = 'GCP::Iam::ServiceAccount') AS keys
   WHERE key->>'keyType' = 'USER_MANAGED';
-# remediation:
+
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

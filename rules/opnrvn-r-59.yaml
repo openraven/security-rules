@@ -15,6 +15,6 @@ sql: >
   WHERE resource_type = 'AWS::IAM::Policy'
     AND resource_name = 'AWSSupportAccess'
     AND configuration->>'attachmentCount' = '0';
-#remediation:
+
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

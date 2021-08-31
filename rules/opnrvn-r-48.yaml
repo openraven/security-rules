@@ -17,6 +17,6 @@ sql: >
   FROM assets
   WHERE resource_type = 'AWS::Kms::Key'
     AND supplementary_configuration->'rotation'->'keyRotationEnabled' != 'true';
-# remediation:
+
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

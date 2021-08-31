@@ -34,6 +34,6 @@ sql: >
          OR (statement2->>'Effect' = 'Allow'
              AND statement2->>'Action' = '*'
              AND statement2->>'Resource' = '*'));
-remediation:
+
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9
