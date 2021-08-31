@@ -22,6 +22,6 @@ sql: >
     AND (supplementary_configuration->'trailDetails'->'trail'->'cloudWatchLogsLogGroupArn' = 'null'
          OR supplementary_configuration->'status'->'latestCloudWatchLogsDeliveryTime' = 'null'
          OR TO_TIMESTAMP(supplementary_configuration->'status'->>'latestCloudWatchLogsDeliveryTime', 'YYYY-MM-DDTHH24:MI:SS') < now() - '1 day' :: interval);
-# remediation:
+
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

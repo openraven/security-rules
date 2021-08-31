@@ -16,6 +16,6 @@ sql: >
      FROM assets
      WHERE resource_type = 'GCP::ComputeEngine::Zone') get_email
   WHERE service_accounts->>'email' ILIKE '%-compute@developer.gserviceaccount.com'
-# remediation:
+
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

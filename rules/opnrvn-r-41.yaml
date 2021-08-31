@@ -20,6 +20,6 @@ sql: >
          OR (configuration->>'access_key_2_active' = 'true'
              AND (configuration->>'access_key_2_last_used_date' IS NULL
                   OR configuration->>'access_key_2_last_used_date' = 'N/A')));
-#remediation:
+
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

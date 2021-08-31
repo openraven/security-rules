@@ -21,6 +21,5 @@ sql: >
                   AND "configuration" ->> 'status' = 'ENABLED') a
     ON (reg.region_global = a.region or region is null)
   WHERE region is null
-# remediation:
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

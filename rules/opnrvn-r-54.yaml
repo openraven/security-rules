@@ -18,6 +18,6 @@ sql: >
         OR supplementary_configuration -> 'versioning' ->> 'status' <> 'Enabled'
         OR supplementary_configuration -> 'versioning' ->> 'mfaDelete' is null
         OR supplementary_configuration -> 'versioning' ->> 'mfaDelete' <> 'Enabled')
-remediation:
+
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

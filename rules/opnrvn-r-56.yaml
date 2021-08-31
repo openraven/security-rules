@@ -624,6 +624,6 @@ eval: >
               findings.append({'asset_id': sg['asset_id']})  
               break          
     return findings
-remediation:
+
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

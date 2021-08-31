@@ -18,6 +18,6 @@ sql: >
   WHERE resource_type = 'AWS::IAM::CredentialsReport'
     AND configuration->>'password_enabled' = 'true'
     AND configuration->>'mfa_active' = 'false';
-remediation:
+
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

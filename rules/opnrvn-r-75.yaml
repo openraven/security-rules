@@ -9,13 +9,5 @@ description: >
 manualControl: true
 severity: high
 enabled: true
-remediation: >
-  From Console
-    1. Go to APIs & Services\Credentials using https://console.cloud.google.com/apis/credentials
-    2. In the section API Keys, Click the API Key Name. The API Key properties display on a new page.
-    3. Click REGENERATE KEY to rotate API key.
-    4. Click Save.
-    5. Repeat steps 2,3,4 for every API key that has not been rotated in the last 90 days.
-    Note: Do not set HTTP referrers to wild-cards (* or *.[TLD] or .[TLD]/) allowing access to any/wide HTTP referrer(s)
-    Do not set IP addresses and referrer to any host (0.0.0.0 or 0.0.0.0/0 or ::0)
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

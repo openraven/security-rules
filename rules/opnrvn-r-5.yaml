@@ -20,6 +20,5 @@ sql: >
   WHERE resource_type = 'AWS::CloudTrail::Trail'
     AND (supplementary_configuration->'trailDetails'->'trail'->>'kmsKeyId' = ''
          OR supplementary_configuration->'trailDetails'->'trail'->>'kmsKeyId' IS NULL);
-#remediation:
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

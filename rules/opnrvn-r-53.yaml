@@ -25,6 +25,6 @@ sql: >
     AND policy.stmt ->> 'Action' LIKE '%s3:PutObject%'
     AND (policy.stmt ->> 'Condition' IS NULL
           OR policy.stmt ->> 'Condition' not like '%x-amz-server-side-encryption-aws-kms-key-id%')
-# remediation:
+
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

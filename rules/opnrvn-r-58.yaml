@@ -18,6 +18,6 @@ sql: >
    WHERE ec2.resource_type = 'AWS::EC2::Instance'
      AND ec2.configuration -> 'state' ->> 'name' = 'running'
      AND ssm.resource_id IS NULL;
-# remediation:
+
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

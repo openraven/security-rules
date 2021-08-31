@@ -16,6 +16,6 @@ sql: >
     AND (resource_name = '<root_account>'
          AND (configuration->>'access_key_1_active' = 'true'
               OR configuration->>'access_key_2_active' = 'true'));
-# remediation:
+
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

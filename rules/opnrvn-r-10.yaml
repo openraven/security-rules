@@ -24,6 +24,5 @@ sql: >
        WHERE flow_logs->>'flowLogStatus' ILIKE 'ACTIVE'
          AND (flow_logs->>'trafficType' ILIKE 'ALL'
               OR flow_logs->>'trafficType' ILIKE 'REJECT'));
-# remediation:
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

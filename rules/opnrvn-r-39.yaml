@@ -15,6 +15,6 @@ sql: >
   FROM assets
   WHERE resource_type = 'AWS::IAM::Account'
     AND configuration->>'AccountMFAEnabled' != '1';
-remediation:
+
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

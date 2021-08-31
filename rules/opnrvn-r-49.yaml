@@ -21,6 +21,6 @@ sql: >
        WHERE resource_type = 'AWS::S3::Bucket'
          AND s3bucket.resource_name = cloudtrail.supplementary_configuration->'trailDetails'->'trail'->>'s3BucketName'
          AND s3bucket.supplementary_configuration->'bucketLoggingConfiguration'->'loggingEnabled' != 'null');
-# remediation:
+
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

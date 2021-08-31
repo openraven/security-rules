@@ -19,6 +19,6 @@ sql: >
                HAVING resource_type = 'AWS::SecurityHub::StandardsSubscription' AND count(*) > 0) a
     ON (reg.region_global = a.region or a.region is null)
   WHERE region is null
-# remediation:
+
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

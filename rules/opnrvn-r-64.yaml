@@ -18,6 +18,6 @@ sql: >
     ) arr
   WHERE acc.resource_type = 'GCP::Iam::ServiceAccount'
   AND to_timestamp(arr.keys ->> 'validAfterTime', 'YYYY-MM-DDTHH:MI:SSZ') < now() - interval '90 Days'
-# remediation:
+
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

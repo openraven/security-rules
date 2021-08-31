@@ -8,8 +8,5 @@ description: >
 manualControl: true
 severity: high
 enabled: true
-remediation: >
-  From Console
-    1. Go to APIs & Services\Credentials using https://console.cloud.google.com/apis/credentials
-    2. In the section API Keys, to delete API Keys: Click the Delete Bin Icon in front of every API Key Name.
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

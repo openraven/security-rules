@@ -15,6 +15,5 @@ sql: >
   WHERE resource_type = 'AWS::IAM::User'
     AND (supplementary_configuration->>'attachedPolicies' != '[]'
          OR supplementary_configuration->>'userPolicies' != '[]');
-# remediation:
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

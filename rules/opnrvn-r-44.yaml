@@ -31,6 +31,6 @@ sql: >
   )
 
   SELECT * FROM get_cidrIp;
-remediation:
+
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

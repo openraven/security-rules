@@ -15,6 +15,5 @@ sql: >
   FROM assets
   WHERE resource_type = 'AWS::CloudTrail::Trail'
     AND supplementary_configuration->'trailDetails'->'trail'->'logFileValidationEnabled' != 'true';
-# remediation:
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

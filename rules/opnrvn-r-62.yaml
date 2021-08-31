@@ -19,6 +19,6 @@ sql: >
      WHERE resource_type = 'GCP::ResourceManager::Project') AS bindings
   WHERE binding->>'role_' = 'roles/iam.serviceAccountTokenCreator'
     OR binding->>'role_' = 'roles/iam.serviceAccountUser'
-# remediation:
+
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.1.3

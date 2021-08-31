@@ -15,6 +15,5 @@ sql: >
   WHERE resource_type = 'AWS::IAM::Account'
     AND (supplementary_configuration->'passwordPolicy' = 'null'
          OR supplementary_configuration->'passwordPolicy'->'minimumPasswordLength' < '14');
-# remediation:
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9
