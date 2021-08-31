@@ -1,8 +1,9 @@
 # id: 74406460-05fb-4057-b646-f3f8c1e5d56f
 policyId: opnrvn-p-1
 policyName:  AWS Security Best Practices
+cloudProvider: AWS
 description: >
-AWS Security Best Practices policy analyzes accounts for security best practices and is modelled on guidance published by the Center for Information Security.
+  AWS Security Best Practices policy analyzes accounts for security best practices and is modelled on guidance published by the Center for Information Security.
 enabled: true
 rules:
 - opnrvn-r-1.yaml

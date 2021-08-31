@@ -3,7 +3,7 @@ policyId: opnrvn-p4
 policyName: AWS Ransomware Recovery
 cloudProvider: AWS
 description: >
-The AWS Ransomware Recovery policy analyzes accounts for logging and backup configurations to determine if it would be possible to understand what happened in an attack and to adequately restore if compromised.
+  The AWS Ransomware Recovery policy analyzes accounts for logging and backup configurations to determine if it would be possible to understand what happened in an attack and to adequately restore if compromised.
 enabled: true
 rules:
 # rules for logging

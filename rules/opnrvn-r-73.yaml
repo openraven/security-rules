@@ -1,0 +1,24 @@
+ruleId: opnrvn-r-73
+type: asset
+ruleName: >
+  Ensure API keys are restricted to use by only specified Hosts and Apps
+description: >
+  Security risks involved in using API-Keys appear below:
+  - API keys are simple encrypted strings
+  - API keys do not identify the user or the application making the API request
+  - API keys are typically accessible to clients, making it easy to discover and steal an API key
+  In order to reduce attack vectors, API-Keys can be restricted only to trusted hosts, HTTP referrers and applications.
+  By default, Application Restrictions are set to None.
+manualControl: true
+severity: high
+enabled: true
+remediation: >
+  From Console
+    1. Go to APIs & Services\Credentials using https://console.cloud.google.com/apis/credentials
+    2. In the section API Keys, Click the API Key Name. The API Key properties display on a new page.
+    3. In the Key restrictions section, set the application restrictions to any of HTTP referrers, IP Adresses, Android Apps, iOs Apps.
+    4. Click Save.
+    5. Repeat steps 2,3,4 for every unrestricted API key.
+    Note: Do not set HTTP referrers to wild-cards (* or *.[TLD] or .[TLD]/) allowing access to any/wide HTTP referrer(s)
+    Do not set IP addresses and referrer to any host (0.0.0.0 or 0.0.0.0/0 or ::0)
+version: 0.9

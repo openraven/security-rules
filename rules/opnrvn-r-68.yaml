@@ -1,0 +1,20 @@
+#id: 9d963744-099f-11ec-9a03-0242ac130003
+ruleId: opnrvn-r-68
+type: asset
+ruleName: >
+  Ensure that Separation of duties is enforced while assigning service account related roles to users
+description: >
+  Separation of duties is the concept of ensuring that one individual does not have all necessary permissions to be able to complete a malicious action.
+  In Cloud IAM - service accounts, this could be an action such as using a service account to access resources that user should not normally have access to.
+  No user should have Service Account Admin and Service Account Userroles assigned at the same time.
+manualControl: true
+severity: high
+enabled: true
+remediation: >
+  From Console
+    1. Go to IAM & admin/IAM using https://console.cloud.google.com/iam-admin/iam
+    2. For any member having both Service Account Admin and Service account User
+    roles granted/assigned, click the Delete Bin icon to remove either role from the member.
+    Removal of a role should be done based on the business requirements.
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

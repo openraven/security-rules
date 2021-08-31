@@ -1,0 +1,20 @@
+#id: 3ea67fb2-09a1-11ec-9a03-0242ac130003
+ruleId: opnrvn-r-69
+type: asset
+ruleName: >
+  Ensure that Cloud KMS cryptokeys are not anonymously or publicly accessible
+description: >
+  Granting permissions to allUsers or allAuthenticatedUsers allows anyone to access the dataset.
+  Such access might not be desirable if sensitive data is stored at the location.
+  In this case, ensure that anonymous and/or public access to a Cloud KMS cryptokey is not allowed.
+severity: high
+enabled: false # SQL prep in progress. Disabled so far
+sql: >
+remediation: >
+  From Console
+    1. Go to IAM & admin/IAM using https://console.cloud.google.com/iam-admin/iam
+    2. For any member having both Service Account Admin and Service account User
+    roles granted/assigned, click the Delete Bin icon to remove either role from the member.
+    Removal of a role should be done based on the business requirements.
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

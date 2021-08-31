@@ -1,0 +1,15 @@
+ruleId: opnrvn-r-72
+type: asset
+ruleName: >
+  Ensure API keys are not created for a project
+description: >
+  Keys are insecure because they can be viewed publicly, such as from within a browser, or they can be accessed on a device where the key resides.
+  It is recommended to use standard authentication flow instead.
+manualControl: true
+severity: high
+enabled: true
+remediation: >
+  From Console
+    1. Go to APIs & Services\Credentials using https://console.cloud.google.com/apis/credentials
+    2. In the section API Keys, to delete API Keys: Click the Delete Bin Icon in front of every API Key Name.
+version: 0.9

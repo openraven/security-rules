@@ -1,0 +1,26 @@
+ruleId: opnrvn-r-74
+type: asset
+ruleName: >
+  Ensure API keys are restricted to only APIs that application needs access
+description: >
+  Security risks involved in using API-Keys appear below:
+  - API keys are simple encrypted strings
+  - API keys do not identify the user or the application making the API request
+  - API keys are typically accessible to clients, making it easy to discover and steal an API key
+  In order to reduce attack surfaces by providing least privileges,
+  API-Keys can be restricted to use (call) only APIs required by an application.
+  By default, API restrictions are set to None.
+manualControl: true
+severity: high
+enabled: true
+remediation: >
+  From Console
+    1. Go to APIs & Services\Credentials using https://console.cloud.google.com/apis/credentials
+    2. In the section API Keys, Click the API Key Name. The API Key properties display on a new page.
+    3. In the Key restrictions section go to API restrictions.
+    4. Click the Select API drop-down to choose an API.
+    5. Click Save.
+    6. Repeat steps 2,3,4,5 for every unrestricted API key
+  Note:
+  Do not set API restrictions to Google Cloud APIs, as this option allows access to all services offered by Google cloud.
+version: 0.9
