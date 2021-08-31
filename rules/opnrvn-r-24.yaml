@@ -15,6 +15,6 @@ description: >
   point to a PABX hunt group or other call-forwarding system.
 manualControl: true
 severity: high
-enabled: trueF
+enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9
