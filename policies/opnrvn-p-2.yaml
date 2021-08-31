@@ -6,9 +6,13 @@ description: >
   Google Cloud Security Best Practices analyzes accounts for security best practices and is modelled on guidance published by the Center for Information Security.
 enabled: true
 rules:
-- opnrvn-r-58.yaml
-- opnrvn-r-59.yaml
-- opnrvn-r-60.yaml
-- opnrvn-r-64.yaml
-- opnrvn-r-65.yaml
+- opnrvn-r-61.yaml #?
+- opnrvn-r-62.yaml # CIS 1.6
+- opnrvn-r-63.yaml # CIS 1.4
+- opnrvn-r-64.yaml # CIS 1.7
+- opnrvn-r-65.yaml # CIS 1.2
+- opnrvn-r-66.yaml # CIS 1.3
+- opnrvn-r-67.yaml # CIS 1.5
+- opnrvn-r-68.yaml # CIS 1.8
+- opnrvn-r-69.yaml # CIS 1.9
 version: 0.9
