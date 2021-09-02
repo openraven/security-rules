@@ -1,0 +1,20 @@
+ruleId: opnrvn-r-76
+type: asset
+ruleName: >
+  Ensure that Cloud Storage bucket is not anonymously or publicly accessible
+description: >
+  Allowing anonymous or public access grants permissions to anyone to access bucket content.
+  Such access might not be desired if you are storing any sensitive data.
+  Hence, ensure that anonymous or public access to a bucket is not allowed.
+severity: high
+enabled: true
+sql: >
+  SELECT distinct acc.asset_id
+    FROM assets acc,
+    LATERAL (
+        SELECT jsonb_array_elements_text(value -> 'members') as members
+        FROM jsonb_array_elements(supplementary_configuration -> 'iamPolicy' -> 'bindingsList')
+    ) arr
+   WHERE acc.resource_type = 'GCP::Storage::Bucket' AND (members::text = 'allUsers' OR members = 'allAuthenticatedUsers')
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
