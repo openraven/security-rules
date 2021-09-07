@@ -1,0 +1,19 @@
+ruleId: opnrvn-r-79
+type: asset
+ruleName: >
+  Ensure legacy networks do not exist for a project
+description: >
+  Legacy networks have a single network IPv4 prefix range and a single gateway IP address for the whole network.
+  The network is global in scope and spans all cloud regions.
+  Subnetworks cannot be created in a legacy network and are unable to switch from legacy to auto or custom subnet networks.
+  Legacy networks can have an impact for high network traffic projects and are subject to a single point of contention or failure.
+severity: high
+enabled: true
+sql: >
+  SELECT acc.asset_id
+    FROM assets acc
+   WHERE acc.resource_type = 'GCP::VPC::Network'
+     AND configuration ->> 'autoCreateSubnetworks' is null
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

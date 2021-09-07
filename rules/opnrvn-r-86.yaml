@@ -1,0 +1,14 @@
+ruleId: opnrvn-r-86
+type: asset
+ruleName: >
+  Ensure no HTTPS or SSL proxy load balancers permit SSL policies with weak cipher suites
+description: >
+  Legacy networks have a single network IPv4 prefix range and a single gateway IP address for the whole network.
+  The network is global in scope and spans all cloud regions.
+  Subnetworks cannot be created in a legacy network and are unable to switch from legacy to auto or custom subnet networks.
+  Legacy networks can have an impact for high network traffic projects and are subject to a single point of contention or failure.
+manualControl: true
+severity: high
+enabled: true
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
