@@ -1,0 +1,13 @@
+ruleId: opnrvn-r-82
+type: asset
+ruleName: >
+  Ensure that RSASHA1 is not used for the zone-signing key in Cloud DNS DNSSEC
+description: >
+  DNSSEC algorithm numbers in this registry may be used in CERT RRs.
+  Zone signing (DNSSEC) and transaction security mechanisms (SIG(0) and TSIG) make use of particular subsets of these algorithms.
+  The algorithm used for key signing should be a recommended one and it should be strong.
+manualControl: true
+severity: high
+enabled: true
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
