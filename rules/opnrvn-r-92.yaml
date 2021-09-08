@@ -1,0 +1,28 @@
+ruleId: opnrvn-r-92
+type: asset
+ruleName: >
+  Ensure 'Enable connecting to serial ports' is not enabled for VM Instance
+description: >
+  The interactive serial console does not support IP-based access restrictions such as IP whitelists.
+  If you enable the interactive serial console on an instance, clients can attempt to connect to that instance from any IP address.
+  This allows anybody to connect to that instance if they know the correct SSH key, username, project ID, zone, and instance name.
+  Therefore interactive serial console support should be disabled.
+severity: high
+enabled: true
+sql: >
+  SELECT acc.asset_id
+    FROM assets acc,
+  LATERAL (
+    SELECT value -> 'metadata' as meta
+    FROM jsonb_array_elements(supplementary_configuration -> 'instances')
+    ) arr
+  WHERE acc.resource_type = 'GCP::ComputeEngine::Zone'
+    AND NOT EXISTS
+      (SELECT value as val
+         FROM jsonb_array_elements(meta -> 'items')
+        WHERE value ->> 'key' = 'serial-port-enable'
+          AND (value ->> 'value' = 'false' OR value ->> 'value' = '0')
+      )
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

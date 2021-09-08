@@ -6,7 +6,7 @@ description: >
   Google Cloud Security Best Practices analyzes accounts for security best practices and is modelled on guidance published by the Center for Information Security.
 enabled: true
 rules:
-- opnrvn-r-61.yaml #?
+- opnrvn-r-61.yaml # CIS 4.4 -- Project level scope TODO: sql
 - opnrvn-r-62.yaml # CIS 1.6
 - opnrvn-r-63.yaml # CIS 1.4
 - opnrvn-r-64.yaml # CIS 1.7
@@ -23,14 +23,25 @@ rules:
 - opnrvn-r-75.yaml # CIS 1.15
 - opnrvn-r-76.yaml # CIS 5.1
 - opnrvn-r-77.yaml # CIS 5.2
-- opnrvn-r-78.yaml # CIS 3.1
+- opnrvn-r-78.yaml # CIS 3.1 -- Network
 - opnrvn-r-78.yaml # CIS 3.2
 - opnrvn-r-80.yaml # CIS 3.3
-- opnrvn-r-81.yaml # CIS 3.4 -- TODO: could be automated
-- opnrvn-r-82.yaml # CIS 3.5 -- TODO: could be automated
+- opnrvn-r-81.yaml # CIS 3.4 -- TODO: check for automation
+- opnrvn-r-82.yaml # CIS 3.5 -- TODO: check for automation
 - opnrvn-r-83.yaml # CIS 3.6
 - opnrvn-r-84.yaml # CIS 3.7
 - opnrvn-r-85.yaml # CIS 3.8
 - opnrvn-r-86.yaml # CIS 3.9
 - opnrvn-r-87.yaml # CIS 3.10
+- opnrvn-r-88.yaml # CIS 4.1 -- VM
+- opnrvn-r-89.yaml # CIS 4.2
+- opnrvn-r-90.yaml # CIS 4.3
+- opnrvn-r-91.yaml # CIS 4.4 -- Instance level scope
+- opnrvn-r-92.yaml # CIS 4.5
+- opnrvn-r-93.yaml # CIS 4.6
+- opnrvn-r-94.yaml # CIS 4.7
+- opnrvn-r-95.yaml # CIS 4.8
+- opnrvn-r-96.yaml # CIS 4.9 -- TODO: exclude
+- opnrvn-r-97.yaml # CIS 4.10
+- opnrvn-r-98.yaml # CIS 4.11 -- TODO: check for automation
 version: 0.9

@@ -1,0 +1,23 @@
+ruleId: opnrvn-r-95
+type: asset
+ruleName: >
+  Ensure Compute instances are launched with Shielded VM enabled
+description: >
+  To defend against against advanced threats and ensure that the boot loader and firmware on your VMs are signed and untampered,
+  it is recommended that Compute instances are launched with Shielded VM enabled.
+severity: high
+enabled: true
+sql: >
+  SELECT acc.asset_id, meta
+    FROM assets acc,
+    LATERAL (
+      SELECT value -> 'shieldedInstanceConfig' as meta
+      FROM jsonb_array_elements(supplementary_configuration -> 'instances')
+      ) arr
+    WHERE acc.resource_type = 'GCP::ComputeEngine::Zone'
+      AND meta IS NULL
+      AND (meta ->> 'enableVtpm' IS NULL OR meta ->> 'enableVtpm' = 'false')
+      AND (meta ->> 'enableIntegrityMonitoring' IS NULL OR meta ->> 'enableIntegrityMonitoring' = 'false')
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

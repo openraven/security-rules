@@ -1,0 +1,21 @@
+ruleId: opnrvn-r-96
+type: asset
+ruleName: >
+  Ensure that Compute instances do not have public IP addresses
+description: >
+  To reduce your attack surface, Compute instances should not have public IP addresses.
+  Instead, instances should be configured behind load balancers, to minimize the instance's exposure to the internet.
+severity: high
+enabled: true
+sql: >
+  SELECT acc.asset_id
+      FROM assets acc,
+    LATERAL (
+      SELECT jsonb_array_elements(value -> 'networkInterfaces') as meta
+      FROM jsonb_array_elements(supplementary_configuration -> 'instances')
+      ) arr
+    WHERE acc.resource_type = 'GCP::ComputeEngine::Zone'
+      AND meta -> 'accessConfigs' IS NOT NULL
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
