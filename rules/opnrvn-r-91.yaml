@@ -4,22 +4,19 @@ ruleName: >
   Ensure oslogin is not overwritten by Instance meta
 description: >
   Enabling OS login binds SSH certificates to IAM users and facilitates effective SSH certificate management.
+  By default, parameter enable-oslogin is not set, which is equivalent to setting it to FALSE.
 severity: high
 enabled: true
 sql: >
   SELECT acc.asset_id
-    FROM assets acc,
-  LATERAL (
-    SELECT value -> 'metadata' as meta
-    FROM jsonb_array_elements(supplementary_configuration -> 'instances')
-    ) arr
-  WHERE acc.resource_type = 'GCP::ComputeEngine::Zone'
-    AND EXISTS
-      (SELECT value as val
-         FROM jsonb_array_elements(meta -> 'items')
-        WHERE value ->> 'key' = 'enable-oslogin'
-          AND value ->> 'value' = 'false'
-      )
+    FROM assets acc
+   WHERE acc.resource_type = 'GCP::ComputeEngine::Instance'
+   AND NOT EXISTS
+          (SELECT value as val
+             FROM jsonb_array_elements("configuration" -> 'metadata' -> 'items')
+            WHERE value ->> 'key' = 'enable-oslogin'
+              AND value ->> 'value' = 'true'
+          )
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

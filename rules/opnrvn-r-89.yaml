@@ -10,13 +10,13 @@ severity: high
 enabled: true
 sql: >
   SELECT acc.asset_id
-      FROM assets acc,
-      LATERAL (
-          SELECT jsonb_array_elements(value -> 'serviceAccounts') as scp
-          FROM jsonb_array_elements(supplementary_configuration -> 'instances')
-      ) arr
-     WHERE acc.resource_type = 'GCP::ComputeEngine::Zone'
-       AND scp ->> 'scopes' ILIKE '%https://www.googleapis.com/auth/cloud-platform%'
+    FROM assets acc,
+    LATERAL (
+          SELECT jsonb_array_elements_text(value -> 'scopes') as scp
+          FROM jsonb_array_elements(configuration -> 'serviceAccounts')
+    ) arr
+   WHERE acc.resource_type = 'GCP::ComputeEngine::Instance'
+     AND scp = 'https://www.googleapis.com/auth/cloud-platform'
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

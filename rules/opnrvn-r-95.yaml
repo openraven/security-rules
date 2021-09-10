@@ -8,16 +8,14 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT acc.asset_id, meta
-    FROM assets acc,
-    LATERAL (
-      SELECT value -> 'shieldedInstanceConfig' as meta
-      FROM jsonb_array_elements(supplementary_configuration -> 'instances')
-      ) arr
-    WHERE acc.resource_type = 'GCP::ComputeEngine::Zone'
-      AND meta IS NULL
-      AND (meta ->> 'enableVtpm' IS NULL OR meta ->> 'enableVtpm' = 'false')
-      AND (meta ->> 'enableIntegrityMonitoring' IS NULL OR meta ->> 'enableIntegrityMonitoring' = 'false')
+  SELECT acc.asset_id
+    FROM assets acc
+    WHERE acc.resource_type = 'GCP::ComputeEngine::Instance'
+      AND ("configuration" ->> 'shieldedInstanceConfig' IS NULL
+        OR "configuration" -> 'shieldedInstanceConfig' ->> 'enableVtpm' IS NULL
+        OR "configuration" -> 'shieldedInstanceConfig' ->> 'enableVtpm' = 'false'
+        OR "configuration" -> 'shieldedInstanceConfig' ->> 'enableIntegrityMonitoring' IS NULL
+        OR "configuration" -> 'shieldedInstanceConfig' ->> 'enableIntegrityMonitoring' = 'false');
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

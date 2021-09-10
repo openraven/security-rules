@@ -8,13 +8,9 @@ severity: high
 enabled: true
 sql: >
   SELECT acc.asset_id
-      FROM assets acc,
-    LATERAL (
-      SELECT value ->> 'canIpForward' as frwrd
-      FROM jsonb_array_elements(supplementary_configuration -> 'instances')
-      ) arr
-    WHERE acc.resource_type = 'GCP::ComputeEngine::Zone'
-      AND frwrd = 'true'
+    FROM assets acc
+  WHERE acc.resource_type = 'GCP::ComputeEngine::Instance'
+    AND "configuration" -> 'canIpForward' = 'true'
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

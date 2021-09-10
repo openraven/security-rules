@@ -13,10 +13,10 @@ sql: >
   SELECT acc.asset_id
     FROM assets acc,
     LATERAL (
-          SELECT jsonb_array_elements(value -> 'serviceAccounts') as inst
-          FROM jsonb_array_elements(supplementary_configuration -> 'instances')
+          SELECT value as inst
+          FROM jsonb_array_elements(configuration -> 'serviceAccounts')
     ) arr
-  WHERE acc.resource_type = 'GCP::ComputeEngine::Zone'
+  WHERE acc.resource_type = 'GCP::ComputeEngine::Instance'
     AND inst ->> 'email' ILIKE '%compute@developer.gserviceaccount.com%'
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9
