@@ -1,0 +1,15 @@
+ruleId: opnrvn-r-98
+type: asset
+ruleName: >
+  Ensure that Compute instances have Confidential Computing enabled
+description: >
+  Confidential Computing enables customers' sensitive code and other data encrypted in memory during processing.
+  Google does not have access to the encryption keys.
+  Confidential VM can help alleviate concerns about risk related to either dependency on Google infrastructure
+  or Google insiders' access to customer data in the clear.
+  Note: Confidential Computing is currently only supported on N2D machines
+manualControl: true
+severity: high
+enabled: true
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

@@ -1,0 +1,16 @@
+ruleId: opnrvn-r-93
+type: asset
+ruleName: >
+  Ensure that IP forwarding is not enabled on Instances
+description: >
+  Forwarding of data packets should be disabled to prevent data loss or information disclosure.
+severity: high
+enabled: true
+sql: >
+  SELECT acc.asset_id
+    FROM assets acc
+  WHERE acc.resource_type = 'GCP::ComputeEngine::Instance'
+    AND "configuration" -> 'canIpForward' = 'true'
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
