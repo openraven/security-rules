@@ -7,7 +7,14 @@ description: >
 severity: high
 enabled: true
 sql: >
-#gcloud compute project-info add-metadata --metadata enable-oslogin=TRUE
+  SELECT acc.asset_id
+    FROM assets acc
+   WHERE acc.resource_type = 'GCP::Project::Info'
+     AND NOT EXISTS
+            (SELECT value as val
+               FROM jsonb_array_elements("configuration" -> 'commonInstanceMetadata' -> 'items')
+              WHERE value ->> 'key' = 'enable-osconfig'
+                AND lower(value ->> 'value') = 'true')
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

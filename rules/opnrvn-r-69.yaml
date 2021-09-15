@@ -1,4 +1,3 @@
-#id: 3ea67fb2-09a1-11ec-9a03-0242ac130003
 ruleId: opnrvn-r-69
 type: asset
 ruleName: >
@@ -8,7 +7,17 @@ description: >
   Such access might not be desirable if sensitive data is stored at the location.
   In this case, ensure that anonymous and/or public access to a Cloud KMS cryptokey is not allowed.
 severity: high
-enabled: false # SQL prep in progress. Disabled so far
+enabled: true
 sql: >
+  SELECT acc.asset_id
+    FROM assets acc,
+  LATERAL (
+      SELECT value -> 'cryptoKey' as cryptoKey, jsonb_array_elements(value -> 'policy' -> 'bindings_') as policy
+      FROM jsonb_array_elements(supplementary_configuration -> 'keys')
+    ) arr
+  WHERE acc.resource_type = 'GCP::KMS::Keyring'
+    AND EXISTS (SELECT value
+                  FROM jsonb_array_elements_text(arr.policy -> 'members_')
+                 WHERE value like '%allUsers%' OR value like '%allAuthenticatedUsers%');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9
