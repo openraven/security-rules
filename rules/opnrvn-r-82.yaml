@@ -6,8 +6,18 @@ description: >
   DNSSEC algorithm numbers in this registry may be used in CERT RRs.
   Zone signing (DNSSEC) and transaction security mechanisms (SIG(0) and TSIG) make use of particular subsets of these algorithms.
   The algorithm used for key signing should be a recommended one and it should be strong.
-manualControl: true
 severity: high
 enabled: true
+sql: >
+  SELECT acc.asset_id
+    FROM assets acc,
+  LATERAL (
+    SELECT value ->> 'keyType' as keyType, value ->> 'algorithm' as alg
+    FROM jsonb_array_elements("configuration" -> 'dnsSecConfig' -> 'defaultKeySpecs')
+  ) arr
+   WHERE acc.resource_type = 'GCP::Dns::Zone'
+     AND "configuration" -> 'dnsSecConfig' ->> 'state' = 'on'
+     AND arr.keyType = 'zoneSigning'
+     AND lower(arr.alg) = 'rsasha1';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9
