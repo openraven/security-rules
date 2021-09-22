@@ -1,0 +1,30 @@
+ruleId: opnrvn-r-106
+type: asset
+ruleName: >
+  Ensure that the log metric filter and alerts exist for VPC network route changes
+description: >
+  Monitoring changes to route tables will help ensure that all VPC traffic flows through an expected path.
+severity: high
+enabled: true
+sql: >
+  SELECT 'No log metric filter and alerts exist for VPC network route changes' AS asset_id
+  WHERE NOT EXISTS (
+      SELECT acc.asset_id
+        FROM assets acc
+       WHERE resource_type = 'GCP::Logging::Metric'
+         AND regexp_replace(acc."configuration" ->> 'filter_', E'[\\n\\r\\f\\u000B\\u0085\\u2028\\u2029]+', ' ', 'g') =
+             'resource.type="gce_route" AND protoPayload.methodName="beta.compute.routes.patch" OR protoPayload.methodName="beta.compute.routes.insert"'
+         AND EXISTS (
+              SELECT alrt.asset_id, metric
+                FROM assets alrt,
+              LATERAL (
+                    SELECT value -> 'condition_' ->> 'filter_' as metric
+                    FROM jsonb_array_elements(alrt.configuration -> 'conditions_')
+              ) arr
+               WHERE alrt.resource_type = 'GCP::Monitoring::AlertPolicy'
+                 AND alrt."configuration" -> 'enabled_' ->> 'value_' = 'true'
+                 AND metric ILIKE '%'||acc.asset_id||'%'
+         )
+  )
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

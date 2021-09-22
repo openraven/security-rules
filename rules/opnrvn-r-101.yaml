@@ -1,0 +1,21 @@
+ruleId: opnrvn-r-101
+type: asset
+ruleName: >
+  Ensure that retention policies on log buckets are configured using Bucket Lock
+description: >
+  Enabling retention policies on log buckets will protect logs stored in cloud storage buckets from being overwritten or accidentally deleted.
+  It is recommended to set up retention policies and configure Bucket Lock on all storage buckets that are used as log sinks.
+severity: high
+enabled: true
+sql: >
+  SELECT acc.asset_id
+    FROM assets acc,
+         assets str
+   WHERE acc.resource_type = 'GCP::Logging::Sink'
+     AND str.resource_type = 'GCP::Storage::Bucket'
+     AND strpos(acc."configuration" ->> 'destination_', str.asset_id) > 0
+     AND (str."configuration" ->> 'retentionPolicyIsLocked' <> 'true'
+         OR str."configuration" ->> 'retentionPolicyIsLocked' IS NULL
+         OR str."configuration" ->> 'retentionPeriod' IS NULL)
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

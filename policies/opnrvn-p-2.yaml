@@ -32,11 +32,11 @@ rules:
 - opnrvn-r-85.yaml # CIS 3.8
 - opnrvn-r-86.yaml # CIS 3.9
 - opnrvn-r-87.yaml # CIS 3.10
-- opnrvn-r-88.yaml # CIS 4.1 -- VM
+- opnrvn-r-88.yaml # CIS 4.1 -- Virtual Machines
 - opnrvn-r-89.yaml # CIS 4.2
 - opnrvn-r-90.yaml # CIS 4.3
-- opnrvn-r-91.yaml # CIS 4.4 -- (instance scope rule)
-- opnrvn-r-61.yaml # CIS 4.4 -- (project scope rule)
+- opnrvn-r-91.yaml # CIS 4.4   <- (instance scope rule)
+- opnrvn-r-61.yaml # CIS 4.4   <- (project scope rule)
 - opnrvn-r-92.yaml # CIS 4.5
 - opnrvn-r-93.yaml # CIS 4.6
 - opnrvn-r-94.yaml # CIS 4.7
@@ -44,4 +44,16 @@ rules:
 - opnrvn-r-96.yaml # CIS 4.9
 - opnrvn-r-97.yaml # CIS 4.10
 - opnrvn-r-98.yaml # CIS 4.11
+- opnrvn-r-99.yaml # CIS 2.1 -- Logging and Monitoring -- (automation)
+- opnrvn-r-100.yaml # CIS 2.2
+- opnrvn-r-101.yaml # CIS 2.3   <- automation required
+- opnrvn-r-102.yaml # CIS 2.4
+- opnrvn-r-103.yaml # CIS 2.5
+- opnrvn-r-104.yaml # CIS 2.6
+- opnrvn-r-105.yaml # CIS 2.7
+- opnrvn-r-106.yaml # CIS 2.8
+- opnrvn-r-107.yaml # CIS 2.9
+- opnrvn-r-108.yaml # CIS 2.10
+- opnrvn-r-109.yaml # CIS 2.11
+- opnrvn-r-110.yaml # CIS 2.12   <- automation required
 version: 0.9
