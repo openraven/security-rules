@@ -56,4 +56,7 @@ rules:
 - opnrvn-r-108.yaml # CIS 2.10
 - opnrvn-r-109.yaml # CIS 2.11
 - opnrvn-r-110.yaml # CIS 2.12   <- automation required
+- opnrvn-r-111.yaml # CIS 7.1 -- BigQuery
+- opnrvn-r-112.yaml # CIS 7.2
+- opnrvn-r-113.yaml # CIS 7.3
 version: 0.9
