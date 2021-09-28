@@ -1,4 +1,4 @@
-ruleId: opnrvn-r-131
+ruleId: opnrvn-r-132
 type: asset
 ruleName: >
   Ensure that the 'log_min_duration_statement' database flag for Cloud SQL PostgreSQL instance is set to '-1' (disabled)
