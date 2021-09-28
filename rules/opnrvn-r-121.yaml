@@ -1,0 +1,24 @@
+ruleId: opnrvn-r-121
+type: asset
+ruleName: >
+  Ensure 'log_duration' database flag for Cloud SQL PostgreSQL instance is set to 'on'
+description: >
+  Enabling the log_duration setting causes the duration of each completed statement to be logged.
+  This does not logs the text of the query and thus behaves different from the log_min_duration_statement flag
+  Monitoring the time taken to execute the queries can be crucial in identifying any resource hogging queries and assessing the performance of the server.
+  Further steps such as load balancing and use of optimized queries can be taken to ensure the performance and stability of the server.
+  By default log_duration is off.
+severity: high
+enabled: true
+sql: >
+  SELECT acc.asset_id
+    FROM assets acc
+   WHERE resource_type = 'GCP::SQL::Instance'
+     AND acc."configuration" ->> 'databaseVersion' ILIKE 'POSTGRES%'
+     AND NOT EXISTS (
+      SELECT value
+        FROM jsonb_array_elements(acc."configuration" -> 'settings' -> 'databaseFlags')
+       WHERE value ->> 'name' = 'log_duration' AND value ->> 'value' = 'on'
+     )
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

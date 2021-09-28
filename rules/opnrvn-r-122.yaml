@@ -1,0 +1,24 @@
+ruleId: opnrvn-r-122
+type: asset
+ruleName: >
+  Ensure that the 'log_lock_waits' database flag for Cloud SQL PostgreSQL instance is set to 'on'
+description: >
+  Enabling the log_lock_waits flag for a PostgreSQL instance creates a log
+  for any session waits that take longer than the alloted deadlock_timeout time to acquire a lock.
+  This can be used to identify poor performance due to locking delays
+  or if a specially-crafted SQL is attempting to starve resources through holding locks for excessive amounts of time
+  By default log_lock_waits is off.
+severity: high
+enabled: true
+sql: >
+  SELECT acc.asset_id
+    FROM assets acc
+   WHERE resource_type = 'GCP::SQL::Instance'
+     AND acc."configuration" ->> 'databaseVersion' ILIKE 'POSTGRES%'
+     AND NOT EXISTS (
+      SELECT value
+        FROM jsonb_array_elements(acc."configuration" -> 'settings' -> 'databaseFlags')
+       WHERE value ->> 'name' = 'log_lock_waits' AND value ->> 'value' = 'on'
+     )
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

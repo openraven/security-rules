@@ -1,0 +1,24 @@
+ruleId: opnrvn-r-131
+type: asset
+ruleName: >
+  Ensure that the 'log_min_duration_statement' database flag for Cloud SQL PostgreSQL instance is set to '-1' (disabled)
+description: >
+  The log_min_duration_statement flag defines the minimum amount of execution time of a statement in milliseconds
+  where the total duration of the statement is logged.
+  Ensure that log_min_duration_statement is disabled, i.e., a value of -1 is set.
+  Logging SQL statements may include sensitive information that should not be recorded in logs
+  By default log_min_duration_statement is -1.
+severity: medium
+enabled: true
+sql: >
+  SELECT acc.asset_id
+    FROM assets acc
+   WHERE resource_type = 'GCP::SQL::Instance'
+     AND acc."configuration" ->> 'databaseVersion' ILIKE 'POSTGRES%'
+     AND NOT EXISTS (
+      SELECT value
+        FROM jsonb_array_elements(acc."configuration" -> 'settings' -> 'databaseFlags')
+       WHERE value ->> 'name' = 'log_min_duration_statement' AND value ->> 'value' = '-1'
+     )
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
