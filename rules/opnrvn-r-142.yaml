@@ -1,0 +1,18 @@
+ruleId: opnrvn-r-142
+type: asset
+ruleName: >
+  Ensure that Cloud SQL database instances do not have public IPs
+description: >
+  To lower the organization's attack surface, Cloud SQL databases should not have public IPs.
+  Private IPs provide improved network security and lower latency for your application.
+severity: high
+enabled: true
+sql: >
+  SELECT acc.asset_id
+    FROM assets acc
+   WHERE resource_type = 'GCP::SQL::Instance'
+     AND acc."configuration" ->> 'backendType' = 'SECOND_GEN'
+     AND acc."configuration" ->> 'instanceType' = 'CLOUD_SQL_INSTANCE'
+     AND acc."configuration" ->> 'ipAddresses' LIKE '%PRIMARY%'
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

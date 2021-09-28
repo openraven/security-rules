@@ -1,0 +1,18 @@
+ruleId: opnrvn-r-140
+type: asset
+ruleName: >
+  Ensure that the Cloud SQL database instance requires all incoming connections to use SSL
+description: >
+  SQL database connections if successfully trapped (MITM); can reveal sensitive data like credentials, database queries, query outputs etc.
+  For security, it is recommended to always use SSL encryption when connecting to your instance.
+  This recommendation is applicable for Postgresql, MySql generation 1, MySql generation 2 and SQL Server 2017 instances.
+severity: high
+enabled: true
+sql: >
+  SELECT acc.asset_id
+    FROM assets acc
+   WHERE resource_type = 'GCP::SQL::Instance'
+     AND acc."configuration" -> 'settings' -> 'ipConfiguration' -> 'requireSsl' IS NULL
+      OR acc."configuration" -> 'settings' -> 'ipConfiguration' -> 'requireSsl' <> 'true'
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

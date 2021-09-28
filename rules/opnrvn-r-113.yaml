@@ -1,4 +1,4 @@
-ruleId: opnrvn-r-112
+ruleId: opnrvn-r-113
 type: asset
 ruleName: >
   Ensure that a Default Customer-managed encryption key (CMEK) is specified for all BigQuery Data Sets

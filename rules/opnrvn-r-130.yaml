@@ -1,0 +1,24 @@
+ruleId: opnrvn-r-130
+type: asset
+ruleName: >
+  Ensure 'log_min_error_statement' database flag for Cloud SQL PostgreSQL instance is set to 'Error' or stricter
+description: >
+  The log_min_error_statement flag defines the minimum message severity level that are considered as an error statement.
+  Messages for error statements are logged with the SQL statement.
+  Valid values include DEBUG5, DEBUG4, DEBUG3, DEBUG2, DEBUG1, INFO, NOTICE, WARNING, ERROR, LOG, FATAL, and PANIC.
+  Each severity level includes the subsequent levels mentioned above. Ensure a value of ERROR or stricter is set.
+  By default log_min_error_statement is ERROR.
+severity: medium
+enabled: true
+sql: >
+  SELECT acc.asset_id
+    FROM assets acc
+   WHERE resource_type = 'GCP::SQL::Instance'
+     AND acc."configuration" ->> 'databaseVersion' ILIKE 'POSTGRES%'
+     AND NOT EXISTS (
+      SELECT value
+        FROM jsonb_array_elements(acc."configuration" -> 'settings' -> 'databaseFlags')
+       WHERE value ->> 'name' = 'log_min_error_statement' AND value ->> 'value' IN ('error', 'log', 'fatal', 'panic')
+     )
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

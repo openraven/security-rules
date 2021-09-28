@@ -1,0 +1,25 @@
+ruleId: opnrvn-r-124
+type: asset
+ruleName: >
+  Ensure 'log_hostname' database flag for Cloud SQL PostgreSQL instance is set appropriately
+description: >
+  Logging hostnames can incur overhead on server performance as for each statement logged,
+  DNS resolution will be required to convert IP address to hostname.
+  Depending on the setup, this may be non-negligible.
+  Additionally, the IP addresses that are logged can be resolved to their DNS names later
+  when reviewing the logs excluding the cases where dynamic hostnames are used.
+  By default log_hostname is off.
+severity: low # Could be defined by organisation
+enabled: true
+sql: >
+  SELECT acc.asset_id
+    FROM assets acc
+   WHERE resource_type = 'GCP::SQL::Instance'
+     AND acc."configuration" ->> 'databaseVersion' ILIKE 'POSTGRES%'
+     AND NOT EXISTS (
+      SELECT value
+        FROM jsonb_array_elements(acc."configuration" -> 'settings' -> 'databaseFlags')
+       WHERE value ->> 'name' = 'log_hostname' AND value ->> 'value' = 'off'
+     )
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
