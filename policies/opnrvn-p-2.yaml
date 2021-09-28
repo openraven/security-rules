@@ -85,4 +85,8 @@ rules:
 - opnrvn-r-137.yaml # CIS 6.3.5
 - opnrvn-r-138.yaml # CIS 6.3.6
 - opnrvn-r-139.yaml # CIS 6.3.7
+- opnrvn-r-140.yaml # CIS 6.4  <- Generic SQL Database rules
+- opnrvn-r-141.yaml # CIS 6.5
+- opnrvn-r-142.yaml # CIS 6.6
+- opnrvn-r-143.yaml # CIS 6.7
 version: 0.9

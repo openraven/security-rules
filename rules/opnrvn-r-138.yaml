@@ -9,7 +9,7 @@ description: >
   3625(trace log) Limits the amount of information returned to users who are not members of the sysadmin fixed server role,
   by masking the parameters of some error messages using '******'.
   This can help prevent disclosure of sensitive information, hence this is recommended to disable this flag
-severity: medium
+severity: high
 enabled: true
 sql: >
   SELECT acc.asset_id

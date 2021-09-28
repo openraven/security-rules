@@ -11,7 +11,7 @@ description: >
   Most of the threats are related to the USER WITH PASSWORD authentication process,
   which moves the authentication boundary from the Database Engine level to the database level,
   hence this is recommended to disable this flag.
-severity: medium
+severity: high
 enabled: true
 sql: >
   SELECT acc.asset_id
