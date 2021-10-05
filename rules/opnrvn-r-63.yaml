@@ -8,11 +8,11 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT key->'name' as asset_id
+  SELECT key ->> 'name' as asset_id
   FROM
     (SELECT jsonb_array_elements(supplementary_configuration->'keys'->'keys') AS key
-      FROM assets
-     WHERE resource_type = 'GCP::Iam::ServiceAccount') AS keys
+       FROM assets
+      WHERE resource_type = 'GCP::Iam::ServiceAccount') AS keys
   WHERE key->>'keyType' = 'USER_MANAGED';
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
