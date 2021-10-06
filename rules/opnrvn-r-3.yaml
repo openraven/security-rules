@@ -1,5 +1,5 @@
 # id: f6585eff-ff81-4d39-a9fe-f883feb6e531
-ruleId: opn-r-3
+ruleId: opnrvn-r-3
 type: asset
 ruleName: >
   Ensure CloudTrail is enabled in all regions

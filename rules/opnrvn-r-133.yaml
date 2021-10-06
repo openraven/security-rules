@@ -8,7 +8,7 @@ description: >
   When Advanced Analytics Services is installed, setup can optionally set this property to true.
   As the External Scripts Enabled feature allows scripts external to SQL such as files located in an R library to be executed,
   which could adversely affect the security of the system, hence this should be disabled.
-severity: hign
+severity: high
 enabled: true
 sql: >
   SELECT acc.asset_id
