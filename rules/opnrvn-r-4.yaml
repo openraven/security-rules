@@ -1,5 +1,5 @@
 # id: 6b1fad69-b9d4-4418-8dc1-7b1a7d6cf56d
-ruleId: opn-r-4
+ruleId: opnrvn-r-4
 type: asset
 ruleName: >
   Ensure CloudTrail log file validation is enabled
