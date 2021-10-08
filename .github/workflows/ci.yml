@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: target folder
-        run: echo $PWD
+        run: echo $PWD/resources/tests
       - name: Set up JDK 11
         uses: actions/setup-java@v1
         with:
@@ -27,6 +27,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
       - name: Clone Magpie
-        run: git clone https://github.com/openraven/magpie.git
+        run: git clone https://github.com/openraven/magpie.git -b 269-testing-rules
+      - name: Build Magpie
+        run: mvn -f magpie --settings magpie/.github/workflows/settings.xml -B clean install -DskipTests
       - name: Validate rules
-        run: mvn test -pl magpie-core -Dtest=SecurityRuleValidator -DtestResourcePath=$PWD/resources/tests
+        run: mvn test -f magpie -pl magpie-core -Dtest=SecurityRuleValidator -DtestResourcePath=$PWD/resources/tests
