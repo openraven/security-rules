@@ -28,5 +28,5 @@ jobs:
             ${{ runner.os }}-maven-
       - name: Clone Magpie
         run: git clone https://github.com/openraven/magpie.git
-      - name: list files
-        run: ls
+      - name: Validate rules
+        run: mvn test -pl magpie-core -Dtest=SecurityRuleValidator -DtestResourcePath=$PWD/resources/tests
