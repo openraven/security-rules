@@ -173,7 +173,7 @@ secureAssetGroup: >
            "value" : "on"
          }, {
            "name" : "log_disconnections",
-           "value" : "on"
+           "value" : "off"
          }, {
            "name" : "log_duration",
            "value" : "on"
