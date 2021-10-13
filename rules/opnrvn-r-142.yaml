@@ -5,6 +5,10 @@ ruleName: >
 description: >
   To lower the organization's attack surface, Cloud SQL databases should not have public IPs.
   Private IPs provide improved network security and lower latency for your application.
+  It is recommended to configure Second Generation Sql instance to use private IPs instead of public IPs.
+  PRIMARY ipAddress type is prohibited
+  An instance can have both a private and public address at the same time.
+  Note also that you cannot use private IP with First Generation instances.
 severity: high
 enabled: true
 sql: >

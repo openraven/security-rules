@@ -1,6 +1,7 @@
-ruleId: opnrvn-r-120
+ruleId: opnrvn-r-142
 description: >
-  Violated asset doesn't have enabled databaseFlag `log_disconnections` but secure asset has it
+  Insecure asset specify ipAddresses with type PRIMARY which makes it public - hence violating the rule
+  Secure asset ipAddresses with type PRIVATE which makes it private - hence pass the rule
 violatedAssetId: "psql-or-test-invalid"
 controlAssetId: "psql-or-test-valid"
 insecureAssetGroup: >
@@ -185,7 +186,7 @@ secureAssetGroup: >
            "value" : "ddl"
          }, {
            "name" : "log_hostname",
-           "value" : "on"
+           "value" : "off"
          }, {
            "name" : "log_parser_stats",
            "value" : "off"

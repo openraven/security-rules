@@ -1,0 +1,217 @@
+ruleId: opnrvn-r-134
+description: >
+  Default setup does not control the `cross db ownership chaining` property - hence violating it
+  Secure asset disable this option - hence pass the rule
+violatedAssetId: "sql-server-default"
+controlAssetId: "sql-server-valid"
+insecureAssetGroup: >
+  [{
+     "documentId" : "_n3H7tBVNbqGcCmPHah2PA",
+     "assetId" : "sql-server-default",
+     "resourceName" : null,
+     "resourceId" : null,
+     "resourceType" : "GCP::SQL::Instance",
+     "region" : null,
+     "accountId" : null,
+     "projectId" : "oss-discovery-test",
+     "createdIso" : null,
+     "updatedIso" : "2021-10-04T14:47:36.084873Z",
+     "discoverySessionId" : null,
+     "maxSizeInBytes" : null,
+     "sizeInBytes" : null,
+     "configuration" : {
+       "backendType" : "SECOND_GEN",
+       "connectionName" : "oss-discovery-test:us-central1:sql-server-default",
+       "createTime" : "2021-09-28T13:23:22.954Z",
+       "databaseVersion" : "SQLSERVER_2017_STANDARD",
+       "etag" : "d908fb29f0ab5cd9a3f57ea13c4c1c93a1926b069938086fca07cc048f2830f7",
+       "failoverReplica" : {
+         "available" : true
+       },
+       "gceZone" : "us-central1-f",
+       "instanceType" : "CLOUD_SQL_INSTANCE",
+       "ipAddresses" : [ {
+         "ipAddress" : "35.224.155.45",
+         "type" : "PRIMARY"
+       } ],
+       "kind" : "sql#instance",
+       "name" : "sql-server-default",
+       "project" : "oss-discovery-test",
+       "region" : "us-central1",
+       "secondaryGceZone" : "us-central1-c",
+       "selfLink" : "https://sqladmin.googleapis.com/v1/projects/oss-discovery-test/instances/sql-server-default",
+       "serverCaCert" : {
+         "cert" : "-----BEGIN CERTIFICATE-----\nMIIDfzCCAmegAwIBAgIBADANBgkqhkiG9w0BAQsFADB3MS0wKwYDVQQuEyRhMmMy\nNWRlZC01MDljLTQ3YzctODhlYS01ZDZhMGM4N2Q2NzIxIzAhBgNVBAMTGkdvb2ds\nZSBDbG91ZCBTUUwgU2VydmVyIENBMRQwEgYDVQQKEwtHb29nbGUsIEluYzELMAkG\nA1UEBhMCVVMwHhcNMjEwOTI4MTMyNDUwWhcNMzEwOTI2MTMyNTUwWjB3MS0wKwYD\nVQQuEyRhMmMyNWRlZC01MDljLTQ3YzctODhlYS01ZDZhMGM4N2Q2NzIxIzAhBgNV\nBAMTGkdvb2dsZSBDbG91ZCBTUUwgU2VydmVyIENBMRQwEgYDVQQKEwtHb29nbGUs\nIEluYzELMAkGA1UEBhMCVVMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB\nAQCw5DJVAFRnXwCC8vUMilgpaRDYoJb0L/vpZdXLTYrk9/EXtOAg44dFKw41ieji\n/8sOEILLKioV7hUpmb1sEtpbF0dVhyp+Aw4rxqsXi7K7e8fBw1vueIxEqRgkGCD5\nmRkxQp2pqBoNr3GkRmRPbd8bZVrv11r/6p+UNSGYBsq7rB6Zoj3+fmpEYep4dnci\nu7zf1nhPmBi7+x6DsD+77IrxzqzaBNcZY0MKgXgN6i4cOer7zL75G1Y8lOtgTN3M\nupm1XDiYNx6dGpU/5l4XmGJc5oLH+2qgcvx4B4eoo6aAP16Pqzqb1wUu0eNhbWna\n58Bd+uVet9bFEOfmH7brNsrLAgMBAAGjFjAUMBIGA1UdEwEB/wQIMAYBAf8CAQAw\nDQYJKoZIhvcNAQELBQADggEBAJTtgc3l87TxcBeSd2qklkPDievSmjRbDP1f+hjD\nwtvPBe/CE2I2zZGgQKusClg6OmNFUCazanihM4uscRrP8SgEDlVxpjQVw2gYbodj\nP60AP4xrCVj5bQLA0JUa4IXbdGmDV15rYn2d9NU+d27rZmKM4PIhMWn2CFQpCNpk\nWX+Vhqcoq1CHNZUSdgTd8tlTDCKtzsaqT1WG45f6oiuTsqidBacAUxxHoje1oAh7\nG8kPNSrs1prnaEeyxLOrmQ8AG3xlaIeIhEq+Aak82nym93Yzk+9GCRcY/LFRUVyC\n7QzIyr8aTxH8a9ow6ayCGMLRlklX28u2LhtDPk2WqnmOMKI=\n-----END CERTIFICATE-----",
+         "certSerialNumber" : "0",
+         "commonName" : "C=US,O=Google\\, Inc,CN=Google Cloud SQL Server CA,dnQualifier=a2c25ded-509c-47c7-88ea-5d6a0c87d672",
+         "createTime" : "2021-09-28T13:24:50.306Z",
+         "expirationTime" : "2031-09-26T13:25:50.306Z",
+         "instance" : "sql-server-default",
+         "kind" : "sql#sslCert",
+         "sha1Fingerprint" : "164271704aae98615cfb2e0e45bb5cf26bf1e510"
+       },
+       "serviceAccountEmailAddress" : "p281989297013-88o0gn@gcp-sa-cloud-sql.iam.gserviceaccount.com",
+       "settings" : {
+         "activationPolicy" : "ALWAYS",
+         "activeDirectoryConfig" : {
+           "kind" : "sql#activeDirectoryConfig"
+         },
+         "authorizedGaeApplications" : [ ],
+         "availabilityType" : "REGIONAL",
+         "backupConfiguration" : {
+           "backupRetentionSettings" : {
+             "retainedBackups" : 7,
+             "retentionUnit" : "COUNT"
+           },
+           "enabled" : true,
+           "kind" : "sql#backupConfiguration",
+           "location" : "us",
+           "startTime" : "03:00",
+           "transactionLogRetentionDays" : 7
+         },
+         "collation" : "SQL_Latin1_General_CP1_CI_AS",
+         "dataDiskSizeGb" : 100,
+         "dataDiskType" : "PD_SSD",
+         "ipConfiguration" : {
+           "authorizedNetworks" : [ ],
+           "ipv4Enabled" : true
+         },
+         "kind" : "sql#settings",
+         "locationPreference" : {
+           "kind" : "sql#locationPreference",
+           "zone" : "us-central1-f"
+         },
+         "maintenanceWindow" : {
+           "day" : 0,
+           "hour" : 0,
+           "kind" : "sql#maintenanceWindow"
+         },
+         "pricingPlan" : "PER_USE",
+         "replicationType" : "SYNCHRONOUS",
+         "settingsVersion" : 3,
+         "storageAutoResize" : true,
+         "storageAutoResizeLimit" : 0,
+         "tier" : "db-custom-4-26624"
+       },
+       "state" : "RUNNABLE"
+     },
+     "supplementaryConfiguration" : { },
+     "tags" : { },
+     "discoveryMeta" : { }
+   }]
+secureAssetGroup: >
+  [{
+     "documentId" : "SJfUAUELNQWOOQKzvRMtjA",
+     "assetId" : "sql-server-valid",
+     "resourceName" : null,
+     "resourceId" : null,
+     "resourceType" : "GCP::SQL::Instance",
+     "region" : null,
+     "accountId" : null,
+     "projectId" : "oss-discovery-test",
+     "createdIso" : null,
+     "updatedIso" : "2021-10-04T14:47:36.085757Z",
+     "discoverySessionId" : null,
+     "maxSizeInBytes" : null,
+     "sizeInBytes" : null,
+     "configuration" : {
+       "backendType" : "SECOND_GEN",
+       "connectionName" : "oss-discovery-test:us-central1:sql-server-valid",
+       "createTime" : "2021-09-28T13:30:22.371Z",
+       "databaseVersion" : "SQLSERVER_2017_STANDARD",
+       "etag" : "a5b1be2d6acd6a68044113835359580cf3b5f9d2c871760c7a29421aae6c7b8f",
+       "failoverReplica" : {
+         "available" : true
+       },
+       "gceZone" : "us-central1-f",
+       "instanceType" : "CLOUD_SQL_INSTANCE",
+       "ipAddresses" : [ {
+         "ipAddress" : "10.156.176.6",
+         "type" : "PRIVATE"
+       } ],
+       "kind" : "sql#instance",
+       "name" : "sql-server-valid",
+       "project" : "oss-discovery-test",
+       "region" : "us-central1",
+       "secondaryGceZone" : "us-central1-c",
+       "selfLink" : "https://sqladmin.googleapis.com/v1/projects/oss-discovery-test/instances/sql-server-valid",
+       "serverCaCert" : {
+         "cert" : "-----BEGIN CERTIFICATE-----\nMIIDfzCCAmegAwIBAgIBADANBgkqhkiG9w0BAQsFADB3MS0wKwYDVQQuEyRkZjEz\nZTM1My1hNDAyLTRkYjctOGY3Mi1jOGYyYzQwZTBiYTkxIzAhBgNVBAMTGkdvb2ds\nZSBDbG91ZCBTUUwgU2VydmVyIENBMRQwEgYDVQQKEwtHb29nbGUsIEluYzELMAkG\nA1UEBhMCVVMwHhcNMjEwOTI4MTMzMjM4WhcNMzEwOTI2MTMzMzM4WjB3MS0wKwYD\nVQQuEyRkZjEzZTM1My1hNDAyLTRkYjctOGY3Mi1jOGYyYzQwZTBiYTkxIzAhBgNV\nBAMTGkdvb2dsZSBDbG91ZCBTUUwgU2VydmVyIENBMRQwEgYDVQQKEwtHb29nbGUs\nIEluYzELMAkGA1UEBhMCVVMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB\nAQCxoE7X2hHh1hkhjjreCYFmek/JXWs41krjUFgMuuK4R/SrOpHevwZVvKY56yiy\nEP/j5PCjMLB8KTv7rYkAjKzwI2P7XT7C+hRcxgpYpJMpVzEi6V8yabOQijPKibo8\nJ4sQi+3dJJ4lc8hjqes9B8W3XdWcUb/3V1W0wBxZ4vjd5kICmM7QgWQ9QFxGQCiE\nk/vr/2+iEBfD2R3kMutCScnkp6VvJw2zEs9J6W/Y1HqDG2DJQSayumYP5aOWwKRE\nqe2bpmu86vjcPiYewML26/OINleCi9IGVSTPRxnLIb/fLQXrH6WI8R2yMLSdT2/N\nOAnKmp2xhzx1xKJx3CI/RJHJAgMBAAGjFjAUMBIGA1UdEwEB/wQIMAYBAf8CAQAw\nDQYJKoZIhvcNAQELBQADggEBADt2G439mKVwZvUT3XlMbMpq9GSKjiy5mxfSwwOt\nR/kncDj8wZEaGGBLEWFAqhHC4C5pbQ5JQw5BfXTXBd07OjsFyI+PbfBZBPXk4oAs\n8ltQgFgYD2JpppGjuwQdlwmU1h9n6T5ABehfSrxmVFLaYw+hlYwiLL2pqujZ4eu6\nUdo6SwwEVukRdEH5RvPgYJUpb+3L6eOK07l92AsDcVIIK3t8BU72SH6mAYg6OwEf\nMlqQYizGTsssusvpsC7uC527IY5DUlUks+zd7mx3TIs8vvZ74lLDvPk6j+qux8xI\n+ro9+nr2bDqFhPg6epbOqTyxLX0f1ZH30dcXqzog45bmbSo=\n-----END CERTIFICATE-----",
+         "certSerialNumber" : "0",
+         "commonName" : "C=US,O=Google\\, Inc,CN=Google Cloud SQL Server CA,dnQualifier=df13e353-a402-4db7-8f72-c8f2c40e0ba9",
+         "createTime" : "2021-09-28T13:32:38.185Z",
+         "expirationTime" : "2031-09-26T13:33:38.185Z",
+         "instance" : "sql-server-valid",
+         "kind" : "sql#sslCert",
+         "sha1Fingerprint" : "c6df039da8b5b7f67282602e172518e6bdfb98ab"
+       },
+       "serviceAccountEmailAddress" : "p281989297013-e0vyu6@gcp-sa-cloud-sql.iam.gserviceaccount.com",
+       "settings" : {
+         "activationPolicy" : "ALWAYS",
+         "activeDirectoryConfig" : {
+           "kind" : "sql#activeDirectoryConfig"
+         },
+         "authorizedGaeApplications" : [ ],
+         "availabilityType" : "REGIONAL",
+         "backupConfiguration" : {
+           "backupRetentionSettings" : {
+             "retainedBackups" : 7,
+             "retentionUnit" : "COUNT"
+           },
+           "enabled" : true,
+           "kind" : "sql#backupConfiguration",
+           "location" : "us",
+           "startTime" : "09:00",
+           "transactionLogRetentionDays" : 7
+         },
+         "collation" : "SQL_Latin1_General_CP1_CI_AS",
+         "dataDiskSizeGb" : 100,
+         "dataDiskType" : "PD_SSD",
+         "databaseFlags" : [ {
+           "name" : "external scripts enabled",
+           "value" : "off"
+         }, {
+           "name" : "cross db ownership chaining",
+           "value" : "off"
+         }, {
+           "name" : "user options",
+           "value" : "2"
+         }, {
+           "name" : "remote access",
+           "value" : "off"
+         }, {
+           "name" : "3625",
+           "value" : "off"
+         }, {
+           "name" : "contained database authentication",
+           "value" : "off"
+         } ],
+         "ipConfiguration" : {
+           "authorizedNetworks" : [ ],
+           "ipv4Enabled" : false,
+           "privateNetwork" : "projects/oss-discovery-test/global/networks/ossnetwork-1"
+         },
+         "kind" : "sql#settings",
+         "locationPreference" : {
+           "kind" : "sql#locationPreference",
+           "secondaryZone" : "us-central1-c",
+           "zone" : "us-central1-f"
+         },
+         "maintenanceWindow" : {
+           "day" : 0,
+           "hour" : 0,
+           "kind" : "sql#maintenanceWindow"
+         },
+         "pricingPlan" : "PER_USE",
+         "replicationType" : "SYNCHRONOUS",
+         "settingsVersion" : 9,
+         "storageAutoResize" : true,
+         "storageAutoResizeLimit" : 0,
+         "tier" : "db-custom-4-26624"
+       },
+       "state" : "RUNNABLE"
+     },
+     "supplementaryConfiguration" : { },
+     "tags" : { },
+     "discoveryMeta" : { }
+   }]
