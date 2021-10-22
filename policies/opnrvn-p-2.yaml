@@ -46,7 +46,7 @@ rules:
 - opnrvn-r-98.yaml # CIS 4.11
 - opnrvn-r-99.yaml # CIS 2.1 -- Logging and Monitoring -- (automation)
 - opnrvn-r-100.yaml # CIS 2.2
-- opnrvn-r-101.yaml # CIS 2.3   <- automation required
+- opnrvn-r-101.yaml # CIS 2.3
 - opnrvn-r-102.yaml # CIS 2.4
 - opnrvn-r-103.yaml # CIS 2.5
 - opnrvn-r-104.yaml # CIS 2.6

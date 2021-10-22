@@ -1,0 +1,349 @@
+ruleId: opnrvn-r-101
+description: >
+  Violated asset configured to store logs in unlocked bucket. Target asset should be of type "GCP::Logging::Sink"
+violatedAssetId: "storage-sink-insecure"
+controlAssetId: "storage-sink-secure"
+insecureAssetGroup: >
+  [{
+     "documentId" : "H0WEDcGAOjSEafGutx0uiQ",
+     "assetId" : "storage-sink-insecure",
+     "resourceName" : null,
+     "resourceId" : null,
+     "resourceType" : "GCP::Logging::Sink",
+     "region" : null,
+     "accountId" : null,
+     "projectId" : "oss-discovery-test",
+     "createdIso" : null,
+     "updatedIso" : "2021-10-04T14:48:09.241071Z",
+     "discoverySessionId" : null,
+     "maxSizeInBytes" : null,
+     "sizeInBytes" : null,
+     "configuration" : {
+       "optionsCase_" : 0,
+       "name_" : "storage-sink",
+       "destination_" : "storage.googleapis.com/or-unlocked-bucket",
+       "filter_" : "",
+       "description_" : "",
+       "disabled_" : false,
+       "exclusions_" : [ ],
+       "outputVersionFormat_" : 0,
+       "writerIdentity_" : "serviceAccount:p281989297013-737466@gcp-sa-logging.iam.gserviceaccount.com",
+       "includeChildren_" : false,
+       "createTime_" : {
+         "seconds_" : 1632147492,
+         "nanos_" : 905963492,
+         "memoizedIsInitialized" : -1,
+         "unknownFields" : {
+           "fields" : { },
+           "fieldsDescending" : { }
+         },
+         "memoizedSize" : -1,
+         "memoizedHashCode" : 0
+       },
+       "updateTime_" : {
+         "seconds_" : 1632347384,
+         "nanos_" : 946200164,
+         "memoizedIsInitialized" : -1,
+         "unknownFields" : {
+           "fields" : { },
+           "fieldsDescending" : { }
+         },
+         "memoizedSize" : -1,
+         "memoizedHashCode" : 0
+       },
+       "memoizedIsInitialized" : -1,
+       "unknownFields" : {
+         "fields" : { },
+         "fieldsDescending" : { }
+       },
+       "memoizedSize" : -1,
+       "memoizedHashCode" : 0
+     },
+     "supplementaryConfiguration" : { },
+     "tags" : { },
+     "discoveryMeta" : { }
+   }, {
+        "documentId" : "0AjTtG1-P_KPtM3IM__TKw",
+        "assetId" : "or-unlocked-bucket",
+        "resourceName" : null,
+        "resourceId" : null,
+        "resourceType" : "GCP::Storage::Bucket",
+        "region" : "us",
+        "accountId" : null,
+        "projectId" : "oss-discovery-test",
+        "createdIso" : null,
+        "updatedIso" : "2021-10-04T14:47:33.010817Z",
+        "discoverySessionId" : null,
+        "maxSizeInBytes" : null,
+        "sizeInBytes" : null,
+        "configuration" : {
+          "options" : {
+            "clientLibToken" : "gccl",
+            "projectId" : "oss-discovery-test",
+            "host" : "https://storage.googleapis.com",
+            "retrySettings" : {
+              "totalTimeout" : {
+                "seconds" : 50,
+                "nanos" : 0
+              },
+              "initialRetryDelay" : {
+                "seconds" : 1,
+                "nanos" : 0
+              },
+              "retryDelayMultiplier" : 2.0,
+              "maxRetryDelay" : {
+                "seconds" : 32,
+                "nanos" : 0
+              },
+              "maxAttempts" : 6,
+              "jittered" : true,
+              "initialRpcTimeout" : {
+                "seconds" : 50,
+                "nanos" : 0
+              },
+              "rpcTimeoutMultiplier" : 1.0,
+              "maxRpcTimeout" : {
+                "seconds" : 50,
+                "nanos" : 0
+              }
+            },
+            "serviceRpcFactoryClassName" : "com.google.cloud.storage.StorageOptions$DefaultStorageRpcFactory",
+            "serviceFactoryClassName" : "com.google.cloud.storage.StorageOptions$DefaultStorageFactory",
+            "clock" : { },
+            "transportOptions" : {
+              "connectTimeout" : -1,
+              "readTimeout" : -1,
+              "httpTransportFactoryClassName" : "com.google.cloud.http.HttpTransportOptions$DefaultHttpTransportFactory"
+            },
+            "headerProvider" : { }
+          },
+          "generatedId" : "or-unlocked-bucket",
+          "name" : "or-unlocked-bucket",
+          "selfLink" : "https://www.googleapis.com/storage/v1/b/or-unlocked-bucket",
+          "etag" : "CAM=",
+          "createTime" : 1632147424391,
+          "updateTime" : 1632347386634,
+          "metageneration" : 3,
+          "location" : "US",
+          "storageClass" : {
+            "constant" : "STANDARD"
+          },
+          "defaultEventBasedHold" : false,
+          "retentionEffectiveTime" : 1632147493395,
+          "retentionPeriod" : 2678400,
+          "iamConfiguration" : {
+            "isUniformBucketLevelAccessEnabled" : true,
+            "uniformBucketLevelAccessLockedTime" : 1639923424391
+          },
+          "locationType" : "multi-region"
+        },
+        "supplementaryConfiguration" : {
+          "iamPolicy" : {
+            "bindingsList" : [ {
+              "role" : "roles/storage.legacyBucketOwner",
+              "members" : [ "projectEditor:oss-discovery-test", "projectOwner:oss-discovery-test", "serviceAccount:p281989297013-737466@gcp-sa-logging.iam.gserviceaccount.com" ]
+            }, {
+              "role" : "roles/storage.legacyBucketReader",
+              "members" : [ "projectViewer:oss-discovery-test" ]
+            }, {
+              "role" : "roles/storage.legacyObjectOwner",
+              "members" : [ "projectEditor:oss-discovery-test", "projectOwner:oss-discovery-test" ]
+            }, {
+              "role" : "roles/storage.legacyObjectReader",
+              "members" : [ "projectViewer:oss-discovery-test" ]
+            } ],
+            "etag" : "CAM=",
+            "version" : 1
+          }
+        },
+        "tags" : { },
+        "discoveryMeta" : { }
+      }]
+secureAssetGroup: >
+  [{
+      "documentId" : "H0WEDcGAOjSEafGutx0uiQ",
+      "assetId" : "storage-sink-insecure",
+      "resourceName" : null,
+      "resourceId" : null,
+      "resourceType" : "GCP::Logging::Sink",
+      "region" : null,
+      "accountId" : null,
+      "projectId" : "oss-discovery-test",
+      "createdIso" : null,
+      "updatedIso" : "2021-10-04T14:48:09.241071Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "optionsCase_" : 0,
+        "name_" : "storage-sink",
+        "destination_" : "storage.googleapis.com/or-logging-bucket",
+        "filter_" : "",
+        "description_" : "",
+        "disabled_" : false,
+        "exclusions_" : [ ],
+        "outputVersionFormat_" : 0,
+        "writerIdentity_" : "serviceAccount:p281989297013-737466@gcp-sa-logging.iam.gserviceaccount.com",
+        "includeChildren_" : false,
+        "createTime_" : {
+          "seconds_" : 1632147492,
+          "nanos_" : 905963492,
+          "memoizedIsInitialized" : -1,
+          "unknownFields" : {
+            "fields" : { },
+            "fieldsDescending" : { }
+          },
+          "memoizedSize" : -1,
+          "memoizedHashCode" : 0
+        },
+        "updateTime_" : {
+          "seconds_" : 1632347384,
+          "nanos_" : 946200164,
+          "memoizedIsInitialized" : -1,
+          "unknownFields" : {
+            "fields" : { },
+            "fieldsDescending" : { }
+          },
+          "memoizedSize" : -1,
+          "memoizedHashCode" : 0
+        },
+        "memoizedIsInitialized" : -1,
+        "unknownFields" : {
+          "fields" : { },
+          "fieldsDescending" : { }
+        },
+        "memoizedSize" : -1,
+        "memoizedHashCode" : 0
+      },
+      "supplementaryConfiguration" : { },
+      "tags" : { },
+      "discoveryMeta" : { }
+  }, {
+       "documentId" : "ywqmvXZXPe-SEwpWG68Ctw",
+       "assetId" : "or-logging-bucket",
+       "resourceName" : null,
+       "resourceId" : null,
+       "resourceType" : "GCP::Storage::Bucket",
+       "region" : "us-east1",
+       "accountId" : null,
+       "projectId" : "oss-discovery-test",
+       "createdIso" : null,
+       "updatedIso" : "2021-10-04T14:47:32.715686Z",
+       "discoverySessionId" : null,
+       "maxSizeInBytes" : null,
+       "sizeInBytes" : null,
+       "configuration" : {
+         "options" : {
+           "clientLibToken" : "gccl",
+           "projectId" : "oss-discovery-test",
+           "host" : "https://storage.googleapis.com",
+           "retrySettings" : {
+             "totalTimeout" : {
+               "seconds" : 50,
+               "nanos" : 0
+             },
+             "initialRetryDelay" : {
+               "seconds" : 1,
+               "nanos" : 0
+             },
+             "retryDelayMultiplier" : 2.0,
+             "maxRetryDelay" : {
+               "seconds" : 32,
+               "nanos" : 0
+             },
+             "maxAttempts" : 6,
+             "jittered" : true,
+             "initialRpcTimeout" : {
+               "seconds" : 50,
+               "nanos" : 0
+             },
+             "rpcTimeoutMultiplier" : 1.0,
+             "maxRpcTimeout" : {
+               "seconds" : 50,
+               "nanos" : 0
+             }
+           },
+           "serviceRpcFactoryClassName" : "com.google.cloud.storage.StorageOptions$DefaultStorageRpcFactory",
+           "serviceFactoryClassName" : "com.google.cloud.storage.StorageOptions$DefaultStorageFactory",
+           "clock" : { },
+           "credentials" : {
+             "clientId" : "116980373915591610593",
+             "clientEmail" : "oss-discovery-test@appspot.gserviceaccount.com",
+             "privateKey" : {
+               "n" : 20502688850212155697593233601435770668232166766020814321166242365833047006610992141185069979750988697982655579577884948752652783190450817927684585177737632974514429475263799530050725539811951296473485632002968872341182816870486580581324474416877274327114213376282857814977598388516913212130643457893698319552754636859251770632272082225015297616672448046848877277442659895793208490631943463964509552685216035385717918578666655965225243799303289676377708538095784494202623696314936925186183809368850186163540884130523810151954946041932299398891907370586593688760347091660156259102675621947530633434083762583084938070421,
+               "e" : 65537,
+               "d" : 76229028637792828554560292977755814061663456805373123928836754654744431195775593711472329397632750650906211904071663831312536859647830222648465405114292738983932984148485270185630917749274132158028380899309653303637154783467484985097213232213544956961311879691689524303058447502967095218820413749588240086225355611278872856012894561974300385783335662847598914443677988564065657333453692594958273009522637263460020500821398975221617373446986633941527925142237403591537005106560112044104550549255506929338144326241720265784198793299223303617244196526157837237515933975683171054808699447651667779036927614588555441197,
+               "p" : 157152893709148378787881885347274653937763708989715173744772206502104301754690650525096830240026379082033192388701786934132193122366968632991578242883490954907458220419920626732479817311385071067658938683428797311987877344836352128004305286904226292775067989300097984208609602158960147931417556466920425181239,
+               "q" : 130463323749912139187055709942751896732758198147438208094641438170019436500147540132516669537863753422510867521023591442450898268201041856138870527578315211612973805572321101321775417447787313612842418597969345020408780120688843375552446511583299629767433281712939336102009648923670275236962546428243208033939,
+               "pe" : 140305063762698640329245418520139574233677043146577117215929422687102320825925883895722120850423172657717688021351759392450199914289846982391171926840653970468442069899293159448008401219257089785003771324688379991786665415318366714400413608222121620101042207027145477425423141613484248830663177234783114847787,
+               "qe" : 117941934208325747446716963653786740707168850659036445290190599009096259430920568689918902606311149412141254070495822545903663116958468145485140640362427961951780811736016422631661933831714222036713227255960599118424080989524267260804672146600786626864688948863184412561389225472339179348525565531442167727951,
+               "coeff" : 2288028454499797942701580744224790552847426298181888627127333060634160021381535436449126722805911418638079686643592359967205622443220315475917116399367921204562864748935593674789641983944315932689768088884368088987325311994950865216149352987862004605577117436484064167150846808473262143190708360472854587854,
+               "algid" : {
+                 "algid" : {
+                   "encoding" : [ 42, -122, 72, -122, -9, 13, 1, 1, 1 ],
+                   "componentLen" : -1
+                 },
+                 "constructedFromDer" : true
+               },
+               "key" : [ 48, -126, 4, -92, 2, 1, 0, 2, -126, 1, 1, 0, -94, 105, -98, -35, -34, -39, 29, 0, -112, 4, 96, -97, -118, 114, -16, 69, 94, 86, -96, -107, 69, 124, -17, -54, 126, -95, -81, 1, 9, 39, 99, -13, -105, -16, -118, 36, -105, -34, 69, 78, 76, -47, 98, 112, -64, 71, 57, -19, -92, -26, -22, -90, 98, 123, -83, 50, -40, 112, 89, 101, 52, 35, -77, 19, 11, 7, -23, 104, 72, -118, 75, 104, -95, -109, -102, -114, -97, -14, -23, -113, -78, -122, 75, 55, 42, 5, 116, 116, 122, 102, -27, 65, -88, -10, 33, 90, 123, 86, 24, 88, -104, 24, 81, 80, 67, 109, -55, 114, -21, 89, 117, 42, 72, -124, 126, 78, -70, -42, 10, -116, 77, 2, 77, -88, 52, 55, 44, 28, 67, 73, -3, -117, -46, -93, -1, 77, -46, 74, 27, -20, 26, 58, -103, -125, -70, 78, 64, -126, 94, -16, 16, -79, -45, -39, -48, 98, 29, 105, 26, 76, 70, 28, -70, 114, 80, 116, -116, 87, 55, -119, 92, -60, 70, -46, -42, 78, 1, -62, 88, 45, -128, 43, -32, 29, 90, 85, -74, -103, 16, 27, -52, 120, 53, 81, 71, -73, -109, -102, 62, -53, -46, -99, -21, -68, 112, -80, -64, -4, -33, -12, 34, 82, 33, 12, 47, -100, 60, 119, -34, 35, 3, -75, -23, -97, 35, -24, -33, -42, -33, -75, -18, 21, 117, -108, -94, -64, -106, 84, -108, -48, 65, 10, -77, 24, -103, 68, 112, 66, 69, 13, 67, -95, 91, 32, -119, -107, 2, 3, 1, 0, 1, 2, -126, 1, 0, 0, -102, -107, -19, -96, -106, 38, -69, -55, 119, -11, 93, 87, -46, -60, -23, 66, 114, -34, 1, 80, 19, 41, 45, 19, -27, 115, -1, 115, -4, -19, 43, -32, 90, 104, -18, 105, 59, 121, 84, 126, 50, -97, -60, 18, -30, -16, -24, -121, -98, -62, -42, -107, -121, -46, 48, 8, -118, -91, 15, -58, -18, -39, -74, -104, -66, -25, 30, 66, 121, 115, -46, -3, 110, -51, 100, -92, 92, 68, -124, 10, -105, -116, -112, -75, -101, -98, -22, -29, -14, -14, -89, -18, 44, -114, -61, -37, 6, 52, -106, -9, -68, 119, 104, -19, -4, -107, -126, -45, -119, -39, -15, 85, -8, 90, -50, -120, -53, -9, -103, 103, -15, 57, -22, -80, -124, 87, -1, 77, 97, -112, -101, 74, -44, -58, -13, -7, -4, 94, 117, 120, 37, 29, 38, 18, -121, 61, -95, 61, 116, 72, -122, 101, -25, -87, 109, 7, 59, 121, 110, 42, -1, 116, -8, -61, -47, 22, 88, 34, -95, -82, 98, 91, -77, 45, 48, 109, -37, -119, -56, -52, -123, 36, 95, -78, 17, 122, -96, 19, -118, 105, -96, -118, 0, -118, 38, -22, -48, 9, -76, -117, 103, 91, 24, -21, 99, -34, -28, 42, 105, 58, -99, 11, -67, -70, 83, 122, 114, -40, 24, 106, -105, 111, -97, 91, -11, -30, -61, 56, -88, 0, -56, 12, 19, 21, 81, 20, -30, 52, -10, -126, 108, 14, -51, 99, 75, -41, -115, -68, 35, -122, -59, -27, 65, 52, 45, 2, -127, -127, 0, -33, -53, 11, -46, -7, -35, -64, 68, -118, 42, 84, -82, 52, 105, -68, 111, 107, 85, -102, 113, -8, -109, 102, -96, -56, -89, -107, 77, 113, -55, 124, 86, 102, -58, 99, 109, 112, 121, 94, 39, 19, -6, -94, -44, 70, -120, 111, 13, -99, 111, -3, 18, 17, 78, 77, 50, 91, 123, 114, 87, 16, 105, -48, -98, 78, -90, -26, -61, -122, -47, -4, -11, 24, 89, -127, 124, 38, 26, -6, 79, 90, -79, -11, -52, 117, -46, 47, 2, -23, -121, -62, 1, -69, 47, 2, 102, -71, 24, 98, 78, -102, -123, -84, 26, -72, -57, 0, 88, -15, -50, 111, 93, -41, 62, 71, -15, -127, 87, -4, -89, -44, -61, -78, -12, 125, -10, -48, 55, 2, -127, -127, 0, -71, -55, 51, 92, 72, 106, -72, 29, -88, 106, -12, -106, -112, -51, -64, -34, 4, 12, 113, -70, -126, -31, 16, 79, -95, 5, 104, 59, -115, 83, -6, 23, 10, -50, 126, 2, 75, -90, 66, -9, 110, 88, 19, -26, 27, 101, 34, -84, -24, 8, 125, 18, -75, 81, -102, 113, 92, 44, -119, 93, 125, -101, 11, 79, -101, -3, 55, 38, 42, -104, -55, 27, 64, -39, -58, -60, 40, 34, -100, -9, 24, -95, 103, 107, 7, -21, 34, -77, -45, 121, -124, -22, -6, -17, -67, 105, 47, 5, -87, -117, -82, -74, -6, 34, 118, 70, 100, -14, 29, 10, -81, 96, 37, -10, -114, -63, 110, 46, -52, 76, -86, 127, 61, 59, -73, -17, -42, -109, 2, -127, -127, 0, -57, -51, 17, 38, 112, 60, -95, -34, -49, 120, 17, -104, 98, 101, 16, 126, 109, 86, -59, 8, 2, 5, 31, -72, 102, -52, -17, -56, 111, -47, -110, 119, -43, 84, 68, 10, -66, 67, 45, 99, 56, 60, 41, -55, -39, -101, 15, -125, 25, 79, -107, -94, -34, -34, -120, -97, 111, -5, -101, -50, -51, 113, -101, 118, -21, 3, -87, -67, 97, -115, -13, 8, -93, -113, -83, -62, 56, -121, 23, 121, 103, -96, -64, -79, -91, 115, 92, -45, 125, -55, -35, -43, 11, -40, 97, -115, 114, -83, -87, 127, 66, 8, 27, -22, -45, -109, -97, -28, -55, 38, 36, 89, -92, -59, 15, 24, 56, 1, 101, 42, 54, 19, -18, -98, -56, 35, 102, 43, 2, -127, -127, 0, -89, -12, 115, -95, 22, -70, -101, -83, -4, 38, -116, -19, 93, 5, 21, 57, -32, -79, 27, 83, -128, -92, 84, -87, -104, 41, 26, 60, -44, 28, 57, -8, 0, -58, 2, 118, -78, -53, 32, -71, 45, 33, 37, 4, 30, 122, 4, -86, 9, -82, 58, -37, -31, -35, 94, -32, -30, 114, 68, -48, -89, 15, -74, 95, 6, -25, 24, -89, 65, 85, 20, 97, -75, -13, -22, -44, 68, 112, 94, 52, -88, 40, -86, 36, -63, 104, -39, -37, 117, -17, -30, -80, -57, -96, 90, 60, -81, -52, -49, -92, -66, -109, 30, 120, 111, 50, 94, 105, -34, -59, 93, 28, 111, -43, -128, -30, -17, 104, 17, 59, -79, -37, 11, -111, 100, 76, -57, 79, 2, -127, -128, 3, 66, 29, 95, 24, -114, -16, -19, 73, -86, -56, -1, 122, 41, 124, 85, -44, -78, 117, -64, -68, 60, 115, -81, -67, -108, -58, -80, -59, 89, -112, -108, -14, -101, 77, 101, 2, 122, 50, -53, 72, 12, 39, 67, -16, 54, -52, -108, -68, -96, 47, -60, 36, 98, -94, -33, -42, 57, -4, -15, -65, -55, 79, -104, -19, -41, -27, 112, 90, 5, -74, -128, 13, -29, 41, 63, -93, -94, -101, -82, 105, 67, -90, -70, -103, -40, 8, 17, 94, -50, 122, 53, -66, 127, -28, 121, 3, 107, 34, 2, 34, -73, -125, 41, -98, 67, -104, -35, -1, -21, 29, 0, -96, -67, -118, 115, -83, 46, 60, 108, -33, -122, -41, -9, -37, 4, -23, -50 ]
+             },
+             "privateKeyId" : "a0266844e253f2b8991024b7543c95b7abf6f760",
+             "projectId" : "oss-discovery-test",
+             "transportFactoryClassName" : "com.google.auth.oauth2.OAuth2Utils$DefaultHttpTransportFactory",
+             "tokenServerUri" : "https://oauth2.googleapis.com/token",
+             "scopes" : [ ],
+             "defaultScopes" : [ ],
+             "lifetime" : 3600,
+             "lock" : [ ]
+           },
+           "transportOptions" : {
+             "connectTimeout" : -1,
+             "readTimeout" : -1,
+             "httpTransportFactoryClassName" : "com.google.cloud.http.HttpTransportOptions$DefaultHttpTransportFactory"
+           },
+           "headerProvider" : { }
+         },
+         "generatedId" : "or-logging-bucket",
+         "name" : "or-logging-bucket",
+         "selfLink" : "https://www.googleapis.com/storage/v1/b/or-logging-bucket",
+         "etag" : "CAU=",
+         "createTime" : 1632147341263,
+         "updateTime" : 1632347387228,
+         "metageneration" : 5,
+         "location" : "US-EAST1",
+         "storageClass" : {
+           "constant" : "STANDARD"
+         },
+         "defaultEventBasedHold" : false,
+         "retentionEffectiveTime" : 1632147415413,
+         "retentionPolicyIsLocked" : true,
+         "retentionPeriod" : 8035200,
+         "iamConfiguration" : {
+           "isUniformBucketLevelAccessEnabled" : true,
+           "uniformBucketLevelAccessLockedTime" : 1639923341263
+         },
+         "locationType" : "region"
+       },
+       "supplementaryConfiguration" : {
+         "iamPolicy" : {
+           "bindingsList" : [ {
+             "role" : "roles/storage.legacyBucketOwner",
+             "members" : [ "projectEditor:oss-discovery-test", "projectOwner:oss-discovery-test", "serviceAccount:p281989297013-737466@gcp-sa-logging.iam.gserviceaccount.com" ]
+           }, {
+             "role" : "roles/storage.legacyBucketReader",
+             "members" : [ "projectViewer:oss-discovery-test" ]
+           }, {
+             "role" : "roles/storage.legacyObjectOwner",
+             "members" : [ "projectEditor:oss-discovery-test", "projectOwner:oss-discovery-test" ]
+           }, {
+             "role" : "roles/storage.legacyObjectReader",
+             "members" : [ "projectViewer:oss-discovery-test" ]
+           } ],
+           "etag" : "CAU=",
+           "version" : 1
+         }
+       },
+       "tags" : { },
+       "discoveryMeta" : { }
+     }
+  ]
