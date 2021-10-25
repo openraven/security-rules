@@ -1,10 +1,12 @@
 ruleId: opnrvn-r-120
 description: >
-  Violated asset doesn't have enabled databaseFlag `log_disconnections` but secure asset has it
-violatedAssetId: "psql-or-test-invalid"
-controlAssetId: "psql-or-test-valid"
-insecureAssetGroup: >
-  [{
+  Insecure Assets:
+    - `psql-or-test-invalid` is default setup which does not control the `log_disconnections` property - hence violating it
+  Secure Assets:
+    - `psql-or-test-valid` secure asset enable `log_disconnections` option - hence pass the rule
+insecureAssets:
+  psql-or-test-invalid: >
+    [{
      "documentId" : "mxhhExM9OnOgmmvW_mQ7BA",
      "assetId" : "psql-or-test-invalid",
      "resourceName" : null,
@@ -95,9 +97,11 @@ insecureAssetGroup: >
      "supplementaryConfiguration" : { },
      "tags" : { },
      "discoveryMeta" : { }
-   }]
-secureAssetGroup: >
-  [{
+    }]
+
+secureAssets:
+  psql-or-test-valid: >
+    [{
      "documentId" : "K2DyD2viPKKaxjMdc8undg",
      "assetId" : "psql-or-test-valid",
      "resourceName" : null,
@@ -239,4 +243,4 @@ secureAssetGroup: >
      "supplementaryConfiguration" : { },
      "tags" : { },
      "discoveryMeta" : { }
-   }]
+    }]
