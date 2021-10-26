@@ -1,11 +1,12 @@
 ruleId: opnrvn-r-138
 description: >
-  Default setup does not control the `3625` property - hence violating it
-  Secure asset disable this option - hence pass the rule
-violatedAssetId: "sql-server-default"
-controlAssetId: "sql-server-valid"
-insecureAssetGroup: >
-  [{
+  Insecure Assets:
+    - `sql-server-default` is default setup which does not control the `3625` property - hence violating it
+  Secure Assets:
+    - `sql-server-valid` secure asset disable `3625` option - hence pass the rule
+insecureAssets:
+  sql-server-default: >
+    [{
      "documentId" : "_n3H7tBVNbqGcCmPHah2PA",
      "assetId" : "sql-server-default",
      "resourceName" : null,
@@ -98,9 +99,10 @@ insecureAssetGroup: >
      "supplementaryConfiguration" : { },
      "tags" : { },
      "discoveryMeta" : { }
-   }]
-secureAssetGroup: >
-  [{
+    }]
+secureAssets:
+  sql-server-valid: >
+    [{
      "documentId" : "SJfUAUELNQWOOQKzvRMtjA",
      "assetId" : "sql-server-valid",
      "resourceName" : null,
@@ -214,4 +216,4 @@ secureAssetGroup: >
      "supplementaryConfiguration" : { },
      "tags" : { },
      "discoveryMeta" : { }
-   }]
+    }]

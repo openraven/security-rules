@@ -2,10 +2,9 @@ ruleId: opnrvn-r-143
 description: >
   Insecure assets are not configured with automated backups - hence violation the rule
   Secure assets are configured with automated backups - hence pass the rule
-violatedAssetId: "mysql-or-invlid"
-controlAssetId: "mysql-or-test-valid"
-insecureAssetGroup: >
-  [{
+insecureAssets:
+  mysql-or-invlid: >
+    [{
      "documentId" : "Ux3Hv8nCNqGGq6ZC6QURug",
      "assetId" : "mysql-or-invlid",
      "resourceName" : null,
@@ -91,9 +90,10 @@ insecureAssetGroup: >
      "supplementaryConfiguration" : { },
      "tags" : { },
      "discoveryMeta" : { }
-   }]
-secureAssetGroup: >
-  [{
+    }]
+secureAssets:
+  mysql-or-test-valid: >
+    [{
      "documentId" : "7jux2V2KNh-wZJQk1jIyyA",
      "assetId" : "mysql-or-test-valid",
      "resourceName" : null,
@@ -190,4 +190,4 @@ secureAssetGroup: >
      "supplementaryConfiguration" : { },
      "tags" : { },
      "discoveryMeta" : { }
-   }]
+    }]

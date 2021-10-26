@@ -1,12 +1,13 @@
 ruleId: opnrvn-r-109
 description: >
-  `or-ownership-metric` - has incorrect filter but have bounded alert policy - hence violating
-  `no-allert-metric` - has correct filter but doesn't have bounded alert policy - hence violating
-  `secure-metric` - has correct filter and have bounded alert policy - hence passing the rule
-violatedAssetId: "No log metric filter and alerts exist for SQL instance configuration changes"
-controlAssetId: "secure-metric"
-insecureAssetGroup: >
-  [{
+  Insecure Assets:
+   - `or-ownership-metric` - has incorrect filter but have bounded alert policy - hence violating
+   - `no-allert-metric` - has correct filter but doesn't have bounded alert policy - hence violating
+  Secure Assets:
+   - `secure-metric` - has correct filter and have bounded alert policy - hence passing the rule
+insecureAssets:
+  No log metric filter and alerts exist for SQL instance configuration changes: >
+    [{
      "documentId" : "CjMFpqMQMO2yYiaMyObFow",
      "assetId" : "or-ownership-metric",
      "resourceName" : null,
@@ -78,30 +79,56 @@ insecureAssetGroup: >
      "supplementaryConfiguration" : { },
      "tags" : { },
      "discoveryMeta" : { }
-   }, {
-    "documentId" : "IYhhp9hnMS-1MQRDZJATVQ",
-    "assetId" : "projects/oss-discovery-test/alertPolicies/13787588784273579867",
-    "resourceName" : null,
-    "resourceId" : null,
-    "resourceType" : "GCP::Monitoring::AlertPolicy",
-    "region" : null,
-    "accountId" : null,
-    "projectId" : "oss-discovery-test",
-    "createdIso" : null,
-    "updatedIso" : "2021-10-04T14:47:47.234250Z",
-    "discoverySessionId" : null,
-    "maxSizeInBytes" : null,
-    "sizeInBytes" : null,
-    "configuration" : {
-      "name_" : "projects/oss-discovery-test/alertPolicies/13787588784273579867",
-      "displayName_" : "or-alert",
-      "conditions_" : [ {
-        "conditionCase_" : 1,
-        "condition_" : {
-          "filter_" : "metric.type=\"logging.googleapis.com/user/or-ownership-metric\"",
-          "aggregations_" : [ {
-            "alignmentPeriod_" : {
-              "seconds_" : 300,
+    }, {
+      "documentId" : "IYhhp9hnMS-1MQRDZJATVQ",
+      "assetId" : "projects/oss-discovery-test/alertPolicies/13787588784273579867",
+      "resourceName" : null,
+      "resourceId" : null,
+      "resourceType" : "GCP::Monitoring::AlertPolicy",
+      "region" : null,
+      "accountId" : null,
+      "projectId" : "oss-discovery-test",
+      "createdIso" : null,
+      "updatedIso" : "2021-10-04T14:47:47.234250Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "name_" : "projects/oss-discovery-test/alertPolicies/13787588784273579867",
+        "displayName_" : "or-alert",
+        "conditions_" : [ {
+          "conditionCase_" : 1,
+          "condition_" : {
+            "filter_" : "metric.type=\"logging.googleapis.com/user/or-ownership-metric\"",
+            "aggregations_" : [ {
+              "alignmentPeriod_" : {
+                "seconds_" : 300,
+                "nanos_" : 0,
+                "memoizedIsInitialized" : -1,
+                "unknownFields" : {
+                  "fields" : { },
+                  "fieldsDescending" : { }
+                },
+                "memoizedSize" : -1,
+                "memoizedHashCode" : 0
+              },
+              "perSeriesAligner_" : 2,
+              "crossSeriesReducer_" : 0,
+              "groupByFields_" : [ ],
+              "memoizedIsInitialized" : -1,
+              "unknownFields" : {
+                "fields" : { },
+                "fieldsDescending" : { }
+              },
+              "memoizedSize" : -1,
+              "memoizedHashCode" : 0
+            } ],
+            "denominatorFilter_" : "",
+            "denominatorAggregations_" : [ ],
+            "comparison_" : 1,
+            "thresholdValue_" : 0.0,
+            "duration_" : {
+              "seconds_" : 0,
               "nanos_" : 0,
               "memoizedIsInitialized" : -1,
               "unknownFields" : {
@@ -111,35 +138,17 @@ insecureAssetGroup: >
               "memoizedSize" : -1,
               "memoizedHashCode" : 0
             },
-            "perSeriesAligner_" : 2,
-            "crossSeriesReducer_" : 0,
-            "groupByFields_" : [ ],
-            "memoizedIsInitialized" : -1,
-            "unknownFields" : {
-              "fields" : { },
-              "fieldsDescending" : { }
+            "trigger_" : {
+              "typeCase_" : 1,
+              "type_" : 1,
+              "memoizedIsInitialized" : -1,
+              "unknownFields" : {
+                "fields" : { },
+                "fieldsDescending" : { }
+              },
+              "memoizedSize" : -1,
+              "memoizedHashCode" : 0
             },
-            "memoizedSize" : -1,
-            "memoizedHashCode" : 0
-          } ],
-          "denominatorFilter_" : "",
-          "denominatorAggregations_" : [ ],
-          "comparison_" : 1,
-          "thresholdValue_" : 0.0,
-          "duration_" : {
-            "seconds_" : 0,
-            "nanos_" : 0,
-            "memoizedIsInitialized" : -1,
-            "unknownFields" : {
-              "fields" : { },
-              "fieldsDescending" : { }
-            },
-            "memoizedSize" : -1,
-            "memoizedHashCode" : 0
-          },
-          "trigger_" : {
-            "typeCase_" : 1,
-            "type_" : 1,
             "memoizedIsInitialized" : -1,
             "unknownFields" : {
               "fields" : { },
@@ -148,6 +157,19 @@ insecureAssetGroup: >
             "memoizedSize" : -1,
             "memoizedHashCode" : 0
           },
+          "name_" : "projects/oss-discovery-test/alertPolicies/13787588784273579867/conditions/13787588784273579886",
+          "displayName_" : "logging/user/or-ownership-metric [RATE]",
+          "memoizedIsInitialized" : -1,
+          "unknownFields" : {
+            "fields" : { },
+            "fieldsDescending" : { }
+          },
+          "memoizedSize" : -1,
+          "memoizedHashCode" : 0
+        } ],
+        "combiner_" : 2,
+        "enabled_" : {
+          "value_" : true,
           "memoizedIsInitialized" : -1,
           "unknownFields" : {
             "fields" : { },
@@ -156,32 +178,20 @@ insecureAssetGroup: >
           "memoizedSize" : -1,
           "memoizedHashCode" : 0
         },
-        "name_" : "projects/oss-discovery-test/alertPolicies/13787588784273579867/conditions/13787588784273579886",
-        "displayName_" : "logging/user/or-ownership-metric [RATE]",
-        "memoizedIsInitialized" : -1,
-        "unknownFields" : {
-          "fields" : { },
-          "fieldsDescending" : { }
-        },
-        "memoizedSize" : -1,
-        "memoizedHashCode" : 0
-      } ],
-      "combiner_" : 2,
-      "enabled_" : {
-        "value_" : true,
-        "memoizedIsInitialized" : -1,
-        "unknownFields" : {
-          "fields" : { },
-          "fieldsDescending" : { }
-        },
-        "memoizedSize" : -1,
-        "memoizedHashCode" : 0
-      },
-      "notificationChannels_" : [ ],
-      "creationRecord_" : {
-        "mutateTime_" : {
-          "seconds_" : 1632236979,
-          "nanos_" : 586701684,
+        "notificationChannels_" : [ ],
+        "creationRecord_" : {
+          "mutateTime_" : {
+            "seconds_" : 1632236979,
+            "nanos_" : 586701684,
+            "memoizedIsInitialized" : -1,
+            "unknownFields" : {
+              "fields" : { },
+              "fieldsDescending" : { }
+            },
+            "memoizedSize" : -1,
+            "memoizedHashCode" : 0
+          },
+          "mutatedBy_" : "Belosh59@gmail.com",
           "memoizedIsInitialized" : -1,
           "unknownFields" : {
             "fields" : { },
@@ -190,19 +200,19 @@ insecureAssetGroup: >
           "memoizedSize" : -1,
           "memoizedHashCode" : 0
         },
-        "mutatedBy_" : "Belosh59@gmail.com",
-        "memoizedIsInitialized" : -1,
-        "unknownFields" : {
-          "fields" : { },
-          "fieldsDescending" : { }
-        },
-        "memoizedSize" : -1,
-        "memoizedHashCode" : 0
-      },
-      "mutationRecord_" : {
-        "mutateTime_" : {
-          "seconds_" : 1632236979,
-          "nanos_" : 586701684,
+        "mutationRecord_" : {
+          "mutateTime_" : {
+            "seconds_" : 1632236979,
+            "nanos_" : 586701684,
+            "memoizedIsInitialized" : -1,
+            "unknownFields" : {
+              "fields" : { },
+              "fieldsDescending" : { }
+            },
+            "memoizedSize" : -1,
+            "memoizedHashCode" : 0
+          },
+          "mutatedBy_" : "Belosh59@gmail.com",
           "memoizedIsInitialized" : -1,
           "unknownFields" : {
             "fields" : { },
@@ -211,49 +221,40 @@ insecureAssetGroup: >
           "memoizedSize" : -1,
           "memoizedHashCode" : 0
         },
-        "mutatedBy_" : "Belosh59@gmail.com",
         "memoizedIsInitialized" : -1,
         "unknownFields" : {
-          "fields" : { },
-          "fieldsDescending" : { }
-        },
-        "memoizedSize" : -1,
-        "memoizedHashCode" : 0
-      },
-      "memoizedIsInitialized" : -1,
-      "unknownFields" : {
-        "fields" : {
-          "21" : {
-            "varint" : [ ],
-            "fixed32" : [ ],
-            "fixed64" : [ ],
-            "lengthDelimited" : [ {
-              "bytes" : [ 26, 4, 8, -128, -11, 36 ],
-              "hash" : 0
-            } ],
-            "group" : [ ]
+          "fields" : {
+            "21" : {
+              "varint" : [ ],
+              "fixed32" : [ ],
+              "fixed64" : [ ],
+              "lengthDelimited" : [ {
+                "bytes" : [ 26, 4, 8, -128, -11, 36 ],
+                "hash" : 0
+              } ],
+              "group" : [ ]
+            }
+          },
+          "fieldsDescending" : {
+            "21" : {
+              "varint" : [ ],
+              "fixed32" : [ ],
+              "fixed64" : [ ],
+              "lengthDelimited" : [ {
+                "bytes" : [ 26, 4, 8, -128, -11, 36 ],
+                "hash" : 0
+              } ],
+              "group" : [ ]
+            }
           }
         },
-        "fieldsDescending" : {
-          "21" : {
-            "varint" : [ ],
-            "fixed32" : [ ],
-            "fixed64" : [ ],
-            "lengthDelimited" : [ {
-              "bytes" : [ 26, 4, 8, -128, -11, 36 ],
-              "hash" : 0
-            } ],
-            "group" : [ ]
-          }
-        }
+        "memoizedSize" : -1,
+        "memoizedHashCode" : 0
       },
-      "memoizedSize" : -1,
-      "memoizedHashCode" : 0
-    },
-    "supplementaryConfiguration" : { },
-    "tags" : { },
-    "discoveryMeta" : { }
-  }, {
+      "supplementaryConfiguration" : { },
+      "tags" : { },
+      "discoveryMeta" : { }
+    }, {
       "documentId" : "CjMFpqMQMO2yYiaMyqasdd",
       "assetId" : "no-allert-metric",
       "resourceName" : null,
@@ -326,8 +327,9 @@ insecureAssetGroup: >
       "tags" : { },
       "discoveryMeta" : { }
     }]
-secureAssetGroup: >
-  [{
+secureAssets:
+  secure-metric: >
+    [{
      "documentId" : "CjMFpqMQMO2yYiaMyObFow",
      "assetId" : "secure-metric",
      "resourceName" : null,
@@ -399,31 +401,76 @@ secureAssetGroup: >
      "supplementaryConfiguration" : { },
      "tags" : { },
      "discoveryMeta" : { }
-   }, {
-  "documentId" : "IYhhp9hnMS-1MQRDZJATVQ",
-  "assetId" : "projects/oss-discovery-test/alertPolicies/13787588784273579867",
-  "resourceName" : null,
-  "resourceId" : null,
-  "resourceType" : "GCP::Monitoring::AlertPolicy",
-  "region" : null,
-  "accountId" : null,
-  "projectId" : "oss-discovery-test",
-  "createdIso" : null,
-  "updatedIso" : "2021-10-04T14:47:47.234250Z",
-  "discoverySessionId" : null,
-  "maxSizeInBytes" : null,
-  "sizeInBytes" : null,
-  "configuration" : {
-    "name_" : "projects/oss-discovery-test/alertPolicies/13787588784273579867",
-    "displayName_" : "or-alert",
-    "conditions_" : [ {
-      "conditionCase_" : 1,
-      "condition_" : {
-        "filter_" : "metric.type=\"logging.googleapis.com/user/secure-metric\"",
-        "aggregations_" : [ {
-          "alignmentPeriod_" : {
-            "seconds_" : 300,
-            "nanos_" : 0,
+    }, {
+      "documentId" : "IYhhp9hnMS-1MQRDZJATVQ",
+      "assetId" : "projects/oss-discovery-test/alertPolicies/13787588784273579867",
+      "resourceName" : null,
+      "resourceId" : null,
+      "resourceType" : "GCP::Monitoring::AlertPolicy",
+      "region" : null,
+      "accountId" : null,
+      "projectId" : "oss-discovery-test",
+      "createdIso" : null,
+      "updatedIso" : "2021-10-04T14:47:47.234250Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "name_" : "projects/oss-discovery-test/alertPolicies/13787588784273579867",
+        "displayName_" : "or-alert",
+        "conditions_" : [ {
+          "conditionCase_" : 1,
+          "condition_" : {
+            "filter_" : "metric.type=\"logging.googleapis.com/user/secure-metric\"",
+            "aggregations_" : [ {
+              "alignmentPeriod_" : {
+                "seconds_" : 300,
+                "nanos_" : 0,
+                "memoizedIsInitialized" : -1,
+                "unknownFields" : {
+                  "fields" : { },
+                  "fieldsDescending" : { }
+                },
+                "memoizedSize" : -1,
+                "memoizedHashCode" : 0
+              },
+              "perSeriesAligner_" : 2,
+              "crossSeriesReducer_" : 0,
+              "groupByFields_" : [ ],
+              "memoizedIsInitialized" : -1,
+              "unknownFields" : {
+                "fields" : { },
+                "fieldsDescending" : { }
+              },
+              "memoizedSize" : -1,
+              "memoizedHashCode" : 0
+            } ],
+            "denominatorFilter_" : "",
+            "denominatorAggregations_" : [ ],
+            "comparison_" : 1,
+            "thresholdValue_" : 0.0,
+            "duration_" : {
+              "seconds_" : 0,
+              "nanos_" : 0,
+              "memoizedIsInitialized" : -1,
+              "unknownFields" : {
+                "fields" : { },
+                "fieldsDescending" : { }
+              },
+              "memoizedSize" : -1,
+              "memoizedHashCode" : 0
+            },
+            "trigger_" : {
+              "typeCase_" : 1,
+              "type_" : 1,
+              "memoizedIsInitialized" : -1,
+              "unknownFields" : {
+                "fields" : { },
+                "fieldsDescending" : { }
+              },
+              "memoizedSize" : -1,
+              "memoizedHashCode" : 0
+            },
             "memoizedIsInitialized" : -1,
             "unknownFields" : {
               "fields" : { },
@@ -432,9 +479,8 @@ secureAssetGroup: >
             "memoizedSize" : -1,
             "memoizedHashCode" : 0
           },
-          "perSeriesAligner_" : 2,
-          "crossSeriesReducer_" : 0,
-          "groupByFields_" : [ ],
+          "name_" : "projects/oss-discovery-test/alertPolicies/13787588784273579867/conditions/13787588784273579886",
+          "displayName_" : "logging/user/secure-metric [RATE]",
           "memoizedIsInitialized" : -1,
           "unknownFields" : {
             "fields" : { },
@@ -443,13 +489,9 @@ secureAssetGroup: >
           "memoizedSize" : -1,
           "memoizedHashCode" : 0
         } ],
-        "denominatorFilter_" : "",
-        "denominatorAggregations_" : [ ],
-        "comparison_" : 1,
-        "thresholdValue_" : 0.0,
-        "duration_" : {
-          "seconds_" : 0,
-          "nanos_" : 0,
+        "combiner_" : 2,
+        "enabled_" : {
+          "value_" : true,
           "memoizedIsInitialized" : -1,
           "unknownFields" : {
             "fields" : { },
@@ -458,9 +500,41 @@ secureAssetGroup: >
           "memoizedSize" : -1,
           "memoizedHashCode" : 0
         },
-        "trigger_" : {
-          "typeCase_" : 1,
-          "type_" : 1,
+        "notificationChannels_" : [ ],
+        "creationRecord_" : {
+          "mutateTime_" : {
+            "seconds_" : 1632236979,
+            "nanos_" : 586701684,
+            "memoizedIsInitialized" : -1,
+            "unknownFields" : {
+              "fields" : { },
+              "fieldsDescending" : { }
+            },
+            "memoizedSize" : -1,
+            "memoizedHashCode" : 0
+          },
+          "mutatedBy_" : "Belosh59@gmail.com",
+          "memoizedIsInitialized" : -1,
+          "unknownFields" : {
+            "fields" : { },
+            "fieldsDescending" : { }
+          },
+          "memoizedSize" : -1,
+          "memoizedHashCode" : 0
+        },
+        "mutationRecord_" : {
+          "mutateTime_" : {
+            "seconds_" : 1632236979,
+            "nanos_" : 586701684,
+            "memoizedIsInitialized" : -1,
+            "unknownFields" : {
+              "fields" : { },
+              "fieldsDescending" : { }
+            },
+            "memoizedSize" : -1,
+            "memoizedHashCode" : 0
+          },
+          "mutatedBy_" : "Belosh59@gmail.com",
           "memoizedIsInitialized" : -1,
           "unknownFields" : {
             "fields" : { },
@@ -471,107 +545,35 @@ secureAssetGroup: >
         },
         "memoizedIsInitialized" : -1,
         "unknownFields" : {
-          "fields" : { },
-          "fieldsDescending" : { }
+          "fields" : {
+            "21" : {
+              "varint" : [ ],
+              "fixed32" : [ ],
+              "fixed64" : [ ],
+              "lengthDelimited" : [ {
+                "bytes" : [ 26, 4, 8, -128, -11, 36 ],
+                "hash" : 0
+              } ],
+              "group" : [ ]
+            }
+          },
+          "fieldsDescending" : {
+            "21" : {
+              "varint" : [ ],
+              "fixed32" : [ ],
+              "fixed64" : [ ],
+              "lengthDelimited" : [ {
+                "bytes" : [ 26, 4, 8, -128, -11, 36 ],
+                "hash" : 0
+              } ],
+              "group" : [ ]
+            }
+          }
         },
         "memoizedSize" : -1,
         "memoizedHashCode" : 0
       },
-      "name_" : "projects/oss-discovery-test/alertPolicies/13787588784273579867/conditions/13787588784273579886",
-      "displayName_" : "logging/user/secure-metric [RATE]",
-      "memoizedIsInitialized" : -1,
-      "unknownFields" : {
-        "fields" : { },
-        "fieldsDescending" : { }
-      },
-      "memoizedSize" : -1,
-      "memoizedHashCode" : 0
-    } ],
-    "combiner_" : 2,
-    "enabled_" : {
-      "value_" : true,
-      "memoizedIsInitialized" : -1,
-      "unknownFields" : {
-        "fields" : { },
-        "fieldsDescending" : { }
-      },
-      "memoizedSize" : -1,
-      "memoizedHashCode" : 0
-    },
-    "notificationChannels_" : [ ],
-    "creationRecord_" : {
-      "mutateTime_" : {
-        "seconds_" : 1632236979,
-        "nanos_" : 586701684,
-        "memoizedIsInitialized" : -1,
-        "unknownFields" : {
-          "fields" : { },
-          "fieldsDescending" : { }
-        },
-        "memoizedSize" : -1,
-        "memoizedHashCode" : 0
-      },
-      "mutatedBy_" : "Belosh59@gmail.com",
-      "memoizedIsInitialized" : -1,
-      "unknownFields" : {
-        "fields" : { },
-        "fieldsDescending" : { }
-      },
-      "memoizedSize" : -1,
-      "memoizedHashCode" : 0
-    },
-    "mutationRecord_" : {
-      "mutateTime_" : {
-        "seconds_" : 1632236979,
-        "nanos_" : 586701684,
-        "memoizedIsInitialized" : -1,
-        "unknownFields" : {
-          "fields" : { },
-          "fieldsDescending" : { }
-        },
-        "memoizedSize" : -1,
-        "memoizedHashCode" : 0
-      },
-      "mutatedBy_" : "Belosh59@gmail.com",
-      "memoizedIsInitialized" : -1,
-      "unknownFields" : {
-        "fields" : { },
-        "fieldsDescending" : { }
-      },
-      "memoizedSize" : -1,
-      "memoizedHashCode" : 0
-    },
-    "memoizedIsInitialized" : -1,
-    "unknownFields" : {
-      "fields" : {
-        "21" : {
-          "varint" : [ ],
-          "fixed32" : [ ],
-          "fixed64" : [ ],
-          "lengthDelimited" : [ {
-            "bytes" : [ 26, 4, 8, -128, -11, 36 ],
-            "hash" : 0
-          } ],
-          "group" : [ ]
-        }
-      },
-      "fieldsDescending" : {
-        "21" : {
-          "varint" : [ ],
-          "fixed32" : [ ],
-          "fixed64" : [ ],
-          "lengthDelimited" : [ {
-            "bytes" : [ 26, 4, 8, -128, -11, 36 ],
-            "hash" : 0
-          } ],
-          "group" : [ ]
-        }
-      }
-    },
-    "memoizedSize" : -1,
-    "memoizedHashCode" : 0
-  },
-  "supplementaryConfiguration" : { },
-  "tags" : { },
-  "discoveryMeta" : { }
-  }]
+      "supplementaryConfiguration" : { },
+      "tags" : { },
+      "discoveryMeta" : { }
+    }]

@@ -1,11 +1,12 @@
 ruleId: opnrvn-r-136
 description: >
-  Insecure asset specify this option - hence violationg the rule
-  Default setup does not control the `user options` property - hence pass the rule
-violatedAssetId: "sql-server-valid"
-controlAssetId: "sql-server-default"
-insecureAssetGroup: >
-  [{
+  Insecure Assets:
+    - `sql-server-valid` setup the option `user options` property - hence violating it
+  Secure Assets:
+    - `sql-server-default` doesn't configure `user options` option - hence pass the rule
+insecureAssets:
+  sql-server-valid: >
+    [{
      "documentId" : "SJfUAUELNQWOOQKzvRMtjA",
      "assetId" : "sql-server-valid",
      "resourceName" : null,
@@ -119,9 +120,10 @@ insecureAssetGroup: >
      "supplementaryConfiguration" : { },
      "tags" : { },
      "discoveryMeta" : { }
-   }]
-secureAssetGroup: >
-  [{
+    }]
+secureAssets:
+  sql-server-default: >
+    [{
      "documentId" : "_n3H7tBVNbqGcCmPHah2PA",
      "assetId" : "sql-server-default",
      "resourceName" : null,
@@ -214,4 +216,4 @@ secureAssetGroup: >
      "supplementaryConfiguration" : { },
      "tags" : { },
      "discoveryMeta" : { }
-   }]
+    }]

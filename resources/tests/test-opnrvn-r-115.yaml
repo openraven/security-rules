@@ -1,11 +1,12 @@
 ruleId: opnrvn-r-115
 description: >
-  Default setup does not control the `skip_show_database` property - hence violating it
-  Secure asset disable this option - hence pass the rule
-violatedAssetId: "mysql-or-invlid"
-controlAssetId: "mysql-or-test-valid"
-insecureAssetGroup: >
-  [{
+  Insecure Assets:
+    - `mysql-or-invlid` is default setup which does not control the `skip_show_database` property - hence violating it
+  Secure Assets:
+    - `mysql-or-test-valid` secure asset disable this option - hence pass the rule
+insecureAssets:
+  mysql-or-invlid: >
+    [{
      "documentId" : "Ux3Hv8nCNqGGq6ZC6QURug",
      "assetId" : "mysql-or-invlid",
      "resourceName" : null,
@@ -91,9 +92,10 @@ insecureAssetGroup: >
      "supplementaryConfiguration" : { },
      "tags" : { },
      "discoveryMeta" : { }
-   }]
-secureAssetGroup: >
-  [{
+    }]
+secureAssets:
+  mysql-or-test-valid: >
+    [{
      "documentId" : "7jux2V2KNh-wZJQk1jIyyA",
      "assetId" : "mysql-or-test-valid",
      "resourceName" : null,
@@ -190,4 +192,4 @@ secureAssetGroup: >
      "supplementaryConfiguration" : { },
      "tags" : { },
      "discoveryMeta" : { }
-   }]
+    }]
