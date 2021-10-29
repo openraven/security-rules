@@ -10,10 +10,11 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT asset_id
+  SELECT resource_name as asset_id
   FROM assets
   WHERE resource_type = 'AWS::IAM::Account'
-    AND (supplementary_configuration->'passwordPolicy'->'maxPasswordAge' = 'null'
-         OR supplementary_configuration->'passwordPolicy'->'maxPasswordAge' > '90');
+    AND (supplementary_configuration-> 'PasswordPolicy' = 'null'
+       OR supplementary_configuration->'PasswordPolicy'->'maxPasswordAge' = 'null'
+       OR supplementary_configuration->'PasswordPolicy'->'maxPasswordAge' > '90');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9
