@@ -1,4 +1,4 @@
 
-# Please see https://github.com/openraven/security-rules/wiki
+@WIP All docs are beong moved to a documentation system. ETA mid November. 
 
 
