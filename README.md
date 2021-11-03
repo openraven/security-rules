@@ -1,4 +1,4 @@
 
-@WIP All docs are beong moved to a documentation system. ETA mid November. 
+@WIP All docs are being moved to a documentation system. ETA mid November. 
 
 
