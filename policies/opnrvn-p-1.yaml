@@ -18,7 +18,7 @@ rules:
 - opnrvn-r-10.yaml
 - opnrvn-r-11.yaml
 - opnrvn-r-12.yaml # CIS 1.14 [IAM]
-- opnrvn-r-13.yaml
+- opnrvn-r-13.yaml # CIS 1.11 [IAM]
 - opnrvn-r-14.yaml
 - opnrvn-r-15.yaml
 - opnrvn-r-16.yaml
