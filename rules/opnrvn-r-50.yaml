@@ -15,7 +15,7 @@ sql: >
   get_buckets_acl_configs AS (
     SELECT buckets.asset_id,
         jsonb_array_elements(buckets.supplementary_configuration->'bucketACLConfiguration'->'grants') AS bucket_grants,
-        (buckets.supplementary_configuration->>'bucketPolicy')::JSONB as bucket_policy
+        CAST((buckets.supplementary_configuration->>'bucketPolicy') as JSONB) as bucket_policy
     FROM assets trails, assets buckets
     WHERE trails.resource_type = 'AWS::CloudTrail::Trail' AND
       buckets.resource_type = 'AWS::S3::Bucket' AND

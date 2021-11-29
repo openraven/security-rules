@@ -15,6 +15,6 @@ sql: >
         SELECT jsonb_array_elements_text(value -> 'members') as members
         FROM jsonb_array_elements(supplementary_configuration -> 'iamPolicy' -> 'bindingsList')
     ) arr
-   WHERE acc.resource_type = 'GCP::Storage::Bucket' AND (members::text = 'allUsers' OR members = 'allAuthenticatedUsers')
+   WHERE acc.resource_type = 'GCP::Storage::Bucket' AND (members = 'allUsers' OR members = 'allAuthenticatedUsers')
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

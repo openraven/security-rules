@@ -28,7 +28,7 @@ sql: >
       AND regexp_replace(metric_filters.configuration->>'filterPattern', '\s', '', 'g') LIKE regexp_replace('%' || '$.errorCode = "*UnauthorizedOperation") || ($.errorCode = "AccessDenied*"' || '%', '\s', '', 'g')
   ),
   get_alarm_topic AS (
-    SELECT regexp_replace(jsonb_array_elements(configuration->'alarmActions')::TEXT, '\"', '', 'g') AS topic_arn
+    SELECT regexp_replace(jsonb_array_elements_text(configuration->'alarmActions'), '\"', '', 'g') AS topic_arn
     FROM assets AS alarms, get_metric_filters
     WHERE alarms.resource_type = 'AWS::CloudWatch::Alarm' AND alarms.configuration->>'metricName' = get_metric_filters.metric->>'metricName'
   ),

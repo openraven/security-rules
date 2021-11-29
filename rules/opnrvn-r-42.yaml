@@ -17,16 +17,16 @@ sql: >
   FROM assets
   LEFT JOIN
     (SELECT asset_id AS arn1,
-            jsonb_array_elements((assets.supplementary_configuration->'attachedPolicies'->>'policyDocument')::JSONB->'Statement') AS statement1
+            jsonb_array_elements(CAST(assets.supplementary_configuration->'attachedPolicies'->>'policyDocument' as JSONB)->'Statement') AS statement1
      FROM assets
      WHERE resource_type = 'AWS::IAM::Policy'
-       AND jsonb_typeof((assets.supplementary_configuration->'attachedPolicies'->>'policyDocument')::JSONB->'Statement') = 'array' ) multiple_statement_policies ON assets.asset_id = multiple_statement_policies.arn1
+       AND jsonb_typeof(CAST(assets.supplementary_configuration->'attachedPolicies'->>'policyDocument' as JSONB) -> 'Statement') = 'array' ) multiple_statement_policies ON assets.asset_id = multiple_statement_policies.arn1
   LEFT JOIN
     (SELECT asset_id AS arn2,
-            (assets.supplementary_configuration->'attachedPolicies'->>'policyDocument')::JSONB->'Statement' AS statement2
+            CAST(assets.supplementary_configuration->'attachedPolicies'->>'policyDocument' as JSONB) ->'Statement' AS statement2
      FROM assets
      WHERE resource_type = 'AWS::IAM::Policy'
-       AND jsonb_typeof((assets.supplementary_configuration->'attachedPolicies'->>'policyDocument')::JSONB->'Statement') = 'object' ) single_statement_policies ON assets.asset_id = single_statement_policies.arn2
+       AND jsonb_typeof(CAST(assets.supplementary_configuration->'attachedPolicies'->>'policyDocument' AS JSONB) -> 'Statement') = 'object' ) single_statement_policies ON assets.asset_id = single_statement_policies.arn2
   WHERE resource_type = 'AWS::IAM::Policy'
     AND ((statement1->>'Effect' = 'Allow'
           AND statement1->>'Action' = '*'

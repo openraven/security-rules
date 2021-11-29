@@ -19,8 +19,8 @@ sql: >
   get_ip_ranges AS (
     SELECT asset_id, jsonb_array_elements(permissions->'ipRanges') AS ip_ranges
     FROM get_ip_permissions
-    WHERE ((permissions->>'fromPort')::INT <= 3389
-              AND (permissions->>'toPort')::INT >= 3389)
+    WHERE (CAST(permissions->>'fromPort' AS INT) <= 3389
+              AND CAST(permissions->>'toPort' AS INT) >= 3389)
          OR permissions->>'fromPort' IS NULL
          OR permissions->>'toPort' IS NULL
   ),

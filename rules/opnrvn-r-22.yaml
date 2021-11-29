@@ -17,8 +17,8 @@ sql: >
   ) arr
   JOIN assets policy ON (arr.attached_policy_arn = policy.asset_id)
   WHERE a.resource_type = 'AWS::IAM::Role'
-  AND (policy.supplementary_configuration::text like '%"s3:%'
-      OR policy.supplementary_configuration::text like '%"arn:aws:s3%')
+  AND (CAST(policy.supplementary_configuration AS TEXT) like '%"s3:%'
+      OR CAST(policy.supplementary_configuration AS TEXT) like '%"arn:aws:s3%')
   AND a.configuration ->> 'roleLastUsed' IS NOT NULL
   AND (a.configuration -> 'roleLastUsed' ->> 'lastUsedDate' IS NULL
       OR now() - INTERVAL '60 DAYS' > to_timestamp(a.configuration -> 'roleLastUsed' ->> 'lastUsedDate', 'YYYY-MM-DDTHH:MI:SS'))

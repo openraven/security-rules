@@ -16,7 +16,7 @@ sql: >
         SELECT value -> 'rotationSchedule_' ->> 'seconds_' as kms_rotation
         FROM jsonb_array_elements(supplementary_configuration -> 'keys')
     ) arr
-   WHERE acc.resource_type = 'GCP::KMS::Keyring' AND arr.kms_rotation::numeric > 7776000
+   WHERE acc.resource_type = 'GCP::KMS::Keyring' AND CAST(arr.kms_rotation AS NUMERIC) > 7776000
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9
