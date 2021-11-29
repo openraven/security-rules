@@ -1,0 +1,16 @@
+ruleId: opnrvn-r-145
+type: asset
+ruleName: >
+  Checks whether at least one AWS CloudTrail trail is logging Amazon S3 data events for all S3 buckets.
+description: >
+  The rule is NON_COMPLIANT if trails log data events for S3 buckets is not configured.
+severity: high
+enabled: true
+sql: >
+  SELECT 'No AWS CloudTrail trails that track all data events for S3' AS asset_id
+  WHERE NOT EXISTS
+  (SELECT * from assets
+  WHERE resource_type = 'AWS::CloudTrail::Trail'
+  AND '["arn:aws:s3"]' = (SELECT CAST(jsonb_array_elements(jsonb_array_elements(supplementary_configuration->'eventSelectors'->'eventSelectors')->'dataResources')->>'values' AS TEXT)));
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
