@@ -68,4 +68,6 @@ rules:
 - opnrvn-r-60.yaml
 - opnrvn-r-144.yaml
 - opnrvn-r-145.yaml
+- opnrvn-r-146.yaml
+- opnrvn-r-147.yaml
 version: 0.9

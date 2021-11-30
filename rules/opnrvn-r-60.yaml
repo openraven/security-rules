@@ -21,7 +21,7 @@ sql: >
   WHERE resource_type = 'AWS::CloudTrail::Trail'
     AND (supplementary_configuration->'trailDetails'->'trail'->'cloudWatchLogsLogGroupArn' = 'null'
          OR supplementary_configuration->'status'->'latestCloudWatchLogsDeliveryTime' = 'null'
-         OR TO_TIMESTAMP(supplementary_configuration->'status'->>'latestCloudWatchLogsDeliveryTime', 'YYYY-MM-DDTHH24:MI:SS') < now() - interval '1 day');
+         OR TO_TIMESTAMP(supplementary_configuration->'status'->>'latestCloudWatchLogsDeliveryTime', 'YYYY-MM-DD"T"HH24:MI:SS') < now() - interval '1 day');
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9
