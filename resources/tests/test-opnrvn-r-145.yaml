@@ -1,0 +1,160 @@
+ruleId: opnrvn-r-145
+description: >
+  Insecure Assets:
+   - `No AWS CloudTrail trails that track all data events for S3` No AWS CloudTrail trail is logging all Amazon S3 data events for all S3 buckets.
+  Secure asset
+   - `secure-cloudtrail-trail` Existing AWS CloudTrail trail is logging Amazon S3 data events for all S3 buckets.
+insecureAssets:
+  No AWS CloudTrail trails that track all data events for S3: >
+    [{
+         "documentId" : "epYm_s0HPv6zZZKpnT5Xtf",
+         "assetId" : "arn:aws:cloudtrail:us-west-2:723176279592:trail/insecure-asset-trail",
+         "resourceName" : "insecure-asset-trail",
+         "resourceId" : "",
+         "resourceType" : "AWS::CloudTrail::Trail",
+         "region" : "us-west-2",
+         "accountId" : "723176279592",
+         "projectId" : null,
+         "createdIso" : null,
+         "updatedIso" : "",
+         "discoverySessionId" : null,
+         "maxSizeInBytes" : null,
+         "sizeInBytes" : null,
+         "configuration" : {
+           "name": "insecure-asset-trail",
+           "trailARN": "arn:aws:cloudtrail:us-west-2:723176279592:trail/insecure-asset-trail",
+           "homeRegion": "us-west-2"
+         },
+         "supplementaryConfiguration" : {
+           "status": {
+              "isLogging": true,
+              "stopLoggingTime": null,
+              "startLoggingTime": "2021-10-29T03:56:58.746Z",
+              "latestDeliveryTime": "2021-11-29T06:50:24.858Z",
+              "timeLoggingStarted": "2021-10-29T03:56:58Z",
+              "timeLoggingStopped": "",
+              "latestDeliveryError": null,
+              "latestNotificationTime": null,
+              "latestNotificationError": null,
+              "latestDigestDeliveryTime": null,
+              "latestDeliveryAttemptTime": "2021-11-29T06:50:24Z",
+              "latestDigestDeliveryError": null,
+              "latestNotificationAttemptTime": "",
+              "latestDeliveryAttemptSucceeded": "2021-11-29T06:50:24Z",
+              "latestCloudWatchLogsDeliveryTime": null,
+              "latestCloudWatchLogsDeliveryError": null,
+              "latestNotificationAttemptSucceeded": ""
+            },
+            "trailDetails": {
+              "trail": {
+                "name": "insecure-asset-trail",
+                "kmsKeyId": null,
+                "trailARN": "arn:aws:cloudtrail:us-west-2:723176279592:trail/insecure-asset-trail",
+                "homeRegion": "us-west-2",
+                "s3KeyPrefix": "cloud-trail-723176279592-a7350a12-c92e-4b27-871d-13f6b735ac3b",
+                "snsTopicARN": null, "s3BucketName": "placeholder-bucket-us-west-2",
+                "snsTopicName": null,
+                "isMultiRegionTrail": false,
+                "hasInsightSelectors": false,
+                "isOrganizationTrail": false,
+                "cloudWatchLogsRoleArn": null,
+                "hasCustomEventSelectors": true,
+                "logFileValidationEnabled": false,
+                "cloudWatchLogsLogGroupArn": null,
+                "includeGlobalServiceEvents": true
+              }
+            },
+            "eventSelectors": {
+                "trailARN": "arn:aws:cloudtrail:us-west-2:723176279592trail/insecure-asset-trail",
+                "eventSelectors": [{
+                    "dataResources": [{
+                      "type": "AWS::S3::Object",
+                      "values": ["arn:aws:s3:::test/test.zip"]}],
+                      "readWriteType": "WriteOnly",
+                      "includeManagementEvents": false,
+                      "excludeManagementEventSources": []
+                }],
+                "advancedEventSelectors": null
+            },
+            "insightSelectors": null
+         },
+         "tags" : { },
+         "discoveryMeta" : { }
+        }]
+secureAssets:
+  secure-cloudtrail-trail: >
+    [{
+         "documentId" : "epYm_s0HPv6zZZKpnT5Xtf",
+         "assetId" : "arn:aws:cloudtrail:us-west-2:723176279592:trail/insecure-asset-trail",
+         "resourceName" : "insecure-asset-trail",
+         "resourceId" : "",
+         "resourceType" : "AWS::CloudTrail::Trail",
+         "region" : "us-west-2",
+         "accountId" : "723176279592",
+         "projectId" : null,
+         "createdIso" : null,
+         "updatedIso" : "",
+         "discoverySessionId" : null,
+         "maxSizeInBytes" : null,
+         "sizeInBytes" : null,
+         "configuration" : {
+           "name": "insecure-asset-trail",
+           "trailARN": "arn:aws:cloudtrail:us-west-2:723176279592:trail/insecure-asset-trail",
+           "homeRegion": "us-west-2"
+         },
+         "supplementaryConfiguration" : {
+           "status": {
+              "isLogging": true,
+              "stopLoggingTime": null,
+              "startLoggingTime": "2021-10-29T03:56:58.746Z",
+              "latestDeliveryTime": "2021-11-29T06:50:24.858Z",
+              "timeLoggingStarted": "2021-10-29T03:56:58Z",
+              "timeLoggingStopped": "",
+              "latestDeliveryError": null,
+              "latestNotificationTime": null,
+              "latestNotificationError": null,
+              "latestDigestDeliveryTime": null,
+              "latestDeliveryAttemptTime": "2021-11-29T06:50:24Z",
+              "latestDigestDeliveryError": null,
+              "latestNotificationAttemptTime": "",
+              "latestDeliveryAttemptSucceeded": "2021-11-29T06:50:24Z",
+              "latestCloudWatchLogsDeliveryTime": null,
+              "latestCloudWatchLogsDeliveryError": null,
+              "latestNotificationAttemptSucceeded": ""
+            },
+            "trailDetails": {
+              "trail": {
+                "name": "insecure-asset-trail",
+                "kmsKeyId": null,
+                "trailARN": "arn:aws:cloudtrail:us-west-2:723176279592:trail/insecure-asset-trail",
+                "homeRegion": "us-west-2",
+                "s3KeyPrefix": "cloud-trail-723176279592-a7350a12-c92e-4b27-871d-13f6b735ac3b",
+                "snsTopicARN": null, "s3BucketName": "placeholder-bucket-us-west-2",
+                "snsTopicName": null,
+                "isMultiRegionTrail": false,
+                "hasInsightSelectors": false,
+                "isOrganizationTrail": false,
+                "cloudWatchLogsRoleArn": null,
+                "hasCustomEventSelectors": true,
+                "logFileValidationEnabled": false,
+                "cloudWatchLogsLogGroupArn": null,
+                "includeGlobalServiceEvents": true
+              }
+            },
+            "eventSelectors": {
+                "trailARN": "arn:aws:cloudtrail:us-west-2:723176279592trail/insecure-asset-trail",
+                "eventSelectors": [{
+                    "dataResources": [{
+                      "type": "AWS::S3::Object",
+                      "values": ["arn:aws:s3"]}],
+                      "readWriteType": "WriteOnly",
+                      "includeManagementEvents": false,
+                      "excludeManagementEventSources": []
+                }],
+                "advancedEventSelectors": null
+            },
+            "insightSelectors": null
+         },
+         "tags" : { },
+         "discoveryMeta" : { }
+        }]
