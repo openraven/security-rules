@@ -1,7 +1,7 @@
 ruleId: opnrvn-r-148
 description: >
-  - Insecure Assets have alarms with no alarm actions, okactions or insufficientDataActions
-  - Secure Assets has an action associated with the alarm
+  - Insecure Assets have alarms with no associated alarm actions, okactions or insufficientDataActions
+  - Secure Asset has an action associated with the alarm
 insecureAssets:
   arn:aws:cloudwatch:us-east-1:476384142167:alarm:test_no_alarm: >
   [{
