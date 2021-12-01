@@ -76,7 +76,7 @@ insecureAssets:
   "tags" : { },
   "discoveryMeta" : { }
 }]
-
+secureAssets:
 arn:aws:cloudwatch:us-east-1:476384142167:alarm:test_cloudwatch_alarm: >
   [{
   "documentId" : "CEMBYMfVPIiNWxlcEeoMFA",
