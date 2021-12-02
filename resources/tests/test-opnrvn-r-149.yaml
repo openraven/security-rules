@@ -1,0 +1,72 @@
+ruleId: opnrvn-r-149
+description: >
+  - Insecure Assets have no KMS Key
+  - Secure Assets have are encrypted with KMS Key
+insecureAssets:
+  arn:aws:sns:us-east-2:476384142167:test-unencrypted: >
+    [ {
+      "documentId" : "A0oKXtX1MU65a73amiHk8g",
+      "arn" : "arn:aws:sns:us-east-2:476384142167:test-unencrypted",
+      "resourceName" : "test-unencrypted",
+      "resourceId" : null,
+      "resourceType" : "AWS::SNS::Topic",
+      "awsRegion" : "us-east-2",
+      "awsAccountId" : "476384142167",
+      "createdIso" : null,
+      "updatedIso" : "2021-12-02T15:09:03.129913Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "attributes" : {
+          "Policy" : "{\"Version\":\"2008-10-17\",\"Id\":\"__default_policy_ID\",\"Statement\":[{\"Sid\":\"__default_statement_ID\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"*\"},\"Action\":[\"SNS:GetTopicAttributes\",\"SNS:SetTopicAttributes\",\"SNS:AddPermission\",\"SNS:RemovePermission\",\"SNS:DeleteTopic\",\"SNS:Subscribe\",\"SNS:ListSubscriptionsByTopic\",\"SNS:Publish\"],\"Resource\":\"arn:aws:sns:us-east-2:476384142167:test-unencrypted\",\"Condition\":{\"StringEquals\":{\"AWS:SourceOwner\":\"476384142167\"}}}]}",
+          "Owner" : "476384142167",
+          "SubscriptionsPending" : "0",
+          "TopicArn" : "arn:aws:sns:us-east-2:476384142167:test-unencrypted",
+          "EffectiveDeliveryPolicy" : "{\"http\":{\"defaultHealthyRetryPolicy\":{\"minDelayTarget\":20,\"maxDelayTarget\":20,\"numRetries\":3,\"numMaxDelayRetries\":0,\"numNoDelayRetries\":0,\"numMinDelayRetries\":0,\"backoffFunction\":\"linear\"},\"disableSubscriptionOverrides\":false}}",
+          "SubscriptionsConfirmed" : "0",
+          "DisplayName" : "test-unencrypted",
+          "SubscriptionsDeleted" : "0"
+        }
+      },
+      "supplementaryConfiguration" : { },
+      "tags" : { },
+      "discoveryMeta" : { }
+     }]
+secureAssets:
+  arn:aws:sns:us-east-2:476384142167:test-encrypted": >
+    [ {
+        "documentId" : "RmYzVhShOEirKfkiwbmMDQ",
+        "arn" : "arn:aws:sns:us-east-2:476384142167:test-encrypted",
+        "resourceName" : "test-encrypted",
+        "resourceId" : null,
+        "resourceType" : "AWS::SNS::Topic",
+        "awsRegion" : "us-east-2",
+        "awsAccountId" : "476384142167",
+        "createdIso" : null,
+        "updatedIso" : "2021-12-02T15:09:02.993947Z",
+        "discoverySessionId" : null,
+        "maxSizeInBytes" : null,
+        "sizeInBytes" : null,
+        "configuration" : {
+          "attributes" : {
+            "Policy" : "{\"Version\":\"2008-10-17\",\"Id\":\"__default_policy_ID\",\"Statement\":[{\"Sid\":\"__default_statement_ID\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"*\"},\"Action\":[\"SNS:GetTopicAttributes\",\"SNS:SetTopicAttributes\",\"SNS:AddPermission\",\"SNS:RemovePermission\",\"SNS:DeleteTopic\",\"SNS:Subscribe\",\"SNS:ListSubscriptionsByTopic\",\"SNS:Publish\"],\"Resource\":\"arn:aws:sns:us-east-2:476384142167:test-encrypted\",\"Condition\":{\"StringEquals\":{\"AWS:SourceOwner\":\"476384142167\"}}}]}",
+            "LambdaSuccessFeedbackSampleRate" : "0",
+            "Owner" : "476384142167",
+            "SubscriptionsPending" : "0",
+            "KmsMasterKeyId" : "arn:aws:kms:us-east-2:476384142167:key/mrk-e8a318693f4646f9b29494951c37075d",
+            "TopicArn" : "arn:aws:sns:us-east-2:476384142167:test-encrypted",
+            "EffectiveDeliveryPolicy" : "{\"http\":{\"defaultHealthyRetryPolicy\":{\"minDelayTarget\":20,\"maxDelayTarget\":20,\"numRetries\":3,\"numMaxDelayRetries\":0,\"numNoDelayRetries\":0,\"numMinDelayRetries\":0,\"backoffFunction\":\"linear\"},\"disableSubscriptionOverrides\":false}}",
+            "FirehoseSuccessFeedbackSampleRate" : "0",
+            "SubscriptionsConfirmed" : "0",
+            "SQSSuccessFeedbackSampleRate" : "0",
+            "HTTPSuccessFeedbackSampleRate" : "0",
+            "ApplicationSuccessFeedbackSampleRate" : "0",
+            "DisplayName" : "test-encrypted",
+            "SubscriptionsDeleted" : "0"
+          }
+        },
+        "supplementaryConfiguration" : { },
+        "tags" : { },
+        "discoveryMeta" : { }
+      }]
