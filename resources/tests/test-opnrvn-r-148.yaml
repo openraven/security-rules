@@ -1,0 +1,159 @@
+ruleId: opnrvn-r-148
+description: >
+  - Insecure Assets have alarms with no associated alarm actions, okactions or insufficientDataActions
+  - Secure Asset has an action associated with the alarm
+insecureAssets:
+  arn:aws:cloudwatch:us-east-1:476384142167:alarm:test_no_alarm: >
+    [ {
+      "documentId" : "KajEz0ccMfef2OSmjPga5A",
+      "assetId" : "arn:aws:cloudwatch:us-east-1:476384142167:alarm:test_no_alarm",
+      "resourceName" : "test_no_alarm",
+      "resourceId" : null,
+      "resourceType" : "AWS::CloudWatch::Alarm",
+      "region" : "us-east-1",
+      "accountId" : "476384142167",
+      "projectId" : null,
+      "createdIso" : null,
+      "updatedIso" : "2021-11-30T11:25:44.191918Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "alarmName" : "test_no_alarm",
+        "alarmArn" : "arn:aws:cloudwatch:us-east-1:476384142167:alarm:test_no_alarm",
+        "alarmDescription" : null,
+        "alarmConfigurationUpdatedTimestamp" : "2021-11-28T19:35:09.096Z",
+        "actionsEnabled" : true,
+        "okActions" : [ ],
+        "alarmActions" : [ ],
+        "insufficientDataActions" : [ ],
+        "stateValue" : "ALARM",
+        "stateReason" : "Threshold Crossed: 1 out of the last 1 datapoints [33409.0 (26/11/21 19:35:00)] was greater than the threshold (400.0) (minimum 1 datapoint for OK -> ALARM transition).",
+        "stateReasonData" : "{\"version\":\"1.0\",\"queryDate\":\"2021-11-28T19:35:31.193+0000\",\"startDate\":\"2021-11-26T19:35:00.000+0000\",\"statistic\":\"Average\",\"period\":86400,\"recentDatapoints\":[33409.0],\"threshold\":400.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2021-11-26T19:35:00.000+0000\",\"sampleCount\":1.0,\"value\":33409.0}]}",
+        "stateUpdatedTimestamp" : "2021-11-28T19:35:31.194Z",
+        "metricName" : "NumberOfObjects",
+        "namespace" : "AWS/S3",
+        "statistic" : "Average",
+        "extendedStatistic" : null,
+        "dimensions" : [ {
+          "name" : "StorageType",
+          "value" : "AllStorageTypes"
+        }, {
+          "name" : "BucketName",
+          "value" : "aws-cloudtrail-logs-476384142167-d9e5d58a"
+        } ],
+        "period" : 86400,
+        "unit" : null,
+        "evaluationPeriods" : 1,
+        "datapointsToAlarm" : 1,
+        "threshold" : 400.0,
+        "comparisonOperator" : "GreaterThanThreshold",
+        "treatMissingData" : "missing",
+        "evaluateLowSampleCountPercentile" : null,
+        "metrics" : null,
+        "thresholdMetricId" : null
+      },
+      "supplementaryConfiguration" : {
+        "alarmHistory" : [ {
+          "alarmHistoryItems" : [ {
+            "alarmName" : "test_no_alarm",
+            "alarmType" : "MetricAlarm",
+            "timestamp" : "2021-11-28T19:35:31.194Z",
+            "historyItemType" : "StateUpdate",
+            "historySummary" : "Alarm updated from INSUFFICIENT_DATA to ALARM",
+            "historyData" : "{\"version\":\"1.0\",\"oldState\":{\"stateValue\":\"INSUFFICIENT_DATA\",\"stateReason\":\"Unchecked: Initial alarm creation\"},\"newState\":{\"stateValue\":\"ALARM\",\"stateReason\":\"Threshold Crossed: 1 out of the last 1 datapoints [33409.0 (26/11/21 19:35:00)] was greater than the threshold (400.0) (minimum 1 datapoint for OK -> ALARM transition).\",\"stateReasonData\":{\"version\":\"1.0\",\"queryDate\":\"2021-11-28T19:35:31.193+0000\",\"startDate\":\"2021-11-26T19:35:00.000+0000\",\"statistic\":\"Average\",\"period\":86400,\"recentDatapoints\":[33409.0],\"threshold\":400.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2021-11-26T19:35:00.000+0000\",\"sampleCount\":1.0,\"value\":33409.0}]}}}"
+          }, {
+            "alarmName" : "test_no_alarm",
+            "alarmType" : "MetricAlarm",
+            "timestamp" : "2021-11-28T19:35:09.097Z",
+            "historyItemType" : "ConfigurationUpdate",
+            "historySummary" : "Alarm \"test_no_alarm\" created",
+            "historyData" : "{\"version\":\"1.0\",\"type\":\"Create\",\"createdAlarm\":{\"alarmName\":\"test_no_alarm\",\"alarmDescription\":\"\",\"alarmArn\":\"arn:aws:cloudwatch:us-east-1:476384142167:alarm:test_no_alarm\",\"alarmConfigurationUpdatedTimestamp\":\"2021-11-28T19:35:09.096+0000\",\"namespace\":\"AWS/S3\",\"metricName\":\"NumberOfObjects\",\"statistic\":\"Average\",\"period\":86400,\"dimensions\":[{\"value\":\"aws-cloudtrail-logs-476384142167-d9e5d58a\",\"name\":\"BucketName\"},{\"value\":\"AllStorageTypes\",\"name\":\"StorageType\"}],\"threshold\":400.0,\"comparisonOperator\":\"GreaterThanThreshold\",\"evaluationPeriods\":1,\"datapointsToAlarm\":1,\"treatMissingData\":\"missing\",\"stateValue\":\"INSUFFICIENT_DATA\",\"stateUpdatedTimestamp\":\"2021-11-28T19:35:09.096+0000\",\"actionsEnabled\":true,\"alarmActions\":[],\"insufficientDataActions\":[],\"okactions\":[]}}"
+          } ],
+          "nextToken" : null
+        } ]
+      },
+      "tags" : { },
+      "discoveryMeta" : { }
+    }]
+secureAssets:
+  arn:aws:cloudwatch:us-east-1:476384142167:alarm:test_cloudwatch_alarm: >
+    [ {
+      "documentId" : "CEMBYMfVPIiNWxlcEeoMFA",
+      "assetId" : "arn:aws:cloudwatch:us-east-1:476384142167:alarm:test_cloudwatch_alarm",
+      "resourceName" : "test_cloudwatch_alarm",
+      "resourceId" : null,
+      "resourceType" : "AWS::CloudWatch::Alarm",
+      "region" : "us-east-1",
+      "accountId" : "476384142167",
+      "projectId" : null,
+      "createdIso" : null,
+      "updatedIso" : "2021-11-30T11:25:43.329478Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "alarmName" : "test_cloudwatch_alarm",
+        "alarmArn" : "arn:aws:cloudwatch:us-east-1:476384142167:alarm:test_cloudwatch_alarm",
+        "alarmDescription" : null,
+        "alarmConfigurationUpdatedTimestamp" : "2021-11-28T19:13:58.692Z",
+        "actionsEnabled" : true,
+        "okActions" : [ ],
+        "alarmActions" : [ "arn:aws:sns:us-east-1:476384142167:config-topic-476384142167" ],
+        "insufficientDataActions" : [ ],
+        "stateValue" : "ALARM",
+        "stateReason" : "Threshold Crossed: 1 out of the last 1 datapoints [9.20918573E8 (26/11/21 19:14:00)] was greater than the threshold (10000.0) (minimum 1 datapoint for OK -> ALARM transition).",
+        "stateReasonData" : "{\"version\":\"1.0\",\"queryDate\":\"2021-11-28T19:14:59.333+0000\",\"startDate\":\"2021-11-26T19:14:00.000+0000\",\"statistic\":\"Average\",\"period\":86400,\"recentDatapoints\":[9.20918573E8],\"threshold\":10000.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2021-11-26T19:14:00.000+0000\",\"sampleCount\":1.0,\"value\":9.20918573E8}]}",
+        "stateUpdatedTimestamp" : "2021-11-28T19:14:59.335Z",
+        "metricName" : "BucketSizeBytes",
+        "namespace" : "AWS/S3",
+        "statistic" : "Average",
+        "extendedStatistic" : null,
+        "dimensions" : [ {
+          "name" : "StorageType",
+          "value" : "StandardStorage"
+        }, {
+          "name" : "BucketName",
+          "value" : "aws-cloudtrail-logs-476384142167-d9e5d58a"
+        } ],
+        "period" : 86400,
+        "unit" : null,
+        "evaluationPeriods" : 1,
+        "datapointsToAlarm" : 1,
+        "threshold" : 10000.0,
+        "comparisonOperator" : "GreaterThanThreshold",
+        "treatMissingData" : "missing",
+        "evaluateLowSampleCountPercentile" : null,
+        "metrics" : null,
+        "thresholdMetricId" : null
+      },
+      "supplementaryConfiguration" : {
+        "alarmHistory" : [ {
+          "alarmHistoryItems" : [ {
+            "alarmName" : "test_cloudwatch_alarm",
+            "alarmType" : "MetricAlarm",
+            "timestamp" : "2021-11-28T19:14:59.375Z",
+            "historyItemType" : "Action",
+            "historySummary" : "Failed to execute action arn:aws:sns:us-east-1:476384142167:config-topic-476384142167",
+            "historyData" : "{\"actionState\":\"Failed\",\"stateUpdateTimestamp\":1638126899335,\"notificationResource\":\"arn:aws:sns:us-east-1:476384142167:config-topic-476384142167\",\"publishedMessage\":null,\"error\":\"Resource: arn:aws:cloudwatch:us-east-1:476384142167:alarm:test_cloudwatch_alarm is not authorized to perform: SNS:Publish on resource: arn:aws:sns:us-east-1:476384142167:config-topic-476384142167 because no resource-based policy allows the SNS:Publish action\"}"
+          }, {
+            "alarmName" : "test_cloudwatch_alarm",
+            "alarmType" : "MetricAlarm",
+            "timestamp" : "2021-11-28T19:14:59.335Z",
+            "historyItemType" : "StateUpdate",
+            "historySummary" : "Alarm updated from INSUFFICIENT_DATA to ALARM",
+            "historyData" : "{\"version\":\"1.0\",\"oldState\":{\"stateValue\":\"INSUFFICIENT_DATA\",\"stateReason\":\"Unchecked: Initial alarm creation\"},\"newState\":{\"stateValue\":\"ALARM\",\"stateReason\":\"Threshold Crossed: 1 out of the last 1 datapoints [9.20918573E8 (26/11/21 19:14:00)] was greater than the threshold (10000.0) (minimum 1 datapoint for OK -> ALARM transition).\",\"stateReasonData\":{\"version\":\"1.0\",\"queryDate\":\"2021-11-28T19:14:59.333+0000\",\"startDate\":\"2021-11-26T19:14:00.000+0000\",\"statistic\":\"Average\",\"period\":86400,\"recentDatapoints\":[9.20918573E8],\"threshold\":10000.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2021-11-26T19:14:00.000+0000\",\"sampleCount\":1.0,\"value\":9.20918573E8}]}}}"
+          }, {
+            "alarmName" : "test_cloudwatch_alarm",
+            "alarmType" : "MetricAlarm",
+            "timestamp" : "2021-11-28T19:13:58.693Z",
+            "historyItemType" : "ConfigurationUpdate",
+            "historySummary" : "Alarm \"test_cloudwatch_alarm\" created",
+            "historyData" : "{\"version\":\"1.0\",\"type\":\"Create\",\"createdAlarm\":{\"alarmName\":\"test_cloudwatch_alarm\",\"alarmDescription\":\"\",\"alarmArn\":\"arn:aws:cloudwatch:us-east-1:476384142167:alarm:test_cloudwatch_alarm\",\"alarmConfigurationUpdatedTimestamp\":\"2021-11-28T19:13:58.692+0000\",\"namespace\":\"AWS/S3\",\"metricName\":\"BucketSizeBytes\",\"statistic\":\"Average\",\"period\":86400,\"dimensions\":[{\"value\":\"aws-cloudtrail-logs-476384142167-d9e5d58a\",\"name\":\"BucketName\"},{\"value\":\"StandardStorage\",\"name\":\"StorageType\"}],\"threshold\":10000.0,\"comparisonOperator\":\"GreaterThanThreshold\",\"evaluationPeriods\":1,\"datapointsToAlarm\":1,\"treatMissingData\":\"missing\",\"stateValue\":\"INSUFFICIENT_DATA\",\"stateUpdatedTimestamp\":\"2021-11-28T19:13:58.692+0000\",\"actionsEnabled\":true,\"alarmActions\":[\"arn:aws:sns:us-east-1:476384142167:config-topic-476384142167\"],\"insufficientDataActions\":[],\"okactions\":[]}}"
+          } ],
+          "nextToken" : null
+        } ]
+      },
+      "tags" : { },
+      "discoveryMeta" : { }
+    }]
