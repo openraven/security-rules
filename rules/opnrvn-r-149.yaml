@@ -2,7 +2,7 @@ ruleId: opnrvn-r-149
 type: asset
 ruleName: >
   Ensure Amazon SNS Topic is Encrypted with AWS KMS Key
-description: >
+description: > Ensure Amazon SNS Topic is Encrypted with AWS KMS Key. To be compliant an SNS Topic needs to be encrypted with a KMS Key.
 severity: high
 enabled: true
 sql: >
