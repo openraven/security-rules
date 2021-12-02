@@ -1,0 +1,15 @@
+ruleId: opnrvn-r-150
+type: asset
+ruleName: >
+  Encrypted Amazon RedShift Clusters
+description: >
+  Ensure Amazon RedShift Clusters are Encrypted with AWS KMS Key. Rule is compliant if encrypted is enabled.
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id
+  FROM assets
+  WHERE resource_type = 'AWS::Redshift::Cluster'
+  AND configuration -> 'kmsKeyId' = 'null';
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
