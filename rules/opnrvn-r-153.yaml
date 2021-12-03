@@ -1,0 +1,15 @@
+ruleId: opnrvn-r-153
+type: asset
+ruleName: >
+  Ensure CloudWatch Logging on RDS Instances
+description: >
+  Checks if log types exported to Amazon CloudWatch for an Amazon Relational Database Service (Amazon RDS) instance are enabled. The rule is NON_COMPLIANT if any such log types are not enabled.
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id
+  FROM assets
+  WHERE resource_type = 'AWS::RDS::DBInstance'
+  AND (configuration -> 'enabledCloudwatchLogsExports' = 'null');
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
