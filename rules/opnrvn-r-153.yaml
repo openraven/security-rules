@@ -1,4 +1,4 @@
-ruleId: opnrvn-r-151
+ruleId: opnrvn-r-153
 type: asset
 ruleName: >
   Ensure CloudWatch Logging on RDS Instances
