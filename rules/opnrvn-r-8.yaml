@@ -13,7 +13,10 @@ sql: >
   SELECT asset_id
   FROM assets
   WHERE resource_type = 'AWS::IAM::CredentialsReport'
-    AND ((configuration->>'password_enabled' = 'true'
+    AND (
+       (configuration->>'password_enabled' = 'true'
+         AND configuration->>'password_last_used' = 'no_information')
+    OR (configuration->>'password_enabled' = 'true'
          AND TO_TIMESTAMP(configuration->>'password_last_used', 'YYYY-MM-DDTHH24:MI:SS') < now() - interval '90 days')
     OR (configuration->>'password_enabled' = 'true'
         AND configuration->>'password_last_used' IS NULL
