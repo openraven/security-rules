@@ -1,4 +1,4 @@
-ruleId: opnrvn-r-155
+ruleId: opnrvn-r-157
 description: >
   Insecure assets have no CloudWatch logs enabled.
   Secure assets have CloudWatch logs enabled.
