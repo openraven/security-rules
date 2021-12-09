@@ -15,9 +15,9 @@ sql: >
   SELECT asset_id
   FROM assets
   WHERE resource_type = 'AWS::IAM::CredentialsReport' AND ((configuration->>'access_key_1_active' = 'true'
-         AND TO_TIMESTAMP(configuration->>'access_key_1_last_rotated', 'YYYY-MM-DDTHH24:MI:SS') < now() - interval '90 days')
+         AND TO_TIMESTAMP(configuration->>'access_key_1_last_rotated', 'YYYY-MM-DD"T"HH24:MI:SS') < now() - interval '90 days')
     OR (configuration->>'access_key_2_active' = 'true'
-        AND TO_TIMESTAMP(configuration->>'access_key_2_last_used_date', 'YYYY-MM-DDTHH24:MI:SS') < now() - interval '90 days'));
+        AND TO_TIMESTAMP(configuration->>'access_key_2_last_used_date', 'YYYY-MM-DD"T"HH24:MI:SS') < now() - interval '90 days'));
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9
