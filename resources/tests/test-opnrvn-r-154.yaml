@@ -1,0 +1,90 @@
+ruleId: opnrvn-r-154
+description: >
+    - insecure assets have no mfa
+    - secure assets have mfa enabled
+insecureAssets:
+  arn:aws:iam::476384142167:user/testest: >
+    [ {
+    "documentId" : "fQfSrASlNPuDpy9ZT2NLrQ",
+    "arn" : "arn:aws:iam::476384142167:user/testest",
+    "resourceName" : "testest",
+    "resourceId" : "arn:aws:iam::476384142167:user/testest",
+    "resourceType" : "AWS::IAM::CredentialsReport",
+    "awsRegion" : "aws-global",
+    "awsAccountId" : "476384142167",
+    "createdIso" : null,
+    "updatedIso" : "2021-12-06T15:49:18.115643Z",
+    "discoverySessionId" : null,
+    "maxSizeInBytes" : null,
+    "sizeInBytes" : null,
+    "configuration" : {
+      "user" : "testest",
+      "arn" : "arn:aws:iam::476384142167:user/testest",
+      "user_creation_time" : "2021-12-03T17:26:33+00:00",
+      "password_enabled" : "true",
+      "password_last_used" : "no_information",
+      "password_last_changed" : "2021-12-03T17:26:34+00:00",
+      "password_next_rotation" : null,
+      "mfa_active" : "false",
+      "access_key_1_active" : "true",
+      "access_key_1_last_rotated" : "2021-12-03T17:26:34+00:00",
+      "access_key_1_last_used_date" : null,
+      "access_key_1_last_used_region" : "N/A",
+      "access_key_1_last_used_service" : "N/A",
+      "access_key_2_active" : "false",
+      "access_key_2_last_rotated" : null,
+      "access_key_2_last_used_date" : null,
+      "access_key_2_last_used_region" : "N/A",
+      "access_key_2_last_used_service" : "N/A",
+      "cert_1_active" : "false",
+      "cert_1_last_rotated" : null,
+      "cert_2_active" : "false",
+      "cert_2_last_rotated" : null
+    },
+    "supplementaryConfiguration" : { },
+    "tags" : { },
+    "discoveryMeta" : { }
+    }]
+secureAssets:
+  arn:aws:iam::476384142167:user/testmdaenabled: >
+    [ {
+    "documentId" : "BKEAYx3pO1mpRYKmZ3a6pg",
+    "arn" : "arn:aws:iam::476384142167:user/testmdaenabled",
+    "resourceName" : "testmdaenabled",
+    "resourceId" : "arn:aws:iam::476384142167:user/testmdaenabled",
+    "resourceType" : "AWS::IAM::CredentialsReport",
+    "awsRegion" : "aws-global",
+    "awsAccountId" : "476384142167",
+    "createdIso" : null,
+    "updatedIso" : "2021-12-06T15:49:18.115850Z",
+    "discoverySessionId" : null,
+    "maxSizeInBytes" : null,
+    "sizeInBytes" : null,
+    "configuration" : {
+      "user" : "testmdaenabled",
+      "arn" : "arn:aws:iam::476384142167:user/testmdaenabled",
+      "user_creation_time" : "2021-12-03T16:53:59+00:00",
+      "password_enabled" : "true",
+      "password_last_used" : "no_information",
+      "password_last_changed" : "2021-12-03T16:54:00+00:00",
+      "password_next_rotation" : null,
+      "mfa_active" : "true",
+      "access_key_1_active" : "true",
+      "access_key_1_last_rotated" : "2021-12-03T16:54:00+00:00",
+      "access_key_1_last_used_date" : null,
+      "access_key_1_last_used_region" : "N/A",
+      "access_key_1_last_used_service" : "N/A",
+      "access_key_2_active" : "false",
+      "access_key_2_last_rotated" : null,
+      "access_key_2_last_used_date" : null,
+      "access_key_2_last_used_region" : "N/A",
+      "access_key_2_last_used_service" : "N/A",
+      "cert_1_active" : "false",
+      "cert_1_last_rotated" : null,
+      "cert_2_active" : "false",
+      "cert_2_last_rotated" : null
+    },
+    "supplementaryConfiguration" : { },
+    "tags" : { },
+    "discoveryMeta" : { }
+    }]
