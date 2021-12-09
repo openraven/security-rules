@@ -1,4 +1,4 @@
-ruleId: opnrvn-r-155
+ruleId: opnrvn-r-157
 type: asset
 ruleName: >
   Ensure Amazon OpenSearch Domains have logging enabled to send logs to Amazon CloudWatch logs.
