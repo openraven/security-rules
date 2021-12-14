@@ -27,6 +27,6 @@ jobs:
       - name: Clone Magpie
         run: git clone https://github.com/openraven/magpie.git
       - name: Build Magpie
-        run: mvn -f magpie --settings magpie/.github/workflows/settings.xml -B clean install -DskipTests
+        run: mvn -f magpie -B clean install -DskipTests
       - name: Validate rules
         run: mvn test -f magpie -pl magpie-core -Dtest=SecurityRuleValidator -Drepository=$PWD
