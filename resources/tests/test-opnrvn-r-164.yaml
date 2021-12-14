@@ -1,15 +1,15 @@
-ruleId: opnrvn-r-161
+ruleId: opnrvn-r-164
 description: >
-      - Checks if Amazon DynamoDB table is encrypted with AWS Key Management Service (KMS).
-      - `no-kms` Insecure Assets have no KMS
-      - `kms` Secure Assets have KMS
+      - Checks if Amazon DynamoDB tables are protected by a backup plan.
+      - `no-aws-backup` Insecure Assets have no aws-backup
+      - `aws-backup` Secure Assets have aws-backup
 insecureAssets:
-  no-kms: >
+  no-aws-backup: >
     [ {
         "documentId" : "ay6C53_LP4au4s6aXXZeIg",
-        "arn" : "no-kms",
-        "resourceName" : "no-kms",
-        "resourceId" : "no-kms",
+        "arn" : "no-aws-backup",
+        "resourceName" : "no-aws-backup",
+        "resourceId" : "no-aws-backup",
         "resourceType" : "AWS::DynamoDB::Table",
         "awsRegion" : "us-east-1",
         "awsAccountId" : "476384142167",
@@ -26,7 +26,7 @@ insecureAssets:
             "attributeName" : "sdfgx",
             "attributeType" : "S"
           } ],
-          "tableName" : "no-kms",
+          "tableName" : "no-aws-backup",
           "keySchema" : [ {
             "attributeName" : "sdfg",
             "keyType" : "HASH"
@@ -45,12 +45,9 @@ insecureAssets:
           },
           "tableSizeBytes" : 0,
           "itemCount" : 0,
-          "tableArn" : "no-kms",
-          "tableId" : "no-kms",
-          "billingModeSummary" : {
-            "billingMode" : "PAY_PER_REQUEST",
-            "lastUpdateToPayPerRequestDateTime" : "2021-12-14T12:17:50.065Z"
-          },
+          "tableArn" : "no-aws-backup",
+          "tableId" : "no-aws-backup",
+          "billingModeSummary" : null,
           "sseDescription" : null,
           "localSecondaryIndexes" : null,
           "globalSecondaryIndexes" : null,
@@ -67,7 +64,7 @@ insecureAssets:
             "continuousBackupsDescription" : {
               "continuousBackupsStatus" : "ENABLED",
               "pointInTimeRecoveryDescription" : {
-                "pointInTimeRecoveryStatus" : "ENABLED",
+                "pointInTimeRecoveryStatus" : "DISABLED",
                 "earliestRestorableDateTime" : "2021-12-14T14:24:46Z",
                 "latestRestorableDateTime" : "2021-12-14T14:44:21.219Z"
               }
@@ -80,12 +77,12 @@ insecureAssets:
         "discoveryMeta" : { }
     }]
 secureAssets:
-  kms: >
+  aws-backup: >
     [ {
         "documentId" : "ay6C53_LP4au4s6aXXZeIg",
-        "arn" : "kms",
-        "resourceName" : "kms",
-        "resourceId" : "kms",
+        "arn" : "aws-backup",
+        "resourceName" : "aws-backup",
+        "resourceId" : "aws-backup",
         "resourceType" : "AWS::DynamoDB::Table",
         "awsRegion" : "us-east-1",
         "awsAccountId" : "476384142167",
@@ -155,7 +152,28 @@ secureAssets:
             }
           },
           "tags" : { },
-          "awsBackupJobs" : [ ]
+          "awsBackupJobs" : [ {
+                "accountId" : "476384142167",
+                "backupJobId" : "5364B1D4-36AD-33AF-CF2F-7359AAA326E7",
+                "backupVaultName" : "Default",
+                "backupVaultArn" : "arn:aws:backup:us-east-1:476384142167:backup-vault:Default",
+                "recoveryPointArn" : "arn:aws:backup:us-east-1:476384142167:recovery-point:69203525-0b5e-4dbd-b2a2-be5ddadcd77e",
+                "resourceArn" : "arn:aws:dynamodb:us-east-1:476384142167:table/sdfvbg",
+                "creationDate" : "2021-12-14T14:43:54.710Z",
+                "completionDate" : "2021-12-14T14:47:12.069Z",
+                "state" : "COMPLETED",
+                "statusMessage" : null,
+                "percentDone" : "100.0",
+                "backupSizeInBytes" : 0,
+                "iamRoleArn" : "arn:aws:iam::476384142167:role/service-role/AWSBackupDefaultServiceRole",
+                "createdBy" : null,
+                "expectedCompletionDate" : null,
+                "startBy" : "2021-12-14T15:43:54.710Z",
+                "resourceType" : "DynamoDB",
+                "bytesTransferred" : null,
+                "backupOptions" : null,
+                "backupType" : null
+              } ]
         },
         "tags" : { },
         "discoveryMeta" : { }

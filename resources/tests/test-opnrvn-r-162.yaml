@@ -1,15 +1,15 @@
-ruleId: opnrvn-r-161
+ruleId: opnrvn-r-162
 description: >
-      - Checks if Amazon DynamoDB table is encrypted with AWS Key Management Service (KMS).
-      - `no-kms` Insecure Assets have no KMS
-      - `kms` Secure Assets have KMS
+      - Checks if Auto Scaling or On-Demand is enabled
+      - `no-autoscale` Insecure Assets have no autoscale
+      - `autoscale` Secure Assets have autoscale
 insecureAssets:
-  no-kms: >
+  no-autoscale: >
     [ {
         "documentId" : "ay6C53_LP4au4s6aXXZeIg",
-        "arn" : "no-kms",
-        "resourceName" : "no-kms",
-        "resourceId" : "no-kms",
+        "arn" : "no-autoscale",
+        "resourceName" : "no-autoscale",
+        "resourceId" : "no-autoscale",
         "resourceType" : "AWS::DynamoDB::Table",
         "awsRegion" : "us-east-1",
         "awsAccountId" : "476384142167",
@@ -26,7 +26,7 @@ insecureAssets:
             "attributeName" : "sdfgx",
             "attributeType" : "S"
           } ],
-          "tableName" : "no-kms",
+          "tableName" : "no-autoscale",
           "keySchema" : [ {
             "attributeName" : "sdfg",
             "keyType" : "HASH"
@@ -45,12 +45,9 @@ insecureAssets:
           },
           "tableSizeBytes" : 0,
           "itemCount" : 0,
-          "tableArn" : "no-kms",
-          "tableId" : "no-kms",
-          "billingModeSummary" : {
-            "billingMode" : "PAY_PER_REQUEST",
-            "lastUpdateToPayPerRequestDateTime" : "2021-12-14T12:17:50.065Z"
-          },
+          "tableArn" : "no-autoscale",
+          "tableId" : "no-autoscale",
+          "billingModeSummary" : null,
           "sseDescription" : null,
           "localSecondaryIndexes" : null,
           "globalSecondaryIndexes" : null,
@@ -80,12 +77,12 @@ insecureAssets:
         "discoveryMeta" : { }
     }]
 secureAssets:
-  kms: >
+  autoscale: >
     [ {
         "documentId" : "ay6C53_LP4au4s6aXXZeIg",
-        "arn" : "kms",
-        "resourceName" : "kms",
-        "resourceId" : "kms",
+        "arn" : "autoscale",
+        "resourceName" : "autoscale",
+        "resourceId" : "autoscale",
         "resourceType" : "AWS::DynamoDB::Table",
         "awsRegion" : "us-east-1",
         "awsAccountId" : "476384142167",
