@@ -1,0 +1,16 @@
+ruleId: opnrvn-r-166
+type: asset
+ruleName: >
+  Ensure deletion protection is enabled for RDS clusters
+description: >
+  Checks if Amazon Relational Database Service (Amazon RDS) instances are protected by a backup plan.
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id
+  FROM assets
+  WHERE resource_type = 'AWS::RDS::DBInstance'
+  AND EXISTS (SELECT * FROM jsonb_array_elements(supplementary_configuration->'dbClusters'->'dbClusters') dbClusters
+    WHERE dbClusters ->>'deletionProtection' = 'false');
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
