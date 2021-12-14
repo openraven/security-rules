@@ -1,0 +1,159 @@
+ruleId: opnrvn-r-162
+description: >
+      - Checks if Auto Scaling or On-Demand is enabled
+      - `no-autoscale` Insecure Assets have no autoscale
+      - `autoscale` Secure Assets have autoscale
+insecureAssets:
+  no-autoscale: >
+    [ {
+        "documentId" : "ay6C53_LP4au4s6aXXZeIg",
+        "arn" : "no-autoscale",
+        "resourceName" : "no-autoscale",
+        "resourceId" : "no-autoscale",
+        "resourceType" : "AWS::DynamoDB::Table",
+        "awsRegion" : "us-east-1",
+        "awsAccountId" : "476384142167",
+        "createdIso" : "2021-12-14T12:17:50.065Z",
+        "updatedIso" : "2021-12-14T14:49:18.992172Z",
+        "discoverySessionId" : null,
+        "maxSizeInBytes" : null,
+        "sizeInBytes" : null,
+        "configuration" : {
+          "attributeDefinitions" : [ {
+            "attributeName" : "sdfg",
+            "attributeType" : "S"
+          }, {
+            "attributeName" : "sdfgx",
+            "attributeType" : "S"
+          } ],
+          "tableName" : "no-autoscale",
+          "keySchema" : [ {
+            "attributeName" : "sdfg",
+            "keyType" : "HASH"
+          }, {
+            "attributeName" : "sdfgx",
+            "keyType" : "RANGE"
+          } ],
+          "tableStatus" : "ACTIVE",
+          "creationDateTime" : "2021-12-14T12:17:50.065Z",
+          "provisionedThroughput" : {
+            "lastIncreaseDateTime" : null,
+            "lastDecreaseDateTime" : null,
+            "numberOfDecreasesToday" : 0,
+            "readCapacityUnits" : 0,
+            "writeCapacityUnits" : 0
+          },
+          "tableSizeBytes" : 0,
+          "itemCount" : 0,
+          "tableArn" : "no-autoscale",
+          "tableId" : "no-autoscale",
+          "billingModeSummary" : null,
+          "sseDescription" : null,
+          "localSecondaryIndexes" : null,
+          "globalSecondaryIndexes" : null,
+          "streamSpecification" : null,
+          "latestStreamLabel" : null,
+          "latestStreamArn" : null,
+          "globalTableVersion" : null,
+          "replicas" : null,
+          "restoreSummary" : null,
+          "archivalSummary" : null
+        },
+        "supplementaryConfiguration" : {
+          "continuousBackups" : {
+            "continuousBackupsDescription" : {
+              "continuousBackupsStatus" : "ENABLED",
+              "pointInTimeRecoveryDescription" : {
+                "pointInTimeRecoveryStatus" : "ENABLED",
+                "earliestRestorableDateTime" : "2021-12-14T14:24:46Z",
+                "latestRestorableDateTime" : "2021-12-14T14:44:21.219Z"
+              }
+            }
+          },
+          "tags" : { },
+          "awsBackupJobs" : [ ]
+        },
+        "tags" : { },
+        "discoveryMeta" : { }
+    }]
+secureAssets:
+  autoscale: >
+    [ {
+        "documentId" : "ay6C53_LP4au4s6aXXZeIg",
+        "arn" : "autoscale",
+        "resourceName" : "autoscale",
+        "resourceId" : "autoscale",
+        "resourceType" : "AWS::DynamoDB::Table",
+        "awsRegion" : "us-east-1",
+        "awsAccountId" : "476384142167",
+        "createdIso" : "2021-12-14T12:17:50.065Z",
+        "updatedIso" : "2021-12-14T14:49:18.992172Z",
+        "discoverySessionId" : null,
+        "maxSizeInBytes" : null,
+        "sizeInBytes" : null,
+        "configuration" : {
+          "attributeDefinitions" : [ {
+            "attributeName" : "sdfg",
+            "attributeType" : "S"
+          }, {
+            "attributeName" : "sdfgx",
+            "attributeType" : "S"
+          } ],
+          "tableName" : "testing123",
+          "keySchema" : [ {
+            "attributeName" : "sdfg",
+            "keyType" : "HASH"
+          }, {
+            "attributeName" : "sdfgx",
+            "keyType" : "RANGE"
+          } ],
+          "tableStatus" : "ACTIVE",
+          "creationDateTime" : "2021-12-14T12:17:50.065Z",
+          "provisionedThroughput" : {
+            "lastIncreaseDateTime" : null,
+            "lastDecreaseDateTime" : null,
+            "numberOfDecreasesToday" : 0,
+            "readCapacityUnits" : 0,
+            "writeCapacityUnits" : 0
+          },
+          "tableSizeBytes" : 0,
+          "itemCount" : 0,
+          "tableArn" : "arn:aws:dynamodb:us-east-1:476384142167:table/testing123",
+          "tableId" : "0ef1391d-d2a7-4b7a-80c0-f3509534ddf0",
+          "billingModeSummary" : {
+            "billingMode" : "PAY_PER_REQUEST",
+            "lastUpdateToPayPerRequestDateTime" : "2021-12-14T12:17:50.065Z"
+          },
+          "localSecondaryIndexes" : null,
+          "globalSecondaryIndexes" : null,
+          "streamSpecification" : null,
+          "latestStreamLabel" : null,
+          "latestStreamArn" : null,
+          "globalTableVersion" : null,
+          "replicas" : null,
+          "restoreSummary" : null,
+          "sseDescription" : {
+            "status" : "ENABLED",
+            "sseType" : "KMS",
+            "kmsMasterKeyArn" : "arn:aws:kms:us-east-1:476384142167:key/0dd09529-bacc-42a4-b579-e91d96ce21f2",
+            "inaccessibleEncryptionDateTime" : null
+          },
+          "archivalSummary" : null
+        },
+        "supplementaryConfiguration" : {
+          "continuousBackups" : {
+            "continuousBackupsDescription" : {
+              "continuousBackupsStatus" : "ENABLED",
+              "pointInTimeRecoveryDescription" : {
+                "pointInTimeRecoveryStatus" : "ENABLED",
+                "earliestRestorableDateTime" : "2021-12-14T14:24:46Z",
+                "latestRestorableDateTime" : "2021-12-14T14:44:21.219Z"
+              }
+            }
+          },
+          "tags" : { },
+          "awsBackupJobs" : [ ]
+        },
+        "tags" : { },
+        "discoveryMeta" : { }
+    }]
