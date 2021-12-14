@@ -1,0 +1,15 @@
+ruleId: opnrvn-r-159
+type: asset
+ruleName: >
+  Ensure IAM is enabled for RDS instances
+description: >
+  Checks if an Amazon Relational Database Service (Amazon RDS) instance has AWS Identity and Access Management (IAM) authentication enabled.
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id
+  FROM assets
+  WHERE resource_type = 'AWS::RDS::DBInstance'
+  AND (configuration -> 'iamDatabaseAuthenticationEnabled' = 'false');
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
