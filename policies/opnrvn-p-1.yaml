@@ -92,4 +92,7 @@ rules:
 - opnrvn-r-167.yaml
 - opnrvn-r-168.yaml
 - opnrvn-r-169.yaml
+- aws-rds-cluster-multi-az-enabled.yaml
+- aws-rds-automatic-minor-version-upgrade-enabled.yaml
+- aws-rds-instance-public-access-check.yaml
 version: 0.9
