@@ -89,4 +89,6 @@ rules:
 - opnrvn-r-164.yaml
 - opnrvn-r-165.yaml
 - opnrvn-r-166.yaml
+- aws-rds-cluster-multi-az-enabled.yaml
+- aws-rds-automatic-minor-version-upgrade-enabled.yaml
 version: 0.9
