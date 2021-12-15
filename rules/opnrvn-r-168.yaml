@@ -1,0 +1,15 @@
+ruleId: opnrvn-r-168
+type: asset
+ruleName: >
+  Checks whether storage encryption is enabled for your RDS DB instances.
+description: >
+  Checks whether storage encryption is enabled for your RDS DB instances.
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id
+  FROM assets
+  WHERE resource_type = 'AWS::RDS::DBInstance'
+  AND (configuration->'storageEncrypted' = 'false');
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
