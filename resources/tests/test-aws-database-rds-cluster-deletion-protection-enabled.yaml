@@ -1,5 +1,5 @@
 # opnrvn-r-166
-ruleId: opnrvn-r-166
+ruleId: aws-database-rds-cluster-deletion-protection-enabled
 description: >
   Insecure assets have no IAM enabled
   Secure assets have IAM enabled on RDS cluster
