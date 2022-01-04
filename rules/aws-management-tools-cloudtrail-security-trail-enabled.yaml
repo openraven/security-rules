@@ -1,0 +1,34 @@
+# opnrvn-r-144
+ruleId: aws-management-tools-cloudtrail-security-trail-enabled
+type: asset
+ruleName: >
+  Checks that there is at least one AWS CloudTrail trail defined with security best practices + 7 rule recommendations.
+description: >
+  This rule is COMPLIANT if there is at least one trail that meets all of the following:
+  - Records global service events
+  - Is a multi-region trail
+  - Has Log file validation enabled
+  - Encrypted with a KMS key
+  - Records events for reads and writes
+  - Records management events
+  - Does not exclude any management events
+  This rule is NON_COMPLIANT if no trails meet all of the criteria mentioned above.
+severity: high
+enabled: true
+sql: >
+    SELECT 'No correctly configured AWS CloudTrail trails' AS arn
+    WHERE NOT EXISTS
+    (SELECT *
+    FROM awscloudtrailtrail
+    WHERE EXISTS
+    (SELECT *
+    FROM jsonb_array_elements(supplementaryconfiguration->'eventSelectors'->'eventSelectors') eventSelector
+    WHERE eventSelector->>'includeManagementEvents' = 'true'
+    AND eventSelector->>'readWriteType' = 'All'
+    AND eventSelector->>'excludeManagementEventSources' = '[]'
+    AND supplementaryconfiguration->'trailDetails'->'trail'->'logFileValidationEnabled' = 'true'
+    AND supplementaryconfiguration->'trailDetails'->'trail'->'isMultiRegionTrail' = 'true'
+    AND supplementaryconfiguration->'trailDetails'->'trail'->'includeGlobalServiceEvents' = 'true'
+    AND supplementaryconfiguration->'trailDetails'->'trail'->'kmsKeyId' != 'null'));
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

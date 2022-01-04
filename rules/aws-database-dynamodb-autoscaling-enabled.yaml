@@ -1,0 +1,18 @@
+# opnrvn-r-162
+ruleId: aws-database-dynamodb-autoscaling-enabled
+type: asset
+ruleName: >
+  Checks if Auto Scaling or On-Demand is enabled on your DynamoDB tables and/or global secondary indexes.
+  Optionally you can set the read and write capacity units for the table or global secondary index.
+description: >
+  Checks if Auto Scaling or On-Demand is enabled on your DynamoDB tables and/or global secondary indexes.
+  Optionally you can set the read and write capacity units for the table or global secondary index.
+severity: high
+enabled: true
+sql: >
+  select arn
+  FROM awsdynamodbtable
+  WHERE configuration->'billingModeSummary' = 'null'
+  OR configuration->'billingModeSummary'->>'billingMode' != 'PAY_PER_REQUEST';
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

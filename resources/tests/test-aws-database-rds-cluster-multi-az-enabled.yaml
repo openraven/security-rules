@@ -1,0 +1,499 @@
+ruleId: aws-database-rds-cluster-multi-az-enabled
+description: >
+  Insecure assets have no multiAZ enabled
+  Secure assets have multiAZ enabled on RDS instance
+insecureAssets:
+  arn:aws:rds:us-east-2:476384142167:db:database-no-multiaz-instance-1: >
+    [{
+      "documentId" : "SMJ2yyQRPGSu-CM0YfClfw",
+      "arn" : "arn:aws:rds:us-east-2:476384142167:db:database-no-multiaz-instance-1",
+      "resourceName" : "database-no-multiaz-instance-1",
+      "resourceId" : "arn:aws:rds:us-east-2:476384142167:db:database-no-multiaz-instance-1",
+      "resourceType" : "AWS::RDS::DBInstance",
+      "awsRegion" : "us-east-2",
+      "awsAccountId" : "476384142167",
+      "createdIso" : null,
+      "updatedIso" : "2021-12-15T11:29:34.595491Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "dbInstanceIdentifier" : "database-no-multiaz-instance-1",
+        "dbInstanceClass" : "db.r5.large",
+        "engine" : "aurora-mysql",
+        "dbInstanceStatus" : "creating",
+        "automaticRestartTime" : null,
+        "masterUsername" : "admin",
+        "dbName" : null,
+        "endpoint" : null,
+        "allocatedStorage" : 1,
+        "instanceCreateTime" : null,
+        "preferredBackupWindow" : "04:59-05:29",
+        "backupRetentionPeriod" : 1,
+        "dbSecurityGroups" : [ ],
+        "vpcSecurityGroups" : [ {
+          "vpcSecurityGroupId" : "sg-3afa2c42",
+          "status" : "active"
+        } ],
+        "dbParameterGroups" : [ {
+          "dbParameterGroupName" : "default.aurora-mysql5.7",
+          "parameterApplyStatus" : "in-sync"
+        } ],
+        "availabilityZone" : "us-east-2b",
+        "dbSubnetGroup" : {
+          "dbSubnetGroupName" : "default-vpc-6487540f",
+          "dbSubnetGroupDescription" : "Created from the RDS Management Console",
+          "vpcId" : "vpc-6487540f",
+          "subnetGroupStatus" : "Complete",
+          "subnets" : [ {
+            "subnetIdentifier" : "subnet-249c674f",
+            "subnetAvailabilityZone" : {
+              "name" : "us-east-2a"
+            },
+            "subnetOutpost" : {
+              "arn" : null
+            },
+            "subnetStatus" : "Active"
+          }, {
+            "subnetIdentifier" : "subnet-970130ed",
+            "subnetAvailabilityZone" : {
+              "name" : "us-east-2b"
+            },
+            "subnetOutpost" : {
+              "arn" : null
+            },
+            "subnetStatus" : "Active"
+          }, {
+            "subnetIdentifier" : "subnet-7a198036",
+            "subnetAvailabilityZone" : {
+              "name" : "us-east-2c"
+            },
+            "subnetOutpost" : {
+              "arn" : null
+            },
+            "subnetStatus" : "Active"
+          } ],
+          "dbSubnetGroupArn" : null
+        },
+        "preferredMaintenanceWindow" : "fri:07:35-fri:08:05",
+        "pendingModifiedValues" : {
+          "dbInstanceClass" : null,
+          "allocatedStorage" : null,
+          "masterUserPassword" : null,
+          "port" : null,
+          "backupRetentionPeriod" : null,
+          "multiAZ" : null,
+          "engineVersion" : null,
+          "licenseModel" : null,
+          "iops" : null,
+          "dbInstanceIdentifier" : null,
+          "storageType" : null,
+          "caCertificateIdentifier" : null,
+          "dbSubnetGroupName" : null,
+          "pendingCloudwatchLogsExports" : null,
+          "processorFeatures" : null,
+          "iamDatabaseAuthenticationEnabled" : null,
+          "automationMode" : null,
+          "resumeFullAutomationModeTime" : null
+        },
+        "latestRestorableTime" : null,
+        "multiAZ" : false,
+        "engineVersion" : "5.7.mysql_aurora.2.07.2",
+        "autoMinorVersionUpgrade" : true,
+        "readReplicaSourceDBInstanceIdentifier" : null,
+        "readReplicaDBInstanceIdentifiers" : [ ],
+        "readReplicaDBClusterIdentifiers" : null,
+        "replicaMode" : null,
+        "licenseModel" : "general-public-license",
+        "iops" : null,
+        "optionGroupMemberships" : [ {
+          "optionGroupName" : "default:aurora-mysql-5-7",
+          "status" : "in-sync"
+        } ],
+        "characterSetName" : null,
+        "ncharCharacterSetName" : null,
+        "secondaryAvailabilityZone" : null,
+        "publiclyAccessible" : false,
+        "statusInfos" : null,
+        "storageType" : "aurora",
+        "tdeCredentialArn" : null,
+        "dbInstancePort" : 0,
+        "dbClusterIdentifier" : "database-no-multiaz",
+        "storageEncrypted" : true,
+        "kmsKeyId" : "arn:aws:kms:us-east-2:476384142167:key/eb2fb838-797c-402e-9d8f-5f51479b122f",
+        "dbiResourceId" : "db-VZN7I6JCXCTTKMHYZKYEP2EILA",
+        "caCertificateIdentifier" : "rds-ca-2019",
+        "domainMemberships" : [ ],
+        "copyTagsToSnapshot" : false,
+        "monitoringInterval" : 60,
+        "enhancedMonitoringResourceArn" : null,
+        "monitoringRoleArn" : "arn:aws:iam::476384142167:role/rds-monitoring-role",
+        "promotionTier" : 1,
+        "dbInstanceArn" : "arn:aws:rds:us-east-2:476384142167:db:database-no-multiaz-instance-1",
+        "timezone" : null,
+        "iamDatabaseAuthenticationEnabled" : false,
+        "performanceInsightsEnabled" : true,
+        "performanceInsightsKMSKeyId" : "arn:aws:kms:us-east-2:476384142167:key/eb2fb838-797c-402e-9d8f-5f51479b122f",
+        "performanceInsightsRetentionPeriod" : 7,
+        "enabledCloudwatchLogsExports" : null,
+        "processorFeatures" : null,
+        "deletionProtection" : false,
+        "associatedRoles" : [ ],
+        "listenerEndpoint" : null,
+        "maxAllocatedStorage" : null,
+        "tagList" : [ ],
+        "dbInstanceAutomatedBackupsReplications" : null,
+        "customerOwnedIpEnabled" : false,
+        "awsBackupRecoveryPointArn" : null,
+        "activityStreamStatus" : null,
+        "activityStreamKmsKeyId" : null,
+        "activityStreamKinesisStreamName" : null,
+        "activityStreamMode" : null,
+        "activityStreamEngineNativeAuditFieldsIncluded" : null,
+        "automationMode" : null,
+        "resumeFullAutomationModeTime" : null,
+        "customIamInstanceProfile" : null,
+        "backupTarget" : "region"
+      },
+      "supplementaryConfiguration" : {
+        "dbClusters" : {
+          "marker" : null,
+          "dbClusters" : [ {
+            "allocatedStorage" : 1,
+            "availabilityZones" : [ "us-east-2b", "us-east-2c", "us-east-2a" ],
+            "backupRetentionPeriod" : 1,
+            "characterSetName" : null,
+            "databaseName" : "",
+            "dbClusterIdentifier" : "database-no-multiaz",
+            "dbClusterParameterGroup" : "default.aurora-mysql5.7",
+            "dbSubnetGroup" : "default-vpc-6487540f",
+            "status" : "available",
+            "automaticRestartTime" : null,
+            "percentProgress" : null,
+            "earliestRestorableTime" : "2021-12-15T11:26:22.193Z",
+            "endpoint" : "database-no-multiaz.cluster-cr5vsauqrzv3.us-east-2.rds.amazonaws.com",
+            "readerEndpoint" : "database-no-multiaz.cluster-ro-cr5vsauqrzv3.us-east-2.rds.amazonaws.com",
+            "customEndpoints" : null,
+            "multiAZ" : false,
+            "engine" : "aurora-mysql",
+            "engineVersion" : "5.7.mysql_aurora.2.07.2",
+            "latestRestorableTime" : "2021-12-15T11:26:22.193Z",
+            "port" : 3306,
+            "masterUsername" : "admin",
+            "dbClusterOptionGroupMemberships" : null,
+            "preferredBackupWindow" : "04:59-05:29",
+            "preferredMaintenanceWindow" : "thu:07:05-thu:07:35",
+            "replicationSourceIdentifier" : null,
+            "readReplicaIdentifiers" : [ ],
+            "dbClusterMembers" : [ {
+              "dbInstanceIdentifier" : "database-no-multiaz-instance-1",
+              "isClusterWriter" : true,
+              "dbClusterParameterGroupStatus" : "in-sync",
+              "promotionTier" : 1
+            } ],
+            "vpcSecurityGroups" : [ {
+              "vpcSecurityGroupId" : "sg-3afa2c42",
+              "status" : "active"
+            } ],
+            "hostedZoneId" : "Z2XHWR1WZ565X2",
+            "storageEncrypted" : true,
+            "kmsKeyId" : "arn:aws:kms:us-east-2:476384142167:key/eb2fb838-797c-402e-9d8f-5f51479b122f",
+            "dbClusterResourceId" : "cluster-VOULUEKDUR5PTL5Y45VS2BXBIA",
+            "dbClusterArn" : "arn:aws:rds:us-east-2:476384142167:cluster:database-no-multiaz",
+            "associatedRoles" : [ ],
+            "iamDatabaseAuthenticationEnabled" : false,
+            "cloneGroupId" : null,
+            "clusterCreateTime" : "2021-12-15T11:25:27.152Z",
+            "earliestBacktrackTime" : null,
+            "backtrackWindow" : null,
+            "backtrackConsumedChangeRecords" : null,
+            "enabledCloudwatchLogsExports" : null,
+            "capacity" : null,
+            "engineMode" : "provisioned",
+            "scalingConfigurationInfo" : null,
+            "deletionProtection" : true,
+            "httpEndpointEnabled" : false,
+            "activityStreamMode" : null,
+            "activityStreamStatus" : "stopped",
+            "activityStreamKmsKeyId" : null,
+            "activityStreamKinesisStreamName" : null,
+            "copyTagsToSnapshot" : true,
+            "crossAccountClone" : false,
+            "domainMemberships" : [ ],
+            "tagList" : [ ],
+            "globalWriteForwardingStatus" : null,
+            "globalWriteForwardingRequested" : null,
+            "pendingModifiedValues" : null,
+            "dbClusterInstanceClass" : null,
+            "storageType" : null,
+            "iops" : null,
+            "publiclyAccessible" : null,
+            "autoMinorVersionUpgrade" : false,
+            "monitoringInterval" : null,
+            "monitoringRoleArn" : null,
+            "performanceInsightsEnabled" : null,
+            "performanceInsightsKMSKeyId" : null,
+            "performanceInsightsRetentionPeriod" : null
+          } ]
+        },
+        "dbSnapshot" : {
+          "marker" : null,
+          "dbSnapshots" : [ ]
+        },
+        "awsBackupJobs" : [ ]
+      },
+      "tags" : { },
+      "discoveryMeta" : { }
+    }]
+secureAssets:
+  arn:aws:rds:us-east-2:476384142167:db:database-no-az-instance-1-us-east-2c: >
+    [{
+      "documentId" : "7iNGOmpdP1ifaB2Dxn2yGQ",
+      "arn" : "arn:aws:rds:us-east-2:476384142167:db:database-no-az-instance-1-us-east-2c",
+      "resourceName" : "database-no-az-instance-1-us-east-2c",
+      "resourceId" : "arn:aws:rds:us-east-2:476384142167:db:database-no-az-instance-1-us-east-2c",
+      "resourceType" : "AWS::RDS::DBInstance",
+      "awsRegion" : "us-east-2",
+      "awsAccountId" : "476384142167",
+      "createdIso" : "2021-12-15T11:36:10.879Z",
+      "updatedIso" : "2021-12-15T11:50:35.481524Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "dbInstanceIdentifier" : "database-no-az-instance-1-us-east-2c",
+        "dbInstanceClass" : "db.r5.large",
+        "engine" : "aurora-mysql",
+        "dbInstanceStatus" : "available",
+        "automaticRestartTime" : null,
+        "masterUsername" : "admin",
+        "dbName" : null,
+        "endpoint" : {
+          "address" : "database-no-az-instance-1-us-east-2c.cr5vsauqrzv3.us-east-2.rds.amazonaws.com",
+          "port" : 3306,
+          "hostedZoneId" : "Z2XHWR1WZ565X2"
+        },
+        "allocatedStorage" : 1,
+        "instanceCreateTime" : "2021-12-15T11:36:10.879Z",
+        "preferredBackupWindow" : "06:22-06:52",
+        "backupRetentionPeriod" : 1,
+        "dbSecurityGroups" : [ ],
+        "vpcSecurityGroups" : [ {
+          "vpcSecurityGroupId" : "sg-3afa2c42",
+          "status" : "active"
+        } ],
+        "dbParameterGroups" : [ {
+          "dbParameterGroupName" : "default.aurora-mysql5.7",
+          "parameterApplyStatus" : "in-sync"
+        } ],
+        "availabilityZone" : "us-east-2c",
+        "dbSubnetGroup" : {
+          "dbSubnetGroupName" : "default-vpc-6487540f",
+          "dbSubnetGroupDescription" : "Created from the RDS Management Console",
+          "vpcId" : "vpc-6487540f",
+          "subnetGroupStatus" : "Complete",
+          "subnets" : [ {
+            "subnetIdentifier" : "subnet-249c674f",
+            "subnetAvailabilityZone" : {
+              "name" : "us-east-2a"
+            },
+            "subnetOutpost" : {
+              "arn" : null
+            },
+            "subnetStatus" : "Active"
+          }, {
+            "subnetIdentifier" : "subnet-970130ed",
+            "subnetAvailabilityZone" : {
+              "name" : "us-east-2b"
+            },
+            "subnetOutpost" : {
+              "arn" : null
+            },
+            "subnetStatus" : "Active"
+          }, {
+            "subnetIdentifier" : "subnet-7a198036",
+            "subnetAvailabilityZone" : {
+              "name" : "us-east-2c"
+            },
+            "subnetOutpost" : {
+              "arn" : null
+            },
+            "subnetStatus" : "Active"
+          } ],
+          "dbSubnetGroupArn" : null
+        },
+        "preferredMaintenanceWindow" : "wed:08:13-wed:08:43",
+        "pendingModifiedValues" : {
+          "dbInstanceClass" : null,
+          "allocatedStorage" : null,
+          "masterUserPassword" : null,
+          "port" : null,
+          "backupRetentionPeriod" : null,
+          "multiAZ" : null,
+          "engineVersion" : null,
+          "licenseModel" : null,
+          "iops" : null,
+          "dbInstanceIdentifier" : null,
+          "storageType" : null,
+          "caCertificateIdentifier" : null,
+          "dbSubnetGroupName" : null,
+          "pendingCloudwatchLogsExports" : null,
+          "processorFeatures" : null,
+          "iamDatabaseAuthenticationEnabled" : null,
+          "automationMode" : null,
+          "resumeFullAutomationModeTime" : null
+        },
+        "latestRestorableTime" : null,
+        "multiAZ" : false,
+        "engineVersion" : "5.7.mysql_aurora.2.07.2",
+        "autoMinorVersionUpgrade" : true,
+        "readReplicaSourceDBInstanceIdentifier" : null,
+        "readReplicaDBInstanceIdentifiers" : [ ],
+        "readReplicaDBClusterIdentifiers" : null,
+        "replicaMode" : null,
+        "licenseModel" : "general-public-license",
+        "iops" : null,
+        "optionGroupMemberships" : [ {
+          "optionGroupName" : "default:aurora-mysql-5-7",
+          "status" : "in-sync"
+        } ],
+        "characterSetName" : null,
+        "ncharCharacterSetName" : null,
+        "secondaryAvailabilityZone" : null,
+        "publiclyAccessible" : false,
+        "statusInfos" : null,
+        "storageType" : "aurora",
+        "tdeCredentialArn" : null,
+        "dbInstancePort" : 0,
+        "dbClusterIdentifier" : "database-multi-az",
+        "storageEncrypted" : true,
+        "kmsKeyId" : "arn:aws:kms:us-east-2:476384142167:key/eb2fb838-797c-402e-9d8f-5f51479b122f",
+        "dbiResourceId" : "db-3XUYQ2BQ2STEVXFFL46DTAUN3U",
+        "caCertificateIdentifier" : "rds-ca-2019",
+        "domainMemberships" : [ ],
+        "copyTagsToSnapshot" : false,
+        "monitoringInterval" : 60,
+        "enhancedMonitoringResourceArn" : "arn:aws:logs:us-east-2:476384142167:log-group:RDSOSMetrics:log-stream:db-3XUYQ2BQ2STEVXFFL46DTAUN3U",
+        "monitoringRoleArn" : "arn:aws:iam::476384142167:role/rds-monitoring-role",
+        "promotionTier" : 1,
+        "dbInstanceArn" : "arn:aws:rds:us-east-2:476384142167:db:database-no-az-instance-1-us-east-2c",
+        "timezone" : null,
+        "iamDatabaseAuthenticationEnabled" : false,
+        "performanceInsightsEnabled" : true,
+        "performanceInsightsKMSKeyId" : "arn:aws:kms:us-east-2:476384142167:key/eb2fb838-797c-402e-9d8f-5f51479b122f",
+        "performanceInsightsRetentionPeriod" : 7,
+        "enabledCloudwatchLogsExports" : null,
+        "processorFeatures" : null,
+        "deletionProtection" : false,
+        "associatedRoles" : [ ],
+        "listenerEndpoint" : null,
+        "maxAllocatedStorage" : null,
+        "tagList" : [ ],
+        "dbInstanceAutomatedBackupsReplications" : null,
+        "customerOwnedIpEnabled" : false,
+        "awsBackupRecoveryPointArn" : null,
+        "activityStreamStatus" : null,
+        "activityStreamKmsKeyId" : null,
+        "activityStreamKinesisStreamName" : null,
+        "activityStreamMode" : null,
+        "activityStreamEngineNativeAuditFieldsIncluded" : null,
+        "automationMode" : null,
+        "resumeFullAutomationModeTime" : null,
+        "customIamInstanceProfile" : null,
+        "backupTarget" : "region"
+      },
+      "supplementaryConfiguration" : {
+        "dbClusters" : {
+          "marker" : null,
+          "dbClusters" : [ {
+            "allocatedStorage" : 1,
+            "availabilityZones" : [ "us-east-2b", "us-east-2c", "us-east-2a" ],
+            "backupRetentionPeriod" : 1,
+            "characterSetName" : null,
+            "databaseName" : "",
+            "dbClusterIdentifier" : "database-multi-az",
+            "dbClusterParameterGroup" : "default.aurora-mysql5.7",
+            "dbSubnetGroup" : "default-vpc-6487540f",
+            "status" : "available",
+            "automaticRestartTime" : null,
+            "percentProgress" : null,
+            "earliestRestorableTime" : "2021-12-15T11:25:21.626Z",
+            "endpoint" : "database-multi-az.cluster-cr5vsauqrzv3.us-east-2.rds.amazonaws.com",
+            "readerEndpoint" : "database-multi-az.cluster-ro-cr5vsauqrzv3.us-east-2.rds.amazonaws.com",
+            "customEndpoints" : null,
+            "multiAZ" : true,
+            "engine" : "aurora-mysql",
+            "engineVersion" : "5.7.mysql_aurora.2.07.2",
+            "latestRestorableTime" : "2021-12-15T11:47:11.582Z",
+            "port" : 3306,
+            "masterUsername" : "admin",
+            "dbClusterOptionGroupMemberships" : null,
+            "preferredBackupWindow" : "06:22-06:52",
+            "preferredMaintenanceWindow" : "wed:09:17-wed:09:47",
+            "replicationSourceIdentifier" : null,
+            "readReplicaIdentifiers" : [ ],
+            "dbClusterMembers" : [ {
+              "dbInstanceIdentifier" : "database-no-az-instance-1-us-east-2c",
+              "isClusterWriter" : false,
+              "dbClusterParameterGroupStatus" : "in-sync",
+              "promotionTier" : 1
+            }, {
+              "dbInstanceIdentifier" : "database-no-az-instance-1",
+              "isClusterWriter" : true,
+              "dbClusterParameterGroupStatus" : "in-sync",
+              "promotionTier" : 1
+            } ],
+            "vpcSecurityGroups" : [ {
+              "vpcSecurityGroupId" : "sg-3afa2c42",
+              "status" : "active"
+            } ],
+            "hostedZoneId" : "Z2XHWR1WZ565X2",
+            "storageEncrypted" : true,
+            "kmsKeyId" : "arn:aws:kms:us-east-2:476384142167:key/eb2fb838-797c-402e-9d8f-5f51479b122f",
+            "dbClusterResourceId" : "cluster-7IZPG25RWGQ3UZTBV4XO5DMHCI",
+            "dbClusterArn" : "arn:aws:rds:us-east-2:476384142167:cluster:database-multi-az",
+            "associatedRoles" : [ ],
+            "iamDatabaseAuthenticationEnabled" : false,
+            "cloneGroupId" : null,
+            "clusterCreateTime" : "2021-12-15T11:24:36.469Z",
+            "earliestBacktrackTime" : null,
+            "backtrackWindow" : null,
+            "backtrackConsumedChangeRecords" : null,
+            "enabledCloudwatchLogsExports" : null,
+            "capacity" : null,
+            "engineMode" : "provisioned",
+            "scalingConfigurationInfo" : null,
+            "deletionProtection" : true,
+            "httpEndpointEnabled" : false,
+            "activityStreamMode" : null,
+            "activityStreamStatus" : "stopped",
+            "activityStreamKmsKeyId" : null,
+            "activityStreamKinesisStreamName" : null,
+            "copyTagsToSnapshot" : true,
+            "crossAccountClone" : false,
+            "domainMemberships" : [ ],
+            "tagList" : [ ],
+            "globalWriteForwardingStatus" : null,
+            "globalWriteForwardingRequested" : null,
+            "pendingModifiedValues" : null,
+            "dbClusterInstanceClass" : null,
+            "storageType" : null,
+            "iops" : null,
+            "publiclyAccessible" : null,
+            "autoMinorVersionUpgrade" : false,
+            "monitoringInterval" : null,
+            "monitoringRoleArn" : null,
+            "performanceInsightsEnabled" : null,
+            "performanceInsightsKMSKeyId" : null,
+            "performanceInsightsRetentionPeriod" : null
+          } ]
+        },
+        "dbSnapshot" : {
+          "marker" : null,
+          "dbSnapshots" : [ ]
+        },
+        "awsBackupJobs" : [ ]
+      },
+      "tags" : { },
+      "discoveryMeta" : { }
+    }]

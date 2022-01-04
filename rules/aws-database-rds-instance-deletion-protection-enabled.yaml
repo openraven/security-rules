@@ -1,0 +1,16 @@
+# opnrvn-r-156
+ruleId: aws-database-rds-instance-deletion-protection-enabled
+type: asset
+ruleName: >
+  Checks if an Amazon Relational Database Service (Amazon RDS) instance has deletion protection enabled.
+description: >
+  This rule is NON_COMPLIANT if an Amazon RDS instance does not
+  have deletion protection enabled i.e deletionProtection is set to false.
+severity: high
+enabled: true
+sql: >
+  SELECT arn
+  FROM awsrdsdbinstance
+  WHERE (configuration->'deletionProtection' = 'false');
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

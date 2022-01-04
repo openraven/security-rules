@@ -1,0 +1,24 @@
+# id: b1dc3919-5146-4bbc-93d4-7e16b6a2e684
+# opnrvn-r-58
+ruleId: aws-compute-ec2-instance-managed-by-systems-manager
+type: asset
+ruleName: >
+  Ensure all EC2 instances are managed by SSM
+description: >
+  Systems Manager helps you maintain security and compliance by scanning your managed instances
+  and reporting on (or taking corrective action on) any policy violations it detects.
+  In case if SSM is enabled for specific region but EC2 instances are not managed -
+  they will not be monitored from any kind of SSM perspective
+severity: high
+enabled: true
+sql: >
+  SELECT ec2.asset_id
+    FROM assets ec2
+    LEFT JOIN assets ssm
+      ON (ec2.resource_id = ssm.resource_id AND ssm.resource_type = 'AWS::SSM::Instance')
+   WHERE ec2.resource_type = 'AWS::EC2::Instance'
+     AND ec2.configuration -> 'state' ->> 'name' = 'running'
+     AND ssm.resource_id IS NULL;
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

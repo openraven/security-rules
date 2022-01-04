@@ -1,0 +1,106 @@
+# opnrvn-r-169
+ruleId: aws-database-rds-snapshot-encrypted
+description: >
+  - Checks if RDS snapshots have encryption enabled.
+  - `encryption-disabled` Insecure Assets have encryption-disabled
+  - `encryption-enabled` Secure Assets have encryption-enabled
+insecureAssets:
+  encryption-disabled: >
+    [{
+      "documentId" : "evc4EK5COoqXDbBWou_sNQ",
+      "arn" : "encryption-disabled",
+      "resourceName" : "encryption-disabled",
+      "resourceId" : "encryption-disabled",
+      "resourceType" : "AWS::RDS::DBSnapshot",
+      "awsRegion" : "us-west-2",
+      "awsAccountId" : "476384142167",
+      "createdIso" : "2021-10-28T23:04:47.686Z",
+      "updatedIso" : "2021-12-15T11:57:35.531793Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "dbSnapshotIdentifier" : "encryption-disabled",
+        "dbInstanceIdentifier" : "encryption-disabled",
+        "snapshotCreateTime" : null,
+        "engine" : "postgres",
+        "allocatedStorage" : 20,
+        "status" : "creating",
+        "port" : 5432,
+        "availabilityZone" : "us-west-2d",
+        "vpcId" : "vpc-0191f14b6cac38681",
+        "instanceCreateTime" : "2021-10-28T23:04:47.686Z",
+        "masterUsername" : "root",
+        "engineVersion" : "13.4",
+        "licenseModel" : "postgresql-license",
+        "snapshotType" : "automated",
+        "iops" : null,
+        "optionGroupName" : "default:postgres-13",
+        "percentProgress" : 0,
+        "sourceRegion" : null,
+        "sourceDBSnapshotIdentifier" : null,
+        "storageType" : "gp2",
+        "tdeCredentialArn" : null,
+        "encrypted" : false,
+        "kmsKeyId" : "arn:aws:kms:us-west-2:476384142167:key/2d79f9b0-00cc-43f3-96a5-5f60c7a45681",
+        "dbSnapshotArn" : "arn:aws:rds:us-west-2:476384142167:snapshot:rds:encryption-disabled-2021-12-15-11-57",
+        "timezone" : null,
+        "iamDatabaseAuthenticationEnabled" : false,
+        "processorFeatures" : [ ],
+        "dbiResourceId" : "db-UTX6RA5MDUT4GO53CNT54VJCVQ",
+        "tagList" : [ ]
+      },
+      "supplementaryConfiguration" : { },
+      "tags" : { },
+      "discoveryMeta" : { }
+    }]
+secureAssets:
+  encryption-enabled: >
+    [{
+          "documentId" : "evc4EK5COoqXDbBWou_sNQ",
+          "arn" : "encryption-enabled",
+          "resourceName" : "encryption-disabled",
+          "resourceId" : "encryption-enabled",
+          "resourceType" : "AWS::RDS::DBSnapshot",
+          "awsRegion" : "us-west-2",
+          "awsAccountId" : "476384142167",
+          "createdIso" : "2021-10-28T23:04:47.686Z",
+          "updatedIso" : "2021-12-15T11:57:35.531793Z",
+          "discoverySessionId" : null,
+          "maxSizeInBytes" : null,
+          "sizeInBytes" : null,
+          "configuration" : {
+            "dbSnapshotIdentifier" : "encryption-enabled",
+            "dbInstanceIdentifier" : "encryption-enabled",
+            "snapshotCreateTime" : null,
+            "engine" : "postgres",
+            "allocatedStorage" : 20,
+            "status" : "creating",
+            "port" : 5432,
+            "availabilityZone" : "us-west-2d",
+            "vpcId" : "vpc-0191f14b6cac38681",
+            "instanceCreateTime" : "2021-10-28T23:04:47.686Z",
+            "masterUsername" : "root",
+            "engineVersion" : "13.4",
+            "licenseModel" : "postgresql-license",
+            "snapshotType" : "automated",
+            "iops" : null,
+            "optionGroupName" : "default:postgres-13",
+            "percentProgress" : 0,
+            "sourceRegion" : null,
+            "sourceDBSnapshotIdentifier" : null,
+            "storageType" : "gp2",
+            "tdeCredentialArn" : null,
+            "encrypted" : true,
+            "kmsKeyId" : "arn:aws:kms:us-west-2:476384142167:key/2d79f9b0-00cc-43f3-96a5-5f60c7a45681",
+            "dbSnapshotArn" : "arn:aws:rds:us-west-2:476384142167:snapshot:rds:encryption-enabled-2021-12-15-11-57",
+            "timezone" : null,
+            "iamDatabaseAuthenticationEnabled" : false,
+            "processorFeatures" : [ ],
+            "dbiResourceId" : "db-UTX6RA5MDUT4GO53CNT54VJCVQ",
+            "tagList" : [ ]
+          },
+          "supplementaryConfiguration" : { },
+          "tags" : { },
+          "discoveryMeta" : { }
+        }]

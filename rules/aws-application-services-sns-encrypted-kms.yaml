@@ -1,0 +1,15 @@
+# opnrvn-r-149
+ruleId: aws-application-services-sns-encrypted-kms
+type: asset
+ruleName: >
+  Ensure Amazon SNS Topic is Encrypted with AWS KMS Key
+description: >
+  Ensure Amazon SNS Topic is Encrypted with AWS KMS Key. To be compliant an SNS Topic needs to be encrypted with a KMS Key.
+severity: high
+enabled: true
+sql: >
+  SELECT arn
+  FROM awssnstopic
+  WHERE (configuration -> 'attributes' -> 'KmsMasterKeyId' is null);
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

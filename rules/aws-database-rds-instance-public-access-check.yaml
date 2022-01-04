@@ -1,0 +1,14 @@
+ruleId: aws-database-rds-instance-public-access-check
+type: asset
+ruleName: >
+  Ensure deletion protection is enabled for RDS clusters
+description: >
+  Checks if Amazon Relational Database Service (Amazon RDS) instances are protected by a backup plan.
+severity: high
+enabled: true
+sql: >
+  SELECT arn
+  FROM awsrdsdbinstance
+  WHERE (configuration -> 'publiclyAccessible' = 'true');
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

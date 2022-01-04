@@ -9,15 +9,15 @@ rules:
 - opnrvn-r-1.yaml
 - opnrvn-r-2.yaml
 - opnrvn-r-3.yaml
-- opnrvn-r-4.yaml
-- opnrvn-r-5.yaml
+- aws-management-tools-cloud-trail-log-file-validation-enabled.yaml
+- aws-management-tools-cloud-trail-encryption-enabled.yaml
 - opnrvn-r-6.yaml
 - opnrvn-r-7.yaml
-- opnrvn-r-8.yaml # CIS 1.3 [IAM]
+- aws-iam-and-security-iam-user-unused-credentials-check.yaml # CIS 1.3 [IAM]
 - opnrvn-r-9.yaml
-- opnrvn-r-10.yaml
+- aws-network-and-content-delivery-vpc-flow-logs-enabled.yaml
 - opnrvn-r-11.yaml
-- opnrvn-r-12.yaml # CIS 1.14 [IAM]
+- aws-iam-and-security-root-account-mfa-enabled # CIS 1.14 [IAM]
 - opnrvn-r-13.yaml # CIS 1.11 [IAM]
 - opnrvn-r-14.yaml
 - opnrvn-r-15.yaml
@@ -63,36 +63,37 @@ rules:
 - opnrvn-r-55.yaml
 #56 missing - ransomware C2 rule
 - opnrvn-r-57.yaml
-- opnrvn-r-58.yaml
+- aws-compute-ec2-instance-managed-by-systems-manager.yaml
 - opnrvn-r-59.yaml
-- opnrvn-r-60.yaml
-- opnrvn-r-144.yaml
-- opnrvn-r-145.yaml
-- opnrvn-r-146.yaml
-- opnrvn-r-147.yaml
-- opnrvn-r-148.yaml
-- opnrvn-r-149.yaml
-- opnrvn-r-150.yaml
-- opnrvn-r-151.yaml
-- opnrvn-r-152.yaml
-- opnrvn-r-153.yaml
-- opnrvn-r-154.yaml
-- opnrvn-r-155.yaml
-- opnrvn-r-156.yaml
-- opnrvn-r-157.yaml
-- opnrvn-r-158.yaml
-- opnrvn-r-159.yaml
-- opnrvn-r-160.yaml
-- opnrvn-r-161.yaml
-- opnrvn-r-162.yaml
-- opnrvn-r-163.yaml
-- opnrvn-r-164.yaml
-- opnrvn-r-165.yaml
-- opnrvn-r-166.yaml
-- opnrvn-r-167.yaml
-- opnrvn-r-168.yaml
-- opnrvn-r-169.yaml
-- aws-rds-cluster-multi-az-enabled.yaml
-- aws-rds-automatic-minor-version-upgrade-enabled.yaml
-- aws-rds-instance-public-access-check.yaml
+- aws-management-tools-cloud-trail-cloud-watch-logs-enabled.yaml
+# newly added rules michael + tara.
+- aws-management-tools-cloudtrail-security-trail-enabled.yaml
+- aws-management-tools-cloudtrail-s3-dataevents-enabled.yaml
+- aws-compute-ec2-instance-detailed-monitoring-enabled.yaml
+- aws-compute-ec2-imdsv2-check.yaml
+- aws-management-tools-cloudwatch-alarm-action-check.yaml
+- aws-application-services-sns-encrypted-kms.yaml
+- aws-database-redshift-cluster-kms-enabled.yaml
+- aws-storage-s3-default-encryption-kms.yaml
+- aws-storage-s3-bucket-default-lock-enabled.yaml
+- aws-database-rds-logging-enabled.yaml
+- aws-iam-and-security-iam-user-mfa-enabled.yaml
+- aws-database-rds-multi-az-support.yaml
+- aws-database-rds-instance-deletion-protection-enabled
+- aws-big-data-and-analytics-elasticsearch-logs-to-cloudwatch.yaml
+- aws-database-redshift-backup-enabled.yaml
+- aws-database-rds-instance-iam-authentication-enabled.yaml
+- aws-database-rds-cluster-iam-authentication-enabled.yaml
+- aws-database-dynamodb-table-encrypted-kms.yaml
+- aws-database-dynamodb-pitr-enabled.yaml
+- aws-database-dynamodb-pitr-enabled
+- aws-database-dynamodb-resources-protected-by-backup-plan.yaml
+- aws-database-rds-enhanced-monitoring-enabled.yaml
+- aws-database-rds-cluster-deletion-protection-enabled.yaml
+- aws-database-dynamodb-table-encryption-enabled.yaml
+- aws-database-rds-storage-encrypted.yaml
+- aws-database-rds-snapshot-encrypted.yaml
+- aws-database-rds-cluster-multi-az-enabled.yaml
+- aws-database-rds-automatic-minor-version-upgrade-enabled.yaml
+- aws-database-rds-instance-public-access-check.yaml
 version: 0.9

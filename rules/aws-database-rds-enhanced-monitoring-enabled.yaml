@@ -1,0 +1,15 @@
+# opnrvn-r-165
+ruleId: aws-database-rds-enhanced-monitoring-enabled
+type: asset
+ruleName: >
+  Ensure RDS Instances have enhanced monitoring.
+description: >
+  Checks whether enhanced monitoring is enabled for Amazon Relational Database Service (Amazon RDS) instances.
+severity: high
+enabled: true
+sql: >
+  SELECT arn
+  FROM awsrdsdbinstance
+  WHERE (configuration -> 'enhancedMonitoringResourceArn' = 'null');
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
