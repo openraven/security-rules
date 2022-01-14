@@ -9,7 +9,7 @@ severity: high
 enabled: true
 sql: >
   SELECT arn
-  FROM awsec2instance
+  FROM magpie.awsec2instance
   WHERE configuration->'monitoring'->>'state' = 'disabled';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

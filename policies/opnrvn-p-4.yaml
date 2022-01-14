@@ -7,26 +7,26 @@ description: >
 enabled: true
 rules:
 # rules for logging
-  - opnrvn-r-49.yaml
-  - opnrvn-r-60.yaml
-  - opnrvn-r-4.yaml
-  - opnrvn-r-5.yaml
-  - opnrvn-r-10.yaml
-  - opnrvn-r-3.yaml
-  - opnrvn-r-37.yaml
-  - opnrvn-r-28.yaml
-  - opnrvn-r-33.yaml
-  - opnrvn-r-31.yaml
-  - opnrvn-r-27.yaml
-  - opnrvn-r-26.yaml
-  - opnrvn-r-29.yaml
-  - opnrvn-r-35.yaml
-  - opnrvn-r-36.yaml
-  - opnrvn-r-32.yaml
-  - opnrvn-r-30.yaml
-  - opnrvn-r-34.yaml
-  - opnrvn-r-38.yaml
-
+  - aws-compute-ec2-instance-detailed-monitoring-enabled.yaml
+#  - opnrvn-r-49.yaml
+#  - opnrvn-r-60.yaml
+#  - opnrvn-r-4.yaml
+#  - opnrvn-r-5.yaml
+#  - opnrvn-r-10.yaml
+#  - opnrvn-r-3.yaml
+#  - opnrvn-r-37.yaml
+#  - opnrvn-r-28.yaml
+#  - opnrvn-r-33.yaml
+#  - opnrvn-r-31.yaml
+#  - opnrvn-r-27.yaml
+#  - opnrvn-r-26.yaml
+#  - opnrvn-r-29.yaml
+#  - opnrvn-r-35.yaml
+#  - opnrvn-r-36.yaml
+#  - opnrvn-r-32.yaml
+#  - opnrvn-r-30.yaml
+#  - opnrvn-r-34.yaml
+#  - opnrvn-r-38.yaml
 # rules for backup (to be added)
 
 version: 0.9

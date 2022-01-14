@@ -12,9 +12,9 @@ description: >
 severity: low # Could be defined by organisation
 enabled: true
 sql: >
-  SELECT acc.asset_id
-    FROM assets acc
-   WHERE resource_type = 'GCP::SQL::Instance'
+  SELECT acc.assetid
+    FROM magpie.gcp acc
+   WHERE resourcetype = 'GCP::SQL::Instance'
      AND acc."configuration" ->> 'databaseVersion' ILIKE 'POSTGRES%'
      AND NOT EXISTS (
       SELECT value
