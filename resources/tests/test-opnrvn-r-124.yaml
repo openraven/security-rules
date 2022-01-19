@@ -1,4 +1,5 @@
 ruleId: opnrvn-r-124
+cloudProvider: gcp
 description: >
   Insecure Assets:
     - `psql-or-test-invalid` is default setup which does not control the `log_hostname` property - hence violating it

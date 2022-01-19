@@ -1,5 +1,6 @@
 #opnrvn-r-146
 ruleId: aws-compute-ec2-instance-detailed-monitoring-enabled
+cloudProvider: aws
 description: >
   Insecure Assets:
    - `detailed-monitoring-disabled` Detailed Monitoring is disabled on EC2 instance.
