@@ -1,0 +1,17 @@
+# opnrvn-r-161
+ruleId: aws-database-dynamodb-table-encrypted-kms
+type: asset
+ruleName: >
+  Checks if Amazon DynamoDB table is encrypted with AWS Key Management Service (KMS).
+description: >
+  The rule is NON_COMPLIANT if Amazon DynamoDB table is not encrypted with AWS KMS.
+  The rule is also NON_COMPLIANT if the encrypted AWS KMS key is not present in kmsKeyArns input parameter.
+severity: high
+enabled: true
+sql: >
+  SELECT arn
+  FROM magpie.awsdynamodbtable
+  WHERE configuration->'sseDescription' = 'null'
+  OR configuration->'sseDescription'->>'sseType' != 'KMS';
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

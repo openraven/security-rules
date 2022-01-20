@@ -7,7 +7,8 @@ description: >
 enabled: true
 rules:
 # rules for logging
-  - aws-compute-ec2-instance-detailed-monitoring-enabled.yaml
+#  - aws-storage-s3-sql-file-present.yaml
+- aws-compute-ec2-instance-detailed-monitoring-enabled.yaml
 #  - opnrvn-r-49.yaml
 #  - opnrvn-r-60.yaml
 #  - opnrvn-r-4.yaml

@@ -6,37 +6,36 @@ description: >
   AWS Security Best Practices policy analyzes accounts for security best practices and is modelled on guidance published by the Center for Information Security.
 enabled: true
 rules:
-  - aws-compute-ec2-instance-detailed-monitoring-enabled.yaml
-  # - opnrvn-r-1.yaml
+  - aws-iam-and-security-ensure-security-questions-registered.yaml
   # - opnrvn-r-2.yaml
-  # - opnrvn-r-3.yaml
-  # - aws-storage-s3-default-encryption-kms.yaml
-  # - aws-management-tools-cloud-trail-log-file-validation-enabled.yaml
-  # - aws-management-tools-cloud-trail-encryption-enabled.yaml
+  - aws-management-tools-cloudtrail-enabled-all-regions.yaml
+  - aws-storage-s3-default-encryption-kms.yaml
+  - aws-management-tools-cloudtrail-log-file-validation-enabled.yaml
+  - aws-management-tools-cloudtrail-encryption-enabled.yaml
   # - opnrvn-r-6.yaml
-  #  - opnrvn-r-7.yaml
-  #  - aws-iam-and-security-iam-user-unused-credentials-check.yaml # CIS 1.3 [IAM]
-  #  - opnrvn-r-9.yaml
-  #  - aws-network-and-content-delivery-vpc-flow-logs-enabled.yaml
-  #  - opnrvn-r-11.yaml
-  #  - aws-iam-and-security-root-account-mfa-enabled.yaml # CIS 1.14 [IAM]
-  #  - opnrvn-r-13.yaml # CIS 1.11 [IAM]
+  - aws-iam-and-security-default-security-group-for-vpc-restricts-all-traffic.yaml
+  - aws-iam-and-security-iam-user-unused-credentials-check.yaml # CIS 1.3 [IAM]
+  - aws-compute-ec2-ensure-all-ec2-ebs-volumes-have-snapshots.yaml
+  - aws-network-and-content-delivery-vpc-flow-logs-enabled.yaml
+  - aws-security-identity-and-compliance-ensure-guardduty-enabled-for-required-region.yaml
+  - aws-iam-and-security-root-account-mfa-enabled.yaml # CIS 1.14 [IAM]
+  - aws-iam-and-security-ensure-iam-password-policy-expires-password-90-days-or-less.yaml # CIS 1.11 [IAM]
   #  - opnrvn-r-14.yaml
-  #  - opnrvn-r-15.yaml
+  - aws-iam-and-security-ensure-iam-password-requires-one-number.yaml
   #  - opnrvn-r-16.yaml
-  #  - opnrvn-r-17.yaml
+  - aws-iam-and-security-ensure-iam-password-requires-one-lowercase-letter.yaml
   #  - opnrvn-r-18.yaml
-  #  - opnrvn-r-19.yaml
+  - aws-iam-and-security-ensure-iam-password-policy-requires-one-uppercase-letter.yaml
   #  - opnrvn-r-20.yaml
-  #  - opnrvn-r-21.yaml
+  - aws-iam-and-security-iam-instance-roles-used-for-aws-resource-access-from-instances.yaml
   #  - opnrvn-r-22.yaml
-  #  - opnrvn-r-23.yaml
+  - aws-iam-and-security-ensure-no-stale-roles-with-inline-policies-for-s3-access.yaml
   #  - opnrvn-r-24.yaml
-  #  - opnrvn-r-25.yaml
+  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-aws-config-changes.yaml
   #  - opnrvn-r-26.yaml
-  #  - opnrvn-r-27.yaml
+  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-cloudtrail-config-changes.yaml
   #  - opnrvn-r-28.yaml
-  #  - opnrvn-r-29.yaml
+  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alaram-exist-for-disabling-or-deleting-CMKs.yaml
   #  - opnrvn-r-30.yaml
   #  - opnrvn-r-31.yaml
   #  - opnrvn-r-32.yaml
@@ -46,13 +45,13 @@ rules:
   #  - opnrvn-r-36.yaml
   #  - opnrvn-r-37.yaml
   #  - opnrvn-r-38.yaml
-  #  - opnrvn-r-39.yaml
+  - aws-iam-and-security-ensure-mfa-enabled-for-root-account.yaml
   #  - opnrvn-r-40.yaml
-  #  - opnrvn-r-41.yaml
+  - aws-iam-and-security-no-default-access-keys-with-console-password-for-all-iam-users.yaml
   #  - opnrvn-r-42.yaml
-  #  - opnrvn-r-43.yaml
+  - aws-iam-and-security-ensure-no-root-account-access-key-exists.yaml
   #  - opnrvn-r-44.yaml
-  #  - opnrvn-r-45.yaml
+  - aws-iam-and-security-no-security-groups-allow-all-ingress-to-port-3389.yaml
   #  - opnrvn-r-46.yaml
   #  - opnrvn-r-47.yaml
   #  - opnrvn-r-48.yaml
@@ -65,36 +64,36 @@ rules:
   #  - opnrvn-r-55.yaml
   # 56 missing - ransomware C2 rule
   #  - opnrvn-r-57.yaml
-  #  - aws-compute-ec2-instance-managed-by-systems-manager.yaml
+  - aws-compute-ec2-instance-managed-by-systems-manager.yaml
   #  - opnrvn-r-59.yaml
-  #  - aws-management-tools-cloud-trail-cloud-watch-logs-enabled.yaml
+  - aws-management-tools-cloudtrail-cloudwatch-logs-enabled.yaml
   #   newly added rules michael + tara.
-  #  - aws-management-tools-cloudtrail-security-trail-enabled.yaml
-  #  - aws-management-tools-cloudtrail-s3-dataevents-enabled.yaml
-  #  - aws-compute-ec2-instance-detailed-monitoring-enabled.yaml
-  #  - aws-compute-ec2-imdsv2-check.yaml
-  #  - aws-management-tools-cloudwatch-alarm-action-check.yaml
-  #  - aws-application-services-sns-encrypted-kms.yaml
-  #  - aws-database-redshift-cluster-kms-enabled.yaml
-  #  - aws-storage-s3-default-encryption-kms.yaml
-  #  - aws-storage-s3-bucket-default-lock-enabled.yaml
-  #  - aws-database-rds-logging-enabled.yaml
-  #  - aws-iam-and-security-iam-user-mfa-enabled.yaml
-  #  - aws-database-rds-multi-az-support.yaml
-  #  - aws-database-rds-instance-deletion-protection-enabled.yaml
-  #  - aws-big-data-and-analytics-elasticsearch-logs-to-cloudwatch.yaml
-  #  - aws-database-redshift-backup-enabled.yaml
-  #  - aws-database-rds-instance-iam-authentication-enabled.yaml
-  #  - aws-database-rds-cluster-iam-authentication-enabled.yaml
-  #  - aws-database-dynamodb-table-encrypted-kms.yaml
-  #  - aws-database-dynamodb-pitr-enabled.yaml
-  #  - aws-database-dynamodb-resources-protected-by-backup-plan.yaml
-  #  - aws-database-rds-enhanced-monitoring-enabled.yaml
-  #  - aws-database-rds-cluster-deletion-protection-enabled.yaml
-  #  - aws-database-dynamodb-table-encryption-enabled.yaml
-  #  - aws-database-rds-storage-encrypted.yaml
-  #  - aws-database-rds-snapshot-encrypted.yaml
-  #  - aws-database-rds-cluster-multi-az-enabled.yaml
-  #  - aws-database-rds-automatic-minor-version-upgrade-enabled.yaml
-  #  - aws-database-rds-instance-public-access-check.yaml
+  - aws-management-tools-cloudtrail-security-trail-enabled.yaml
+  - aws-management-tools-cloudtrail-s3-dataevents-enabled.yaml
+  - aws-compute-ec2-instance-detailed-monitoring-enabled.yaml
+  - aws-compute-ec2-imdsv2-check.yaml
+  - aws-management-tools-cloudwatch-alarm-action-check.yaml
+  - aws-application-services-sns-encrypted-kms.yaml
+  - aws-database-redshift-cluster-kms-enabled.yaml
+  - aws-storage-s3-bucket-default-lock-enabled.yaml
+  - aws-database-rds-logging-enabled.yaml
+  - aws-iam-and-security-iam-user-mfa-enabled.yaml
+  - aws-database-rds-multi-az-support.yaml
+  - aws-database-rds-instance-deletion-protection-enabled.yaml
+  - aws-big-data-and-analytics-elasticsearch-logs-to-cloudwatch.yaml
+  - aws-database-redshift-backup-enabled.yaml
+  - aws-database-rds-instance-iam-authentication-enabled.yaml
+  - aws-database-rds-cluster-iam-authentication-enabled.yaml
+  - aws-database-dynamodb-table-encrypted-kms.yaml
+  - aws-database-dynamodb-pitr-enabled.yaml
+  - aws-database-dynamodb-autoscaling-enabled.yaml
+  - aws-database-dynamodb-resources-protected-by-backup-plan.yaml
+  - aws-database-rds-enhanced-monitoring-enabled.yaml
+  - aws-database-rds-cluster-deletion-protection-enabled.yaml
+  - aws-database-dynamodb-table-encryption-enabled.yaml
+  - aws-database-rds-storage-encrypted.yaml
+  - aws-database-rds-snapshot-encrypted.yaml
+  - aws-database-rds-cluster-multi-az-enabled.yaml
+  - aws-database-rds-automatic-minor-version-upgrade-enabled.yaml
+  - aws-database-rds-instance-public-access-check.yaml
 version: 0.9

@@ -1,0 +1,22 @@
+ruleId: opnrvn-r-123
+type: asset
+ruleName: >
+  Ensure 'log_statement' database flag for Cloud SQL PostgreSQL instance is set appropriately
+description: >
+  The value of log_statement flag determined the SQL statements that are logged
+  The value ddl logs all data definition statements. The value mod logs all ddl statements, plus data-modifying statements.
+  A value of 'ddl' is recommended unless otherwise directed by your organization's logging policy.
+severity: medium # Could be defined by organisation
+enabled: true
+sql: >
+  SELECT acc.asset_id
+    FROM magpie.assets acc
+   WHERE resource_type = 'GCP::SQL::Instance'
+     AND acc."configuration" ->> 'databaseVersion' ILIKE 'POSTGRES%'
+     AND NOT EXISTS (
+      SELECT value
+        FROM jsonb_array_elements(acc."configuration" -> 'settings' -> 'databaseFlags')
+       WHERE value ->> 'name' = 'log_statement' AND value ->> 'value' = 'ddl'
+     )
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

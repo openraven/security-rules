@@ -1,0 +1,19 @@
+# id: 9a63958d-1d15-4e26-8604-2004b32c9be7
+ruleId: opnrvn-r-15
+type: asset
+ruleName: >
+  Ensure IAM password policy require at least one number
+description: >
+  Password policies are, in part, used to enforce password complexity requirements. IAM
+  password policies can be used to ensure password are comprised of different character
+  sets. It is recommended that the password policy require at least one number
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id
+  FROM magpie.assets
+  WHERE resource_type = 'AWS::IAM::Account'
+    AND (supplementary_configuration->'passwordPolicy' = 'null'
+         OR supplementary_configuration->'passwordPolicy'->'requireNumbers' = 'false');
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

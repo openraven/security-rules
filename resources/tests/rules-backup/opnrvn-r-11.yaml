@@ -1,0 +1,25 @@
+# id: 3f6d5049-58e9-4bf0-b653-989b0545537e
+ruleId: opnrvn-r-11
+type: asset
+ruleName: >
+  Ensure that GuardDuty enabled for required region
+description: >
+  By enabling GuardDuty you will get threat detection service that continuously monitors for
+  malicious activity and unauthorized behavior to protect your AWS accounts, workloads, and data stored in Amazon S3
+  by event logs analysis.
+  We are excluding verification for aws-global region from possible regions for GuardDuty
+severity: high
+enabled: true
+sql: >
+  SELECT 'No GuardDuty enabled in discovered region: ' || reg.region_global as asset_id
+    FROM (SELECT distinct region as region_global
+            FROM magpie.assets
+           WHERE region != 'aws-global') reg
+    LEFT JOIN (SELECT region
+                 FROM magpie.assets a
+                WHERE resource_type = 'AWS::GuardDuty::Detector'
+                  AND "configuration" ->> 'status' = 'ENABLED') a
+    ON (reg.region_global = a.region or region is null)
+  WHERE region is null
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

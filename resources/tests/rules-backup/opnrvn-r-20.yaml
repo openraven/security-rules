@@ -1,0 +1,19 @@
+# id: a992d086-cbd8-4c12-ac77-0fec98703037
+ruleId: opnrvn-r-20
+type: asset
+ruleName: >
+  Ensure IAM policies are attached only to groups or roles
+description: >
+  By default, IAM users, groups, and roles have no access to AWS resources. IAM policies are
+  the means by which privileges are granted to users, groups, or roles. It is recommended
+  that IAM policies be applied directly to groups and roles but not users.
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id
+  FROM assets
+  WHERE resource_type = 'AWS::IAM::User'
+    AND (supplementary_configuration->>'attachedPolicies' != '[]'
+         OR supplementary_configuration->>'userPolicies' != '[]');
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

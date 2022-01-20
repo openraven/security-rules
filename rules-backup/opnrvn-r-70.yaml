@@ -1,0 +1,22 @@
+ruleId: opnrvn-r-70
+type: asset
+ruleName: >
+  Ensure KMS encryption keys are rotated within a period of 90 days
+description: >
+  A key is used to protect some corpus of data.
+  A collection of files could be encrypted with the same key and people with decrypt permissions on that key would be able to decrypt those files.
+  Therefore, it's necessary to make sure the rotation period is set to a specific time
+  By default, KMS encryption keys are rotated every 90 days (7776000 seconds)
+severity: high
+enabled: true
+sql: >
+  SELECT acc.asset_id as asset_id
+    FROM magpie.assets acc,
+    LATERAL (
+        SELECT value -> 'rotationSchedule_' ->> 'seconds_' as kms_rotation
+        FROM jsonb_array_elements(supplementary_configuration -> 'keys')
+    ) arr
+   WHERE acc.resource_type = 'GCP::KMS::Keyring' AND CAST(arr.kms_rotation AS NUMERIC) > 7776000
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

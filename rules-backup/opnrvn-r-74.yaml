@@ -1,0 +1,17 @@
+ruleId: opnrvn-r-74
+type: asset
+ruleName: >
+  Ensure API keys are restricted to only APIs that application needs access
+description: >
+  Security risks involved in using API-Keys appear below:
+  - API keys are simple encrypted strings
+  - API keys do not identify the user or the application making the API request
+  - API keys are typically accessible to clients, making it easy to discover and steal an API key
+  In order to reduce attack surfaces by providing least privileges,
+  API-Keys can be restricted to use (call) only APIs required by an application.
+  By default, API restrictions are set to None.
+manualControl: true
+severity: high
+enabled: true
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

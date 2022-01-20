@@ -1,0 +1,221 @@
+# opnrvn-r-12
+ruleId: aws-iam-and-security-root-account-mfa-enabled
+cloudProvider: aws
+description: >
+  Insecure assets:
+   - `mfa-is-not-enabled` have no AccountMFAEnabled which violates the initial rule requirement
+   - `virtual-mfa-enabled` have AccountMFAEnabled which is passing the rule but virtualMFADevices serial number identify it as a virtual
+      so violating the rule since it requires to be hardware MFA for root account
+  Secure asset
+   - `openraven-max` have all access_key attributes up to date
+insecureAssets:
+  mfa-is-not-enabled: >
+    [{
+     "documentId" : "TITMEubnP1OlM84G7_GzZg",
+     "arn" : "AWS::IAM::Account",
+     "resourceName" : "mfa-is-not-enabled",
+     "resourceId" : null,
+     "resourceType" : "AWS::IAM::Account",
+     "awsRegion" : "aws-global",
+     "awsAccountId" : "723176279592",
+     "createdIso" : null,
+     "updatedIso" : "2021-10-18T13:52:55.983955Z",
+     "discoverySessionId" : null,
+     "maxSizeInBytes" : null,
+     "sizeInBytes" : null,
+     "configuration" : {
+       "GroupPolicySizeQuota" : 5120,
+       "InstanceProfilesQuota" : 1000,
+       "Policies" : 14,
+       "GroupsPerUserQuota" : 10,
+       "InstanceProfiles" : 6,
+       "AttachedPoliciesPerUserQuota" : 10,
+       "Users" : 2,
+       "PoliciesQuota" : 1500,
+       "Providers" : 2,
+       "AccountMFAEnabled" : 0,
+       "AccessKeysPerUserQuota" : 2,
+       "AssumeRolePolicySizeQuota" : 2048,
+       "PolicyVersionsInUseQuota" : 10000,
+       "GlobalEndpointTokenVersion" : 1,
+       "VersionsPerPolicyQuota" : 5,
+       "AttachedPoliciesPerGroupQuota" : 10,
+       "PolicySizeQuota" : 6144,
+       "Groups" : 3,
+       "AccountSigningCertificatesPresent" : 0,
+       "UsersQuota" : 5000,
+       "ServerCertificatesQuota" : 20,
+       "MFADevices" : 1,
+       "UserPolicySizeQuota" : 2048,
+       "PolicyVersionsInUse" : 51,
+       "ServerCertificates" : 0,
+       "Roles" : 61,
+       "RolesQuota" : 1000,
+       "SigningCertificatesPerUserQuota" : 2,
+       "MFADevicesInUse" : 1,
+       "RolePolicySizeQuota" : 10240,
+       "AttachedPoliciesPerRoleQuota" : 10,
+       "AccountAccessKeysPresent" : 0,
+       "GroupsQuota" : 300
+     },
+     "supplementaryConfiguration" : {
+       "PasswordPolicy" : null,
+       "virtualMFADevices" : {
+         "isTruncated" : false,
+         "marker" : null
+       }
+     },
+     "tags" : { },
+     "discoveryMeta" : { }
+    }]
+  virtual-mfa-enabled: >
+    [{
+     "documentId" : "TITMEubnP1OlM84G7_GzZg",
+     "arn" : "AWS::IAM::Account",
+     "resourceName" : "virtual-mfa-enabled",
+     "resourceId" : null,
+     "resourceType" : "AWS::IAM::Account",
+     "awsRegion" : "aws-global",
+     "awsAccountId" : "723176279592",
+     "createdIso" : null,
+     "updatedIso" : "2021-10-18T13:52:55.983955Z",
+     "discoverySessionId" : null,
+     "maxSizeInBytes" : null,
+     "sizeInBytes" : null,
+     "configuration" : {
+       "GroupPolicySizeQuota" : 5120,
+       "InstanceProfilesQuota" : 1000,
+       "Policies" : 14,
+       "GroupsPerUserQuota" : 10,
+       "InstanceProfiles" : 6,
+       "AttachedPoliciesPerUserQuota" : 10,
+       "Users" : 2,
+       "PoliciesQuota" : 1500,
+       "Providers" : 2,
+       "AccountMFAEnabled" : 1,
+       "AccessKeysPerUserQuota" : 2,
+       "AssumeRolePolicySizeQuota" : 2048,
+       "PolicyVersionsInUseQuota" : 10000,
+       "GlobalEndpointTokenVersion" : 1,
+       "VersionsPerPolicyQuota" : 5,
+       "AttachedPoliciesPerGroupQuota" : 10,
+       "PolicySizeQuota" : 6144,
+       "Groups" : 3,
+       "AccountSigningCertificatesPresent" : 0,
+       "UsersQuota" : 5000,
+       "ServerCertificatesQuota" : 20,
+       "MFADevices" : 1,
+       "UserPolicySizeQuota" : 2048,
+       "PolicyVersionsInUse" : 51,
+       "ServerCertificates" : 0,
+       "Roles" : 61,
+       "RolesQuota" : 1000,
+       "SigningCertificatesPerUserQuota" : 2,
+       "MFADevicesInUse" : 1,
+       "RolePolicySizeQuota" : 10240,
+       "AttachedPoliciesPerRoleQuota" : 10,
+       "AccountAccessKeysPresent" : 0,
+       "GroupsQuota" : 300
+     },
+     "supplementaryConfiguration" : {
+       "PasswordPolicy" : null,
+       "virtualMFADevices" : {
+         "virtualMFADevices" : [ {
+           "serialNumber" : "arn:aws:iam::723176279592:mfa/root-account-mfa-device",
+           "base32StringSeed" : null,
+           "qrCodePNG" : null,
+           "user" : {
+             "path" : null,
+             "userName" : "openraven-jason",
+             "userId" : "723176279592",
+             "arn" : "arn:aws:iam::723176279592:root",
+             "createDate" : "2019-12-06T23:39:32Z",
+             "passwordLastUsed" : "2021-01-03T02:24:22Z",
+             "permissionsBoundary" : null,
+             "tags" : null
+           },
+           "enableDate" : "2020-10-07T17:03:08Z"
+         } ],
+         "isTruncated" : false,
+         "marker" : null
+       }
+     },
+     "tags" : { },
+     "discoveryMeta" : { }
+    }]
+secureAssets:
+  hardware-mfa-enabled: >
+    [{
+     "documentId" : "TITMEubnP1OlM84G7_GzZg",
+     "arn" : "AWS::IAM::Account",
+     "resourceName" : "hardware-mfa-enabled",
+     "resourceId" : null,
+     "resourceType" : "AWS::IAM::Account",
+     "awsRegion" : "aws-global",
+     "awsAccountId" : "723176279592",
+     "createdIso" : null,
+     "updatedIso" : "2021-10-18T13:52:55.983955Z",
+     "discoverySessionId" : null,
+     "maxSizeInBytes" : null,
+     "sizeInBytes" : null,
+     "configuration" : {
+       "GroupPolicySizeQuota" : 5120,
+       "InstanceProfilesQuota" : 1000,
+       "Policies" : 14,
+       "GroupsPerUserQuota" : 10,
+       "InstanceProfiles" : 6,
+       "AttachedPoliciesPerUserQuota" : 10,
+       "Users" : 2,
+       "PoliciesQuota" : 1500,
+       "Providers" : 2,
+       "AccountMFAEnabled" : 1,
+       "AccessKeysPerUserQuota" : 2,
+       "AssumeRolePolicySizeQuota" : 2048,
+       "PolicyVersionsInUseQuota" : 10000,
+       "GlobalEndpointTokenVersion" : 1,
+       "VersionsPerPolicyQuota" : 5,
+       "AttachedPoliciesPerGroupQuota" : 10,
+       "PolicySizeQuota" : 6144,
+       "Groups" : 3,
+       "AccountSigningCertificatesPresent" : 0,
+       "UsersQuota" : 5000,
+       "ServerCertificatesQuota" : 20,
+       "MFADevices" : 1,
+       "UserPolicySizeQuota" : 2048,
+       "PolicyVersionsInUse" : 51,
+       "ServerCertificates" : 0,
+       "Roles" : 61,
+       "RolesQuota" : 1000,
+       "SigningCertificatesPerUserQuota" : 2,
+       "MFADevicesInUse" : 1,
+       "RolePolicySizeQuota" : 10240,
+       "AttachedPoliciesPerRoleQuota" : 10,
+       "AccountAccessKeysPresent" : 0,
+       "GroupsQuota" : 300
+     },
+     "supplementaryConfiguration" : {
+       "PasswordPolicy" : null,
+       "virtualMFADevices" : {
+         "virtualMFADevices" : [ {
+           "serialNumber" : "some-another-hardware-device-serial",
+           "base32StringSeed" : null,
+           "qrCodePNG" : null,
+           "user" : {
+             "path" : null,
+             "userName" : "openraven-jason",
+             "userId" : "723176279592",
+             "arn" : "arn:aws:iam::723176279592:root",
+             "createDate" : "2019-12-06T23:39:32Z",
+             "passwordLastUsed" : "2021-01-03T02:24:22Z",
+             "permissionsBoundary" : null,
+             "tags" : null
+           },
+           "enableDate" : "2020-10-07T17:03:08Z"
+         } ],
+         "isTruncated" : false,
+         "marker" : null
+       }
+     },
+     "tags" : { },
+     "discoveryMeta" : { }
+    }]

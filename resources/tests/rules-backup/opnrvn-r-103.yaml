@@ -1,0 +1,32 @@
+ruleId: opnrvn-r-103
+type: asset
+ruleName: >
+  Ensure that the log metric filter and alerts exist for Audit Configuration changes
+description: >
+  Admin activity and data access logs produced by cloud audit logging enable security analysis, resource change tracking, and compliance auditing.
+  Configuring the metric filter and alerts for audit configuration changes ensures the recommended state of audit configuration is maintained
+  so that all activities in the project are audit-able at any point in time.
+severity: high
+enabled: true
+sql: >
+  SELECT 'No log metric filter and alerts exist for Audit Configuration changes' AS asset_id
+  WHERE NOT EXISTS (
+      SELECT acc.asset_id
+        FROM magpie.assets acc
+       WHERE resource_type = 'GCP::Logging::Metric'
+         AND regexp_replace(acc."configuration" ->> 'filter_', E'[\\n\\r\\f\\u000B\\u0085\\u2028\\u2029]+', ' ', 'g') =
+             'protoPayload.methodName="SetIamPolicy" AND protoPayload.serviceData.policyDelta.auditConfigDeltas:*'
+         AND EXISTS (
+              SELECT alrt.asset_id, metric
+                FROM magpie.assets alrt,
+              LATERAL (
+                    SELECT value -> 'condition_' ->> 'filter_' as metric
+                    FROM jsonb_array_elements(alrt.configuration -> 'conditions_')
+              ) arr
+               WHERE alrt.resource_type = 'GCP::Monitoring::AlertPolicy'
+                 AND alrt."configuration" -> 'enabled_' ->> 'value_' = 'true'
+                 AND metric ILIKE '%'||acc.asset_id||'%'
+         )
+  )
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

@@ -1,0 +1,12 @@
+ruleId: opnrvn-r-72
+type: asset
+ruleName: >
+  Ensure API keys are not created for a project
+description: >
+  Keys are insecure because they can be viewed publicly, such as from within a browser, or they can be accessed on a device where the key resides.
+  It is recommended to use standard authentication flow instead.
+manualControl: true
+severity: high
+enabled: true
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

@@ -1,0 +1,225 @@
+ruleId: opnrvn-r-117
+description: >
+  Insecure Assets:
+    - `psql-or-test-invalid` is default setup which does not control the `log_checkpoints` property - hence violating it
+  Secure Assets:
+    - `psql-or-test-valid` secure asset disable this option - hence pass the rule
+insecureAssets:
+  psql-or-test-invalid: >
+    [{
+     "documentId" : "mxhhExM9OnOgmmvW_mQ7BA",
+     "assetId" : "psql-or-test-invalid",
+     "resourceName" : null,
+     "resourceId" : null,
+     "resourceType" : "GCP::SQL::Instance",
+     "region" : null,
+     "accountId" : null,
+     "projectId" : "oss-discovery-test",
+     "createdIso" : null,
+     "updatedIso" : "2021-10-04T14:47:36.084431Z",
+     "discoverySessionId" : null,
+     "maxSizeInBytes" : null,
+     "sizeInBytes" : null,
+     "configuration" : {
+       "backendType" : "SECOND_GEN",
+       "connectionName" : "oss-discovery-test:us-central1:psql-or-test-invalid",
+       "createTime" : "2021-09-27T15:49:02.033Z",
+       "databaseVersion" : "POSTGRES_13",
+       "etag" : "538ee3b1f895e7fe138783976779d96fe6b645b83e7640349c2bf96d712c506a",
+       "failoverReplica" : {
+         "available" : true
+       },
+       "gceZone" : "us-central1-c",
+       "instanceType" : "CLOUD_SQL_INSTANCE",
+       "ipAddresses" : [ {
+         "ipAddress" : "35.224.88.99",
+         "type" : "PRIMARY"
+       } ],
+       "kind" : "sql#instance",
+       "name" : "psql-or-test-invalid",
+       "project" : "oss-discovery-test",
+       "region" : "us-central1",
+       "secondaryGceZone" : "us-central1-f",
+       "selfLink" : "https://sqladmin.googleapis.com/v1/projects/oss-discovery-test/instances/psql-or-test-invalid",
+       "serviceAccountEmailAddress" : "p281989297013-corus9@gcp-sa-cloud-sql.iam.gserviceaccount.com",
+       "settings" : {
+         "activationPolicy" : "ALWAYS",
+         "authorizedGaeApplications" : [ ],
+         "availabilityType" : "REGIONAL",
+         "backupConfiguration" : {
+           "backupRetentionSettings" : {
+             "retainedBackups" : 7,
+             "retentionUnit" : "COUNT"
+           },
+           "enabled" : true,
+           "kind" : "sql#backupConfiguration",
+           "location" : "us",
+           "pointInTimeRecoveryEnabled" : true,
+           "replicationLogArchivingEnabled" : true,
+           "startTime" : "23:00",
+           "transactionLogRetentionDays" : 7
+         },
+         "dataDiskSizeGb" : 100,
+         "dataDiskType" : "PD_SSD",
+         "ipConfiguration" : {
+           "authorizedNetworks" : [ ],
+           "ipv4Enabled" : true
+         },
+         "kind" : "sql#settings",
+         "locationPreference" : {
+           "kind" : "sql#locationPreference",
+           "zone" : "us-central1-c"
+         },
+         "maintenanceWindow" : {
+           "day" : 0,
+           "hour" : 0,
+           "kind" : "sql#maintenanceWindow"
+         },
+         "pricingPlan" : "PER_USE",
+         "replicationType" : "SYNCHRONOUS",
+         "settingsVersion" : 6,
+         "storageAutoResize" : true,
+         "storageAutoResizeLimit" : 0,
+         "tier" : "db-custom-4-26624"
+       },
+       "state" : "RUNNABLE"
+     },
+     "supplementaryConfiguration" : { },
+     "tags" : { },
+     "discoveryMeta" : { }
+    }]
+secureAssets:
+  psql-or-test-valid: >
+    [{
+     "documentId" : "K2DyD2viPKKaxjMdc8undg",
+     "assetId" : "psql-or-test-valid",
+     "resourceName" : null,
+     "resourceId" : null,
+     "resourceType" : "GCP::SQL::Instance",
+     "region" : null,
+     "accountId" : null,
+     "projectId" : "oss-discovery-test",
+     "createdIso" : null,
+     "updatedIso" : "2021-10-04T14:47:36.082817Z",
+     "discoverySessionId" : null,
+     "maxSizeInBytes" : null,
+     "sizeInBytes" : null,
+     "configuration" : {
+       "backendType" : "SECOND_GEN",
+       "connectionName" : "oss-discovery-test:us-central1:psql-or-test-valid",
+       "createTime" : "2021-09-27T20:26:56.194Z",
+       "databaseVersion" : "POSTGRES_13",
+       "etag" : "6b5db462b8987af42aefdba20d01702fa19eb71bb2c12e794eb6b008e848a90b",
+       "failoverReplica" : {
+         "available" : true
+       },
+       "gceZone" : "us-central1-c",
+       "instanceType" : "CLOUD_SQL_INSTANCE",
+       "ipAddresses" : [ {
+         "ipAddress" : "10.156.176.7",
+         "type" : "PRIVATE"
+       } ],
+       "kind" : "sql#instance",
+       "name" : "psql-or-test-valid",
+       "project" : "oss-discovery-test",
+       "region" : "us-central1",
+       "secondaryGceZone" : "us-central1-f",
+       "selfLink" : "https://sqladmin.googleapis.com/v1/projects/oss-discovery-test/instances/psql-or-test-valid",
+       "serviceAccountEmailAddress" : "p281989297013-d9312n@gcp-sa-cloud-sql.iam.gserviceaccount.com",
+       "settings" : {
+         "activationPolicy" : "ALWAYS",
+         "authorizedGaeApplications" : [ ],
+         "availabilityType" : "REGIONAL",
+         "backupConfiguration" : {
+           "backupRetentionSettings" : {
+             "retainedBackups" : 7,
+             "retentionUnit" : "COUNT"
+           },
+           "enabled" : true,
+           "kind" : "sql#backupConfiguration",
+           "location" : "us",
+           "pointInTimeRecoveryEnabled" : true,
+           "replicationLogArchivingEnabled" : true,
+           "startTime" : "09:00",
+           "transactionLogRetentionDays" : 7
+         },
+         "dataDiskSizeGb" : 100,
+         "dataDiskType" : "PD_SSD",
+         "databaseFlags" : [ {
+           "name" : "log_checkpoints",
+           "value" : "on"
+         }, {
+           "name" : "log_error_verbosity",
+           "value" : "default"
+         }, {
+           "name" : "log_connections",
+           "value" : "on"
+         }, {
+           "name" : "log_disconnections",
+           "value" : "on"
+         }, {
+           "name" : "log_duration",
+           "value" : "on"
+         }, {
+           "name" : "log_lock_waits",
+           "value" : "on"
+         }, {
+           "name" : "log_statement",
+           "value" : "ddl"
+         }, {
+           "name" : "log_hostname",
+           "value" : "on"
+         }, {
+           "name" : "log_parser_stats",
+           "value" : "off"
+         }, {
+           "name" : "log_planner_stats",
+           "value" : "off"
+         }, {
+           "name" : "log_executor_stats",
+           "value" : "off"
+         }, {
+           "name" : "log_statement_stats",
+           "value" : "off"
+         }, {
+           "name" : "log_min_messages",
+           "value" : "error"
+         }, {
+           "name" : "log_min_error_statement",
+           "value" : "error"
+         }, {
+           "name" : "log_temp_files",
+           "value" : "0"
+         }, {
+           "name" : "log_min_duration_statement",
+           "value" : "-1"
+         } ],
+         "ipConfiguration" : {
+           "authorizedNetworks" : [ ],
+           "ipv4Enabled" : false,
+           "privateNetwork" : "projects/oss-discovery-test/global/networks/ossnetwork-1",
+           "requireSsl" : true
+         },
+         "kind" : "sql#settings",
+         "locationPreference" : {
+           "kind" : "sql#locationPreference",
+           "zone" : "us-central1-c"
+         },
+         "maintenanceWindow" : {
+           "day" : 0,
+           "hour" : 0,
+           "kind" : "sql#maintenanceWindow"
+         },
+         "pricingPlan" : "PER_USE",
+         "replicationType" : "SYNCHRONOUS",
+         "settingsVersion" : 18,
+         "storageAutoResize" : true,
+         "storageAutoResizeLimit" : 0,
+         "tier" : "db-custom-4-26624"
+       },
+       "state" : "RUNNABLE"
+     },
+     "supplementaryConfiguration" : { },
+     "tags" : { },
+     "discoveryMeta" : { }
+    }]

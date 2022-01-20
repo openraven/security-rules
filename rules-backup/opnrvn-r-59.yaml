@@ -1,0 +1,20 @@
+# id: 736137b1-565d-4615-9557-4c4c9749fe70
+ruleId: opnrvn-r-59
+type: asset
+ruleName: >
+  Ensure a support role has been created to manage incidents with AWS Support
+description: >
+  AWS provides a support center that can be used for incident notification and response, as
+  well as technical support and customer services. Create an IAM Role to allow authorized
+  users to manage incidents with AWS Support.
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id
+  FROM assets
+  WHERE resource_type = 'AWS::IAM::Policy'
+    AND resource_name = 'AWSSupportAccess'
+    AND configuration->>'attachmentCount' = '0';
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

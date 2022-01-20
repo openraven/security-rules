@@ -1,0 +1,25 @@
+# id: 16c679d8-f2c5-4753-80f7-8cbc08d0c5a2
+ruleId: opnrvn-r-6
+type: asset
+ruleName: >
+  Ensure AWS Config is enabled in all regions
+description: >
+  AWS Config is a web service that performs configuration management of supported AWS
+  resources within your account and delivers log files to you. The recorded information
+  includes the configuration item (AWS resource), relationships between configuration items
+  (AWS resources), any configuration changes between resources. It is recommended to
+  enable AWS Config be enabled in all region
+severity: high
+enabled: true
+sql: >
+  SELECT 'No global configuration recorder exists' AS asset_id
+  WHERE NOT EXISTS
+      (SELECT *
+       FROM magpie.aws
+       WHERE resourcetype = 'AWS::Config::ConfigurationRecorder'
+         AND configuration->'recordingGroup'->'allSupported' = 'true'
+         AND configuration->'recordingGroup'->'includeGlobalResourceTypes' = 'true'
+         AND supplementary_configuration->'status'->'recording' = 'true'
+         AND supplementary_configuration->'status'->>'lastStatus' = 'SUCCESS');
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

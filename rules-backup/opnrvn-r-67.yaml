@@ -1,0 +1,25 @@
+#id: fafe42dd-54bb-488e-b844-1537cf35a5f4
+ruleId: opnrvn-r-67
+type: asset
+ruleName: >
+  Ensure that Service Account has no Admin privilege
+description: >
+  Service accounts represent service-level security of the Resources (application or a VM) which can be determined by the roles assigned to it.
+  Enrolling ServiceAccount with Admin rights gives full access to an assigned application or a VM.
+  A ServiceAccount Access holder can perform critical actions like delete, update change settings, etc. without user intervention.
+  For this reason, it's recommended that service accounts not have Admin rights.
+severity: high
+enabled: true
+sql: >
+  SELECT members AS asset_id
+  FROM magpie.assets acc,
+  LATERAL (
+        SELECT value ->> 'role_' AS roles, jsonb_array_elements_text(value -> 'members_') AS members
+        FROM jsonb_array_elements(supplementary_configuration -> 'iamPolicy' -> 'bindings_')
+    ) arr
+  WHERE acc.resource_type = 'GCP::ResourceManager::Project'
+    AND members LIKE '%.gserviceaccount.com%'
+    AND roles ILIKE '%admin%'
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

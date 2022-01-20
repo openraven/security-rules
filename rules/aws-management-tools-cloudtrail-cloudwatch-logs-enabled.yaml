@@ -1,0 +1,27 @@
+# id: 3f2a6c76-edd8-4e6f-b0e1-5213acbfebda
+# opnrvn-r-60
+ruleId: aws-management-tools-cloudtrail-cloudwatch-logs-enabled
+type: asset
+ruleName: >
+  Ensure CloudTrail trails are integrated with CloudWatch Logs
+description: >
+  AWS CloudTrail is a web service that records AWS API calls made in a given AWS account.
+  The recorded information includes the identity of the API caller, the time of the API call, the
+  source IP address of the API caller, the request parameters, and the response elements
+  returned by the AWS service. CloudTrail uses Amazon S3 for log file storage and delivery,
+  so log files are stored durably. In addition to capturing CloudTrail logs within a specified S3
+  bucket for long term analysis, realtime analysis can be performed by configuring CloudTrail
+  to send logs to CloudWatch Logs. For a trail that is enabled in all regions in an account,
+  CloudTrail sends log files from all those regions to a CloudWatch Logs log group. It is
+  recommended that CloudTrail logs be sent to CloudWatch Logs
+severity: high
+enabled: true
+sql: >
+  SELECT arn
+  FROM magpie.awscloudtrailtrail
+  WHERE (supplementaryconfiguration->'trailDetails'->'trail'->'cloudWatchLogsLogGroupArn' = 'null'
+  OR supplementaryconfiguration->'status'->'latestCloudWatchLogsDeliveryTime' = 'null'
+  OR TO_TIMESTAMP(supplementaryconfiguration->'status'->>'latestCloudWatchLogsDeliveryTime', 'YYYY-MM-DD"T"HH24:MI:SS') < now() - interval '1 day');
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

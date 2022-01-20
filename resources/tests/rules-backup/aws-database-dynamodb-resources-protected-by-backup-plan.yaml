@@ -1,0 +1,15 @@
+# opnrvn-r-164
+ruleId: dynamodb-resources-protected-by-backup-plan
+type: asset
+ruleName: >
+  Checks if Amazon DynamoDB tables are protected by a backup plan.
+description: >
+  The rule is NON_COMPLIANT if the DynamoDB Table is not covered by a backup plan.
+severity: high
+enabled: true
+sql: >
+  select arn
+  FROM magpie.awsdynamodbtable
+  WHERE supplementaryconfiguration->>'awsBackupJobs' = '[]';
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

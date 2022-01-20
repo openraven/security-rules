@@ -1,0 +1,23 @@
+# id: 8706258d-c0cb-42fd-af28-b1ee42efd868
+ruleId: opnrvn-r-54
+type: asset
+ruleName: >
+  Ensure that S3 Bucket has MFA option enabled for changing Bucket Versioning settings and permanently deleting object versions
+description: >
+  S3 Buckets should be protected from ransomware attacks, by configuring versioning and MFA Delete,
+  in order to disallow immediate bucket content removal to encryption, or any other harmful modifications
+  Disabled versioning is also considered as violation by this rule since attacker may make the bucket vulnerable
+  by disabling object versioning with the s3:PutBucketVersioning permission
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id, supplementary_configuration -> 'versioning' ->> 'status'
+    FROM magpie.assets
+   WHERE resource_type = 'AWS::S3::Bucket'
+     AND (supplementary_configuration -> 'versioning' ->> 'status' is null
+        OR supplementary_configuration -> 'versioning' ->> 'status' <> 'Enabled'
+        OR supplementary_configuration -> 'versioning' ->> 'mfaDelete' is null
+        OR supplementary_configuration -> 'versioning' ->> 'mfaDelete' <> 'Enabled')
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

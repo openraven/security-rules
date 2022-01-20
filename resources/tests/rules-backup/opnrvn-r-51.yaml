@@ -1,0 +1,25 @@
+# id: 9ea14a0e-1319-47cb-a417-9553ffa50109
+ruleId: opnrvn-r-51
+type: asset
+ruleName: >
+  Ensure S3 bucket has no server-side encryption being enabled by another account
+description: >
+  S3 bucket policies allow uploaded files to be encrypted with AES256,
+  or forcing any uploaded file to be encrypted with a specific AWS KMS key.
+  In the case when a specified KMS Key belongs to a different account it leads to a high risk of encryption of the data
+  without the ability to decrypt it.
+severity: high
+enabled: true
+sql: >
+  SELECT s3bucket.asset_id
+    FROM magpie.assets s3bucket,
+    LATERAL (
+        SELECT value AS ssec
+        FROM jsonb_array_elements(s3bucket.supplementary_configuration -> 'serverSideEncryptionConfiguration' -> 'rules')
+    ) arr
+    WHERE s3bucket.resource_type = 'AWS::S3::Bucket'
+      AND arr.ssec -> 'applyServerSideEncryptionByDefault' ->> 'sseAlgorithm' = 'aws:kms'
+      AND arr.ssec -> 'applyServerSideEncryptionByDefault' ->> 'kmsMasterKeyID' NOT LIKE '%:'||s3bucket.account_id||':%'
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

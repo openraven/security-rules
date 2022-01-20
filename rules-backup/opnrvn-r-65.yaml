@@ -1,0 +1,14 @@
+#id: 419ab56b-0837-4bc8-a04d-b0e184dc2303
+ruleId: opnrvn-r-65
+type: asset
+ruleName: >
+  Ensure that multi-factor authentication is enabled for all non-service accounts
+description: >
+  Multi-factor authentication requires more than one mechanism to authenticate a user.
+  This secures user logins from attackers exploiting stolen or weak credentials.
+  By default, multi-factor authentication is not set.
+manualControl: true
+severity: high
+enabled: true
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

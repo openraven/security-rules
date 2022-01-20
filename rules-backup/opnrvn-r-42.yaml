@@ -1,0 +1,39 @@
+# id: 8f0d6f07-5c32-4a25-8b25-6ca4c2198197
+ruleId: opnrvn-r-42
+type: asset
+ruleName: >
+  Ensure IAM policies that allow full "*:*" administrative privileges
+  are not created
+description: >
+  IAM policies are the means by which privileges are granted to users, groups, or roles. It is
+  recommended and considered a standard security advice to grant least privilege—that is,
+  granting only the permissions required to perform a task. Determine what users need to do
+  and then craft policies for them that let the users perform only those tasks, instead of
+  allowing full administrative privileges.
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id
+  FROM magpie.aws
+  LEFT JOIN
+    (SELECT asset_id AS arn1,
+            jsonb_array_elements(CAST(assets.supplementary_configuration->'attachedPolicies'->>'policyDocument' as JSONB)->'Statement') AS statement1
+     FROM magpie.aws
+     WHERE resource_type = 'AWS::IAM::Policy'
+       AND jsonb_typeof(CAST(assets.supplementary_configuration->'attachedPolicies'->>'policyDocument' as JSONB) -> 'Statement') = 'array' ) multiple_statement_policies ON assets.asset_id = multiple_statement_policies.arn1
+  LEFT JOIN
+    (SELECT asset_id AS arn2,
+            CAST(assets.supplementary_configuration->'attachedPolicies'->>'policyDocument' as JSONB) ->'Statement' AS statement2
+     FROM magpie.aws
+     WHERE resource_type = 'AWS::IAM::Policy'
+       AND jsonb_typeof(CAST(assets.supplementary_configuration->'attachedPolicies'->>'policyDocument' AS JSONB) -> 'Statement') = 'object' ) single_statement_policies ON assets.asset_id = single_statement_policies.arn2
+  WHERE resource_type = 'AWS::IAM::Policy'
+    AND ((statement1->>'Effect' = 'Allow'
+          AND statement1->>'Action' = '*'
+          AND statement1->>'Resource' = '*')
+         OR (statement2->>'Effect' = 'Allow'
+             AND statement2->>'Action' = '*'
+             AND statement2->>'Resource' = '*'));
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

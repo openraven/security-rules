@@ -1,0 +1,18 @@
+# opnrvn-r-167
+ruleId: aws-database-dynamodb-table-encryption-enabled
+type: asset
+ruleName: >
+  Checks if the Amazon DynamoDB tables are encrypted and checks their status.
+description: >
+  The rule is COMPLIANT if the status is enabled or enabling.
+  ** Encryption by default on Amazon DynamoDB is enabled and cannot be disabled. **
+  ** DynamoDB transparently encrypts and decrypts all tables when they are written to disk. **
+  ** There is no option to enable or disable encryption at rest. **
+severity: high
+enabled: true
+sql: >
+  SELECT arn
+  FROM magpie.awsdynamodbtable
+  WHERE documentid = 'null';
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

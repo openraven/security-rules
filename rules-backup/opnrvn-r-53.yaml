@@ -1,0 +1,30 @@
+#id: b6b640be-94b6-40fb-8e69-0c3917ffeb4f
+ruleId: opnrvn-r-53
+type: asset
+ruleName: >
+  Ensure S3 bucket deny overriding of default KMS Key encryption
+description: >
+  Attackers which have S3:PutObject permission are still able to override default KMS Key encryption
+  on updating object operation with their own provided KMS Key, thus lead ransomware violation
+  Bucket owner should define policy to allow objects modification only using the defined default KMS Key,
+  which attack unlikely have permissions to change or modify
+severity: high
+enabled: true
+sql: >
+  SELECT s3bucket.asset_id
+    FROM magpie.assets s3bucket
+    JOIN LATERAL (
+        SELECT value AS ssec
+        FROM jsonb_array_elements(s3bucket.supplementary_configuration -> 'serverSideEncryptionConfiguration' -> 'rules')
+    ) arr ON true
+    JOIN LATERAL (
+        SELECT value AS stmt
+        FROM jsonb_array_elements(s3bucket.supplementary_configuration -> 'bucketPolicy' -> 'Statement')
+    ) policy ON true
+    WHERE s3bucket.resource_type = 'AWS::S3::Bucket'
+    AND policy.stmt ->> 'Action' LIKE '%s3:PutObject%'
+    AND (policy.stmt ->> 'Condition' IS NULL
+          OR policy.stmt ->> 'Condition' not like '%x-amz-server-side-encryption-aws-kms-key-id%')
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

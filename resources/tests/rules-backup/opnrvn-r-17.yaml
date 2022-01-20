@@ -1,0 +1,19 @@
+# id: a26f7700-3552-4845-8f9b-361d733c2bb0
+ruleId: opnrvn-r-17
+type: asset
+ruleName: >
+  Ensure IAM password policy requires at least one lowercase letter
+description: >
+  Password policies are, in part, used to enforce password complexity requirements. IAM
+  password policies can be used to ensure password are comprised of different character
+  sets. It is recommended that the password policy require at least one lowercase letter
+severity: high
+enabled: true
+sql: >
+  SELECT asset_id
+  FROM magpie.assets
+  WHERE resource_type = 'AWS::IAM::Account'
+    AND (supplementary_configuration->'passwordPolicy' = 'null'
+         OR supplementary_configuration->'passwordPolicy'->'requireLowercaseCharacters' = 'false');
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
