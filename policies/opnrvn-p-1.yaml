@@ -7,7 +7,7 @@ description: >
 enabled: true
 rules:
   - aws-iam-and-security-ensure-security-questions-registered.yaml
-  # - opnrvn-r-2.yaml
+  #- aws-iam-and-security-iam-root.yaml
   - aws-management-tools-cloudtrail-enabled-all-regions.yaml
   - aws-storage-s3-default-encryption-kms.yaml
   - aws-management-tools-cloudtrail-log-file-validation-enabled.yaml

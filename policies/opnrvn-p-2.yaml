@@ -6,7 +6,7 @@ description: >
   Google Cloud Security Best Practices analyzes accounts for security best practices and is modelled on guidance published by the Center for Information Security.
 enabled: true
 rules:
-  - opnrvn-r-124.yaml
+   - opnrvn-r-124.yaml
 #  - opnrvn-r-62.yaml # CIS 1.6 -- IAM
 #  - opnrvn-r-63.yaml # CIS 1.4
 #  - opnrvn-r-64.yaml # CIS 1.7
@@ -70,7 +70,7 @@ rules:
 #  - opnrvn-r-121.yaml # CIS 6.2.5
 #  - opnrvn-r-122.yaml # CIS 6.2.6
 #  - opnrvn-r-123.yaml # CIS 6.2.7
-#  - opnrvn-r-124.yaml # CIS 6.2.8
+#   - gcp-database-sql-log-hostname-flag.yaml # CIS 6.2.8
 #  - opnrvn-r-125.yaml # CIS 6.2.9
 #  - opnrvn-r-126.yaml # CIS 6.2.10
 #  - opnrvn-r-127.yaml # CIS 6.2.11
@@ -88,6 +88,6 @@ rules:
 #  - opnrvn-r-139.yaml # CIS 6.3.7
 #  - opnrvn-r-140.yaml # CIS 6.4  <- Generic SQL Database rules
 #  - opnrvn-r-141.yaml # CIS 6.5
-#  - opnrvn-r-142.yaml # CIS 6.6
+#   - gcp-database-sql-public-ip.yaml # CIS 6.6
 #  - opnrvn-r-143.yaml # CIS 6.7
 version: 0.9
