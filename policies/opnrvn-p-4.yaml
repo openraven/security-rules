@@ -7,22 +7,20 @@ description: >
 enabled: true
 rules:
 # rules for logging
-#  - aws-storage-s3-sql-file-present.yaml
-- aws-compute-ec2-instance-detailed-monitoring-enabled.yaml
-#  - opnrvn-r-49.yaml
-#  - opnrvn-r-60.yaml
-#  - opnrvn-r-4.yaml
-#  - opnrvn-r-5.yaml
-#  - opnrvn-r-10.yaml
-#  - opnrvn-r-3.yaml
-#  - opnrvn-r-37.yaml
+  - aws-management-tools-ensure-s3-bucket-access-logging-is-enabled-on-cloudtrail-s3-bucket.yaml
+  - aws-management-tools-cloudtrail-cloudwatch-logs-enabled.yaml
+  - aws-management-tools-cloudtrail-log-file-validation-enabled.yaml
+  - aws-management-tools-cloudtrail-encryption-enabled.yaml
+  - aws-network-and-content-delivery-vpc-flow-logs-enabled.yaml
+  - aws-management-tools-cloudtrail-enabled-all-regions.yaml
+  - aws-management-tools-cloudtrail-log-metric-filter-and-alarm-exist-for-unauthorized-api-calls.yaml
 #  - opnrvn-r-28.yaml
-#  - opnrvn-r-33.yaml
-#  - opnrvn-r-31.yaml
-#  - opnrvn-r-27.yaml
+  - aws-management-tools-cloudtrail-metric-filter-and-alarm-exist-for-root-account-usage.yaml
+  - aws-management-tools-cloudtrail-log-metric-filter-and-alaram-exist-for-iam-policy-changes.yaml
+  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-cloudtrail-config-changes.yaml
 #  - opnrvn-r-26.yaml
-#  - opnrvn-r-29.yaml
-#  - opnrvn-r-35.yaml
+  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alaram-exist-for-disabling-or-deleting-CMKs.yaml
+  - aws-management-tools-cloudtrail-log-metric-filter-and-alarm-exist-for-s3-policy-changes.yaml
 #  - opnrvn-r-36.yaml
 #  - opnrvn-r-32.yaml
 #  - opnrvn-r-30.yaml
