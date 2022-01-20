@@ -1,0 +1,18 @@
+# opnrvn-r-135
+ruleId: gcp-database-ensure-user-connections-db-flag-for-cloud-sql-server-instances-is-set-as-appropriate
+type: asset
+ruleName: >
+  Ensure 'user connections' database flag for Cloud SQL SQL Server instance is set as appropriate
+description: >
+  The user connections option specifies the maximum number of simultaneous user connections that are allowed on an instance of SQL Server.
+  The actual number of user connections allowed also depends on the version of SQL Server that you are using,
+  and also the limits of your application or applications and hardware. SQL Server allows a maximum of 32,767 user connections.
+  Because user connections is a dynamic (self-configuring) option,
+  SQL Server adjusts the maximum number of user connections automatically as needed, up to the maximum value allowable.
+  In most cases, you do not have to change the value for this option.
+  The default is 0, which means that the maximum (32,767) user connections are allowed.
+manualControl: true # Appropriate value should be defined by organisation policy
+severity: medium
+enabled: true
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
