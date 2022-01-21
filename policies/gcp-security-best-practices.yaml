@@ -1,5 +1,5 @@
 # vid: d8792397-239e-4028-9539-7b3771ba929f
-policyId: opnrvn-p-2
+policyId: gcp-security-best-practices
 policyName:  Google Cloud Security Best Practices
 cloudProvider: GCP
 description: >

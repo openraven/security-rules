@@ -1,5 +1,5 @@
 # id: 3b08bd0c-d0c6-429f-b5c6-b155786f2966
-policyId: opnrvn-p-4
+policyId: aws-ransomware-recovery
 policyName: AWS Ransomware Recovery
 cloudProvider: AWS
 description: >
