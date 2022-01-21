@@ -1,0 +1,25 @@
+# opnrvn-r-133
+ruleId: gcp-database-ensure-external-scripts-enabled-db-flag-for-cloud-sql-server-instance-is-set-to-off
+type: asset
+ruleName: >
+  Ensure 'external scripts enabled' database flag for Cloud SQL SQL Server instance is set to 'off'
+description: >
+  external scripts enabled enable the execution of scripts with certain remote language extensions.
+  This property is OFF by default.
+  When Advanced Analytics Services is installed, setup can optionally set this property to true.
+  As the External Scripts Enabled feature allows scripts external to SQL such as files located in an R library to be executed,
+  which could adversely affect the security of the system, hence this should be disabled.
+severity: high
+enabled: true
+sql: >
+  SELECT acc.assetid
+    FROM magpie.gcpsqlinstance acc
+   WHERE resourcetype = 'GCP::SQL::Instance'
+     AND acc."configuration" ->> 'databaseVersion' ILIKE 'SQLSERVER%'
+     AND NOT EXISTS (
+      SELECT value
+        FROM jsonb_array_elements(acc."configuration" -> 'settings' -> 'databaseFlags')
+       WHERE value ->> 'name' = 'external scripts enabled' AND value ->> 'value' = 'off'
+     )
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

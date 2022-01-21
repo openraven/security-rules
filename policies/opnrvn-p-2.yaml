@@ -15,7 +15,7 @@ rules:
    - gcp-api-keys.yaml
    - gcp-api-restricted-access.yaml
    - gcp-storage-cloud-bucket-public-access.yaml
-   - gcp-networking-and-content-delivery-default-network.yaml # CIS 3.1 -- Network
+   - gcp-networking-and-content-delivery-default-network.yaml 
    - gcp-networking-cloud-dns-dnssec.yaml
    - gcp-networking-and-content-delivery-cloud-dns-rsasha.yaml
    - gcp-networking-and-content-delivery-rdp-access.yaml
@@ -30,6 +30,13 @@ rules:
    - gcp-management-tools-log-alerts-project.yaml
    - gcp-management-tools-log-alert-custom-role.yaml
    - gcp-monitoring-tools-log-alerts-vpc.yaml
+   - gcp-iam-and-security-log-filter-and-alerts.yaml
+   - gcp-networking-cloud-dns-logging.yaml
+   - gcp-big-data-and-advanced-analytics-cmek-encrypted.yaml
+   - gcp-database-sql-mysql-admin.yaml
+   - gcp-database-sql-local-infile.yaml
+   - gcp-database-sql-log-error-verbosity.yaml
+
 #  - opnrvn-r-62.yaml # CIS 1.6 -- IAM
 #  - opnrvn-r-63.yaml # CIS 1.4
 #  - opnrvn-r-64.yaml # CIS 1.7

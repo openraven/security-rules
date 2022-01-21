@@ -1,0 +1,19 @@
+# opnrvn-r-77
+ruleId: gcp-storage-buckets-have-uniform-bucket-level-access-enabled
+type: asset
+ruleName: >
+  Ensure that Cloud Storage buckets have uniform bucket-level access enabled
+description: >
+  Cloud Storage has uniform bucket- level access.
+  Using this feature disables ACLs for all Cloud Storage resources: access to Cloud Storage resources then is granted exclusively through Cloud IAM.
+  Enabling uniform bucket-level access guarantees that if a Storage bucket is not publicly accessible, no object in the bucket is publicly accessible either.
+severity: high
+enabled: true
+sql: >
+  SELECT acc.assetid
+    FROM magpie.gcpstoragebucket acc
+   WHERE acc.resourcetype = 'GCP::Storage::Bucket'
+     AND configuration -> 'iamConfiguration' ->> 'isUniformBucketLevelAccessEnabled' = 'false'
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

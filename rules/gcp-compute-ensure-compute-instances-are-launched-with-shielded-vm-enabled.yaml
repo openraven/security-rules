@@ -1,0 +1,22 @@
+# opnrvn-r-95
+ruleId: gcp-compute-ensure-compute-instances-are-launched-with-shielded-vm-enabled
+type: asset
+ruleName: >
+  Ensure Compute instances are launched with Shielded VM enabled
+description: >
+  To defend against against advanced threats and ensure that the boot loader and firmware on your VMs are signed and untampered,
+  it is recommended that Compute instances are launched with Shielded VM enabled.
+severity: high
+enabled: true
+sql: >
+  SELECT acc.assetid
+    FROM magpie.gcpcomputeinstance acc
+    WHERE acc.resourcetype = 'GCP::ComputeEngine::Instance'
+      AND ("configuration" ->> 'shieldedInstanceConfig' IS NULL
+        OR "configuration" -> 'shieldedInstanceConfig' ->> 'enableVtpm' IS NULL
+        OR "configuration" -> 'shieldedInstanceConfig' ->> 'enableVtpm' = 'false'
+        OR "configuration" -> 'shieldedInstanceConfig' ->> 'enableIntegrityMonitoring' IS NULL
+        OR "configuration" -> 'shieldedInstanceConfig' ->> 'enableIntegrityMonitoring' = 'false');
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
