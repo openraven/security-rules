@@ -1,0 +1,22 @@
+ruleId: gcp-compute-vm-project-ssh-keys
+type: asset
+ruleName: >
+  Ensure "Block Project-wide SSH keys" is enabled for VM instances
+description: >
+  It is recommended to use Instance specific SSH key(s) instead of using common/shared project-wide SSH key(s) to access Instances.
+  By Default Block Project-wide SSH keys is not enabled.
+severity: high
+enabled: true
+sql: >
+  SELECT acc.assetid
+    FROM magpie.gcp acc
+   WHERE acc.resourcetype = 'GCP::ComputeEngine::Instance'
+   AND NOT EXISTS
+          (SELECT value as val
+             FROM jsonb_array_elements("configuration" -> 'metadata' -> 'items')
+            WHERE value ->> 'key' = 'block-project-ssh-keys'
+              AND value ->> 'value' = 'true'
+          )
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

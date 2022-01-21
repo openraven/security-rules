@@ -1,0 +1,246 @@
+ruleId: gcp-management-tools-sinks-enabled
+cloudProvider: gcp
+description: >
+  Insecure Assets:
+   - `disabled-sink` - have configured destination and empty filter but disabled - hence violating
+   - `no-destination-sink` - have empty filter and enabled but have empty destination - hence violating
+   - `non-empty-filter` - has correct filter and have bounded alert policy - hence passing the rule
+  Secure asset
+   - `empty-filter` have configured destination, enabled and empty filter which will gather logs from all sources
+insecureAssets:
+  No active empty Logging Sink found with configured destination: >
+    [{
+     "documentId" : "H0WEDcGAOjSEafGutx0sdf",
+     "assetId" : "disabled-sink",
+     "resourceName" : null,
+     "resourceId" : null,
+     "resourceType" : "GCP::Logging::Sink",
+     "region" : null,
+     "gcpAccountId" : null,
+     "projectId" : "oss-discovery-test",
+     "createdIso" : null,
+     "updatedIso" : "2021-10-04T14:48:09.241071Z",
+     "discoverySessionId" : null,
+     "maxSizeInBytes" : null,
+     "sizeInBytes" : null,
+     "configuration" : {
+       "optionsCase_" : 0,
+       "name_" : "disabled-sink",
+       "destination_" : "storage.googleapis.com/or-unlocked-bucket",
+       "filter_" : "",
+       "description_" : "",
+       "disabled_" : true,
+       "exclusions_" : [ ],
+       "outputVersionFormat_" : 0,
+       "writerIdentity_" : "serviceAccount:p281989297013-737466@gcp-sa-logging.iam.gserviceaccount.com",
+       "includeChildren_" : false,
+       "createTime_" : {
+         "seconds_" : 1632147492,
+         "nanos_" : 905963492,
+         "memoizedIsInitialized" : -1,
+         "unknownFields" : {
+           "fields" : { },
+           "fieldsDescending" : { }
+         },
+         "memoizedSize" : -1,
+         "memoizedHashCode" : 0
+       },
+       "updateTime_" : {
+         "seconds_" : 1632347384,
+         "nanos_" : 946200164,
+         "memoizedIsInitialized" : -1,
+         "unknownFields" : {
+           "fields" : { },
+           "fieldsDescending" : { }
+         },
+         "memoizedSize" : -1,
+         "memoizedHashCode" : 0
+       },
+       "memoizedIsInitialized" : -1,
+       "unknownFields" : {
+         "fields" : { },
+         "fieldsDescending" : { }
+       },
+       "memoizedSize" : -1,
+       "memoizedHashCode" : 0
+     },
+     "supplementaryConfiguration" : { },
+     "tags" : { },
+     "discoveryMeta" : { }
+    }, {
+      "documentId" : "H0WEDcGAOjSEafGutx0cvb",
+      "assetId" : "no-destination-sink",
+      "resourceName" : null,
+      "resourceId" : null,
+      "resourceType" : "GCP::Logging::Sink",
+      "region" : null,
+      "gcpAccountId" : null,
+      "projectId" : "oss-discovery-test",
+      "createdIso" : null,
+      "updatedIso" : "2021-10-04T14:48:09.241071Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "optionsCase_" : 0,
+        "name_" : "no-destination-sink",
+        "filter_" : "",
+        "description_" : "",
+        "disabled_" : false,
+        "exclusions_" : [ ],
+        "outputVersionFormat_" : 0,
+        "writerIdentity_" : "serviceAccount:p281989297013-737466@gcp-sa-logging.iam.gserviceaccount.com",
+        "includeChildren_" : false,
+        "createTime_" : {
+          "seconds_" : 1632147492,
+          "nanos_" : 905963492,
+          "memoizedIsInitialized" : -1,
+          "unknownFields" : {
+            "fields" : { },
+            "fieldsDescending" : { }
+          },
+          "memoizedSize" : -1,
+          "memoizedHashCode" : 0
+        },
+        "updateTime_" : {
+          "seconds_" : 1632347384,
+          "nanos_" : 946200164,
+          "memoizedIsInitialized" : -1,
+          "unknownFields" : {
+            "fields" : { },
+            "fieldsDescending" : { }
+          },
+          "memoizedSize" : -1,
+          "memoizedHashCode" : 0
+        },
+        "memoizedIsInitialized" : -1,
+        "unknownFields" : {
+          "fields" : { },
+          "fieldsDescending" : { }
+        },
+        "memoizedSize" : -1,
+        "memoizedHashCode" : 0
+      },
+      "supplementaryConfiguration" : { },
+      "tags" : { },
+      "discoveryMeta" : { }
+    }, {
+       "documentId" : "H0WEDcGAOjSEafGutx0ghg",
+       "assetId" : "non-empty-filter",
+       "resourceName" : null,
+       "resourceId" : null,
+       "resourceType" : "GCP::Logging::Sink",
+       "region" : null,
+       "gcpAccountId" : null,
+       "projectId" : "oss-discovery-test",
+       "createdIso" : null,
+       "updatedIso" : "2021-10-04T14:48:09.241071Z",
+       "discoverySessionId" : null,
+       "maxSizeInBytes" : null,
+       "sizeInBytes" : null,
+       "configuration" : {
+         "optionsCase_" : 0,
+         "name_" : "non-empty-filter",
+         "destination_" : "storage.googleapis.com/or-unlocked-bucket",
+         "filter_" : "some source filtering",
+         "description_" : "",
+         "disabled_" : false,
+         "exclusions_" : [ ],
+         "outputVersionFormat_" : 0,
+         "writerIdentity_" : "serviceAccount:p281989297013-737466@gcp-sa-logging.iam.gserviceaccount.com",
+         "includeChildren_" : false,
+         "createTime_" : {
+           "seconds_" : 1632147492,
+           "nanos_" : 905963492,
+           "memoizedIsInitialized" : -1,
+           "unknownFields" : {
+             "fields" : { },
+             "fieldsDescending" : { }
+           },
+           "memoizedSize" : -1,
+           "memoizedHashCode" : 0
+         },
+         "updateTime_" : {
+           "seconds_" : 1632347384,
+           "nanos_" : 946200164,
+           "memoizedIsInitialized" : -1,
+           "unknownFields" : {
+             "fields" : { },
+             "fieldsDescending" : { }
+           },
+           "memoizedSize" : -1,
+           "memoizedHashCode" : 0
+         },
+         "memoizedIsInitialized" : -1,
+         "unknownFields" : {
+           "fields" : { },
+           "fieldsDescending" : { }
+         },
+         "memoizedSize" : -1,
+         "memoizedHashCode" : 0
+       },
+       "supplementaryConfiguration" : { },
+       "tags" : { },
+       "discoveryMeta" : { }
+    }]
+secureAssets:
+  empty-filter: >
+    [{
+     "documentId" : "ouSCKpgzMoOjn3tgrPheyQ",
+     "assetId" : "empty-filter",
+     "resourceName" : null,
+     "resourceId" : null,
+     "resourceType" : "GCP::Logging::Sink",
+     "region" : null,
+     "gcpAccountId" : null,
+     "projectId" : "oss-discovery-test",
+     "createdIso" : null,
+     "updatedIso" : "2021-10-04T14:48:09.239800Z",
+     "discoverySessionId" : null,
+     "maxSizeInBytes" : null,
+     "sizeInBytes" : null,
+     "configuration" : {
+       "optionsCase_" : 0,
+       "name_" : "empty",
+       "destination_" : "logging.googleapis.com/projects/oss-discovery-test/locations/global/buckets/_Default",
+       "filter_" : "",
+       "description_" : "or test",
+       "disabled_" : false,
+       "exclusions_" : [ ],
+       "outputVersionFormat_" : 0,
+       "writerIdentity_" : "",
+       "includeChildren_" : false,
+       "createTime_" : {
+         "seconds_" : 1632141725,
+         "nanos_" : 576186944,
+         "memoizedIsInitialized" : -1,
+         "unknownFields" : {
+           "fields" : { },
+           "fieldsDescending" : { }
+         },
+         "memoizedSize" : -1,
+         "memoizedHashCode" : 0
+       },
+       "updateTime_" : {
+         "seconds_" : 1632141725,
+         "nanos_" : 576186944,
+         "memoizedIsInitialized" : -1,
+         "unknownFields" : {
+           "fields" : { },
+           "fieldsDescending" : { }
+         },
+         "memoizedSize" : -1,
+         "memoizedHashCode" : 0
+       },
+       "memoizedIsInitialized" : -1,
+       "unknownFields" : {
+         "fields" : { },
+         "fieldsDescending" : { }
+       },
+       "memoizedSize" : -1,
+       "memoizedHashCode" : 0
+     },
+     "supplementaryConfiguration" : { },
+     "tags" : { },
+     "discoveryMeta" : { }
+    }]

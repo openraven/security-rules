@@ -6,5 +6,5 @@ description: >
   The AWS Ransomware Indicators of Compromise policy analyzes accounts for signs that a ransomware attack has already taken place.
 enabled: true
 rules:
-  - opnrvn-r-53.yaml
+  - aws-storage-s3-bucket-deny-overriding-of-default-kms-key-encryption.yaml
 version: 0.9

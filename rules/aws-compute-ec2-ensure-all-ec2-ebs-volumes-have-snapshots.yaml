@@ -1,0 +1,27 @@
+# id: 1f4045c2-739b-413f-80db-cf4d560835a1
+# opnrvn-r-9
+ruleId: aws-compute-ec2-ensure-all-ec2-ebs-volumes-have-snapshots
+type: asset
+ruleName: >
+  Ensure all EC2 EBS Volumes has snapshots
+description: >
+  Availability of the snapshot could prevent data lose and will simplify restoring in case of data encryption
+  Current rule check existence of Snapshots for EBS Volumes of running EC2 instances
+severity: high
+enabled: true
+sql: >
+  SELECT DISTINCT ec2.arn
+  FROM magpie.awsec2instance ec2,
+  LATERAL (
+      SELECT value -> 'ebs' AS ebs_device
+      FROM jsonb_array_elements(configuration -> 'blockDeviceMappings')
+  ) arr
+  LEFT JOIN magpie.awsec2snapshot snap
+  ON (snap.resourcetype = 'AWS::EC2::Snapshot'
+      AND arr.ebs_device ->> 'volumeId' = snap.configuration ->> 'volumeId')
+  WHERE ec2.resourcetype = 'AWS::EC2::Instance'
+  AND ec2.configuration -> 'state' ->> 'name' = 'running'
+  AND arr.ebs_device ->> 'status' = 'attached'
+  AND snap.configuration ->> 'snapshotId' is null
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

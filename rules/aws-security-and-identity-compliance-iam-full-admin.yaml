@@ -1,0 +1,38 @@
+# id: 8f0d6f07-5c32-4a25-8b25-6ca4c2198197
+ruleId: aws-security-and-identity-compliance-iam-full-admin
+type: asset
+ruleName: >
+  Ensure IAM policies that allow full "*:*" administrative privileges
+  are not created
+description: >
+  IAM policies are the means by which privileges are granted to users, groups, or roles. It is
+  recommended and considered a standard security advice to grant least privilege—that is,
+  granting only the permissions required to perform a task. Determine what users need to do
+  and then craft policies for them that let the users perform only those tasks, instead of
+  allowing full administrative privileges.
+severity: high
+enabled: true
+sql: >
+  SELECT arn
+  FROM magpie.awsiampolicy
+  LEFT JOIN
+    (SELECT arn AS arn1,
+            jsonb_array_elements(CAST(magpie.awsiampolicy.supplementaryconfiguration->'attachedPolicies'->>'policyDocument' as JSONB)->'Statement') AS statement1
+     FROM magpie.awsiampolicy
+     WHERE resource_type = 'AWS::IAM::Policy'
+       AND jsonb_typeof(CAST(magpie.awsiampolicy.supplementaryconfiguration->'attachedPolicies'->>'policyDocument' as JSONB) -> 'Statement') = 'array' ) multiple_statement_policies ON magpie.awsiampolicy.arn = multiple_statement_policies.arn1
+  LEFT JOIN
+    (SELECT arn AS arn2,
+            CAST(magpie.awsiampolicy.supplementaryconfiguration->'attachedPolicies'->>'policyDocument' as JSONB) ->'Statement' AS statement2
+     FROM magpie.awsiampolicy
+       AND jsonb_typeof(CAST(assets.supplementary_configuration->'attachedPolicies'->>'policyDocument' AS JSONB) -> 'Statement') = 'object' ) single_statement_policies ON magpie.awsiampolicy.arn = single_statement_policies.arn2
+  WHERE resourcetype = 'AWS::IAM::Policy'
+    AND ((statement1->>'Effect' = 'Allow'
+          AND statement1->>'Action' = '*'
+          AND statement1->>'Resource' = '*')
+         OR (statement2->>'Effect' = 'Allow'
+             AND statement2->>'Action' = '*'
+             AND statement2->>'Resource' = '*'));
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

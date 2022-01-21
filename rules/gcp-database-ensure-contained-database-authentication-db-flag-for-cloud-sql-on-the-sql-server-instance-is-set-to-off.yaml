@@ -1,0 +1,28 @@
+# opnrvn-r-139
+ruleId: gcp-database-ensure-contained-database-authentication-db-flag-for-cloud-sql-on-the-sql-server-instance-is-set-to-off
+type: asset
+ruleName: >
+  Ensure that the 'contained database authentication' database flag for Cloud SQL on the SQL Server instance is set to 'off'
+description: >
+  A contained database includes all database settings and metadata required to define the database
+  and has no configuration dependencies on the instance of the Database Engine where the database is installed.
+  Users can connect to the database without authenticating a login at the Database Engine level.
+  Isolating the database from the Database Engine makes it possible to easily move the database to another instance of SQL Server.
+  Contained databases have some unique threats that should be understood and mitigated by SQL Server Database Engine administrators.
+  Most of the threats are related to the USER WITH PASSWORD authentication process,
+  which moves the authentication boundary from the Database Engine level to the database level,
+  hence this is recommended to disable this flag.
+severity: high
+enabled: true
+sql: >
+  SELECT acc.assetid
+    FROM magpie.gcpsqlinstance acc
+   WHERE resourcetype = 'GCP::SQL::Instance'
+     AND acc."configuration" ->> 'databaseVersion' ILIKE 'SQLSERVER%'
+     AND NOT EXISTS (
+      SELECT value
+        FROM jsonb_array_elements(acc."configuration" -> 'settings' -> 'databaseFlags')
+       WHERE value ->> 'name' = 'contained database authentication' AND value ->> 'value' = 'off'
+     )
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

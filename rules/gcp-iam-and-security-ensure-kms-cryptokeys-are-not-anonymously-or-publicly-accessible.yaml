@@ -1,0 +1,24 @@
+# opnrvn-r-69
+ruleId: gcp-iam-and-security-ensure-kms-cryptokeys-are-not-anonymously-or-publicly-accessible
+type: asset
+ruleName: >
+  Ensure that Cloud KMS cryptokeys are not anonymously or publicly accessible
+description: >
+  Granting permissions to allUsers or allAuthenticatedUsers allows anyone to access the dataset.
+  Such access might not be desirable if sensitive data is stored at the location.
+  In this case, ensure that anonymous and/or public access to a Cloud KMS cryptokey is not allowed.
+severity: high
+enabled: true
+sql: >
+  SELECT acc.assetid
+    FROM magpie.gcpkmskeyring acc,
+  LATERAL (
+      SELECT value -> 'cryptoKey' as cryptoKey, jsonb_array_elements(value -> 'policy' -> 'bindings_') as policy
+      FROM jsonb_array_elements(supplementaryconfiguration -> 'keys')
+    ) arr
+  WHERE acc.resourcetype = 'GCP::KMS::Keyring'
+    AND EXISTS (SELECT value
+                  FROM jsonb_array_elements_text(arr.policy -> 'members_')
+                 WHERE value like '%allUsers%' OR value like '%allAuthenticatedUsers%');
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

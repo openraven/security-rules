@@ -1,0 +1,22 @@
+ruleId: gcp-database-sql-log-statement-flag
+type: asset
+ruleName: >
+  Ensure 'log_statement_stats' database flag for Cloud SQL PostgreSQL instance is set to 'off'
+description: >
+  The log_statement_stats flag enables a crude profiling method for logging end to end performance statistics of a SQL query.
+  This can be useful for troubleshooting but may increase the amount of logs significantly and have performance overhead.
+  By default log_statement_stats is off.
+severity: medium
+enabled: true
+sql: >
+  SELECT acc.assetid
+    FROM magpie.gcp acc
+   WHERE resourcetype = 'GCP::SQL::Instance'
+     AND acc."configuration" ->> 'databaseVersion' ILIKE 'POSTGRES%'
+     AND NOT EXISTS (
+      SELECT value
+        FROM jsonb_array_elements(acc."configuration" -> 'settings' -> 'databaseFlags')
+       WHERE value ->> 'name' = 'log_statement_stats' AND value ->> 'value' = 'off'
+     )
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

@@ -1,0 +1,17 @@
+# opnrvn-r-93
+ruleId: gcp-compute-ensure-ip-forwarding-is-not-enabled-on-instances
+type: asset
+ruleName: >
+  Ensure that IP forwarding is not enabled on Instances
+description: >
+  Forwarding of data packets should be disabled to prevent data loss or information disclosure.
+severity: high
+enabled: true
+sql: >
+  SELECT acc.assetid
+    FROM magpie.gcpcomputeinstance acc
+  WHERE acc.resourcetype = 'GCP::ComputeEngine::Instance'
+    AND "configuration" -> 'canIpForward' = 'true'
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

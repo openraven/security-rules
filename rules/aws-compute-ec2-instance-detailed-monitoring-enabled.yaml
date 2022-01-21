@@ -1,0 +1,15 @@
+# opnrvn-r-146
+ruleId: aws-compute-ec2-instance-detailed-monitoring-enabled
+type: asset
+ruleName: >
+  Checks if detailed monitoring is enabled for EC2 instances.
+description: >
+  The rule is NON_COMPLIANT if detailed monitoring is not enabled.
+severity: high
+enabled: true
+sql: >
+  SELECT arn
+  FROM magpie.awsec2instance
+  WHERE configuration->'monitoring'->>'state' = 'disabled';
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

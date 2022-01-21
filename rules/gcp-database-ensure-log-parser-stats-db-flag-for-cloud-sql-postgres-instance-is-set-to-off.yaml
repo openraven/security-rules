@@ -1,0 +1,23 @@
+# opnrvn-r-125
+ruleId: gcp-database-ensure-log-parser-stats-db-flag-for-cloud-sql-postgres-instance-is-set-to-off
+type: asset
+ruleName: >
+  Ensure 'log_parser_stats' database flag for Cloud SQL PostgreSQL instance is set to 'off'
+description: >
+  The log_parser_stats flag enables a crude profiling method for logging parser performance statistics
+  which even though can be useful for troubleshooting, it may increase the amount of logs significantly and have performance overhead.
+  By default log_parser_stats is off.
+severity: medium
+enabled: true
+sql: >
+  SELECT acc.assetid
+    FROM magpie.gcpsqlinstance acc
+   WHERE resourcetype = 'GCP::SQL::Instance'
+     AND acc."configuration" ->> 'databaseVersion' ILIKE 'POSTGRES%'
+     AND NOT EXISTS (
+      SELECT value
+        FROM jsonb_array_elements(acc."configuration" -> 'settings' -> 'databaseFlags')
+       WHERE value ->> 'name' = 'log_parser_stats' AND value ->> 'value' = 'off'
+     )
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

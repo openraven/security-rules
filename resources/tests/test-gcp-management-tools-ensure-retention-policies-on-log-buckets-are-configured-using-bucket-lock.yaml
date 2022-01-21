@@ -1,0 +1,324 @@
+# opnrvn-r-101
+ruleId: gcp-management-tools-ensure-retention-policies-on-log-buckets-are-configured-using-bucket-lock
+cloudProvider: gcp
+description: >
+  Target asset should be of type "GCP::Logging::Sink"
+  Insecure Assets:
+    - `storage-sink-insecure` configured to store logs in unlocked bucket, hence violating rule.
+  Secure Assets:
+    - `storage-sink-secure` configured to store logs in locked asset
+insecureAssets:
+  storage-sink-insecure: >
+    [{
+     "documentId" : "H0WEDcGAOjSEafGutx0uiQ",
+     "assetId" : "storage-sink-insecure",
+     "resourceName" : null,
+     "resourceId" : null,
+     "resourceType" : "GCP::Logging::Sink",
+     "region" : null,
+     "gcpAccountId" : null,
+     "projectId" : "oss-discovery-test",
+     "createdIso" : null,
+     "updatedIso" : "2021-10-04T14:48:09.241071Z",
+     "discoverySessionId" : null,
+     "maxSizeInBytes" : null,
+     "sizeInBytes" : null,
+     "configuration" : {
+       "optionsCase_" : 0,
+       "name_" : "storage-sink",
+       "destination_" : "storage.googleapis.com/or-unlocked-bucket",
+       "filter_" : "",
+       "description_" : "",
+       "disabled_" : false,
+       "exclusions_" : [ ],
+       "outputVersionFormat_" : 0,
+       "writerIdentity_" : "serviceAccount:p281989297013-737466@gcp-sa-logging.iam.gserviceaccount.com",
+       "includeChildren_" : false,
+       "createTime_" : {
+         "seconds_" : 1632147492,
+         "nanos_" : 905963492,
+         "memoizedIsInitialized" : -1,
+         "unknownFields" : {
+           "fields" : { },
+           "fieldsDescending" : { }
+         },
+         "memoizedSize" : -1,
+         "memoizedHashCode" : 0
+       },
+       "updateTime_" : {
+         "seconds_" : 1632347384,
+         "nanos_" : 946200164,
+         "memoizedIsInitialized" : -1,
+         "unknownFields" : {
+           "fields" : { },
+           "fieldsDescending" : { }
+         },
+         "memoizedSize" : -1,
+         "memoizedHashCode" : 0
+       },
+       "memoizedIsInitialized" : -1,
+       "unknownFields" : {
+         "fields" : { },
+         "fieldsDescending" : { }
+       },
+       "memoizedSize" : -1,
+       "memoizedHashCode" : 0
+     },
+     "supplementaryConfiguration" : { },
+     "tags" : { },
+     "discoveryMeta" : { }
+    }, {
+      "documentId" : "0AjTtG1-P_KPtM3IM__TKw",
+      "assetId" : "or-unlocked-bucket",
+      "resourceName" : null,
+      "resourceId" : null,
+      "resourceType" : "GCP::Storage::Bucket",
+      "region" : "us",
+      "gcpAccountId" : null,
+      "projectId" : "oss-discovery-test",
+      "createdIso" : null,
+      "updatedIso" : "2021-10-04T14:47:33.010817Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "options" : {
+          "clientLibToken" : "gccl",
+          "projectId" : "oss-discovery-test",
+          "host" : "https://storage.googleapis.com",
+          "retrySettings" : {
+            "totalTimeout" : {
+              "seconds" : 50,
+              "nanos" : 0
+            },
+            "initialRetryDelay" : {
+              "seconds" : 1,
+              "nanos" : 0
+            },
+            "retryDelayMultiplier" : 2.0,
+            "maxRetryDelay" : {
+              "seconds" : 32,
+              "nanos" : 0
+            },
+            "maxAttempts" : 6,
+            "jittered" : true,
+            "initialRpcTimeout" : {
+              "seconds" : 50,
+              "nanos" : 0
+            },
+            "rpcTimeoutMultiplier" : 1.0,
+            "maxRpcTimeout" : {
+              "seconds" : 50,
+              "nanos" : 0
+            }
+          },
+          "serviceRpcFactoryClassName" : "com.google.cloud.storage.StorageOptions$DefaultStorageRpcFactory",
+          "serviceFactoryClassName" : "com.google.cloud.storage.StorageOptions$DefaultStorageFactory",
+          "clock" : { },
+          "transportOptions" : {
+            "connectTimeout" : -1,
+            "readTimeout" : -1,
+            "httpTransportFactoryClassName" : "com.google.cloud.http.HttpTransportOptions$DefaultHttpTransportFactory"
+          },
+          "headerProvider" : { }
+        },
+        "generatedId" : "or-unlocked-bucket",
+        "name" : "or-unlocked-bucket",
+        "selfLink" : "https://www.googleapis.com/storage/v1/b/or-unlocked-bucket",
+        "etag" : "CAM=",
+        "createTime" : 1632147424391,
+        "updateTime" : 1632347386634,
+        "metageneration" : 3,
+        "location" : "US",
+        "storageClass" : {
+          "constant" : "STANDARD"
+        },
+        "defaultEventBasedHold" : false,
+        "retentionEffectiveTime" : 1632147493395,
+        "retentionPeriod" : 2678400,
+        "iamConfiguration" : {
+          "isUniformBucketLevelAccessEnabled" : true,
+          "uniformBucketLevelAccessLockedTime" : 1639923424391
+        },
+        "locationType" : "multi-region"
+      },
+      "supplementaryConfiguration" : {
+        "iamPolicy" : {
+          "bindingsList" : [ {
+            "role" : "roles/storage.legacyBucketOwner",
+            "members" : [ "projectEditor:oss-discovery-test", "projectOwner:oss-discovery-test", "serviceAccount:p281989297013-737466@gcp-sa-logging.iam.gserviceaccount.com" ]
+          }, {
+            "role" : "roles/storage.legacyBucketReader",
+            "members" : [ "projectViewer:oss-discovery-test" ]
+          }, {
+            "role" : "roles/storage.legacyObjectOwner",
+            "members" : [ "projectEditor:oss-discovery-test", "projectOwner:oss-discovery-test" ]
+          }, {
+            "role" : "roles/storage.legacyObjectReader",
+            "members" : [ "projectViewer:oss-discovery-test" ]
+          } ],
+          "etag" : "CAM=",
+          "version" : 1
+        }
+      },
+      "tags" : { },
+      "discoveryMeta" : { }
+    }]
+secureAssets:
+  storage-sink-secure: >
+    [{
+      "documentId" : "H0WEDcGAOjSEafGutx0uiQ",
+      "assetId" : "storage-sink-insecure",
+      "resourceName" : null,
+      "resourceId" : null,
+      "resourceType" : "GCP::Logging::Sink",
+      "region" : null,
+      "gcpAccountId" : null,
+      "projectId" : "oss-discovery-test",
+      "createdIso" : null,
+      "updatedIso" : "2021-10-04T14:48:09.241071Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "optionsCase_" : 0,
+        "name_" : "storage-sink",
+        "destination_" : "storage.googleapis.com/or-logging-bucket",
+        "filter_" : "",
+        "description_" : "",
+        "disabled_" : false,
+        "exclusions_" : [ ],
+        "outputVersionFormat_" : 0,
+        "writerIdentity_" : "serviceAccount:p281989297013-737466@gcp-sa-logging.iam.gserviceaccount.com",
+        "includeChildren_" : false,
+        "createTime_" : {
+          "seconds_" : 1632147492,
+          "nanos_" : 905963492,
+          "memoizedIsInitialized" : -1,
+          "unknownFields" : {
+            "fields" : { },
+            "fieldsDescending" : { }
+          },
+          "memoizedSize" : -1,
+          "memoizedHashCode" : 0
+        },
+        "updateTime_" : {
+          "seconds_" : 1632347384,
+          "nanos_" : 946200164,
+          "memoizedIsInitialized" : -1,
+          "unknownFields" : {
+            "fields" : { },
+            "fieldsDescending" : { }
+          },
+          "memoizedSize" : -1,
+          "memoizedHashCode" : 0
+        },
+        "memoizedIsInitialized" : -1,
+        "unknownFields" : {
+          "fields" : { },
+          "fieldsDescending" : { }
+        },
+        "memoizedSize" : -1,
+        "memoizedHashCode" : 0
+      },
+      "supplementaryConfiguration" : { },
+      "tags" : { },
+      "discoveryMeta" : { }
+    }, {
+       "documentId" : "ywqmvXZXPe-SEwpWG68Ctw",
+       "assetId" : "or-logging-bucket",
+       "resourceName" : null,
+       "resourceId" : null,
+       "resourceType" : "GCP::Storage::Bucket",
+       "region" : "us-east1",
+       "gcpAccountId" : null,
+       "projectId" : "oss-discovery-test",
+       "createdIso" : null,
+       "updatedIso" : "2021-10-04T14:47:32.715686Z",
+       "discoverySessionId" : null,
+       "maxSizeInBytes" : null,
+       "sizeInBytes" : null,
+       "configuration" : {
+         "options" : {
+           "clientLibToken" : "gccl",
+           "projectId" : "oss-discovery-test",
+           "host" : "https://storage.googleapis.com",
+           "retrySettings" : {
+             "totalTimeout" : {
+               "seconds" : 50,
+               "nanos" : 0
+             },
+             "initialRetryDelay" : {
+               "seconds" : 1,
+               "nanos" : 0
+             },
+             "retryDelayMultiplier" : 2.0,
+             "maxRetryDelay" : {
+               "seconds" : 32,
+               "nanos" : 0
+             },
+             "maxAttempts" : 6,
+             "jittered" : true,
+             "initialRpcTimeout" : {
+               "seconds" : 50,
+               "nanos" : 0
+             },
+             "rpcTimeoutMultiplier" : 1.0,
+             "maxRpcTimeout" : {
+               "seconds" : 50,
+               "nanos" : 0
+             }
+           },
+           "serviceRpcFactoryClassName" : "com.google.cloud.storage.StorageOptions$DefaultStorageRpcFactory",
+           "serviceFactoryClassName" : "com.google.cloud.storage.StorageOptions$DefaultStorageFactory",
+           "clock" : { },
+           "transportOptions" : {
+             "connectTimeout" : -1,
+             "readTimeout" : -1,
+             "httpTransportFactoryClassName" : "com.google.cloud.http.HttpTransportOptions$DefaultHttpTransportFactory"
+           },
+           "headerProvider" : { }
+         },
+         "generatedId" : "or-logging-bucket",
+         "name" : "or-logging-bucket",
+         "selfLink" : "https://www.googleapis.com/storage/v1/b/or-logging-bucket",
+         "etag" : "CAU=",
+         "createTime" : 1632147341263,
+         "updateTime" : 1632347387228,
+         "metageneration" : 5,
+         "location" : "US-EAST1",
+         "storageClass" : {
+           "constant" : "STANDARD"
+         },
+         "defaultEventBasedHold" : false,
+         "retentionEffectiveTime" : 1632147415413,
+         "retentionPolicyIsLocked" : true,
+         "retentionPeriod" : 8035200,
+         "iamConfiguration" : {
+           "isUniformBucketLevelAccessEnabled" : true,
+           "uniformBucketLevelAccessLockedTime" : 1639923341263
+         },
+         "locationType" : "region"
+       },
+       "supplementaryConfiguration" : {
+         "iamPolicy" : {
+           "bindingsList" : [ {
+             "role" : "roles/storage.legacyBucketOwner",
+             "members" : [ "projectEditor:oss-discovery-test", "projectOwner:oss-discovery-test", "serviceAccount:p281989297013-737466@gcp-sa-logging.iam.gserviceaccount.com" ]
+           }, {
+             "role" : "roles/storage.legacyBucketReader",
+             "members" : [ "projectViewer:oss-discovery-test" ]
+           }, {
+             "role" : "roles/storage.legacyObjectOwner",
+             "members" : [ "projectEditor:oss-discovery-test", "projectOwner:oss-discovery-test" ]
+           }, {
+             "role" : "roles/storage.legacyObjectReader",
+             "members" : [ "projectViewer:oss-discovery-test" ]
+           } ],
+           "etag" : "CAU=",
+           "version" : 1
+         }
+       },
+       "tags" : { },
+       "discoveryMeta" : { }
+     }]
