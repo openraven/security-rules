@@ -7,12 +7,12 @@ description: >
 enabled: true
 rules:
   - aws-iam-and-security-ensure-security-questions-registered.yaml
-  # - opnrvn-r-2.yaml
+  - aws-iam-and-security-iam-root.yaml
   - aws-management-tools-cloudtrail-enabled-all-regions.yaml
   - aws-storage-s3-default-encryption-kms.yaml
   - aws-management-tools-cloudtrail-log-file-validation-enabled.yaml
   - aws-management-tools-cloudtrail-encryption-enabled.yaml
-  # - opnrvn-r-6.yaml
+  - aws-config-enabled.yaml
   - aws-iam-and-security-default-security-group-for-vpc-restricts-all-traffic.yaml
   - aws-iam-and-security-iam-user-unused-credentials-check.yaml # CIS 1.3 [IAM]
   - aws-compute-ec2-ensure-all-ec2-ebs-volumes-have-snapshots.yaml
@@ -20,47 +20,47 @@ rules:
   - aws-security-identity-and-compliance-ensure-guardduty-enabled-for-required-region.yaml
   - aws-iam-and-security-root-account-mfa-enabled.yaml # CIS 1.14 [IAM]
   - aws-iam-and-security-ensure-iam-password-policy-expires-password-90-days-or-less.yaml # CIS 1.11 [IAM]
-  #  - opnrvn-r-14.yaml
+  - aws-iam-and-security-iam-password-policy-reuse.yaml
   - aws-iam-and-security-ensure-iam-password-requires-one-number.yaml
-  #  - opnrvn-r-16.yaml
+  - aws-iam-and-security-iam-password-policy-symbols.yaml
   - aws-iam-and-security-ensure-iam-password-requires-one-lowercase-letter.yaml
-  #  - opnrvn-r-18.yaml
+  - aws-iam-and-security-iam-password-policy-length.yaml
   - aws-iam-and-security-ensure-iam-password-policy-requires-one-uppercase-letter.yaml
-  #  - opnrvn-r-20.yaml
+  - aws-iam-and-security-iam-user-no-policies-check.yaml
   - aws-iam-and-security-iam-instance-roles-used-for-aws-resource-access-from-instances.yaml
-  #  - opnrvn-r-22.yaml
+  - aws-iam-and-security-iam-attaced-policies.yaml
   - aws-iam-and-security-ensure-no-stale-roles-with-inline-policies-for-s3-access.yaml
-  #  - opnrvn-r-24.yaml
+  - aws-account-details.yaml
   - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-aws-config-changes.yaml
-  #  - opnrvn-r-26.yaml
+  - aws-misc-cloud-trail-cloud-watch-logs-and-alarms.yaml
   - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-cloudtrail-config-changes.yaml
-  #  - opnrvn-r-28.yaml
+  - aws-management-tools-cloud-trail-log-alarm-without-mfa.yaml
   - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alaram-exist-for-disabling-or-deleting-CMKs.yaml
-  #  - opnrvn-r-30.yaml
+  - aws-management-tools-cloudtrail-api-logs.yaml
   - aws-management-tools-cloudtrail-log-metric-filter-and-alaram-exist-for-iam-policy-changes.yaml
-  #  - opnrvn-r-32.yaml
+  - aws-management-tools-cloudtrail-logs-nacl.yaml
   - aws-management-tools-cloudtrail-metric-filter-and-alarm-exist-for-root-account-usage.yaml
-  #  - opnrvn-r-34.yaml
+  - aws-management-tools-cloudtrail-route-table-logs.yaml
   - aws-management-tools-cloudtrail-log-metric-filter-and-alarm-exist-for-s3-policy-changes.yaml
-  #  - opnrvn-r-36.yaml
+  - aws-management-tools-cloudtrail-security-groups.yaml
   - aws-management-tools-cloudtrail-log-metric-filter-and-alarm-exist-for-unauthorized-api-calls.yaml
-  #  - opnrvn-r-38.yaml
+  - aws-management-tools-cloudtrail-vpc-changes.yaml
   - aws-iam-and-security-ensure-mfa-enabled-for-root-account.yaml
-  #  - opnrvn-r-40.yaml
+  #  - opnrvn-r-40.yaml: this is a duplicate
   - aws-iam-and-security-no-default-access-keys-with-console-password-for-all-iam-users.yaml
-  #  - opnrvn-r-42.yaml
+  - aws-security-and-identity-compliance-iam-full-admin.yaml
   - aws-iam-and-security-ensure-no-root-account-access-key-exists.yaml
-  #  - opnrvn-r-44.yaml
+  - aws-compute-elastic-compute-security-groups-ip.yaml
   - aws-iam-and-security-no-security-groups-allow-all-ingress-to-port-3389.yaml
-  #  - opnrvn-r-46.yaml
+  - aws-vpc-rooting-access.yaml
   - aws-iam-and-security-ensure-access-keys-are-rotated-every-90-days-or-less.yaml
-  #  - opnrvn-r-48.yaml
+  - aws-iam-and-security-cmk-backing-key-rotation-enabled.yaml
   - aws-management-tools-ensure-s3-bucket-access-logging-is-enabled-on-cloudtrail-s3-bucket.yaml
-  #  - opnrvn-r-50.yaml
+  - aws-storage-s3-bucket-cloudtrail-logs.yaml
   - aws-storage-s3-bucket-has-no-server-side-encryption-being-enabled-by-another-account.yaml
-  #  - opnrvn-r-52.yaml
+  - aws-storage-s3-bucket-level-public-access-prohibited.yaml
   - aws-storage-s3-bucket-deny-overriding-of-default-kms-key-encryption.yaml
-  #  - opnrvn-r-54.yaml
+  - aws-storage-s3-bucket-versioning-enabled.yaml
   - aws-iam-and-security-ensure-security-contact-information-is-registered.yaml
   # 56 missing - ransomware C2 rule
   - aws-management-tools-securityhub-enabled-for-required-region.yaml

@@ -1,0 +1,19 @@
+ruleId: gcp-compute-vm-encrypted
+type: asset
+ruleName: >
+  Ensure VM disks for critical VMs are encrypted with Customer- Supplied Encryption Keys (CSEK)
+description: >
+  By default, Google Compute Engine encrypts all data at rest.
+  Compute Engine handles and manages this encryption for you without any additional actions on your part.
+  However, if you wanted to control and manage this encryption yourself, you can provide your own encryption keys.
+  By default, VM disks are encrypted with Google-managed keys. They are not encrypted with Customer-Supplied Encryption Keys.
+severity: medium # Critical VMs only
+enabled: true
+sql: >
+  SELECT acc.assetid
+    FROM magpie.gcp acc
+   WHERE acc.resourcetype = 'GCP:ComputeEngine::Disk'
+     AND "configuration" -> 'diskEncryptionKey' ->> 'sha256' is not null
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

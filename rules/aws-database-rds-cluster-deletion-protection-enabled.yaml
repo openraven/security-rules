@@ -1,4 +1,5 @@
 # opnrvn-r-166
+
 ruleId: aws-database-rds-cluster-deletion-protection-enabled
 type: asset
 ruleName: >

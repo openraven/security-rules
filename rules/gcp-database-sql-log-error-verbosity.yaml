@@ -1,0 +1,22 @@
+ruleId: gcp-database-sql-log-error-verbosity
+type: asset
+ruleName: >
+  Ensure 'log_error_verbosity' database flag for Cloud SQL PostgreSQL instance is set to 'DEFAULT' or stricter
+description: >
+  The log_error_verbosity flag controls the verbosity/details of messages logged.
+  Ensure an appropriate value is set to 'DEFAULT' or stricter.
+  By default log_error_verbosity is DEFAULT.
+severity: high
+enabled: true
+sql: >
+  SELECT acc.assetid
+    FROM magpie.gcp acc
+   WHERE resourcetype = 'GCP::SQL::Instance'
+     AND acc."configuration" ->> 'databaseVersion' ILIKE 'POSTGRES%'
+     AND NOT EXISTS (
+      SELECT value
+        FROM jsonb_array_elements(acc."configuration" -> 'settings' -> 'databaseFlags')
+       WHERE value ->> 'name' = 'log_error_verbosity' AND value ->> 'value' IN ('default', 'verbose')
+     )
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

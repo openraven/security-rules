@@ -7,6 +7,29 @@ description: >
 enabled: true
 rules:
    - opnrvn-r-124.yaml
+   - gcp-iam-and-security-iam-project-roles.yaml
+   - gcp-iam-and-security-iam-service-account-keys.yaml
+   - gcp-security-and-identity-compliance-ske-enabled.yaml
+   - gcp-iam-and-security-service-accounts-sod.yaml
+   - gcp-security-and-identity-compliance-kms-rotation.yaml
+   - gcp-api-keys.yaml
+   - gcp-api-restricted-access.yaml
+   - gcp-storage-cloud-bucket-public-access.yaml
+   - gcp-networking-and-content-delivery-default-network.yaml # CIS 3.1 -- Network
+   - gcp-networking-cloud-dns-dnssec.yaml
+   - gcp-networking-and-content-delivery-cloud-dns-rsasha.yaml
+   - gcp-networking-and-content-delivery-rdp-access.yaml
+   - gcp-networking-and-content-delivery-ssl-policies.yaml
+   - gcp-compute-editor-role.yaml
+   - gcp-compute-vm-project-ssh-keys.yaml
+   - gcp-compute-vm-serial-ports.yaml
+   - gcp-compute-vm-encrypted.yaml
+   - gcp-compute-no-public-ip.yaml
+   - gcp-compute-confidential-computing-enabled.yaml
+   - gcp-management-tools-sinks-enabled.yaml
+   - gcp-management-tools-log-alerts-project.yaml
+   - gcp-management-tools-log-alert-custom-role.yaml
+   - gcp-monitoring-tools-log-alerts-vpc.yaml
 #  - opnrvn-r-62.yaml # CIS 1.6 -- IAM
 #  - opnrvn-r-63.yaml # CIS 1.4
 #  - opnrvn-r-64.yaml # CIS 1.7
@@ -70,7 +93,7 @@ rules:
 #  - opnrvn-r-121.yaml # CIS 6.2.5
 #  - opnrvn-r-122.yaml # CIS 6.2.6
 #  - opnrvn-r-123.yaml # CIS 6.2.7
-#   - gcp-database-sql-log-hostname-flag.yaml # CIS 6.2.8
+   - gcp-database-sql-log-hostname-flag.yaml # CIS 6.2.8
 #  - opnrvn-r-125.yaml # CIS 6.2.9
 #  - opnrvn-r-126.yaml # CIS 6.2.10
 #  - opnrvn-r-127.yaml # CIS 6.2.11

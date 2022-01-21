@@ -12,13 +12,13 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT ec2.arn
-    FROM magpie.awsec2instance ec2
-    LEFT JOIN magpie.awsec2instance ssm
-      ON (ec2.resourceid = ssm.resourceid AND ssm.resourcetype = 'AWS::SSM::Instance')
-   WHERE ec2.resourcetype = 'AWS::EC2::Instance'
-     AND ec2.configuration -> 'state' ->> 'name' = 'running'
-     AND ssm.resourceid IS NULL;
+  SELECT arn
+    FROM magpie.awsec2instance
+    LEFT JOIN magpie.extendawsssminstance
+      ON (magpie.awsec2instance.resourceid = magpie.extendawsssminstance.resourceid AND magpie.extendawsssminstance.resourcetype = 'AWS::SSM::Instance')
+   WHERE magpie.awsec2instance.resourcetype = 'AWS::EC2::Instance'
+     AND magpie.awsec2instance.configuration -> 'state' ->> 'name' = 'running'
+     AND magpie.extendawsssminstance.resourceid IS NULL;
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9
