@@ -1,5 +1,5 @@
 # id: 8b075bf8-0804-46d0-8255-13c1cb89587d
-policyId: opnrvn-p-5
+policyId: aws-ransomware-iocs
 policyName: AWS Ransomware Indicators of Compromise
 cloudProvider: AWS
 description: >
