@@ -1,0 +1,22 @@
+ruleId: gcp-database-sql-db-flag-configured
+type: asset
+ruleName: >
+  Ensure 'user options' database flag for Cloud SQL SQL Server instance is not configured
+description: >
+  The user options option specifies global defaults for all users.
+  A list of default query processing options is established for the duration of a user's work session.
+  The user options option allows you to change the default values of the SET options
+severity: medium
+enabled: true
+sql: >
+  SELECT acc.assetid
+    FROM magpie.gcp acc
+   WHERE resourcetype = 'GCP::SQL::Instance'
+     AND acc."configuration" ->> 'databaseVersion' ILIKE 'SQLSERVER%'
+     AND EXISTS (
+      SELECT value
+        FROM jsonb_array_elements(acc."configuration" -> 'settings' -> 'databaseFlags')
+       WHERE value ->> 'name' = 'user options'
+     )
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
