@@ -96,4 +96,5 @@ rules:
   - aws-database-rds-cluster-multi-az-enabled.yaml
   - aws-database-rds-automatic-minor-version-upgrade-enabled.yaml
   - aws-database-rds-instance-public-access-check.yaml
+  - aws-database-rds-db-instance-backup-enabled.yaml
 version: 0.9
