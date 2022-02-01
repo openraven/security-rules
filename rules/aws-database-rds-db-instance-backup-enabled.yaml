@@ -9,6 +9,6 @@ enabled: true
 sql: >
   SELECT arn
   FROM magpie.awsrdsdbinstance
-  WHERE (supplementaryconfiguration -> 'dbSnapshot' -> 'dbSnapshots' = null);
+  WHERE (supplementaryconfiguration -> 'dbSnapshot' -> 'dbSnapshots' = '[ ]');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9
