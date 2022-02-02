@@ -1,0 +1,14 @@
+ruleId: aws-database-rds-db-instance-backup-enabled
+type: asset
+ruleName: >
+  Ensure Amazon RDS Database Instances have backup enabled
+description: >
+  Ensure Amazon RDS Database Instances have a backup enabled. The rule is NON COMPLIANT if back up is not enabled.
+severity: high
+enabled: true
+sql: >
+  SELECT arn
+  FROM magpie.awsrdsdbinstance
+  WHERE (supplementaryconfiguration -> 'dbSnapshot' -> 'dbSnapshots' = '[ ]');
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

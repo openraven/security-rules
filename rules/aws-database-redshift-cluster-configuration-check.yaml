@@ -1,0 +1,14 @@
+ruleId: aws-database-redshift-cluster-configuration-check
+type: asset
+ruleName: >
+  Ensure RedShift Clusters have encrypted, and logging enabled
+description: >
+  Checks if RedShift Clusters have encryption and logging enabled. The rule is NON_COMPLIANT if both are set to false.
+severity: high
+enabled: true
+sql: >
+  SELECT arn
+  FROM magpie.awsredshiftcluster
+  WHERE (configuration -> 'encrypted' = 'true')
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

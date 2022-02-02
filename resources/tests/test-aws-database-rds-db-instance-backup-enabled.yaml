@@ -1,0 +1,379 @@
+ruleId: aws-database-rds-db-instance-backup-enabled
+cloudProvider: aws
+description: >
+  Insecure assets have no backup enabled for RDS instance.
+  Secure assets have backup enabled for RDS instances.
+insecureAssets:
+  arn:aws:rds:us-east-2:476384142167:db:database-tara-test-not-enabled: >
+    [ {
+      "documentId" : "mMysF-CdOc-Piq3upa5wTQ",
+      "arn" : "arn:aws:rds:us-east-2:476384142167:db:database-tara-test-not-enabled",
+      "resourceName" : "database-tara-test-not-enabled",
+      "resourceId" : "arn:aws:rds:us-east-2:476384142167:db:database-tara-test-not-enabled",
+      "resourceType" : "AWS::RDS::DBInstance",
+      "awsRegion" : "us-east-2",
+      "awsAccountId" : "476384142167",
+      "createdIso" : "2022-01-26T15:04:15.778Z",
+      "updatedIso" : "2022-01-26T15:07:21.142190Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "dbInstanceIdentifier" : "database-tara-test-not-enabled",
+        "dbInstanceClass" : "db.m6g.large",
+        "engine" : "postgres",
+        "dbInstanceStatus" : "modifying",
+        "automaticRestartTime" : null,
+        "masterUsername" : "postgres",
+        "dbName" : null,
+        "endpoint" : {
+          "address" : "database-tara-test-not-enabled.cr5vsauqrzv3.us-east-2.rds.amazonaws.com",
+          "port" : 5432,
+          "hostedZoneId" : "Z2XHWR1WZ565X2"
+        },
+        "allocatedStorage" : 20,
+        "instanceCreateTime" : "2022-01-26T15:04:15.778Z",
+        "preferredBackupWindow" : "08:50-09:20",
+        "backupRetentionPeriod" : 0,
+        "dbSecurityGroups" : [ ],
+        "vpcSecurityGroups" : [ {
+          "vpcSecurityGroupId" : "sg-3afa2c42",
+          "status" : "active"
+        } ],
+        "dbParameterGroups" : [ {
+          "dbParameterGroupName" : "default.postgres13",
+          "parameterApplyStatus" : "in-sync"
+        } ],
+        "availabilityZone" : "us-east-2a",
+        "dbSubnetGroup" : {
+          "dbSubnetGroupName" : "default-vpc-6487540f",
+          "dbSubnetGroupDescription" : "Created from the RDS Management Console",
+          "vpcId" : "vpc-6487540f",
+          "subnetGroupStatus" : "Complete",
+          "subnets" : [ {
+            "subnetIdentifier" : "subnet-249c674f",
+            "subnetAvailabilityZone" : {
+              "name" : "us-east-2a"
+            },
+            "subnetOutpost" : {
+              "arn" : null
+            },
+            "subnetStatus" : "Active"
+          }, {
+            "subnetIdentifier" : "subnet-970130ed",
+            "subnetAvailabilityZone" : {
+              "name" : "us-east-2b"
+            },
+            "subnetOutpost" : {
+              "arn" : null
+            },
+            "subnetStatus" : "Active"
+          }, {
+            "subnetIdentifier" : "subnet-7a198036",
+            "subnetAvailabilityZone" : {
+              "name" : "us-east-2c"
+            },
+            "subnetOutpost" : {
+              "arn" : null
+            },
+            "subnetStatus" : "Active"
+          } ],
+          "dbSubnetGroupArn" : null
+        },
+        "preferredMaintenanceWindow" : "fri:05:23-fri:05:53",
+        "pendingModifiedValues" : {
+          "dbInstanceClass" : null,
+          "allocatedStorage" : null,
+          "masterUserPassword" : null,
+          "port" : null,
+          "backupRetentionPeriod" : null,
+          "multiAZ" : true,
+          "engineVersion" : null,
+          "licenseModel" : null,
+          "iops" : null,
+          "dbInstanceIdentifier" : null,
+          "storageType" : null,
+          "caCertificateIdentifier" : null,
+          "dbSubnetGroupName" : null,
+          "pendingCloudwatchLogsExports" : null,
+          "processorFeatures" : null,
+          "iamDatabaseAuthenticationEnabled" : null,
+          "automationMode" : null,
+          "resumeFullAutomationModeTime" : null
+        },
+        "latestRestorableTime" : null,
+        "multiAZ" : false,
+        "engineVersion" : "13.4",
+        "autoMinorVersionUpgrade" : true,
+        "readReplicaSourceDBInstanceIdentifier" : null,
+        "readReplicaDBInstanceIdentifiers" : [ ],
+        "readReplicaDBClusterIdentifiers" : null,
+        "replicaMode" : null,
+        "licenseModel" : "postgresql-license",
+        "iops" : null,
+        "optionGroupMemberships" : [ {
+          "optionGroupName" : "default:postgres-13",
+          "status" : "in-sync"
+        } ],
+        "characterSetName" : null,
+        "ncharCharacterSetName" : null,
+        "secondaryAvailabilityZone" : null,
+        "publiclyAccessible" : false,
+        "statusInfos" : null,
+        "storageType" : "gp2",
+        "tdeCredentialArn" : null,
+        "dbInstancePort" : 0,
+        "dbClusterIdentifier" : null,
+        "storageEncrypted" : true,
+        "kmsKeyId" : "arn:aws:kms:us-east-2:476384142167:key/eb2fb838-797c-402e-9d8f-5f51479b122f",
+        "dbiResourceId" : "db-UEYK42DQ7LV6T3QCL2WKVDJP34",
+        "caCertificateIdentifier" : "rds-ca-2019",
+        "domainMemberships" : [ ],
+        "copyTagsToSnapshot" : true,
+        "monitoringInterval" : 60,
+        "enhancedMonitoringResourceArn" : null,
+        "monitoringRoleArn" : "arn:aws:iam::476384142167:role/rds-monitoring-role",
+        "promotionTier" : null,
+        "dbInstanceArn" : "arn:aws:rds:us-east-2:476384142167:db:database-tara-test-not-enabled",
+        "timezone" : null,
+        "iamDatabaseAuthenticationEnabled" : false,
+        "performanceInsightsEnabled" : true,
+        "performanceInsightsKMSKeyId" : "arn:aws:kms:us-east-2:476384142167:key/eb2fb838-797c-402e-9d8f-5f51479b122f",
+        "performanceInsightsRetentionPeriod" : 7,
+        "enabledCloudwatchLogsExports" : null,
+        "processorFeatures" : null,
+        "deletionProtection" : true,
+        "associatedRoles" : [ ],
+        "listenerEndpoint" : null,
+        "maxAllocatedStorage" : 1000,
+        "tagList" : [ ],
+        "dbInstanceAutomatedBackupsReplications" : null,
+        "customerOwnedIpEnabled" : false,
+        "awsBackupRecoveryPointArn" : null,
+        "activityStreamStatus" : "stopped",
+        "activityStreamKmsKeyId" : null,
+        "activityStreamKinesisStreamName" : null,
+        "activityStreamMode" : null,
+        "activityStreamEngineNativeAuditFieldsIncluded" : null,
+        "automationMode" : null,
+        "resumeFullAutomationModeTime" : null,
+        "customIamInstanceProfile" : null,
+        "backupTarget" : "region"
+      },
+      "supplementaryConfiguration" : {
+        "dbClusters" : {
+          "marker" : null,
+          "dbClusters" : [ ]
+        },
+        "dbSnapshot" : {
+          "marker" : null,
+          "dbSnapshots" : [ ]
+        },
+        "awsBackupJobs" : [ ]
+      },
+      "tags" : { },
+      "discoveryMeta" : { }
+    }]
+secureAssets:
+  arn:aws:rds:us-east-2:476384142167:db:database-tara-test-enabled: >
+    [ {
+      "documentId" : "EeuqsC9ENreADZP__uWt0g",
+      "arn" : "arn:aws:rds:us-east-2:476384142167:db:database-tara-test-enabled",
+      "resourceName" : "database-tara-test-enabled",
+      "resourceId" : "arn:aws:rds:us-east-2:476384142167:db:database-tara-test-enabled",
+      "resourceType" : "AWS::RDS::DBInstance",
+      "awsRegion" : "us-east-2",
+      "awsAccountId" : "476384142167",
+      "createdIso" : "2022-01-26T14:59:32.970Z",
+      "updatedIso" : "2022-01-26T15:07:19.207870Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "dbInstanceIdentifier" : "database-tara-test-enabled",
+        "dbInstanceClass" : "db.m5.large",
+        "engine" : "postgres",
+        "dbInstanceStatus" : "backing-up",
+        "automaticRestartTime" : null,
+        "masterUsername" : "postgres",
+        "dbName" : null,
+        "endpoint" : {
+          "address" : "database-tara-test-enabled.cr5vsauqrzv3.us-east-2.rds.amazonaws.com",
+          "port" : 5432,
+          "hostedZoneId" : "Z2XHWR1WZ565X2"
+        },
+        "allocatedStorage" : 20,
+        "instanceCreateTime" : "2022-01-26T14:59:32.970Z",
+        "preferredBackupWindow" : "10:12-10:42",
+        "backupRetentionPeriod" : 7,
+        "dbSecurityGroups" : [ ],
+        "vpcSecurityGroups" : [ {
+          "vpcSecurityGroupId" : "sg-3afa2c42",
+          "status" : "active"
+        } ],
+        "dbParameterGroups" : [ {
+          "dbParameterGroupName" : "default.postgres13",
+          "parameterApplyStatus" : "in-sync"
+        } ],
+        "availabilityZone" : "us-east-2a",
+        "dbSubnetGroup" : {
+          "dbSubnetGroupName" : "default-vpc-6487540f",
+          "dbSubnetGroupDescription" : "Created from the RDS Management Console",
+          "vpcId" : "vpc-6487540f",
+          "subnetGroupStatus" : "Complete",
+          "subnets" : [ {
+            "subnetIdentifier" : "subnet-249c674f",
+            "subnetAvailabilityZone" : {
+              "name" : "us-east-2a"
+            },
+            "subnetOutpost" : {
+              "arn" : null
+            },
+            "subnetStatus" : "Active"
+          }, {
+            "subnetIdentifier" : "subnet-970130ed",
+            "subnetAvailabilityZone" : {
+              "name" : "us-east-2b"
+            },
+            "subnetOutpost" : {
+              "arn" : null
+            },
+            "subnetStatus" : "Active"
+          }, {
+            "subnetIdentifier" : "subnet-7a198036",
+            "subnetAvailabilityZone" : {
+              "name" : "us-east-2c"
+            },
+            "subnetOutpost" : {
+              "arn" : null
+            },
+            "subnetStatus" : "Active"
+          } ],
+          "dbSubnetGroupArn" : null
+        },
+        "preferredMaintenanceWindow" : "sun:05:17-sun:05:47",
+        "pendingModifiedValues" : {
+          "dbInstanceClass" : null,
+          "allocatedStorage" : null,
+          "masterUserPassword" : null,
+          "port" : null,
+          "backupRetentionPeriod" : null,
+          "multiAZ" : null,
+          "engineVersion" : null,
+          "licenseModel" : null,
+          "iops" : null,
+          "dbInstanceIdentifier" : null,
+          "storageType" : null,
+          "caCertificateIdentifier" : null,
+          "dbSubnetGroupName" : null,
+          "pendingCloudwatchLogsExports" : null,
+          "processorFeatures" : null,
+          "iamDatabaseAuthenticationEnabled" : null,
+          "automationMode" : null,
+          "resumeFullAutomationModeTime" : null
+        },
+        "latestRestorableTime" : null,
+        "multiAZ" : true,
+        "engineVersion" : "13.4",
+        "autoMinorVersionUpgrade" : true,
+        "readReplicaSourceDBInstanceIdentifier" : null,
+        "readReplicaDBInstanceIdentifiers" : [ ],
+        "readReplicaDBClusterIdentifiers" : null,
+        "replicaMode" : null,
+        "licenseModel" : "postgresql-license",
+        "iops" : null,
+        "optionGroupMemberships" : [ {
+          "optionGroupName" : "default:postgres-13",
+          "status" : "in-sync"
+        } ],
+        "characterSetName" : null,
+        "ncharCharacterSetName" : null,
+        "secondaryAvailabilityZone" : "us-east-2b",
+        "publiclyAccessible" : false,
+        "statusInfos" : null,
+        "storageType" : "gp2",
+        "tdeCredentialArn" : null,
+        "dbInstancePort" : 0,
+        "dbClusterIdentifier" : null,
+        "storageEncrypted" : true,
+        "kmsKeyId" : "arn:aws:kms:us-east-2:476384142167:key/eb2fb838-797c-402e-9d8f-5f51479b122f",
+        "dbiResourceId" : "db-VJVB2YCXCV36M7KLWUVNPBRR3U",
+        "caCertificateIdentifier" : "rds-ca-2019",
+        "domainMemberships" : [ ],
+        "copyTagsToSnapshot" : true,
+        "monitoringInterval" : 60,
+        "enhancedMonitoringResourceArn" : "arn:aws:logs:us-east-2:476384142167:log-group:RDSOSMetrics:log-stream:db-VJVB2YCXCV36M7KLWUVNPBRR3U",
+        "monitoringRoleArn" : "arn:aws:iam::476384142167:role/rds-monitoring-role",
+        "promotionTier" : null,
+        "dbInstanceArn" : "arn:aws:rds:us-east-2:476384142167:db:database-tara-test-enabled",
+        "timezone" : null,
+        "iamDatabaseAuthenticationEnabled" : false,
+        "performanceInsightsEnabled" : true,
+        "performanceInsightsKMSKeyId" : "arn:aws:kms:us-east-2:476384142167:key/eb2fb838-797c-402e-9d8f-5f51479b122f",
+        "performanceInsightsRetentionPeriod" : 7,
+        "enabledCloudwatchLogsExports" : null,
+        "processorFeatures" : null,
+        "deletionProtection" : true,
+        "associatedRoles" : [ ],
+        "listenerEndpoint" : null,
+        "maxAllocatedStorage" : 1000,
+        "tagList" : [ ],
+        "dbInstanceAutomatedBackupsReplications" : null,
+        "customerOwnedIpEnabled" : false,
+        "awsBackupRecoveryPointArn" : null,
+        "activityStreamStatus" : "stopped",
+        "activityStreamKmsKeyId" : null,
+        "activityStreamKinesisStreamName" : null,
+        "activityStreamMode" : null,
+        "activityStreamEngineNativeAuditFieldsIncluded" : null,
+        "automationMode" : null,
+        "resumeFullAutomationModeTime" : null,
+        "customIamInstanceProfile" : null,
+        "backupTarget" : "region"
+      },
+      "supplementaryConfiguration" : {
+        "dbClusters" : {
+          "marker" : null,
+          "dbClusters" : [ ]
+        },
+        "dbSnapshot" : {
+          "marker" : null,
+          "dbSnapshots" : [ {
+            "dbSnapshotIdentifier" : "rds:database-tara-test-enabled-2022-01-26-15-06",
+            "dbInstanceIdentifier" : "database-tara-test-enabled",
+            "snapshotCreateTime" : null,
+            "engine" : "postgres",
+            "allocatedStorage" : 20,
+            "status" : "creating",
+            "port" : 5432,
+            "availabilityZone" : "us-east-2a",
+            "vpcId" : "vpc-6487540f",
+            "instanceCreateTime" : "2022-01-26T14:59:32.970Z",
+            "masterUsername" : "postgres",
+            "engineVersion" : "13.4",
+            "licenseModel" : "postgresql-license",
+            "snapshotType" : "automated",
+            "iops" : null,
+            "optionGroupName" : "default:postgres-13",
+            "percentProgress" : 0,
+            "sourceRegion" : null,
+            "sourceDBSnapshotIdentifier" : null,
+            "storageType" : "gp2",
+            "tdeCredentialArn" : null,
+            "encrypted" : true,
+            "kmsKeyId" : "arn:aws:kms:us-east-2:476384142167:key/eb2fb838-797c-402e-9d8f-5f51479b122f",
+            "dbSnapshotArn" : "arn:aws:rds:us-east-2:476384142167:snapshot:rds:database-tara-test-enabled-2022-01-26-15-06",
+            "timezone" : null,
+            "iamDatabaseAuthenticationEnabled" : false,
+            "processorFeatures" : [ ],
+            "dbiResourceId" : "db-VJVB2YCXCV36M7KLWUVNPBRR3U",
+            "tagList" : [ ],
+            "originalSnapshotCreateTime" : null,
+            "snapshotTarget" : "region"
+          } ]
+        },
+        "awsBackupJobs" : [ ]
+      },
+      "tags" : { },
+      "discoveryMeta" : { }
+     }]
