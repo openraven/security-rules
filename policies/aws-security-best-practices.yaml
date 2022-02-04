@@ -100,5 +100,5 @@ rules:
   - aws-rds-aurora-mysql-backtracking-enabled.yaml
   - aws-database-redshift-cluster-public-access-check.yaml
   - aws-database-redshift-cluster-configuration-check.yaml
-  
+  - aws-redshift-enchanced-vpc-routing-enabled.yaml
 version: 0.9
