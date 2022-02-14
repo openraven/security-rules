@@ -9,7 +9,7 @@ severity: high
 enabled: true
 sql: >
   SELECT arn
-  FROM magpie.awswatchalarm
+  FROM ${magpie_schema}.awswatchalarm
   WHERE resourcetype = 'AWS::CloudWatch::Alarm'
     AND (configuration -> 'actionsEnabled' = 'false'
     AND configuration -> 'insuffiecientDataActions' = '[]'

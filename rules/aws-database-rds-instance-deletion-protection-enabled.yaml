@@ -10,7 +10,7 @@ severity: high
 enabled: true
 sql: >
   SELECT arn
-  FROM magpie.awsrdsdbinstance
+  FROM ${magpie_schema}.awsrdsdbinstance
   WHERE (configuration->'deletionProtection' = 'false');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

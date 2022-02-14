@@ -12,7 +12,7 @@ severity: high
 enabled: true
 sql: >
   SELECT arn
-  FROM magpie.awsiamcredentialsreport
+  FROM ${magpie_schema}.awsiamcredentialsreport
   WHERE resourcetype = 'AWS::IAM::CredentialsReport'
     AND (resourcename = '<root_account>'
          AND (configuration->>'access_key_1_active' = 'true'

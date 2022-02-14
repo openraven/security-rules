@@ -10,7 +10,7 @@ severity: high
 enabled: true
 sql: >
   SELECT acc.assetid
-    FROM magpie.gcp acc,
+    FROM ${magpie_schema}.gcp acc,
   LATERAL (
     SELECT value ->> 'keyType' as keyType, value ->> 'algorithm' as alg
     FROM jsonb_array_elements("configuration" -> 'dnsSecConfig' -> 'defaultKeySpecs')

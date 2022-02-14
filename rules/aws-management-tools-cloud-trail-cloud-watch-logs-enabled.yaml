@@ -18,7 +18,7 @@ severity: high
 enabled: true
 sql: >
   SELECT arn
-  FROM magpie.awscloudtrailtrail
+  FROM ${magpie_schema}.awscloudtrailtrail
   WHERE (supplementaryconfiguration->'trailDetails'->'trail'->'cloudWatchLogsLogGroupArn' = 'null'
   OR supplementaryconfiguration->'status'->'latestCloudWatchLogsDeliveryTime' = 'null'
   OR TO_TIMESTAMP(supplementaryconfiguration->'status'->>'latestCloudWatchLogsDeliveryTime', 'YYYY-MM-DD"T"HH24:MI:SS') < now() - interval '1 day');

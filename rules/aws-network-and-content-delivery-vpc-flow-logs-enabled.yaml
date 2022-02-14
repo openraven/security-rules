@@ -13,13 +13,13 @@ severity: high
 enabled: true
 sql: >
   SELECT arn
-  FROM magpie.awsec2vpc
+  FROM ${magpie_schema}.awsec2vpc
   WHERE arn NOT IN
       (SELECT arn
        FROM
          (SELECT arn,
                  jsonb_array_elements(supplementaryconfiguration->'flowLogs'->'flowLogs') AS flow_logs
-          FROM magpie.awsec2vpc) flow_logs_table
+          FROM ${magpie_schema}.awsec2vpc) flow_logs_table
        WHERE flow_logs->>'flowLogStatus' ILIKE 'ACTIVE'
          AND (flow_logs->>'trafficType' ILIKE 'ALL'
               OR flow_logs->>'trafficType' ILIKE 'REJECT'));

@@ -11,7 +11,7 @@ severity: high
 enabled: true
 sql: >
   SELECT acc.assetid
-    FROM magpie.gcp acc,
+    FROM ${magpie_schema}.gcp acc,
     LATERAL (
           SELECT value as inst
           FROM jsonb_array_elements(configuration -> 'serviceAccounts')

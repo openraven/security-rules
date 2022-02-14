@@ -18,7 +18,7 @@ severity: high
 enabled: true
 sql: >
   SELECT arn
-  FROM magpie.awsec2securitygroup
+  FROM ${magpie_schema}.awsec2securitygroup
   WHERE resourcetype = 'AWS::EC2::SecurityGroup'
     AND resourcename = 'default'
     AND (jsonb_array_length(configuration->'ipPermissions') > 0

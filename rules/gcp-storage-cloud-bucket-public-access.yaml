@@ -10,7 +10,7 @@ severity: high
 enabled: true
 sql: >
   SELECT distinct acc.assetid
-    FROM magpie.gcp acc,
+    FROM ${magpie_schema}.gcp acc,
     LATERAL (
         SELECT jsonb_array_elements_text(value -> 'members') as members
         FROM jsonb_array_elements(supplementaryconfiguration -> 'iamPolicy' -> 'bindingsList')

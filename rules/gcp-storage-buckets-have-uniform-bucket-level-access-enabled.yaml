@@ -11,7 +11,7 @@ severity: high
 enabled: true
 sql: >
   SELECT acc.assetid
-    FROM magpie.gcpstoragebucket acc
+    FROM ${magpie_schema}.gcpstoragebucket acc
    WHERE acc.resourcetype = 'GCP::Storage::Bucket'
      AND configuration -> 'iamConfiguration' ->> 'isUniformBucketLevelAccessEnabled' = 'false'
 

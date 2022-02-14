@@ -10,7 +10,7 @@ severity: high
 enabled: true
 sql: >
   SELECT 'Default network has not been removed' as assetid
-    FROM magpie.gcp acc
+    FROM ${magpie_schema}.gcp acc
     WHERE acc.resourcetype = 'GCP::VPC::Network'
      AND configuration ->> 'name' = 'default'
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

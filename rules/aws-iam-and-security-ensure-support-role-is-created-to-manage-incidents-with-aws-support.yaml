@@ -12,7 +12,7 @@ severity: high
 enabled: true
 sql: >
   SELECT arn
-  FROM magpie.awsiampolicy
+  FROM ${magpie_schema}.awsiampolicy
   WHERE resourcetype = 'AWS::IAM::Policy'
     AND resourcename = 'AWSSupportAccess'
     AND configuration->>'attachmentCount' = '0';

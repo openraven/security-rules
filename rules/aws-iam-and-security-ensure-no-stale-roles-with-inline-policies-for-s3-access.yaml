@@ -12,7 +12,7 @@ severity: high
 enabled: true
 sql: >
   SELECT DISTINCT a.arn
-  FROM magpie.awsiamrole a, LATERAL (
+  FROM ${magpie_schema}.awsiamrole a, LATERAL (
       SELECT value ->> 'policyDocument' as policy_document
       FROM jsonb_array_elements(supplementaryconfiguration -> 'inlinePolicies')
   ) arr
