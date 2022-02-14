@@ -12,7 +12,7 @@ severity: high
 enabled: true
 sql: >
   SELECT arn
-  FROM magpie.awsdynamodbtable
+  FROM ${magpie_schema}.awsdynamodbtable
   WHERE documentid = 'null';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

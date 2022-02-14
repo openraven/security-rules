@@ -13,7 +13,7 @@ severity: high
 enabled: true
 sql: >
   SELECT arn
-  FROM magpie.awsiamaccount
+  FROM ${magpie_schema}.awsiamaccount
   WHERE resourcetype = 'AWS::IAM::Account'
     AND configuration->>'AccountMFAEnabled' != '1';
 

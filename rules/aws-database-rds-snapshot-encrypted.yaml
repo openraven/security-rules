@@ -9,7 +9,7 @@ severity: high
 enabled: true
 sql: >
     SELECT arn
-    FROM magpie.awsrdsdbsnapshot
+    FROM ${magpie_schema}.awsrdsdbsnapshot
     WHERE configuration->'encrypted' = 'false';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

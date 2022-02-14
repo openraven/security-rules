@@ -12,7 +12,7 @@ severity: high
 enabled: true
 sql: >
   SELECT acc.assetid
-    FROM magpie.gcpbigquerydataset acc
+    FROM ${magpie_schema}.gcpbigquerydataset acc
    WHERE acc.resourcetype = 'GCP::BigQuery::Dataset'
      AND EXISTS (
        SELECT *

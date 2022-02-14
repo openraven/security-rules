@@ -9,7 +9,7 @@ severity: high
 enabled: true
 sql: >
   SELECT arn
-  FROM magpie.awsredshiftcluster
+  FROM ${magpie_schema}.awsredshiftcluster
   WHERE configuration -> 'kmsKeyId' = 'null';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

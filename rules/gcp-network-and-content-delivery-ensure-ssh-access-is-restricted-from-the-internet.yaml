@@ -12,7 +12,7 @@ severity: high
 enabled: true
 sql: >
   SELECT distinct acc.assetid
-  FROM magpie.gcpvpcfirewall acc
+  FROM ${magpie_schema}.gcpvpcfirewall acc
   JOIN LATERAL (
           SELECT value as ip_ranges
           FROM jsonb_array_elements_text(acc.configuration -> 'sourceRanges')

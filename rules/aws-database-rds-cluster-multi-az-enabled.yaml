@@ -8,7 +8,7 @@ severity: high
 enabled: true
 sql: >
   SELECT arn
-  FROM magpie.awsrdsdbinstance
+  FROM ${magpie_schema}.awsrdsdbinstance
   WHERE EXISTS (SELECT * FROM jsonb_array_elements(supplementaryconfiguration->'dbClusters'->'dbClusters') dbClusters
   WHERE dbClusters ->>'multiAZ' = 'false');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

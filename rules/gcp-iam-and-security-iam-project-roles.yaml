@@ -15,7 +15,7 @@ sql: >
   FROM
     (SELECT assetid,
             jsonb_array_elements(supplementaryconfiguration->'iamPolicy'->'bindings_') AS binding
-      FROM magpie.gcp
+      FROM ${magpie_schema}.gcp
       WHERE resourcetype = 'GCP::ResourceManager::Project' AS bindings
   WHERE binding->>'role_' = 'roles/iam.serviceAccountTokenCreator'
     OR binding->>'role_' = 'roles/iam.serviceAccountUser'

@@ -8,7 +8,7 @@ severity: high
 enabled: true
 sql: >
   SELECT arn
-  FROM magpie.awsredshiftcluster
+  FROM ${magpie_schema}.awsredshiftcluster
   WHERE (configuration -> 'encrypted' = 'true')
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

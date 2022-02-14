@@ -13,7 +13,7 @@ severity: high
 enabled: true
 sql: >
   SELECT s3bucket.arn
-    FROM magpie.awss3bucket s3bucket
+    FROM ${magpie_schema}.awss3bucket s3bucket
     JOIN LATERAL (
         SELECT value AS ssec
         FROM jsonb_array_elements(s3bucket.supplementaryconfiguration -> 'serverSideEncryptionConfiguration' -> 'rules')

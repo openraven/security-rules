@@ -12,7 +12,7 @@ severity: high
 enabled: true
 sql: >
   SELECT arn, supplementaryconfiguration -> 'versioning' ->> 'status'
-    FROM magpie.awss3bucket
+    FROM ${magpie_schema}.awss3bucket
      AND (supplementaryconfiguration -> 'versioning' ->> 'status' is null
         OR supplementaryconfiguration -> 'versioning' ->> 'status' <> 'Enabled'
         OR supplementaryconfiguration -> 'versioning' ->> 'mfaDelete' is null

@@ -12,7 +12,7 @@ severity: high
 enabled: true
 sql: >
   SELECT acc.assetid
-    FROM magpie.gcpvpcnetwork acc
+    FROM ${magpie_schema}.gcpvpcnetwork acc
    WHERE acc.resourcetype = 'GCP::VPC::Network'
      AND configuration ->> 'autoCreateSubnetworks' is null
 

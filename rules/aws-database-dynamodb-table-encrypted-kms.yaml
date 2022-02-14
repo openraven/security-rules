@@ -10,7 +10,7 @@ severity: high
 enabled: true
 sql: >
   SELECT arn
-  FROM magpie.awsdynamodbtable
+  FROM ${magpie_schema}.awsdynamodbtable
   WHERE configuration->'sseDescription' = 'null'
   OR configuration->'sseDescription'->>'sseType' != 'KMS';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

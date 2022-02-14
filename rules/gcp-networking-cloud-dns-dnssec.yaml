@@ -11,7 +11,7 @@ severity: high
 enabled: true
 sql: >
   SELECT acc.assetid
-    FROM magpie.gcp acc
+    FROM ${magpie_schema}.gcp acc
     WHERE acc.resourcetype = 'GCP::Dns::Zone'
      AND acc.configuration ->> 'nameServers' not like '%-private.%'
      AND acc.configuration -> 'dnsSecConfig' ->> 'state' = 'off'

@@ -11,7 +11,7 @@ severity: high
 enabled: true
 sql: >
   SELECT distinct acc.assetid
-  FROM magpie.gcp acc
+  FROM ${magpie_schema}.gcp acc
   JOIN LATERAL (
           SELECT value as ip_ranges
           FROM jsonb_array_elements_text(acc.configuration -> 'sourceRanges')

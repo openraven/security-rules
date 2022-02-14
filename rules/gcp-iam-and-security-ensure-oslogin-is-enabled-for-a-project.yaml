@@ -9,7 +9,7 @@ severity: high
 enabled: true
 sql: >
   SELECT acc.assetid
-    FROM magpie.gcpprojectinfo acc
+    FROM ${magpie_schema}.gcpprojectinfo acc
    WHERE acc.resourcetype = 'GCP::Project::Info'
      AND NOT EXISTS
             (SELECT value as val
