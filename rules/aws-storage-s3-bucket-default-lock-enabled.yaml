@@ -11,7 +11,7 @@ sql: >
   SELECT arn
   from ${magpie_schema}.awss3bucket
   WHERE
-  (supplementaryconfiguration->'bucketObjectLockConfiguration' = 'null'
-  OR supplementaryconfiguration->'bucketObjectLockConfiguration'->>'objectLockEnabled' != 'Enabled');
+  (supplementaryconfiguration->'BucketObjectLockConfiguration' = 'null'
+  OR supplementaryconfiguration->'BucketObjectLockConfiguration'->>'objectLockEnabled' != 'Enabled');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

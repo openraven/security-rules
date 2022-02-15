@@ -16,11 +16,11 @@ sql: >
     FROM ${magpie_schema}.awss3bucket s3bucket
     JOIN LATERAL (
         SELECT value AS ssec
-        FROM jsonb_array_elements(s3bucket.supplementaryconfiguration -> 'serverSideEncryptionConfiguration' -> 'rules')
+        FROM jsonb_array_elements(s3bucket.supplementaryconfiguration -> 'ServerSideEncryptionConfiguration' -> 'rules')
     ) arr ON true
     JOIN LATERAL (
         SELECT value AS stmt
-        FROM jsonb_array_elements(s3bucket.supplementaryconfiguration -> 'bucketPolicy' -> 'Statement')
+        FROM jsonb_array_elements(s3bucket.supplementaryconfiguration -> 'BucketPolicy' -> 'Statement')
     ) policy ON true
     WHERE s3bucket.resourcetype = 'AWS::S3::Bucket'
     AND policy.stmt ->> 'Action' LIKE '%s3:PutObject%'

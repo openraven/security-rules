@@ -16,7 +16,7 @@ sql: >
     FROM ${magpie_schema}.awss3bucket s3bucket,
     LATERAL (
         SELECT value AS ssec
-        FROM jsonb_array_elements(s3bucket.supplementaryconfiguration -> 'serverSideEncryptionConfiguration' -> 'rules')
+        FROM jsonb_array_elements(s3bucket.supplementaryconfiguration -> 'ServerSideEncryptionConfiguration' -> 'rules')
     ) arr
     WHERE s3bucket.resourcetype = 'AWS::S3::Bucket'
       AND arr.ssec -> 'applyServerSideEncryptionByDefault' ->> 'sseAlgorithm' = 'aws:kms'
