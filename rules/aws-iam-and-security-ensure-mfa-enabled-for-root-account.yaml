@@ -14,7 +14,7 @@ enabled: true
 sql: >
   SELECT arn
   FROM ${magpie_schema}.awsiamaccount
-  WHERE resourcetype = 'AWS::IAM::Account'
+  WHERE resourcetype = 'AWS::Account'
     AND configuration->>'AccountMFAEnabled' != '1';
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

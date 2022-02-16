@@ -11,7 +11,7 @@ sql: >
   SELECT arn
   from ${magpie_schema}.awss3bucket
   WHERE
-  (supplementaryconfiguration->'serverSideEncryptionConfiguration' = 'null'
-  OR 'aws:kms' != (SELECT CAST(jsonb_array_elements(supplementaryconfiguration->'serverSideEncryptionConfiguration'->'rules')->'applyServerSideEncryptionByDefault'->>'sseAlgorithm' AS TEXT)));
+  (supplementaryconfiguration->'ServerSideEncryptionConfiguration' = 'null'
+  OR 'aws:kms' != (SELECT CAST(jsonb_array_elements(supplementaryconfiguration->'ServerSideEncryptionConfiguration'->'rules')->'applyServerSideEncryptionByDefault'->>'sseAlgorithm' AS TEXT)));
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

@@ -11,12 +11,12 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT arn, supplementaryconfiguration -> 'versioning' ->> 'status'
+  SELECT arn, supplementaryconfiguration -> 'Versioning' ->> 'status'
     FROM ${magpie_schema}.awss3bucket
-     AND (supplementaryconfiguration -> 'versioning' ->> 'status' is null
-        OR supplementaryconfiguration -> 'versioning' ->> 'status' <> 'Enabled'
-        OR supplementaryconfiguration -> 'versioning' ->> 'mfaDelete' is null
-        OR supplementaryconfiguration -> 'versioning' ->> 'mfaDelete' <> 'Enabled')
+     AND (supplementaryconfiguration -> 'Versioning' ->> 'status' is null
+        OR supplementaryconfiguration -> 'Versioning' ->> 'status' <> 'Enabled'
+        OR supplementaryconfiguration -> 'Versioning' ->> 'mfaDelete' is null
+        OR supplementaryconfiguration -> 'Versioning' ->> 'mfaDelete' <> 'Enabled')
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9
