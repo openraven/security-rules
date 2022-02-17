@@ -9,7 +9,7 @@ severity: high
 enabled: true
 sql: >
   SELECT arn
-  FROM magpie.awselasticsearchdomain
+  FROM ${magpie_schema}.awselasticsearchdomain
   WHERE (configuration -> 'logPublishingOptions' = 'null');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

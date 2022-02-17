@@ -11,7 +11,7 @@ severity: high
 enabled: true
 sql: >
   SELECT acc.assetid
-    FROM magpie.gcpdnszone acc,
+    FROM ${magpie_schema}.gcpdnszone acc,
   LATERAL (
     SELECT value ->> 'keyType' as keyType, value ->> 'algorithm' as alg
     FROM jsonb_array_elements("configuration" -> 'dnsSecConfig' -> 'defaultKeySpecs')

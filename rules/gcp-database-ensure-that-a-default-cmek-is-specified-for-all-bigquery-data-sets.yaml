@@ -13,7 +13,7 @@ severity: medium # by default encrypted by GMCK which also acceptable
 enabled: true
 sql: >
   SELECT acc.assetid
-    FROM magpie.gcpbigquerydataset acc
+    FROM ${magpie_schema}.gcpbigquerydataset acc
    WHERE acc.resourcetype = 'GCP::BigQuery::Dataset'
      AND acc."configuration" -> 'defaultEncryptionConfiguration' ->> 'kmsKeyName' IS NULL
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

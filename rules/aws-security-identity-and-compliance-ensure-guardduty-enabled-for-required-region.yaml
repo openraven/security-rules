@@ -14,10 +14,10 @@ enabled: true
 sql: >
   SELECT 'No GuardDuty enabled in discovered region: ' || reg.region_global as arn
     FROM (SELECT distinct awsregion as region_global
-            FROM magpie.awsguarddutydetector
+            FROM ${magpie_schema}.awsguarddutydetector
            WHERE awsregion != 'aws-global') reg
     LEFT JOIN (SELECT awsregion
-                 FROM magpie.awsguarddutydetector a
+                 FROM ${magpie_schema}.awsguarddutydetector a
                 WHERE resourcetype = 'AWS::GuardDuty::Detector'
                   AND "configuration" ->> 'status' = 'ENABLED') a
     ON (reg.region_global = a.awsregion or awsregion is null)

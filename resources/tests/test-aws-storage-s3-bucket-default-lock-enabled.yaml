@@ -26,9 +26,9 @@ insecureAssets:
           "creationDate" : "2021-12-02T16:56:19Z"
         },
         "supplementaryConfiguration" : {
-          "serverSideEncryptionConfiguration" : null,
+          "ServerSideEncryptionConfiguration" : null,
           "bucketWebsiteConfiguration" : null,
-          "bucketACLConfiguration" : {
+          "BucketACLConfiguration" : {
             "owner" : {
               "displayName" : null,
               "id" : "3b79fa0009896d15625dd80b0179c7c4435e84dfcec6919bc99a1e8871928b7c"
@@ -50,7 +50,7 @@ insecureAssets:
             "blockPublicPolicy" : true,
             "restrictPublicBuckets" : true
           },
-          "bucketLoggingConfiguration" : {
+          "BucketLoggingConfiguration" : {
             "loggingEnabled" : null
           },
           "metricsConfiguration" : {
@@ -62,9 +62,9 @@ insecureAssets:
             "queueConfigurations" : null,
             "lambdaFunctionConfigurations" : null
           },
-          "bucketPolicyStatus" : null,
-          "bucketPolicy" : null,
-          "bucketObjectLockConfiguration" : null,
+          "BucketPolicyStatus" : null,
+          "BucketPolicy" : null,
+          "BucketObjectLockConfiguration" : null,
           "replicationConfiguration" : null,
           "isPublicByPolicy" : false,
           "isPublicByACL" : false,
@@ -98,7 +98,7 @@ secureAssets:
           "creationDate" : "2021-12-02T16:56:19Z"
         },
         "supplementaryConfiguration" : {
-          "serverSideEncryptionConfiguration" : {
+          "ServerSideEncryptionConfiguration" : {
             "rules" : [ {
               "applyServerSideEncryptionByDefault" : {
                 "sseAlgorithm" : "aws:kms",
@@ -108,7 +108,7 @@ secureAssets:
             } ]
           },
           "bucketWebsiteConfiguration" : null,
-          "bucketACLConfiguration" : {
+          "BucketACLConfiguration" : {
             "owner" : {
               "displayName" : null,
               "id" : "3b79fa0009896d15625dd80b0179c7c4435e84dfcec6919bc99a1e8871928b7c"
@@ -130,7 +130,7 @@ secureAssets:
             "blockPublicPolicy" : true,
             "restrictPublicBuckets" : true
           },
-          "bucketLoggingConfiguration" : {
+          "BucketLoggingConfiguration" : {
             "loggingEnabled" : null
           },
           "metricsConfiguration" : {
@@ -142,9 +142,9 @@ secureAssets:
             "queueConfigurations" : null,
             "lambdaFunctionConfigurations" : null
           },
-          "bucketPolicyStatus" : null,
-          "bucketPolicy" : null,
-          "bucketObjectLockConfiguration" :  {
+          "BucketPolicyStatus" : null,
+          "BucketPolicy" : null,
+          "BucketObjectLockConfiguration" :  {
               "rule": null,
               "objectLockEnabled": "Enabled"
           },

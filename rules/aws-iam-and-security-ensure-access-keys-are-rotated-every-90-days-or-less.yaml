@@ -14,7 +14,7 @@ severity: high
 enabled: true
 sql: >
   SELECT arn
-  FROM magpie.awsiamcredentialsreport
+  FROM ${magpie_schema}.awsiamcredentialsreport
   WHERE resourcetype = 'AWS::IAM::CredentialsReport' AND ((configuration->>'access_key_1_active' = 'true'
          AND TO_TIMESTAMP(configuration->>'access_key_1_last_rotated', 'YYYY-MM-DD"T"HH24:MI:SS') < now() - interval '90 days')
     OR (configuration->>'access_key_2_active' = 'true'

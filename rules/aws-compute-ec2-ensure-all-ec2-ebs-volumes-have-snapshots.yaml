@@ -11,12 +11,12 @@ severity: high
 enabled: true
 sql: >
   SELECT DISTINCT ec2.arn
-  FROM magpie.awsec2instance ec2,
+  FROM ${magpie_schema}.awsec2instance ec2,
   LATERAL (
       SELECT value -> 'ebs' AS ebs_device
       FROM jsonb_array_elements(configuration -> 'blockDeviceMappings')
   ) arr
-  LEFT JOIN magpie.awsec2snapshot snap
+  LEFT JOIN ${magpie_schema}.awsec2snapshot snap
   ON (snap.resourcetype = 'AWS::EC2::Snapshot'
       AND arr.ebs_device ->> 'volumeId' = snap.configuration ->> 'volumeId')
   WHERE ec2.resourcetype = 'AWS::EC2::Instance'

@@ -11,7 +11,7 @@ severity: medium # Critical VMs only
 enabled: true
 sql: >
   SELECT acc.assetid
-    FROM magpie.gcp acc
+    FROM ${magpie_schema}.gcp acc
    WHERE acc.resourcetype = 'GCP:ComputeEngine::Disk'
      AND "configuration" -> 'diskEncryptionKey' ->> 'sha256' is not null
 

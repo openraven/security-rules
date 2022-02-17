@@ -12,10 +12,10 @@ insecureAssets:
   mfa-is-not-enabled: >
     [{
      "documentId" : "TITMEubnP1OlM84G7_GzZg",
-     "arn" : "AWS::IAM::Account",
+     "arn" : "AWS::Account",
      "resourceName" : "mfa-is-not-enabled",
      "resourceId" : null,
-     "resourceType" : "AWS::IAM::Account",
+     "resourceType" : "AWS::Account",
      "awsRegion" : "aws-global",
      "awsAccountId" : "723176279592",
      "createdIso" : null,
@@ -71,10 +71,10 @@ insecureAssets:
   virtual-mfa-enabled: >
     [{
      "documentId" : "TITMEubnP1OlM84G7_GzZg",
-     "arn" : "AWS::IAM::Account",
+     "arn" : "AWS::Account",
      "resourceName" : "virtual-mfa-enabled",
      "resourceId" : null,
-     "resourceType" : "AWS::IAM::Account",
+     "resourceType" : "AWS::Account",
      "awsRegion" : "aws-global",
      "awsAccountId" : "723176279592",
      "createdIso" : null,
@@ -147,10 +147,10 @@ secureAssets:
   hardware-mfa-enabled: >
     [{
      "documentId" : "TITMEubnP1OlM84G7_GzZg",
-     "arn" : "AWS::IAM::Account",
+     "arn" : "AWS::Account",
      "resourceName" : "hardware-mfa-enabled",
      "resourceId" : null,
-     "resourceType" : "AWS::IAM::Account",
+     "resourceType" : "AWS::Account",
      "awsRegion" : "aws-global",
      "awsAccountId" : "723176279592",
      "createdIso" : null,

@@ -10,8 +10,8 @@ severity: high
 enabled: true
 sql: >
   SELECT acc.assetid
-    FROM magpie.gcploggingsink acc,
-         magpie.gcpstoragebucket str
+    FROM ${magpie_schema}.gcploggingsink acc,
+         ${magpie_schema}.gcpstoragebucket str
    WHERE acc.resourcetype = 'GCP::Logging::Sink'
      AND str.resourcetype = 'GCP::Storage::Bucket'
      AND strpos(acc."configuration" ->> 'destination_', str.assetid) > 0

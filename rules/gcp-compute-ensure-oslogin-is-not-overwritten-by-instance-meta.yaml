@@ -10,7 +10,7 @@ severity: high
 enabled: true
 sql: >
   SELECT acc.assetid
-    FROM magpie.gcpcomputeinstance acc
+    FROM ${magpie_schema}.gcpcomputeinstance acc
    WHERE acc.resourcetype = 'GCP::ComputeEngine::Instance'
    AND NOT EXISTS
           (SELECT value as val

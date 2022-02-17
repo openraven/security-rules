@@ -10,7 +10,7 @@ enabled: true
 sql: >
   SELECT 'No AWS CloudTrail trails that track all data events for S3' AS arn
   WHERE NOT EXISTS
-  (SELECT * from magpie.awscloudtrailtrail
+  (SELECT * from ${magpie_schema}.awscloudtrailtrail
   WHERE '["arn:aws:s3"]' = (SELECT CAST(jsonb_array_elements(jsonb_array_elements(supplementaryconfiguration->'eventSelectors'->'eventSelectors')->'dataResources')->>'values' AS TEXT)));
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

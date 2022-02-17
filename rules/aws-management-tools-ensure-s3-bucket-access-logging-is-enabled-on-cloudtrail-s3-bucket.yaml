@@ -14,14 +14,14 @@ severity: high
 enabled: true
 sql: >
   SELECT arn
-  FROM magpie.awscloudtrailtrail cloudtrail
+  FROM ${magpie_schema}.awscloudtrailtrail cloudtrail
   WHERE resourcetype = 'AWS::CloudTrail::Trail'
     AND NOT EXISTS
       (SELECT *
-       FROM magpie.awss3bucket s3bucket
+       FROM ${magpie_schema}.awss3bucket s3bucket
        WHERE resourcetype = 'AWS::S3::Bucket'
          AND s3bucket.resourcename = cloudtrail.supplementaryconfiguration->'trailDetails'->'trail'->>'s3BucketName'
-         AND s3bucket.supplementaryconfiguration->'bucketLoggingConfiguration'->'loggingEnabled' != 'null');
+         AND s3bucket.supplementaryconfiguration->'BucketLoggingConfiguration'->'loggingEnabled' != 'null');
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

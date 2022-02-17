@@ -19,7 +19,7 @@ sql: >
     SELECT 'No correctly configured AWS CloudTrail trails' AS arn
     WHERE NOT EXISTS
     (SELECT *
-    FROM magpie.awscloudtrailtrail
+    FROM ${magpie_schema}.awscloudtrailtrail
     WHERE EXISTS
     (SELECT *
     FROM jsonb_array_elements(supplementaryconfiguration->'eventSelectors'->'eventSelectors') eventSelector

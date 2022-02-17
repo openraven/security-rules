@@ -17,7 +17,7 @@ sql: >
   SELECT 'No global trail exists' AS asset_id
   WHERE NOT EXISTS
       (SELECT *
-       FROM magpie.awscloudtrailtrail
+       FROM ${magpie_schema}.awscloudtrailtrail
        WHERE resourcetype = 'AWS::CloudTrail::Trail'
          AND supplementaryconfiguration->'trailDetails'->'trail'->'isMultiRegionTrail' = 'true'
          AND supplementaryconfiguration->'status'->'isLogging' = 'true'

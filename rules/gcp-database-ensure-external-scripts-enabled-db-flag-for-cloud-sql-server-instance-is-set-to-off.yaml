@@ -13,7 +13,7 @@ severity: high
 enabled: true
 sql: >
   SELECT acc.assetid
-    FROM magpie.gcpsqlinstance acc
+    FROM ${magpie_schema}.gcpsqlinstance acc
    WHERE resourcetype = 'GCP::SQL::Instance'
      AND acc."configuration" ->> 'databaseVersion' ILIKE 'SQLSERVER%'
      AND NOT EXISTS (

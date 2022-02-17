@@ -12,7 +12,7 @@ severity: high
 enabled: true
 sql: >
   SELECT acc.assetid
-    FROM magpie.gcp acc
+    FROM ${magpie_schema}.gcp acc
    WHERE resourcetype = 'GCP::SQL::Instance'
      AND acc."configuration" ->> 'databaseVersion' ILIKE 'POSTGRES%'
      AND NOT EXISTS (

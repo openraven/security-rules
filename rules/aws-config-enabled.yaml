@@ -15,7 +15,7 @@ sql: >
   SELECT 'No global configuration recorder exists' AS arn
   WHERE NOT EXISTS
       (SELECT *
-       FROM magpie.awsconfigurationrecorder
+       FROM ${magpie_schema}.awsconfigurationrecorder
          AND configuration->'recordingGroup'->'allSupported' = 'true'
          AND configuration->'recordingGroup'->'includeGlobalResourceTypes' = 'true'
          AND supplementaryconfiguration->'status'->'recording' = 'true'

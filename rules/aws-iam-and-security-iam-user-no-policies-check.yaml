@@ -11,7 +11,7 @@ severity: high
 enabled: true
 sql: >
   SELECT arn
-  FROM magpie.awsiamuser
+  FROM ${magpie_schema}.awsiamuser
     AND (supplementaryconfiguration->>'attachedPolicies' != '[]'
          OR supplementaryconfiguration->>'userPolicies' != '[]');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

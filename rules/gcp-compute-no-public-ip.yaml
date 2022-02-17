@@ -9,7 +9,7 @@ severity: high
 enabled: true
 sql: >
   SELECT acc.assetid
-    FROM magpie.gcp acc,
+    FROM ${magpie_schema}.gcp acc,
   LATERAL (
       SELECT value -> 'accessConfigs' as meta
       FROM jsonb_array_elements("configuration" -> 'networkInterfaces')
