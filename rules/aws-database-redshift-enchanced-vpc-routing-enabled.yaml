@@ -1,4 +1,4 @@
-ruleId: aws-redshift-enchanced-vpc-routing-enabled
+ruleId: aws-database-redshift-enchanced-vpc-routing-enabled
 type: asset
 ruleName: >
   Checks if Amazon Redshift cluster has enchanced VPC routing enabled
