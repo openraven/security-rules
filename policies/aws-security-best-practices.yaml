@@ -100,4 +100,6 @@ rules:
   - aws-rds-aurora-mysql-backtracking-enabled.yaml
   - aws-database-redshift-cluster-public-access-check.yaml
   - aws-database-redshift-cluster-configuration-check.yaml
+  - aws-database-dynamodb-covered-by-backup-plan.yaml
+  - aws-database-rds-covered-by-backup-plan.yaml
 version: 0.9
