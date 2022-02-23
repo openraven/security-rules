@@ -1,0 +1,158 @@
+ruleId: aws-storage-s3-versioning-enabled
+cloudProvider: aws
+description: >
+  Insecure Assets:
+     - `insecure-kms-bucket` Bucket has no versioning.
+  Secure asset
+     - `secure-kms-bucket` Bucket has versioning.
+insecureAssets:
+  arn:aws:s3:::insecure-kms-bucket: >
+    [ {
+        "documentId" : "I1yhs6PMOtmbo4Y2yY3UVg",
+        "arn" : "arn:aws:s3:::insecure-kms-bucket",
+        "resourceName" : "insecure-kms-bucket",
+        "resourceId" : "insecure-kms-bucket",
+        "resourceType" : "AWS::S3::Bucket",
+        "awsRegion" : "us-east-2",
+        "awsAccountId" : "476384142167",
+        "createdIso" : "2021-12-02T16:56:19Z",
+        "updatedIso" : "2021-12-03T00:31:47.918799Z",
+        "discoverySessionId" : null,
+        "maxSizeInBytes" : null,
+        "sizeInBytes" : null,
+        "configuration" : {
+          "name" : "insecure-kms-bucket",
+          "creationDate" : "2021-12-02T16:56:19Z"
+        },
+        "supplementaryConfiguration" : {
+          "ServerSideEncryptionConfiguration" : null,
+          "bucketWebsiteConfiguration" : null,
+          "BucketACLConfiguration" : {
+            "owner" : {
+              "displayName" : null,
+              "id" : "3b79fa0009896d15625dd80b0179c7c4435e84dfcec6919bc99a1e8871928b7c"
+            },
+            "grants" : [ {
+              "grantee" : {
+                "displayName" : null,
+                "emailAddress" : null,
+                "id" : "3b79fa0009896d15625dd80b0179c7c4435e84dfcec6919bc99a1e8871928b7c",
+                "type" : "CanonicalUser",
+                "uri" : null
+              },
+              "permission" : "FULL_CONTROL"
+            } ]
+          },
+          "publicAccessBlockConfiguration" : {
+            "blockPublicAcls" : true,
+            "ignorePublicAcls" : true,
+            "blockPublicPolicy" : true,
+            "restrictPublicBuckets" : true
+          },
+          "BucketLoggingConfiguration" : {
+            "loggingEnabled" : null
+          },
+          "metricsConfiguration" : {
+            "id" : null,
+            "filter" : null
+          },
+          "notificationConfiguration" : {
+            "topicConfigurations" : null,
+            "queueConfigurations" : null,
+            "lambdaFunctionConfigurations" : null
+          },
+          "BucketPolicyStatus" : null,
+          "BucketPolicy" : null,
+          "BucketObjectLockConfiguration" : null,
+          "replicationConfiguration" : null,
+          "isPublicByPolicy" : false,
+          "isPublicByACL" : false,
+          "isPublic" : false,
+          "Versioning" : {
+            "status" : null,
+            "mfaDelete" : null
+          }
+        },
+        "tags" : { },
+        "discoveryMeta" : { }
+      }]
+
+secureAssets:
+  arn:aws:s3:::secure-kms-bucket: >
+    [ {
+        "documentId" : "I1yhs6PMOtmbo4Y2yY3UVg",
+        "arn" : "arn:aws:s3:::secure-kms-bucket",
+        "resourceName" : "secure-kms-bucket",
+        "resourceId" : "secure-kms-bucket",
+        "resourceType" : "AWS::S3::Bucket",
+        "awsRegion" : "us-east-2",
+        "awsAccountId" : "476384142167",
+        "createdIso" : "2021-12-02T16:56:19Z",
+        "updatedIso" : "2021-12-03T00:31:47.918799Z",
+        "discoverySessionId" : null,
+        "maxSizeInBytes" : null,
+        "sizeInBytes" : null,
+        "configuration" : {
+          "name" : "secure-kms-bucket",
+          "creationDate" : "2021-12-02T16:56:19Z"
+        },
+        "supplementaryConfiguration" : {
+          "ServerSideEncryptionConfiguration" : {
+            "rules" : [ {
+              "applyServerSideEncryptionByDefault" : {
+                "sseAlgorithm" : "aws:kms",
+                "kmsMasterKeyID" : "arn:aws:kms:us-east-2:476384142167:alias/aws/s3"
+              },
+              "bucketKeyEnabled" : true
+            } ]
+          },
+          "bucketWebsiteConfiguration" : null,
+          "BucketACLConfiguration" : {
+            "owner" : {
+              "displayName" : null,
+              "id" : "3b79fa0009896d15625dd80b0179c7c4435e84dfcec6919bc99a1e8871928b7c"
+            },
+            "grants" : [ {
+              "grantee" : {
+                "displayName" : null,
+                "emailAddress" : null,
+                "id" : "3b79fa0009896d15625dd80b0179c7c4435e84dfcec6919bc99a1e8871928b7c",
+                "type" : "CanonicalUser",
+                "uri" : null
+              },
+              "permission" : "FULL_CONTROL"
+            } ]
+          },
+          "publicAccessBlockConfiguration" : {
+            "blockPublicAcls" : true,
+            "ignorePublicAcls" : true,
+            "blockPublicPolicy" : true,
+            "restrictPublicBuckets" : true
+          },
+          "BucketLoggingConfiguration" : {
+            "loggingEnabled" : null
+          },
+          "metricsConfiguration" : {
+            "id" : null,
+            "filter" : null
+          },
+          "notificationConfiguration" : {
+            "topicConfigurations" : null,
+            "queueConfigurations" : null,
+            "lambdaFunctionConfigurations" : null
+          },
+          "BucketPolicyStatus" : null,
+          "BucketPolicy" : null,
+          "BucketObjectLockConfiguration" : null,
+          "replicationConfiguration" : null,
+          "isPublicByPolicy" : false,
+          "isPublicByACL" : false,
+          "isPublic" : false,
+          "Versioning" : {
+            "status" : "Enabled",
+            "mfaDelete" : null
+          }
+        },
+        "tags" : { },
+        "discoveryMeta" : { }
+      }]

@@ -1,4 +1,4 @@
-ruleId: aws-rds-aurora-mysql-backtracking-enabled
+ruleId: aws-database-rds-aurora-mysql-backtracking-enabled
 cloudProvider: aws
 description: >
   Insecure assets don't have backtracking enabled.

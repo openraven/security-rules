@@ -1,4 +1,4 @@
-ruleId: aws-rds-aurora-mysql-backtracking-enabled
+ruleId: aws-database-rds-aurora-mysql-backtracking-enabled
 type: asset
 ruleName: >
   Ensure Aurora MySQL databases have backtracking enabled

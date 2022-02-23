@@ -11,7 +11,7 @@ enabled: true
 sql: >
   SELECT arn
     FROM ${magpie_schema}.awss3bucket
-     AND (supplementaryconfiguration ->> 'isPublicByACL' <> 'false'
+     WHERE (supplementaryconfiguration ->> 'isPublicByACL' <> 'false'
         OR supplementaryconfiguration ->> 'isPublicByPolicy' <> 'false')
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
