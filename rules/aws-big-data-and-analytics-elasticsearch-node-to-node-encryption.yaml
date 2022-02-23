@@ -1,0 +1,14 @@
+ruleId: aws-big-data-and-analytics-elasticsearch-node-to-node-encryption
+type: asset
+ruleName: >
+  Ensure Amazon OpenSearch Domains have node-to-node encryption enabled.
+description: >
+  Check that Amazon OpenSearch Service nodes are encrypted end to end. The rule is NON_COMPLIANT if the node-to-node encryption is disabled on the domain.
+severity: high
+enabled: true
+sql: >
+  SELECT arn
+  FROM ${magpie_schema}.awselasticsearchdomain
+  WHERE (configuration->'nodeToNodeEncryptionOptions'->>'enabled' != 'true');
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
