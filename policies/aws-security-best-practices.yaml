@@ -102,4 +102,5 @@ rules:
   - aws-database-redshift-cluster-configuration-check.yaml
   - aws-database-dynamodb-covered-by-backup-plan.yaml
   - aws-database-rds-covered-by-backup-plan.yaml
+  - aws-redshift-enchanced-vpc-routing-enabled.yaml
 version: 0.9
