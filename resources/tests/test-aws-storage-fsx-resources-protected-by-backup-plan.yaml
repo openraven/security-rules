@@ -1,0 +1,144 @@
+ruleId: aws-storage-fsx-resources-protected-by-backup-plan
+cloudProvider: aws
+description: >
+    -   Checks if a FSX file system is protected by a backup plan.
+insecureAssets:
+  arn:aws:fsx:us-east-2:476384142167:file-system/fs-0f6b92076bb1cab60: >
+    [ {
+      "documentId" : "Hoj7_X6bMjyd6zSsJzlBWg",
+      "arn" : "arn:aws:fsx:us-east-2:476384142167:file-system/fs-0f6b92076bb1cab60",
+      "resourceName" : "fs-0f6b92076bb1cab60",
+      "resourceId" : "fs-0f6b92076bb1cab60",
+      "resourceType" : "AWS::FSx::FileSystem",
+      "awsRegion" : "us-east-2",
+      "awsAccountId" : "476384142167",
+      "createdIso" : "2022-02-24T16:01:53.429Z",
+      "updatedIso" : "2022-02-24T16:16:13.878456Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "ownerId" : "476384142167",
+        "creationTime" : "2022-02-24T16:01:53.429Z",
+        "fileSystemId" : "fs-0f6b92076bb1cab60",
+        "fileSystemType" : "ONTAP",
+        "lifecycle" : "CREATING",
+        "failureDetails" : null,
+        "storageCapacity" : 1024,
+        "storageType" : "SSD",
+        "vpcId" : "vpc-6487540f",
+        "subnetIds" : [ "subnet-7a198036", "subnet-249c674f" ],
+        "networkInterfaceIds" : [ "eni-02152f3eb0162cb7d", "eni-0f20d00e7e07212c9" ],
+        "dnsName" : null,
+        "kmsKeyId" : "arn:aws:kms:us-east-2:476384142167:key/126169f8-167b-4d24-a1d7-d2484904be6e",
+        "resourceARN" : "arn:aws:fsx:us-east-2:476384142167:file-system/fs-0f6b92076bb1cab60",
+        "tags" : [ {
+          "key" : "Name",
+          "value" : "testnobackup"
+        } ],
+        "windowsConfiguration" : null,
+        "lustreConfiguration" : null,
+        "administrativeActions" : null,
+        "ontapConfiguration" : {
+          "automaticBackupRetentionDays" : null,
+          "dailyAutomaticBackupStartTime" : null,
+          "deploymentType" : "MULTI_AZ_1",
+          "endpointIpAddressRange" : "198.19.254.0/24",
+          "endpoints" : {
+            "intercluster" : {
+              "dnsName" : "intercluster.fs-0f6b92076bb1cab60.fsx.us-east-2.amazonaws.com",
+              "ipAddresses" : [ "172.31.34.31", "172.31.2.215" ]
+            },
+            "management" : {
+              "dnsName" : "management.fs-0f6b92076bb1cab60.fsx.us-east-2.amazonaws.com",
+              "ipAddresses" : [ "198.19.254.155" ]
+            }
+          },
+          "diskIopsConfiguration" : {
+            "mode" : "AUTOMATIC",
+            "iops" : 3072
+          },
+          "preferredSubnetId" : "subnet-7a198036",
+          "routeTableIds" : [ "rtb-5a58c031" ],
+          "throughputCapacity" : 1024,
+          "weeklyMaintenanceStartTime" : "6:04:30"
+        },
+        "fileSystemTypeVersion" : null,
+        "openZFSConfiguration" : null
+      },
+      "supplementaryConfiguration" : {
+        "awsBackupJobs" : [ ]
+      },
+      "tags" : { },
+      "discoveryMeta" : { }
+      } ]
+secureAssets:
+  arn:aws:fsx:us-east-2:476384142167:file-system/fs-0d2325028d49efce0: >
+    [ {
+      "documentId" : "NOBhfPJ1NiibJ0hZVEiRnQ",
+      "arn" : "arn:aws:fsx:us-east-2:476384142167:file-system/fs-0d2325028d49efce0",
+      "resourceName" : "fs-0d2325028d49efce0",
+      "resourceId" : "fs-0d2325028d49efce0",
+      "resourceType" : "AWS::FSx::FileSystem",
+      "awsRegion" : "us-east-2",
+      "awsAccountId" : "476384142167",
+      "createdIso" : "2022-02-24T16:14:05.622Z",
+      "updatedIso" : "2022-02-24T16:16:12.449246Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "ownerId" : "476384142167",
+        "creationTime" : "2022-02-24T16:14:05.622Z",
+        "fileSystemId" : "fs-0d2325028d49efce0",
+        "fileSystemType" : "ONTAP",
+        "lifecycle" : "AVAILABLE",
+        "failureDetails" : null,
+        "storageCapacity" : 1024,
+        "storageType" : "SSD",
+        "vpcId" : "vpc-6487540f",
+        "subnetIds" : [ "subnet-249c674f", "subnet-7a198036" ],
+        "networkInterfaceIds" : [ "eni-0e29b42d64b16155f", "eni-01a272fd058fa7e4a" ],
+        "dnsName" : null,
+        "kmsKeyId" : "arn:aws:kms:us-east-2:476384142167:key/126169f8-167b-4d24-a1d7-d2484904be6e",
+        "resourceARN" : "arn:aws:fsx:us-east-2:476384142167:file-system/fs-0d2325028d49efce0",
+        "tags" : [ {
+          "key" : "Name",
+          "value" : "testbackupenabled"
+        } ],
+        "windowsConfiguration" : null,
+        "lustreConfiguration" : null,
+        "administrativeActions" : null,
+        "ontapConfiguration" : {
+          "automaticBackupRetentionDays" : 7,
+          "dailyAutomaticBackupStartTime" : "04:00",
+          "deploymentType" : "MULTI_AZ_1",
+          "endpointIpAddressRange" : "198.19.255.0/24",
+          "endpoints" : {
+            "intercluster" : {
+              "dnsName" : "intercluster.fs-0d2325028d49efce0.fsx.us-east-2.amazonaws.com",
+              "ipAddresses" : [ "172.31.10.141", "172.31.38.135" ]
+            },
+            "management" : {
+              "dnsName" : "management.fs-0d2325028d49efce0.fsx.us-east-2.amazonaws.com",
+              "ipAddresses" : [ "198.19.255.42" ]
+            }
+          },
+          "diskIopsConfiguration" : {
+            "mode" : "AUTOMATIC",
+            "iops" : 3072
+          },
+          "preferredSubnetId" : "subnet-249c674f",
+          "routeTableIds" : [ "rtb-5a58c031" ],
+          "throughputCapacity" : 1024,
+          "weeklyMaintenanceStartTime" : "5:06:00"
+        },
+        "fileSystemTypeVersion" : null,
+        "openZFSConfiguration" : null
+      },
+      "supplementaryConfiguration" : {
+        "awsBackupJobs" : [ ]
+      },
+      "tags" : { },
+      "discoveryMeta" : { }
+      } ]

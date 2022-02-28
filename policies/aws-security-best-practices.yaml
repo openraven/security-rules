@@ -102,6 +102,8 @@ rules:
   - aws-database-redshift-cluster-configuration-check.yaml
   - aws-database-dynamodb-covered-by-backup-plan.yaml
   - aws-database-rds-covered-by-backup-plan.yaml
+  - aws-storage-fsx-resources-protected-by-backup-plan.yaml
+  - aws-network-and-content-delivery-elb-logging-enabled.yaml
   - aws-database-redshift-enchanced-vpc-routing-enabled.yaml
   - aws-big-data-and-analytics-elasticsearch-node-to-node-encryption.yaml
   - aws-storage-s3-versioning-enabled.yaml
