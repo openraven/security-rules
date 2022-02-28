@@ -4,7 +4,7 @@ description: >
   Insecure assets have no backup plan.
   Secure assets have a backup plan.
 insecureAssets:
-  No backup plans configured for all Aurora RDS instances.: >
+  No backup plans configured for all RDS instances.: >
     [{
        "documentId" : "dBY7DFMUMvyT8FVM9qEEEA",
        "arn" : "no-backup-plan-enabled",
