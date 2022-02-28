@@ -103,4 +103,6 @@ rules:
   - aws-database-dynamodb-covered-by-backup-plan.yaml
   - aws-database-rds-covered-by-backup-plan.yaml
   - aws-redshift-enchanced-vpc-routing-enabled.yaml
+  - aws-storage-fsx-resources-protected-by-backup-plan.yaml
+  - aws-network-and-content-delivery-elb-logging-enabled.yaml
 version: 0.9

@@ -1,0 +1,14 @@
+ruleId: aws-network-and-content-delivery-elb-logging-enabled
+type: asset
+ruleName: >
+  Checks if an Elastic Load Balancer has logging enabled.
+description: >
+  Checks if the Application Load Balancer and the Classic Load Balancer have logging enabled. The rule is NON_COMPLIANT if the access_logs.s3.enabled is false or access_logs.S3.bucket is not equal to the s3BucketName that you provided.
+severity: high
+enabled: true
+sql: >
+  SELECT arn
+  FROM ${magpie_schema}.awselasticloadbalancingloadbalancer
+  WHERE (supplementaryconfiguration -> 'attributes' -> 'loadBalancerAttributes' -> 'accessLog' -> 'enabled' = 'false')
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

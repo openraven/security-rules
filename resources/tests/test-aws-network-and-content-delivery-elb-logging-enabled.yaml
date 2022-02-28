@@ -1,0 +1,172 @@
+ruleId: aws-network-and-content-delivery-elb-logging-enabled
+cloudProvider: aws
+description: >
+    -   Checks if an Elastic Load Balancer has logging enabled.
+insecureAssets:
+  arn:aws:elasticloadbalancing:us-east-2:476384142167:loadbalancer/test-classic-lb-nologs: >
+   [ {
+      "documentId" : "mi53eeh6NWCMEc3mSLngQw",
+      "arn" : "arn:aws:elasticloadbalancing:us-east-2:476384142167:loadbalancer/test-classic-lb-nologs",
+      "resourceName" : "test-classic-lb-nologs-507416730.us-east-2.elb.amazonaws.com",
+      "resourceId" : "test-classic-lb-nologs",
+      "resourceType" : "AWS::ElasticLoadBalancing::LoadBalancer",
+      "awsRegion" : "us-east-2",
+      "awsAccountId" : "476384142167",
+      "createdIso" : "2021-12-02T16:47:01.880Z",
+      "updatedIso" : "2022-02-25T15:45:24.675867Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "loadBalancerName" : "test-classic-lb-nologs",
+        "dnsName" : "test-classic-lb-nologs-507416730.us-east-2.elb.amazonaws.com",
+        "canonicalHostedZoneName" : "test-classic-lb-nologs-507416730.us-east-2.elb.amazonaws.com",
+        "canonicalHostedZoneNameID" : "Z3AADJGX6KTTL2",
+        "listenerDescriptions" : [ {
+          "listener" : {
+            "protocol" : "HTTP",
+            "loadBalancerPort" : 80,
+            "instanceProtocol" : "HTTP",
+            "instancePort" : 80,
+            "sslCertificateId" : null
+          },
+          "policyNames" : [ ]
+        } ],
+        "policies" : {
+          "appCookieStickinessPolicies" : [ ],
+          "lbCookieStickinessPolicies" : [ ],
+          "otherPolicies" : [ ]
+        },
+        "backendServerDescriptions" : [ ],
+        "availabilityZones" : [ "us-east-2c", "us-east-2b", "us-east-2a" ],
+        "subnets" : [ "subnet-249c674f", "subnet-7a198036", "subnet-970130ed" ],
+        "vpcId" : "vpc-6487540f",
+        "instances" : [ ],
+        "healthCheck" : {
+          "target" : "HTTP:80/index.html",
+          "interval" : 30,
+          "timeout" : 5,
+          "unhealthyThreshold" : 2,
+          "healthyThreshold" : 10
+        },
+        "sourceSecurityGroup" : {
+          "ownerAlias" : "476384142167",
+          "groupName" : "default"
+        },
+        "securityGroups" : [ "sg-3afa2c42" ],
+        "createdTime" : "2021-12-02T16:47:01.880Z",
+        "scheme" : "internet-facing"
+      },
+      "supplementaryConfiguration" : {
+        "attributes" : {
+          "loadBalancerAttributes" : {
+            "crossZoneLoadBalancing" : {
+              "enabled" : true
+            },
+            "accessLog" : {
+              "enabled" : false,
+              "s3BucketName" : null,
+              "emitInterval" : null,
+              "s3BucketPrefix" : null
+            },
+            "connectionDraining" : {
+              "enabled" : true,
+              "timeout" : 300
+            },
+            "connectionSettings" : {
+              "idleTimeout" : 60
+            },
+            "additionalAttributes" : [ {
+              "key" : "elb.http.desyncmitigationmode",
+              "value" : "defensive"
+            } ]
+          }
+        }
+      },
+      "tags" : { },
+      "discoveryMeta" : { }
+    }]
+secureAssets:
+  arn:aws:elasticloadbalancing:us-east-2:476384142167:loadbalancer/test-classic-lb: >
+    [ {
+        "documentId" : "rR5J65DJMUOISAqMgH5Ctw",
+        "arn" : "arn:aws:elasticloadbalancing:us-east-2:476384142167:loadbalancer/test-classic-lb",
+        "resourceName" : "test-classic-lb-1544868284.us-east-2.elb.amazonaws.com",
+        "resourceId" : "test-classic-lb",
+        "resourceType" : "AWS::ElasticLoadBalancing::LoadBalancer",
+        "awsRegion" : "us-east-2",
+        "awsAccountId" : "476384142167",
+        "createdIso" : "2021-12-02T16:45:38.370Z",
+        "updatedIso" : "2022-02-25T15:45:24.360777Z",
+        "discoverySessionId" : null,
+        "maxSizeInBytes" : null,
+        "sizeInBytes" : null,
+        "configuration" : {
+          "loadBalancerName" : "test-classic-lb",
+          "dnsName" : "test-classic-lb-1544868284.us-east-2.elb.amazonaws.com",
+          "canonicalHostedZoneName" : "test-classic-lb-1544868284.us-east-2.elb.amazonaws.com",
+          "canonicalHostedZoneNameID" : "Z3AADJGX6KTTL2",
+          "listenerDescriptions" : [ {
+            "listener" : {
+              "protocol" : "HTTP",
+              "loadBalancerPort" : 80,
+              "instanceProtocol" : "HTTP",
+              "instancePort" : 80,
+              "sslCertificateId" : null
+            },
+            "policyNames" : [ ]
+          } ],
+          "policies" : {
+            "appCookieStickinessPolicies" : [ ],
+            "lbCookieStickinessPolicies" : [ ],
+            "otherPolicies" : [ ]
+          },
+          "backendServerDescriptions" : [ ],
+          "availabilityZones" : [ "us-east-2c", "us-east-2b", "us-east-2a" ],
+          "subnets" : [ "subnet-249c674f", "subnet-7a198036", "subnet-970130ed" ],
+          "vpcId" : "vpc-6487540f",
+          "instances" : [ ],
+          "healthCheck" : {
+            "target" : "HTTP:80/index.html",
+            "interval" : 30,
+            "timeout" : 5,
+            "unhealthyThreshold" : 2,
+            "healthyThreshold" : 10
+          },
+          "sourceSecurityGroup" : {
+            "ownerAlias" : "476384142167",
+            "groupName" : "default"
+          },
+          "securityGroups" : [ "sg-3afa2c42" ],
+          "createdTime" : "2021-12-02T16:45:38.370Z",
+          "scheme" : "internet-facing"
+        },
+        "supplementaryConfiguration" : {
+          "attributes" : {
+            "loadBalancerAttributes" : {
+              "crossZoneLoadBalancing" : {
+                "enabled" : true
+              },
+              "accessLog" : {
+                "enabled" : true,
+                "s3BucketName" : "testclassiclblogs",
+                "emitInterval" : 60,
+                "s3BucketPrefix" : ""
+              },
+              "connectionDraining" : {
+                "enabled" : true,
+                "timeout" : 300
+              },
+              "connectionSettings" : {
+                "idleTimeout" : 60
+              },
+              "additionalAttributes" : [ {
+                "key" : "elb.http.desyncmitigationmode",
+                "value" : "defensive"
+              } ]
+            }
+          }
+        },
+        "tags" : { },
+        "discoveryMeta" : { }
+    }]
