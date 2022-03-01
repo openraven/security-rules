@@ -1,13 +1,13 @@
 ruleId: aws-database-rds-covered-by-backup-plan
 type: asset
 ruleName: >
-  aurora-resources-protected-by-backup-plan
+  rds-resources-protected-by-backup-plan
 description: >
-  Checks if there is a back-up plan in place for all DynamoDB instances
+  Checks if there is a back-up plan in place for all rds instances
 severity: high
 enabled: true
 sql: >
-  SELECT 'No backup plans configured for all Aurora RDS instances.' as arn
+  SELECT 'No backup plans configured for all RDS instances.' as arn
   WHERE NOT EXISTS
   (SELECT * from ${magpie_schema}.awsbackupbackupplan
   WHERE supplementaryconfiguration->>'backupSelections' LIKE '%arn:aws:rds:*:*:cluster:*%');

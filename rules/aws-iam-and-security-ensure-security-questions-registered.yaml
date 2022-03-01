@@ -1,6 +1,6 @@
 # opnrvn-r-1
 # id: cb1b52e0-110c-4887-8ba4-901904938080
-ruleId: opnrvn-r-1
+ruleId: aws-iam-and-security-ensure-security-questions-registered
 type: asset
 ruleName: >
   Ensure security questions are registered in the AWS account
