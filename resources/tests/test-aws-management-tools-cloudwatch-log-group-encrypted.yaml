@@ -1,0 +1,60 @@
+ruleId: aws-management-tools-cloudwatch-log-group-encrypted
+cloudProvider: aws
+description: >
+    -   Checks if a log group in CloudWatch Logs is encrypted with a KMS key.
+insecureAssets:
+  res: >
+    [{
+      "documentId" : "jeSkergo4wjs32igS",
+      "arn" : "res",
+      "resourceName" : "res",
+      "resourceId" : null,
+      "resourceType" : "AWS::CloudWatchLogs::LogGroup",
+      "awsRegion" : "us-east-1",
+      "awsAccountId" : "000000000",
+      "createdIso" : "2022-02-15T20:59:56.032Z",
+      "updatedIso" : "2022-03-02T15:58:11.802782Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "logGroupName" : "test",
+        "creationTime" : 1644958796032,
+        "retentionInDays" : null,
+        "metricFilterCount" : 0,
+        "arn" : "arntest",
+        "storedBytes" : 928,
+        "kmsKeyId" : null
+      },
+      "supplementaryConfiguration" : { },
+      "tags" : { },
+      "discoveryMeta" : { }
+     }]
+secureAssets:
+  res2: >
+    [{
+      "documentId" : "kwiendTjsekmW93",
+      "arn" : "res2",
+      "resourceName" : "res2",
+      "resourceId" : null,
+      "resourceType" : "AWS::CloudWatchLogs::LogGroup",
+      "awsRegion" : "us-east-1",
+      "awsAccountId" : "0000000000",
+      "createdIso" : "2022-02-15T20:59:56.032Z",
+      "updatedIso" : "2022-03-02T15:58:11.802782Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "logGroupName" : "test",
+        "creationTime" : 1644958796032,
+        "retentionInDays" : null,
+        "metricFilterCount" : 0,
+        "arn" : "arntest2",
+        "storedBytes" : 928,
+        "kmsKeyId" : "testkmskey"
+      },
+      "supplementaryConfiguration" : { },
+      "tags" : { },
+      "discoveryMeta" : { }
+     }]

@@ -105,4 +105,5 @@ rules:
   - aws-redshift-enchanced-vpc-routing-enabled.yaml
   - aws-storage-fsx-resources-protected-by-backup-plan.yaml
   - aws-network-and-content-delivery-elb-logging-enabled.yaml
+  - aws-management-tools-cloudwatch-log-group-encrypted.yaml
 version: 0.9
