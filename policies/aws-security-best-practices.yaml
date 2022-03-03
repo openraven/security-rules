@@ -97,13 +97,19 @@ rules:
   - aws-database-rds-automatic-minor-version-upgrade-enabled.yaml
   - aws-database-rds-instance-public-access-check.yaml
   - aws-database-rds-db-instance-backup-enabled.yaml
-  - aws-rds-aurora-mysql-backtracking-enabled.yaml
+  - aws-database-rds-aurora-mysql-backtracking-enabled.yaml
   - aws-database-redshift-cluster-public-access-check.yaml
   - aws-database-redshift-cluster-configuration-check.yaml
   - aws-database-dynamodb-covered-by-backup-plan.yaml
   - aws-database-rds-covered-by-backup-plan.yaml
-  - aws-redshift-enchanced-vpc-routing-enabled.yaml
   - aws-storage-fsx-resources-protected-by-backup-plan.yaml
   - aws-network-and-content-delivery-elb-logging-enabled.yaml
+  - aws-database-redshift-enchanced-vpc-routing-enabled.yaml
+  - aws-big-data-and-analytics-elasticsearch-node-to-node-encryption.yaml
+  - aws-storage-s3-versioning-enabled.yaml
+  - aws-storage-s3-server-side-encryption.yaml
+  - aws-storage-s3-versioning-enabled.yaml
+  - aws-storage-s3-bucket-level-public-access-prohibited.yaml
   - aws-management-tools-cloudwatch-log-group-encrypted.yaml
+  - aws-database-redshift-cluster-maintenancesettings-check.yaml
 version: 0.9

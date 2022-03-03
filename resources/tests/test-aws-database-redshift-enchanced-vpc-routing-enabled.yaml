@@ -1,4 +1,4 @@
-ruleId: aws-redshift-enchanced-vpc-routing-enabled
+ruleId: aws-database-redshift-enchanced-vpc-routing-enabled
 cloudProvider: aws
 description: >
   - Insecure assets do not have enchanced vpc routing enabled
