@@ -1,0 +1,17 @@
+policyId: aws-redshift-best-practices
+policyName: The best security configuration practices for AWS Redshift assets.
+cloudProvider: AWS
+description: >
+  The best security configuration practices for AWS Redshift assets.
+  Includes every config rule relating to Redshift.
+enabled: true
+rules:
+  - aws-database-redshift-backup-enabled.yaml
+  - aws-database-redshift-cluster-configuration-check.yaml
+  - aws-database-redshift-cluster-kms-enabled.yaml
+  - aws-database-redshift-cluster-maintenancesettings-check.yaml
+  - aws-database-redshift-cluster-public-access-check.yaml
+  #  - redshift-default-admin-check - [to do]
+  - aws-database-redshift-enchanced-vpc-routing-enabled.yaml
+  #  - redshift-require-tls-ssl - [to do]
+version: 0.9

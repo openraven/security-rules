@@ -1,0 +1,58 @@
+policyId: aws-cis-foundations-benchmark
+policyName: CIS AWS Foundations Benchmark controls
+cloudProvider: AWS
+description: >
+  The benchmark enables organizations operating in the cloud to ensure their IT infrastructure is safeguarded against cyber threats and attacks.
+  The AWS CIS benchmark provides guidelines for configuring the security options of foundational AWS services.
+enabled: true
+rules:
+  - aws-iam-and-security-iam-root.yaml # CIS 1.1
+  - aws-iam-and-security-iam-user-mfa-enabled.yaml # CIS 1.2
+  - aws-iam-and-security-iam-user-unused-credentials-check.yaml  # CIS 1.3
+  - aws-iam-and-security-ensure-access-keys-are-rotated-every-90-days-or-less.yaml # CIS 1.4
+  - aws-iam-and-security-ensure-iam-password-policy-requires-one-uppercase-letter.yaml # CIS 1.5
+  - aws-iam-and-security-ensure-iam-password-requires-one-lowercase-letter.yaml # CIS 1.6
+  - aws-iam-and-security-iam-password-policy-symbols.yaml # CIS 1.7
+  - aws-iam-and-security-ensure-iam-password-requires-one-number.yaml # CIS 1.8
+  - aws-iam-and-security-iam-password-policy-length.yaml # CIS 1.9
+  - aws-iam-and-security-iam-password-policy-reuse.yaml # CIS 1.10
+  - aws-iam-and-security-ensure-iam-password-policy-expires-password-90-days-or-less.yaml # CIS 1.11
+  - aws-iam-and-security-ensure-no-root-account-access-key-exists.yaml # CIS 1.12
+  - aws-iam-and-security-ensure-mfa-enabled-for-root-account.yaml # CIS 1.13
+  - aws-iam-and-security-root-account-mfa-enabled.yaml # CIS 1.14
+  - aws-iam-and-security-ensure-security-questions-registered.yaml # CIS 1.15 [MANUAL]
+  - aws-iam-and-security-iam-user-no-policies-check.yaml # CIS 1.16
+  - aws-account-details.yaml # CIS 1.17 [MANUAL]
+  - aws-iam-and-security-ensure-security-contact-information-is-registered.yaml # CIS 1.18 [MANUAL]
+  - aws-iam-and-security-iam-instance-roles-used-for-aws-resource-access-from-instances.yaml # CIS 1.19 [MANUAL]
+  - aws-iam-and-security-ensure-support-role-is-created-to-manage-incidents-with-aws-support.yaml # CIS 1.20
+  - aws-iam-and-security-no-default-access-keys-with-console-password-for-all-iam-users.yaml # CIS 1.21 [MANUAL]
+  - aws-security-and-identity-compliance-iam-full-admin.yaml # CIS 1.22
+  - aws-management-tools-cloudtrail-enabled-all-regions.yaml # CIS 2.1
+  - aws-management-tools-cloud-trail-log-file-validation-enabled.yaml # CIS 2.2
+  - aws-storage-s3-bucket-cloudtrail-logs.yaml # CIS 2.3
+  - aws-management-tools-cloudtrail-cloudwatch-logs-enabled.yaml # CIS 2.4
+  - aws-config-enabled.yaml # CIS 2.5
+  - aws-management-tools-ensure-s3-bucket-access-logging-is-enabled-on-cloudtrail-s3-bucket.yaml # CIS 2.6
+  - aws-management-tools-cloudtrail-encryption-enabled.yaml # CIS 2.7
+  - aws-iam-and-security-cmk-backing-key-rotation-enabled.yaml # CIS 2.8
+  - aws-network-and-content-delivery-vpc-flow-logs-enabled.yaml # CIS 2.9
+  - aws-management-tools-cloudtrail-log-metric-filter-and-alarm-exist-for-unauthorized-api-calls.yaml # CIS 3.1
+  - aws-management-tools-cloud-trail-log-alarm-without-mfa.yaml # CIS 3.2
+  - aws-management-tools-cloudtrail-metric-filter-and-alarm-exist-for-root-account-usage.yaml # CIS 3.3
+  - aws-management-tools-cloudtrail-log-metric-filter-and-alaram-exist-for-iam-policy-changes.yaml # CIS 3.4
+  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-cloudtrail-config-changes.yaml # CIS 3.5
+  - aws-misc-cloud-trail-cloud-watch-logs-and-alarms.yaml # CIS 3.6
+  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alaram-exist-for-disabling-or-deleting-CMKs.yaml # CIS 3.7
+  - aws-management-tools-cloudtrail-log-metric-filter-and-alarm-exist-for-s3-policy-changes.yaml # CIS 3.8
+  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-aws-config-changes.yaml # CIS 3.9
+  - aws-management-tools-cloudtrail-security-groups.yaml # CIS 3.10
+  - aws-management-tools-cloudtrail-logs-nacl.yaml # CIS 3.11
+  - aws-management-tools-cloudtrail-api-logs.yaml # CIS 3.12
+  - aws-management-tools-cloudtrail-route-table-logs.yaml # CIS 3.13
+  - aws-management-tools-cloudtrail-vpc-changes.yaml # CIS 3.14
+  - aws-compute-elastic-compute-security-groups-ip.yaml # CIS 4.1
+  - aws-iam-and-security-no-security-groups-allow-all-ingress-to-port-3389.yaml # CIS 4.2
+  - aws-iam-and-security-default-security-group-for-vpc-restricts-all-traffic.yaml # CIS 4.3
+  - aws-vpc-rooting-access.yaml # CIS 4.4 [MANUAL]
+version: 0.9

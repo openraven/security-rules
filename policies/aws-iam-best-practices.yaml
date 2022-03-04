@@ -1,0 +1,30 @@
+policyId: aws-iam-best-practices
+policyName: The best security configuration practices for AWS IAM assets.
+cloudProvider: AWS
+description: >
+  The best security configuration practices for AWS IAM assets.
+  Includes every config rule relating to IAM.
+enabled: true
+rules:
+  #  - iam-customer-policy-blocked-kms-actions - [to do]
+  #  - iam-group-has-users-check - [to do]
+  #  - iam-inline-policy-blocked-kms-actions - [to do]
+  #  - iam-no-inline-policy-check - [to do]
+  - aws-iam-and-security-ensure-iam-password-policy-requires-one-uppercase-letter.yaml
+  - aws-iam-and-security-ensure-iam-password-requires-one-lowercase-letter.yaml
+  - aws-iam-and-security-iam-password-policy-symbols.yaml
+  - aws-iam-and-security-ensure-iam-password-requires-one-number.yaml
+  - aws-iam-and-security-iam-password-policy-length.yaml
+  - aws-iam-and-security-iam-password-policy-reuse.yaml
+  - aws-iam-and-security-ensure-iam-password-policy-expires-password-90-days-or-less.yaml
+  #  - iam-policy-blacklisted-check - [to do]
+  #  - iam-policy-in-use - [to do]
+  - aws-security-and-identity-compliance-iam-full-admin.yaml
+  #  - iam-policy-no-statements-with-full-access - [to do]
+  #  - iam-role-managed-policy-check - [to do]
+  - aws-iam-and-security-ensure-no-root-account-access-key-exists.yaml
+  #  - iam-user-group-membership-check
+  - aws-iam-and-security-iam-user-mfa-enabled.yaml
+  - aws-iam-and-security-iam-user-no-policies-check.yaml
+  - aws-iam-and-security-iam-user-unused-credentials-check.yaml
+version: 0.9
