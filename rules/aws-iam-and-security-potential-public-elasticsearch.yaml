@@ -1,0 +1,35 @@
+ruleId: aws-iam-and-security-potential-public-elasticsearch
+type: asset
+ruleName: >
+  Potential Exposed Elastic Search instance due to security groups allow ingress from 0.0.0.0/0 to port 9200
+description: >
+  Security groups provide stateful filtering of ingress/egress network traffic to AWS
+  resources. It is recommended that no security group allows unrestricted ingress access to
+  port 9200 as these could be exposed ElasticSearch instances.
+severity: high
+enabled: true
+sql: >
+  WITH
+  get_ip_permissions AS (
+    SELECT arn, jsonb_array_elements(configuration->'ipPermissions') AS permissions
+    FROM ${magpie_schema}.awsec2securitygroup
+    WHERE resourcetype = 'AWS::EC2::SecurityGroup'
+  ),
+  get_ip_ranges AS (
+    SELECT arn, jsonb_array_elements(permissions->'ipRanges') AS ip_ranges
+    FROM get_ip_permissions
+    WHERE (CAST(permissions->>'fromPort' AS INT) <= 9200
+              AND CAST(permissions->>'toPort' AS INT) >= 9200)
+         OR permissions->>'fromPort' IS NULL
+         OR permissions->>'toPort' IS NULL
+  ),
+  get_cidrIp AS (
+    SELECT arn
+    FROM get_ip_ranges
+    WHERE ip_ranges->>'cidrIp' = '0.0.0.0/0'
+  )
+
+  SELECT * FROM get_cidrIp;
+
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
