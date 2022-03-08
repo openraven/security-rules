@@ -1,0 +1,109 @@
+ruleId: aws-iam-and-security-potential-public-elasticsearch
+cloudProvider: aws
+description: >
+  Insecure assets:
+   - `port-9200-open` has port 9200 open to 0.0.0.0
+  Secure asset
+   - `port-9200-closed` has port 9200 open closed to 0.0.0.0
+insecureAssets:
+  port-9200-open: >
+    [{
+       "documentId" : "i7pDzxLxM72jinonsHW7uA",
+       "arn" : "port-9200-open",
+       "resourceName" : "port-9200-open",
+       "resourceId" : "sg-0000000dsgbfa",
+       "resourceType" : "AWS::EC2::SecurityGroup",
+       "awsRegion" : "us-east-2",
+       "awsAccountId" : "000000000",
+       "createdIso" : null,
+       "updatedIso" : "2022-03-08T18:45:02.811129Z",
+       "discoverySessionId" : null,
+       "maxSizeInBytes" : null,
+       "sizeInBytes" : null,
+       "configuration" : {
+         "description" : "Michael-9200-Test",
+         "groupName" : "Michael-9200-Test",
+         "ipPermissions" : [ {
+           "fromPort" : 9200,
+           "ipProtocol" : "tcp",
+           "ipRanges" : [ {
+             "cidrIp" : "0.0.0.0/0",
+             "description" : null
+           } ],
+           "ipv6Ranges" : [ ],
+           "prefixListIds" : [ ],
+           "toPort" : 9200,
+           "userIdGroupPairs" : [ ]
+         } ],
+         "ownerId" : "000000000",
+         "groupId" : "sg-0000000dsgbfa",
+         "ipPermissionsEgress" : [ {
+           "fromPort" : null,
+           "ipProtocol" : "-1",
+           "ipRanges" : [ {
+             "cidrIp" : "0.0.0.0/0",
+             "description" : null
+           } ],
+           "ipv6Ranges" : [ ],
+           "prefixListIds" : [ ],
+           "toPort" : null,
+           "userIdGroupPairs" : [ ]
+         } ],
+         "tags" : null,
+         "vpcId" : "vpc-00000"
+       },
+       "supplementaryConfiguration" : { },
+       "tags" : { },
+       "discoveryMeta" : { }
+     }]
+secureAssets:
+  port-9200-closed: >
+    [{
+       "documentId" : "i7pDzxLxM72jinonsHW7uA",
+       "arn" : "port-9200-closed",
+       "resourceName" : "port-9200-closed",
+       "resourceId" : "sg-0000000dsgbfa",
+       "resourceType" : "AWS::EC2::SecurityGroup",
+       "awsRegion" : "us-east-2",
+       "awsAccountId" : "000000000",
+       "createdIso" : null,
+       "updatedIso" : "2022-03-08T18:45:02.811129Z",
+       "discoverySessionId" : null,
+       "maxSizeInBytes" : null,
+       "sizeInBytes" : null,
+       "configuration" : {
+         "description" : "Michael-9200-Test",
+         "groupName" : "Michael-9200-Test",
+         "ipPermissions" : [ {
+           "fromPort" : 9201,
+           "ipProtocol" : "tcp",
+           "ipRanges" : [ {
+             "cidrIp" : "0.0.0.0/0",
+             "description" : null
+           } ],
+           "ipv6Ranges" : [ ],
+           "prefixListIds" : [ ],
+           "toPort" : 9201,
+           "userIdGroupPairs" : [ ]
+         } ],
+         "ownerId" : "000000000",
+         "groupId" : "sg-0000000dsgbfa",
+         "ipPermissionsEgress" : [ {
+           "fromPort" : null,
+           "ipProtocol" : "-1",
+           "ipRanges" : [ {
+             "cidrIp" : "0.0.0.0/0",
+             "description" : null
+           } ],
+           "ipv6Ranges" : [ ],
+           "prefixListIds" : [ ],
+           "toPort" : null,
+           "userIdGroupPairs" : [ ]
+         } ],
+         "tags" : null,
+         "vpcId" : "vpc-00000"
+       },
+       "supplementaryConfiguration" : { },
+       "tags" : { },
+       "discoveryMeta" : { }
+     }]
