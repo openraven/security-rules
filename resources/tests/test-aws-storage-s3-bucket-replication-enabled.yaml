@@ -182,7 +182,7 @@ secureAssets:
             "eventBridgeConfiguration" : null
           },
          "ReplicationConfiguration" : {
-           "role" : "arn:aws:iam::476384142167:role/service-role/michael-test-role-og1wpi5y",
+           "role" : "arn:aws:iam::00000000:role/service-role/michael-test-role-og1wpi5y",
            "rules" : [ {
              "id" : "1122",
              "priority" : 0,
@@ -224,7 +224,7 @@ secureAssets:
           },
           "BucketObjectLockConfiguration" : null,
          "ReplicationConfiguration" : {
-           "role" : "arn:aws:iam::476384142167:role/service-role/michael-test-role-og1wpi5y",
+           "role" : "arn:aws:iam::00000000:role/service-role/michael-test-role-og1wpi5y",
            "rules" : [ {
              "id" : "1122",
              "priority" : 0,

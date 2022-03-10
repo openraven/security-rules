@@ -95,7 +95,7 @@ insecureAssets:
          },
          "BucketObjectLockConfiguration" : null,
          "ReplicationConfiguration" : {
-           "role" : "arn:aws:iam::00000000:role/service-role/michael-test-role",
+           "role" : "arn:aws:iam::00000000:role/service-role/michael-test-role-og1wpi5y",
            "rules" : [ {
              "id" : "1122",
              "priority" : 0,
