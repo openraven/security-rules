@@ -1,0 +1,236 @@
+ruleId: aws-storage-s3-bucket-public-write-prohibited
+cloudProvider: aws
+description: >
+  Insecure Assets:
+     - `has-write` Bucket has public write.
+  Secure asset
+     - `no-write` Bucket has no public write.
+insecureAssets:
+  has-write: >
+    [{
+       "documentId" : "Pm1NRNdGNxmfEZLAvobBug",
+       "arn" : "has-write",
+       "resourceName" : "has-write",
+       "resourceId" : "has-write",
+       "resourceType" : "AWS::S3::Bucket",
+       "awsRegion" : "us-east-1",
+       "awsAccountId" : "0000000000",
+       "createdIso" : "2022-02-23T16:11:23Z",
+       "updatedIso" : "2022-03-10T16:11:02.872011Z",
+       "discoverySessionId" : null,
+       "maxSizeInBytes" : null,
+       "sizeInBytes" : null,
+       "configuration" : {
+         "name" : "has-write",
+         "creationDate" : "2022-02-23T16:11:23Z"
+       },
+       "supplementaryConfiguration" : {
+         "ServerSideEncryptionConfiguration" : null,
+         "BucketWebsiteConfiguration" : null,
+         "BucketACLConfiguration" : {
+           "owner" : {
+             "displayName" : "aws-root+research",
+             "id" : "3b79fa0009896d15625dd80b0179c7c4435e84dfcec6919bc99a1e8871928b7c"
+           },
+           "grants" : [ {
+             "grantee" : {
+               "displayName" : "aws-root+research",
+               "emailAddress" : null,
+               "id" : "3b79fa0009896d15625dd80b0179c7c4435e84dfcec6919bc99a1e8871928b7c",
+               "type" : "CanonicalUser",
+               "uri" : null
+             },
+             "permission" : "FULL_CONTROL"
+           }, {
+             "grantee" : {
+               "displayName" : null,
+               "emailAddress" : null,
+               "id" : null,
+               "type" : "Group",
+               "uri" : "http://acs.amazonaws.com/groups/global/AllUsers"
+             },
+             "permission" : "WRITE"
+           }, {
+             "grantee" : {
+               "displayName" : null,
+               "emailAddress" : null,
+               "id" : null,
+               "type" : "Group",
+               "uri" : "http://acs.amazonaws.com/groups/global/AllUsers"
+             },
+             "permission" : "READ_ACP"
+           } ]
+         },
+         "PublicAccessBlockConfiguration" : {
+           "blockPublicAcls" : false,
+           "ignorePublicAcls" : false,
+           "blockPublicPolicy" : false,
+           "restrictPublicBuckets" : false
+         },
+         "BucketLoggingConfiguration" : {
+           "loggingEnabled" : null
+         },
+         "MetricsConfiguration" : {
+           "id" : null,
+           "filter" : null
+         },
+         "NotificationConfiguration" : {
+           "topicConfigurations" : null,
+           "queueConfigurations" : null,
+           "lambdaFunctionConfigurations" : null,
+           "eventBridgeConfiguration" : null
+         },
+         "BucketPolicyStatus" : {
+           "isPublic" : true
+         },
+         "BucketPolicy" : {
+           "Version" : "2012-10-17",
+           "Statement" : [ {
+             "Sid" : "AddPerm",
+             "Effect" : "Allow",
+             "Principal" : "*",
+             "Action" : "s3:PutObject",
+             "Resource" : "arn:aws:s3:::has-write/*"
+           } ]
+         },
+         "BucketObjectLockConfiguration" : null,
+         "ReplicationConfiguration" : {
+           "role" : "arn:aws:iam::000000000:role/service-role/michael-test-role-og1wpi5y",
+           "rules" : [ {
+             "id" : "1122",
+             "priority" : 0,
+             "prefix" : null,
+             "filter" : {
+               "prefix" : null,
+               "tag" : null,
+               "and" : null
+             },
+             "status" : "Enabled",
+             "sourceSelectionCriteria" : null,
+             "existingObjectReplication" : null,
+             "destination" : {
+               "bucket" : "arn:aws:s3:::test",
+               "account" : null,
+               "storageClass" : null,
+               "accessControlTranslation" : null,
+               "encryptionConfiguration" : null,
+               "replicationTime" : null,
+               "metrics" : null
+             },
+             "deleteMarkerReplication" : {
+               "status" : "Disabled"
+             }
+           } ]
+         },
+         "isPublic" : true,
+         "isPublicByPolicy" : true,
+         "isPublicByACL" : true,
+         "Versioning" : {
+           "status" : "Enabled",
+           "mfaDelete" : null
+         }
+       },
+       "tags" : { },
+       "discoveryMeta" : { }
+    }]
+secureAssets:
+  no-write: >
+    [{
+        "documentId" : "I1yhs6PMOtmbo4Y2yY3UVg",
+        "arn" : "no-write",
+        "resourceName" : "no-write",
+        "resourceId" : "no-write",
+        "resourceType" : "AWS::S3::Bucket",
+        "awsRegion" : "us-east-2",
+        "awsAccountId" : "0000000000",
+        "createdIso" : "2021-12-02T16:56:19Z",
+        "updatedIso" : "2021-12-03T00:31:47.918799Z",
+        "discoverySessionId" : null,
+        "maxSizeInBytes" : null,
+        "sizeInBytes" : null,
+        "configuration" : {
+          "name" : "no-write",
+          "creationDate" : "2021-12-02T16:56:19Z"
+        },
+        "supplementaryConfiguration" : {
+          "ServerSideEncryptionConfiguration" : null,
+          "bucketWebsiteConfiguration" : null,
+          "BucketACLConfiguration" : {
+            "owner" : {
+              "displayName" : "aws-root+research",
+              "id" : "3b79fa0009896d15625dd80b0179c7c4435e84dfcec6919bc99a1e8871928b7c"
+            },
+            "grants" : [ {
+              "grantee" : {
+                "displayName" : "aws-root+research",
+                "emailAddress" : null,
+                "id" : "3b79fa0009896d15625dd80b0179c7c4435e84dfcec6919bc99a1e8871928b7c",
+                "type" : "CanonicalUser",
+                "uri" : null
+              },
+              "permission" : "FULL_CONTROL"
+            }, {
+              "grantee" : {
+                "displayName" : null,
+                "emailAddress" : null,
+                "id" : null,
+                "type" : "Group",
+                "uri" : "http://acs.amazonaws.com/groups/global/AuthenticatedUsers"
+              },
+              "permission" : "WRITE"
+            }, {
+              "grantee" : {
+                "displayName" : null,
+                "emailAddress" : null,
+                "id" : null,
+                "type" : "Group",
+                "uri" : "http://acs.amazonaws.com/groups/global/AuthenticatedUsers"
+              },
+              "permission" : "READ_ACP"
+            } ]
+          },
+          "PublicAccessBlockConfiguration" : {
+            "blockPublicAcls" : false,
+            "ignorePublicAcls" : false,
+            "blockPublicPolicy" : false,
+            "restrictPublicBuckets" : false
+          },
+          "BucketLoggingConfiguration" : {
+            "loggingEnabled" : null
+          },
+          "MetricsConfiguration" : {
+            "id" : null,
+            "filter" : null
+          },
+          "NotificationConfiguration" : {
+            "topicConfigurations" : null,
+            "queueConfigurations" : null,
+            "lambdaFunctionConfigurations" : null,
+            "eventBridgeConfiguration" : null
+          },
+          "BucketPolicyStatus" : {
+            "isPublic" : true
+          },
+          "BucketPolicy" : {
+            "Version" : "2012-10-17",
+            "Statement" : [ {
+              "Sid" : "AddPerm",
+              "Effect" : "Allow",
+              "Principal" : "1234654334",
+              "Action" : "s3:GetObject",
+              "Resource" : "arn:aws:s3:::has-write/*"
+            } ]
+          },
+          "BucketObjectLockConfiguration" : null,
+          "replicationConfiguration" : null,
+          "isPublicByPolicy" : false,
+          "isPublicByACL" : false,
+          "isPublic" : false,
+          "Versioning" : {
+            "status" : null,
+            "mfaDelete" : null
+          }
+        },
+        "tags" : { },
+        "discoveryMeta" : { }
+      }]
