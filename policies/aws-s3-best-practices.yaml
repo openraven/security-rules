@@ -12,12 +12,12 @@ rules:
   #  - s3-bucket-blacklisted-actions-prohibited - [to do]
   - aws-storage-s3-bucket-default-lock-enabled.yaml
   - aws-storage-s3-bucket-level-public-access-prohibited.yaml
-  #  - s3-bucket-logging-enabled - [to do]
+  - aws-storage-s3-bucket-logging-enabled.yaml
   #  - s3-bucket-policy-grantee-check - [to do]
   #  - s3-bucket-policy-not-more-permissive - [to do]
-  #  - s3-bucket-public-read-prohibited - [to do]
-  #  - s3-bucket-public-write-prohibited - [to do]
-  #  - s3-bucket-replication-enabled - [to do]
+  - aws-storage-s3-bucket-public-read-prohibited.yaml
+  - aws-storage-s3-bucket-public-write-prohibited.yaml
+  - aws-storage-s3-bucket-replication-enabled.yaml
   - aws-storage-s3-server-side-encryption.yaml
   #  - s3-bucket-ssl-requests-only
   - aws-storage-s3-versioning-enabled.yaml

@@ -1,0 +1,27 @@
+ruleId: aws-storage-s3-bucket-public-write-prohibited
+type: asset
+ruleName: >
+  Checks if public writing of files is enabled for your S3 buckets.
+description: >
+  Checks if public writing of files is enabled for your S3 buckets.
+severity: high
+enabled: true
+sql: >
+  SELECT arn
+  from ${magpie_schema}.awss3bucket
+  WHERE
+  (supplementaryconfiguration->'PublicAccessBlockConfiguration'->>'blockPublicAcls' = 'false'
+    AND
+    supplementaryconfiguration->'BucketACLConfiguration'->>'grants' like '%WRITE%'
+    AND
+    supplementaryconfiguration->'BucketACLConfiguration'->>'grants' LIKE '%http://acs.amazonaws.com/groups/global/AllUsers%')
+  OR
+  (supplementaryconfiguration->'PublicAccessBlockConfiguration'->>'blockPublicPolicy' = 'false'
+    AND
+    supplementaryconfiguration->'BucketPolicy'->>'Statement' LIKE '%"Effect": "Allow"%'
+    AND
+    supplementaryconfiguration->'BucketPolicy'->>'Statement' LIKE '%"Principal": "*"%'
+    AND
+    supplementaryconfiguration->'BucketPolicy'->>'Statement' LIKE '%"Action": "s3:PutObject"%');
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
