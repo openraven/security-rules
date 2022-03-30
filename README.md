@@ -1,4 +1,2 @@
-
-@WIP All docs are being moved to a documentation system. ETA mid November. 
-
-
+# Magpie Security Rules
+See https://docs.openraven.com/docs/overview-10 for documentation on writing rules for Magpie.
