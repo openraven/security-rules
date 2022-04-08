@@ -1,0 +1,251 @@
+ruleId: aws-storage-efs-encrypted-check
+cloudProvider: aws
+description: >
+  Insecure Assets:
+   - Elastic File system doesn't have encryption
+  Secure asset
+   - Elastic File system asset is encrypted
+insecureAssets:
+  insecureefs: >
+    [ {
+      "documentId" : "Er2bSyZqN6Sw1TFdrIEJ-Q",
+      "arn" : "insecureefs",
+      "resourceName" : "insecureefs",
+      "resourceId" : "fs-0e5d97d19373f7fb8",
+      "resourceType" : "AWS::EFS::FileSystem",
+      "awsRegion" : "us-east-1",
+      "awsAccountId" : "00000000000",
+      "createdIso" : "2022-04-06T14:27:19Z",
+      "updatedIso" : "2022-04-06T14:29:23.551239Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : 6144,
+      "configuration" : {
+        "ownerId" : "476384142167",
+        "creationToken" : "quickCreated-eba6c4f1-a234-4a11-8dcb-5f99a6438224",
+        "fileSystemId" : "fs-0e5d97d19373f7fb8",
+        "fileSystemArn" : "arn:aws:elasticfilesystem:us-east-1:476384142167:file-system/fs-0e5d97d19373f7fb8",
+        "creationTime" : "2022-04-06T14:27:19Z",
+        "lifeCycleState" : "available",
+        "name" : "test",
+        "numberOfMountTargets" : 6,
+        "sizeInBytes" : {
+          "value" : 6144,
+          "timestamp" : null,
+          "valueInIA" : 0,
+          "valueInStandard" : 6144
+        },
+        "performanceMode" : "generalPurpose",
+        "encrypted" : false,
+        "kmsKeyId" : "arn:aws:kms:us-east-1:476384142167:key/c3f294ec-365d-43f8-9f75-de90e4c2a90c",
+        "throughputMode" : "bursting",
+        "provisionedThroughputInMibps" : null,
+        "availabilityZoneName" : null,
+        "availabilityZoneId" : null,
+        "tags" : [ {
+          "key" : "Name",
+          "value" : "test"
+        }, {
+          "key" : "aws:elasticfilesystem:default-backup",
+          "value" : "enabled"
+        } ]
+      },
+      "supplementaryConfiguration" : {
+        "mountTargets" : {
+          "marker" : null,
+          "mountTargets" : [ {
+            "ownerId" : "476384142167",
+            "mountTargetId" : "fsmt-02ba9daad9bf8ffd7",
+            "fileSystemId" : "fs-0e5d97d19373f7fb8",
+            "subnetId" : "subnet-a3d21682",
+            "lifeCycleState" : "available",
+            "ipAddress" : "172.31.94.195",
+            "networkInterfaceId" : "eni-0aabecc1e6ea5fdae",
+            "availabilityZoneId" : "use1-az2",
+            "availabilityZoneName" : "us-east-1d",
+            "vpcId" : "vpc-00e2e87a"
+          }, {
+            "ownerId" : "476384142167",
+            "mountTargetId" : "fsmt-03c3a1b113fefc040",
+            "fileSystemId" : "fs-0e5d97d19373f7fb8",
+            "subnetId" : "subnet-d71be5b1",
+            "lifeCycleState" : "available",
+            "ipAddress" : "172.31.2.101",
+            "networkInterfaceId" : "eni-0a9e63c543191d6e5",
+            "availabilityZoneId" : "use1-az1",
+            "availabilityZoneName" : "us-east-1c",
+            "vpcId" : "vpc-00e2e87a"
+          }, {
+            "ownerId" : "476384142167",
+            "mountTargetId" : "fsmt-0ac710fcfa351e86a",
+            "fileSystemId" : "fs-0e5d97d19373f7fb8",
+            "subnetId" : "subnet-5be56c16",
+            "lifeCycleState" : "available",
+            "ipAddress" : "172.31.21.89",
+            "networkInterfaceId" : "eni-0437a9029b05563c0",
+            "availabilityZoneId" : "use1-az4",
+            "availabilityZoneName" : "us-east-1a",
+            "vpcId" : "vpc-00e2e87a"
+          }, {
+            "ownerId" : "476384142167",
+            "mountTargetId" : "fsmt-0cc19163f6d7b5149",
+            "fileSystemId" : "fs-0e5d97d19373f7fb8",
+            "subnetId" : "subnet-4f0ebe41",
+            "lifeCycleState" : "available",
+            "ipAddress" : "172.31.64.148",
+            "networkInterfaceId" : "eni-0373d5435216708b6",
+            "availabilityZoneId" : "use1-az5",
+            "availabilityZoneName" : "us-east-1f",
+            "vpcId" : "vpc-00e2e87a"
+          }, {
+            "ownerId" : "476384142167",
+            "mountTargetId" : "fsmt-0e701ca8f747835b8",
+            "fileSystemId" : "fs-0e5d97d19373f7fb8",
+            "subnetId" : "subnet-66161b58",
+            "lifeCycleState" : "available",
+            "ipAddress" : "172.31.56.9",
+            "networkInterfaceId" : "eni-09c4d628aa8098669",
+            "availabilityZoneId" : "use1-az3",
+            "availabilityZoneName" : "us-east-1e",
+            "vpcId" : "vpc-00e2e87a"
+          }, {
+            "ownerId" : "476384142167",
+            "mountTargetId" : "fsmt-0f37be663b3c69ba9",
+            "fileSystemId" : "fs-0e5d97d19373f7fb8",
+            "subnetId" : "subnet-bc9b61e3",
+            "lifeCycleState" : "available",
+            "ipAddress" : "172.31.47.250",
+            "networkInterfaceId" : "eni-0192e6936c4e3aba8",
+            "availabilityZoneId" : "use1-az6",
+            "availabilityZoneName" : "us-east-1b",
+            "vpcId" : "vpc-00e2e87a"
+          } ],
+          "nextMarker" : null
+        },
+        "awsBackupJobs" : [ ]
+      },
+      "tags" : { },
+      "discoveryMeta" : { }
+      } ]
+secureAssets:
+  secureefs: >
+    [ {
+      "documentId" : "Er2bSyZqN6Sw1TFdrIEJ-Q",
+      "arn" : "secureefs",
+      "resourceName" : "secureefs",
+      "resourceId" : "fs-0e5d97d19373f7fb8",
+      "resourceType" : "AWS::EFS::FileSystem",
+      "awsRegion" : "us-east-1",
+      "awsAccountId" : "00000000000",
+      "createdIso" : "2022-04-06T14:27:19Z",
+      "updatedIso" : "2022-04-06T14:29:23.551239Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : 6144,
+      "configuration" : {
+        "ownerId" : "476384142167",
+        "creationToken" : "quickCreated-eba6c4f1-a234-4a11-8dcb-5f99a6438224",
+        "fileSystemId" : "fs-0e5d97d19373f7fb8",
+        "fileSystemArn" : "arn:aws:elasticfilesystem:us-east-1:476384142167:file-system/fs-0e5d97d19373f7fb8",
+        "creationTime" : "2022-04-06T14:27:19Z",
+        "lifeCycleState" : "available",
+        "name" : "test",
+        "numberOfMountTargets" : 6,
+        "sizeInBytes" : {
+          "value" : 6144,
+          "timestamp" : null,
+          "valueInIA" : 0,
+          "valueInStandard" : 6144
+        },
+        "performanceMode" : "generalPurpose",
+        "encrypted" : true,
+        "kmsKeyId" : "arn:aws:kms:us-east-1:476384142167:key/c3f294ec-365d-43f8-9f75-de90e4c2a90c",
+        "throughputMode" : "bursting",
+        "provisionedThroughputInMibps" : null,
+        "availabilityZoneName" : null,
+        "availabilityZoneId" : null,
+        "tags" : [ {
+          "key" : "Name",
+          "value" : "test"
+        }, {
+          "key" : "aws:elasticfilesystem:default-backup",
+          "value" : "enabled"
+        } ]
+      },
+      "supplementaryConfiguration" : {
+        "mountTargets" : {
+          "marker" : null,
+          "mountTargets" : [ {
+            "ownerId" : "476384142167",
+            "mountTargetId" : "fsmt-02ba9daad9bf8ffd7",
+            "fileSystemId" : "fs-0e5d97d19373f7fb8",
+            "subnetId" : "subnet-a3d21682",
+            "lifeCycleState" : "available",
+            "ipAddress" : "172.31.94.195",
+            "networkInterfaceId" : "eni-0aabecc1e6ea5fdae",
+            "availabilityZoneId" : "use1-az2",
+            "availabilityZoneName" : "us-east-1d",
+            "vpcId" : "vpc-00e2e87a"
+          }, {
+            "ownerId" : "476384142167",
+            "mountTargetId" : "fsmt-03c3a1b113fefc040",
+            "fileSystemId" : "fs-0e5d97d19373f7fb8",
+            "subnetId" : "subnet-d71be5b1",
+            "lifeCycleState" : "available",
+            "ipAddress" : "172.31.2.101",
+            "networkInterfaceId" : "eni-0a9e63c543191d6e5",
+            "availabilityZoneId" : "use1-az1",
+            "availabilityZoneName" : "us-east-1c",
+            "vpcId" : "vpc-00e2e87a"
+          }, {
+            "ownerId" : "476384142167",
+            "mountTargetId" : "fsmt-0ac710fcfa351e86a",
+            "fileSystemId" : "fs-0e5d97d19373f7fb8",
+            "subnetId" : "subnet-5be56c16",
+            "lifeCycleState" : "available",
+            "ipAddress" : "172.31.21.89",
+            "networkInterfaceId" : "eni-0437a9029b05563c0",
+            "availabilityZoneId" : "use1-az4",
+            "availabilityZoneName" : "us-east-1a",
+            "vpcId" : "vpc-00e2e87a"
+          }, {
+            "ownerId" : "476384142167",
+            "mountTargetId" : "fsmt-0cc19163f6d7b5149",
+            "fileSystemId" : "fs-0e5d97d19373f7fb8",
+            "subnetId" : "subnet-4f0ebe41",
+            "lifeCycleState" : "available",
+            "ipAddress" : "172.31.64.148",
+            "networkInterfaceId" : "eni-0373d5435216708b6",
+            "availabilityZoneId" : "use1-az5",
+            "availabilityZoneName" : "us-east-1f",
+            "vpcId" : "vpc-00e2e87a"
+          }, {
+            "ownerId" : "476384142167",
+            "mountTargetId" : "fsmt-0e701ca8f747835b8",
+            "fileSystemId" : "fs-0e5d97d19373f7fb8",
+            "subnetId" : "subnet-66161b58",
+            "lifeCycleState" : "available",
+            "ipAddress" : "172.31.56.9",
+            "networkInterfaceId" : "eni-09c4d628aa8098669",
+            "availabilityZoneId" : "use1-az3",
+            "availabilityZoneName" : "us-east-1e",
+            "vpcId" : "vpc-00e2e87a"
+          }, {
+            "ownerId" : "476384142167",
+            "mountTargetId" : "fsmt-0f37be663b3c69ba9",
+            "fileSystemId" : "fs-0e5d97d19373f7fb8",
+            "subnetId" : "subnet-bc9b61e3",
+            "lifeCycleState" : "available",
+            "ipAddress" : "172.31.47.250",
+            "networkInterfaceId" : "eni-0192e6936c4e3aba8",
+            "availabilityZoneId" : "use1-az6",
+            "availabilityZoneName" : "us-east-1b",
+            "vpcId" : "vpc-00e2e87a"
+          } ],
+          "nextMarker" : null
+        },
+        "awsBackupJobs" : [ ]
+      },
+      "tags" : { },
+      "discoveryMeta" : { }
+      } ]

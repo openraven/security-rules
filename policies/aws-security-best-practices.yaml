@@ -116,4 +116,11 @@ rules:
   #- aws-security-and-identity-compliance-secrets-manager-using-cmk.yaml
   - aws-compute-eks-secrets-encrypted.yaml
   - aws-compute-eks-endpoint-no-public-access.yaml
+  - aws-security-and-identity-compliance-kms-cmk-not-scheduled-for-deletion.yaml
+  - aws-storage-efs-encrypted-check.yaml
+  - aws-storage-efs-in-backup-plan.yaml
+  #- aws-database-rds-in-backup-plan.yaml
+  - aws-security-and-identity-compliance-secretsmanager-rotation-enabled-check.yaml
+  - aws-security-and-identity-compliance-secretsmanager-secret-periodic-rotation.yaml
+  - aws-security-and-identity-compliance-secretsmanager-secret-unused.yaml
 version: 0.9

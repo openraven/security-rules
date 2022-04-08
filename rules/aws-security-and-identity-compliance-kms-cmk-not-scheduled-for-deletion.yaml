@@ -1,0 +1,14 @@
+ruleId: aws-security-and-identity-compliance-kms-cmk-not-scheduled-for-deletion
+type: asset
+ruleName: >
+  Ensure Amazon AWS KMS keys (KMS keys) are not scheduled for deletion in AWS Key Management Service (AWS KMS).
+description: >
+  Ensures AWS KMS keys (KMS keys) are not scheduled for deletion in AWS Key Management Service (AWS KMS). The rule is NON_COMPLAINT if KMS keys are scheduled for deletion.
+severity: high
+enabled: true
+sql: >
+  SELECT arn
+  FROM ${magpie_schema}.awskmskey
+  WHERE (supplementaryconfiguration -> 'rotation' -> 'keyRotationEnabled' = 'true');
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
