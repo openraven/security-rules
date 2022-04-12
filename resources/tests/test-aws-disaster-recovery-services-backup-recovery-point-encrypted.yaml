@@ -1,0 +1,76 @@
+ruleId: aws-disaster-recovery-services-backup-recovery-point-encrypted
+cloudProvider: aws
+description: >
+  - Checks if AWS Backup recovery point is encrypted
+insecureAssets:
+  not-encrypted: >
+    [ {
+        "documentId" : "gr4bh4QtO7S7ok1O2b_xxQ",
+        "arn" : "not-encrypted",
+        "resourceName" : "not-encrypted",
+        "resourceId" : "not-encrypted",
+        "resourceType" : "AWS::Backup::BackupVault",
+        "awsRegion" : "us-east-2",
+        "awsAccountId" : "000000000",
+        "createdIso" : "2022-02-03T15:24:14.281Z",
+        "updatedIso" : "2022-03-04T15:52:06.938190Z",
+        "discoverySessionId" : null,
+        "maxSizeInBytes" : null,
+        "sizeInBytes" : null,
+        "configuration" : {
+          "backupVaultName" : "Default",
+          "backupVaultArn" : "arn:aws:backup:us-east-2:476384142167:backup-vault:Default",
+          "creationDate" : "2022-02-03T15:24:14.281Z",
+          "encryptionKeyArn" : null,
+          "creatorRequestId" : "Default",
+          "numberOfRecoveryPoints" : 35,
+          "locked" : false,
+          "minRetentionDays" : null,
+          "maxRetentionDays" : null,
+          "lockDate" : null
+        },
+        "supplementaryConfiguration" : {
+          "Tags" : [ {
+            "nextToken" : null,
+            "tags" : { }
+          } ]
+        },
+        "tags" : { },
+        "discoveryMeta" : { }
+      } ]
+secureAssets:
+  encrypted: >
+    [ {
+        "documentId" : "gr4bh4QtO7S7ok1O2b_xxQ",
+        "arn" : "encrypted",
+        "resourceName" : "encrypted",
+        "resourceId" : "encrypted",
+        "resourceType" : "AWS::Backup::BackupVault",
+        "awsRegion" : "us-east-2",
+        "awsAccountId" : "000000000",
+        "createdIso" : "2022-02-03T15:24:14.281Z",
+        "updatedIso" : "2022-03-04T15:52:06.938190Z",
+        "discoverySessionId" : null,
+        "maxSizeInBytes" : null,
+        "sizeInBytes" : null,
+        "configuration" : {
+          "backupVaultName" : "Default",
+          "backupVaultArn" : "arn:aws:backup:us-east-2:00000000000:backup-vault:Default",
+          "creationDate" : "2022-02-03T15:24:14.281Z",
+          "encryptionKeyArn" : "arn:aws:kms:us-east-1:476384142167:key/d94f6b00-5d58-44d7-949f-2cd12b65fc92",
+          "creatorRequestId" : "Default",
+          "numberOfRecoveryPoints" : 35,
+          "locked" : false,
+          "minRetentionDays" : null,
+          "maxRetentionDays" : null,
+          "lockDate" : null
+        },
+        "supplementaryConfiguration" : {
+          "Tags" : [ {
+            "nextToken" : null,
+            "tags" : { }
+          } ]
+        },
+        "tags" : { },
+        "discoveryMeta" : { }
+      } ]

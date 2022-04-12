@@ -1,0 +1,95 @@
+ruleId: aws-security-and-identity-compliance-kms-cmk-not-scheduled-for-deletion
+cloudProvider: aws
+description: >
+  Insecure Assets:
+   - CMS Key has key rotation enabled
+  Secure asset
+   - CMS Key do not have key rotation enabled
+insecureAssets:
+  insecurekey: >
+    [ {
+      "documentId" : "Rgs30l6YM7eEps9ySx1G7A",
+      "arn" : "insecurekey",
+      "resourceName" : "insecurekey",
+      "resourceId" : "6c2af309-c027-4218-a1fd-7591348fa5ed",
+      "resourceType" : "AWS::Kms::Key",
+      "awsRegion" : "ap-northeast-2",
+      "awsAccountId" : "00000000000",
+      "createdIso" : null,
+      "updatedIso" : "2022-04-06T14:11:23.191399Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "keyId" : "6c2af309-c027-4218-a1fd-7591348fa5ed",
+        "keyArn" : "arn:aws:kms:ap-northeast-2:476384142167:key/6c2af309-c027-4218-a1fd-7591348fa5ed"
+      },
+      "supplementaryConfiguration" : {
+        "rotation" : {
+          "keyRotationEnabled" : true
+        },
+        "aliases" : [ {
+          "aliasName" : "alias/aws/lightsail",
+          "aliasArn" : "arn:aws:kms:ap-northeast-2:476384142167:alias/aws/lightsail",
+          "targetKeyId" : "6c2af309-c027-4218-a1fd-7591348fa5ed",
+          "creationDate" : "2021-09-05T12:11:02.455Z",
+          "lastUpdatedDate" : "2021-09-05T12:11:02.455Z"
+        } ],
+        "keyPolicies" : {
+          "policyNames" : [ "default" ],
+          "nextMarker" : null,
+          "truncated" : false
+        },
+        "grants" : {
+          "grants" : [ ],
+          "nextMarker" : null,
+          "truncated" : false
+        }
+      },
+      "tags" : { },
+      "discoveryMeta" : { }
+      } ]
+secureAssets:
+  securekey: >
+    [ {
+      "documentId" : "Rgs30l6YM7eEps9ySx1G7A",
+      "arn" : "securekey",
+      "resourceName" : "securekey",
+      "resourceId" : "6c2af309-c027-4218-a1fd-7591348fa5ed",
+      "resourceType" : "AWS::Kms::Key",
+      "awsRegion" : "ap-northeast-2",
+      "awsAccountId" : "00000000000",
+      "createdIso" : null,
+      "updatedIso" : "2022-04-06T14:11:23.191399Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "keyId" : "6c2af309-c027-4218-a1fd-7591348fa5ed",
+        "keyArn" : "arn:aws:kms:ap-northeast-2:476384142167:key/6c2af309-c027-4218-a1fd-7591348fa5ed"
+      },
+      "supplementaryConfiguration" : {
+        "rotation" : {
+          "keyRotationEnabled" : false
+        },
+        "aliases" : [ {
+          "aliasName" : "alias/aws/lightsail",
+          "aliasArn" : "arn:aws:kms:ap-northeast-2:476384142167:alias/aws/lightsail",
+          "targetKeyId" : "6c2af309-c027-4218-a1fd-7591348fa5ed",
+          "creationDate" : "2021-09-05T12:11:02.455Z",
+          "lastUpdatedDate" : "2021-09-05T12:11:02.455Z"
+        } ],
+        "keyPolicies" : {
+          "policyNames" : [ "default" ],
+          "nextMarker" : null,
+          "truncated" : false
+        },
+        "grants" : {
+          "grants" : [ ],
+          "nextMarker" : null,
+          "truncated" : false
+        }
+      },
+      "tags" : { },
+      "discoveryMeta" : { }
+      } ]
