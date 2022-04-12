@@ -123,4 +123,7 @@ rules:
   - aws-security-and-identity-compliance-secretsmanager-rotation-enabled-check.yaml
   - aws-security-and-identity-compliance-secretsmanager-secret-periodic-rotation.yaml
   - aws-security-and-identity-compliance-secretsmanager-secret-unused.yaml
+  - aws-compute-lambda-inside-vpc.yaml
+  - aws-compute-lambda-dlq-check.yaml
+  - aws-compute-lambda-concurrency-check.yaml
 version: 0.9
