@@ -10,14 +10,13 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT DISTINCT a.assetid
+  SELECT DISTINCT a.arn
   FROM ${magpie_schema}.awsiamrole a, LATERAL (
       SELECT value ->> 'arn' as attached_policy_arn
       FROM jsonb_array_elements(a.supplementaryconfiguration -> 'attachedPolicies')
   ) arr
-  JOIN assets policy ON (arr.attached_policy_arn = policy.assetid)
-  FROM ${magpie_schema}.awsiamrole
-  AND (CAST(policy.supplementaryconfiguration AS TEXT) like '%"s3:%'
+  JOIN ${magpie_schema}.awsiamrole policy ON (arr.attached_policy_arn = policy.arn)
+  WHERE (CAST(policy.supplementaryconfiguration AS TEXT) like '%"s3:%'
       OR CAST(policy.supplementaryconfiguration AS TEXT) like '%"arn:aws:s3%')
   AND a.configuration ->> 'roleLastUsed' IS NOT NULL
   AND (a.configuration -> 'roleLastUsed' ->> 'lastUsedDate' IS NULL

@@ -12,7 +12,7 @@ enabled: true
 sql: >
   SELECT arn
   FROM ${magpie_schema}.awsiamuser
-    AND (supplementaryconfiguration->>'attachedPolicies' != '[]'
+    WHERE (supplementaryconfiguration->>'attachedPolicies' != '[]'
          OR supplementaryconfiguration->>'userPolicies' != '[]');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9

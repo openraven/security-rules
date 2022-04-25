@@ -16,7 +16,7 @@ sql: >
   WHERE NOT EXISTS
       (SELECT *
        FROM ${magpie_schema}.awsconfigurationrecorder
-         AND configuration->'recordingGroup'->'allSupported' = 'true'
+         WHERE configuration->'recordingGroup'->'allSupported' = 'true'
          AND configuration->'recordingGroup'->'includeGlobalResourceTypes' = 'true'
          AND supplementaryconfiguration->'status'->'recording' = 'true'
          AND supplementaryconfiguration->'status'->>'lastStatus' = 'SUCCESS');

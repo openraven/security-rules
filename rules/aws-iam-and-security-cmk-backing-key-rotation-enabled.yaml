@@ -15,7 +15,7 @@ enabled: true
 sql: >
   SELECT arn
   FROM ${magpie_schema}.awskmskey
-    AND supplementaryconfiguration->'rotation'->'keyRotationEnabled' != 'true';
+    WHERE supplementaryconfiguration->'rotation'->'keyRotationEnabled' != 'true';
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 0.9
