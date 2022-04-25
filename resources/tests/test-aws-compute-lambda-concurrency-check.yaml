@@ -1,0 +1,310 @@
+ruleId: aws-compute-lambda-concurrency-check
+cloudProvider: aws
+description: >
+      - Checks AWS Lambda function is configured with function-level concurrent execution limit.
+      - Insecure assets do not have concurrency execution limit
+      - secure asset have concurrency execution limit
+insecureAssets:
+  insecurelambda: >
+    [ {
+      "documentId" : "-7pi5QLIOv6u8C9_8AW2GQ",
+      "arn" : "insecurelambda",
+      "resourceName" : "insecurelambda",
+      "resourceId" : "insecurelambda",
+      "resourceType" : "AWS::Lambda::Function",
+      "awsRegion" : "us-east-1",
+      "awsAccountId" : "00000000000",
+      "createdIso" : null,
+      "updatedIso" : "2022-04-12T10:34:36.475199Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "functionName" : "serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
+        "functionArn" : "arn:aws:lambda:us-east-1:476384142167:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
+        "runtime" : "nodejs12.x",
+        "role" : "arn:aws:iam::476384142167:role/serverlessrepo-test-hello-world-helloworldRole-1J34531VHTJP7",
+        "handler" : "index.handler",
+        "codeSize" : 4995,
+        "description" : "A starter AWS Lambda function.",
+        "timeout" : 3,
+        "memorySize" : 128,
+        "lastModified" : "2022-04-11T15:45:34.000+0000",
+        "codeSha256" : "HssmIMk6jmnU04in6oz8XsA63ZisBeqVoKHBVUCWJUU=",
+        "version" : "$LATEST",
+        "vpcConfig" : {
+          "subnetIds" : [ "subnet-bc9b61e3", "subnet-4f0ebe41" ],
+          "securityGroupIds" : [ "sg-d4544ff5" ],
+          "vpcId" : "vpc-00e2e87a"
+        },
+        "deadLetterConfig" : {
+          "targetArn" : "arn:aws:sns:us-east-1:476384142167:config-topic-476384142167"
+        },
+        "environment" : null,
+        "kmsKeyArn" : null,
+        "tracingConfig" : {
+          "mode" : "PassThrough"
+        },
+        "masterArn" : null,
+        "revisionId" : "c9f7ee64-2734-4f16-b398-774a6a4db9e0",
+        "layers" : null,
+        "state" : null,
+        "stateReason" : null,
+        "stateReasonCode" : null,
+        "lastUpdateStatus" : null,
+        "lastUpdateStatusReason" : null,
+        "lastUpdateStatusReasonCode" : null,
+        "fileSystemConfigs" : null,
+        "packageType" : "Zip",
+        "imageConfigResponse" : null,
+        "signingProfileVersionArn" : null,
+        "signingJobArn" : null,
+        "architectures" : [ "x86_64" ]
+      },
+      "supplementaryConfiguration" : {
+        "EventInvokeConfigs" : [ {
+          "lastModified" : "2022-04-11T15:45:35.338Z",
+          "functionArn" : "arn:aws:lambda:us-east-1:476384142167:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1:$LATEST",
+          "maximumRetryAttempts" : 2,
+          "maximumEventAgeInSeconds" : 21600,
+          "destinationConfig" : {
+            "onSuccess" : {
+              "destination" : null
+            },
+            "onFailure" : {
+              "destination" : null
+            }
+          }
+        } ],
+        "EventSourceMapping" : [ ],
+        "Function" : {
+          "configuration" : {
+            "functionName" : "serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
+            "functionArn" : "arn:aws:lambda:us-east-1:476384142167:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
+            "runtime" : "nodejs12.x",
+            "role" : "arn:aws:iam::476384142167:role/serverlessrepo-test-hello-world-helloworldRole-1J34531VHTJP7",
+            "handler" : "index.handler",
+            "codeSize" : 4995,
+            "description" : "A starter AWS Lambda function.",
+            "timeout" : 3,
+            "memorySize" : 128,
+            "lastModified" : "2022-04-11T15:45:34.000+0000",
+            "codeSha256" : "HssmIMk6jmnU04in6oz8XsA63ZisBeqVoKHBVUCWJUU=",
+            "version" : "$LATEST",
+            "vpcConfig" : {
+              "subnetIds" : [ "subnet-bc9b61e3", "subnet-4f0ebe41" ],
+              "securityGroupIds" : [ "sg-d4544ff5" ],
+              "vpcId" : "vpc-00e2e87a"
+            },
+            "deadLetterConfig" : {
+              "targetArn" : "arn:aws:sns:us-east-1:476384142167:config-topic-476384142167"
+            },
+            "environment" : null,
+            "kmsKeyArn" : null,
+            "tracingConfig" : {
+              "mode" : "PassThrough"
+            },
+            "masterArn" : null,
+            "revisionId" : "c9f7ee64-2734-4f16-b398-774a6a4db9e0",
+            "layers" : null,
+            "state" : "Active",
+            "stateReason" : null,
+            "stateReasonCode" : null,
+            "lastUpdateStatus" : "Successful",
+            "lastUpdateStatusReason" : null,
+            "lastUpdateStatusReasonCode" : null,
+            "fileSystemConfigs" : null,
+            "packageType" : "Zip",
+            "imageConfigResponse" : null,
+            "signingProfileVersionArn" : null,
+            "signingJobArn" : null,
+            "architectures" : [ "x86_64" ]
+          },
+          "code" : {
+            "repositoryType" : "S3",
+            "location" : "https://prod-04-2014-tasks.s3.us-east-1.amazonaws.com/snapshots/476384142167/serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1-754e4ac3-9ded-4c4c-952e-76d44c419fcf?versionId=DQ7TqvyZroZGlxi7jgIPuWrrMRIgxlyN&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQCl7Ma3Nj4wYwF0OGw8yFV9IGujGyaW2KnNf8syIw67jgIgXk8qyAkAtVY%2Fe%2B4MhrQJ4NixFbiHBpfBP0IoCflam4gq%2BgMIQxAAGgw3NDk2Nzg5MDI4MzkiDObZLL201NT2opPscyrXA5DRvXlgPM2ew46JDTTnSt8RYyoBZzPJ2jQZX30eGKM3pIsIDzTp26woPrjLJfYzCZPoNaiP3anM0uOmgoJc%2BAv%2FGojrBq3K7jLW127WKIzZyDoGxKVdZ9LJ4JQ2dpZLX6GHZ1YVGthlIgWq7FZjVezt9J5HFTVm9XGyD9MJLHQ4pG0C7%2FOeKcYCkjdixJorVZQmwb77eZHNTENny9IElSHqeMm2WyLhkFqMSvgTdOJFcgmhAeCXaVWGPwTUT33xW751W%2BTHiC8ejD5%2BGhElMkideoF3jpcdvUv%2BRfG6SsGEhxeKyppPGB5p7ID7NLy2%2BI%2FswtI%2B6Bm5QAEpT5Fte6A0b1gR1gHj3xv9kuzybU4suX%2B9T1EnyaNTMPX9wDBBr%2BcdYMceXmPG6ZsdX%2BwXm2JCOPR6yAfXHL%2BSbEjsZuJgCSCBxEN3uLkAwh9LKutyqQE%2B1xkWq0ENIxVDogXrUS9SfOz7vx5mEeAFbRJhYBxZC4VVgsreWJxNTLrHpQ0cqgafW4lCOUYexc0jh2d3kMluY%2Bk%2B3Dq7lyKHhfHHBDULEkiZ%2FmhcpnS63%2BD0e9Cg%2BznqzNqDEKioawr4ICBZ6e5Hg9VXXCZkW7oeDwXcCEBpeDPYQ%2BJz%2FzCym9WSBjqlAb97LhLC8VemVUAjHVCQMA2fGYh8j5lKFHxel8Exb4Vna8RF9tQRwmCQXHBHy08h5VCSxtHPBw%2FPnPuklww%2F4wcxsJQEM5KZbycy0jimKpE%2BZOuUAwbP7A4jUWoLl0zvSGardlufEsEe%2BM%2BE5WTHTPtW7eJmHAyauIdXyGTKtTErbPsjnjwki5DZgi%2FvUqTU48CXoi0ZpXaRvEONuKiJZSMXrpXUFQ%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220412T103439Z&X-Amz-SignedHeaders=host&X-Amz-Expires=599&X-Amz-Credential=ASIA25DCYHY36KLGORKO%2F20220412%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=900985015ea0b9a4d6452762607eb593826beaa60c8e8775384f1ba128b9bed5",
+            "imageUri" : null,
+            "resolvedImageUri" : null
+          },
+          "tags" : {
+            "aws:cloudformation:stack-name" : "serverlessrepo-test-hello-world",
+            "serverlessrepo:semanticVersion" : "1.0.4",
+            "lambda:createdBy" : "SAM",
+            "aws:cloudformation:stack-id" : "arn:aws:cloudformation:us-east-1:476384142167:stack/serverlessrepo-test-hello-world/fedb76d0-b9a9-11ec-8240-126c45b8aded",
+            "serverlessrepo:applicationId" : "arn:aws:serverlessrepo:us-east-1:077246666028:applications/hello-world",
+            "aws:cloudformation:logical-id" : "helloworld"
+          },
+          "concurrency" : null
+        },
+        "FunctionInvokeConfig" : {
+          "lastModified" : "2022-04-11T15:45:35.338Z",
+          "functionArn" : "arn:aws:lambda:us-east-1:476384142167:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1:$LATEST",
+          "maximumRetryAttempts" : 2,
+          "maximumEventAgeInSeconds" : 21600,
+          "destinationConfig" : {
+            "onSuccess" : {
+              "destination" : null
+            },
+            "onFailure" : {
+              "destination" : null
+            }
+          }
+        },
+        "AccessPolicy" : null
+      },
+      "tags" : { },
+      "discoveryMeta" : { }
+    } ]
+secureAssets:
+  securelambda: >
+    [ {
+      "documentId" : "-7pi5QLIOv6u8C9_8AW2GQ",
+      "arn" : "securelambda",
+      "resourceName" : "securelambda",
+      "resourceId" : "securelambda",
+      "resourceType" : "AWS::Lambda::Function",
+      "awsRegion" : "us-east-1",
+      "awsAccountId" : "00000000000",
+      "createdIso" : null,
+      "updatedIso" : "2022-04-12T10:34:36.475199Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "functionName" : "serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
+        "functionArn" : "arn:aws:lambda:us-east-1:476384142167:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
+        "runtime" : "nodejs12.x",
+        "role" : "arn:aws:iam::476384142167:role/serverlessrepo-test-hello-world-helloworldRole-1J34531VHTJP7",
+        "handler" : "index.handler",
+        "codeSize" : 4995,
+        "description" : "A starter AWS Lambda function.",
+        "timeout" : 3,
+        "memorySize" : 128,
+        "lastModified" : "2022-04-11T15:45:34.000+0000",
+        "codeSha256" : "HssmIMk6jmnU04in6oz8XsA63ZisBeqVoKHBVUCWJUU=",
+        "version" : "$LATEST",
+        "vpcConfig" : {
+          "subnetIds" : [ "subnet-bc9b61e3", "subnet-4f0ebe41" ],
+          "securityGroupIds" : [ "sg-d4544ff5" ],
+          "vpcId" : "vpc-00e2e87a"
+        },
+        "deadLetterConfig" : {
+          "targetArn" : "arn:aws:sns:us-east-1:476384142167:config-topic-476384142167"
+        },
+        "environment" : null,
+        "kmsKeyArn" : null,
+        "tracingConfig" : {
+          "mode" : "PassThrough"
+        },
+        "masterArn" : null,
+        "revisionId" : "c9f7ee64-2734-4f16-b398-774a6a4db9e0",
+        "layers" : null,
+        "state" : null,
+        "stateReason" : null,
+        "stateReasonCode" : null,
+        "lastUpdateStatus" : null,
+        "lastUpdateStatusReason" : null,
+        "lastUpdateStatusReasonCode" : null,
+        "fileSystemConfigs" : null,
+        "packageType" : "Zip",
+        "imageConfigResponse" : null,
+        "signingProfileVersionArn" : null,
+        "signingJobArn" : null,
+        "architectures" : [ "x86_64" ]
+      },
+      "supplementaryConfiguration" : {
+        "EventInvokeConfigs" : [ {
+          "lastModified" : "2022-04-11T15:45:35.338Z",
+          "functionArn" : "arn:aws:lambda:us-east-1:476384142167:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1:$LATEST",
+          "maximumRetryAttempts" : 2,
+          "maximumEventAgeInSeconds" : 21600,
+          "destinationConfig" : {
+            "onSuccess" : {
+              "destination" : null
+            },
+            "onFailure" : {
+              "destination" : null
+            }
+          }
+        } ],
+        "EventSourceMapping" : [ ],
+        "Function" : {
+          "configuration" : {
+            "functionName" : "serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
+            "functionArn" : "arn:aws:lambda:us-east-1:476384142167:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
+            "runtime" : "nodejs12.x",
+            "role" : "arn:aws:iam::476384142167:role/serverlessrepo-test-hello-world-helloworldRole-1J34531VHTJP7",
+            "handler" : "index.handler",
+            "codeSize" : 4995,
+            "description" : "A starter AWS Lambda function.",
+            "timeout" : 3,
+            "memorySize" : 128,
+            "lastModified" : "2022-04-11T15:45:34.000+0000",
+            "codeSha256" : "HssmIMk6jmnU04in6oz8XsA63ZisBeqVoKHBVUCWJUU=",
+            "version" : "$LATEST",
+            "vpcConfig" : {
+              "subnetIds" : [ "subnet-bc9b61e3", "subnet-4f0ebe41" ],
+              "securityGroupIds" : [ "sg-d4544ff5" ],
+              "vpcId" : "vpc-00e2e87a"
+            },
+            "deadLetterConfig" : {
+              "targetArn" : "arn:aws:sns:us-east-1:476384142167:config-topic-476384142167"
+            },
+            "environment" : null,
+            "kmsKeyArn" : null,
+            "tracingConfig" : {
+              "mode" : "PassThrough"
+            },
+            "masterArn" : null,
+            "revisionId" : "c9f7ee64-2734-4f16-b398-774a6a4db9e0",
+            "layers" : null,
+            "state" : "Active",
+            "stateReason" : null,
+            "stateReasonCode" : null,
+            "lastUpdateStatus" : "Successful",
+            "lastUpdateStatusReason" : null,
+            "lastUpdateStatusReasonCode" : null,
+            "fileSystemConfigs" : null,
+            "packageType" : "Zip",
+            "imageConfigResponse" : null,
+            "signingProfileVersionArn" : null,
+            "signingJobArn" : null,
+            "architectures" : [ "x86_64" ]
+          },
+          "code" : {
+            "repositoryType" : "S3",
+            "location" : "https://prod-04-2014-tasks.s3.us-east-1.amazonaws.com/snapshots/476384142167/serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1-754e4ac3-9ded-4c4c-952e-76d44c419fcf?versionId=DQ7TqvyZroZGlxi7jgIPuWrrMRIgxlyN&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQCl7Ma3Nj4wYwF0OGw8yFV9IGujGyaW2KnNf8syIw67jgIgXk8qyAkAtVY%2Fe%2B4MhrQJ4NixFbiHBpfBP0IoCflam4gq%2BgMIQxAAGgw3NDk2Nzg5MDI4MzkiDObZLL201NT2opPscyrXA5DRvXlgPM2ew46JDTTnSt8RYyoBZzPJ2jQZX30eGKM3pIsIDzTp26woPrjLJfYzCZPoNaiP3anM0uOmgoJc%2BAv%2FGojrBq3K7jLW127WKIzZyDoGxKVdZ9LJ4JQ2dpZLX6GHZ1YVGthlIgWq7FZjVezt9J5HFTVm9XGyD9MJLHQ4pG0C7%2FOeKcYCkjdixJorVZQmwb77eZHNTENny9IElSHqeMm2WyLhkFqMSvgTdOJFcgmhAeCXaVWGPwTUT33xW751W%2BTHiC8ejD5%2BGhElMkideoF3jpcdvUv%2BRfG6SsGEhxeKyppPGB5p7ID7NLy2%2BI%2FswtI%2B6Bm5QAEpT5Fte6A0b1gR1gHj3xv9kuzybU4suX%2B9T1EnyaNTMPX9wDBBr%2BcdYMceXmPG6ZsdX%2BwXm2JCOPR6yAfXHL%2BSbEjsZuJgCSCBxEN3uLkAwh9LKutyqQE%2B1xkWq0ENIxVDogXrUS9SfOz7vx5mEeAFbRJhYBxZC4VVgsreWJxNTLrHpQ0cqgafW4lCOUYexc0jh2d3kMluY%2Bk%2B3Dq7lyKHhfHHBDULEkiZ%2FmhcpnS63%2BD0e9Cg%2BznqzNqDEKioawr4ICBZ6e5Hg9VXXCZkW7oeDwXcCEBpeDPYQ%2BJz%2FzCym9WSBjqlAb97LhLC8VemVUAjHVCQMA2fGYh8j5lKFHxel8Exb4Vna8RF9tQRwmCQXHBHy08h5VCSxtHPBw%2FPnPuklww%2F4wcxsJQEM5KZbycy0jimKpE%2BZOuUAwbP7A4jUWoLl0zvSGardlufEsEe%2BM%2BE5WTHTPtW7eJmHAyauIdXyGTKtTErbPsjnjwki5DZgi%2FvUqTU48CXoi0ZpXaRvEONuKiJZSMXrpXUFQ%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220412T103439Z&X-Amz-SignedHeaders=host&X-Amz-Expires=599&X-Amz-Credential=ASIA25DCYHY36KLGORKO%2F20220412%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=900985015ea0b9a4d6452762607eb593826beaa60c8e8775384f1ba128b9bed5",
+            "imageUri" : null,
+            "resolvedImageUri" : null
+          },
+          "tags" : {
+            "aws:cloudformation:stack-name" : "serverlessrepo-test-hello-world",
+            "serverlessrepo:semanticVersion" : "1.0.4",
+            "lambda:createdBy" : "SAM",
+            "aws:cloudformation:stack-id" : "arn:aws:cloudformation:us-east-1:476384142167:stack/serverlessrepo-test-hello-world/fedb76d0-b9a9-11ec-8240-126c45b8aded",
+            "serverlessrepo:applicationId" : "arn:aws:serverlessrepo:us-east-1:077246666028:applications/hello-world",
+            "aws:cloudformation:logical-id" : "helloworld"
+          },
+          "concurrency" : {
+            "reservedConcurrentExecutions" : 200
+          }
+        },
+        "FunctionInvokeConfig" : {
+          "lastModified" : "2022-04-11T15:45:35.338Z",
+          "functionArn" : "arn:aws:lambda:us-east-1:476384142167:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1:$LATEST",
+          "maximumRetryAttempts" : 2,
+          "maximumEventAgeInSeconds" : 21600,
+          "destinationConfig" : {
+            "onSuccess" : {
+              "destination" : null
+            },
+            "onFailure" : {
+              "destination" : null
+            }
+          }
+        },
+        "AccessPolicy" : null
+      },
+      "tags" : { },
+      "discoveryMeta" : { }
+    } ]

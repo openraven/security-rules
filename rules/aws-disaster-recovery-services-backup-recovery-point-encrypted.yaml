@@ -1,0 +1,14 @@
+ruleId: aws-disaster-recovery-services-backup-recovery-point-encrypted
+type: asset
+ruleName: >
+  Ensure Amazon Backup Recovery point is encrypted
+description: >
+  Checks if a recovery point is encrypted. The rule is NON_COMPLIANT if the recovery point is not encrypted.
+severity: high
+enabled: true
+sql: >
+  SELECT arn
+  FROM ${magpie_schema}.awsbackupbackupvault
+  WHERE (configuration -> 'encryptionKeyArn' = 'null');
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

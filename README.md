@@ -348,3 +348,6 @@ The JSON data mentioned above so correspond to an asset found during discovery a
 - Ensure the rule exists in a policy before running its test.
 - Please be careful not to include AWS account ID's or Asset specific ID's in your tests, although not sensitive it is considered best practices to avoid this.
 
+=======
+# Magpie Security Rules
+See https://docs.openraven.com/docs/overview-10 for documentation on writing rules for Magpie.
