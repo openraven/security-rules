@@ -5,15 +5,15 @@ description: >
   - insecure assets have no mfa
   - secure assets have mfa enabled
 insecureAssets:
-  arn:aws:iam::476384142167:user/testest: >
+  arn:aws:iam::000000000000:user/testest: >
     [ {
     "documentId" : "fQfSrASlNPuDpy9ZT2NLrQ",
-    "arn" : "arn:aws:iam::476384142167:user/testest",
+    "arn" : "arn:aws:iam::000000000000:user/testest",
     "resourceName" : "testest",
-    "resourceId" : "arn:aws:iam::476384142167:user/testest",
+    "resourceId" : "arn:aws:iam::000000000000:user/testest",
     "resourceType" : "AWS::IAM::CredentialsReport",
     "awsRegion" : "aws-global",
-    "awsAccountId" : "476384142167",
+    "awsAccountId" : "000000000000",
     "createdIso" : null,
     "updatedIso" : "2021-12-06T15:49:18.115643Z",
     "discoverySessionId" : null,
@@ -21,7 +21,7 @@ insecureAssets:
     "sizeInBytes" : null,
     "configuration" : {
       "user" : "testest",
-      "arn" : "arn:aws:iam::476384142167:user/testest",
+      "arn" : "arn:aws:iam::000000000000:user/testest",
       "user_creation_time" : "2021-12-03T17:26:33+00:00",
       "password_enabled" : "true",
       "password_last_used" : "no_information",
@@ -48,15 +48,15 @@ insecureAssets:
     "discoveryMeta" : { }
     }]
 secureAssets:
-  arn:aws:iam::476384142167:user/testmdaenabled: >
+  arn:aws:iam::000000000000:user/testmdaenabled: >
     [ {
     "documentId" : "BKEAYx3pO1mpRYKmZ3a6pg",
-    "arn" : "arn:aws:iam::476384142167:user/testmdaenabled",
+    "arn" : "arn:aws:iam::000000000000:user/testmdaenabled",
     "resourceName" : "testmdaenabled",
-    "resourceId" : "arn:aws:iam::476384142167:user/testmdaenabled",
+    "resourceId" : "arn:aws:iam::000000000000:user/testmdaenabled",
     "resourceType" : "AWS::IAM::CredentialsReport",
     "awsRegion" : "aws-global",
-    "awsAccountId" : "476384142167",
+    "awsAccountId" : "000000000000",
     "createdIso" : null,
     "updatedIso" : "2021-12-06T15:49:18.115850Z",
     "discoverySessionId" : null,
@@ -64,7 +64,7 @@ secureAssets:
     "sizeInBytes" : null,
     "configuration" : {
       "user" : "testmdaenabled",
-      "arn" : "arn:aws:iam::476384142167:user/testmdaenabled",
+      "arn" : "arn:aws:iam::000000000000:user/testmdaenabled",
       "user_creation_time" : "2021-12-03T16:53:59+00:00",
       "password_enabled" : "true",
       "password_last_used" : "no_information",

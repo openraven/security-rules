@@ -12,7 +12,7 @@ insecureAssets:
        "resourceId" : "rdstest",
        "resourceType" : "AWS::Backup::BackupPlan",
        "awsRegion" : "us-east-2",
-       "awsAccountId" : "476384142167",
+       "awsAccountId" : "000000000000",
        "createdIso" : "2022-02-03T15:24:14.570Z",
        "updatedIso" : "2022-02-18T16:02:20.085285Z",
        "discoverySessionId" : null,
@@ -33,8 +33,8 @@ insecureAssets:
          "backupSelections" : [ {
            "backupSelection" : {
              "selectionName" : "rdstestbackup",
-             "iamRoleArn" : "arn:aws:iam::476384142167:role/service-role/AWSBackupDefaultServiceRole",
-             "resources" : [ "arn:aws:rds:us-east-2:476384142167:db:database-tara-test-enabled" ],
+             "iamRoleArn" : "arn:aws:iam::000000000000:role/service-role/AWSBackupDefaultServiceRole",
+             "resources" : [ "arn:aws:rds:us-east-2:000000000000:db:database-tara-test-enabled" ],
              "listOfTags" : [ ],
              "notResources" : [ ],
              "conditions" : {
@@ -51,7 +51,7 @@ insecureAssets:
          }, {
            "backupSelection" : {
              "selectionName" : "rdsaurora-test",
-             "iamRoleArn" : "arn:aws:iam::476384142167:role/service-role/AWSBackupDefaultServiceRole",
+             "iamRoleArn" : "arn:aws:iam::000000000000:role/service-role/AWSBackupDefaultServiceRole",
              "resources" : [ "" ],
              "listOfTags" : [ ],
              "notResources" : [ ],
@@ -80,7 +80,7 @@ secureAssets:
        "resourceId" : "rdstest",
        "resourceType" : "AWS::Backup::BackupPlan",
        "awsRegion" : "us-east-2",
-       "awsAccountId" : "476384142167",
+       "awsAccountId" : "000000000000",
        "createdIso" : "2022-02-03T15:24:14.570Z",
        "updatedIso" : "2022-02-18T16:02:20.085285Z",
        "discoverySessionId" : null,
@@ -101,8 +101,8 @@ secureAssets:
          "backupSelections" : [ {
            "backupSelection" : {
              "selectionName" : "rdstestbackup",
-             "iamRoleArn" : "arn:aws:iam::476384142167:role/service-role/AWSBackupDefaultServiceRole",
-             "resources" : [ "arn:aws:rds:us-east-2:476384142167:db:database-tara-test-enabled" ],
+             "iamRoleArn" : "arn:aws:iam::000000000000:role/service-role/AWSBackupDefaultServiceRole",
+             "resources" : [ "arn:aws:rds:us-east-2:000000000000:db:database-tara-test-enabled" ],
              "listOfTags" : [ ],
              "notResources" : [ ],
              "conditions" : {
@@ -119,7 +119,7 @@ secureAssets:
          }, {
            "backupSelection" : {
              "selectionName" : "rdsaurora-test",
-             "iamRoleArn" : "arn:aws:iam::476384142167:role/service-role/AWSBackupDefaultServiceRole",
+             "iamRoleArn" : "arn:aws:iam::000000000000:role/service-role/AWSBackupDefaultServiceRole",
              "resources" : [ "arn:aws:rds:*:*:cluster:*" ],
              "listOfTags" : [ ],
              "notResources" : [ ],

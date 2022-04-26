@@ -23,11 +23,11 @@ insecureAssets:
       "configuration" : {
         "cluster" : {
           "name" : "noncompliantcluster",
-          "arn" : "arn:aws:eks:us-east-1:476384142167:cluster/noncompliantcluster",
+          "arn" : "arn:aws:eks:us-east-1:000000000000:cluster/noncompliantcluster",
           "createdAt" : "2022-04-05T13:12:17.812Z",
           "version" : "1.21",
           "endpoint" : "https://2868D1D258C464A7B301A23F4CCD1FE2.gr7.us-east-1.eks.amazonaws.com",
-          "roleArn" : "arn:aws:iam::476384142167:role/eksclusterrole",
+          "roleArn" : "arn:aws:iam::000000000000:role/eksclusterrole",
           "resourcesVpcConfig" : {
             "subnetIds" : [ "subnet-bc9b61e3", "subnet-d71be5b1", "subnet-4f0ebe41", "subnet-5be56c16", "subnet-a3d21682" ],
             "securityGroupIds" : [ ],
@@ -79,7 +79,7 @@ secureAssets:
       "resourceId" : null,
       "resourceType" : "AWS::EKS::Cluster",
       "awsRegion" : "us-east-1",
-      "awsAccountId" : "476384142167",
+      "awsAccountId" : "000000000000",
       "createdIso" : null,
       "updatedIso" : "2022-04-05T13:56:07.988703Z",
       "discoverySessionId" : null,
@@ -88,11 +88,11 @@ secureAssets:
       "configuration" : {
         "cluster" : {
           "name" : "complaintcluster",
-          "arn" : "arn:aws:eks:us-east-1:476384142167:cluster/complaintcluster",
+          "arn" : "arn:aws:eks:us-east-1:000000000000:cluster/complaintcluster",
           "createdAt" : "2022-04-05T12:19:11.758Z",
           "version" : "1.21",
           "endpoint" : "https://309DFA0858D49599798A6A7019E14906.gr7.us-east-1.eks.amazonaws.com",
-          "roleArn" : "arn:aws:iam::476384142167:role/eksclusterrole",
+          "roleArn" : "arn:aws:iam::000000000000:role/eksclusterrole",
           "resourcesVpcConfig" : {
             "subnetIds" : [ "subnet-bc9b61e3", "subnet-d71be5b1", "subnet-4f0ebe41", "subnet-5be56c16", "subnet-a3d21682" ],
             "securityGroupIds" : [ ],
@@ -126,7 +126,7 @@ secureAssets:
           "encryptionConfig" : [ {
             "resources" : [ "secrets" ],
             "provider" : {
-              "keyArn" : "arn:aws:kms:us-east-1:476384142167:key/mrk-723d1002db9e4abaaf53ec97343f6df6"
+              "keyArn" : "arn:aws:kms:us-east-1:000000000000:key/mrk-723d1002db9e4abaaf53ec97343f6df6"
             }
           } ],
           "connectorConfig" : null

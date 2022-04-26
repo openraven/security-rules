@@ -19,7 +19,7 @@ insecureAssets:
         "sizeInBytes" : null,
         "configuration" : {
           "backupVaultName" : "Default",
-          "backupVaultArn" : "arn:aws:backup:us-east-2:476384142167:backup-vault:Default",
+          "backupVaultArn" : "arn:aws:backup:us-east-2:000000000000:backup-vault:Default",
           "creationDate" : "2022-02-03T15:24:14.281Z",
           "encryptionKeyArn" : null,
           "creatorRequestId" : "Default",
@@ -57,7 +57,7 @@ secureAssets:
           "backupVaultName" : "Default",
           "backupVaultArn" : "arn:aws:backup:us-east-2:00000000000:backup-vault:Default",
           "creationDate" : "2022-02-03T15:24:14.281Z",
-          "encryptionKeyArn" : "arn:aws:kms:us-east-1:476384142167:key/d94f6b00-5d58-44d7-949f-2cd12b65fc92",
+          "encryptionKeyArn" : "arn:aws:kms:us-east-1:000000000000:key/d94f6b00-5d58-44d7-949f-2cd12b65fc92",
           "creatorRequestId" : "Default",
           "numberOfRecoveryPoints" : 35,
           "locked" : false,

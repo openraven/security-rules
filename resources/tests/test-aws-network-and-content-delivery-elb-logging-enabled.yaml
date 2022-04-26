@@ -3,15 +3,15 @@ cloudProvider: aws
 description: >
     -   Checks if an Elastic Load Balancer has logging enabled.
 insecureAssets:
-  arn:aws:elasticloadbalancing:us-east-2:476384142167:loadbalancer/test-classic-lb-nologs: >
+  arn:aws:elasticloadbalancing:us-east-2:000000000000:loadbalancer/test-classic-lb-nologs: >
    [ {
       "documentId" : "mi53eeh6NWCMEc3mSLngQw",
-      "arn" : "arn:aws:elasticloadbalancing:us-east-2:476384142167:loadbalancer/test-classic-lb-nologs",
+      "arn" : "arn:aws:elasticloadbalancing:us-east-2:000000000000:loadbalancer/test-classic-lb-nologs",
       "resourceName" : "test-classic-lb-nologs-507416730.us-east-2.elb.amazonaws.com",
       "resourceId" : "test-classic-lb-nologs",
       "resourceType" : "AWS::ElasticLoadBalancing::LoadBalancer",
       "awsRegion" : "us-east-2",
-      "awsAccountId" : "476384142167",
+      "awsAccountId" : "000000000000",
       "createdIso" : "2021-12-02T16:47:01.880Z",
       "updatedIso" : "2022-02-25T15:45:24.675867Z",
       "discoverySessionId" : null,
@@ -50,7 +50,7 @@ insecureAssets:
           "healthyThreshold" : 10
         },
         "sourceSecurityGroup" : {
-          "ownerAlias" : "476384142167",
+          "ownerAlias" : "000000000000",
           "groupName" : "default"
         },
         "securityGroups" : [ "sg-3afa2c42" ],
@@ -87,15 +87,15 @@ insecureAssets:
       "discoveryMeta" : { }
     }]
 secureAssets:
-  arn:aws:elasticloadbalancing:us-east-2:476384142167:loadbalancer/test-classic-lb: >
+  arn:aws:elasticloadbalancing:us-east-2:000000000000:loadbalancer/test-classic-lb: >
     [ {
         "documentId" : "rR5J65DJMUOISAqMgH5Ctw",
-        "arn" : "arn:aws:elasticloadbalancing:us-east-2:476384142167:loadbalancer/test-classic-lb",
+        "arn" : "arn:aws:elasticloadbalancing:us-east-2:000000000000:loadbalancer/test-classic-lb",
         "resourceName" : "test-classic-lb-1544868284.us-east-2.elb.amazonaws.com",
         "resourceId" : "test-classic-lb",
         "resourceType" : "AWS::ElasticLoadBalancing::LoadBalancer",
         "awsRegion" : "us-east-2",
-        "awsAccountId" : "476384142167",
+        "awsAccountId" : "000000000000",
         "createdIso" : "2021-12-02T16:45:38.370Z",
         "updatedIso" : "2022-02-25T15:45:24.360777Z",
         "discoverySessionId" : null,
@@ -134,7 +134,7 @@ secureAssets:
             "healthyThreshold" : 10
           },
           "sourceSecurityGroup" : {
-            "ownerAlias" : "476384142167",
+            "ownerAlias" : "000000000000",
             "groupName" : "default"
           },
           "securityGroups" : [ "sg-3afa2c42" ],

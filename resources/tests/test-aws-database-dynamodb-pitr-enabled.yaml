@@ -14,7 +14,7 @@ insecureAssets:
         "resourceId" : "no-pitr",
         "resourceType" : "AWS::DynamoDB::Table",
         "awsRegion" : "us-east-1",
-        "awsAccountId" : "476384142167",
+        "awsAccountId" : "000000000000",
         "createdIso" : "2021-12-14T12:17:50.065Z",
         "updatedIso" : "2021-12-14T14:49:18.992172Z",
         "discoverySessionId" : null,
@@ -87,7 +87,7 @@ secureAssets:
         "resourceId" : "pitr",
         "resourceType" : "AWS::DynamoDB::Table",
         "awsRegion" : "us-east-1",
-        "awsAccountId" : "476384142167",
+        "awsAccountId" : "000000000000",
         "createdIso" : "2021-12-14T12:17:50.065Z",
         "updatedIso" : "2021-12-14T14:49:18.992172Z",
         "discoverySessionId" : null,
@@ -120,7 +120,7 @@ secureAssets:
           },
           "tableSizeBytes" : 0,
           "itemCount" : 0,
-          "tableArn" : "arn:aws:dynamodb:us-east-1:476384142167:table/testing123",
+          "tableArn" : "arn:aws:dynamodb:us-east-1:000000000000:table/testing123",
           "tableId" : "0ef1391d-d2a7-4b7a-80c0-f3509534ddf0",
           "billingModeSummary" : {
             "billingMode" : "PAY_PER_REQUEST",
@@ -137,7 +137,7 @@ secureAssets:
           "sseDescription" : {
             "status" : "ENABLED",
             "sseType" : "KMS",
-            "kmsMasterKeyArn" : "arn:aws:kms:us-east-1:476384142167:key/0dd09529-bacc-42a4-b579-e91d96ce21f2",
+            "kmsMasterKeyArn" : "arn:aws:kms:us-east-1:000000000000:key/0dd09529-bacc-42a4-b579-e91d96ce21f2",
             "inaccessibleEncryptionDateTime" : null
           },
           "archivalSummary" : null
