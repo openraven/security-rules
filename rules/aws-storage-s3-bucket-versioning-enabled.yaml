@@ -13,7 +13,7 @@ enabled: true
 sql: >
   SELECT arn, supplementaryconfiguration -> 'Versioning' ->> 'status'
     FROM ${magpie_schema}.awss3bucket
-     AND (supplementaryconfiguration -> 'Versioning' ->> 'status' is null
+     WHERE (supplementaryconfiguration -> 'Versioning' ->> 'status' is null
         OR supplementaryconfiguration -> 'Versioning' ->> 'status' <> 'Enabled'
         OR supplementaryconfiguration -> 'Versioning' ->> 'mfaDelete' is null
         OR supplementaryconfiguration -> 'Versioning' ->> 'mfaDelete' <> 'Enabled')

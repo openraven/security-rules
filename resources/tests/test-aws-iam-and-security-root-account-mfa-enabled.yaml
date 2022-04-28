@@ -4,7 +4,7 @@ cloudProvider: aws
 description: >
   Insecure assets:
    - `mfa-is-not-enabled` have no AccountMFAEnabled which violates the initial rule requirement
-   - `virtual-mfa-enabled` have AccountMFAEnabled which is passing the rule but virtualMFADevices serial number identify it as a virtual
+   - `virtual-mfa-enabled` have AccountMFAEnabled which is passing the rule but VirtualMFADevices serial number identify it as a virtual
       so violating the rule since it requires to be hardware MFA for root account
   Secure asset
    - `openraven-max` have all access_key attributes up to date
@@ -60,7 +60,7 @@ insecureAssets:
      },
      "supplementaryConfiguration" : {
        "PasswordPolicy" : null,
-       "virtualMFADevices" : {
+       "VirtualMFADevices" : {
          "isTruncated" : false,
          "marker" : null
        }
@@ -119,8 +119,8 @@ insecureAssets:
      },
      "supplementaryConfiguration" : {
        "PasswordPolicy" : null,
-       "virtualMFADevices" : {
-         "virtualMFADevices" : [ {
+       "VirtualMFADevices" : {
+         "VirtualMFADevices" : [ {
            "serialNumber" : "arn:aws:iam::723176279592:mfa/root-account-mfa-device",
            "base32StringSeed" : null,
            "qrCodePNG" : null,
@@ -195,8 +195,8 @@ secureAssets:
      },
      "supplementaryConfiguration" : {
        "PasswordPolicy" : null,
-       "virtualMFADevices" : {
-         "virtualMFADevices" : [ {
+       "VirtualMFADevices" : {
+         "VirtualMFADevices" : [ {
            "serialNumber" : "some-another-hardware-device-serial",
            "base32StringSeed" : null,
            "qrCodePNG" : null,
