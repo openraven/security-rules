@@ -21,10 +21,10 @@ insecureAssets:
       "maxSizeInBytes" : null,
       "sizeInBytes" : 6144,
       "configuration" : {
-        "ownerId" : "476384142167",
+        "ownerId" : "000000000000",
         "creationToken" : "quickCreated-eba6c4f1-a234-4a11-8dcb-5f99a6438224",
         "fileSystemId" : "fs-0e5d97d19373f7fb8",
-        "fileSystemArn" : "arn:aws:elasticfilesystem:us-east-1:476384142167:file-system/fs-0e5d97d19373f7fb8",
+        "fileSystemArn" : "arn:aws:elasticfilesystem:us-east-1:000000000000:file-system/fs-0e5d97d19373f7fb8",
         "creationTime" : "2022-04-06T14:27:19Z",
         "lifeCycleState" : "available",
         "name" : "test",
@@ -37,7 +37,7 @@ insecureAssets:
         },
         "performanceMode" : "generalPurpose",
         "encrypted" : false,
-        "kmsKeyId" : "arn:aws:kms:us-east-1:476384142167:key/c3f294ec-365d-43f8-9f75-de90e4c2a90c",
+        "kmsKeyId" : "arn:aws:kms:us-east-1:000000000000:key/c3f294ec-365d-43f8-9f75-de90e4c2a90c",
         "throughputMode" : "bursting",
         "provisionedThroughputInMibps" : null,
         "availabilityZoneName" : null,
@@ -54,7 +54,7 @@ insecureAssets:
         "mountTargets" : {
           "marker" : null,
           "mountTargets" : [ {
-            "ownerId" : "476384142167",
+            "ownerId" : "000000000000",
             "mountTargetId" : "fsmt-02ba9daad9bf8ffd7",
             "fileSystemId" : "fs-0e5d97d19373f7fb8",
             "subnetId" : "subnet-a3d21682",
@@ -65,7 +65,7 @@ insecureAssets:
             "availabilityZoneName" : "us-east-1d",
             "vpcId" : "vpc-00e2e87a"
           }, {
-            "ownerId" : "476384142167",
+            "ownerId" : "000000000000",
             "mountTargetId" : "fsmt-03c3a1b113fefc040",
             "fileSystemId" : "fs-0e5d97d19373f7fb8",
             "subnetId" : "subnet-d71be5b1",
@@ -76,7 +76,7 @@ insecureAssets:
             "availabilityZoneName" : "us-east-1c",
             "vpcId" : "vpc-00e2e87a"
           }, {
-            "ownerId" : "476384142167",
+            "ownerId" : "000000000000",
             "mountTargetId" : "fsmt-0ac710fcfa351e86a",
             "fileSystemId" : "fs-0e5d97d19373f7fb8",
             "subnetId" : "subnet-5be56c16",
@@ -87,7 +87,7 @@ insecureAssets:
             "availabilityZoneName" : "us-east-1a",
             "vpcId" : "vpc-00e2e87a"
           }, {
-            "ownerId" : "476384142167",
+            "ownerId" : "000000000000",
             "mountTargetId" : "fsmt-0cc19163f6d7b5149",
             "fileSystemId" : "fs-0e5d97d19373f7fb8",
             "subnetId" : "subnet-4f0ebe41",
@@ -98,7 +98,7 @@ insecureAssets:
             "availabilityZoneName" : "us-east-1f",
             "vpcId" : "vpc-00e2e87a"
           }, {
-            "ownerId" : "476384142167",
+            "ownerId" : "000000000000",
             "mountTargetId" : "fsmt-0e701ca8f747835b8",
             "fileSystemId" : "fs-0e5d97d19373f7fb8",
             "subnetId" : "subnet-66161b58",
@@ -109,7 +109,7 @@ insecureAssets:
             "availabilityZoneName" : "us-east-1e",
             "vpcId" : "vpc-00e2e87a"
           }, {
-            "ownerId" : "476384142167",
+            "ownerId" : "000000000000",
             "mountTargetId" : "fsmt-0f37be663b3c69ba9",
             "fileSystemId" : "fs-0e5d97d19373f7fb8",
             "subnetId" : "subnet-bc9b61e3",
@@ -143,10 +143,10 @@ secureAssets:
       "maxSizeInBytes" : null,
       "sizeInBytes" : 6144,
       "configuration" : {
-        "ownerId" : "476384142167",
+        "ownerId" : "000000000000",
         "creationToken" : "quickCreated-eba6c4f1-a234-4a11-8dcb-5f99a6438224",
         "fileSystemId" : "fs-0e5d97d19373f7fb8",
-        "fileSystemArn" : "arn:aws:elasticfilesystem:us-east-1:476384142167:file-system/fs-0e5d97d19373f7fb8",
+        "fileSystemArn" : "arn:aws:elasticfilesystem:us-east-1:000000000000:file-system/fs-0e5d97d19373f7fb8",
         "creationTime" : "2022-04-06T14:27:19Z",
         "lifeCycleState" : "available",
         "name" : "test",
@@ -159,7 +159,7 @@ secureAssets:
         },
         "performanceMode" : "generalPurpose",
         "encrypted" : true,
-        "kmsKeyId" : "arn:aws:kms:us-east-1:476384142167:key/c3f294ec-365d-43f8-9f75-de90e4c2a90c",
+        "kmsKeyId" : "arn:aws:kms:us-east-1:000000000000:key/c3f294ec-365d-43f8-9f75-de90e4c2a90c",
         "throughputMode" : "bursting",
         "provisionedThroughputInMibps" : null,
         "availabilityZoneName" : null,
@@ -176,7 +176,7 @@ secureAssets:
         "mountTargets" : {
           "marker" : null,
           "mountTargets" : [ {
-            "ownerId" : "476384142167",
+            "ownerId" : "000000000000",
             "mountTargetId" : "fsmt-02ba9daad9bf8ffd7",
             "fileSystemId" : "fs-0e5d97d19373f7fb8",
             "subnetId" : "subnet-a3d21682",
@@ -187,7 +187,7 @@ secureAssets:
             "availabilityZoneName" : "us-east-1d",
             "vpcId" : "vpc-00e2e87a"
           }, {
-            "ownerId" : "476384142167",
+            "ownerId" : "000000000000",
             "mountTargetId" : "fsmt-03c3a1b113fefc040",
             "fileSystemId" : "fs-0e5d97d19373f7fb8",
             "subnetId" : "subnet-d71be5b1",
@@ -198,7 +198,7 @@ secureAssets:
             "availabilityZoneName" : "us-east-1c",
             "vpcId" : "vpc-00e2e87a"
           }, {
-            "ownerId" : "476384142167",
+            "ownerId" : "000000000000",
             "mountTargetId" : "fsmt-0ac710fcfa351e86a",
             "fileSystemId" : "fs-0e5d97d19373f7fb8",
             "subnetId" : "subnet-5be56c16",
@@ -209,7 +209,7 @@ secureAssets:
             "availabilityZoneName" : "us-east-1a",
             "vpcId" : "vpc-00e2e87a"
           }, {
-            "ownerId" : "476384142167",
+            "ownerId" : "000000000000",
             "mountTargetId" : "fsmt-0cc19163f6d7b5149",
             "fileSystemId" : "fs-0e5d97d19373f7fb8",
             "subnetId" : "subnet-4f0ebe41",
@@ -220,7 +220,7 @@ secureAssets:
             "availabilityZoneName" : "us-east-1f",
             "vpcId" : "vpc-00e2e87a"
           }, {
-            "ownerId" : "476384142167",
+            "ownerId" : "000000000000",
             "mountTargetId" : "fsmt-0e701ca8f747835b8",
             "fileSystemId" : "fs-0e5d97d19373f7fb8",
             "subnetId" : "subnet-66161b58",
@@ -231,7 +231,7 @@ secureAssets:
             "availabilityZoneName" : "us-east-1e",
             "vpcId" : "vpc-00e2e87a"
           }, {
-            "ownerId" : "476384142167",
+            "ownerId" : "000000000000",
             "mountTargetId" : "fsmt-0f37be663b3c69ba9",
             "fileSystemId" : "fs-0e5d97d19373f7fb8",
             "subnetId" : "subnet-bc9b61e3",

@@ -4,15 +4,15 @@ description: >
   Insecure assets don't have encryption or logging enabled
   Secure assets have encryption and logging set to 'true'
 insecureAssets:
-  arn:aws:redshift:us-east-2:476384142167:cluster:redshift-cluster-public-access-tara: >
+  arn:aws:redshift:us-east-2:000000000000:cluster:redshift-cluster-public-access-tara: >
     [{
       "documentId" : "eb05y5EjMQ2MwPIMJsHM2g",
-      "arn" : "arn:aws:redshift:us-east-2:476384142167:cluster:redshift-cluster-public-access-tara",
+      "arn" : "arn:aws:redshift:us-east-2:000000000000:cluster:redshift-cluster-public-access-tara",
       "resourceName" : "dev",
       "resourceId" : "redshift-cluster-public-access-tara",
       "resourceType" : "AWS::Redshift::Cluster",
       "awsRegion" : "us-east-2",
-      "awsAccountId" : "476384142167",
+      "awsAccountId" : "000000000000",
       "createdIso" : "2022-01-27T16:23:23.285Z",
       "updatedIso" : "2022-01-27T16:29:20.667113Z",
       "discoverySessionId" : null,
@@ -82,7 +82,7 @@ insecureAssets:
         "kmsKeyId" : null,
         "enhancedVpcRouting" : false,
         "iamRoles" : [ {
-          "iamRoleArn" : "arn:aws:iam::476384142167:role/service-role/AmazonRedshift-CommandsAccessRole-20211202T142000",
+          "iamRoleArn" : "arn:aws:iam::000000000000:role/service-role/AmazonRedshift-CommandsAccessRole-20211202T142000",
           "applyStatus" : "in-sync"
         } ],
         "pendingActions" : null,
@@ -96,13 +96,13 @@ insecureAssets:
         "nextMaintenanceWindowStartTime" : "2022-02-03T08:30:00Z",
         "resizeInfo" : null,
         "availabilityZoneRelocationStatus" : "disabled",
-        "clusterNamespaceArn" : "arn:aws:redshift:us-east-2:476384142167:namespace:4e7545d7-6a3e-47c8-97fa-50cde175bce1",
+        "clusterNamespaceArn" : "arn:aws:redshift:us-east-2:000000000000:namespace:4e7545d7-6a3e-47c8-97fa-50cde175bce1",
         "totalStorageCapacityInMegaBytes" : 400000,
         "aquaConfiguration" : {
           "aquaStatus" : "disabled",
           "aquaConfigurationStatus" : "auto"
         },
-        "defaultIamRoleArn" : "arn:aws:iam::476384142167:role/service-role/AmazonRedshift-CommandsAccessRole-20211202T142000",
+        "defaultIamRoleArn" : "arn:aws:iam::000000000000:role/service-role/AmazonRedshift-CommandsAccessRole-20211202T142000",
         "reservedNodeExchangeStatus" : null
       },
       "supplementaryConfiguration" : {
@@ -115,15 +115,15 @@ insecureAssets:
       "discoveryMeta" : { }
     }]
 secureAssets:
-  arn:aws:redshift:us-east-2:476384142167:cluster:redshift-cluster-not-public-tara: >
+  arn:aws:redshift:us-east-2:000000000000:cluster:redshift-cluster-not-public-tara: >
     [{
       "documentId" : "DaPxVyFHMyuWbmE6y6MbVQ",
-      "arn" : "arn:aws:redshift:us-east-2:476384142167:cluster:redshift-cluster-not-public-tara",
+      "arn" : "arn:aws:redshift:us-east-2:000000000000:cluster:redshift-cluster-not-public-tara",
       "resourceName" : "dev",
       "resourceId" : "redshift-cluster-not-public-tara",
       "resourceType" : "AWS::Redshift::Cluster",
       "awsRegion" : "us-east-2",
-      "awsAccountId" : "476384142167",
+      "awsAccountId" : "000000000000",
       "createdIso" : "2022-01-27T16:27:38.548Z",
       "updatedIso" : "2022-01-27T16:29:19.594800Z",
       "discoverySessionId" : null,
@@ -193,7 +193,7 @@ secureAssets:
         "kmsKeyId" : null,
         "enhancedVpcRouting" : false,
         "iamRoles" : [ {
-          "iamRoleArn" : "arn:aws:iam::476384142167:role/service-role/AmazonRedshift-CommandsAccessRole-20211202T142000",
+          "iamRoleArn" : "arn:aws:iam::000000000000:role/service-role/AmazonRedshift-CommandsAccessRole-20211202T142000",
           "applyStatus" : "in-sync"
         } ],
         "pendingActions" : null,
@@ -207,13 +207,13 @@ secureAssets:
         "nextMaintenanceWindowStartTime" : "2022-01-31T05:30:00Z",
         "resizeInfo" : null,
         "availabilityZoneRelocationStatus" : "disabled",
-        "clusterNamespaceArn" : "arn:aws:redshift:us-east-2:476384142167:namespace:9ee4af6d-d8a4-4b2d-b94d-db780c682417",
+        "clusterNamespaceArn" : "arn:aws:redshift:us-east-2:000000000000:namespace:9ee4af6d-d8a4-4b2d-b94d-db780c682417",
         "totalStorageCapacityInMegaBytes" : null,
         "aquaConfiguration" : {
           "aquaStatus" : "disabled",
           "aquaConfigurationStatus" : "auto"
         },
-        "defaultIamRoleArn" : "arn:aws:iam::476384142167:role/service-role/AmazonRedshift-CommandsAccessRole-20211202T142000",
+        "defaultIamRoleArn" : "arn:aws:iam::000000000000:role/service-role/AmazonRedshift-CommandsAccessRole-20211202T142000",
         "reservedNodeExchangeStatus" : null
       },
       "supplementaryConfiguration" : {

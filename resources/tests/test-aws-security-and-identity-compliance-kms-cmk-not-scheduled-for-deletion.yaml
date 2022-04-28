@@ -22,7 +22,7 @@ insecureAssets:
       "sizeInBytes" : null,
       "configuration" : {
         "keyId" : "6c2af309-c027-4218-a1fd-7591348fa5ed",
-        "keyArn" : "arn:aws:kms:ap-northeast-2:476384142167:key/6c2af309-c027-4218-a1fd-7591348fa5ed"
+        "keyArn" : "arn:aws:kms:ap-northeast-2:000000000000:key/6c2af309-c027-4218-a1fd-7591348fa5ed"
       },
       "supplementaryConfiguration" : {
         "rotation" : {
@@ -30,7 +30,7 @@ insecureAssets:
         },
         "aliases" : [ {
           "aliasName" : "alias/aws/lightsail",
-          "aliasArn" : "arn:aws:kms:ap-northeast-2:476384142167:alias/aws/lightsail",
+          "aliasArn" : "arn:aws:kms:ap-northeast-2:000000000000:alias/aws/lightsail",
           "targetKeyId" : "6c2af309-c027-4218-a1fd-7591348fa5ed",
           "creationDate" : "2021-09-05T12:11:02.455Z",
           "lastUpdatedDate" : "2021-09-05T12:11:02.455Z"
@@ -66,7 +66,7 @@ secureAssets:
       "sizeInBytes" : null,
       "configuration" : {
         "keyId" : "6c2af309-c027-4218-a1fd-7591348fa5ed",
-        "keyArn" : "arn:aws:kms:ap-northeast-2:476384142167:key/6c2af309-c027-4218-a1fd-7591348fa5ed"
+        "keyArn" : "arn:aws:kms:ap-northeast-2:000000000000:key/6c2af309-c027-4218-a1fd-7591348fa5ed"
       },
       "supplementaryConfiguration" : {
         "rotation" : {
@@ -74,7 +74,7 @@ secureAssets:
         },
         "aliases" : [ {
           "aliasName" : "alias/aws/lightsail",
-          "aliasArn" : "arn:aws:kms:ap-northeast-2:476384142167:alias/aws/lightsail",
+          "aliasArn" : "arn:aws:kms:ap-northeast-2:000000000000:alias/aws/lightsail",
           "targetKeyId" : "6c2af309-c027-4218-a1fd-7591348fa5ed",
           "creationDate" : "2021-09-05T12:11:02.455Z",
           "lastUpdatedDate" : "2021-09-05T12:11:02.455Z"

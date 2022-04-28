@@ -21,9 +21,9 @@ insecureAssets:
       "sizeInBytes" : null,
       "configuration" : {
         "functionName" : "serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
-        "functionArn" : "arn:aws:lambda:us-east-1:476384142167:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
+        "functionArn" : "arn:aws:lambda:us-east-1:000000000000:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
         "runtime" : "nodejs12.x",
-        "role" : "arn:aws:iam::476384142167:role/serverlessrepo-test-hello-world-helloworldRole-1J34531VHTJP7",
+        "role" : "arn:aws:iam::000000000000:role/serverlessrepo-test-hello-world-helloworldRole-1J34531VHTJP7",
         "handler" : "index.handler",
         "codeSize" : 4995,
         "description" : "A starter AWS Lambda function.",
@@ -58,7 +58,7 @@ insecureAssets:
       "supplementaryConfiguration" : {
         "EventInvokeConfigs" : [ {
           "lastModified" : "2022-04-11T15:45:35.338Z",
-          "functionArn" : "arn:aws:lambda:us-east-1:476384142167:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1:$LATEST",
+          "functionArn" : "arn:aws:lambda:us-east-1:000000000000:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1:$LATEST",
           "maximumRetryAttempts" : 2,
           "maximumEventAgeInSeconds" : 21600,
           "destinationConfig" : {
@@ -74,9 +74,9 @@ insecureAssets:
         "Function" : {
           "configuration" : {
             "functionName" : "serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
-            "functionArn" : "arn:aws:lambda:us-east-1:476384142167:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
+            "functionArn" : "arn:aws:lambda:us-east-1:000000000000:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
             "runtime" : "nodejs12.x",
-            "role" : "arn:aws:iam::476384142167:role/serverlessrepo-test-hello-world-helloworldRole-1J34531VHTJP7",
+            "role" : "arn:aws:iam::000000000000:role/serverlessrepo-test-hello-world-helloworldRole-1J34531VHTJP7",
             "handler" : "index.handler",
             "codeSize" : 4995,
             "description" : "A starter AWS Lambda function.",
@@ -91,7 +91,7 @@ insecureAssets:
               "vpcId" : "vpc-00e2e87a"
             },
             "deadLetterConfig" : {
-              "targetArn" : "arn:aws:sns:us-east-1:476384142167:config-topic-476384142167"
+              "targetArn" : "arn:aws:sns:us-east-1:000000000000:config-topic-000000000000"
             },
             "environment" : null,
             "kmsKeyArn" : null,
@@ -116,7 +116,7 @@ insecureAssets:
           },
           "code" : {
             "repositoryType" : "S3",
-            "location" : "https://prod-04-2014-tasks.s3.us-east-1.amazonaws.com/snapshots/476384142167/serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1-754e4ac3-9ded-4c4c-952e-76d44c419fcf?versionId=DQ7TqvyZroZGlxi7jgIPuWrrMRIgxlyN&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQCmtOsVUV%2FWw%2FSkg18nInEXOB3hsGJUgnNnRryBqnTKvgIgVf7Q1QbffIwsjfAk3qHq%2BTWiJKFFxf12hYY9dVLzU5kq%2BgMIMBAAGgw3NDk2Nzg5MDI4MzkiDABrOT0WUyOMiumJ6SrXA6%2BAOpMBKuW%2BV58snxGdlSXLOegjLBnjk%2F%2FhI9flAcsvSy8QykjKObxsVkBQmxphRztoVSsHERtBrCRtuU93Aear%2BCda4Z7lnjvCJswrRdyTwsdMC0brJSDNWhdbQKTnQhVkpAUHLIAc3xrPtM2dePMUmcp2sNuPzxuBGERWzX8pcGyvL6bD4p7MoE6F%2FEnrw0bA5NBpR0yx39G83%2BeqVljnrHOiczSiGjdtgUfIiKKg6WaI5ZQo7tW4Nblh0dOl2addGFUuO0DPgXm2Y5iyvyCN7lzWNvEZ6m%2BZXSlV5w8xOqsu8z2%2FgNhjVdpdDdRimbItS91mG2lY9l%2BzaX%2BszHCMBjAHjf2YtTBUPZ8R7igHArhXCWQW%2FQRw%2BJZ6oY6xEMGb2vXMUl8OAPOmWiEl%2BWVrqNeJ%2B8uvubcPXyeHs%2B7GYVyhudcfJOKR%2FQiUX%2BTQ6Ad4D067JDaid4T2HGfURymZsf%2BM%2F7TW37TsXALtoPFP3pDBdGeXJn1plvUu4gBfUr8pfF4%2BCVxJ3RngsSNUEsA1K%2BB3NdQdmkbTEZfxJOs%2FkON58dURczahxswxFXG7mAG8iRItKiMGLFw8ZiLS2bvl2eyNFhvcmq%2F0dParT7pHAN0NFmEaGDD2%2F9CSBjqlAXJ3xgJnLBteuGCLn8H9ujznAqITbKDdiWUDEDNxI0yQp%2FRnB2FaZ83PQOQ1okmgXK2cV1nytxV5CKek8Q2c5%2FZ2c5V2kGRQfom6P%2BsNQci%2BNKyzkVdSaze%2FGc3VXTQGUdGEKnCQjC2tHc3xHaUVrOhjDK9vLjqauNcY7DZxtUGtApnQNkSbnTvaCA9isOrX7z0XmDuCd2ADw35piy1qG7IOsIervA%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220411T155318Z&X-Amz-SignedHeaders=host&X-Amz-Expires=600&X-Amz-Credential=ASIA25DCYHY3SR26JIFE%2F20220411%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=eb2d5d87e7ffd4a044e506d031376b20d91d0b8a407a496f3b9f2e4436295cd8",
+            "location" : "https://prod-04-2014-tasks.s3.us-east-1.amazonaws.com/snapshots/000000000000/serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1-754e4ac3-9ded-4c4c-952e-76d44c419fcf?versionId=DQ7TqvyZroZGlxi7jgIPuWrrMRIgxlyN&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQCmtOsVUV%2FWw%2FSkg18nInEXOB3hsGJUgnNnRryBqnTKvgIgVf7Q1QbffIwsjfAk3qHq%2BTWiJKFFxf12hYY9dVLzU5kq%2BgMIMBAAGgw3NDk2Nzg5MDI4MzkiDABrOT0WUyOMiumJ6SrXA6%2BAOpMBKuW%2BV58snxGdlSXLOegjLBnjk%2F%2FhI9flAcsvSy8QykjKObxsVkBQmxphRztoVSsHERtBrCRtuU93Aear%2BCda4Z7lnjvCJswrRdyTwsdMC0brJSDNWhdbQKTnQhVkpAUHLIAc3xrPtM2dePMUmcp2sNuPzxuBGERWzX8pcGyvL6bD4p7MoE6F%2FEnrw0bA5NBpR0yx39G83%2BeqVljnrHOiczSiGjdtgUfIiKKg6WaI5ZQo7tW4Nblh0dOl2addGFUuO0DPgXm2Y5iyvyCN7lzWNvEZ6m%2BZXSlV5w8xOqsu8z2%2FgNhjVdpdDdRimbItS91mG2lY9l%2BzaX%2BszHCMBjAHjf2YtTBUPZ8R7igHArhXCWQW%2FQRw%2BJZ6oY6xEMGb2vXMUl8OAPOmWiEl%2BWVrqNeJ%2B8uvubcPXyeHs%2B7GYVyhudcfJOKR%2FQiUX%2BTQ6Ad4D067JDaid4T2HGfURymZsf%2BM%2F7TW37TsXALtoPFP3pDBdGeXJn1plvUu4gBfUr8pfF4%2BCVxJ3RngsSNUEsA1K%2BB3NdQdmkbTEZfxJOs%2FkON58dURczahxswxFXG7mAG8iRItKiMGLFw8ZiLS2bvl2eyNFhvcmq%2F0dParT7pHAN0NFmEaGDD2%2F9CSBjqlAXJ3xgJnLBteuGCLn8H9ujznAqITbKDdiWUDEDNxI0yQp%2FRnB2FaZ83PQOQ1okmgXK2cV1nytxV5CKek8Q2c5%2FZ2c5V2kGRQfom6P%2BsNQci%2BNKyzkVdSaze%2FGc3VXTQGUdGEKnCQjC2tHc3xHaUVrOhjDK9vLjqauNcY7DZxtUGtApnQNkSbnTvaCA9isOrX7z0XmDuCd2ADw35piy1qG7IOsIervA%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220411T155318Z&X-Amz-SignedHeaders=host&X-Amz-Expires=600&X-Amz-Credential=ASIA25DCYHY3SR26JIFE%2F20220411%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=eb2d5d87e7ffd4a044e506d031376b20d91d0b8a407a496f3b9f2e4436295cd8",
             "imageUri" : null,
             "resolvedImageUri" : null
           },
@@ -124,7 +124,7 @@ insecureAssets:
             "aws:cloudformation:stack-name" : "serverlessrepo-test-hello-world",
             "serverlessrepo:semanticVersion" : "1.0.4",
             "lambda:createdBy" : "SAM",
-            "aws:cloudformation:stack-id" : "arn:aws:cloudformation:us-east-1:476384142167:stack/serverlessrepo-test-hello-world/fedb76d0-b9a9-11ec-8240-126c45b8aded",
+            "aws:cloudformation:stack-id" : "arn:aws:cloudformation:us-east-1:000000000000:stack/serverlessrepo-test-hello-world/fedb76d0-b9a9-11ec-8240-126c45b8aded",
             "serverlessrepo:applicationId" : "arn:aws:serverlessrepo:us-east-1:077246666028:applications/hello-world",
             "aws:cloudformation:logical-id" : "helloworld"
           },
@@ -132,7 +132,7 @@ insecureAssets:
         },
         "FunctionInvokeConfig" : {
           "lastModified" : "2022-04-11T15:45:35.338Z",
-          "functionArn" : "arn:aws:lambda:us-east-1:476384142167:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1:$LATEST",
+          "functionArn" : "arn:aws:lambda:us-east-1:000000000000:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1:$LATEST",
           "maximumRetryAttempts" : 2,
           "maximumEventAgeInSeconds" : 21600,
           "destinationConfig" : {
@@ -166,9 +166,9 @@ secureAssets:
       "sizeInBytes" : null,
       "configuration" : {
         "functionName" : "serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
-        "functionArn" : "arn:aws:lambda:us-east-1:476384142167:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
+        "functionArn" : "arn:aws:lambda:us-east-1:000000000000:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
         "runtime" : "nodejs12.x",
-        "role" : "arn:aws:iam::476384142167:role/serverlessrepo-test-hello-world-helloworldRole-1J34531VHTJP7",
+        "role" : "arn:aws:iam::000000000000:role/serverlessrepo-test-hello-world-helloworldRole-1J34531VHTJP7",
         "handler" : "index.handler",
         "codeSize" : 4995,
         "description" : "A starter AWS Lambda function.",
@@ -183,7 +183,7 @@ secureAssets:
           "vpcId" : "vpc-00e2e87a"
         },
         "deadLetterConfig" : {
-          "targetArn" : "arn:aws:sns:us-east-1:476384142167:config-topic-476384142167"
+          "targetArn" : "arn:aws:sns:us-east-1:000000000000:config-topic-000000000000"
         },
         "environment" : null,
         "kmsKeyArn" : null,
@@ -209,7 +209,7 @@ secureAssets:
       "supplementaryConfiguration" : {
         "EventInvokeConfigs" : [ {
           "lastModified" : "2022-04-11T15:45:35.338Z",
-          "functionArn" : "arn:aws:lambda:us-east-1:476384142167:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1:$LATEST",
+          "functionArn" : "arn:aws:lambda:us-east-1:000000000000:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1:$LATEST",
           "maximumRetryAttempts" : 2,
           "maximumEventAgeInSeconds" : 21600,
           "destinationConfig" : {
@@ -225,9 +225,9 @@ secureAssets:
         "Function" : {
           "configuration" : {
             "functionName" : "serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
-            "functionArn" : "arn:aws:lambda:us-east-1:476384142167:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
+            "functionArn" : "arn:aws:lambda:us-east-1:000000000000:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1",
             "runtime" : "nodejs12.x",
-            "role" : "arn:aws:iam::476384142167:role/serverlessrepo-test-hello-world-helloworldRole-1J34531VHTJP7",
+            "role" : "arn:aws:iam::000000000000:role/serverlessrepo-test-hello-world-helloworldRole-1J34531VHTJP7",
             "handler" : "index.handler",
             "codeSize" : 4995,
             "description" : "A starter AWS Lambda function.",
@@ -242,7 +242,7 @@ secureAssets:
               "vpcId" : "vpc-00e2e87a"
             },
             "deadLetterConfig" : {
-              "targetArn" : "arn:aws:sns:us-east-1:476384142167:config-topic-476384142167"
+              "targetArn" : "arn:aws:sns:us-east-1:000000000000:config-topic-000000000000"
             },
             "environment" : null,
             "kmsKeyArn" : null,
@@ -267,7 +267,7 @@ secureAssets:
           },
           "code" : {
             "repositoryType" : "S3",
-            "location" : "https://prod-04-2014-tasks.s3.us-east-1.amazonaws.com/snapshots/476384142167/serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1-754e4ac3-9ded-4c4c-952e-76d44c419fcf?versionId=DQ7TqvyZroZGlxi7jgIPuWrrMRIgxlyN&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQCmtOsVUV%2FWw%2FSkg18nInEXOB3hsGJUgnNnRryBqnTKvgIgVf7Q1QbffIwsjfAk3qHq%2BTWiJKFFxf12hYY9dVLzU5kq%2BgMIMBAAGgw3NDk2Nzg5MDI4MzkiDABrOT0WUyOMiumJ6SrXA6%2BAOpMBKuW%2BV58snxGdlSXLOegjLBnjk%2F%2FhI9flAcsvSy8QykjKObxsVkBQmxphRztoVSsHERtBrCRtuU93Aear%2BCda4Z7lnjvCJswrRdyTwsdMC0brJSDNWhdbQKTnQhVkpAUHLIAc3xrPtM2dePMUmcp2sNuPzxuBGERWzX8pcGyvL6bD4p7MoE6F%2FEnrw0bA5NBpR0yx39G83%2BeqVljnrHOiczSiGjdtgUfIiKKg6WaI5ZQo7tW4Nblh0dOl2addGFUuO0DPgXm2Y5iyvyCN7lzWNvEZ6m%2BZXSlV5w8xOqsu8z2%2FgNhjVdpdDdRimbItS91mG2lY9l%2BzaX%2BszHCMBjAHjf2YtTBUPZ8R7igHArhXCWQW%2FQRw%2BJZ6oY6xEMGb2vXMUl8OAPOmWiEl%2BWVrqNeJ%2B8uvubcPXyeHs%2B7GYVyhudcfJOKR%2FQiUX%2BTQ6Ad4D067JDaid4T2HGfURymZsf%2BM%2F7TW37TsXALtoPFP3pDBdGeXJn1plvUu4gBfUr8pfF4%2BCVxJ3RngsSNUEsA1K%2BB3NdQdmkbTEZfxJOs%2FkON58dURczahxswxFXG7mAG8iRItKiMGLFw8ZiLS2bvl2eyNFhvcmq%2F0dParT7pHAN0NFmEaGDD2%2F9CSBjqlAXJ3xgJnLBteuGCLn8H9ujznAqITbKDdiWUDEDNxI0yQp%2FRnB2FaZ83PQOQ1okmgXK2cV1nytxV5CKek8Q2c5%2FZ2c5V2kGRQfom6P%2BsNQci%2BNKyzkVdSaze%2FGc3VXTQGUdGEKnCQjC2tHc3xHaUVrOhjDK9vLjqauNcY7DZxtUGtApnQNkSbnTvaCA9isOrX7z0XmDuCd2ADw35piy1qG7IOsIervA%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220411T155318Z&X-Amz-SignedHeaders=host&X-Amz-Expires=600&X-Amz-Credential=ASIA25DCYHY3SR26JIFE%2F20220411%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=eb2d5d87e7ffd4a044e506d031376b20d91d0b8a407a496f3b9f2e4436295cd8",
+            "location" : "https://prod-04-2014-tasks.s3.us-east-1.amazonaws.com/snapshots/000000000000/serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1-754e4ac3-9ded-4c4c-952e-76d44c419fcf?versionId=DQ7TqvyZroZGlxi7jgIPuWrrMRIgxlyN&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQCmtOsVUV%2FWw%2FSkg18nInEXOB3hsGJUgnNnRryBqnTKvgIgVf7Q1QbffIwsjfAk3qHq%2BTWiJKFFxf12hYY9dVLzU5kq%2BgMIMBAAGgw3NDk2Nzg5MDI4MzkiDABrOT0WUyOMiumJ6SrXA6%2BAOpMBKuW%2BV58snxGdlSXLOegjLBnjk%2F%2FhI9flAcsvSy8QykjKObxsVkBQmxphRztoVSsHERtBrCRtuU93Aear%2BCda4Z7lnjvCJswrRdyTwsdMC0brJSDNWhdbQKTnQhVkpAUHLIAc3xrPtM2dePMUmcp2sNuPzxuBGERWzX8pcGyvL6bD4p7MoE6F%2FEnrw0bA5NBpR0yx39G83%2BeqVljnrHOiczSiGjdtgUfIiKKg6WaI5ZQo7tW4Nblh0dOl2addGFUuO0DPgXm2Y5iyvyCN7lzWNvEZ6m%2BZXSlV5w8xOqsu8z2%2FgNhjVdpdDdRimbItS91mG2lY9l%2BzaX%2BszHCMBjAHjf2YtTBUPZ8R7igHArhXCWQW%2FQRw%2BJZ6oY6xEMGb2vXMUl8OAPOmWiEl%2BWVrqNeJ%2B8uvubcPXyeHs%2B7GYVyhudcfJOKR%2FQiUX%2BTQ6Ad4D067JDaid4T2HGfURymZsf%2BM%2F7TW37TsXALtoPFP3pDBdGeXJn1plvUu4gBfUr8pfF4%2BCVxJ3RngsSNUEsA1K%2BB3NdQdmkbTEZfxJOs%2FkON58dURczahxswxFXG7mAG8iRItKiMGLFw8ZiLS2bvl2eyNFhvcmq%2F0dParT7pHAN0NFmEaGDD2%2F9CSBjqlAXJ3xgJnLBteuGCLn8H9ujznAqITbKDdiWUDEDNxI0yQp%2FRnB2FaZ83PQOQ1okmgXK2cV1nytxV5CKek8Q2c5%2FZ2c5V2kGRQfom6P%2BsNQci%2BNKyzkVdSaze%2FGc3VXTQGUdGEKnCQjC2tHc3xHaUVrOhjDK9vLjqauNcY7DZxtUGtApnQNkSbnTvaCA9isOrX7z0XmDuCd2ADw35piy1qG7IOsIervA%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220411T155318Z&X-Amz-SignedHeaders=host&X-Amz-Expires=600&X-Amz-Credential=ASIA25DCYHY3SR26JIFE%2F20220411%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=eb2d5d87e7ffd4a044e506d031376b20d91d0b8a407a496f3b9f2e4436295cd8",
             "imageUri" : null,
             "resolvedImageUri" : null
           },
@@ -275,7 +275,7 @@ secureAssets:
             "aws:cloudformation:stack-name" : "serverlessrepo-test-hello-world",
             "serverlessrepo:semanticVersion" : "1.0.4",
             "lambda:createdBy" : "SAM",
-            "aws:cloudformation:stack-id" : "arn:aws:cloudformation:us-east-1:476384142167:stack/serverlessrepo-test-hello-world/fedb76d0-b9a9-11ec-8240-126c45b8aded",
+            "aws:cloudformation:stack-id" : "arn:aws:cloudformation:us-east-1:000000000000:stack/serverlessrepo-test-hello-world/fedb76d0-b9a9-11ec-8240-126c45b8aded",
             "serverlessrepo:applicationId" : "arn:aws:serverlessrepo:us-east-1:077246666028:applications/hello-world",
             "aws:cloudformation:logical-id" : "helloworld"
           },
@@ -283,7 +283,7 @@ secureAssets:
         },
         "FunctionInvokeConfig" : {
           "lastModified" : "2022-04-11T15:45:35.338Z",
-          "functionArn" : "arn:aws:lambda:us-east-1:476384142167:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1:$LATEST",
+          "functionArn" : "arn:aws:lambda:us-east-1:000000000000:function:serverlessrepo-test-hello-world-helloworld-F9TPgSffO3g1:$LATEST",
           "maximumRetryAttempts" : 2,
           "maximumEventAgeInSeconds" : 21600,
           "destinationConfig" : {

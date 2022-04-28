@@ -3,15 +3,15 @@ ruleId: aws-database-redshift-cluster-kms-enabled
 cloudProvider: aws
 description: >
 insecureAssets:
-  arn:aws:redshift:us-east-2:476384142167:cluster:redshift-test-unencrypted: >
+  arn:aws:redshift:us-east-2:000000000000:cluster:redshift-test-unencrypted: >
     [ {
       "documentId" : "DbhkopveOk27I-BG_J9_gw",
-      "arn" : "arn:aws:redshift:us-east-2:476384142167:cluster:redshift-test-unencrypted",
+      "arn" : "arn:aws:redshift:us-east-2:000000000000:cluster:redshift-test-unencrypted",
       "resourceName" : "dev",
       "resourceId" : "redshift-test-unencrypted",
       "resourceType" : "AWS::Redshift::Cluster",
       "awsRegion" : "us-east-2",
-      "awsAccountId" : "476384142167",
+      "awsAccountId" : "000000000000",
       "createdIso" : "2021-12-02T14:20:30.796Z",
       "updatedIso" : "2021-12-02T15:45:15.881345Z",
       "discoverySessionId" : null,
@@ -100,7 +100,7 @@ insecureAssets:
         "nextMaintenanceWindowStartTime" : "2021-12-07T07:00:00Z",
         "resizeInfo" : null,
         "availabilityZoneRelocationStatus" : "disabled",
-        "clusterNamespaceArn" : "arn:aws:redshift:us-east-2:476384142167:namespace:f0d5c52a-1dcd-45b7-9e78-75ac801bd70a"
+        "clusterNamespaceArn" : "arn:aws:redshift:us-east-2:000000000000:namespace:f0d5c52a-1dcd-45b7-9e78-75ac801bd70a"
       },
       "supplementaryConfiguration" : {
         "storage" : {
@@ -114,15 +114,15 @@ insecureAssets:
     }]
 
 secureAssets:
-  arn:aws:redshift:us-east-2:476384142167:cluster:redshift-test-encrypted: >
+  arn:aws:redshift:us-east-2:000000000000:cluster:redshift-test-encrypted: >
     [ {
       "documentId" : "v1yhTzzfMa28ZFQXAEM2gA",
-      "arn" : "arn:aws:redshift:us-east-2:476384142167:cluster:redshift-test-encrypted",
+      "arn" : "arn:aws:redshift:us-east-2:000000000000:cluster:redshift-test-encrypted",
       "resourceName" : "dev",
       "resourceId" : "redshift-test-encrypted",
       "resourceType" : "AWS::Redshift::Cluster",
       "awsRegion" : "us-east-2",
-      "awsAccountId" : "476384142167",
+      "awsAccountId" : "000000000000",
       "createdIso" : "2021-12-02T15:31:56.853Z",
       "updatedIso" : "2021-12-02T15:45:15.007570Z",
       "discoverySessionId" : null,
@@ -197,10 +197,10 @@ secureAssets:
         "elasticIpStatus" : null,
         "clusterRevisionNumber" : "33759",
         "tags" : [ ],
-        "kmsKeyId" : "arn:aws:kms:us-east-2:476384142167:key/mrk-e8a318693f4646f9b29494951c37075d",
+        "kmsKeyId" : "arn:aws:kms:us-east-2:000000000000:key/mrk-e8a318693f4646f9b29494951c37075d",
         "enhancedVpcRouting" : false,
         "iamRoles" : [ {
-          "iamRoleArn" : "arn:aws:iam::476384142167:role/service-role/AmazonRedshift-CommandsAccessRole-20211202T142000",
+          "iamRoleArn" : "arn:aws:iam::000000000000:role/service-role/AmazonRedshift-CommandsAccessRole-20211202T142000",
           "applyStatus" : "in-sync"
         } ],
         "pendingActions" : null,
@@ -214,7 +214,7 @@ secureAssets:
         "nextMaintenanceWindowStartTime" : "2021-12-07T07:30:00Z",
         "resizeInfo" : null,
         "availabilityZoneRelocationStatus" : "disabled",
-        "clusterNamespaceArn" : "arn:aws:redshift:us-east-2:476384142167:namespace:bd6bbbfa-0223-40b0-a532-995e7268815b"
+        "clusterNamespaceArn" : "arn:aws:redshift:us-east-2:000000000000:namespace:bd6bbbfa-0223-40b0-a532-995e7268815b"
       },
       "supplementaryConfiguration" : {
         "storage" : {
