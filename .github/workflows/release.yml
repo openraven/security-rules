@@ -1,12 +1,6 @@
 name: Release
 
-on:
-  push:
-    branches: [ PROD_3084_mavenise ]
-  pull_request:
-    branches: [ PROD_3084_mavenise ]
-
-  workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
   build:
