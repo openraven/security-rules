@@ -29,7 +29,7 @@ jobs:
       - name: Change Dir
         run: cd magpie
       - name: Temp Switch Magpie Branch
-        run: git checkout -b PROD-3084_maveniseRules origin/PROD-3084_maveniseRules
+        run: git checkout -b PROD-3084_maveniseRules remotes/origin/PROD-3084_maveniseRules
       - name: Build Magpie
         run: mvn -f magpie -B clean install -DskipTests
       - name: Validate rules
