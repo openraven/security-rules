@@ -26,12 +26,6 @@ jobs:
             ${{ runner.os }}-maven-
       - name: Clone Magpie
         run: git clone https://github.com/openraven/magpie.git
-      - name: Change Dir
-        run: cd magpie
-      - name: list
-        run: git branch -a
-      - name: Temp Switch Magpie Branch
-        run: git checkout -b PROD-3084_maveniseRules remotes/origin/PROD-3084_maveniseRules
       - name: Build Magpie
         run: mvn -f magpie -B clean install -DskipTests
       - name: Validate rules
