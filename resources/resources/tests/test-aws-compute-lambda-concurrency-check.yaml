@@ -2,8 +2,8 @@ ruleId: aws-compute-lambda-concurrency-check
 cloudProvider: aws
 description: >
       - Checks AWS Lambda function is configured with function-level concurrent execution limit.
-      - Insecure assets do not have concurrency execution limit
-      - secure asset have concurrency execution limit
+      - Insecure assets do not have a concurrency execution limit
+      - secure asset have a concurrency execution limit
 insecureAssets:
   insecurelambda: >
     [ {

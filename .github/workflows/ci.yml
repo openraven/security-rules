@@ -24,6 +24,9 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
+
+        #   Clones the magpie repository, build it and then validate the security rules
+        #   using the SecurityRuleValidator in magpie core
       - name: Clone Magpie
         run: git clone https://github.com/openraven/magpie.git
       - name: Build Magpie
