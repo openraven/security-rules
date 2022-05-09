@@ -4,7 +4,7 @@
 
     <groupId>io.openraven.magpie</groupId>
     <artifactId>security-rules</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.4-SNAPSHOT</version>
     <name>Open Raven Security Rules</name>
     <url>https://github.com/openraven/security-rules</url>
     <description>Open Raven's Security Rules Project</description>
