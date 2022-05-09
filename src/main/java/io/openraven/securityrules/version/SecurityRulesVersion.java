@@ -10,8 +10,8 @@ import java.util.Properties;
 public class SecurityRulesVersion {
 
     /**
-     *  Looks up the Maven version from META-INF
-     * @return the runtime artifact version or UNKNONW
+     * Looks up the Maven version from META-INF
+     * @return the runtime artifact version or UNKNOWN
      */
     public synchronized String getVersion() {
         String version = "UNKNOWN";
