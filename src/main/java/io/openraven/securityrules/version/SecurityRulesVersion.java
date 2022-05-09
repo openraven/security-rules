@@ -4,8 +4,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+/**
+ * Simple class to expose the Maven artifact version
+ */
 public class SecurityRulesVersion {
 
+    /**
+     *  Looks up the Maven version from META-INF
+     * @return the runtime artifact version or UNKNONW
+     */
     public synchronized String getVersion() {
         String version = "UNKNOWN";
 
