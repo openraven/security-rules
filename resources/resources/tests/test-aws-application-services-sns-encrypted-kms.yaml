@@ -3,7 +3,7 @@ ruleId: aws-application-services-sns-encrypted-kms
 cloudProvider: aws
 description: >
   - Insecure Assets have no KMS Key
-  - Secure Assets have are encrypted with KMS Key
+  - Secure Assets are encrypted with KMS Key
 insecureAssets:
   arn:aws:sns:us-east-2:000000000000:test-unencrypted: >
     [ {
