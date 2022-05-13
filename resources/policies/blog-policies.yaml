@@ -6,4 +6,7 @@ description: >
 enabled: true
 rules:
   - aws-iam-and-security-potential-public-elasticsearch.yaml
-
+  - aws-compute-ec2-imdsv2-check.yaml
+  - aws-compute-ec2-instance-detailed-monitoring-enabled.yaml
+  - aws-iam-and-security-iam-user-mfa-enabled.yaml
+  - aws-management-tools-ensure-s3-bucket-access-logging-is-enabled-on-cloudtrail-s3-bucket.yaml
