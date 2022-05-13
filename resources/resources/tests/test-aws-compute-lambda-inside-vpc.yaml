@@ -3,7 +3,7 @@ cloudProvider: aws
 description: >
       - Checks whether an AWS Lambda function has a dead letter queue.
       - Insecure assets do not have a DLQ
-      - secure asset have a DLQ
+      - secure assets have a DLQ
 insecureAssets:
   insecurelambda: >
     [ {

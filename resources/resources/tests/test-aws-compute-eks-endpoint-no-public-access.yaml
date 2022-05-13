@@ -2,7 +2,7 @@ ruleId: aws-compute-eks-endpoint-no-public-access
 cloudProvider: aws
 description: >
   Insecure Assets:
-   - EKS instance has  public access
+   - EKS instance has public access
   Secure asset
    - EKS cluster has no public access
 insecureAssets:

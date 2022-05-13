@@ -16,8 +16,8 @@ sql: >
   SELECT resourcename as arn 
       FROM ${magpie_schema}.awsaccount a
       WHERE (configuration->>'AccountMFAEnabled' = '0'
-             OR (json_array_length(CAST((supplementaryconfiguration->'virtualMFADevices' -> 'virtualMFADevices') as JSON)) = 1
-                 AND (supplementaryconfiguration->'virtualMFADevices'->'virtualMFADevices'->0 ->> 'serialNumber'
+             OR (json_array_length(CAST((supplementaryconfiguration->'VirtualMFADevices' -> 'VirtualMFADevices') as JSON)) = 1
+                 AND (supplementaryconfiguration->'VirtualMFADevices'->'VirtualMFADevices'->0 ->> 'serialNumber'
                       = concat('arn:aws:iam::', awsaccountid, ':mfa/root-account-mfa-device'))));
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
