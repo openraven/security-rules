@@ -12,7 +12,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT 'No global configuration recorder exists' AS arn
+  SELECT 'No global configuration recorder exists' AS assetid
   WHERE NOT EXISTS
       (SELECT *
        FROM ${magpie_schema}.awsconfigurationrecorder

@@ -9,7 +9,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   from ${magpie_schema}.awss3bucket
   WHERE
   (supplementaryconfiguration->'ServerSideEncryptionConfiguration' = 'null'

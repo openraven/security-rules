@@ -9,7 +9,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
     FROM ${magpie_schema}.awss3bucket
      WHERE (supplementaryconfiguration ->> 'isPublicByACL' <> 'false'
         OR supplementaryconfiguration ->> 'isPublicByPolicy' <> 'false')

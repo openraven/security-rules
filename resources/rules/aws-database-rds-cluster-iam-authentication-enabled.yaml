@@ -9,7 +9,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   FROM ${magpie_schema}.awsrdsdbinstance
   WHERE
   EXISTS (SELECT * FROM jsonb_array_elements(supplementaryconfiguration->'dbClusters'->'dbClusters') dbClusters

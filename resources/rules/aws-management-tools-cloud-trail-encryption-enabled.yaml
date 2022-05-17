@@ -16,7 +16,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   FROM ${magpie_schema}.awscloudtrailtrail
   WHERE (supplementaryconfiguration->'trailDetails'->'trail'->>'kmsKeyId' = ''
   OR supplementaryconfiguration->'trailDetails'->'trail'->>'kmsKeyId' IS NULL);

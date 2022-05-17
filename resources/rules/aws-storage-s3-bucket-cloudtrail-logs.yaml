@@ -33,7 +33,7 @@ sql: >
         (bucket_policy->'Statement'->>'Effect' = 'Allow' AND bucket_policy->'Statement'->'Principal'->>'AWS' = '*')
   )
 
-  SELECT arn
+  SELECT arn as assetid
   FROM check_buckets_grantee_uri
   UNION
   SELECT arn

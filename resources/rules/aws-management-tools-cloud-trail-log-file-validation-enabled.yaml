@@ -12,7 +12,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   FROM ${magpie_schema}.awscloudtrailtrail
   WHERE supplementaryconfiguration->'trailDetails'->'trail'->'logFileValidationEnabled' != 'true';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

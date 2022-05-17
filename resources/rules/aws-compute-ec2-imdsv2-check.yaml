@@ -9,7 +9,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   FROM ${magpie_schema}.awsec2instance
   WHERE configuration->'metadataOptions'->>'httpTokens' = 'optional';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

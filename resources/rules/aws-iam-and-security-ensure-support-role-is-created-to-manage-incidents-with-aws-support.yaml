@@ -11,7 +11,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   FROM ${magpie_schema}.awsiampolicy
     WHERE resourcename = 'AWSSupportAccess'
     AND configuration->>'attachmentCount' = '0';

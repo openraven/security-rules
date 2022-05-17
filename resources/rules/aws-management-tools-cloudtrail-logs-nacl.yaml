@@ -41,7 +41,7 @@ sql: >
     WHERE get_alarm_topic.topic_arn = awssnstopic.arn
   )
 
-  SELECT 'No log metric filter and alarm exist for changes to Network Access Control Lists' AS arn
+  SELECT 'No log metric filter and alarm exist for changes to Network Access Control Lists' AS assetid
   WHERE NOT EXISTS
       (SELECT *
        FROM get_group_names)

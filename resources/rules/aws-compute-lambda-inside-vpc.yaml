@@ -8,7 +8,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   FROM ${magpie_schema}.awslambdafunction
   WHERE (configuration -> 'vpcConfig' = 'null');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

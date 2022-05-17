@@ -9,7 +9,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  select arn
+  select arn as assetid
   FROM ${magpie_schema}.awsdynamodbtable
   WHERE supplementaryconfiguration->>'awsBackupJobs' = '[]';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

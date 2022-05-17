@@ -11,7 +11,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT DISTINCT a.arn
+  SELECT DISTINCT a.arn as assetid
   FROM ${magpie_schema}.awsiamrole a, LATERAL (
       SELECT value ->> 'policyDocument' as policy_document
       FROM jsonb_array_elements(supplementaryconfiguration -> 'inlinePolicies')

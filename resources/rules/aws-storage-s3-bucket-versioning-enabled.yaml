@@ -11,7 +11,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT arn, supplementaryconfiguration -> 'Versioning' ->> 'status'
+  SELECT arn as assetid, supplementaryconfiguration -> 'Versioning' ->> 'status'
     FROM ${magpie_schema}.awss3bucket
      WHERE (supplementaryconfiguration -> 'Versioning' ->> 'status' is null
         OR supplementaryconfiguration -> 'Versioning' ->> 'status' <> 'Enabled'

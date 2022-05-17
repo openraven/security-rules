@@ -8,7 +8,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT 'No backup plans configured for all DynamoDB instances.' as arn
+  SELECT 'No backup plans configured for all DynamoDB instances.' as assetid
   WHERE NOT EXISTS
   (SELECT * from ${magpie_schema}.awsbackupbackupplan
   WHERE supplementaryconfiguration->>'backupSelections' LIKE '%arn:aws:dynamodb:*:*:table*%');

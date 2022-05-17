@@ -10,7 +10,7 @@ description: >
 severity: medium
 enabled: true
 sql: >
-  SELECT 'No SecurityHub enabled in discovered region: ' || reg.region_global as arn
+  SELECT 'No SecurityHub enabled in discovered region: ' || reg.region_global as assetid
     FROM (SELECT distinct awsregion as region_global
             FROM ${magpie_schema}.awssecurityhubstandardsubscription
            WHERE awsregion != 'aws-global') reg

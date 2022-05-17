@@ -12,7 +12,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
     FROM ${magpie_schema}.awsec2instance
     LEFT JOIN ${magpie_schema}.awsssminstance
       ON (${magpie_schema}.awsec2instance.resourceid = ${magpie_schema}.awsssminstance.resourceid)

@@ -9,7 +9,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT 'No AWS CloudTrail trails that track all data events for S3' AS arn
+  SELECT 'No AWS CloudTrail trails that track all data events for S3' AS assetid
   WHERE NOT EXISTS
   (SELECT * from ${magpie_schema}.awscloudtrailtrail
   WHERE '["arn:aws:s3"]' = (SELECT CAST(jsonb_array_elements(jsonb_array_elements(supplementaryconfiguration->'eventSelectors'->'eventSelectors')->'dataResources')->>'values' AS TEXT)));

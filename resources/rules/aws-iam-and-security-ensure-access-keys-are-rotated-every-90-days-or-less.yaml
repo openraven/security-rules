@@ -13,7 +13,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   FROM ${magpie_schema}.awsiamcredentialsreport
   WHERE ((configuration->>'access_key_1_active' = 'true'
          AND TO_TIMESTAMP(configuration->>'access_key_1_last_rotated', 'YYYY-MM-DD"T"HH24:MI:SS') < now() - interval '90 days')

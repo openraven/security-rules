@@ -17,7 +17,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   FROM ${magpie_schema}.awsec2securitygroup
     WHERE resourcename = 'default'
     AND (jsonb_array_length(configuration->'ipPermissions') > 0
