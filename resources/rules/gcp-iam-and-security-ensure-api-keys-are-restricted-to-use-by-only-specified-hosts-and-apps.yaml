@@ -1,7 +1,8 @@
+id: 32ddd983-b22b-489b-b74e-0ca7fb888b37
 #opnrvn-r-73
-ruleId: gcp-iam-and-security-ensure-api-keys-are-restricted-to-use-by-only-specified-hosts-and-apps
+refId: gcp-iam-and-security-ensure-api-keys-are-restricted-to-use-by-only-specified-hosts-and-apps
 type: asset
-ruleName: >
+name: >
   Ensure API keys are restricted to use by only specified Hosts and Apps
 description: >
   Security risks involved in using API-Keys appear below:
@@ -14,4 +15,4 @@ manualControl: true
 severity: high
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

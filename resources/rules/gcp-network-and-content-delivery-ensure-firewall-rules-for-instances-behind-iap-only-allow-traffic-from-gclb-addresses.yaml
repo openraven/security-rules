@@ -1,7 +1,8 @@
+id: 0b2fda2b-4fc5-485e-97c4-0ab05e846749
 # opnrvn-r-87
-ruleId: gcp-network-and-content-delivery-ensure-firewall-rules-for-instances-behind-iap-only-allow-traffic-from-gclb-addresses
+refId: gcp-network-and-content-delivery-ensure-firewall-rules-for-instances-behind-iap-only-allow-traffic-from-gclb-addresses
 type: asset
-ruleName: >
+name: >
   Ensure Firewall Rules for instances behind Identity Aware Proxy (IAP)
   only allow the traffic from Google Cloud Loadbalancer (GCLB) Health Check and Proxy Addresses
 description: >
@@ -12,4 +13,4 @@ manualControl: true
 severity: high
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

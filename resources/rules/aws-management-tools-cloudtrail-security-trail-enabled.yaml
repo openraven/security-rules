@@ -1,7 +1,8 @@
+id: 4ac6735f-a1ec-441a-8022-d502cf95c63a
 # opnrvn-r-144
-ruleId: aws-management-tools-cloudtrail-security-trail-enabled
+refId: aws-management-tools-cloudtrail-security-trail-enabled
 type: asset
-ruleName: >
+name: >
   Checks that there is at least one AWS CloudTrail trail defined with security best practices + 7 rule recommendations.
 description: >
   This rule is COMPLIANT if there is at least one trail that meets all of the following:
@@ -31,4 +32,4 @@ sql: >
     AND supplementaryconfiguration->'trailDetails'->'trail'->'includeGlobalServiceEvents' = 'true'
     AND supplementaryconfiguration->'trailDetails'->'trail'->'kmsKeyId' != 'null'));
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

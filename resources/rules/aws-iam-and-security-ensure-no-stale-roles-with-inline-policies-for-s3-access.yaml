@@ -1,8 +1,8 @@
-# id: fe381bf0-e2ab-4f22-8834-d459c609373f
+id: fe381bf0-e2ab-4f22-8834-d459c609373f
 # opnrvn-r-23
-ruleId: aws-iam-and-security-ensure-no-stale-roles-with-inline-policies-for-s3-access
+refId: aws-iam-and-security-ensure-no-stale-roles-with-inline-policies-for-s3-access
 type: asset
-ruleName: >
+name: >
   Ensure there no stale roles with Inline Policies for S3 access
 description: >
   Avoid stale roles which could cause access leakage and uncontrolled manipulation with S3 bucket data
@@ -23,4 +23,4 @@ sql: >
   AND (configuration -> 'roleLastUsed' ->> 'lastUsedDate' IS NULL
       OR now() - INTERVAL '60 DAYS' > to_timestamp(configuration -> 'roleLastUsed' ->> 'lastUsedDate', 'YYYY-MM-DDTHH:MI:SS'))
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

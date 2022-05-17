@@ -1,7 +1,8 @@
+id: a3362d54-348c-48c1-985f-3be1d51d4425
 # opnrnv-r-145
-ruleId: aws-management-tools-cloudtrail-s3-dataevents-enabled
+refId: aws-management-tools-cloudtrail-s3-dataevents-enabled
 type: asset
-ruleName: >
+name: >
   Checks whether at least one AWS CloudTrail trail is logging Amazon S3 data events for all S3 buckets.
 description: >
   The rule is NON_COMPLIANT if trails log data events for S3 buckets is not configured.
@@ -13,4 +14,4 @@ sql: >
   (SELECT * from ${magpie_schema}.awscloudtrailtrail
   WHERE '["arn:aws:s3"]' = (SELECT CAST(jsonb_array_elements(jsonb_array_elements(supplementaryconfiguration->'eventSelectors'->'eventSelectors')->'dataResources')->>'values' AS TEXT)));
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

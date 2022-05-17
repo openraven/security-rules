@@ -1,8 +1,8 @@
-#id: b6b640be-94b6-40fb-8e69-0c3917ffeb4f
+id: b6b640be-94b6-40fb-8e69-0c3917ffeb4f
 # opnrvn-r-53
-ruleId: aws-storage-s3-bucket-deny-overriding-of-default-kms-key-encryption
+refId: aws-storage-s3-bucket-deny-overriding-of-default-kms-key-encryption
 type: asset
-ruleName: >
+name: >
   Ensure S3 bucket deny overriding of default KMS Key encryption
 description: >
   Attackers which have S3:PutObject permission are still able to override default KMS Key encryption
@@ -28,4 +28,4 @@ sql: >
           OR policy.stmt ->> 'Condition' not like '%x-amz-server-side-encryption-aws-kms-key-id%')
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

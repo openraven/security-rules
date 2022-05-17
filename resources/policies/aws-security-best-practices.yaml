@@ -1,11 +1,11 @@
-# id: 74406460-05fb-4057-b646-f3f8c1e5d56f
-policyId: aws-security-best-practices
-policyName:  AWS Security Best Practices
+id: 74406460-05fb-4057-b646-f3f8c1e5d56f
+refId: aws-security-best-practices
+name:  AWS Security Best Practices
 cloudProvider: AWS
 description: >
   AWS Security Best Practices policy analyzes accounts for security best practices and is modelled on guidance published by the Center for Information Security.
 enabled: true
-rules:
+ruleIds:
   - aws-iam-and-security-ensure-security-questions-registered.yaml
   - aws-iam-and-security-iam-root.yaml
   - aws-management-tools-cloudtrail-enabled-all-regions.yaml
@@ -126,4 +126,4 @@ rules:
   - aws-compute-lambda-inside-vpc.yaml
   - aws-compute-lambda-dlq-check.yaml
   - aws-compute-lambda-concurrency-check.yaml
-version: 0.9
+version: 1.0

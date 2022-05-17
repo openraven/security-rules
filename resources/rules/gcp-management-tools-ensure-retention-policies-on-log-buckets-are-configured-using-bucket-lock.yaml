@@ -1,7 +1,8 @@
+id: 1b05ffa7-606e-4cbc-91f2-696454b0c5d5
 # opnrvn-r-101
-ruleId: gcp-management-tools-ensure-retention-policies-on-log-buckets-are-configured-using-bucket-lock
+refId: gcp-management-tools-ensure-retention-policies-on-log-buckets-are-configured-using-bucket-lock
 type: asset
-ruleName: >
+name: >
   Ensure that retention policies on log buckets are configured using Bucket Lock
 description: >
   Enabling retention policies on log buckets will protect logs stored in cloud storage buckets from being overwritten or accidentally deleted.
@@ -19,4 +20,4 @@ sql: >
          OR str."configuration" ->> 'retentionPolicyIsLocked' IS NULL
          OR str."configuration" ->> 'retentionPeriod' IS NULL)
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

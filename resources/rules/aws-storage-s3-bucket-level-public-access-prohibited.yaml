@@ -1,7 +1,7 @@
-# id: acffd4d7-0fe4-4750-a155-6c6fc35f133f
-ruleId: aws-storage-s3-bucket-level-public-access-prohibited
+id: acffd4d7-0fe4-4750-a155-6c6fc35f133f
+refId: aws-storage-s3-bucket-level-public-access-prohibited
 type: asset
-ruleName: >
+name: >
   Ensure that S3 Bucket restrict public access by ACL and policy
 description: >
   S3 Buckets should not be reachable outside of the project by default,
@@ -15,4 +15,4 @@ sql: >
         OR supplementaryconfiguration ->> 'isPublicByPolicy' <> 'false')
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

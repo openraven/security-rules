@@ -1,7 +1,8 @@
+id: d6de98db-4750-40c0-928b-8578b2f2791c
 # opnrvn-r-152
-ruleId: aws-storage-s3-bucket-default-lock-enabled
+refId: aws-storage-s3-bucket-default-lock-enabled
 type: asset
-ruleName: >
+name: >
   Checks whether Amazon S3 bucket has lock enabled, by default.
 description: >
   The rule is NON_COMPLIANT if the lock is not enabled.
@@ -14,4 +15,4 @@ sql: >
   (supplementaryconfiguration->'BucketObjectLockConfiguration' = 'null'
   OR supplementaryconfiguration->'BucketObjectLockConfiguration'->>'objectLockEnabled' != 'Enabled');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

@@ -1,6 +1,7 @@
-ruleId: aws-database-rds-covered-by-backup-plan
+id: a7bbb054-85a3-4350-87a1-966c8fd8611e
+refId: aws-database-rds-covered-by-backup-plan
 type: asset
-ruleName: >
+name: >
   rds-resources-protected-by-backup-plan
 description: >
   Checks if there is a back-up plan in place for all rds instances
@@ -12,4 +13,4 @@ sql: >
   (SELECT * from ${magpie_schema}.awsbackupbackupplan
   WHERE supplementaryconfiguration->>'backupSelections' LIKE '%arn:aws:rds:*:*:cluster:*%');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

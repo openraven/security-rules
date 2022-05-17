@@ -1,7 +1,7 @@
-# id: a992d086-cbd8-4c12-ac77-0fec98703037
-ruleId: aws-iam-and-security-iam-user-no-policies-check
+id: a992d086-cbd8-4c12-ac77-0fec98703037
+refId: aws-iam-and-security-iam-user-no-policies-check
 type: asset
-ruleName: >
+name: >
   Ensure IAM policies are attached only to groups or roles
 description: >
   By default, IAM users, groups, and roles have no access to AWS resources. IAM policies are
@@ -15,4 +15,4 @@ sql: >
     WHERE (supplementaryconfiguration->>'attachedPolicies' != '[]'
          OR supplementaryconfiguration->>'userPolicies' != '[]');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

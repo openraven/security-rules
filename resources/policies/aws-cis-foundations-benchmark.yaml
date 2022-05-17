@@ -1,11 +1,12 @@
-policyId: aws-cis-foundations-benchmark
-policyName: CIS AWS Foundations Benchmark controls
+id: 675ad766-c88f-4fc1-bf9e-60036514a9bc
+refId: aws-cis-foundations-benchmark
+name: CIS AWS Foundations Benchmark controls
 cloudProvider: AWS
 description: >
   The benchmark enables organizations operating in the cloud to ensure their IT infrastructure is safeguarded against cyber threats and attacks.
   The AWS CIS benchmark provides guidelines for configuring the security options of foundational AWS services.
 enabled: true
-rules:
+ruleIds:
   - aws-iam-and-security-iam-root.yaml # CIS 1.1
   - aws-iam-and-security-iam-user-mfa-enabled.yaml # CIS 1.2
   - aws-iam-and-security-iam-user-unused-credentials-check.yaml  # CIS 1.3
@@ -55,4 +56,4 @@ rules:
   - aws-iam-and-security-no-security-groups-allow-all-ingress-to-port-3389.yaml # CIS 4.2
   - aws-iam-and-security-default-security-group-for-vpc-restricts-all-traffic.yaml # CIS 4.3
   - aws-vpc-rooting-access.yaml # CIS 4.4 [MANUAL]
-version: 0.9
+version: 1.0

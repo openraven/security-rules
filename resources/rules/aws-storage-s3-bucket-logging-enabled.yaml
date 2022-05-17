@@ -1,6 +1,7 @@
-ruleId: aws-storage-s3-bucket-logging-enabled
+id: 2f5523fd-9d0f-472c-a799-27153606f42c
+refId: aws-storage-s3-bucket-logging-enabled
 type: asset
-ruleName: >
+name: >
   Checks if logging is enabled for your S3 buckets.
 description: >
   Checks if logging is enabled for your S3 buckets.
@@ -11,4 +12,4 @@ sql: >
   from ${magpie_schema}.awss3bucket
   WHERE supplementaryconfiguration->'BucketLoggingConfiguration'->>'loggingEnabled' is null;
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

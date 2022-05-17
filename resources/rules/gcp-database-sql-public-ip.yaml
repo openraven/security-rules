@@ -1,6 +1,7 @@
-ruleId: gcp-database-sql-public-ip
+id: b0e593c6-7283-4bce-8561-f1db88cb462f
+refId: gcp-database-sql-public-ip
 type: asset
-ruleName: >
+name: >
   Ensure that Cloud SQL database instances do not have public IPs
 description: >
   To lower the organization's attack surface, Cloud SQL databases should not have public IPs.
@@ -19,4 +20,4 @@ sql: >
      AND acc."configuration" ->> 'instanceType' = 'CLOUD_SQL_INSTANCE'
      AND acc."configuration" ->> 'ipAddresses' LIKE '%PRIMARY%'
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

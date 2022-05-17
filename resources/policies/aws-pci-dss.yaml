@@ -1,5 +1,6 @@
-policyId: aws-pci-dss
-policyName: Payment Card Industry Data Security Standard (PCI DSS)
+id: 069cb2ed-105e-45ed-ac4b-0d3bf0541b5a
+refId: aws-pci-dss
+name: Payment Card Industry Data Security Standard (PCI DSS)
 cloudProvider: AWS
 description: >
   The PCI DSS Compliance Standard in Magpie is designed to help you with your ongoing PCI DSS security activities.
@@ -7,7 +8,7 @@ description: >
   They can neither replace internal efforts nor guarantee that you will pass a PCI DSS assessment.
   Magpie does not check procedural controls that require manual evidence collection.
 enabled: true
-rules:
+ruleIds:
 #  - Auto Scaling groups associated with a load balancer should use health checks # [PCI.AutoScaling.1]
   - aws-management-tools-cloud-trail-encryption-enabled.yaml # [PCI.CloudTrail.1]
   - aws-management-tools-cloudtrail-enabled-all-regions.yaml # [PCI.CloudTrail.2]
@@ -60,4 +61,4 @@ rules:
 #  - Amazon EC2 instances managed by Systems Manager should have a patch compliance status of COMPLIANT after a patch installation # [PCI.SSM.1]
 #  - Instances managed by Systems Manager should have an association compliance status of COMPLIANT # [PCI.SSM.2]
 #  - EC2 instances should be managed by AWS Systems Manager # [PCI.SSM.3]
-version: 0.9
+version: 1.0

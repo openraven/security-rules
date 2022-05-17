@@ -1,7 +1,8 @@
+id: 56a7d29c-5022-45b1-93d8-107494059fc9
 # opnrvn-r-125
-ruleId: gcp-database-ensure-log-parser-stats-db-flag-for-cloud-sql-postgres-instance-is-set-to-off
+refId: gcp-database-ensure-log-parser-stats-db-flag-for-cloud-sql-postgres-instance-is-set-to-off
 type: asset
-ruleName: >
+name: >
   Ensure 'log_parser_stats' database flag for Cloud SQL PostgreSQL instance is set to 'off'
 description: >
   The log_parser_stats flag enables a crude profiling method for logging parser performance statistics
@@ -20,4 +21,4 @@ sql: >
        WHERE value ->> 'name' = 'log_parser_stats' AND value ->> 'value' = 'off'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

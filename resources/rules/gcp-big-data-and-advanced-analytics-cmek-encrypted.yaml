@@ -1,6 +1,7 @@
-ruleId: gcp-big-data-and-advanced-analytics-cmek-encrypted
+id: 8b0a36bc-be17-4541-925f-357163ea9c3d
+refId: gcp-big-data-and-advanced-analytics-cmek-encrypted
 type: asset
-ruleName: >
+name: >
   Ensure that all BigQuery Tables are encrypted with Customer-managed encryption key (CMEK)
 description: >
   BigQuery by default encrypts the data as rest by employing Envelope Encryption using Google managed cryptographic keys.
@@ -20,4 +21,4 @@ sql: >
    WHERE acc.resourcetype = 'GCP::BigQuery::Dataset'
      AND arr.tbl -> 'encryptionConfiguration' ->> 'kmsKeyName' IS NULL
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

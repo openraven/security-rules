@@ -1,7 +1,8 @@
+id: d78be2e4-5158-45e9-8e3a-67b1d8e41f5d
 # opnrvn-r-95
-ruleId: gcp-compute-ensure-compute-instances-are-launched-with-shielded-vm-enabled
+refId: gcp-compute-ensure-compute-instances-are-launched-with-shielded-vm-enabled
 type: asset
-ruleName: >
+name: >
   Ensure Compute instances are launched with Shielded VM enabled
 description: >
   To defend against against advanced threats and ensure that the boot loader and firmware on your VMs are signed and untampered,
@@ -19,4 +20,4 @@ sql: >
         OR "configuration" -> 'shieldedInstanceConfig' ->> 'enableIntegrityMonitoring' = 'false');
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

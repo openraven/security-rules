@@ -1,6 +1,7 @@
-ruleId: gcp-compute-vm-encrypted
+id: e73d6d97-7bc9-4e70-ab21-1646ebbf8732
+refId: gcp-compute-vm-encrypted
 type: asset
-ruleName: >
+name: >
   Ensure VM disks for critical VMs are encrypted with Customer- Supplied Encryption Keys (CSEK)
 description: >
   By default, Google Compute Engine encrypts all data at rest.
@@ -16,4 +17,4 @@ sql: >
      AND "configuration" -> 'diskEncryptionKey' ->> 'sha256' is not null
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

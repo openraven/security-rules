@@ -1,11 +1,11 @@
-# vid: d8792397-239e-4028-9539-7b3771ba929f
-policyId: gcp-security-best-practices
-policyName:  Google Cloud Security Best Practices
+id: d52d4569-30b6-494a-a3aa-04f387b5f117
+refId: gcp-security-best-practices
+name:  Google Cloud Security Best Practices
 cloudProvider: GCP
 description: >
   Google Cloud Security Best Practices analyzes accounts for security best practices and is modelled on guidance published by the Center for Information Security.
 enabled: true
-rules:
+ruleIds:
   - gcp-iam-and-security-ensure-oslogin-is-enabled-for-a-project.yaml
   - gcp-iam-and-security-iam-project-roles.yaml
   - gcp-iam-and-security-ensure-only-gcp-managed-service-account-keys-for-each-service-account.yaml # CIS 1.4
@@ -89,4 +89,4 @@ rules:
   - gcp-database-ensure-that-cloud-sql-database-instances-are-not-open-to-the-world.yaml # CIS 6.5
   - gcp-database-sql-public-ip.yaml
   - gcp-database-ensure-that-cloud-sql-database-instances-are-configured-with-automated-backups.yaml # CIS 6.7
-version: 0.9
+version: 1.0

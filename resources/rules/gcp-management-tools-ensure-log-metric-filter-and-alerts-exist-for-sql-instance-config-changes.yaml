@@ -1,7 +1,8 @@
+id: 4eb29b39-ef5e-48f6-bc63-0984b831e7b8
 # opnrvn-r-109
-ruleId: gcp-management-tools-ensure-log-metric-filter-and-alerts-exist-for-sql-instance-config-changes
+refId: gcp-management-tools-ensure-log-metric-filter-and-alerts-exist-for-sql-instance-config-changes
 type: asset
-ruleName: >
+name: >
   Ensure that the log metric filter and alerts exist for SQL instance configuration changes
 description: >
   Monitoring changes to SQL instance configuration changes may reduce the time needed to detect and correct misconfigurations done on the SQL server.
@@ -28,4 +29,4 @@ sql: >
            )
     )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

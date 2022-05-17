@@ -1,6 +1,7 @@
-ruleId: gcp-api-keys
+id: d7e4510a-2055-436b-848c-3821d2d6a55a
+refId: gcp-api-keys
 type: asset
-ruleName: >
+name: >
   Ensure API keys are not created for a project
 description: >
   Keys are insecure because they can be viewed publicly, such as from within a browser, or they can be accessed on a device where the key resides.
@@ -9,4 +10,4 @@ manualControl: true
 severity: high
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

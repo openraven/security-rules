@@ -1,6 +1,7 @@
-ruleId: gcp-management-tools-log-alert-custom-role
+id: a9a6c97f-9081-426f-85be-41c485a48b99
+refId: gcp-management-tools-log-alert-custom-role
 type: asset
-ruleName: >
+name: >
   Ensure that the log metric filter and alerts exist for Custom Role changes
 description: >
   It is recommended that a metric filter and alarm be established for changes to Identity and Access Management (IAM) role
@@ -27,4 +28,4 @@ sql: >
          )
   )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

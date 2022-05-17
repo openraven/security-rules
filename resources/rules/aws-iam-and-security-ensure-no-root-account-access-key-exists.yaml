@@ -1,8 +1,8 @@
-# id: 47cbd0ee-e428-4fe4-9fae-85fb84b3b290
+id: 47cbd0ee-e428-4fe4-9fae-85fb84b3b290
 #opnrvn-r-43
-ruleId: aws-iam-and-security-ensure-no-root-account-access-key-exists
+refId: aws-iam-and-security-ensure-no-root-account-access-key-exists
 type: asset
-ruleName: >
+name: >
   Ensure no root account access key exists
 description: >
   The root account is the most privileged user in an AWS account. AWS Access Keys provide
@@ -19,4 +19,4 @@ sql: >
               OR configuration->>'access_key_2_active' = 'true'));
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

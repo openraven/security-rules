@@ -1,6 +1,7 @@
-ruleId: gcp-iam-and-security-log-filter-and-alerts
+id: f16ef4ec-332b-45e1-bbfb-16b9bc9e85cc
+refId: gcp-iam-and-security-log-filter-and-alerts
 type: asset
-ruleName: >
+name: >
   Ensure that the log metric filter and alerts exist for Cloud Storage IAM permission changes
 description: >
   Monitoring changes to cloud storage bucket permissions may reduce the time needed to detect and correct permissions
@@ -27,4 +28,4 @@ sql: >
          )
   )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

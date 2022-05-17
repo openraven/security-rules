@@ -1,7 +1,7 @@
-#id: 4c27ebae-abf6-4533-beef-c955c0082edc
-ruleId: aws-account-details
+id: 4c27ebae-abf6-4533-beef-c955c0082edc
+refId: aws-account-details
 type: asset
-ruleName: >
+name: >
   Maintain current contact details
 description: >
   Ensure contact email and telephone details for AWS accounts are current and map to more
@@ -17,4 +17,4 @@ manualControl: true
 severity: high
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

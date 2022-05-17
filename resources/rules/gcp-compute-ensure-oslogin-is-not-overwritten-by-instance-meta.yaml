@@ -1,7 +1,8 @@
+id: 0d828d3c-3704-47af-bf32-3bbe3cdf98f7
 # opnrvn-r-91
-ruleId: gcp-compute-ensure-oslogin-is-not-overwritten-by-instance-meta
+refId: gcp-compute-ensure-oslogin-is-not-overwritten-by-instance-meta
 type: asset
-ruleName: >
+name: >
   Ensure oslogin is not overwritten by Instance meta
 description: >
   Enabling OS login binds SSH certificates to IAM users and facilitates effective SSH certificate management.
@@ -20,4 +21,4 @@ sql: >
           )
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

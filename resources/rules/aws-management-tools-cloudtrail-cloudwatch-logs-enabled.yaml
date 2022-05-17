@@ -1,8 +1,8 @@
-# id: 3f2a6c76-edd8-4e6f-b0e1-5213acbfebda
+id: 3f2a6c76-edd8-4e6f-b0e1-5213acbfebda
 # opnrvn-r-60
-ruleId: aws-management-tools-cloudtrail-cloudwatch-logs-enabled
+refId: aws-management-tools-cloudtrail-cloudwatch-logs-enabled
 type: asset
-ruleName: >
+name: >
   Ensure CloudTrail trails are integrated with CloudWatch Logs
 description: >
   AWS CloudTrail is a web service that records AWS API calls made in a given AWS account.
@@ -24,4 +24,4 @@ sql: >
   OR TO_TIMESTAMP(supplementaryconfiguration->'status'->>'latestCloudWatchLogsDeliveryTime', 'YYYY-MM-DD"T"HH24:MI:SS') < now() - interval '1 day');
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

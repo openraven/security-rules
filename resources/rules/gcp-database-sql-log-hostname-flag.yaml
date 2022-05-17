@@ -1,6 +1,7 @@
-ruleId: gcp-database-sql-log-hostname-flag
+id: fc80bcf6-34cd-4207-9805-342873951710
+refId: gcp-database-sql-log-hostname-flag
 type: asset
-ruleName: >
+name: >
   Ensure 'log_hostname' database flag for Cloud SQL PostgreSQL instance is set appropriately
 description: >
   Logging hostnames can incur overhead on server performance as for each statement logged,
@@ -22,4 +23,4 @@ sql: >
        WHERE value ->> 'name' = 'log_hostname' AND value ->> 'value' = 'off'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

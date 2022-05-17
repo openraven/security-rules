@@ -1,6 +1,7 @@
-ruleId: gcp-security-and-identity-compliance-kms-rotation
+id: 3a8a8691-b8e7-4ebb-aa0e-f65777e46bff
+refId: gcp-security-and-identity-compliance-kms-rotation
 type: asset
-ruleName: >
+name: >
   Ensure KMS encryption keys are rotated within a period of 90 days
 description: >
   A key is used to protect some corpus of data.
@@ -19,4 +20,4 @@ sql: >
    WHERE acc.resourcetype = 'GCP::KMS::Keyring' AND CAST(arr.kms_rotation AS NUMERIC) > 7776000
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

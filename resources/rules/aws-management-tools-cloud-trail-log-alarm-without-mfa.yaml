@@ -1,7 +1,7 @@
-# id: ec7c0bf0-1e75-40f0-a25d-073e939a05e1
-ruleId: aws-management-tools-cloud-trail-log-alarm-without-mfa
+id: ec7c0bf0-1e75-40f0-a25d-073e939a05e1
+refId: aws-management-tools-cloud-trail-log-alarm-without-mfa
 type: asset
-ruleName: >
+name: >
   Ensure a log metric filter and alarm exist for Management Console sign-in without MFA
 description: >
   Real-time monitoring of API calls can be achieved by directing CloudTrail Logs to
@@ -51,4 +51,4 @@ sql: >
        FROM get_topic_subscribers_confirmed
        WHERE subscribers_number = '0');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

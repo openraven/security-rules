@@ -1,6 +1,7 @@
-ruleId: aws-iam-and-security-potential-public-elasticsearch
+id: 83bdbe7f-a78c-4b0d-bdcd-8155db548bfc
+refId: aws-iam-and-security-potential-public-elasticsearch
 type: asset
-ruleName: >
+name: >
   Potential Exposed Elastic Search instance due to security groups allow ingress from 0.0.0.0/0 to port 9200
 description: >
   Security groups provide stateful filtering of ingress/egress network traffic to AWS
@@ -32,4 +33,4 @@ sql: >
   SELECT * FROM get_cidrIp;
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

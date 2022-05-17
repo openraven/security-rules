@@ -1,6 +1,7 @@
-ruleId: gcp-database-sql-require-ssl
+id: 05719be1-836c-496f-b7fe-d6a7c9756638
+refId: gcp-database-sql-require-ssl
 type: asset
-ruleName: >
+name: >
   Ensure that the Cloud SQL database instance requires all incoming connections to use SSL
 description: >
   SQL database connections if successfully trapped (MITM); can reveal sensitive data like credentials, database queries, query outputs etc.
@@ -15,4 +16,4 @@ sql: >
      AND acc."configuration" -> 'settings' -> 'ipConfiguration' -> 'requireSsl' IS NULL
       OR acc."configuration" -> 'settings' -> 'ipConfiguration' -> 'requireSsl' <> 'true'
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

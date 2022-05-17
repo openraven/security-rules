@@ -1,8 +1,8 @@
-# id: bd76fc0a-6158-4b28-bed8-0beeef079223
+id: bd76fc0a-6158-4b28-bed8-0beeef079223
 # opnrvn-r-21
-ruleId: aws-iam-and-security-iam-instance-roles-used-for-aws-resource-access-from-instances
+refId: aws-iam-and-security-iam-instance-roles-used-for-aws-resource-access-from-instances
 type: asset
-ruleName: >
+name: >
   Ensure IAM instance roles are used for AWS resource access from instances
 description: >
   AWS access from within AWS instances can be done by either encoding AWS keys into AWS
@@ -13,4 +13,4 @@ manualControl: true
 severity: high
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

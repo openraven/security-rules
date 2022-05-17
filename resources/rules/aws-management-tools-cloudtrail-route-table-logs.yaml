@@ -1,7 +1,7 @@
-# id: 28d0ed9e-be20-40d1-9fbf-d119589aefcd
-ruleId: aws-management-tools-cloudtrail-route-table-logs
+id: 28d0ed9e-be20-40d1-9fbf-d119589aefcd
+refId: aws-management-tools-cloudtrail-route-table-logs
 type: asset
-ruleName: >
+name: >
   Ensure a log metric filter and alarm exist for route table changes
 description: >
   Real-time monitoring of API calls can be achieved by directing CloudTrail Logs to
@@ -54,4 +54,4 @@ sql: >
        WHERE subscribers_number = '0');
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

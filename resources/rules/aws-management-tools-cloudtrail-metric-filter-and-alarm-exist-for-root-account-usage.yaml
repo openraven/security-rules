@@ -1,8 +1,8 @@
-# id: 0880a6ee-1b32-4adc-b876-793c3a658c79
+id: 0880a6ee-1b32-4adc-b876-793c3a658c79
 # opnrvn-r-33
-ruleId: aws-management-tools-cloudtrail-metric-filter-and-alarm-exist-for-root-account-usage
+refId: aws-management-tools-cloudtrail-metric-filter-and-alarm-exist-for-root-account-usage
 type: asset
-ruleName: >
+name: >
   Ensure a log metric filter and alarm exist for usage of "root" account
 description: >
   Real-time monitoring of API calls can be achieved by directing CloudTrail Logs to
@@ -51,4 +51,4 @@ sql: >
        FROM get_topic_subscribers_confirmed
        WHERE subscribers_number = '0');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

@@ -1,7 +1,8 @@
+id: 6faa55e6-abba-47d0-ad3b-0e0c23b54465
 # opnrvn-r-121
-ruleId: gcp-database-ensure-log-duration-db-flag-for-cloud-sql-postgres-instance-is-set-to-on
+refId: gcp-database-ensure-log-duration-db-flag-for-cloud-sql-postgres-instance-is-set-to-on
 type: asset
-ruleName: >
+name: >
   Ensure 'log_duration' database flag for Cloud SQL PostgreSQL instance is set to 'on'
 description: >
   Enabling the log_duration setting causes the duration of each completed statement to be logged.
@@ -22,4 +23,4 @@ sql: >
        WHERE value ->> 'name' = 'log_duration' AND value ->> 'value' = 'on'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

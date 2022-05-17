@@ -1,7 +1,8 @@
+id: ec77e0e3-dda9-4871-9a96-badaf03ca992
 # opnrvn-r-69
-ruleId: gcp-iam-and-security-ensure-kms-cryptokeys-are-not-anonymously-or-publicly-accessible
+refId: gcp-iam-and-security-ensure-kms-cryptokeys-are-not-anonymously-or-publicly-accessible
 type: asset
-ruleName: >
+name: >
   Ensure that Cloud KMS cryptokeys are not anonymously or publicly accessible
 description: >
   Granting permissions to allUsers or allAuthenticatedUsers allows anyone to access the dataset.
@@ -21,4 +22,4 @@ sql: >
                   FROM jsonb_array_elements_text(arr.policy -> 'members_')
                  WHERE value like '%allUsers%' OR value like '%allAuthenticatedUsers%');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

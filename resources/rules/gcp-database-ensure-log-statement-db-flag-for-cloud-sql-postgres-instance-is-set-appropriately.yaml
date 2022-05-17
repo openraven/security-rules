@@ -1,7 +1,8 @@
+id: cfbc750a-48e0-4712-aed0-4abde2dc587c
 # opnrvn-r-123
-ruleId: gcp-database-ensure-log-statement-db-flag-for-cloud-sql-postgres-instance-is-set-appropriately
+refId: gcp-database-ensure-log-statement-db-flag-for-cloud-sql-postgres-instance-is-set-appropriately
 type: asset
-ruleName: >
+name: >
   Ensure 'log_statement' database flag for Cloud SQL PostgreSQL instance is set appropriately
 description: >
   The value of log_statement flag determined the SQL statements that are logged
@@ -20,4 +21,4 @@ sql: >
        WHERE value ->> 'name' = 'log_statement' AND value ->> 'value' = 'ddl'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

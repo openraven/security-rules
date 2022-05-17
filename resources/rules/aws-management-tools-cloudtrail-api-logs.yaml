@@ -1,7 +1,7 @@
-# id: c44e2c04-cc63-466c-bece-e2806b322df9
-ruleId: aws-management-tools-cloudtrail-api-logs
+id: c44e2c04-cc63-466c-bece-e2806b322df9
+refId: aws-management-tools-cloudtrail-api-logs
 type: asset
-ruleName: >
+name: >
   Ensure a log metric filter and alarm exist for changes to network gateways
 description: >
   Real-time monitoring of API calls can be achieved by directing CloudTrail Logs to
@@ -54,4 +54,4 @@ sql: >
        FROM get_topic_subscribers_confirmed
        WHERE subscribers_number = '0');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

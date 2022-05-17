@@ -1,7 +1,7 @@
-# id: 9f16c13c-b9a5-4335-8a08-af3d8c853765
-ruleId: aws-misc-cloud-trail-cloud-watch-logs-and-alarms
+id: 9f16c13c-b9a5-4335-8a08-af3d8c853765
+refId: aws-misc-cloud-trail-cloud-watch-logs-and-alarms
 type: asset
-ruleName: >
+name: >
   Ensure a log metric filter and alarm exist for AWS Management Console authentication failures
 description: >
   Real-time monitoring of API calls can be achieved by directing CloudTrail Logs to
@@ -50,4 +50,4 @@ sql: >
        FROM get_topic_subscribers_confirmed
        WHERE subscribers_number = '0');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

@@ -1,7 +1,8 @@
+id: 84f068c7-7142-4a68-be32-8bd0014a9134
 # opnrvn-r-115
-ruleId: gcp-database-ensure-skip-show-database-db-flag-for-cloud-sql-mysql-instance-is-set-to-on
+refId: gcp-database-ensure-skip-show-database-db-flag-for-cloud-sql-mysql-instance-is-set-to-on
 type: asset
-ruleName: >
+name: >
   Ensure 'skip_show_database' database flag for Cloud SQL Mysql instance is set to 'on'
 description: >
   'skip_show_database' database flag prevents people from using the SHOW DATABASES statement if they do not have the SHOW DATABASES privilege.
@@ -20,4 +21,4 @@ sql: >
        WHERE value ->> 'name' = 'skip_show_database' AND value ->> 'value' = 'on'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

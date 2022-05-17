@@ -1,7 +1,8 @@
+id: cac61a10-2648-430a-98ef-0776d2aabb9b
 # opnrvn-r-77
-ruleId: gcp-storage-buckets-have-uniform-bucket-level-access-enabled
+refId: gcp-storage-buckets-have-uniform-bucket-level-access-enabled
 type: asset
-ruleName: >
+name: >
   Ensure that Cloud Storage buckets have uniform bucket-level access enabled
 description: >
   Cloud Storage has uniform bucket- level access.
@@ -16,4 +17,4 @@ sql: >
      AND configuration -> 'iamConfiguration' ->> 'isUniformBucketLevelAccessEnabled' = 'false'
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

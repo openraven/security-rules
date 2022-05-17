@@ -1,7 +1,7 @@
-# id: 3111574f-4af8-4fac-bd68-839f9f8d6477
-ruleId: gcp-iam-and-security-iam-project-roles
+id: 3111574f-4af8-4fac-bd68-839f9f8d6477
+refId: gcp-iam-and-security-iam-project-roles
 type: asset
-ruleName: >
+name: >
   Ensure that IAM users are not assigned the Service Account User or
   Service Account Token Creator roles at project level
 description: >

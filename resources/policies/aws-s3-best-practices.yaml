@@ -1,11 +1,12 @@
-policyId: aws-s3-best-practices
-policyName: The best security configuration practices for AWS S3 assets.
+id: 1b8c09f0-3acd-4421-8b47-40499b9077c3
+refId: aws-s3-best-practices
+name: The best security configuration practices for AWS S3 assets.
 cloudProvider: AWS
 description: >
   The best security configuration practices for AWS S3 assets.
   Includes every config rule relating to S3.
 enabled: true
-rules:
+ruleIds:
   #  - s3-account-level-public-access-blocks - [to do]
   #  - s3-account-level-public-access-blocks-periodic - [to do]
   #  - s3-bucket-acl-prohibited - [to do]
@@ -23,4 +24,4 @@ rules:
   - aws-storage-s3-versioning-enabled.yaml
   - aws-storage-s3-default-encryption-kms.yaml
 #  - s3-version-lifecycle-policy-check - [to do]
-version: 0.9
+version: 1.0

@@ -1,7 +1,8 @@
+id: 028b31dd-e920-4eb2-a0a1-f5336652673e
 # opnrvn-r-169
-ruleId: aws-database-rds-snapshot-encrypted
+refId: aws-database-rds-snapshot-encrypted
 type: asset
-ruleName: >
+name: >
   Checks whether Amazon Relational Database Service (Amazon RDS) DB snapshots are encrypted.
 description: >
   The rule is NON_COMPLIANT, if the Amazon RDS DB snapshots are not encrypted.
@@ -12,4 +13,4 @@ sql: >
     FROM ${magpie_schema}.awsrdsdbsnapshot
     WHERE configuration->'encrypted' = 'false';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

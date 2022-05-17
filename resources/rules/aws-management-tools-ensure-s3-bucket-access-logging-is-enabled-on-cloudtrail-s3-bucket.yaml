@@ -1,8 +1,8 @@
-# id: 10b14b8e-f19d-4f8e-bcf1-d9a7b701ea59
+id: 10b14b8e-f19d-4f8e-bcf1-d9a7b701ea59
 # opnrvn-r-49
-ruleId: aws-management-tools-ensure-s3-bucket-access-logging-is-enabled-on-cloudtrail-s3-bucket
+refId: aws-management-tools-ensure-s3-bucket-access-logging-is-enabled-on-cloudtrail-s3-bucket
 type: asset
-ruleName: >
+name: >
   Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket
 description: >
   S3 Bucket Access Logging generates a log that contains access records for each request
@@ -24,4 +24,4 @@ sql: >
          AND s3bucket.supplementaryconfiguration->'BucketLoggingConfiguration'->'loggingEnabled' != 'null');
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

@@ -1,7 +1,8 @@
+id: 95f64510-d07c-44c9-a763-9fba1897577e
 # opnrvn-r-135
-ruleId: gcp-database-ensure-user-connections-db-flag-for-cloud-sql-server-instances-is-set-as-appropriate
+refId: gcp-database-ensure-user-connections-db-flag-for-cloud-sql-server-instances-is-set-as-appropriate
 type: asset
-ruleName: >
+name: >
   Ensure 'user connections' database flag for Cloud SQL SQL Server instance is set as appropriate
 description: >
   The user connections option specifies the maximum number of simultaneous user connections that are allowed on an instance of SQL Server.
@@ -15,4 +16,4 @@ manualControl: true # Appropriate value should be defined by organisation policy
 severity: medium
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

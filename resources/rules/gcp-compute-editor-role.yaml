@@ -1,6 +1,7 @@
-ruleId: gcp-compute-editor-role
+id: bdc8ebf8-a8a1-47fb-9171-1d4e2d0880f1
+refId: gcp-compute-editor-role
 type: asset
-ruleName: >
+name: >
   Ensure that instances are not configured to use the default service account
 description: >
   The default Compute Engine service account has the Editor role on the project, which allows read and write access to most Google Cloud Services.
@@ -19,4 +20,4 @@ sql: >
     WHERE acc.resourcetype = 'GCP::ComputeEngine::Instance'
     AND inst ->> 'email' ILIKE '%compute@developer.gserviceaccount.com%'
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

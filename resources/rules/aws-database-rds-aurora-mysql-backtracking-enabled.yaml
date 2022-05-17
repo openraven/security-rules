@@ -1,6 +1,7 @@
-ruleId: aws-database-rds-aurora-mysql-backtracking-enabled
+id: 09755222-9335-407d-9ae9-8de864286032
+refId: aws-database-rds-aurora-mysql-backtracking-enabled
 type: asset
-ruleName: >
+name: >
   Ensure Aurora MySQL databases have backtracking enabled
 description: >
   Checks if Aurora MySQL databases have backtracking enabled. The rule is NON_COMPLIANT if the database cluster uses MySQL and does not have backtracking enabled.
@@ -12,4 +13,4 @@ sql: >
   WHERE EXISTS (SELECT * FROM jsonb_array_elements(supplementaryconfiguration->'dbClusters'->'dbClusters') dbClusters
   WHERE dbClusters ->'backtrackWindow' = 'null');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

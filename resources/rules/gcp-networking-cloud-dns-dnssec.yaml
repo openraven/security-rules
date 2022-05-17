@@ -1,6 +1,7 @@
-ruleId: gcp-networking-cloud-dns-dnssec
+id: 6358bd0b-1930-4947-b5a8-734e3a8f5f5c
+refId: gcp-networking-cloud-dns-dnssec
 type: asset
-ruleName: >
+name: >
   Ensure that DNSSEC is enabled for Cloud DNS
 description: >
   Domain Name System Security Extensions (DNSSEC) adds security to the DNS protocol by enabling DNS responses to be validated.
@@ -17,4 +18,4 @@ sql: >
      AND acc.configuration -> 'dnsSecConfig' ->> 'state' = 'off'
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

@@ -1,8 +1,8 @@
-# id: 6afd0338-43c7-48ce-9c28-a9ca2c2796df
+id: 6afd0338-43c7-48ce-9c28-a9ca2c2796df
 # opnrvn-r-39
-ruleId: aws-iam-and-security-ensure-mfa-enabled-for-root-account
+refId: aws-iam-and-security-ensure-mfa-enabled-for-root-account
 type: asset
-ruleName: >
+name: >
   Ensure MFA is enabled for the "root" account
 description: >
   The root account is the most privileged user in an AWS account. MFA adds an extra layer of
@@ -18,4 +18,4 @@ sql: >
     AND configuration->>'AccountMFAEnabled' != '1';
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

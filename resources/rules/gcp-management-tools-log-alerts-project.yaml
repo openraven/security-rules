@@ -1,6 +1,7 @@
-ruleId: gcp-management-tools-log-alerts-project
+id: a33e03e3-d53f-4f76-802b-96274a475bec
+refId: gcp-management-tools-log-alerts-project
 type: asset
-ruleName: >
+name: >
   Ensure log metric filter and alerts exist for project ownership assignments/changes
 description: >
   In order to prevent unnecessary project ownership assignments to users/service-accounts and further misuses of projects and resources,
@@ -27,4 +28,4 @@ sql: >
          )
   )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

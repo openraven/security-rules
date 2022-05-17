@@ -1,11 +1,11 @@
-# id: 3b08bd0c-d0c6-429f-b5c6-b155786f2966
-policyId: aws-ransomware-recovery
-policyName: AWS Ransomware Recovery
+id: c8f4d501-3358-49fc-9260-9943efc9e654
+refId: aws-ransomware-recovery
+name: AWS Ransomware Recovery
 cloudProvider: AWS
 description: >
   The AWS Ransomware Recovery policy analyzes accounts for logging and backup configurations to determine if it would be possible to understand what happened in an attack and to adequately restore if compromised.
 enabled: true
-rules:
+ruleIds:
 # rules for logging
   - aws-management-tools-ensure-s3-bucket-access-logging-is-enabled-on-cloudtrail-s3-bucket.yaml
   - aws-management-tools-cloudtrail-cloudwatch-logs-enabled.yaml
@@ -27,4 +27,4 @@ rules:
   - aws-management-tools-cloudtrail-vpc-changes
 # rules for backup (to be added)
 
-version: 0.9
+version: 1.0

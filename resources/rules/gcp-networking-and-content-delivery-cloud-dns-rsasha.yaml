@@ -1,6 +1,7 @@
-ruleId: gcp-networking-and-content-delivery-cloud-dns-rsasha
+id: 7a067ef8-3c8f-4a27-bd95-971db8e1c6d6
+refId: gcp-networking-and-content-delivery-cloud-dns-rsasha
 type: asset
-ruleName: >
+name: >
   Ensure that RSASHA1 is not used for the zone-signing key in Cloud DNS DNSSEC
 description: >
   DNSSEC algorithm numbers in this registry may be used in CERT RRs.
@@ -20,4 +21,4 @@ sql: >
      AND arr.keyType = 'zoneSigning'
      AND lower(arr.alg) = 'rsasha1';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

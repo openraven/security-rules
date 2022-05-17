@@ -1,7 +1,8 @@
+id: 5292860b-98d3-4a2a-8c2f-a58e40850683
 # opnrvn-r-83
-ruleId: gcp-network-and-content-delivery-ensure-ssh-access-is-restricted-from-the-internet
+refId: gcp-network-and-content-delivery-ensure-ssh-access-is-restricted-from-the-internet
 type: asset
-ruleName: >
+name: >
   Ensure that SSH access is restricted from the Internet
 description: >
   To have outgoing Internet access, the network must have a valid Internet gateway route or custom route whose destination IP is specified.
@@ -32,4 +33,4 @@ sql: >
   AND (allwd.ports[1] = '22' OR allwd.ports is null OR ('22' BETWEEN allwd.ports[1] AND allwd.ports[2]))
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

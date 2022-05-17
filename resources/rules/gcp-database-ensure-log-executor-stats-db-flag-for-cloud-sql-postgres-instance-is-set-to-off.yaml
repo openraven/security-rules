@@ -1,7 +1,8 @@
+id: bacfb48f-ac5a-49f2-b829-aabb5328680b
 # opnrvn-r-127
-ruleId: gcp-database-ensure-log-executor-stats-db-flag-for-cloud-sql-postgres-instance-is-set-to-off
+refId: gcp-database-ensure-log-executor-stats-db-flag-for-cloud-sql-postgres-instance-is-set-to-off
 type: asset
-ruleName: >
+name: >
   Ensure 'log_executor_stats' database flag for Cloud SQL PostgreSQL instance is set to 'off'
 description: >
   The log_executor_stats flag enables a crude profiling method for logging PostgreSQL executor performance statistics
@@ -20,4 +21,4 @@ sql: >
        WHERE value ->> 'name' = 'log_executor_stats' AND value ->> 'value' = 'off'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

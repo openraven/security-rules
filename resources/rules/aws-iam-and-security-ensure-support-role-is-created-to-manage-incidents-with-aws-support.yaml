@@ -1,8 +1,8 @@
-# id: 736137b1-565d-4615-9557-4c4c9749fe70
+id: 736137b1-565d-4615-9557-4c4c9749fe70
 # opnrvn-r-59
-ruleId: aws-iam-and-security-ensure-support-role-is-created-to-manage-incidents-with-aws-support
+refId: aws-iam-and-security-ensure-support-role-is-created-to-manage-incidents-with-aws-support
 type: asset
-ruleName: >
+name: >
   Ensure a support role has been created to manage incidents with AWS Support
 description: >
   AWS provides a support center that can be used for incident notification and response, as
@@ -18,4 +18,4 @@ sql: >
     AND configuration->>'attachmentCount' = '0';
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

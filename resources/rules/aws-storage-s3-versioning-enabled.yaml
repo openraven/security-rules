@@ -1,6 +1,7 @@
-ruleId: aws-storage-s3-versioning-enabled
+id: 4fe162ef-a1dc-43d9-a3fd-44fdf8f4812b
+refId: aws-storage-s3-versioning-enabled
 type: asset
-ruleName: >
+name: >
   Checks if versioning is enabled for your S3 buckets. Optionally, the rule checks if MFA delete is enabled for your S3 buckets.
 description: >
   Checks if versioning is enabled for your S3 buckets. Optionally, the rule checks if MFA delete is enabled for your S3 buckets.
@@ -14,4 +15,4 @@ sql: >
   OR
   supplementaryconfiguration->'Versioning'->>'status' != 'Enabled');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

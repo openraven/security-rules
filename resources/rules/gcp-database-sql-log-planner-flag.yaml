@@ -1,6 +1,7 @@
-ruleId: gcp-database-sql-log-planner-flag
+id: ac8c38e5-9259-4154-a6ad-48fa663cbfe8
+refId: gcp-database-sql-log-planner-flag
 type: asset
-ruleName: >
+name: >
   Ensure 'log_planner_stats' database flag for Cloud SQL PostgreSQL instance is set to 'off'
 description: >
   The log_planner_stats flag enables a crude profiling method for logging PostgreSQL planner performance statistics
@@ -19,4 +20,4 @@ sql: >
        WHERE value ->> 'name' = 'log_planner_stats' AND value ->> 'value' = 'off'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

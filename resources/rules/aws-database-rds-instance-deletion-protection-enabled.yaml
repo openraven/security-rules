@@ -1,7 +1,8 @@
+id: 5ccb4db3-3c59-4efc-963f-0752919d4a34
 # opnrvn-r-156
-ruleId: aws-database-rds-instance-deletion-protection-enabled
+refId: aws-database-rds-instance-deletion-protection-enabled
 type: asset
-ruleName: >
+name: >
   Checks if an Amazon Relational Database Service (Amazon RDS) instance has deletion protection enabled.
 description: >
   This rule is NON_COMPLIANT if an Amazon RDS instance does not
@@ -13,4 +14,4 @@ sql: >
   FROM ${magpie_schema}.awsrdsdbinstance
   WHERE (configuration->'deletionProtection' = 'false');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

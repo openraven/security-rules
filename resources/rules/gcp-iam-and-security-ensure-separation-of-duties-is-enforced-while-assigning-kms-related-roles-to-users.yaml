@@ -1,7 +1,8 @@
+id: 5d8ef213-468f-4a15-8bbf-ab61e0f83cca
 # opnrvn-r-71
-ruleId: gcp-iam-and-security-ensure-separation-of-duties-is-enforced-while-assigning-kms-related-roles-to-users
+refId: gcp-iam-and-security-ensure-separation-of-duties-is-enforced-while-assigning-kms-related-roles-to-users
 type: asset
-ruleName: >
+name: >
   Ensure that Separation of duties is enforced while assigning KMS related roles to users
 description: >
   Separation of duties is the concept of ensuring that one individual does not have all necessary permissions to be able to complete a malicious action.
@@ -18,4 +19,4 @@ sql: >
   WHERE acc.resourcetype = 'GCP::ResourceManager::Project'
     AND roles ilike '%cloudkms.admin%'
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

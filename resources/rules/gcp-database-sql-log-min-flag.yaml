@@ -1,6 +1,7 @@
-ruleId: gcp-database-sql-log-min-flag
+id: e3aa8bc6-3ccb-4081-ab64-4cd158841779
+refId: gcp-database-sql-log-min-flag
 type: asset
-ruleName: >
+name: >
   Ensure that the 'log_min_duration_statement' database flag for Cloud SQL PostgreSQL instance is set to '-1' (disabled)
 description: >
   The log_min_duration_statement flag defines the minimum amount of execution time of a statement in milliseconds
@@ -21,4 +22,4 @@ sql: >
        WHERE value ->> 'name' = 'log_min_duration_statement' AND value ->> 'value' = '-1'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

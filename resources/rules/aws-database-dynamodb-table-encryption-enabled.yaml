@@ -1,7 +1,8 @@
+id: 1465c6dd-47c1-4261-90ad-4d7b01e94c8a
 # opnrvn-r-167
-ruleId: aws-database-dynamodb-table-encryption-enabled
+refId: aws-database-dynamodb-table-encryption-enabled
 type: asset
-ruleName: >
+name: >
   Checks if the Amazon DynamoDB tables are encrypted and checks their status.
 description: >
   The rule is COMPLIANT if the status is enabled or enabling.
@@ -15,4 +16,4 @@ sql: >
   FROM ${magpie_schema}.awsdynamodbtable
   WHERE documentid = 'null';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

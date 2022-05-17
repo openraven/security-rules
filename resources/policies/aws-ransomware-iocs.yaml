@@ -1,10 +1,10 @@
-# id: 8b075bf8-0804-46d0-8255-13c1cb89587d
-policyId: aws-ransomware-iocs
-policyName: AWS Ransomware Indicators of Compromise
+id: 8b075bf8-0804-46d0-8255-13c1cb89587d
+refId: aws-ransomware-iocs
+name: AWS Ransomware Indicators of Compromise
 cloudProvider: AWS
 description: >
   The AWS Ransomware Indicators of Compromise policy analyzes accounts for signs that a ransomware attack has already taken place.
 enabled: true
-rules:
+ruleIds:
   - aws-storage-s3-bucket-deny-overriding-of-default-kms-key-encryption.yaml
-version: 0.9
+version: 1.0

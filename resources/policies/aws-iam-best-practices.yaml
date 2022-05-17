@@ -1,11 +1,12 @@
-policyId: aws-iam-best-practices
-policyName: The best security configuration practices for AWS IAM assets.
+id: 6b699df5-6844-4041-9f9e-186e7d010360
+refId: aws-iam-best-practices
+name: The best security configuration practices for AWS IAM assets.
 cloudProvider: AWS
 description: >
   The best security configuration practices for AWS IAM assets.
   Includes every config rule relating to IAM.
 enabled: true
-rules:
+ruleIds:
   #  - iam-customer-policy-blocked-kms-actions - [to do]
   #  - iam-group-has-users-check - [to do]
   #  - iam-inline-policy-blocked-kms-actions - [to do]
@@ -27,4 +28,4 @@ rules:
   - aws-iam-and-security-iam-user-mfa-enabled.yaml
   - aws-iam-and-security-iam-user-no-policies-check.yaml
   - aws-iam-and-security-iam-user-unused-credentials-check.yaml
-version: 0.9
+version: 1.0

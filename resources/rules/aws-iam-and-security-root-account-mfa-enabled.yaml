@@ -1,8 +1,8 @@
-# id: 7eb61098-a7d4-4929-a496-41130c54cd12
+id: 7eb61098-a7d4-4929-a496-41130c54cd12
 # opnrvn-r-12
-ruleId: aws-iam-and-security-root-account-mfa-enabled
+refId: aws-iam-and-security-root-account-mfa-enabled
 type: asset
-ruleName: >
+name: >
   Ensure hardware MFA is enabled for the "root" account
 description: >
   The root account is the most privileged user in an AWS account. MFA adds an extra layer of
@@ -21,4 +21,4 @@ sql: >
                       = concat('arn:aws:iam::', awsaccountid, ':mfa/root-account-mfa-device'))));
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

@@ -1,8 +1,8 @@
-# id: 2a66998e-64c2-4ce7-9bf4-c667f06d1efb
+id: 2a66998e-64c2-4ce7-9bf4-c667f06d1efb
 # opnrvn-r-57
-ruleId: aws-management-tools-securityhub-enabled-for-required-region
+refId: aws-management-tools-securityhub-enabled-for-required-region
 type: asset
-ruleName: >
+name: >
   Ensure that SecurityHub enabled for required region
 description: >
   AWS Security Hub gives you a comprehensive view of your security alerts and security posture across your AWS accounts.
@@ -22,4 +22,4 @@ sql: >
   WHERE awsregion is null
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

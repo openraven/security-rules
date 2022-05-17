@@ -1,7 +1,8 @@
+id: 01f33903-cea8-43ad-aa00-ed594b6a81da
 # opnrvn-r-159
-ruleId: aws-database-rds-instance-iam-authentication-enabled
+refId: aws-database-rds-instance-iam-authentication-enabled
 type: asset
-ruleName: >
+name: >
   Ensure IAM is enabled for RDS instances
 description: >
   Checks if an Amazon Relational Database Service (Amazon RDS) instance has AWS Identity and Access Management (IAM) authentication enabled.
@@ -12,4 +13,4 @@ sql: >
   FROM ${magpie_schema}.awsrdsdbinstance
   WHERE (configuration -> 'iamDatabaseAuthenticationEnabled' = 'false');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

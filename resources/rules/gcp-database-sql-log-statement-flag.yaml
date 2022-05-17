@@ -1,6 +1,7 @@
-ruleId: gcp-database-sql-log-statement-flag
+id: a8cb700d-7651-4f97-8124-bf42e6a6c8b9
+refId: gcp-database-sql-log-statement-flag
 type: asset
-ruleName: >
+name: >
   Ensure 'log_statement_stats' database flag for Cloud SQL PostgreSQL instance is set to 'off'
 description: >
   The log_statement_stats flag enables a crude profiling method for logging end to end performance statistics of a SQL query.
@@ -19,4 +20,4 @@ sql: >
        WHERE value ->> 'name' = 'log_statement_stats' AND value ->> 'value' = 'off'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

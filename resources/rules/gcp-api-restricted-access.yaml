@@ -1,6 +1,7 @@
-ruleId: gcp-api-restricted-access
+id: 4094844d-b1ec-4e9b-a0df-ba61eddab829
+refId: gcp-api-restricted-access
 type: asset
-ruleName: >
+name: >
   Ensure API keys are restricted to only APIs that application needs access
 description: >
   Security risks involved in using API-Keys appear below:
@@ -14,4 +15,4 @@ manualControl: true
 severity: high
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

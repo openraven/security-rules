@@ -1,6 +1,7 @@
-ruleId: aws-database-rds-cluster-multi-az-enabled
+id: 4f87ef85-dda9-49ac-af32-639639eaa7e9
+refId: aws-database-rds-cluster-multi-az-enabled
 type: asset
-ruleName: >
+name: >
   Ensure Multi-AZ replication is enabled.
 description: >
   Checks if Multi-AZ replication is enabled on Amazon Aurora clusters managed by Amazon Relational Database Service (Amazon RDS).
@@ -12,4 +13,4 @@ sql: >
   WHERE EXISTS (SELECT * FROM jsonb_array_elements(supplementaryconfiguration->'dbClusters'->'dbClusters') dbClusters
   WHERE dbClusters ->>'multiAZ' = 'false');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

@@ -1,8 +1,8 @@
-#id: 1143f21f-c10a-4c37-8c78-3f442848a0bf
+id: 1143f21f-c10a-4c37-8c78-3f442848a0bf
 # opnrvn-r-27
-ruleId: aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-cloudtrail-config-changes
+refId: aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-cloudtrail-config-changes
 type: asset
-ruleName: >
+name: >
   Ensure a log metric filter and alarm exist for CloudTrail configuration changes
 description: >
   Real-time monitoring of API calls can be achieved by directing CloudTrail Logs to
@@ -54,4 +54,4 @@ sql: >
        FROM get_topic_subscribers_confirmed
        WHERE subscribers_number = '0');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

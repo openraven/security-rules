@@ -1,7 +1,8 @@
+id: e7e0e5ab-3fd0-4a8e-b505-f791f0e499ee
 # opnrvn-r-103
-ruleId: gcp-management-tools-ensure-the-log-metric-filter-and-alerts-exist-for-audit-config-changes
+refId: gcp-management-tools-ensure-the-log-metric-filter-and-alerts-exist-for-audit-config-changes
 type: asset
-ruleName: >
+name: >
   Ensure that the log metric filter and alerts exist for Audit Configuration changes
 description: >
   Admin activity and data access logs produced by cloud audit logging enable security analysis, resource change tracking, and compliance auditing.
@@ -30,4 +31,4 @@ sql: >
          )
   )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0
