@@ -25,7 +25,7 @@ sql: >
     (SELECT arn AS arn2,
             CAST(${magpie_schema}.awsiampolicy.supplementaryconfiguration->'attachedPolicies'->>'policyDocument' as JSONB) ->'Statement' AS statement2
      FROM ${magpie_schema}.awsiampolicy
-       AND jsonb_typeof(CAST(assets.supplementary_configuration->'attachedPolicies'->>'policyDocument' AS JSONB) -> 'Statement') = 'object' ) single_statement_policies ON ${magpie_schema}.awsiampolicy.arn = single_statement_policies.arn2
+       WHERE jsonb_typeof(CAST(assets.supplementary_configuration->'attachedPolicies'->>'policyDocument' AS JSONB) -> 'Statement') = 'object' ) single_statement_policies ON ${magpie_schema}.awsiampolicy.arn = single_statement_policies.arn2
   WHERE resourcetype = 'AWS::IAM::Policy'
     AND ((statement1->>'Effect' = 'Allow'
           AND statement1->>'Action' = '*'
