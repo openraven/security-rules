@@ -1,0 +1,14 @@
+ruleId: aws-compute-ec2-instances-in-vpc
+type: asset
+ruleName: >
+  Checks if your EC2 instances belong to a virtual private cloud (VPC)
+description: >
+  Checks if your EC2 instances belong to a virtual private cloud (VPC).
+severity: high
+enabled: true
+sql: >
+  SELECT arn
+  FROM ${magpie_schema}.awsec2instance
+  WHERE configuration->'vpcId' = 'null';
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9

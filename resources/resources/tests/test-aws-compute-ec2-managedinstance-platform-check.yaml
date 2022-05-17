@@ -1,0 +1,345 @@
+ruleId: aws-compute-ec2-managedinstance-platform-check
+cloudProvider: aws
+description: >
+  Insecure assets have no platform selected.
+  Secure assets have a platform selected.
+insecureAssets:
+  noplat: >
+    [ {
+      "documentId" : "7eLBrBRnMF6USyRV9lyVnw",
+      "arn" : "noplat",
+      "resourceName" : "i-059d8ae6265b570a9",
+      "resourceId" : "i-059d8ae6265b570a9",
+      "resourceType" : "AWS::EC2::Instance",
+      "awsRegion" : "us-east-2",
+      "awsAccountId" : "00000000000",
+      "createdIso" : "2021-11-12T18:17:41Z",
+      "updatedIso" : "2022-05-17T13:46:10.592550Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "amiLaunchIndex" : 0,
+        "imageId" : "ami-04781752c9b20ea41",
+        "instanceId" : "i-059d8ae6265b570a9",
+        "instanceType" : "t2.micro",
+        "kernelId" : null,
+        "keyName" : "rteam-chetan",
+        "launchTime" : "2021-11-12T18:17:41Z",
+        "monitoring" : {
+          "state" : "disabled"
+        },
+        "placement" : {
+          "availabilityZone" : "us-east-2c",
+          "affinity" : null,
+          "groupName" : "",
+          "partitionNumber" : null,
+          "hostId" : null,
+          "tenancy" : "default",
+          "spreadDomain" : null,
+          "hostResourceGroupArn" : null
+        },
+        "platform" : null,
+        "privateDnsName" : "ip-172-31-38-76.us-east-2.compute.internal",
+        "privateIpAddress" : "172.31.38.76",
+        "productCodes" : [ ],
+        "publicDnsName" : "",
+        "publicIpAddress" : null,
+        "ramdiskId" : null,
+        "state" : {
+          "code" : 80,
+          "name" : "stopped"
+        },
+        "stateTransitionReason" : "User initiated (2021-11-12 18:31:08 GMT)",
+        "subnetId" : "subnet-7a198036",
+        "vpcId" : "vpc-6487540f",
+        "architecture" : "x86_64",
+        "blockDeviceMappings" : [ {
+          "deviceName" : "/dev/sda1",
+          "ebs" : {
+            "attachTime" : "2020-07-23T12:49:20Z",
+            "deleteOnTermination" : true,
+            "status" : "attached",
+            "volumeId" : "vol-000c31bd7e045d39b"
+          }
+        } ],
+        "clientToken" : "",
+        "ebsOptimized" : false,
+        "enaSupport" : true,
+        "hypervisor" : "xen",
+        "iamInstanceProfile" : null,
+        "instanceLifecycle" : null,
+        "elasticGpuAssociations" : null,
+        "elasticInferenceAcceleratorAssociations" : null,
+        "networkInterfaces" : [ {
+          "association" : null,
+          "attachment" : {
+            "attachTime" : "2020-07-23T12:49:19Z",
+            "attachmentId" : "eni-attach-05c87b42383f77a70",
+            "deleteOnTermination" : true,
+            "deviceIndex" : 0,
+            "status" : "attached",
+            "networkCardIndex" : 0
+          },
+          "description" : "",
+          "groups" : [ {
+            "groupName" : "Private-DMAP-T100",
+            "groupId" : "sg-0320abd8aeb0ae618"
+          } ],
+          "ipv6Addresses" : [ ],
+          "macAddress" : "0a:c2:e6:e7:67:20",
+          "networkInterfaceId" : "eni-07baeabb997d1c437",
+          "ownerId" : "00000000000",
+          "privateDnsName" : "ip-172-31-38-76.us-east-2.compute.internal",
+          "privateIpAddress" : "172.31.38.76",
+          "privateIpAddresses" : [ {
+            "association" : null,
+            "primary" : true,
+            "privateDnsName" : "ip-172-31-38-76.us-east-2.compute.internal",
+            "privateIpAddress" : "172.31.38.76"
+          } ],
+          "sourceDestCheck" : true,
+          "status" : "in-use",
+          "subnetId" : "subnet-7a198036",
+          "vpcId" : "vpc-6487540f",
+          "interfaceType" : "interface",
+          "ipv4Prefixes" : null,
+          "ipv6Prefixes" : null
+        } ],
+        "outpostArn" : null,
+        "rootDeviceName" : "/dev/sda1",
+        "rootDeviceType" : "ebs",
+        "securityGroups" : [ {
+          "groupName" : "Private-DMAP-T100",
+          "groupId" : "sg-0320abd8aeb0ae618"
+        } ],
+        "sourceDestCheck" : true,
+        "spotInstanceRequestId" : null,
+        "sriovNetSupport" : null,
+        "stateReason" : {
+          "code" : "Client.UserInitiatedShutdown",
+          "message" : "Client.UserInitiatedShutdown: User initiated shutdown"
+        },
+        "tags" : [ {
+          "key" : "app_name",
+          "value" : "Hazelcast"
+        }, {
+          "key" : "Name",
+          "value" : "Hazelcast_4.0.0"
+        }, {
+          "key" : "port",
+          "value" : "5701, 5702, 8080"
+        }, {
+          "key" : "app_version",
+          "value" : "4.0.0"
+        } ],
+        "virtualizationType" : "hvm",
+        "cpuOptions" : {
+          "coreCount" : 1,
+          "threadsPerCore" : 1
+        },
+        "capacityReservationId" : null,
+        "capacityReservationSpecification" : {
+          "capacityReservationPreference" : "open",
+          "capacityReservationTarget" : null
+        },
+        "hibernationOptions" : {
+          "configured" : false
+        },
+        "licenses" : null,
+        "metadataOptions" : {
+          "state" : "applied",
+          "httpTokens" : "optional",
+          "httpPutResponseHopLimit" : 1,
+          "httpEndpoint" : "enabled",
+          "httpProtocolIpv6" : null
+        },
+        "enclaveOptions" : {
+          "enabled" : false
+        },
+        "bootMode" : null,
+        "platformDetails" : "Linux/UNIX",
+        "usageOperation" : "RunInstances",
+        "usageOperationUpdateTime" : "2020-07-23T12:49:19Z",
+        "privateDnsNameOptions" : {
+          "hostnameType" : null,
+          "enableResourceNameDnsARecord" : null,
+          "enableResourceNameDnsAAAARecord" : null
+        },
+        "ipv6Address" : null
+      },
+      "supplementaryConfiguration" : {
+        "awsBackupJobs" : [ ]
+      },
+      "tags" : {
+        "app_name" : "Hazelcast",
+        "app_version" : "4.0.0",
+        "port" : "5701, 5702, 8080",
+        "Name" : "Hazelcast_4.0.0"
+      },
+      "discoveryMeta" : { }
+    }]
+secureAssets:
+  plat: >
+    [ {
+        "documentId" : "6bKUvPD_Mp-FRSIOBAUUpA",
+        "arn" : "plat",
+        "resourceName" : "i-0f84533d53649f6fa",
+        "resourceId" : "i-0f84533d53649f6fa",
+        "resourceType" : "AWS::EC2::Instance",
+        "awsRegion" : "us-east-2",
+        "awsAccountId" : "00000000000",
+        "createdIso" : "2020-08-19T07:38:02Z",
+        "updatedIso" : "2022-05-17T13:46:28.174864Z",
+        "discoverySessionId" : null,
+        "maxSizeInBytes" : null,
+        "sizeInBytes" : null,
+        "configuration" : {
+          "amiLaunchIndex" : 0,
+          "imageId" : "ami-00133f78ad56a5c91",
+          "instanceId" : "i-0f84533d53649f6fa",
+          "instanceType" : "t2.micro",
+          "kernelId" : null,
+          "keyName" : "rteam-parag",
+          "launchTime" : "2020-08-19T07:38:02Z",
+          "monitoring" : {
+            "state" : "disabled"
+          },
+          "placement" : {
+            "availabilityZone" : "us-east-2b",
+            "affinity" : null,
+            "groupName" : "",
+            "partitionNumber" : null,
+            "hostId" : null,
+            "tenancy" : "default",
+            "spreadDomain" : null,
+            "hostResourceGroupArn" : null
+          },
+          "platform" : "windows",
+          "privateDnsName" : "ip-172-31-26-26.us-east-2.compute.internal",
+          "privateIpAddress" : "172.31.26.26",
+          "productCodes" : [ ],
+          "publicDnsName" : "",
+          "publicIpAddress" : null,
+          "ramdiskId" : null,
+          "state" : {
+            "code" : 80,
+            "name" : "stopped"
+          },
+          "stateTransitionReason" : "User initiated (2020-08-25 16:04:54 GMT)",
+          "subnetId" : "subnet-970130ed",
+          "vpcId" : "vpc-6487540f",
+          "architecture" : "x86_64",
+          "blockDeviceMappings" : [ {
+            "deviceName" : "/dev/sda1",
+            "ebs" : {
+              "attachTime" : "2020-08-19T07:38:03Z",
+              "deleteOnTermination" : true,
+              "status" : "attached",
+              "volumeId" : "vol-083ec02add94f63cf"
+            }
+          } ],
+          "clientToken" : "",
+          "ebsOptimized" : false,
+          "enaSupport" : true,
+          "hypervisor" : "xen",
+          "iamInstanceProfile" : null,
+          "instanceLifecycle" : null,
+          "elasticGpuAssociations" : null,
+          "elasticInferenceAcceleratorAssociations" : null,
+          "networkInterfaces" : [ {
+            "association" : null,
+            "attachment" : {
+              "attachTime" : "2020-08-19T07:38:02Z",
+              "attachmentId" : "eni-attach-0dce258962314165e",
+              "deleteOnTermination" : true,
+              "deviceIndex" : 0,
+              "status" : "attached",
+              "networkCardIndex" : 0
+            },
+            "description" : "",
+            "groups" : [ {
+              "groupName" : "nmap-nc-telnet-client-workstation-only",
+              "groupId" : "sg-0acf626d3df96da7c"
+            } ],
+            "ipv6Addresses" : [ ],
+            "macAddress" : "06:ce:7e:ae:99:10",
+            "networkInterfaceId" : "eni-0738d20df8b984c1c",
+            "ownerId" : "00000000000",
+            "privateDnsName" : "ip-172-31-26-26.us-east-2.compute.internal",
+            "privateIpAddress" : "172.31.26.26",
+            "privateIpAddresses" : [ {
+              "association" : null,
+              "primary" : true,
+              "privateDnsName" : "ip-172-31-26-26.us-east-2.compute.internal",
+              "privateIpAddress" : "172.31.26.26"
+            } ],
+            "sourceDestCheck" : true,
+            "status" : "in-use",
+            "subnetId" : "subnet-970130ed",
+            "vpcId" : "vpc-6487540f",
+            "interfaceType" : "interface",
+            "ipv4Prefixes" : null,
+            "ipv6Prefixes" : null
+          } ],
+          "outpostArn" : null,
+          "rootDeviceName" : "/dev/sda1",
+          "rootDeviceType" : "ebs",
+          "securityGroups" : [ {
+            "groupName" : "nmap-nc-telnet-client-workstation-only",
+            "groupId" : "sg-0acf626d3df96da7c"
+          } ],
+          "sourceDestCheck" : true,
+          "spotInstanceRequestId" : null,
+          "sriovNetSupport" : null,
+          "stateReason" : {
+            "code" : "Client.UserInitiatedShutdown",
+            "message" : "Client.UserInitiatedShutdown: User initiated shutdown"
+          },
+          "tags" : [ {
+            "key" : "Name",
+            "value" : "Parag_Windows_DMZ"
+          } ],
+          "virtualizationType" : "hvm",
+          "cpuOptions" : {
+            "coreCount" : 1,
+            "threadsPerCore" : 1
+          },
+          "capacityReservationId" : null,
+          "capacityReservationSpecification" : {
+            "capacityReservationPreference" : "open",
+            "capacityReservationTarget" : null
+          },
+          "hibernationOptions" : {
+            "configured" : false
+          },
+          "licenses" : null,
+          "metadataOptions" : {
+            "state" : "applied",
+            "httpTokens" : "optional",
+            "httpPutResponseHopLimit" : 1,
+            "httpEndpoint" : "enabled",
+            "httpProtocolIpv6" : "disabled"
+          },
+          "enclaveOptions" : {
+            "enabled" : false
+          },
+          "bootMode" : null,
+          "platformDetails" : "Windows",
+          "usageOperation" : "RunInstances:0002",
+          "usageOperationUpdateTime" : "2020-08-19T07:38:02Z",
+          "privateDnsNameOptions" : {
+            "hostnameType" : null,
+            "enableResourceNameDnsARecord" : null,
+            "enableResourceNameDnsAAAARecord" : null
+          },
+          "ipv6Address" : null
+        },
+        "supplementaryConfiguration" : {
+          "awsBackupJobs" : [ ]
+        },
+        "tags" : {
+          "Name" : "Parag_Windows_DMZ"
+        },
+        "discoveryMeta" : { }
+      }]
