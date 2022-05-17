@@ -11,8 +11,7 @@ enabled: true
 sql: >
   SELECT arn
   FROM ${magpie_schema}.awswatchalarm
-  WHERE resourcetype = 'AWS::CloudWatch::Alarm'
-    AND (configuration -> 'actionsEnabled' = 'false'
+    WHERE (configuration -> 'actionsEnabled' = 'false'
     AND configuration -> 'insuffiecientDataActions' = '[]'
     AND configuration -> 'okActions' = '[]')
     OR (configuration -> 'actionsEnabled' = 'true') AND (configuration -> 'alarmActions' = '[]');

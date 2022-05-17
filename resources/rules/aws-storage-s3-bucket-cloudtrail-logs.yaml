@@ -17,9 +17,7 @@ sql: >
         jsonb_array_elements(buckets.supplementaryconfiguration->'BucketACLConfiguration'->'grants') AS bucket_grants,
         CAST((buckets.supplementaryconfiguration->>'BucketPolicy') as JSONB) as bucket_policy
     FROM ${magpie_schema}.awscloudtrailtrail trails, ${magpie_schema}.awscloudtrailtrail buckets
-    WHERE trails.resourcetype = 'AWS::CloudTrail::Trail' AND
-      buckets.resourcetype = 'AWS::S3::Bucket' AND
-      trails.supplementaryconfiguration->'trailDetails'->'trail'->>'s3BucketName' = buckets.resourcename
+    WHERE trails.supplementaryconfiguration->'trailDetails'->'trail'->>'s3BucketName' = buckets.resourcename
   ),
   check_buckets_grantee_uri AS (
     SELECT arn

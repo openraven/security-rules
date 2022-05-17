@@ -18,8 +18,7 @@ sql: >
         SELECT value AS ssec
         FROM jsonb_array_elements(s3bucket.supplementaryconfiguration -> 'ServerSideEncryptionConfiguration' -> 'rules')
     ) arr
-    WHERE s3bucket.resourcetype = 'AWS::S3::Bucket'
-      AND arr.ssec -> 'applyServerSideEncryptionByDefault' ->> 'sseAlgorithm' = 'aws:kms'
+      WHERE arr.ssec -> 'applyServerSideEncryptionByDefault' ->> 'sseAlgorithm' = 'aws:kms'
       AND arr.ssec -> 'applyServerSideEncryptionByDefault' ->> 'kmsMasterKeyID' NOT LIKE '%:'||s3bucket.awsaccountid||':%'
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

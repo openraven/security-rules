@@ -17,10 +17,8 @@ sql: >
       FROM jsonb_array_elements(configuration -> 'blockDeviceMappings')
   ) arr
   LEFT JOIN ${magpie_schema}.awsec2snapshot snap
-  ON (snap.resourcetype = 'AWS::EC2::Snapshot'
-      AND arr.ebs_device ->> 'volumeId' = snap.configuration ->> 'volumeId')
-  WHERE ec2.resourcetype = 'AWS::EC2::Instance'
-  AND ec2.configuration -> 'state' ->> 'name' = 'running'
+  ON (arr.ebs_device ->> 'volumeId' = snap.configuration ->> 'volumeId')
+  WHERE ec2.configuration -> 'state' ->> 'name' = 'running'
   AND arr.ebs_device ->> 'status' = 'attached'
   AND snap.configuration ->> 'snapshotId' is null
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

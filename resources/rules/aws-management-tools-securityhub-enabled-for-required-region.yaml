@@ -17,7 +17,7 @@ sql: >
     LEFT JOIN (SELECT awsregion, count (*)
                  FROM ${magpie_schema}.awssecurityhubstandardsubscription
              GROUP BY awsregion, resourcetype
-               HAVING resourcetype = 'AWS::SecurityHub::StandardsSubscription' AND count(*) > 0) a
+               HAVING count(*) > 0) a
     ON (reg.region_global = a.awsregion or a.awsregion is null)
   WHERE awsregion is null
 

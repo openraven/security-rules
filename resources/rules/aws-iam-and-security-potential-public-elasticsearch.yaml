@@ -14,7 +14,6 @@ sql: >
   get_ip_permissions AS (
     SELECT arn, jsonb_array_elements(configuration->'ipPermissions') AS permissions
     FROM ${magpie_schema}.awsec2securitygroup
-    WHERE resourcetype = 'AWS::EC2::SecurityGroup'
   ),
   get_ip_ranges AS (
     SELECT arn, jsonb_array_elements(permissions->'ipRanges') AS ip_ranges

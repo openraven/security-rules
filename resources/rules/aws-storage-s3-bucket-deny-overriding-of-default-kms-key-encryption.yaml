@@ -22,8 +22,7 @@ sql: >
         SELECT value AS stmt
         FROM jsonb_array_elements(s3bucket.supplementaryconfiguration -> 'BucketPolicy' -> 'Statement')
     ) policy ON true
-    WHERE s3bucket.resourcetype = 'AWS::S3::Bucket'
-    AND policy.stmt ->> 'Action' LIKE '%s3:PutObject%'
+    WHERE policy.stmt ->> 'Action' LIKE '%s3:PutObject%'
     AND (policy.stmt ->> 'Condition' IS NULL
           OR policy.stmt ->> 'Condition' not like '%x-amz-server-side-encryption-aws-kms-key-id%')
 

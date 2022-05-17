@@ -18,8 +18,7 @@ sql: >
            WHERE awsregion != 'aws-global') reg
     LEFT JOIN (SELECT awsregion
                  FROM ${magpie_schema}.awsguarddutydetector a
-                WHERE resourcetype = 'AWS::GuardDuty::Detector'
-                  AND "configuration" ->> 'status' = 'ENABLED') a
+                  WHERE "configuration" ->> 'status' = 'ENABLED') a
     ON (reg.region_global = a.awsregion or awsregion is null)
   WHERE awsregion is null
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

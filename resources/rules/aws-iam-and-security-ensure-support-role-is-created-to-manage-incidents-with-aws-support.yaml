@@ -13,8 +13,7 @@ enabled: true
 sql: >
   SELECT arn
   FROM ${magpie_schema}.awsiampolicy
-  WHERE resourcetype = 'AWS::IAM::Policy'
-    AND resourcename = 'AWSSupportAccess'
+    WHERE resourcename = 'AWSSupportAccess'
     AND configuration->>'attachmentCount' = '0';
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

@@ -18,8 +18,7 @@ sql: >
   WHERE NOT EXISTS
       (SELECT *
        FROM ${magpie_schema}.awscloudtrailtrail
-       WHERE resourcetype = 'AWS::CloudTrail::Trail'
-         AND supplementaryconfiguration->'trailDetails'->'trail'->'isMultiRegionTrail' = 'true'
+         WHERE supplementaryconfiguration->'trailDetails'->'trail'->'isMultiRegionTrail' = 'true'
          AND supplementaryconfiguration->'status'->'isLogging' = 'true'
          AND EXISTS
            (SELECT *

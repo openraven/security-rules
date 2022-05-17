@@ -16,8 +16,7 @@ sql: >
       SELECT value ->> 'policyDocument' as policy_document
       FROM jsonb_array_elements(supplementaryconfiguration -> 'inlinePolicies')
   ) arr
-  WHERE resourcetype = 'AWS::IAM::Role'
-  AND (arr.policy_document LIKE '%"s3:%'
+  WHERE (arr.policy_document LIKE '%"s3:%'
       OR arr.policy_document LIKE '%arn:aws:s3%')
   AND configuration ->> 'roleLastUsed' IS NOT NULL
   AND (configuration -> 'roleLastUsed' ->> 'lastUsedDate' IS NULL
