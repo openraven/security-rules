@@ -11,7 +11,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT 'No log metric filter and alerts exist for VPC network changes' AS asset_id
+  SELECT 'No log metric filter and alerts exist for VPC network changes' AS assetid
   WHERE NOT EXISTS (
       SELECT acc.assetid
         FROM ${magpie_schema}.gcploggingmetric acc
