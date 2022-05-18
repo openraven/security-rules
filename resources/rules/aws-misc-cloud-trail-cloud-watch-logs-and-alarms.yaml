@@ -34,9 +34,9 @@ sql: >
     WHERE alarms.configuration->>'metricName' = get_metric_filters.metric->>'metricName'
   ),
   get_topic_subscribers_confirmed AS (
-    SELECT ${magpie_schema}.awssnstopic.configuration->'attributes'->>'SubscriptionsConfirmed' AS subscribers_number
-    FROM get_alarm_topic, assets AS ${magpie_schema}.awssnstopic
-    WHERE ${magpie_schema}.awssnstopic.resourcetype='AWS::SNS::Topic' AND get_alarm_topic.topic_arn = awssnstopic.arn
+    SELECT awssnstopic.configuration->'attributes'->>'SubscriptionsConfirmed' AS subscribers_number
+    FROM get_alarm_topic, ${magpie_schema}.awssnstopic AS awssnstopic
+    WHERE get_alarm_topic.topic_arn = awssnstopic.arn
   )
 
   SELECT 'No log metric filter and alarm exist for AWS Management Console authentication failures' AS assetid
