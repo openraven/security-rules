@@ -24,7 +24,7 @@ sql: >
               ) arr
                WHERE alrt.resourcetype = 'GCP::Monitoring::AlertPolicy'
                  AND alrt."configuration" -> 'enabled_' ->> 'value_' = 'true'
-                 AND metric ILIKE '%'||arn||'%'
+                 AND metric ILIKE '%'||assetid||'%'
          )
   )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
