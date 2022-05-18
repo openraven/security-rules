@@ -126,12 +126,4 @@ rules:
   - aws-compute-lambda-inside-vpc.yaml
   - aws-compute-lambda-dlq-check.yaml
   - aws-compute-lambda-concurrency-check.yaml
-  - aws-compute-ec2-instances-in-vpc.yaml
-  - aws-compute-ec2-instance-no-public-ip.yaml
-  - aws-compute-ec2-managedinstance-platform-check.yaml
-  - aws-compute-ec2-instance-profile-attached.yaml
-  - aws-compute-ec2-volume-inuse-check.yaml
-  - aws-compute-ec2-ebs-encryption-by-default.yaml
-  - aws-compute-ec2-stopped-instance.yaml
-  - aws-compute-ec2-instance-multiple-eni-check.yaml
 version: 0.9

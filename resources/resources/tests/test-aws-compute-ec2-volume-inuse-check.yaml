@@ -1,0 +1,86 @@
+ruleId: aws-compute-ec2-volume-inuse-check
+cloudProvider: aws
+description: >
+  Insecure assets have no attached EBS volume.
+  Secure assets have an attached EBS volume.
+insecureAssets:
+  noebs: >
+    [ {
+      "documentId" : "T7VPKR-EM_G2C0Qkgmuh_g",
+      "arn" : "noebs",
+      "resourceName" : "vol-094695683314c7ee9",
+      "resourceId" : "vol-094695683314c7ee9",
+      "resourceType" : "AWS::EC2::Volume",
+      "awsRegion" : "us-east-1",
+      "awsAccountId" : "00000000000",
+      "createdIso" : null,
+      "updatedIso" : "2022-05-17T14:43:12.945934Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "attachments" : [ ],
+        "availabilityZone" : "us-east-1a",
+        "createTime" : "2022-05-17T14:34:55.285Z",
+        "encrypted" : true,
+        "kmsKeyId" : "arn:aws:kms:us-east-1:00:key/kjgkldjg",
+        "outpostArn" : null,
+        "size" : 12,
+        "snapshotId" : "",
+        "state" : "available",
+        "volumeId" : "vol-094695683314c7ee9",
+        "iops" : 100,
+        "tags" : null,
+        "volumeType" : "gp2",
+        "fastRestored" : null,
+        "multiAttachEnabled" : false,
+        "throughput" : null
+      },
+      "supplementaryConfiguration" : { },
+      "tags" : { },
+      "discoveryMeta" : { }
+    }]
+secureAssets:
+  ebs: >
+    [ {
+      "documentId" : "mIh7mSk8MmCjtZfpXnJjfQ",
+      "arn" : "ebs",
+      "resourceName" : "vol-06746d882048e60ce",
+      "resourceId" : "vol-06746d882048e60ce",
+      "resourceType" : "AWS::EC2::Volume",
+      "awsRegion" : "us-east-1",
+      "awsAccountId" : "00000000000",
+      "createdIso" : null,
+      "updatedIso" : "2022-05-17T14:43:12.946086Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "attachments" : [ {
+          "attachTime" : "2022-05-17T14:36:11Z",
+          "device" : "/dev/xvda",
+          "instanceId" : "i-017b35cd0637abe69",
+          "state" : "attached",
+          "volumeId" : "vol-06746d882048e60ce",
+          "deleteOnTermination" : true
+        } ],
+        "availabilityZone" : "us-east-1a",
+        "createTime" : "2022-05-17T14:36:11.369Z",
+        "encrypted" : false,
+        "kmsKeyId" : null,
+        "outpostArn" : null,
+        "size" : 8,
+        "snapshotId" : "snap-03a3cb875207797f4",
+        "state" : "in-use",
+        "volumeId" : "vol-06746d882048e60ce",
+        "iops" : 100,
+        "tags" : null,
+        "volumeType" : "gp2",
+        "fastRestored" : null,
+        "multiAttachEnabled" : false,
+        "throughput" : null
+      },
+      "supplementaryConfiguration" : { },
+      "tags" : { },
+      "discoveryMeta" : { }
+    }]

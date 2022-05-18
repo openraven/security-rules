@@ -1,0 +1,361 @@
+ruleId: aws-compute-ec2-instances-in-vpc
+cloudProvider: aws
+description: >
+  Insecure Assets:
+   - no VPC associated with the ec2 instance
+  Secure asset
+   - vpc attached to the ec2 instance
+insecureAssets:
+  novpc: >
+    [ {
+      "documentId" : "lZsCY5uROaqw_kMesk6oaA",
+      "arn" : "novpc",
+      "resourceName" : "i-067731237bf0d69df",
+      "resourceId" : "i-067731237bf0d69df",
+      "resourceType" : "AWS::EC2::Instance",
+      "awsRegion" : "eu-west-2",
+      "awsAccountId" : "00000000000",
+      "createdIso" : "2022-05-17T12:27:30Z",
+      "updatedIso" : "2022-05-17T12:36:22.785095Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "amiLaunchIndex" : 0,
+        "imageId" : "ami-0d729d2846a86a9e7",
+        "instanceId" : "i-067731237bf0d69df",
+        "instanceType" : "t2.micro",
+        "kernelId" : null,
+        "keyName" : "teat",
+        "launchTime" : "2022-05-17T12:27:30Z",
+        "monitoring" : {
+          "state" : "disabled"
+        },
+        "placement" : {
+          "availabilityZone" : "eu-west-2b",
+          "affinity" : null,
+          "groupName" : "",
+          "partitionNumber" : null,
+          "hostId" : null,
+          "tenancy" : "default",
+          "spreadDomain" : null,
+          "hostResourceGroupArn" : null
+        },
+        "platform" : null,
+        "privateDnsName" : "ip-172-31-43-41.eu-west-2.compute.internal",
+        "privateIpAddress" : "172.31.43.41",
+        "productCodes" : [ ],
+        "publicDnsName" : "ec2-13-40-189-153.eu-west-2.compute.amazonaws.com",
+        "publicIpAddress" : "13.40.189.153",
+        "ramdiskId" : null,
+        "state" : {
+          "code" : 16,
+          "name" : "running"
+        },
+        "stateTransitionReason" : "",
+        "subnetId" : "subnet-a579dee9",
+        "vpcId" : null,
+        "architecture" : "x86_64",
+        "blockDeviceMappings" : [ {
+          "deviceName" : "/dev/xvda",
+          "ebs" : {
+            "attachTime" : "2022-05-17T12:27:31Z",
+            "deleteOnTermination" : true,
+            "status" : "attached",
+            "volumeId" : "vol-0a9ba2ad787dd7582"
+          }
+        } ],
+        "clientToken" : "",
+        "ebsOptimized" : false,
+        "enaSupport" : true,
+        "hypervisor" : "xen",
+        "iamInstanceProfile" : {
+          "arn" : "arn:aws:iam::00000000000:instance-profile/AmazonSSMRoleForInstancesQuickSetup",
+          "id" : "AIPAW52VVENLW43OMXCNO"
+        },
+        "instanceLifecycle" : null,
+        "elasticGpuAssociations" : null,
+        "elasticInferenceAcceleratorAssociations" : null,
+        "networkInterfaces" : [ {
+          "association" : {
+            "carrierIp" : null,
+            "customerOwnedIp" : null,
+            "ipOwnerId" : "amazon",
+            "publicDnsName" : "ec2-13-40-189-153.eu-west-2.compute.amazonaws.com",
+            "publicIp" : "13.40.189.153"
+          },
+          "attachment" : {
+            "attachTime" : "2022-05-17T12:27:30Z",
+            "attachmentId" : "eni-attach-0cb91dccb02eae364",
+            "deleteOnTermination" : true,
+            "deviceIndex" : 0,
+            "status" : "attached",
+            "networkCardIndex" : 0
+          },
+          "description" : "",
+          "groups" : [ {
+            "groupName" : "launch-wizard-1",
+            "groupId" : "sg-06df6b0fef5e46f6a"
+          } ],
+          "ipv6Addresses" : [ ],
+          "macAddress" : "0a:0e:d0:2c:cd:80",
+          "networkInterfaceId" : "eni-00b304cafeec8c5f3",
+          "ownerId" : "00000000000",
+          "privateDnsName" : "ip-172-31-43-41.eu-west-2.compute.internal",
+          "privateIpAddress" : "172.31.43.41",
+          "privateIpAddresses" : [ {
+            "association" : {
+              "carrierIp" : null,
+              "customerOwnedIp" : null,
+              "ipOwnerId" : "amazon",
+              "publicDnsName" : "ec2-13-40-189-153.eu-west-2.compute.amazonaws.com",
+              "publicIp" : "13.40.189.153"
+            },
+            "primary" : true,
+            "privateDnsName" : "ip-172-31-43-41.eu-west-2.compute.internal",
+            "privateIpAddress" : "172.31.43.41"
+          } ],
+          "sourceDestCheck" : true,
+          "status" : "in-use",
+          "subnetId" : "subnet-a579dee9",
+          "vpcId" : "vpc-511f5d39",
+          "interfaceType" : "interface",
+          "ipv4Prefixes" : null,
+          "ipv6Prefixes" : null
+        } ],
+        "outpostArn" : null,
+        "rootDeviceName" : "/dev/xvda",
+        "rootDeviceType" : "ebs",
+        "securityGroups" : [ {
+          "groupName" : "launch-wizard-1",
+          "groupId" : "sg-06df6b0fef5e46f6a"
+        } ],
+        "sourceDestCheck" : true,
+        "spotInstanceRequestId" : null,
+        "sriovNetSupport" : null,
+        "stateReason" : null,
+        "tags" : [ {
+          "key" : "Name",
+          "value" : "test"
+        } ],
+        "virtualizationType" : "hvm",
+        "cpuOptions" : {
+          "coreCount" : 1,
+          "threadsPerCore" : 1
+        },
+        "capacityReservationId" : null,
+        "capacityReservationSpecification" : {
+          "capacityReservationPreference" : "open",
+          "capacityReservationTarget" : null
+        },
+        "hibernationOptions" : {
+          "configured" : false
+        },
+        "licenses" : null,
+        "metadataOptions" : {
+          "state" : "applied",
+          "httpTokens" : "optional",
+          "httpPutResponseHopLimit" : 1,
+          "httpEndpoint" : "enabled",
+          "httpProtocolIpv6" : "disabled"
+        },
+        "enclaveOptions" : {
+          "enabled" : false
+        },
+        "bootMode" : null,
+        "platformDetails" : "Linux/UNIX",
+        "usageOperation" : "RunInstances",
+        "usageOperationUpdateTime" : "2022-05-17T12:27:30Z",
+        "privateDnsNameOptions" : {
+          "hostnameType" : "ip-name",
+          "enableResourceNameDnsARecord" : true,
+          "enableResourceNameDnsAAAARecord" : false
+        },
+        "ipv6Address" : null,
+        "publicIp" : "13.40.189.153"
+      },
+      "supplementaryConfiguration" : {
+        "awsBackupJobs" : [ ]
+      },
+      "tags" : {
+        "Name" : "test"
+      },
+      "discoveryMeta" : { }
+    }]
+secureAssets:
+  vpc: >
+      [ {
+        "documentId" : "lZsCY5uROaqw_kMesk6oaA",
+        "arn" : "vpc",
+        "resourceName" : "i-067731237bf0d69df",
+        "resourceId" : "i-067731237bf0d69df",
+        "resourceType" : "AWS::EC2::Instance",
+        "awsRegion" : "eu-west-2",
+        "awsAccountId" : "00000000000",
+        "createdIso" : "2022-05-17T12:27:30Z",
+        "updatedIso" : "2022-05-17T12:36:22.785095Z",
+        "discoverySessionId" : null,
+        "maxSizeInBytes" : null,
+        "sizeInBytes" : null,
+        "configuration" : {
+          "amiLaunchIndex" : 0,
+          "imageId" : "ami-0d729d2846a86a9e7",
+          "instanceId" : "i-067731237bf0d69df",
+          "instanceType" : "t2.micro",
+          "kernelId" : null,
+          "keyName" : "teat",
+          "launchTime" : "2022-05-17T12:27:30Z",
+          "monitoring" : {
+            "state" : "disabled"
+          },
+          "placement" : {
+            "availabilityZone" : "eu-west-2b",
+            "affinity" : null,
+            "groupName" : "",
+            "partitionNumber" : null,
+            "hostId" : null,
+            "tenancy" : "default",
+            "spreadDomain" : null,
+            "hostResourceGroupArn" : null
+          },
+          "platform" : null,
+          "privateDnsName" : "ip-172-31-43-41.eu-west-2.compute.internal",
+          "privateIpAddress" : "172.31.43.41",
+          "productCodes" : [ ],
+          "publicDnsName" : "ec2-13-40-189-153.eu-west-2.compute.amazonaws.com",
+          "publicIpAddress" : "13.40.189.153",
+          "ramdiskId" : null,
+          "state" : {
+            "code" : 16,
+            "name" : "running"
+          },
+          "stateTransitionReason" : "",
+          "subnetId" : "subnet-a579dee9",
+          "vpcId" : "vpc-511f5d39",
+          "architecture" : "x86_64",
+          "blockDeviceMappings" : [ {
+            "deviceName" : "/dev/xvda",
+            "ebs" : {
+              "attachTime" : "2022-05-17T12:27:31Z",
+              "deleteOnTermination" : true,
+              "status" : "attached",
+              "volumeId" : "vol-0a9ba2ad787dd7582"
+            }
+          } ],
+          "clientToken" : "",
+          "ebsOptimized" : false,
+          "enaSupport" : true,
+          "hypervisor" : "xen",
+          "iamInstanceProfile" : {
+            "arn" : "arn:aws:iam::00000000000:instance-profile/AmazonSSMRoleForInstancesQuickSetup",
+            "id" : "AIPAW52VVENLW43OMXCNO"
+          },
+          "instanceLifecycle" : null,
+          "elasticGpuAssociations" : null,
+          "elasticInferenceAcceleratorAssociations" : null,
+          "networkInterfaces" : [ {
+            "association" : {
+              "carrierIp" : null,
+              "customerOwnedIp" : null,
+              "ipOwnerId" : "amazon",
+              "publicDnsName" : "ec2-13-40-189-153.eu-west-2.compute.amazonaws.com",
+              "publicIp" : "13.40.189.153"
+            },
+            "attachment" : {
+              "attachTime" : "2022-05-17T12:27:30Z",
+              "attachmentId" : "eni-attach-0cb91dccb02eae364",
+              "deleteOnTermination" : true,
+              "deviceIndex" : 0,
+              "status" : "attached",
+              "networkCardIndex" : 0
+            },
+            "description" : "",
+            "groups" : [ {
+              "groupName" : "launch-wizard-1",
+              "groupId" : "sg-06df6b0fef5e46f6a"
+            } ],
+            "ipv6Addresses" : [ ],
+            "macAddress" : "0a:0e:d0:2c:cd:80",
+            "networkInterfaceId" : "eni-00b304cafeec8c5f3",
+            "ownerId" : "00000000000",
+            "privateDnsName" : "ip-172-31-43-41.eu-west-2.compute.internal",
+            "privateIpAddress" : "172.31.43.41",
+            "privateIpAddresses" : [ {
+              "association" : {
+                "carrierIp" : null,
+                "customerOwnedIp" : null,
+                "ipOwnerId" : "amazon",
+                "publicDnsName" : "ec2-13-40-189-153.eu-west-2.compute.amazonaws.com",
+                "publicIp" : "13.40.189.153"
+              },
+              "primary" : true,
+              "privateDnsName" : "ip-172-31-43-41.eu-west-2.compute.internal",
+              "privateIpAddress" : "172.31.43.41"
+            } ],
+            "sourceDestCheck" : true,
+            "status" : "in-use",
+            "subnetId" : "subnet-a579dee9",
+            "vpcId" : "vpc-511f5d39",
+            "interfaceType" : "interface",
+            "ipv4Prefixes" : null,
+            "ipv6Prefixes" : null
+          } ],
+          "outpostArn" : null,
+          "rootDeviceName" : "/dev/xvda",
+          "rootDeviceType" : "ebs",
+          "securityGroups" : [ {
+            "groupName" : "launch-wizard-1",
+            "groupId" : "sg-06df6b0fef5e46f6a"
+          } ],
+          "sourceDestCheck" : true,
+          "spotInstanceRequestId" : null,
+          "sriovNetSupport" : null,
+          "stateReason" : null,
+          "tags" : [ {
+            "key" : "Name",
+            "value" : "test"
+          } ],
+          "virtualizationType" : "hvm",
+          "cpuOptions" : {
+            "coreCount" : 1,
+            "threadsPerCore" : 1
+          },
+          "capacityReservationId" : null,
+          "capacityReservationSpecification" : {
+            "capacityReservationPreference" : "open",
+            "capacityReservationTarget" : null
+          },
+          "hibernationOptions" : {
+            "configured" : false
+          },
+          "licenses" : null,
+          "metadataOptions" : {
+            "state" : "applied",
+            "httpTokens" : "optional",
+            "httpPutResponseHopLimit" : 1,
+            "httpEndpoint" : "enabled",
+            "httpProtocolIpv6" : "disabled"
+          },
+          "enclaveOptions" : {
+            "enabled" : false
+          },
+          "bootMode" : null,
+          "platformDetails" : "Linux/UNIX",
+          "usageOperation" : "RunInstances",
+          "usageOperationUpdateTime" : "2022-05-17T12:27:30Z",
+          "privateDnsNameOptions" : {
+            "hostnameType" : "ip-name",
+            "enableResourceNameDnsARecord" : true,
+            "enableResourceNameDnsAAAARecord" : false
+          },
+          "ipv6Address" : null,
+          "publicIp" : "13.40.189.153"
+        },
+        "supplementaryConfiguration" : {
+          "awsBackupJobs" : [ ]
+        },
+        "tags" : {
+          "Name" : "test"
+        },
+        "discoveryMeta" : { }
+      }]
