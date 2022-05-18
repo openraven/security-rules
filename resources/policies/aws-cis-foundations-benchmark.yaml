@@ -21,13 +21,13 @@ ruleIds:
   - aws-iam-and-security-ensure-no-root-account-access-key-exists.yaml # CIS 1.12
   - aws-iam-and-security-ensure-mfa-enabled-for-root-account.yaml # CIS 1.13
   - aws-iam-and-security-root-account-mfa-enabled.yaml # CIS 1.14
-  - aws-iam-and-security-ensure-security-questions-registered.yaml # CIS 1.15 [MANUAL]
+ # - aws-iam-and-security-ensure-security-questions-registered.yaml # CIS 1.15 [MANUAL]
   - aws-iam-and-security-iam-user-no-policies-check.yaml # CIS 1.16
-  - aws-account-details.yaml # CIS 1.17 [MANUAL]
-  - aws-iam-and-security-ensure-security-contact-information-is-registered.yaml # CIS 1.18 [MANUAL]
-  - aws-iam-and-security-iam-instance-roles-used-for-aws-resource-access-from-instances.yaml # CIS 1.19 [MANUAL]
+ # - aws-account-details.yaml # CIS 1.17 [MANUAL]
+ # - aws-iam-and-security-ensure-security-contact-information-is-registered.yaml # CIS 1.18 [MANUAL]
+ # - aws-iam-and-security-iam-instance-roles-used-for-aws-resource-access-from-instances.yaml # CIS 1.19 [MANUAL]
   - aws-iam-and-security-ensure-support-role-is-created-to-manage-incidents-with-aws-support.yaml # CIS 1.20
-  - aws-iam-and-security-no-default-access-keys-with-console-password-for-all-iam-users.yaml # CIS 1.21 [MANUAL]
+#  - aws-iam-and-security-no-default-access-keys-with-console-password-for-all-iam-users.yaml # CIS 1.21 [MANUAL]
   - aws-security-and-identity-compliance-iam-full-admin.yaml # CIS 1.22
   - aws-management-tools-cloudtrail-enabled-all-regions.yaml # CIS 2.1
   - aws-management-tools-cloud-trail-log-file-validation-enabled.yaml # CIS 2.2
@@ -55,5 +55,5 @@ ruleIds:
   - aws-compute-elastic-compute-security-groups-ip.yaml # CIS 4.1
   - aws-iam-and-security-no-security-groups-allow-all-ingress-to-port-3389.yaml # CIS 4.2
   - aws-iam-and-security-default-security-group-for-vpc-restricts-all-traffic.yaml # CIS 4.3
-  - aws-vpc-rooting-access.yaml # CIS 4.4 [MANUAL]
+#  - aws-vpc-rooting-access.yaml # CIS 4.4 [MANUAL]
 version: 1.0
