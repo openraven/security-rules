@@ -1,0 +1,15 @@
+id: 66d58541-3a0d-44f2-9d06-01a5bd6a67b6
+refId: aws-compute-ec2-instances-in-vpc
+type: asset
+name: >
+  Checks if your EC2 instances belong to a virtual private cloud (VPC)
+description: >
+  Checks if your EC2 instances belong to a virtual private cloud (VPC).
+severity: high
+enabled: true
+sql: >
+  SELECT arn as assetid
+  FROM ${magpie_schema}.awsec2instance
+  WHERE configuration->'vpcId' = 'null';
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 0.9
