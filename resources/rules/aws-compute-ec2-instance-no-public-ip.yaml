@@ -1,0 +1,15 @@
+id: 85b27c1b-6f18-4973-84e4-722ba0aaf5b8
+refId: aws-compute-ec2-instance-no-public-ip
+type: asset
+name: >
+  Checks whether Amazon Elastic Compute Cloud (Amazon EC2) instances have a public IP association.
+description: >
+  The rule is NON_COMPLIANT if the publicIp field is present in the Amazon EC2 instance configuration item. This rule applies only to IPv4. 
+severity: high
+enabled: true
+sql: >
+  SELECT arn as assetid
+  FROM ${magpie_schema}.awsec2instance
+  WHERE configuration->'publicIpAddress' != 'null';
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 1.0
