@@ -1,8 +1,0 @@
-policyId: open-raven-blog-policies
-policyName: Useful rules published from Open Raven blogs.
-cloudProvider: AWS
-description: >
-  A collection of the useful rules published from Open Raven blogs.
-enabled: true
-rules:
-  - aws-iam-and-security-potential-public-elasticsearch.yaml
