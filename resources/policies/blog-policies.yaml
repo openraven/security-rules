@@ -1,12 +1,14 @@
-policyId: open-raven-blog-policies
-policyName: Useful rules published from Open Raven blogs.
+id: b94ab61c-09fc-449c-9d45-ddb39aa825db
+refId: open-raven-blog-policies
+name: Useful rules published from Open Raven blogs.
 cloudProvider: AWS
 description: >
   A collection of the useful rules published from Open Raven blogs.
 enabled: true
-rules:
+ruleIds:
   - aws-iam-and-security-potential-public-elasticsearch.yaml
   - aws-compute-ec2-imdsv2-check.yaml
   - aws-compute-ec2-instance-detailed-monitoring-enabled.yaml
   - aws-iam-and-security-iam-user-mfa-enabled.yaml
   - aws-management-tools-ensure-s3-bucket-access-logging-is-enabled-on-cloudtrail-s3-bucket.yaml
+version: 1.0

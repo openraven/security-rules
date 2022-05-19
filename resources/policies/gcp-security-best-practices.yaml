@@ -1,26 +1,26 @@
-# vid: d8792397-239e-4028-9539-7b3771ba929f
-policyId: gcp-security-best-practices
-policyName:  Google Cloud Security Best Practices
+id: d52d4569-30b6-494a-a3aa-04f387b5f117
+refId: gcp-security-best-practices
+name:  Google Cloud Security Best Practices
 cloudProvider: GCP
 description: >
   Google Cloud Security Best Practices analyzes accounts for security best practices and is modelled on guidance published by the Center for Information Security.
 enabled: true
-rules:
+ruleIds:
   - gcp-iam-and-security-ensure-oslogin-is-enabled-for-a-project.yaml
   - gcp-iam-and-security-iam-project-roles.yaml
   - gcp-iam-and-security-ensure-only-gcp-managed-service-account-keys-for-each-service-account.yaml # CIS 1.4
   - gcp-iam-and-security-iam-service-account-keys.yaml
-  - gcp-iam-and-security-ensure-that-mfa-is-enabled-for-all-non-service-accounts.yaml # CIS 1.2
-  - gcp-security-and-identity-compliance-ske-enabled.yaml
+#  - gcp-iam-and-security-ensure-that-mfa-is-enabled-for-all-non-service-accounts.yaml # CIS 1.2
+#  - gcp-security-and-identity-compliance-ske-enabled.yaml
   - gcp-management-tools-ensure-service-account-has-no-admin-privilege.yaml # CIS 1.5
-  - gcp-iam-and-security-service-accounts-sod.yaml
+#  - gcp-iam-and-security-service-accounts-sod.yaml
   - gcp-iam-and-security-ensure-kms-cryptokeys-are-not-anonymously-or-publicly-accessible.yaml # CIS 1.9
   - gcp-security-and-identity-compliance-kms-rotation.yaml
   - gcp-iam-and-security-ensure-separation-of-duties-is-enforced-while-assigning-kms-related-roles-to-users.yaml # CIS 1.11
-  - gcp-api-keys.yaml
-  - gcp-iam-and-security-ensure-api-keys-are-restricted-to-use-by-only-specified-hosts-and-apps.yaml # CIS 1.13
-  - gcp-api-restricted-access.yaml
-  - gcp-iam-and-security-ensure-api-keys-are-rotated-every-90-days.yaml # CIS 1.15
+#  - gcp-api-keys.yaml
+#  - gcp-iam-and-security-ensure-api-keys-are-restricted-to-use-by-only-specified-hosts-and-apps.yaml # CIS 1.13
+#  - gcp-api-restricted-access.yaml
+#  - gcp-iam-and-security-ensure-api-keys-are-rotated-every-90-days.yaml # CIS 1.15
   - gcp-storage-cloud-bucket-public-access.yaml
   - gcp-storage-buckets-have-uniform-bucket-level-access-enabled.yaml # CIS 5.2
   - gcp-networking-and-content-delivery-default-network.yaml
@@ -31,8 +31,8 @@ rules:
   - gcp-network-and-content-delivery-ensure-ssh-access-is-restricted-from-the-internet.yaml # CIS 3.6
   - gcp-networking-and-content-delivery-rdp-access.yaml
   - gcp-network-and-content-delivery-ensure-that-vpc-flow-logs-is-enable-for-every-vpc-network-subnet.yaml # CIS 3.8
-  - gcp-networking-and-content-delivery-ssl-policies.yaml
-  - gcp-network-and-content-delivery-ensure-firewall-rules-for-instances-behind-iap-only-allow-traffic-from-gclb-addresses.yaml # CIS 3.10
+#  - gcp-networking-and-content-delivery-ssl-policies.yaml
+#  - gcp-network-and-content-delivery-ensure-firewall-rules-for-instances-behind-iap-only-allow-traffic-from-gclb-addresses.yaml # CIS 3.10
   - gcp-compute-editor-role.yaml
   - gcp-compute-ensure-instances-are-not-configured-to-use-the-default-service-account.yaml # CIS 4.2
   - gcp-compute-vm-project-ssh-keys.yaml
@@ -42,9 +42,9 @@ rules:
   - gcp-compute-vm-encrypted.yaml
   - gcp-compute-ensure-compute-instances-are-launched-with-shielded-vm-enabled.yaml # CIS 4.8
   - gcp-compute-no-public-ip.yaml
-  - gcp-compute-ensure-app-engine-applications-enforce-https-connections.yaml # CIS 4.10
-  - gcp-compute-confidential-computing-enabled.yaml
-  - gcp-management-tools-ensure-cloud-audit-logging-is-configured-properly-across-all-services-and-all-users-from-a-project.yaml # CIS 2.1 -- Logging and Monitoring -- (automation)
+#  - gcp-compute-ensure-app-engine-applications-enforce-https-connections.yaml # CIS 4.10
+#  - gcp-compute-confidential-computing-enabled.yaml
+#  - gcp-management-tools-ensure-cloud-audit-logging-is-configured-properly-across-all-services-and-all-users-from-a-project.yaml # CIS 2.1 -- Logging and Monitoring -- (automation)
   - gcp-management-tools-sinks-enabled.yaml
   - gcp-management-tools-ensure-retention-policies-on-log-buckets-are-configured-using-bucket-lock.yaml # CIS 2.3
   - gcp-management-tools-log-alerts-project.yaml
@@ -55,11 +55,11 @@ rules:
   - gcp-management-tools-ensure-log-metric-filter-and-alerts-exist-for-vpc-network-changes.yaml # CIS 2.9
   - gcp-iam-and-security-log-filter-and-alerts.yaml
   - gcp-management-tools-ensure-log-metric-filter-and-alerts-exist-for-sql-instance-config-changes.yaml # CIS 2.11
-  - gcp-networking-cloud-dns-logging.yaml
+#  - gcp-networking-cloud-dns-logging.yaml
   - gcp-database-ensure-bigquery-datasets-are-not-anonymously-or-publicly-accessible.yaml # CIS 7.1 -- BigQuery
   - gcp-big-data-and-advanced-analytics-cmek-encrypted.yaml
   - gcp-database-ensure-that-a-default-cmek-is-specified-for-all-bigquery-data-sets.yaml # CIS 7.3
-  - gcp-database-sql-mysql-admin.yaml
+#  - gcp-database-sql-mysql-admin.yaml
   - gcp-database-ensure-skip-show-database-db-flag-for-cloud-sql-mysql-instance-is-set-to-on.yaml # CIS 6.1.2
   - gcp-database-sql-local-infile.yaml
   - gcp-database-ensure-that-log-checkpoints-db-flag-for-cloud-sql-postgres-instance-is-set-to-on.yaml # CIS 6.2.1  <- PostgreSQL
@@ -80,7 +80,7 @@ rules:
   - gcp-database-sql-log-min-flag.yaml
   - gcp-database-ensure-external-scripts-enabled-db-flag-for-cloud-sql-server-instance-is-set-to-off.yaml # CIS 6.3.1  <- SQL Server
   - gcp-database-sql-cross-db-flag.yaml
-  - gcp-database-ensure-user-connections-db-flag-for-cloud-sql-server-instances-is-set-as-appropriate.yaml # CIS 6.3.3
+#  - gcp-database-ensure-user-connections-db-flag-for-cloud-sql-server-instances-is-set-as-appropriate.yaml # CIS 6.3.3
   - gcp-database-sql-db-flag-configured.yaml
   - gcp-database-ensure-remote-access-db-flag-for-cloud-sql-server-instance-is-set-to-off.yaml # CIS 6.3.5
   - gcp-database-sql-db-flag-off.yaml
@@ -89,4 +89,4 @@ rules:
   - gcp-database-ensure-that-cloud-sql-database-instances-are-not-open-to-the-world.yaml # CIS 6.5
   - gcp-database-sql-public-ip.yaml
   - gcp-database-ensure-that-cloud-sql-database-instances-are-configured-with-automated-backups.yaml # CIS 6.7
-version: 0.9
+version: 1.0

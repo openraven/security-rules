@@ -1,6 +1,7 @@
-ruleId: gcp-database-sql-db-flag-off
+id: 41d06ab4-c374-4163-a5b4-7a6904e45f0e
+refId: gcp-database-sql-db-flag-off
 type: asset
-ruleName: >
+name: >
   Ensure '3625 (trace flag)' database flag for Cloud SQL SQL Server instance is set to 'off'
 description: >
   Trace flags are frequently used to diagnose performance issues or to debug stored procedures or complex computer systems,
@@ -22,4 +23,4 @@ sql: >
        WHERE value ->> 'name' = '3625' AND value ->> 'value' = 'off'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

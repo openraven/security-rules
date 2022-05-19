@@ -1,7 +1,8 @@
+id: 3c72b7c4-af80-42cf-a227-ccffe86427e6
 # opnrvn-r-111
-ruleId: gcp-database-ensure-bigquery-datasets-are-not-anonymously-or-publicly-accessible
+refId: gcp-database-ensure-bigquery-datasets-are-not-anonymously-or-publicly-accessible
 type: asset
-ruleName: >
+name: >
   Ensure that BigQuery datasets are not anonymously or publicly accessible
 description: >
   It is recommended that the IAM policy on BigQuery datasets does not allow anonymous and/or public access.
@@ -21,4 +22,4 @@ sql: >
            OR value ->> 'entity' ILIKE '%allUsers%'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

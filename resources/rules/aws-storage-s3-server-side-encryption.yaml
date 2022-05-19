@@ -1,15 +1,16 @@
-ruleId: aws-storage-s3-server-side-encryption
+id: e2ef581b-2a7e-4448-adb9-6da633b35bde
+refId: aws-storage-s3-server-side-encryption
 type: asset
-ruleName: >
+name: >
   Checks if your Amazon S3 bucket either has the Amazon S3 default encryption enabled
 description: >
   The rule is NON_COMPLIANT if your Amazon S3 bucket is not encrypted by default.
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   from ${magpie_schema}.awss3bucket
   WHERE
   (supplementaryconfiguration->'ServerSideEncryptionConfiguration' = 'null');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

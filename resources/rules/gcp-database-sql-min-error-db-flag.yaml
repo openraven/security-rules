@@ -1,6 +1,7 @@
-ruleId: gcp-database-sql-min-error-db-flag
+id: 70917d30-5350-44fa-9c76-8507a9229e95
+refId: gcp-database-sql-min-error-db-flag
 type: asset
-ruleName: >
+name: >
   Ensure 'log_min_error_statement' database flag for Cloud SQL PostgreSQL instance is set to 'Error' or stricter
 description: >
   The log_min_error_statement flag defines the minimum message severity level that are considered as an error statement.
@@ -21,4 +22,4 @@ sql: >
        WHERE value ->> 'name' = 'log_min_error_statement' AND value ->> 'value' IN ('error', 'log', 'fatal', 'panic')
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

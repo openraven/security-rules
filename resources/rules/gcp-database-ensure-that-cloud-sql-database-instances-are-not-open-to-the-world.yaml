@@ -1,7 +1,8 @@
+id: bb67d8c5-b289-43b0-9e45-0206c8c42155
 # opnrvn-r-141
-ruleId: gcp-database-ensure-that-cloud-sql-database-instances-are-not-open-to-the-world
+refId: gcp-database-ensure-that-cloud-sql-database-instances-are-not-open-to-the-world
 type: asset
-ruleName: >
+name: >
   Ensure that Cloud SQL database instances are not open to the world
 description: >
   To minimize attack surface on a Database server instance, only trusted/known and required IP(s) should be white-listed to connect to it.
@@ -15,4 +16,4 @@ sql: >
    WHERE resourcetype = 'GCP::SQL::Instance'
      AND acc."configuration" -> 'settings' -> 'ipConfiguration' ->> 'authorizedNetworks' LIKE '%0.0.0.0/0%'
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

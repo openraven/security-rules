@@ -1,6 +1,7 @@
-ruleId: gcp-networking-and-content-delivery-ssl-policies
+id: d3ea99c9-d7b5-4fb3-9ed0-f48450a29f80
+refId: gcp-networking-and-content-delivery-ssl-policies
 type: asset
-ruleName: >
+name: >
   Ensure no HTTPS or SSL proxy load balancers permit SSL policies with weak cipher suites
 description: >
   Legacy networks have a single network IPv4 prefix range and a single gateway IP address for the whole network.
@@ -11,4 +12,4 @@ manualControl: true
 severity: high
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

@@ -1,7 +1,8 @@
+id: c480be94-5bd1-4b34-be11-1bf72f654f88
 # opnrvn-r-99
-ruleId: gcp-management-tools-ensure-cloud-audit-logging-is-configured-properly-across-all-services-and-all-users-from-a-project
+refId: gcp-management-tools-ensure-cloud-audit-logging-is-configured-properly-across-all-services-and-all-users-from-a-project
 type: asset
-ruleName: >
+name: >
   Ensure that Cloud Audit Logging is configured properly across all services and all users from a project
 description: >
   It is recommended that Cloud Audit Logging is configured to track all admin activities and read, write access to user data.
@@ -9,4 +10,4 @@ manualControl: true
 severity: high
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

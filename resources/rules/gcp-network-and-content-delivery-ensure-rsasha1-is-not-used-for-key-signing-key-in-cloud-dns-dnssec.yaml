@@ -1,7 +1,8 @@
+id: f85252d2-83fa-4ad1-96ee-1d7054474874
 # opnrvn-r-81
-ruleId: gcp-network-and-content-delivery-ensure-rsasha1-is-not-used-for-key-signing-key-in-cloud-dns-dnssec
+refId: gcp-network-and-content-delivery-ensure-rsasha1-is-not-used-for-key-signing-key-in-cloud-dns-dnssec
 type: asset
-ruleName: >
+name: >
   Ensure that RSASHA1 is not used for the key-signing key in Cloud DNS DNSSEC
 description: >
   DNSSEC algorithm numbers in this registry may be used in CERT RRs.
@@ -21,4 +22,4 @@ sql: >
      AND arr.keyType = 'keySigning'
      AND lower(arr.alg) = 'rsasha1';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

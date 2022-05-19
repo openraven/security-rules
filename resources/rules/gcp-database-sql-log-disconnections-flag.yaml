@@ -1,6 +1,7 @@
-ruleId: gcp-database-sql-log-disconnections-flag
+id: 29bc38e9-6413-4cd4-b9a4-9b6cb21d2e7c
+refId: gcp-database-sql-log-disconnections-flag
 type: asset
-ruleName: >
+name: >
   Ensure that the 'log_disconnections' database flag for Cloud SQL PostgreSQL instance is set to 'on'
 description: >
   PostgreSQL does not log session details such as duration and session end by default.
@@ -21,4 +22,4 @@ sql: >
        WHERE value ->> 'name' = 'log_disconnections' AND value ->> 'value' = 'on'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

@@ -1,15 +1,16 @@
+id: 0a877314-f052-4710-819a-e6d88cdc0490
 # opnrvn-r-168
-ruleId: aws-database-rds-storage-encrypted
+refId: aws-database-rds-storage-encrypted
 type: asset
-ruleName: >
+name: >
   Checks whether storage encryption is enabled for your RDS DB instances.
 description: >
   Checks whether storage encryption is enabled for your RDS DB instances.
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   FROM ${magpie_schema}.awsrdsdbinstance
   WHERE (configuration->'storageEncrypted' = 'false');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

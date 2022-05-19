@@ -1,14 +1,15 @@
-ruleId: aws-database-redshift-cluster-public-access-check
+id: 65301669-1eef-4fcc-8863-ee6cae5e6e07
+refId: aws-database-redshift-cluster-public-access-check
 type: asset
-ruleName: >
+name: >
   Ensure RedShift Clusters are not publicly accessible
 description: >
   Checks if RedShift Clusters are publicly accessible. The rule is NON_COMPLIANT if the cluster uses MySQL is publically accessible.
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   FROM ${magpie_schema}.awsredshiftcluster
   WHERE (configuration -> 'publiclyAccessible' = 'true')
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

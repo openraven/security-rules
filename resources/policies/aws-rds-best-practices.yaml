@@ -1,11 +1,12 @@
-policyId: aws-rds-best-practices
-policyName: The best security configuration practices for AWS RDS assets.
+id: 1a255f1f-27a9-4577-8e87-1acc0060cc77
+refId: aws-rds-best-practices
+name: The best security configuration practices for AWS RDS assets.
 cloudProvider: AWS
 description: >
   The best security configuration practices for AWS RDS assets.
   Includes every config rule relating to RDS.
 enabled: true
-rules:
+ruleIds:
   - aws-database-rds-automatic-minor-version-upgrade-enabled.yaml
 #  - rds-cluster-default-admin-check - [to do]
   - aws-database-rds-cluster-deletion-protection-enabled.yaml
@@ -24,4 +25,4 @@ rules:
 #  - rds-snapshots-public-prohibited - [to do]
   - aws-database-rds-snapshot-encrypted.yaml
   - aws-database-rds-storage-encrypted.yaml
-version: 0.9
+version: 1.0

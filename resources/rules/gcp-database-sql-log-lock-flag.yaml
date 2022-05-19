@@ -1,6 +1,7 @@
-ruleId: gcp-database-sql-log-lock-flag
+id: 1acbbe7a-dd6a-4af4-a3e6-7f1d1ebbb66e
+refId: gcp-database-sql-log-lock-flag
 type: asset
-ruleName: >
+name: >
   Ensure that the 'log_lock_waits' database flag for Cloud SQL PostgreSQL instance is set to 'on'
 description: >
   Enabling the log_lock_waits flag for a PostgreSQL instance creates a log
@@ -21,4 +22,4 @@ sql: >
        WHERE value ->> 'name' = 'log_lock_waits' AND value ->> 'value' = 'on'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

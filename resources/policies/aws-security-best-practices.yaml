@@ -1,13 +1,13 @@
-# id: 74406460-05fb-4057-b646-f3f8c1e5d56f
-policyId: aws-security-best-practices
-policyName:  AWS Security Best Practices
+id: 74406460-05fb-4057-b646-f3f8c1e5d56f
+refId: aws-security-best-practices
+name:  AWS Security Best Practices
 cloudProvider: AWS
 description: >
   AWS Security Best Practices policy analyzes accounts for security best practices and is modelled on guidance published by the Center for Information Security.
 enabled: true
-rules:
-  - aws-iam-and-security-ensure-security-questions-registered.yaml
-  - aws-iam-and-security-iam-root.yaml
+ruleIds:
+#  - aws-iam-and-security-ensure-security-questions-registered.yaml
+#  - aws-iam-and-security-iam-root.yaml
   - aws-management-tools-cloudtrail-enabled-all-regions.yaml
   - aws-storage-s3-default-encryption-kms.yaml
   - aws-management-tools-cloudtrail-log-file-validation-enabled.yaml
@@ -27,10 +27,10 @@ rules:
   - aws-iam-and-security-iam-password-policy-length.yaml
   - aws-iam-and-security-ensure-iam-password-policy-requires-one-uppercase-letter.yaml
   - aws-iam-and-security-iam-user-no-policies-check.yaml
-  - aws-iam-and-security-iam-instance-roles-used-for-aws-resource-access-from-instances.yaml
+#  - aws-iam-and-security-iam-instance-roles-used-for-aws-resource-access-from-instances.yaml
   - aws-iam-and-security-iam-attaced-policies.yaml
   - aws-iam-and-security-ensure-no-stale-roles-with-inline-policies-for-s3-access.yaml
-  - aws-account-details.yaml
+ # - aws-account-details.yaml
   - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-aws-config-changes.yaml
   - aws-misc-cloud-trail-cloud-watch-logs-and-alarms.yaml
   - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-cloudtrail-config-changes.yaml
@@ -52,7 +52,7 @@ rules:
   - aws-iam-and-security-ensure-no-root-account-access-key-exists.yaml
   - aws-compute-elastic-compute-security-groups-ip.yaml
   - aws-iam-and-security-no-security-groups-allow-all-ingress-to-port-3389.yaml
-  - aws-vpc-rooting-access.yaml
+#  - aws-vpc-rooting-access.yaml
   - aws-iam-and-security-ensure-access-keys-are-rotated-every-90-days-or-less.yaml
   - aws-iam-and-security-cmk-backing-key-rotation-enabled.yaml
   - aws-management-tools-ensure-s3-bucket-access-logging-is-enabled-on-cloudtrail-s3-bucket.yaml
@@ -61,7 +61,7 @@ rules:
   - aws-storage-s3-bucket-level-public-access-prohibited.yaml
   - aws-storage-s3-bucket-deny-overriding-of-default-kms-key-encryption.yaml
   - aws-storage-s3-bucket-versioning-enabled.yaml
-  - aws-iam-and-security-ensure-security-contact-information-is-registered.yaml
+#  - aws-iam-and-security-ensure-security-contact-information-is-registered.yaml
   # 56 missing - ransomware C2 rule
   - aws-management-tools-securityhub-enabled-for-required-region.yaml
   - aws-compute-ec2-instance-managed-by-systems-manager.yaml
@@ -106,10 +106,8 @@ rules:
   - aws-network-and-content-delivery-elb-logging-enabled.yaml
   - aws-database-redshift-enchanced-vpc-routing-enabled.yaml
   - aws-big-data-and-analytics-elasticsearch-node-to-node-encryption.yaml
-  - aws-storage-s3-versioning-enabled.yaml
   - aws-storage-s3-server-side-encryption.yaml
   - aws-storage-s3-versioning-enabled.yaml
-  - aws-storage-s3-bucket-level-public-access-prohibited.yaml
   - aws-management-tools-cloudwatch-log-group-encrypted.yaml
   - aws-database-redshift-cluster-maintenancesettings-check.yaml
   - aws-disaster-recovery-services-backup-recovery-point-encrypted.yaml
@@ -126,4 +124,4 @@ rules:
   - aws-compute-lambda-inside-vpc.yaml
   - aws-compute-lambda-dlq-check.yaml
   - aws-compute-lambda-concurrency-check.yaml
-version: 0.9
+version: 1.0

@@ -1,7 +1,8 @@
+id: 1c2d8884-d4c4-460b-8e98-bd3292d08eb0
 # opnrvn-r-113
-ruleId: gcp-database-ensure-that-a-default-cmek-is-specified-for-all-bigquery-data-sets
+refId: gcp-database-ensure-that-a-default-cmek-is-specified-for-all-bigquery-data-sets
 type: asset
-ruleName: >
+name: >
   Ensure that a Default Customer-managed encryption key (CMEK) is specified for all BigQuery Data Sets
 description: >
   BigQuery by default encrypts the data as rest by employing Envelope Encryption using Google managed cryptographic keys.
@@ -17,4 +18,4 @@ sql: >
    WHERE acc.resourcetype = 'GCP::BigQuery::Dataset'
      AND acc."configuration" -> 'defaultEncryptionConfiguration' ->> 'kmsKeyName' IS NULL
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

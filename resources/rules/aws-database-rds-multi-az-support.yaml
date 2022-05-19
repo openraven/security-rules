@@ -1,7 +1,8 @@
+id: dcd385e4-447d-4f8e-b1e5-0ad16a1340a9
 # opnrvn-r-155
-ruleId: aws-database-rds-multi-az-support
+refId: aws-database-rds-multi-az-support
 type: asset
-ruleName: >
+name: >
   Checks whether high availability is enabled for your RDS DB instances.
 description: >
   In a Multi-AZ deployment, Amazon RDS automatically provisions and maintains
@@ -9,8 +10,8 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   FROM ${magpie_schema}.awsrdsdbinstance
   WHERE (configuration->'multiAZ' = 'false');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

@@ -1,8 +1,8 @@
-#id: f524b603-181b-408b-9601-de828b1c1a06
+id: f524b603-181b-408b-9601-de828b1c1a06
 #  opnrvn-r-55
-ruleId: aws-iam-and-security-ensure-security-contact-information-is-registered
+refId: aws-iam-and-security-ensure-security-contact-information-is-registered
 type: asset
-ruleName: >
+name: >
   Ensure security contact information is registered
 description: >
   AWS provides customers with the option of specifying the contact information for
@@ -12,4 +12,4 @@ severity: high
 enabled: true
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

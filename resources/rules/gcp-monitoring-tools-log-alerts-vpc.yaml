@@ -1,6 +1,7 @@
-ruleId: gcp-monitoring-tools-log-alerts-vpc
+id: 00b910b7-6dd9-4fb7-bf5d-014d18b6a1a8
+refId: gcp-monitoring-tools-log-alerts-vpc
 type: asset
-ruleName: >
+name: >
   Ensure that the log metric filter and alerts exist for VPC network route changes
 description: >
   Monitoring changes to route tables will help ensure that all VPC traffic flows through an expected path.
@@ -23,8 +24,8 @@ sql: >
               ) arr
                WHERE alrt.resourcetype = 'GCP::Monitoring::AlertPolicy'
                  AND alrt."configuration" -> 'enabled_' ->> 'value_' = 'true'
-                 AND metric ILIKE '%'||arn||'%'
+                 AND metric ILIKE '%'||assetid||'%'
          )
   )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

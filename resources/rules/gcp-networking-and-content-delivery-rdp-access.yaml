@@ -1,6 +1,7 @@
-ruleId: gcp-networking-and-content-delivery-rdp-access
+id: 214fb814-f818-4881-8d69-0ea5453f62f5
+refId: gcp-networking-and-content-delivery-rdp-access
 type: asset
-ruleName: >
+name: >
   Ensure that RDP access is restricted from the Internet
 description: >
   To have outgoing Internet access, the network must have a valid Internet gateway route or custom route whose destination IP is specified.
@@ -31,4 +32,4 @@ sql: >
   AND (allwd.ports[1] = '3389' OR allwd.ports is null OR ('3389' BETWEEN allwd.ports[1] AND allwd.ports[2]));
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

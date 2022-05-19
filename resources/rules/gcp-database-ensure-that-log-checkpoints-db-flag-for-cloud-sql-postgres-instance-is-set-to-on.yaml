@@ -1,7 +1,8 @@
+id: 28aa542d-7573-4f59-be74-65a679478325
 # opnrvn-r-117
-ruleId: gcp-database-ensure-that-log-checkpoints-db-flag-for-cloud-sql-postgres-instance-is-set-to-on
+refId: gcp-database-ensure-that-log-checkpoints-db-flag-for-cloud-sql-postgres-instance-is-set-to-on
 type: asset
-ruleName: >
+name: >
   Ensure that the 'log_checkpoints' database flag for Cloud SQL PostgreSQL instance is set to 'on'
 description: >
   Enabling log_checkpoints causes checkpoints and restart points to be logged in the server log.
@@ -20,4 +21,4 @@ sql: >
        WHERE value ->> 'name' = 'log_checkpoints' AND value ->> 'value' = 'on'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

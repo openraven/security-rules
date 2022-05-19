@@ -1,14 +1,15 @@
-ruleId: aws-storage-efs-in-backup-plan
+id: 51780e0c-1640-4e8a-8661-197478080114
+refId: aws-storage-efs-in-backup-plan
 type: asset
-ruleName: >
+name: >
   Ensure Amazon Elastic File System (Amazon EFS) file systems are added in the backup plans of AWS Backup.
 description: >
   Ensures Amazon Elastic File System (Amazon EFS) file systems are added in the backup plans of AWS Backup. The rule is NON_COMPLIANT if EFS file systems are not included in the backup plans.
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   FROM ${magpie_schema}.awsefsfilesystem
   WHERE (supplementaryconfiguration -> 'awsBackupJobs' = '[]');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

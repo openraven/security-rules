@@ -1,6 +1,7 @@
-ruleId: gcp-networking-cloud-dns-logging
+id: e9e1dec8-8f7e-4356-b18d-21dda2f63a97
+refId: gcp-networking-cloud-dns-logging
 type: asset
-ruleName: >
+name: >
   Ensure that Cloud DNS logging is enabled for all VPC networks
 description: >
   Cloud DNS logging records the queries from the name servers within your VPC to Stackdriver.
@@ -10,4 +11,4 @@ severity: high
 enabled: true
 #sql: >  DNS Policy discovery is not possible at the moment
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

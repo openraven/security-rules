@@ -1,7 +1,7 @@
-#id: 372c5fb9-b570-45c0-820d-d89bd80e80bb
-ruleId: gcp-security-and-identity-compliance-ske-enabled
+id: 372c5fb9-b570-45c0-820d-d89bd80e80bb
+refId: gcp-security-and-identity-compliance-ske-enabled
 type: asset
-ruleName: >
+name: >
   Ensure that Security Key Enforcement is enabled for all admin accounts
 description: >
   Google Cloud Platform users with Organization Administrator roles have the highest level of privilege in the organization.
@@ -15,4 +15,4 @@ manualControl: true
 severity: high
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

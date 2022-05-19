@@ -1,6 +1,7 @@
-ruleId: gcp-networking-and-content-delivery-default-network
+id: 720b9f87-8788-4132-ab55-8492e8add0e3
+refId: gcp-networking-and-content-delivery-default-network
 type: asset
-ruleName: >
+name: >
   Ensure that the default network does not exist in a project
 description: >
   Default network is an auto mode network, which means that its subnets use the same predefined range of IP addresses,
@@ -14,4 +15,4 @@ sql: >
     WHERE acc.resourcetype = 'GCP::VPC::Network'
      AND configuration ->> 'name' = 'default'
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

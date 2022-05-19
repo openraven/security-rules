@@ -1,7 +1,8 @@
+id: 9b271b06-1140-4b20-898c-07fe1e34b6f8
 # opnrvn-r-79
-ruleId: gcp-network-and-content-delivery-ensure-legacy-networks-do-not-exist-for-a-project
+refId: gcp-network-and-content-delivery-ensure-legacy-networks-do-not-exist-for-a-project
 type: asset
-ruleName: >
+name: >
   Ensure legacy networks do not exist for a project
 description: >
   Legacy networks have a single network IPv4 prefix range and a single gateway IP address for the whole network.
@@ -17,4 +18,4 @@ sql: >
      AND configuration ->> 'autoCreateSubnetworks' is null
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

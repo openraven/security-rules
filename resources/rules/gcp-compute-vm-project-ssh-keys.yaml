@@ -1,6 +1,7 @@
-ruleId: gcp-compute-vm-project-ssh-keys
+id: 2cafde41-c4b6-4b74-a7a9-33583cd6ea47
+refId: gcp-compute-vm-project-ssh-keys
 type: asset
-ruleName: >
+name: >
   Ensure "Block Project-wide SSH keys" is enabled for VM instances
 description: >
   It is recommended to use Instance specific SSH key(s) instead of using common/shared project-wide SSH key(s) to access Instances.
@@ -19,4 +20,4 @@ sql: >
           )
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

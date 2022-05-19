@@ -1,7 +1,8 @@
+id: 75a124e6-1820-4e71-96f0-396b5c4719a5
 # opnrvn-r-143
-ruleId: gcp-database-ensure-that-cloud-sql-database-instances-are-configured-with-automated-backups
+refId: gcp-database-ensure-that-cloud-sql-database-instances-are-configured-with-automated-backups
 type: asset
-ruleName: >
+name: >
   Ensure that Cloud SQL database instances are configured with automated backups
 description: >
   Backups provide a way to restore a Cloud SQL instance to recover lost data or recover from a problem with that instance.
@@ -16,4 +17,4 @@ sql: >
      AND acc."configuration" -> 'settings' -> 'backupConfiguration' -> 'enabled' IS NULL
       OR acc."configuration" -> 'settings' -> 'backupConfiguration' -> 'enabled' <> 'true'
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

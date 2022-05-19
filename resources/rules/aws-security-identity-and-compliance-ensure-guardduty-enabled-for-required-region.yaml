@@ -1,8 +1,8 @@
-# id: 3f6d5049-58e9-4bf0-b653-989b0545537e
+id: 3f6d5049-58e9-4bf0-b653-989b0545537e
 # opnrvn-r-11
-ruleId: aws-security-identity-and-compliance-ensure-guardduty-enabled-for-required-region
+refId: aws-security-identity-and-compliance-ensure-guardduty-enabled-for-required-region
 type: asset
-ruleName: >
+name: >
   Ensure that GuardDuty enabled for required region
 description: >
   By enabling GuardDuty you will get threat detection service that continuously monitors for
@@ -12,15 +12,14 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT 'No GuardDuty enabled in discovered region: ' || reg.region_global as arn
+  SELECT 'No GuardDuty enabled in discovered region: ' || reg.region_global as assetid
     FROM (SELECT distinct awsregion as region_global
             FROM ${magpie_schema}.awsguarddutydetector
            WHERE awsregion != 'aws-global') reg
     LEFT JOIN (SELECT awsregion
                  FROM ${magpie_schema}.awsguarddutydetector a
-                WHERE resourcetype = 'AWS::GuardDuty::Detector'
-                  AND "configuration" ->> 'status' = 'ENABLED') a
+                  WHERE "configuration" ->> 'status' = 'ENABLED') a
     ON (reg.region_global = a.awsregion or awsregion is null)
   WHERE awsregion is null
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

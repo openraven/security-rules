@@ -1,6 +1,7 @@
-ruleId: gcp-database-sql-cross-db-flag
+id: b986202a-4007-45d1-9d53-07e3640be33e
+refId: gcp-database-sql-cross-db-flag
 type: asset
-ruleName: >
+name: >
   Ensure that the 'cross db ownership chaining' database flag for Cloud SQL SQL Server instance is set to 'off'
 description: >
   Use the cross db ownership for chaining option to configure cross-database ownership chaining for an instance of Microsoft SQL Server.
@@ -21,4 +22,4 @@ sql: >
        WHERE value ->> 'name' = 'cross db ownership chaining' AND value ->> 'value' = 'off'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

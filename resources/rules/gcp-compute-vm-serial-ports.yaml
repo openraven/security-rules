@@ -1,6 +1,7 @@
-ruleId: gcp-compute-vm-serial-ports
+id: ff9392b5-b2ce-448a-b1c7-3d25cf8a8c3f
+refId: gcp-compute-vm-serial-ports
 type: asset
-ruleName: >
+name: >
   Ensure 'Enable connecting to serial ports' is not enabled for VM Instance
 description: >
   The interactive serial console does not support IP-based access restrictions such as IP whitelists.
@@ -22,4 +23,4 @@ sql: >
           )
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

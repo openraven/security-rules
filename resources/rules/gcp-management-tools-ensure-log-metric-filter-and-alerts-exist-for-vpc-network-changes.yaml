@@ -1,7 +1,8 @@
+id: 38a25426-8499-402f-b8c1-63afe2b07578
 # opnrvn-r-107
-ruleId: gcp-management-tools-ensure-log-metric-filter-and-alerts-exist-for-vpc-network-changes
+refId: gcp-management-tools-ensure-log-metric-filter-and-alerts-exist-for-vpc-network-changes
 type: asset
-ruleName: >
+name: >
   Ensure that the log metric filter and alerts exist for VPC network changes
 description: >
   It is possible to have more than one VPC within a project. In addition,
@@ -10,7 +11,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT 'No log metric filter and alerts exist for VPC network changes' AS asset_id
+  SELECT 'No log metric filter and alerts exist for VPC network changes' AS assetid
   WHERE NOT EXISTS (
       SELECT acc.assetid
         FROM ${magpie_schema}.gcploggingmetric acc
@@ -30,4 +31,4 @@ sql: >
          )
   )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

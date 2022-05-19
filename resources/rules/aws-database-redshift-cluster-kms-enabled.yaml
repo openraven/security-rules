@@ -1,15 +1,16 @@
+id: d547f850-7542-4aba-a6c8-c14ca0db7835
 # opnrvn-r-150
-ruleId: aws-database-redshift-cluster-kms-enabled
+refId: aws-database-redshift-cluster-kms-enabled
 type: asset
-ruleName: >
+name: >
   Encrypted Amazon RedShift Clusters
 description: >
   Ensure Amazon RedShift Clusters are Encrypted with AWS KMS Key. Rule is compliant if encrypted is enabled.
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   FROM ${magpie_schema}.awsredshiftcluster
   WHERE configuration -> 'kmsKeyId' = 'null';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

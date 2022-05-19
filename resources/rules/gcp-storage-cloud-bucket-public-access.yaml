@@ -1,6 +1,7 @@
-ruleId: gcp-storage-cloud-bucket-public-access
+id: b62c330a-260e-4a94-95f9-2fdee2a7f94f
+refId: gcp-storage-cloud-bucket-public-access
 type: asset
-ruleName: >
+name: >
   Ensure that Cloud Storage bucket is not anonymously or publicly accessible
 description: >
   Allowing anonymous or public access grants permissions to anyone to access bucket content.
@@ -17,4 +18,4 @@ sql: >
     ) arr
    WHERE acc.resourcetype = 'GCP::Storage::Bucket' AND (members = 'allUsers' OR members = 'allAuthenticatedUsers')
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

@@ -1,6 +1,7 @@
-ruleId: gcp-database-sql-log-error-verbosity
+id: 6e4b34e3-73d6-481e-a8a9-70611966b836
+refId: gcp-database-sql-log-error-verbosity
 type: asset
-ruleName: >
+name: >
   Ensure 'log_error_verbosity' database flag for Cloud SQL PostgreSQL instance is set to 'DEFAULT' or stricter
 description: >
   The log_error_verbosity flag controls the verbosity/details of messages logged.
@@ -19,4 +20,4 @@ sql: >
        WHERE value ->> 'name' = 'log_error_verbosity' AND value ->> 'value' IN ('default', 'verbose')
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

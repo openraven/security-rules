@@ -1,7 +1,8 @@
+id: 96ccfe84-0465-4e70-9d2a-9ca5dedbf495
 # opnrvn-r-137
-ruleId: gcp-database-ensure-remote-access-db-flag-for-cloud-sql-server-instance-is-set-to-off
+refId: gcp-database-ensure-remote-access-db-flag-for-cloud-sql-server-instance-is-set-to-off
 type: asset
-ruleName: >
+name: >
   Ensure 'remote access' database flag for Cloud SQL SQL Server instance is set to 'off'
 description: >
   The remote access option controls the execution of stored procedures from local or remote servers on which instances of SQL Server are running.
@@ -25,4 +26,4 @@ sql: >
        WHERE value ->> 'name' = 'remote access' AND value ->> 'value' = 'off'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

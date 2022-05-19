@@ -1,8 +1,8 @@
-# id: a2c83730-a2eb-40ce-a378-846577a0f4a2
+id: a2c83730-a2eb-40ce-a378-846577a0f4a2
 # opnrvn-r-47
-ruleId: aws-iam-and-security-ensure-access-keys-are-rotated-every-90-days-or-less
+refId: aws-iam-and-security-ensure-access-keys-are-rotated-every-90-days-or-less
 type: asset
-ruleName: >
+name: >
   Ensure access keys are rotated every 90 days or less
 description: >
   Access keys consist of an access key ID and secret access key, which are used to sign
@@ -13,12 +13,12 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   FROM ${magpie_schema}.awsiamcredentialsreport
-  WHERE resourcetype = 'AWS::IAM::CredentialsReport' AND ((configuration->>'access_key_1_active' = 'true'
+  WHERE ((configuration->>'access_key_1_active' = 'true'
          AND TO_TIMESTAMP(configuration->>'access_key_1_last_rotated', 'YYYY-MM-DD"T"HH24:MI:SS') < now() - interval '90 days')
     OR (configuration->>'access_key_2_active' = 'true'
         AND TO_TIMESTAMP(configuration->>'access_key_2_last_used_date', 'YYYY-MM-DD"T"HH24:MI:SS') < now() - interval '90 days'));
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

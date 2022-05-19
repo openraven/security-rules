@@ -1,8 +1,8 @@
-# id: b1dc3919-5146-4bbc-93d4-7e16b6a2e684
+id: b1dc3919-5146-4bbc-93d4-7e16b6a2e684
 # opnrvn-r-58
-ruleId: aws-compute-ec2-instance-managed-by-systems-manager
+refId: aws-compute-ec2-instance-managed-by-systems-manager
 type: asset
-ruleName: >
+name: >
   Ensure all EC2 instances are managed by SSM
 description: >
   Systems Manager helps you maintain security and compliance by scanning your managed instances
@@ -12,13 +12,12 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT ${magpie_schema}.awsec2instance.arn as assetid
     FROM ${magpie_schema}.awsec2instance
     LEFT JOIN ${magpie_schema}.awsssminstance
-      ON (${magpie_schema}.awsec2instance.resourceid = ${magpie_schema}.awsssminstance.resourceid AND ${magpie_schema}.awsssminstance.resourcetype = 'AWS::SSM::Instance')
-   WHERE ${magpie_schema}.awsec2instance.resourcetype = 'AWS::EC2::Instance'
-     AND ${magpie_schema}.awsec2instance.configuration -> 'state' ->> 'name' = 'running'
+      ON (${magpie_schema}.awsec2instance.resourceid = ${magpie_schema}.awsssminstance.resourceid)
+   WHERE ${magpie_schema}.awsec2instance.configuration -> 'state' ->> 'name' = 'running'
      AND ${magpie_schema}.awsssminstance.resourceid IS NULL;
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

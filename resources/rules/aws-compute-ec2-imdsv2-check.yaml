@@ -1,15 +1,16 @@
+id: 903a628b-3c9d-46e7-bcb0-c0904fdbb0dd
 # opnrvn-r-147
-ruleId: aws-compute-ec2-imdsv2-check
+refId: aws-compute-ec2-imdsv2-check
 type: asset
-ruleName: >
+name: >
   Checks whether your EC2 instance metadata version is configured with Instance Metadata Service Version 2 (IMDSv2).
 description: >
   The rule is NON_COMPLIANT if the HttpTokens is set to optional.
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   FROM ${magpie_schema}.awsec2instance
   WHERE configuration->'metadataOptions'->>'httpTokens' = 'optional';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

@@ -1,8 +1,8 @@
-# id: 9ea14a0e-1319-47cb-a417-9553ffa50109
+id: 9ea14a0e-1319-47cb-a417-9553ffa50109
 # opnrvn-r-51
-ruleId: aws-storage-s3-bucket-has-no-server-side-encryption-being-enabled-by-another-account
+refId: aws-storage-s3-bucket-has-no-server-side-encryption-being-enabled-by-another-account
 type: asset
-ruleName: >
+name: >
   Ensure S3 bucket has no server-side encryption being enabled by another account
 description: >
   S3 bucket policies allow uploaded files to be encrypted with AES256,
@@ -12,15 +12,14 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT s3bucket.arn
+  SELECT s3bucket.arn as assetid
     FROM ${magpie_schema}.awss3bucket s3bucket,
     LATERAL (
         SELECT value AS ssec
         FROM jsonb_array_elements(s3bucket.supplementaryconfiguration -> 'ServerSideEncryptionConfiguration' -> 'rules')
     ) arr
-    WHERE s3bucket.resourcetype = 'AWS::S3::Bucket'
-      AND arr.ssec -> 'applyServerSideEncryptionByDefault' ->> 'sseAlgorithm' = 'aws:kms'
+      WHERE arr.ssec -> 'applyServerSideEncryptionByDefault' ->> 'sseAlgorithm' = 'aws:kms'
       AND arr.ssec -> 'applyServerSideEncryptionByDefault' ->> 'kmsMasterKeyID' NOT LIKE '%:'||s3bucket.awsaccountid||':%'
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

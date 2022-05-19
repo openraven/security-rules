@@ -1,7 +1,8 @@
+id: 35e1bf60-1df4-45fb-8b8f-f7b6e7bf58da
 # opnrvn-r-139
-ruleId: gcp-database-ensure-contained-database-authentication-db-flag-for-cloud-sql-on-the-sql-server-instance-is-set-to-off
+refId: gcp-database-ensure-contained-database-authentication-db-flag-for-cloud-sql-on-the-sql-server-instance-is-set-to-off
 type: asset
-ruleName: >
+name: >
   Ensure that the 'contained database authentication' database flag for Cloud SQL on the SQL Server instance is set to 'off'
 description: >
   A contained database includes all database settings and metadata required to define the database
@@ -25,4 +26,4 @@ sql: >
        WHERE value ->> 'name' = 'contained database authentication' AND value ->> 'value' = 'off'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

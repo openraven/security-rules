@@ -1,7 +1,8 @@
+id: 0b46d18b-1da7-4604-bc43-1929afa7579a
 # opnrvn-r-97
-ruleId: gcp-compute-ensure-app-engine-applications-enforce-https-connections
+refId: gcp-compute-ensure-app-engine-applications-enforce-https-connections
 type: asset
-ruleName: >
+name: >
   Ensure that App Engine applications enforce HTTPS connections
 description: >
   In order to maintain the highest level of security all connections to an application should be secure by default.
@@ -9,4 +10,4 @@ manualControl: true
 severity: high
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

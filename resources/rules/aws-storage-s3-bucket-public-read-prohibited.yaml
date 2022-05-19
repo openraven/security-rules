@@ -1,13 +1,14 @@
-ruleId: aws-storage-s3-bucket-public-read-prohibited
+id: 6d02e788-98d7-468c-92cf-05e7838d0048
+refId: aws-storage-s3-bucket-public-read-prohibited
 type: asset
-ruleName: >
+name: >
   Checks if public reading of files is enabled for your S3 buckets.
 description: >
   Checks if public reading of files is enabled for your S3 buckets.
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   from ${magpie_schema}.awss3bucket
   WHERE
   (supplementaryconfiguration->'PublicAccessBlockConfiguration'->>'blockPublicAcls' = 'false'
@@ -24,4 +25,4 @@ sql: >
     AND
     supplementaryconfiguration->'BucketPolicy'->>'Statement' LIKE '%"Action": "s3:GetObject"%');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

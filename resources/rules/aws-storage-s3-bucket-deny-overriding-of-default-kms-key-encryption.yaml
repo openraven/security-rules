@@ -1,8 +1,8 @@
-#id: b6b640be-94b6-40fb-8e69-0c3917ffeb4f
+id: b6b640be-94b6-40fb-8e69-0c3917ffeb4f
 # opnrvn-r-53
-ruleId: aws-storage-s3-bucket-deny-overriding-of-default-kms-key-encryption
+refId: aws-storage-s3-bucket-deny-overriding-of-default-kms-key-encryption
 type: asset
-ruleName: >
+name: >
   Ensure S3 bucket deny overriding of default KMS Key encryption
 description: >
   Attackers which have S3:PutObject permission are still able to override default KMS Key encryption
@@ -12,7 +12,7 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT s3bucket.arn
+  SELECT s3bucket.arn as assetid
     FROM ${magpie_schema}.awss3bucket s3bucket
     JOIN LATERAL (
         SELECT value AS ssec
@@ -22,10 +22,9 @@ sql: >
         SELECT value AS stmt
         FROM jsonb_array_elements(s3bucket.supplementaryconfiguration -> 'BucketPolicy' -> 'Statement')
     ) policy ON true
-    WHERE s3bucket.resourcetype = 'AWS::S3::Bucket'
-    AND policy.stmt ->> 'Action' LIKE '%s3:PutObject%'
+    WHERE policy.stmt ->> 'Action' LIKE '%s3:PutObject%'
     AND (policy.stmt ->> 'Condition' IS NULL
           OR policy.stmt ->> 'Condition' not like '%x-amz-server-side-encryption-aws-kms-key-id%')
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

@@ -1,6 +1,7 @@
-ruleId: gcp-database-sql-db-flag-configured
+id: f5839d08-f236-49ae-9d8c-c584f79578a8
+refId: gcp-database-sql-db-flag-configured
 type: asset
-ruleName: >
+name: >
   Ensure 'user options' database flag for Cloud SQL SQL Server instance is not configured
 description: >
   The user options option specifies global defaults for all users.
@@ -19,4 +20,4 @@ sql: >
        WHERE value ->> 'name' = 'user options'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

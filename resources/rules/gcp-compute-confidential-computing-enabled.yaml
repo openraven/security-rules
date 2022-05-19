@@ -1,6 +1,7 @@
-ruleId: gcp-compute-confidential-computing-enabled
+id: ac6e6512-279b-428d-a513-e21d42d009ee
+refId: gcp-compute-confidential-computing-enabled
 type: asset
-ruleName: >
+name: >
   Ensure that Compute instances have Confidential Computing enabled
 description: >
   Confidential Computing enables customers' sensitive code and other data encrypted in memory during processing.
@@ -12,4 +13,4 @@ manualControl: true
 severity: high
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

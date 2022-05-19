@@ -1,14 +1,15 @@
-ruleId: aws-database-rds-instance-public-access-check
+id: e6d6e50f-4dc0-4026-a726-9b00887baf75
+refId: aws-database-rds-instance-public-access-check
 type: asset
-ruleName: >
+name: >
   Ensure deletion protection is enabled for RDS clusters
 description: >
   Checks if Amazon Relational Database Service (Amazon RDS) instances are protected by a backup plan.
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   FROM ${magpie_schema}.awsrdsdbinstance
   WHERE (configuration -> 'publiclyAccessible' = 'true');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

@@ -1,11 +1,12 @@
-policyId: aws-dynamodb-best-practices
-policyName: The best security configuration practices for AWS Dynamo DB assets.
+id: c8158279-ec94-4ca1-9e23-6980223a7d7a
+refId: aws-dynamodb-best-practices
+name: The best security configuration practices for AWS Dynamo DB assets.
 cloudProvider: AWS
 description: >
   The best security configuration practices for AWS Dynamo DB assets.
   Includes every config rule relating to Dynamo DB.
 enabled: true
-rules:
+ruleIds:
   - aws-database-dynamodb-autoscaling-enabled.yaml
   - aws-database-dynamodb-covered-by-backup-plan.yaml
   - aws-database-dynamodb-pitr-enabled.yaml
@@ -13,4 +14,4 @@ rules:
   - aws-database-dynamodb-table-encrypted-kms.yaml
   - aws-database-dynamodb-table-encryption-enabled.yaml
 #  - dynamodb-throughput-limit-check - [to do]
-version: 0.9
+version: 1.0

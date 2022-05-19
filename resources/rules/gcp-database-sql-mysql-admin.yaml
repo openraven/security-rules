@@ -1,6 +1,7 @@
-ruleId: gcp-database-sql-mysql-admin
+id: 57c7bb2a-bcf8-40f2-b67b-ae28a5f10064
+refId: gcp-database-sql-mysql-admin
 type: asset
-ruleName: >
+name: >
   Ensure that a MySQL database instance does not allow anyone to connect with administrative privileges
 description: >
   It is recommended to set a password for the administrative user (root by default)
@@ -9,4 +10,4 @@ manualControl: true
 severity: high
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

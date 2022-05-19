@@ -1,15 +1,16 @@
+id: 6cdb6f83-597d-4db3-be28-32fce2a936eb
 # opnrvn-r-163
-ruleId: aws-database-dynamodb-pitr-enabled
+refId: aws-database-dynamodb-pitr-enabled
 type: asset
-ruleName: >
+name: >
   Checks that point in time recovery (PITR) is enabled for Amazon DynamoDB tables.
 description: >
   The rule is NON_COMPLIANT if point in time recovery is not enabled for Amazon DynamoDB tables.
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   FROM ${magpie_schema}.awsdynamodbtable
   WHERE supplementaryconfiguration->'continuousBackups'->'continuousBackupsDescription'->'pointInTimeRecoveryDescription'->>'pointInTimeRecoveryStatus' = 'DISABLED';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

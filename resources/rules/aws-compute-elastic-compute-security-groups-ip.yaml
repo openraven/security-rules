@@ -1,7 +1,7 @@
-# id: f3ffdd5a-cb43-4da3-9036-222cfd294a2c
-ruleId: aws-compute-elastic-compute-security-groups-ip
+id: f3ffdd5a-cb43-4da3-9036-222cfd294a2c
+refId: aws-compute-elastic-compute-security-groups-ip
 type: asset
-ruleName: >
+name: >
   Ensure no security groups allow ingress from 0.0.0.0/0 to port 22
 description: >
   Security groups provide stateful filtering of ingress/egress network traffic to AWS
@@ -24,7 +24,7 @@ sql: >
          OR permissions->>'toPort' IS NULL
   ),
   get_cidrIp AS (
-    SELECT arn
+    SELECT arn as assetid
     FROM get_ip_ranges
     WHERE ip_ranges->>'cidrIp' = '0.0.0.0/0'
   )
@@ -32,4 +32,4 @@ sql: >
   SELECT * FROM get_cidrIp;
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0

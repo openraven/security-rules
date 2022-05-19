@@ -1,8 +1,8 @@
-# id: 0d54f388-7ebd-435d-8d92-ae5843d938d4
+id: 0d54f388-7ebd-435d-8d92-ae5843d938d4
 # opnrvn-r-5
-ruleId: aws-management-tools-cloudtrail-encryption-enabled
+refId: aws-management-tools-cloudtrail-encryption-enabled
 type: asset
-ruleName: >
+name: >
   Ensure CloudTrail logs are encrypted at rest using KMS CMKs
 description: >
   AWS CloudTrail is a web service that records AWS API calls for an account and makes those
@@ -16,9 +16,9 @@ description: >
 severity: high
 enabled: true
 sql: >
-  SELECT arn
+  SELECT arn as assetid
   FROM ${magpie_schema}.awscloudtrailtrail
   WHERE (supplementaryconfiguration->'trailDetails'->'trail'->>'kmsKeyId' = ''
   OR supplementaryconfiguration->'trailDetails'->'trail'->>'kmsKeyId' IS NULL);
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.9
+version: 1.0
