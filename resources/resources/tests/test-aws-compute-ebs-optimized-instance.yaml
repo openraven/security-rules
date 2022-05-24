@@ -1,13 +1,13 @@
-ruleId: aws-compute-ec2-instance-multiple-eni-check
+ruleId: aws-compute-ebs-optimized-instance
 cloudProvider: aws
 description: >
-  Insecure assets have no attached ENI associted.
-  Secure assets have an attached ENI.
+  Insecure assets do not have EBS optimization enabled.
+  Secure assets  have EBS optimization  enabled.
 insecureAssets:
-  noeni: >
+  noopt: >
     [ {
       "documentId" : "yrbiPogxO-SW36Xh_Rktcw",
-      "arn" : "noeni",
+      "arn" : "noopt",
       "resourceName" : "i-06bf26ad57f6be8d1",
       "resourceId" : "i-06bf26ad57f6be8d1",
       "resourceType" : "AWS::EC2::Instance",
@@ -64,7 +64,7 @@ insecureAssets:
           }
         } ],
         "clientToken" : "158876385112224128",
-        "ebsOptimized" : true,
+        "ebsOptimized" : false,
         "enaSupport" : true,
         "hypervisor" : "xen",
         "iamInstanceProfile" : null,
@@ -180,10 +180,10 @@ insecureAssets:
       "discoveryMeta" : { }
     }]
 secureAssets:
-  eni: >
+  opt: >
     [ {
       "documentId" : "yrbiPogxO-SW36Xh_Rktcw",
-      "arn" : "eni",
+      "arn" : "opt",
       "resourceName" : "i-06bf26ad57f6be8d1",
       "resourceId" : "i-06bf26ad57f6be8d1",
       "resourceType" : "AWS::EC2::Instance",

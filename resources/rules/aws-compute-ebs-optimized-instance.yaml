@@ -1,0 +1,15 @@
+id: 077c6e7b-e48c-4b28-b312-b15118452836
+refId: aws-compute-ebs-optimized-instance
+type: asset
+name: >
+  Checks whether EBS optimization is enabled for your EC2 instances that can be EBS-optimized.
+description: >
+  Checks whether EBS optimization is enabled for your EC2 instances that can be EBS-optimized. The rule is NON_COMPLIANT if EBS optimization is not enabled for an EC2 instance that can be EBS-optimized.
+severity: high
+enabled: true
+sql: >
+  SELECT arn as assetid
+  from ${magpie_schema}.awsec2instance
+  WHERE (configuration -> 'ebsOptimized' = 'false')
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 1.0
