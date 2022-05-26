@@ -60,7 +60,7 @@ ruleIds:
   - aws-storage-s3-bucket-has-no-server-side-encryption-being-enabled-by-another-account.yaml
   - aws-storage-s3-bucket-level-public-access-prohibited.yaml
   - aws-storage-s3-bucket-deny-overriding-of-default-kms-key-encryption.yaml
-  - aws-storage-s3-bucket-versioning-enabled.yaml
+  #- aws-storage-s3-bucket-versioning-enabled.yaml
 #  - aws-iam-and-security-ensure-security-contact-information-is-registered.yaml
   # 56 missing - ransomware C2 rule
   - aws-management-tools-securityhub-enabled-for-required-region.yaml
@@ -107,7 +107,7 @@ ruleIds:
   - aws-database-redshift-enchanced-vpc-routing-enabled.yaml
   - aws-big-data-and-analytics-elasticsearch-node-to-node-encryption.yaml
   - aws-storage-s3-server-side-encryption.yaml
-  - aws-storage-s3-versioning-enabled.yaml
+  #- aws-storage-s3-versioning-enabled.yaml
   - aws-management-tools-cloudwatch-log-group-encrypted.yaml
   - aws-database-redshift-cluster-maintenancesettings-check.yaml
   - aws-disaster-recovery-services-backup-recovery-point-encrypted.yaml
