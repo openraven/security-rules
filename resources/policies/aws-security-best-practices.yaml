@@ -3,7 +3,10 @@ refId: aws-security-best-practices
 name:  AWS Security Best Practices
 cloudProvider: AWS
 description: >
-  AWS Security Best Practices policy analyzes accounts for security best practices and is modelled on guidance published by the Center for Information Security.
+  This is a custom Open Raven Policy for Magpie based on the product version of this policy.
+
+  AWS Security Best Practices policy analyzes accounts for security best practices
+  and is modelled on guidance published by the Center for Information Security.
 enabled: true
 ruleIds:
   - aws-iam-and-security-iam-users-w-password-mfa-enabled.yaml

@@ -3,7 +3,10 @@ refId: aws-ransomware-recovery
 name: AWS Ransomware Recovery
 cloudProvider: AWS
 description: >
-  The AWS Ransomware Recovery policy analyzes accounts for logging and backup configurations to determine if it would be possible to understand what happened in an attack and to adequately restore if compromised.
+  This is a custom Open Raven Policy for Magpie.
+
+  The AWS Ransomware Recovery policy analyzes accounts for logging and backup configurations to determine
+  if it would be possible to understand what happened in an attack and to adequately restore if compromised.
 enabled: true
 ruleIds:
 # rules for logging
