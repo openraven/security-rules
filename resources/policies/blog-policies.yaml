@@ -3,8 +3,8 @@ refId: open-raven-blog-policies
 name: Useful rules published from Open Raven blogs.
 cloudProvider: AWS
 description: >
-  This is a custom Open Raven Policy for Magpie.
-  
+  Source: Custom Open Raven Policy for Magpie.
+
   A collection of the useful rules published from Open Raven blogs.
 enabled: true
 ruleIds:

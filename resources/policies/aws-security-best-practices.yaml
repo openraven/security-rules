@@ -3,7 +3,7 @@ refId: aws-security-best-practices
 name:  AWS Security Best Practices
 cloudProvider: AWS
 description: >
-  This is a custom Open Raven Policy for Magpie based on the product version of this policy.
+  Source: Custom Open Raven Policy for Magpie based on the product version of this policy.
 
   AWS Security Best Practices policy analyzes accounts for security best practices
   and is modelled on guidance published by the Center for Information Security.

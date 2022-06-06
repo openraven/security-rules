@@ -3,7 +3,7 @@ refId: aws-pci-dss
 name: Payment Card Industry Data Security Standard (PCI DSS)
 cloudProvider: AWS
 description: >
-  Based on AWS - https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-pci-controls.html
+  Source: https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-pci-controls.html
 
   The PCI DSS Compliance Standard in Magpie is designed to help you with your ongoing PCI DSS security activities.
   The controls cannot verify whether your systems are compliant with the PCI DSS standard.

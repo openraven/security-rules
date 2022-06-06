@@ -3,8 +3,8 @@ refId: aws-best-practices
 name:  AWS Best Practices
 cloudProvider: AWS
 description: >
-  Originally based on: (https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-fsbp-controls.html)
-  but has since diverged to become a custom Open Raven policy.
+  Source: (https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-fsbp-controls.html)
+  has since diverged to become a custom Open Raven policy.
 
   AWS Best Practices policy analyzes accounts for security best practices
   and is modelled on guidance published by the Center for Information Security.

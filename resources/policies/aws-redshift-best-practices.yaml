@@ -3,7 +3,7 @@ refId: aws-redshift-best-practices
 name: The best security configuration practices for AWS Redshift assets.
 cloudProvider: AWS
 description: >
-  This is a custom Open Raven Policy for Magpie.
+  Source: This is a custom Open Raven Policy for Magpie.
 
   The best security configuration practices for AWS Redshift assets.
   Includes every config rule relating to Redshift.
