@@ -3,7 +3,10 @@ refId: aws-ransomware-iocs
 name: AWS Ransomware Indicators of Compromise
 cloudProvider: AWS
 description: >
-  The AWS Ransomware Indicators of Compromise policy analyzes accounts for signs that a ransomware attack has already taken place.
+  Source: Custom Open Raven Policy for Magpie.
+
+  The AWS Ransomware Indicators of Compromise policy analyzes accounts for
+  signs that a ransomware attack has already taken place.
 enabled: true
 ruleIds:
   - aws-storage-s3-bucket-deny-overriding-of-default-kms-key-encryption.yaml

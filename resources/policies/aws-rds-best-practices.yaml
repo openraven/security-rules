@@ -3,6 +3,8 @@ refId: aws-rds-best-practices
 name: The best security configuration practices for AWS RDS assets.
 cloudProvider: AWS
 description: >
+  Source: Custom Open Raven Policy for Magpie.
+
   The best security configuration practices for AWS RDS assets.
   Includes every config rule relating to RDS.
 enabled: true

@@ -3,11 +3,13 @@ refId: aws-cis-foundations-benchmark
 name: CIS AWS Foundations Benchmark controls
 cloudProvider: AWS
 description: >
+  Source: https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-cis-controls.html
+
   The benchmark enables organizations operating in the cloud to ensure their IT infrastructure is safeguarded against cyber threats and attacks.
   The AWS CIS benchmark provides guidelines for configuring the security options of foundational AWS services.
 enabled: true
 ruleIds:
-#  - aws-iam-and-security-iam-root.yaml # CIS 1.1
+#  - aws-iam-and-security-iam-root.yaml # CIS 1.1 [MANUAL]
   - aws-iam-and-security-iam-user-mfa-enabled.yaml # CIS 1.2
   - aws-iam-and-security-iam-user-unused-credentials-check.yaml  # CIS 1.3
   - aws-iam-and-security-ensure-access-keys-are-rotated-every-90-days-or-less.yaml # CIS 1.4
