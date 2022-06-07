@@ -10,7 +10,7 @@ description: >
 enabled: true
 ruleIds:
   - aws-database-dynamodb-autoscaling-enabled.yaml
-  - aws-database-dynamodb-covered-by-backup-plan.yaml
+#  - aws-database-dynamodb-covered-by-backup-plan.yaml # Negative Rule
   - aws-database-dynamodb-pitr-enabled.yaml
   - aws-database-dynamodb-resources-protected-by-backup-plan.yaml
   - aws-database-dynamodb-table-encrypted-kms.yaml

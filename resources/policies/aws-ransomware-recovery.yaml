@@ -15,19 +15,19 @@ ruleIds:
   - aws-management-tools-cloudtrail-log-file-validation-enabled.yaml
   - aws-management-tools-cloudtrail-encryption-enabled.yaml
   - aws-network-and-content-delivery-vpc-flow-logs-enabled.yaml
-  - aws-management-tools-cloudtrail-enabled-all-regions.yaml
-  - aws-management-tools-cloudtrail-log-metric-filter-and-alarm-exist-for-unauthorized-api-calls.yaml
-  - aws-management-tools-cloud-trail-log-alarm-without-mfa.yaml
-  - aws-management-tools-cloudtrail-metric-filter-and-alarm-exist-for-root-account-usage.yaml
-  - aws-management-tools-cloudtrail-log-metric-filter-and-alaram-exist-for-iam-policy-changes.yaml
-  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-cloudtrail-config-changes.yaml
-  - aws-misc-cloud-trail-cloud-watch-logs-and-alarms.yaml
-  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alaram-exist-for-disabling-or-deleting-CMKs.yaml
-  - aws-management-tools-cloudtrail-log-metric-filter-and-alarm-exist-for-s3-policy-changes.yaml
-  - aws-management-tools-cloudtrail-security-groups.yaml
-  - aws-management-tools-cloudtrail-api-logs.yaml
-  - aws-management-tools-cloudtrail-route-table-logs.yaml
-  - aws-management-tools-cloudtrail-vpc-changes.yaml
+#  - aws-management-tools-cloudtrail-enabled-all-regions.yaml # Negative Rule
+#  - aws-management-tools-cloudtrail-log-metric-filter-and-alarm-exist-for-unauthorized-api-calls.yaml # Negative Rule
+#  - aws-management-tools-cloud-trail-log-alarm-without-mfa.yaml # Negative Rule
+#  - aws-management-tools-cloudtrail-metric-filter-and-alarm-exist-for-root-account-usage.yaml # Negative Rule
+#  - aws-management-tools-cloudtrail-log-metric-filter-and-alaram-exist-for-iam-policy-changes.yaml # Negative Rule
+#  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-cloudtrail-config-changes.yaml # Negative Rule
+#  - aws-misc-cloud-trail-cloud-watch-logs-and-alarms.yaml # Negative Rule
+#  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alaram-exist-for-disabling-or-deleting-CMKs.yaml # Negative Rule
+#  - aws-management-tools-cloudtrail-log-metric-filter-and-alarm-exist-for-s3-policy-changes.yaml # Negative Rule
+#  - aws-management-tools-cloudtrail-security-groups.yaml # Negative Rule
+#  - aws-management-tools-cloudtrail-api-logs.yaml  # Negative Rule
+#  - aws-management-tools-cloudtrail-route-table-logs.yaml # Negative Rule
+#  - aws-management-tools-cloudtrail-vpc-changes.yaml # Negative Rule
 # rules for backup (to be added)
 
 version: 1.0

@@ -31,29 +31,29 @@ ruleIds:
   - aws-iam-and-security-ensure-support-role-is-created-to-manage-incidents-with-aws-support.yaml # CIS 1.20
 #  - aws-iam-and-security-no-default-access-keys-with-console-password-for-all-iam-users.yaml # CIS 1.21 [MANUAL]
   - aws-security-and-identity-compliance-iam-full-admin.yaml # CIS 1.22
-  - aws-management-tools-cloudtrail-enabled-all-regions.yaml # CIS 2.1
+#  - aws-management-tools-cloudtrail-enabled-all-regions.yaml # CIS 2.1 # Negative Rule
   - aws-management-tools-cloud-trail-log-file-validation-enabled.yaml # CIS 2.2
   - aws-storage-s3-bucket-cloudtrail-logs.yaml # CIS 2.3
   - aws-management-tools-cloudtrail-cloudwatch-logs-enabled.yaml # CIS 2.4
-  - aws-config-enabled.yaml # CIS 2.5
+#  - aws-config-enabled.yaml # CIS 2.5 # Negative Rule
   - aws-management-tools-ensure-s3-bucket-access-logging-is-enabled-on-cloudtrail-s3-bucket.yaml # CIS 2.6
   - aws-management-tools-cloudtrail-encryption-enabled.yaml # CIS 2.7
   - aws-iam-and-security-cmk-backing-key-rotation-enabled.yaml # CIS 2.8
   - aws-network-and-content-delivery-vpc-flow-logs-enabled.yaml # CIS 2.9
-  - aws-management-tools-cloudtrail-log-metric-filter-and-alarm-exist-for-unauthorized-api-calls.yaml # CIS 3.1
-  - aws-management-tools-cloud-trail-log-alarm-without-mfa.yaml # CIS 3.2
-  - aws-management-tools-cloudtrail-metric-filter-and-alarm-exist-for-root-account-usage.yaml # CIS 3.3
-  - aws-management-tools-cloudtrail-log-metric-filter-and-alaram-exist-for-iam-policy-changes.yaml # CIS 3.4
-  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-cloudtrail-config-changes.yaml # CIS 3.5
-  - aws-misc-cloud-trail-cloud-watch-logs-and-alarms.yaml # CIS 3.6
-  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alaram-exist-for-disabling-or-deleting-CMKs.yaml # CIS 3.7
-  - aws-management-tools-cloudtrail-log-metric-filter-and-alarm-exist-for-s3-policy-changes.yaml # CIS 3.8
-  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-aws-config-changes.yaml # CIS 3.9
-  - aws-management-tools-cloudtrail-security-groups.yaml # CIS 3.10
-  - aws-management-tools-cloudtrail-logs-nacl.yaml # CIS 3.11
-  - aws-management-tools-cloudtrail-api-logs.yaml # CIS 3.12
-  - aws-management-tools-cloudtrail-route-table-logs.yaml # CIS 3.13
-  - aws-management-tools-cloudtrail-vpc-changes.yaml # CIS 3.14
+#  - aws-management-tools-cloudtrail-log-metric-filter-and-alarm-exist-for-unauthorized-api-calls.yaml # CIS 3.1 # Negative Rule
+#  - aws-management-tools-cloud-trail-log-alarm-without-mfa.yaml # CIS 3.2 # Negative Rule
+#  - aws-management-tools-cloudtrail-metric-filter-and-alarm-exist-for-root-account-usage.yaml # CIS 3.3 # Negative Rule
+#  - aws-management-tools-cloudtrail-log-metric-filter-and-alaram-exist-for-iam-policy-changes.yaml # CIS 3.4 # Negative Rule
+#  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-cloudtrail-config-changes.yaml # CIS 3.5 # Negative Rule
+#  - aws-misc-cloud-trail-cloud-watch-logs-and-alarms.yaml # CIS 3.6 # Negative Rule
+#  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alaram-exist-for-disabling-or-deleting-CMKs.yaml # CIS 3.7 # Negative Rule
+#  - aws-management-tools-cloudtrail-log-metric-filter-and-alarm-exist-for-s3-policy-changes.yaml # CIS 3.8 # Negative Rule
+#  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-aws-config-changes.yaml # CIS 3.9 # Negative Rule
+#  - aws-management-tools-cloudtrail-security-groups.yaml # CIS 3.10 # Negative Rule
+#  - aws-management-tools-cloudtrail-logs-nacl.yaml # CIS 3.11 # Negative Rule
+#  - aws-management-tools-cloudtrail-api-logs.yaml # CIS 3.12  # Negative Rule
+#  - aws-management-tools-cloudtrail-route-table-logs.yaml # CIS 3.13 # Negative Rule
+#  - aws-management-tools-cloudtrail-vpc-changes.yaml # CIS 3.14 # Negative Rule
   - aws-compute-elastic-compute-security-groups-ip.yaml # CIS 4.1
   - aws-iam-and-security-no-security-groups-allow-all-ingress-to-port-3389.yaml # CIS 4.2
   - aws-iam-and-security-default-security-group-for-vpc-restricts-all-traffic.yaml # CIS 4.3
