@@ -10,7 +10,7 @@ description: >
   make programmatic calls to AWS from the AWS Command Line Interface (AWS CLI), Tools
   for Windows PowerShell, the AWS SDKs, or direct HTTP calls using the APIs for individual
   AWS services. It is recommended that all access keys be regularly rotated.
-severity: high
+severity: medium
 enabled: true
 sql: >
   SELECT arn as assetid

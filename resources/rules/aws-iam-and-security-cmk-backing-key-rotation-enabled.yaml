@@ -10,7 +10,7 @@ description: >
   operations such as encryption and decryption. Automated key rotation currently retains all
   prior backing keys so that decryption of encrypted data can take place transparently. It is
   recommended that CMK key rotation be enabled
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

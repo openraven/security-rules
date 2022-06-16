@@ -8,7 +8,7 @@ description: >
   Security groups provide stateful filtering of ingress/egress network traffic to AWS
   resources. It is recommended that no security group allows unrestricted ingress access to
   port 3389.
-severity: high
+severity: medium
 enabled: true
 sql: >
   WITH
