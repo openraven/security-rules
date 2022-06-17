@@ -6,7 +6,7 @@ name: >
   Checks whether your EC2 instance metadata version is configured with Instance Metadata Service Version 2 (IMDSv2).
 description: >
   The rule is NON_COMPLIANT if the HttpTokens is set to optional.
-severity: high
+severity: medium
 enabled: true
 sql: >
   SELECT arn as assetid

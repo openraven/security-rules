@@ -14,7 +14,7 @@ description: >
   multiple individuals within the organization; where feasible, phone contact details should
   point to a PABX hunt group or other call-forwarding system.
 manualControl: true
-severity: high
+severity: low
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 1.0

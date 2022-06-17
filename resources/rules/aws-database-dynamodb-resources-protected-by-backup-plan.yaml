@@ -6,7 +6,7 @@ name: >
   Checks if Amazon DynamoDB tables are protected by a backup plan.
 description: >
   The rule is NON_COMPLIANT if the DynamoDB Table is not covered by a backup plan.
-severity: high
+severity: medium
 enabled: true
 sql: >
   select arn as assetid

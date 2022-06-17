@@ -10,7 +10,7 @@ description: >
   for the required access. "AWS Access" means accessing the APIs of AWS in order to access
   AWS resources or manage AWS account resources.
 manualControl: true
-severity: high
+severity: low
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 1.0

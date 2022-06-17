@@ -5,7 +5,7 @@ name: >
   Checks if Amazon Redshift cluster has enchanced VPC routing enabled
 description: >
   Checks if Amazon Redshift cluster has enchanced VPC routing enabled. The rule is NON_COMPLIANT if enchanced vpc routing is not enabled.
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

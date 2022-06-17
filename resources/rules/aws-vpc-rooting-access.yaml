@@ -8,7 +8,7 @@ description: >
   any connections between the peered VPCs. These routes can be as specific as desired - even
   peering a VPC to only a single host on the other side of the connection.
 manualControl: true
-severity: high
+severity: medium
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 1.0

@@ -5,7 +5,7 @@ name: >
   Checks if there are instances stopped for more than the allowed number of days.
 description: >
   Checks if there are instances stopped for more than the allowed number of days. The instance is NON_COMPLIANT if the state of the ec2 instance has been stopped for longer than the allowed number of days.
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

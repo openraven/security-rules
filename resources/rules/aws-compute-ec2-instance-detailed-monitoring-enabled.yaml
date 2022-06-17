@@ -6,7 +6,7 @@ name: >
   Checks if detailed monitoring is enabled for EC2 instances.
 description: >
   The rule is NON_COMPLIANT if detailed monitoring is not enabled.
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

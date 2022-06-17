@@ -5,7 +5,7 @@ name: >
   Checks if Amazon Elastic Compute Cloud (Amazon EC2) uses multiple ENIs (Elastic Network Interfaces).
 description: >
   Checks if Amazon Elastic Compute Cloud (Amazon EC2) uses multiple ENIs (Elastic Network Interfaces). This rule is NON_COMPLIANT an Amazon EC2 instance use multiple network interfaces.
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

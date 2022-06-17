@@ -8,7 +8,7 @@ name: >
 description: >
   Checks if Auto Scaling or On-Demand is enabled on your DynamoDB tables and/or global secondary indexes.
   Optionally you can set the read and write capacity units for the table or global secondary index.
-severity: high
+severity: low
 enabled: true
 sql: >
   select arn as assetid

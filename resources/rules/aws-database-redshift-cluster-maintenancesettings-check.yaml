@@ -5,7 +5,7 @@ name: >
   Ensure Amazon Redshift Clusters allow Version upgrade
 description: >
   Ensures allowVersionUpgrade is enabled for Amazon Redshift clusters.
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

@@ -9,7 +9,7 @@ description: >
   malicious activity and unauthorized behavior to protect your AWS accounts, workloads, and data stored in Amazon S3
   by event logs analysis.
   We are excluding verification for aws-global region from possible regions for GuardDuty
-severity: high
+severity: medium
 enabled: true
 sql: >
   SELECT 'No GuardDuty enabled in discovered region: ' || reg.region_global as assetid

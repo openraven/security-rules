@@ -5,6 +5,7 @@ name: >
   Ensure AWS Lambda function is configured with function-level concurrent execution limit.
 description: >
   Checks whether the AWS Lambda function is configured with function-level concurrent execution limit. The rule is NON_COMPLIANT if the Lambda function is not configured with function-level concurrent execution limit.severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

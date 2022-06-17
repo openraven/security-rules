@@ -5,7 +5,7 @@ name: >
   Checks if versioning is enabled for your S3 buckets. Optionally, the rule checks if MFA delete is enabled for your S3 buckets.
 description: >
   Checks if versioning is enabled for your S3 buckets. Optionally, the rule checks if MFA delete is enabled for your S3 buckets.
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

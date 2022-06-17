@@ -13,7 +13,7 @@ description: >
   leverage server side encryption (SSE) and KMS customer created master keys (CMK) to
   further protect CloudTrail logs. It is recommended that CloudTrail be configured to use
   SSE-KMS
-severity: high
+severity: medium
 enabled: true
 sql: >
   SELECT arn as assetid

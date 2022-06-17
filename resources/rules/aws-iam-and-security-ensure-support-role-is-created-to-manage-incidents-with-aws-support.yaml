@@ -8,7 +8,7 @@ description: >
   AWS provides a support center that can be used for incident notification and response, as
   well as technical support and customer services. Create an IAM Role to allow authorized
   users to manage incidents with AWS Support.
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid
