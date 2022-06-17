@@ -7,7 +7,7 @@ name: >
 description: >
   Availability of the snapshot could prevent data lose and will simplify restoring in case of data encryption
   Current rule check existence of Snapshots for EBS Volumes of running EC2 instances
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT DISTINCT ec2.arn as assetid

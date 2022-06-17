@@ -9,7 +9,7 @@ description: >
   and reporting on (or taking corrective action on) any policy violations it detects.
   In case if SSM is enabled for specific region but EC2 instances are not managed -
   they will not be monitored from any kind of SSM perspective
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT ${magpie_schema}.awsec2instance.arn as assetid

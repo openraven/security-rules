@@ -5,7 +5,7 @@ name: >
   Checks whether EC2 managed instances have the desired platform configurations.
 description: >
   Checks whether EC2 managed instances have the desired platform configurations.
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

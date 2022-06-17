@@ -8,7 +8,7 @@ description: >
   in order to disallow immediate bucket content removal to encryption, or any other harmful modifications
   Disabled versioning is also considered as violation by this rule since attacker may make the bucket vulnerable
   by disabling object versioning with the s3:PutBucketVersioning permission
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid, supplementaryconfiguration -> 'Versioning' ->> 'status'

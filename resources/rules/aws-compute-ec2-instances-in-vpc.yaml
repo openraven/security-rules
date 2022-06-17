@@ -5,7 +5,7 @@ name: >
   Checks if your EC2 instances belong to a virtual private cloud (VPC)
 description: >
   Checks if your EC2 instances belong to a virtual private cloud (VPC).
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

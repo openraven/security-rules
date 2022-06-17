@@ -14,7 +14,7 @@ description: >
   The default VPC in every region should have its default security group updated to comply.
   Any newly created VPCs will automatically contain a default security group that will need
   remediation to comply with this recommendation.
-severity: high
+severity: medium
 enabled: true
 sql: >
   SELECT arn as assetid

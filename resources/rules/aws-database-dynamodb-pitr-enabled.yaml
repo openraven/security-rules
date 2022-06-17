@@ -6,7 +6,7 @@ name: >
   Checks that point in time recovery (PITR) is enabled for Amazon DynamoDB tables.
 description: >
   The rule is NON_COMPLIANT if point in time recovery is not enabled for Amazon DynamoDB tables.
-severity: high
+severity: medium
 enabled: true
 sql: >
   SELECT arn as assetid

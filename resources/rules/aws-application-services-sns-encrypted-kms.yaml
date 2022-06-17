@@ -6,7 +6,7 @@ name: >
   Ensure Amazon SNS Topic is Encrypted with AWS KMS Key
 description: >
   Ensure Amazon SNS Topic is Encrypted with AWS KMS Key. To be compliant an SNS Topic needs to be encrypted with a KMS Key.
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

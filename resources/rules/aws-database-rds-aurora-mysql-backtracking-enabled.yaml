@@ -5,7 +5,7 @@ name: >
   Ensure Aurora MySQL databases have backtracking enabled
 description: >
   Checks if Aurora MySQL databases have backtracking enabled. The rule is NON_COMPLIANT if the database cluster uses MySQL and does not have backtracking enabled.
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

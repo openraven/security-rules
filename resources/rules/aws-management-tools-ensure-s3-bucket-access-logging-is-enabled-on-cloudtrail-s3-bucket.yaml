@@ -10,7 +10,7 @@ description: >
   request type, the resources specified in the request worked, and the time and date the
   request was processed. It is recommended that bucket access logging be enabled on the
   CloudTrail S3 bucket
-severity: high
+severity: medium
 enabled: true
 sql: >
   SELECT arn as assetid

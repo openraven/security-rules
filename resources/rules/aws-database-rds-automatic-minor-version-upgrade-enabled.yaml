@@ -5,7 +5,7 @@ name: >
   Ensure Automatic Minor Version Upgrade is enabled.
 description: >
   Checks if Amazon Relational Database Service (RDS) database instances are configured for automatic minor version upgrades.
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

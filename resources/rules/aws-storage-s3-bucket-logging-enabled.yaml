@@ -5,7 +5,7 @@ name: >
   Checks if logging is enabled for your S3 buckets.
 description: >
   Checks if logging is enabled for your S3 buckets.
-severity: high
+severity: medium
 enabled: true
 sql: >
   SELECT arn as assetid

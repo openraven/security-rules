@@ -5,7 +5,7 @@ name: >
   Checks if EBS volumes are attached to EC2 instances.
 description: >
   Checks if EBS volumes are attached to EC2 instances.
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

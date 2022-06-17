@@ -5,7 +5,7 @@ name: >
   Ensure Multi-AZ replication is enabled.
 description: >
   Checks if Multi-AZ replication is enabled on Amazon Aurora clusters managed by Amazon Relational Database Service (Amazon RDS).
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid
