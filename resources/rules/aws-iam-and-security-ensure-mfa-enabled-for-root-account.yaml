@@ -13,7 +13,7 @@ severity: high
 enabled: true
 sql: >
   SELECT arn as assetid
-  FROM ${magpie_schema}.awsiamaccount
+  FROM ${magpie_schema}.awsaccount
     WHERE configuration->>'AccountMFAEnabled' != '1';
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
