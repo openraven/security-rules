@@ -6,10 +6,10 @@ description: >
 insecureAssets:
   nooai: >
     [ {
-      "documentId" : "yHbC7rRpOnSi4RkJomU6dg",
+      "documentId" : "nooai",
       "arn" : "nooai",
       "resourceName" : "d14lty3fhvnvvm.cloudfront.net",
-      "resourceId" : "E3ND8W6R0QD6P2",
+      "resourceId" : "nooai",
       "resourceType" : "AWS::CloudFront::Distribution",
       "awsRegion" : "aws-global",
       "awsAccountId" : "00000000000",
@@ -134,10 +134,10 @@ insecureAssets:
 secureAssets:
   oai: >
     [ {
-      "documentId" : "yHbC7rRpOnSi4RkJomU6dg",
+      "documentId" : "oai",
       "arn" : "oai",
       "resourceName" : "d14lty3fhvnvvm.cloudfront.net",
-      "resourceId" : "E3ND8W6R0QD6P2",
+      "resourceId" : "oai",
       "resourceType" : "AWS::CloudFront::Distribution",
       "awsRegion" : "aws-global",
       "awsAccountId" : "00000000000",

@@ -10,6 +10,6 @@ enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awscloudfrontdistribution
-  WHERE (configuration -> 'viewerCertificate' -> 'sslSupportMethod' != 'sni-only')
+  WHERE (configuration->'viewerCertificate' ->>'sslSupportMethod' != 'sni-only');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 1.0

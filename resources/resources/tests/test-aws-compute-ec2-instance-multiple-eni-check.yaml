@@ -354,5 +354,4 @@ secureAssets:
         "Name" : "MSSQL_2016_STD"
       },
       "discoveryMeta" : { }
-
-    }]
+      }]

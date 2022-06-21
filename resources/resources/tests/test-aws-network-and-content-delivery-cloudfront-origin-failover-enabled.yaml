@@ -205,7 +205,7 @@ secureAssets:
           } ]
         },
         "originGroups" : {
-          "quantity" : 1,
+          "quantity" : 2,
           "items" : [ {
             "id" : "testgroup",
             "failoverCriteria" : {
