@@ -139,4 +139,6 @@ ruleIds:
   - aws-network-and-content-delivery-cloudfront-origin-failover-enabled.yaml
   - aws-network-and-content-delivery-cloudfront-origin-access-identity-enabled.yaml
   - aws-network-and-content-delivery-cloudfront-associated-with-waf.yaml
+  - aws-iam-and-security-default-security-group-for-vpc-restricts-all-traffic.yaml
+
 version: 1.0
