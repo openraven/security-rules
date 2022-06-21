@@ -9,6 +9,6 @@ enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awscloudfrontdistribution
-  WHERE (configuration -> 'originGroups' -> 'members' -> 'quantity' < 2)
+  WHERE (configuration -> 'originGroups' -> 'members' -> 'quantity' < '2')
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 1.0
