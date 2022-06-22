@@ -28,7 +28,6 @@ ruleIds:
   - aws-iam-and-security-cmk-backing-key-rotation-enabled.yaml
   - aws-compute-elastic-compute-security-groups-ip.yaml
   - aws-iam-and-security-no-security-groups-allow-all-ingress-to-port-3389.yaml
-<<<<<<< HEAD
 #  - aws-vpc-rooting-access.yaml
   - aws-iam-and-security-ensure-access-keys-are-rotated-every-90-days-or-less.yaml
   - aws-iam-and-security-cmk-backing-key-rotation-enabled.yaml
@@ -117,9 +116,3 @@ ruleIds:
   - aws-network-and-content-delivery-cloudfront-origin-access-identity-enabled.yaml
   - aws-network-and-content-delivery-cloudfront-associated-with-waf.yaml
   - aws-iam-and-security-default-security-group-for-vpc-restricts-all-traffic.yaml
-
-version: 1.0
-=======
-  - aws-iam-and-security-default-security-group-for-vpc-restricts-all-traffic.yaml
-version: 1.0
->>>>>>> main
