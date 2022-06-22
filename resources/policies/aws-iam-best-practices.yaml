@@ -3,6 +3,8 @@ refId: aws-iam-best-practices
 name: The best security configuration practices for AWS IAM assets.
 cloudProvider: AWS
 description: >
+  Source: Custom Open Raven Policy for Magpie.
+
   The best security configuration practices for AWS IAM assets.
   Includes every config rule relating to IAM.
 enabled: true

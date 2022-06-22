@@ -7,7 +7,7 @@ name: >
 description: >
   In a Multi-AZ deployment, Amazon RDS automatically provisions and maintains
   a synchronous standby replica in a different Availability Zone.
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

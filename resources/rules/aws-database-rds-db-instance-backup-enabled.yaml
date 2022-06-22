@@ -5,7 +5,7 @@ name: >
   Ensure Amazon RDS Database Instances have backup enabled
 description: >
   Ensure Amazon RDS Database Instances have a backup enabled. The rule is NON COMPLIANT if back up is not enabled.
-severity: high
+severity: medium
 enabled: true
 sql: >
   SELECT arn as assetid

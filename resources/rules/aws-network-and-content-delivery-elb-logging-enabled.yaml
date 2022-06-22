@@ -5,7 +5,7 @@ name: >
   Checks if an Elastic Load Balancer has logging enabled.
 description: >
   Checks if the Application Load Balancer and the Classic Load Balancer have logging enabled. The rule is NON_COMPLIANT if the access_logs.s3.enabled is false or access_logs.S3.bucket is not equal to the s3BucketName that you provided.
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

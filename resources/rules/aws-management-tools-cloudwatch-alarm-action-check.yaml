@@ -6,7 +6,7 @@ name: >
   Ensure CloudWatch alarms have an associated alarm action
 description: >
   Checks whether CloudWatch alarms have at least one alarm action, one INSUFFICIENT_DATA action, or one OK action enabled. Optionally, checks whether any of the actions matches one of the specified ARNs.
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

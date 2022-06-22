@@ -5,7 +5,7 @@ name: >
   Checks if a CloudWatch log group is encrypted with a KMS key
 description: >
   Checks if a log group in Amazon CloudWatch Logs is encrypted with a AWS Key Management Service (KMS) managed Customer Master Keys (CMK). The rule is NON_COMPLIANT if no AWS KMS CMK is configured on the log groups.
-severity: high
+severity: medium
 enabled: true
 sql: >
   SELECT arn as assetid

@@ -14,7 +14,7 @@ description: >
   to send logs to CloudWatch Logs. For a trail that is enabled in all regions in an account,
   CloudTrail sends log files from all those regions to a CloudWatch Logs log group. It is
   recommended that CloudTrail logs be sent to CloudWatch Logs
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

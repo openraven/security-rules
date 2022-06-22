@@ -8,7 +8,7 @@ description: >
   Avoid stale roles which could cause access leakage and uncontrolled manipulation with S3 bucket data
   which increase risks and leads to Ransomware violations.
   This rule checks inline policies only. The Attached policies verified under the respective rule.
-severity: high
+severity: medium
 enabled: true
 sql: >
   SELECT DISTINCT a.arn as assetid

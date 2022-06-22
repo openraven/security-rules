@@ -5,6 +5,7 @@ name: >
   Ensure AWS Lambda function policy attached to the Lambda resource prohibits public access.
 description: >
   Checks if the AWS Lambda function policy attached to the Lambda resource prohibits public access. If the Lambda function policy allows public access it is NON_COMPLIANT.
+severity: medium
 enabled: true
 sql: >
   SELECT arn as assetid

@@ -3,6 +3,8 @@ refId: aws-s3-best-practices
 name: The best security configuration practices for AWS S3 assets.
 cloudProvider: AWS
 description: >
+  Source: This is a custom Open Raven Policy for Magpie.
+
   The best security configuration practices for AWS S3 assets.
   Includes every config rule relating to S3.
 enabled: true

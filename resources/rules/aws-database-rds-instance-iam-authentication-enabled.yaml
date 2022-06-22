@@ -6,7 +6,7 @@ name: >
   Ensure IAM is enabled for RDS instances
 description: >
   Checks if an Amazon Relational Database Service (Amazon RDS) instance has AWS Identity and Access Management (IAM) authentication enabled.
-severity: high
+severity: medium
 enabled: true
 sql: >
   SELECT arn as assetid

@@ -6,7 +6,7 @@ name: >
   Checks whether Amazon S3 bucket has lock enabled, by default.
 description: >
   The rule is NON_COMPLIANT if the lock is not enabled.
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

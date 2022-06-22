@@ -1,34 +1,61 @@
-id: 74406460-05fb-4057-b646-f3f8c1e5d56f
-refId: aws-security-best-practices
-name:  AWS Security Best Practices
+id: 9f2f2cd8-9ee6-4cfe-b144-ba9dd78bbe23
+refId: aws-best-practices
+name:  AWS Best Practices
 cloudProvider: AWS
 description: >
-  Source: Custom Open Raven Policy for Magpie based on the product version of this policy.
+  Source: (https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-fsbp-controls.html)
+  has since diverged to become a custom Open Raven policy.
 
-  AWS Security Best Practices policy analyzes accounts for security best practices
+  AWS Best Practices policy analyzes accounts for security best practices
   and is modelled on guidance published by the Center for Information Security.
 enabled: true
 ruleIds:
-  - aws-iam-and-security-iam-users-w-password-mfa-enabled.yaml
-  - aws-iam-and-security-iam-user-unused-credentials-check.yaml
-  - aws-iam-and-security-ensure-access-keys-are-rotated-every-90-days-or-less.yaml
-  - aws-iam-and-security-ensure-iam-password-policy-requires-one-uppercase-letter.yaml
-  - aws-iam-and-security-ensure-iam-password-requires-one-lowercase-letter.yaml
-  - aws-iam-and-security-iam-password-policy-symbols.yaml
-  - aws-iam-and-security-ensure-iam-password-requires-one-number.yaml
-  - aws-iam-and-security-iam-password-policy-length.yaml
+#  - aws-iam-and-security-ensure-security-questions-registered.yaml
+#  - aws-iam-and-security-iam-root.yaml
+#  - aws-management-tools-cloudtrail-enabled-all-regions.yaml # Negative Rule
+  - aws-storage-s3-default-encryption-kms.yaml
+  - aws-management-tools-cloudtrail-log-file-validation-enabled.yaml
+  - aws-management-tools-cloudtrail-encryption-enabled.yaml
+ # - aws-config-enabled.yaml # Negative Rule
+  - aws-iam-and-security-default-security-group-for-vpc-restricts-all-traffic.yaml
+  - aws-iam-and-security-iam-user-unused-credentials-check.yaml # CIS 1.3 [IAM]
+  - aws-compute-ec2-ensure-all-ec2-ebs-volumes-have-snapshots.yaml
+  - aws-network-and-content-delivery-vpc-flow-logs-enabled.yaml
+ # - aws-security-identity-and-compliance-ensure-guardduty-enabled-for-required-region.yaml # Negative Rule
+  - aws-iam-and-security-root-account-mfa-enabled.yaml # CIS 1.14 [IAM]
+  - aws-iam-and-security-ensure-iam-password-policy-expires-password-90-days-or-less.yaml # CIS 1.11 [IAM]
   - aws-iam-and-security-iam-password-policy-reuse.yaml
-  - aws-iam-and-security-ensure-iam-password-policy-expires-password-90-days-or-less.yaml
-  - aws-iam-and-security-ensure-no-root-account-access-key-exists.yaml
-  - aws-iam-and-security-ensure-mfa-enabled-for-root-account.yaml
+  - aws-iam-and-security-ensure-iam-password-requires-one-number.yaml
+  - aws-iam-and-security-iam-password-policy-symbols.yaml
+  - aws-iam-and-security-ensure-iam-password-requires-one-lowercase-letter.yaml
+  - aws-iam-and-security-iam-password-policy-length.yaml
+  - aws-iam-and-security-ensure-iam-password-policy-requires-one-uppercase-letter.yaml
   - aws-iam-and-security-iam-user-no-policies-check.yaml
-  - aws-iam-and-security-ensure-support-role-is-created-to-manage-incidents-with-aws-support.yaml
+#  - aws-iam-and-security-iam-instance-roles-used-for-aws-resource-access-from-instances.yaml
+  - aws-iam-and-security-iam-attaced-policies.yaml
+  - aws-iam-and-security-ensure-no-stale-roles-with-inline-policies-for-s3-access.yaml
+ # - aws-account-details.yaml
+#  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-aws-config-changes.yaml # Negative Rule
+#  - aws-misc-cloud-trail-cloud-watch-logs-and-alarms.yaml # Negative Rule
+#  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-cloudtrail-config-changes.yaml # Negative Rule
+#  - aws-management-tools-cloud-trail-log-alarm-without-mfa.yaml # Negative Rule
+#  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alaram-exist-for-disabling-or-deleting-CMKs.yaml # Negative Rule
+#  - aws-management-tools-cloudtrail-api-logs.yaml # Negative Rule
+#  - aws-management-tools-cloudtrail-log-metric-filter-and-alaram-exist-for-iam-policy-changes.yaml # Negative Rule
+#  - aws-management-tools-cloudtrail-logs-nacl.yaml # Negative Rule
+#  - aws-management-tools-cloudtrail-metric-filter-and-alarm-exist-for-root-account-usage.yaml # Negative Rule
+#  - aws-management-tools-cloudtrail-route-table-logs.yaml # Negative Rule
+#  - aws-management-tools-cloudtrail-log-metric-filter-and-alarm-exist-for-s3-policy-changes.yaml # Negative Rule
+#  - aws-management-tools-cloudtrail-security-groups.yaml # Negative Rule
+  # - aws-management-tools-cloudtrail-log-metric-filter-and-alarm-exist-for-unauthorized-api-calls.yaml # Negative Rule
+#  - aws-management-tools-cloudtrail-vpc-changes.yaml # Negative Rule
+  - aws-iam-and-security-ensure-mfa-enabled-for-root-account.yaml
+  #  - opnrvn-r-40.yaml: this is a duplicate
   - aws-iam-and-security-no-default-access-keys-with-console-password-for-all-iam-users.yaml
-  - aws-management-tools-cloudtrail-cloudwatch-logs-enabled.yaml
-  - aws-iam-and-security-cmk-backing-key-rotation-enabled.yaml
+  - aws-security-and-identity-compliance-iam-full-admin.yaml
+  - aws-iam-and-security-ensure-no-root-account-access-key-exists.yaml
   - aws-compute-elastic-compute-security-groups-ip.yaml
   - aws-iam-and-security-no-security-groups-allow-all-ingress-to-port-3389.yaml
-<<<<<<< HEAD
 #  - aws-vpc-rooting-access.yaml
   - aws-iam-and-security-ensure-access-keys-are-rotated-every-90-days-or-less.yaml
   - aws-iam-and-security-cmk-backing-key-rotation-enabled.yaml
@@ -40,13 +67,13 @@ ruleIds:
   #- aws-storage-s3-bucket-versioning-enabled.yaml
 #  - aws-iam-and-security-ensure-security-contact-information-is-registered.yaml
   # 56 missing - ransomware C2 rule
-  - aws-management-tools-securityhub-enabled-for-required-region.yaml
+#  - aws-management-tools-securityhub-enabled-for-required-region.yaml # Negative Rule
   - aws-compute-ec2-instance-managed-by-systems-manager.yaml
   - aws-iam-and-security-ensure-support-role-is-created-to-manage-incidents-with-aws-support.yaml
   - aws-management-tools-cloudtrail-cloudwatch-logs-enabled.yaml
   #   newly added rules michael + tara.
-  - aws-management-tools-cloudtrail-security-trail-enabled.yaml
-  - aws-management-tools-cloudtrail-s3-dataevents-enabled.yaml
+#  - aws-management-tools-cloudtrail-security-trail-enabled.yaml # Negative Rule
+ # - aws-management-tools-cloudtrail-s3-dataevents-enabled.yaml # Negative Rule
   - aws-compute-ec2-instance-detailed-monitoring-enabled.yaml
   - aws-compute-ec2-imdsv2-check.yaml
   - aws-management-tools-cloudwatch-alarm-action-check.yaml
@@ -77,8 +104,8 @@ ruleIds:
   - aws-database-rds-aurora-mysql-backtracking-enabled.yaml
   - aws-database-redshift-cluster-public-access-check.yaml
   - aws-database-redshift-cluster-configuration-check.yaml
-  - aws-database-dynamodb-covered-by-backup-plan.yaml
-  - aws-database-rds-covered-by-backup-plan.yaml
+ # - aws-database-dynamodb-covered-by-backup-plan.yaml # Negative Rule
+ # - aws-database-rds-covered-by-backup-plan.yaml # Negative Rule
   - aws-storage-fsx-resources-protected-by-backup-plan.yaml
   - aws-network-and-content-delivery-elb-logging-enabled.yaml
   - aws-database-redshift-enchanced-vpc-routing-enabled.yaml
@@ -109,17 +136,4 @@ ruleIds:
   - aws-compute-ec2-ebs-encryption-by-default.yaml
   - aws-compute-ec2-stopped-instance.yaml
   - aws-compute-ec2-instance-multiple-eni-check.yaml
-  - aws-compute-ebs-optimized-instance.yaml
-  - aws-compute-ebs-encrypted-volumes.yaml
-  - aws-network-and-content-delivery-cloudfront-viewer-policy-https.yaml
-  - aws-network-and-content-delivery-cloudfront-sni-enabled.yaml
-  - aws-network-and-content-delivery-cloudfront-origin-failover-enabled.yaml
-  - aws-network-and-content-delivery-cloudfront-origin-access-identity-enabled.yaml
-  - aws-network-and-content-delivery-cloudfront-associated-with-waf.yaml
-  - aws-iam-and-security-default-security-group-for-vpc-restricts-all-traffic.yaml
-
 version: 1.0
-=======
-  - aws-iam-and-security-default-security-group-for-vpc-restricts-all-traffic.yaml
-version: 1.0
->>>>>>> main

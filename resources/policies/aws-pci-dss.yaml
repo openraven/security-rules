@@ -3,6 +3,8 @@ refId: aws-pci-dss
 name: Payment Card Industry Data Security Standard (PCI DSS)
 cloudProvider: AWS
 description: >
+  Source: https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-pci-controls.html
+
   The PCI DSS Compliance Standard in Magpie is designed to help you with your ongoing PCI DSS security activities.
   The controls cannot verify whether your systems are compliant with the PCI DSS standard.
   They can neither replace internal efforts nor guarantee that you will pass a PCI DSS assessment.
@@ -11,13 +13,13 @@ enabled: true
 ruleIds:
 #  - Auto Scaling groups associated with a load balancer should use health checks # [PCI.AutoScaling.1]
   - aws-management-tools-cloud-trail-encryption-enabled.yaml # [PCI.CloudTrail.1]
-  - aws-management-tools-cloudtrail-enabled-all-regions.yaml # [PCI.CloudTrail.2]
+#  - aws-management-tools-cloudtrail-enabled-all-regions.yaml # [PCI.CloudTrail.2]  # Negative Rule
   - aws-management-tools-cloudtrail-log-file-validation-enabled.yaml # [PCI.CloudTrail.3]
   - aws-management-tools-cloudtrail-cloudwatch-logs-enabled.yaml # [PCI.CloudTrail.4]
 #  - CodeBuild GitHub or Bitbucket source repository URLs should use OAuth [PCI.CodeBuild.1]
 #  - CodeBuild project environment variables should not contain clear text credentials [PCI.CodeBuild.2]
-  - aws-config-enabled.yaml # [PCI.Config.1]
-  - aws-management-tools-cloudtrail-metric-filter-and-alarm-exist-for-root-account-usage.yaml # [PCI.CW.1]
+#  - aws-config-enabled.yaml # [PCI.Config.1] # Negative Rule
+#  - aws-management-tools-cloudtrail-metric-filter-and-alarm-exist-for-root-account-usage.yaml # [PCI.CW.1] # Negative Rule
 #  - AWS Database Migration Service replication instances should not be public # [PCI.DMS.1]
 #  - Amazon EBS snapshots should not be publicly restorable # [PCI.EC2.1]
   - aws-iam-and-security-default-security-group-for-vpc-restricts-all-traffic.yaml # [PCI.EC2.2]
@@ -28,7 +30,7 @@ ruleIds:
 #  - Application Load Balancer should be configured to redirect all HTTP requests to HTTPS # [PCI.ELBV2.1]
 #  - Elasticsearch domains should be in a VPC # [PCI.ES.1]
 #  - Elasticsearch domains should have encryption at rest enabled # [PCI.ES.2]
-  - aws-security-identity-and-compliance-ensure-guardduty-enabled-for-required-region.yaml # [PCI.GuardDuty.1]
+#  - aws-security-identity-and-compliance-ensure-guardduty-enabled-for-required-region.yaml # [PCI.GuardDuty.1] # Negative Rule
   - aws-iam-and-security-ensure-no-root-account-access-key-exists.yaml # [PCI.IAM.1]
   - aws-iam-and-security-iam-user-no-policies-check.yaml # [PCI.IAM.2]
   - aws-security-and-identity-compliance-iam-full-admin.yaml # [PCI.IAM.3]
@@ -45,15 +47,15 @@ ruleIds:
   - aws-iam-and-security-ensure-iam-password-policy-expires-password-90-days-or-less.yaml # [PCI.IAM.8]
 #  - KMS key rotation should be enabled # [PCI.KMS.1]
 #  - Lambda functions should prohibit public access # [PCI.Lambda.1]
-#  - Lambda functions should be in a VPC # [PCI.Lambda.2]
+  - aws-compute-lambda-inside-vpc.yaml # [PCI.Lambda.2]
 #  - Amazon OpenSearch domains should be in a VPC # [PCI.OpenSearch.1]
 #  - OpenSearch domains should have encryption at rest enabled # [PCI.OpenSearch.2]
 #  - RDS snapshots should prohibit public access # [PCI.RDS.1]
   - aws-database-rds-instance-public-access-check.yaml # [PCI.RDS.2]
   - aws-database-redshift-cluster-public-access-check.yaml # [PCI.Redshift.1]
-#  - S3 buckets should prohibit public write access # [PCI.S3.1]
-#  - S3 buckets should prohibit public read access # [PCI.S3.2]
-#  - S3 buckets should have cross-region replication enabled # [PCI.S3.3]
+  - aws-storage-s3-bucket-public-write-prohibited.yaml # [PCI.S3.1]
+  - aws-storage-s3-bucket-public-read-prohibited.yaml # [PCI.S3.2]
+  - aws-storage-s3-bucket-replication-enabled.yaml # [PCI.S3.3]
   - aws-storage-s3-server-side-encryption.yaml # [PCI.S3.4]
 #  - S3 buckets should require requests to use Secure Socket Layer # [PCI.S3.5]
   - aws-storage-s3-bucket-level-public-access-prohibited.yaml # [PCI.S3.6]

@@ -5,7 +5,7 @@ name: >
   Check that Amazon Elastic Block Store (EBS) encryption is enabled by default.
 description: >
   Check that Amazon Elastic Block Store (EBS) encryption is enabled by default. The rule is NON_COMPLIANT if the encryption is not enabled.
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

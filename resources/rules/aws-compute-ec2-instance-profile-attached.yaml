@@ -5,7 +5,7 @@ name: >
   Checks if an Amazon Elastic Compute Cloud (Amazon EC2) instance has an Identity and Access Management (IAM) profile attached to it.
 description: >
   Checks if an Amazon Elastic Compute Cloud (Amazon EC2) instance has an Identity and Access Management (IAM) profile attached to it. This rule is NON_COMPLIANT if no IAM profile is attached to the Amazon EC2 instance.
-severity: high
+severity: low
 enabled: true
 sql: >
   SELECT arn as assetid

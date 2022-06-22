@@ -5,7 +5,7 @@ name: >
   Ensure  AWS Lambda function is allowed access to an Amazon Virtual Private Cloud.
 description: >
   Checks whether an AWS Lambda function is allowed access to an Amazon Virtual Private Cloud. The rule is NON_COMPLIANT if the Lambda function is not VPC enabled.
-severity: high
+severity: medium
 enabled: true
 sql: >
   SELECT arn as assetid
