@@ -1,0 +1,93 @@
+ruleId: aws-compute-ebs-encrypted-volumes
+cloudProvider: aws
+description: >
+  Insecure assets do not have volumes encrypted.
+  Secure assets  have volumes  enabled.
+insecureAssets:
+  notencrypted: >
+    [ {
+        "documentId" : "02xO8TNzNciyxfx6iNOI0w",
+        "arn" : "notencrypted",
+        "resourceName" : "vol-062d9d32d5e09f2a0",
+        "resourceId" : "vol-062d9d32d5e09f2a0",
+        "resourceType" : "AWS::EC2::Volume",
+        "awsRegion" : "us-east-2",
+        "awsAccountId" : "00000000000",
+        "createdIso" : null,
+        "updatedIso" : "2022-05-17T19:44:29.002536Z",
+        "discoverySessionId" : null,
+        "maxSizeInBytes" : null,
+        "sizeInBytes" : null,
+        "configuration" : {
+          "attachments" : [ {
+            "attachTime" : "2020-05-07T12:49:03Z",
+            "device" : "/dev/sda1",
+            "instanceId" : "i-0b018ba202c2bc2bc",
+            "state" : "attached",
+            "volumeId" : "vol-062d9d32d5e09f2a0",
+            "deleteOnTermination" : true
+          } ],
+          "availabilityZone" : "us-east-2c",
+          "createTime" : "2020-05-07T12:49:03.982Z",
+          "encrypted" : false,
+          "kmsKeyId" : null,
+          "outpostArn" : null,
+          "size" : 127,
+          "snapshotId" : "snap-09170fbe2f8c4d632",
+          "state" : "in-use",
+          "volumeId" : "vol-062d9d32d5e09f2a0",
+          "iops" : 381,
+          "tags" : null,
+          "volumeType" : "gp2",
+          "fastRestored" : null,
+          "multiAttachEnabled" : false,
+          "throughput" : null
+        },
+        "supplementaryConfiguration" : { },
+        "tags" : { },
+        "discoveryMeta" : { }
+    }]
+secureAssets:
+  encrypted: >
+    [ {
+        "documentId" : "02xO8TNzNciyxfx6iNOI0w",
+        "arn" : "encrypted",
+        "resourceName" : "vol-062d9d32d5e09f2a0",
+        "resourceId" : "vol-062d9d32d5e09f2a0",
+        "resourceType" : "AWS::EC2::Volume",
+        "awsRegion" : "us-east-2",
+        "awsAccountId" : "00000000000",
+        "createdIso" : null,
+        "updatedIso" : "2022-05-17T19:44:29.002536Z",
+        "discoverySessionId" : null,
+        "maxSizeInBytes" : null,
+        "sizeInBytes" : null,
+        "configuration" : {
+          "attachments" : [ {
+            "attachTime" : "2020-05-07T12:49:03Z",
+            "device" : "/dev/sda1",
+            "instanceId" : "i-0b018ba202c2bc2bc",
+            "state" : "attached",
+            "volumeId" : "vol-062d9d32d5e09f2a0",
+            "deleteOnTermination" : true
+          } ],
+          "availabilityZone" : "us-east-2c",
+          "createTime" : "2020-05-07T12:49:03.982Z",
+          "encrypted" : true,
+          "kmsKeyId" : null,
+          "outpostArn" : null,
+          "size" : 127,
+          "snapshotId" : "snap-09170fbe2f8c4d632",
+          "state" : "in-use",
+          "volumeId" : "vol-062d9d32d5e09f2a0",
+          "iops" : 381,
+          "tags" : null,
+          "volumeType" : "gp2",
+          "fastRestored" : null,
+          "multiAttachEnabled" : false,
+          "throughput" : null
+        },
+        "supplementaryConfiguration" : { },
+        "tags" : { },
+        "discoveryMeta" : { }
+      } ]

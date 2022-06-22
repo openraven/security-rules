@@ -1,0 +1,14 @@
+id: 1fb62a14-da79-4bdd-b199-1f9868004a38
+refId: aws-network-and-content-delivery-cloudfront-origin-failover-enabled.yaml
+type: asset
+name: >
+  Checks whether an origin group is configured for the distribution of at least 2 origins in the origin group for Amazon CloudFront.
+description: >
+  Checks whether an origin group is configured for the distribution of at least 2 origins in the origin group for Amazon CloudFront. This rule is NON_COMPLIANT if there are no origin groups for the distribution.
+enabled: true
+sql: >
+  SELECT arn as assetid
+  FROM ${magpie_schema}.awscloudfrontdistribution
+  WHERE (configuration -> 'originGroups' -> 'quantity' < '2')
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 1.0

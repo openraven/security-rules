@@ -1,0 +1,16 @@
+id: 6d02e788-98d7-468c-92cf-05e7838d0048
+refId: aws-network-and-content-delivery-elb-deletion-protection-enabled
+type: asset
+name: >
+  Checks if Elastic Load Balancing has deletion protection enabled.
+description: >
+  Checks if Elastic Load Balancing has deletion protection enabled. The rule is NON_COMPLIANT if deletion_protection.enabled is false.
+severity: high
+enabled: true
+sql: >
+  SELECT arn as assetid
+  from ${magpie_schema}.awselasticloadbalancingloadbalancer
+  WHERE (supplementaryconfiguration->'attributes'->) as attri
+  WHERE attri #>'key' = "deletion_protection.enabled" AND 'value' = 'false'
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 1.0

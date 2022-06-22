@@ -1,0 +1,261 @@
+ruleId: aws-network-and-content-delivery-cloudfront-associated-with-waf
+cloudProvider: aws
+description: >
+  Insecure assets is not associated with a WAF
+  Secure assets is associated with a WAF
+insecureAssets:
+  nowaf: >
+    [ {
+      "documentId" : "yHbC7rRpOnSi4RkJomU6dg",
+      "arn" : "nowaf",
+      "resourceName" : "d14lty3fhvnvvm.cloudfront.net",
+      "resourceId" : "E3ND8W6R0QD6P2",
+      "resourceType" : "AWS::CloudFront::Distribution",
+      "awsRegion" : "aws-global",
+      "awsAccountId" : "00000000000",
+      "createdIso" : null,
+      "updatedIso" : "2022-05-19T13:57:05.759499Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "id" : "E3ND8W6R0QD6P2",
+        "arn" : "arn:aws:cloudfront::476384142167:distribution/E3ND8W6R0QD6P2",
+        "status" : "Deployed",
+        "lastModifiedTime" : "2022-02-28T15:45:45.752Z",
+        "domainName" : "d14lty3fhvnvvm.cloudfront.net",
+        "aliases" : {
+          "quantity" : 0,
+          "items" : null
+        },
+        "origins" : {
+          "quantity" : 1,
+          "items" : [ {
+            "id" : "taratestcompliant.s3.us-east-2.amazonaws.com",
+            "domainName" : "taratestcompliant.s3.us-east-2.amazonaws.com",
+            "originPath" : "",
+            "customHeaders" : {
+              "quantity" : 0,
+              "items" : null
+            },
+            "s3OriginConfig" : {
+              "originAccessIdentity" : "origin-access-identity/cloudfront/E3D6R4SZ1P4CO1"
+            },
+            "customOriginConfig" : null,
+            "connectionAttempts" : 3,
+            "connectionTimeout" : 10,
+            "originShield" : {
+              "enabled" : true,
+              "originShieldRegion" : "us-east-1"
+            }
+          } ]
+        },
+        "originGroups" : {
+          "quantity" : 0,
+          "items" : null
+        },
+        "defaultCacheBehavior" : {
+          "targetOriginId" : "taratestcompliant.s3.us-east-2.amazonaws.com",
+          "trustedSigners" : {
+            "enabled" : false,
+            "quantity" : 0,
+            "items" : null
+          },
+          "trustedKeyGroups" : {
+            "enabled" : false,
+            "quantity" : 0,
+            "items" : null
+          },
+          "viewerProtocolPolicy" : "allow-all",
+          "allowedMethods" : {
+            "quantity" : 2,
+            "items" : [ "HEAD", "GET" ],
+            "cachedMethods" : {
+              "quantity" : 2,
+              "items" : [ "HEAD", "GET" ]
+            }
+          },
+          "smoothStreaming" : false,
+          "compress" : true,
+          "lambdaFunctionAssociations" : {
+            "quantity" : 0,
+            "items" : null
+          },
+          "functionAssociations" : {
+            "quantity" : 0,
+            "items" : null
+          },
+          "fieldLevelEncryptionId" : "",
+          "realtimeLogConfigArn" : "arn:aws:cloudfront::476384142167:realtime-log-config/test",
+          "cachePolicyId" : "658327ea-f89d-4fab-a63d-7e88639e58f6",
+          "originRequestPolicyId" : null,
+          "responseHeadersPolicyId" : null,
+          "forwardedValues" : null,
+          "minTTL" : null,
+          "defaultTTL" : null,
+          "maxTTL" : null
+        },
+        "cacheBehaviors" : {
+          "quantity" : 0,
+          "items" : null
+        },
+        "customErrorResponses" : {
+          "quantity" : 0,
+          "items" : null
+        },
+        "comment" : "",
+        "priceClass" : "PriceClass_All",
+        "enabled" : true,
+        "viewerCertificate" : {
+          "cloudFrontDefaultCertificate" : true,
+          "iamCertificateId" : null,
+          "acmCertificateArn" : null,
+          "sslSupportMethod" : "vip",
+          "minimumProtocolVersion" : "TLSv1",
+          "certificate" : null,
+          "certificateSource" : "cloudfront"
+        },
+        "restrictions" : {
+          "geoRestriction" : {
+            "restrictionType" : "none",
+            "quantity" : 0,
+            "items" : null
+          }
+        },
+        "webACLId" : "",
+        "httpVersion" : "HTTP2",
+        "isIPV6Enabled" : true,
+        "aliasICPRecordals" : null
+      },
+      "supplementaryConfiguration" : { },
+      "tags" : { },
+      "discoveryMeta" : { }
+    } ]
+secureAssets:
+  waf: >
+    [ {
+      "documentId" : "yHbC7rRpOnSi4RkJomU6dg",
+      "arn" : "waf",
+      "resourceName" : "d14lty3fhvnvvm.cloudfront.net",
+      "resourceId" : "E3ND8W6R0QD6P2",
+      "resourceType" : "AWS::CloudFront::Distribution",
+      "awsRegion" : "aws-global",
+      "awsAccountId" : "00000000000",
+      "createdIso" : null,
+      "updatedIso" : "2022-05-19T13:57:05.759499Z",
+      "discoverySessionId" : null,
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "id" : "E3ND8W6R0QD6P2",
+        "arn" : "arn:aws:cloudfront::476384142167:distribution/E3ND8W6R0QD6P2",
+        "status" : "Deployed",
+        "lastModifiedTime" : "2022-02-28T15:45:45.752Z",
+        "domainName" : "d14lty3fhvnvvm.cloudfront.net",
+        "aliases" : {
+          "quantity" : 0,
+          "items" : null
+        },
+        "origins" : {
+          "quantity" : 1,
+          "items" : [ {
+            "id" : "taratestcompliant.s3.us-east-2.amazonaws.com",
+            "domainName" : "taratestcompliant.s3.us-east-2.amazonaws.com",
+            "originPath" : "",
+            "customHeaders" : {
+              "quantity" : 0,
+              "items" : null
+            },
+            "s3OriginConfig" : {
+              "originAccessIdentity" : "origin-access-identity/cloudfront/E3D6R4SZ1P4CO1"
+            },
+            "customOriginConfig" : null,
+            "connectionAttempts" : 3,
+            "connectionTimeout" : 10,
+            "originShield" : {
+              "enabled" : true,
+              "originShieldRegion" : "us-east-1"
+            }
+          } ]
+        },
+        "originGroups" : {
+          "quantity" : 0,
+          "items" : null
+        },
+        "defaultCacheBehavior" : {
+          "targetOriginId" : "taratestcompliant.s3.us-east-2.amazonaws.com",
+          "trustedSigners" : {
+            "enabled" : false,
+            "quantity" : 0,
+            "items" : null
+          },
+          "trustedKeyGroups" : {
+            "enabled" : false,
+            "quantity" : 0,
+            "items" : null
+          },
+          "viewerProtocolPolicy" : "redirect-to-https",
+          "allowedMethods" : {
+            "quantity" : 2,
+            "items" : [ "HEAD", "GET" ],
+            "cachedMethods" : {
+              "quantity" : 2,
+              "items" : [ "HEAD", "GET" ]
+            }
+          },
+          "smoothStreaming" : false,
+          "compress" : true,
+          "lambdaFunctionAssociations" : {
+            "quantity" : 0,
+            "items" : null
+          },
+          "functionAssociations" : {
+            "quantity" : 0,
+            "items" : null
+          },
+          "fieldLevelEncryptionId" : "",
+          "realtimeLogConfigArn" : "arn:aws:cloudfront::476384142167:realtime-log-config/test",
+          "cachePolicyId" : "658327ea-f89d-4fab-a63d-7e88639e58f6",
+          "originRequestPolicyId" : null,
+          "responseHeadersPolicyId" : null,
+          "forwardedValues" : null,
+          "minTTL" : null,
+          "defaultTTL" : null,
+          "maxTTL" : null
+        },
+        "cacheBehaviors" : {
+          "quantity" : 0,
+          "items" : null
+        },
+        "customErrorResponses" : {
+          "quantity" : 0,
+          "items" : null
+        },
+        "comment" : "",
+        "priceClass" : "PriceClass_All",
+        "enabled" : true,
+        "viewerCertificate" : {
+          "cloudFrontDefaultCertificate" : true,
+          "iamCertificateId" : null,
+          "acmCertificateArn" : null,
+          "sslSupportMethod" : "vip",
+          "minimumProtocolVersion" : "TLSv1",
+          "certificate" : null,
+          "certificateSource" : "cloudfront"
+        },
+        "restrictions" : {
+          "geoRestriction" : {
+            "restrictionType" : "none",
+            "quantity" : 0,
+            "items" : null
+          }
+        },
+        "webACLId" : "arn:aws:wafv2:us-east-1:476384142167:global/webacl/testtara/47c317b9-b514-4f4b-a1da-d38fce3e7d3c",
+        "httpVersion" : "HTTP2",
+        "isIPV6Enabled" : true,
+        "aliasICPRecordals" : null
+      },
+      "supplementaryConfiguration" : { },
+      "tags" : { },
+      "discoveryMeta" : { }
+    } ]
