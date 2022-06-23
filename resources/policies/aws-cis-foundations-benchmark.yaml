@@ -1,6 +1,6 @@
 id: 675ad766-c88f-4fc1-bf9e-60036514a9bc
 refId: aws-cis-foundations-benchmark
-name: CIS AWS Foundations Benchmark controls
+name: CIS AWS Foundations Benchmark Controls
 cloudProvider: AWS
 description: >
   Source: https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-cis-controls.html

@@ -1,6 +1,6 @@
 id: 8b075bf8-0804-46d0-8255-13c1cb89587d
 refId: aws-ransomware-iocs
-name: AWS Ransomware Indicators of Compromise
+name: AWS Ransomware Indicators of Compromise (IOC)
 cloudProvider: AWS
 description: >
   Source: Custom Open Raven Policy for Magpie.
