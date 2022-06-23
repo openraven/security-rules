@@ -1,6 +1,6 @@
 id: b94ab61c-09fc-449c-9d45-ddb39aa825db
 refId: open-raven-blog-policies
-name: Useful rules published from Open Raven blogs.
+name: Open Raven Blog Recommendations
 cloudProvider: AWS
 description: >
   Source: Custom Open Raven Policy for Magpie.

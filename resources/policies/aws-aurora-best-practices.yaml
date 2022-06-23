@@ -1,6 +1,6 @@
 id: 3f76a1e1-a11d-4446-9e94-8bbf30da1a6a
 refId: aws-aurora-best-practices
-name: The best security configuration practices for AWS Aurora assets.
+name: Amazon Aurora Configuration Best Practices
 cloudProvider: AWS
 description: >
   Source: Custom Open Raven Policy for Magpie.

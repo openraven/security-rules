@@ -1,6 +1,6 @@
 id: 9f2f2cd8-9ee6-4cfe-b144-ba9dd78bbe23
 refId: aws-best-practices
-name:  AWS Best Practices
+name:  AWS Foundational Security Best Practices Controls
 cloudProvider: AWS
 description: >
   Source: (https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-fsbp-controls.html)

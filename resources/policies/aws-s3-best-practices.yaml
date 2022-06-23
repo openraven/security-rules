@@ -1,6 +1,6 @@
 id: 1b8c09f0-3acd-4421-8b47-40499b9077c3
 refId: aws-s3-best-practices
-name: The best security configuration practices for AWS S3 assets.
+name: AWS S3 Configuration Best Practices
 cloudProvider: AWS
 description: >
   Source: This is a custom Open Raven Policy for Magpie.

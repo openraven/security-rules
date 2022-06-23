@@ -1,6 +1,6 @@
 id: 6b699df5-6844-4041-9f9e-186e7d010360
 refId: aws-iam-best-practices
-name: The best security configuration practices for AWS IAM assets.
+name: AWS IAM Configuration Best Practices
 cloudProvider: AWS
 description: >
   Source: Custom Open Raven Policy for Magpie.

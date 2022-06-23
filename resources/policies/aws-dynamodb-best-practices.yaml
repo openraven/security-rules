@@ -1,6 +1,6 @@
 id: c8158279-ec94-4ca1-9e23-6980223a7d7a
 refId: aws-dynamodb-best-practices
-name: The best security configuration practices for AWS Dynamo DB assets.
+name: Amazon Dynamo DB Configuration Best Practices
 cloudProvider: AWS
 description: >
   Source: Custom Open Raven Policy for Magpie.
