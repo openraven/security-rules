@@ -10,4 +10,4 @@ description: >
 enabled: true
 ruleIds:
   - aws-storage-s3-bucket-deny-overriding-of-default-kms-key-encryption.yaml
-version: 1.0
+version: 1.1
