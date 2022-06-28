@@ -143,4 +143,4 @@ ruleIds:
   - aws-network-and-content-delivery-cloudfront-origin-failover-enabled.yaml
   - aws-network-and-content-delivery-cloudfront-origin-access-identity-enabled.yaml
   - aws-network-and-content-delivery-cloudfront-associated-with-waf.yaml
-version: 1.0
+version: 1.1
