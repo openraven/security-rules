@@ -13,4 +13,4 @@ sql: >
   WHERE EXISTS (SELECT * FROM jsonb_array_elements(supplementaryconfiguration->'dbClusters'->'dbClusters') dbClusters
   WHERE dbClusters ->'backtrackWindow' = 'null');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0
+version: 0.2.5

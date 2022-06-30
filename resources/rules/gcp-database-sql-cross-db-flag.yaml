@@ -22,4 +22,4 @@ sql: >
        WHERE value ->> 'name' = 'cross db ownership chaining' AND value ->> 'value' = 'off'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0
+version: 0.2.5

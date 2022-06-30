@@ -23,4 +23,4 @@ sql: >
     AND (jsonb_array_length(configuration->'ipPermissions') > 0
          OR jsonb_array_length(configuration->'ipPermissionsEgress') > 0);
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0
+version: 0.2.5

@@ -29,4 +29,4 @@ ruleIds:
   - aws-compute-elastic-compute-security-groups-ip.yaml
   - aws-iam-and-security-no-security-groups-allow-all-ingress-to-port-3389.yaml
   - aws-iam-and-security-default-security-group-for-vpc-restricts-all-traffic.yaml
-version: 1.1
+version: 0.2.5

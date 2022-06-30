@@ -30,4 +30,4 @@ ruleIds:
   - aws-iam-and-security-iam-user-mfa-enabled.yaml
   - aws-iam-and-security-iam-user-no-policies-check.yaml
   - aws-iam-and-security-iam-user-unused-credentials-check.yaml
-version: 1.1
+version: 0.2.5

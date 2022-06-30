@@ -12,4 +12,4 @@ sql: >
   FROM ${magpie_schema}.awselasticloadbalancingloadbalancer
   WHERE (supplementaryconfiguration -> 'attributes' -> 'loadBalancerAttributes' -> 'accessLog' -> 'enabled' = 'false')
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0
+version: 0.2.5
