@@ -24,4 +24,4 @@ sql: >
   OR TO_TIMESTAMP(supplementaryconfiguration->'status'->>'latestCloudWatchLogsDeliveryTime', 'YYYY-MM-DD"T"HH24:MI:SS') < now() - interval '1 day');
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0
+version: 0.2.5

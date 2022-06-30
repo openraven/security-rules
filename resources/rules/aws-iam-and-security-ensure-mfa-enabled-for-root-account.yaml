@@ -17,4 +17,4 @@ sql: >
     WHERE configuration->>'AccountMFAEnabled' != '1';
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0
+version: 0.2.5

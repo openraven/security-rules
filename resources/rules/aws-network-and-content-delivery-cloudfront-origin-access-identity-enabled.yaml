@@ -12,4 +12,4 @@ sql: >
   WHERE EXISTS (SELECT * FROM jsonb_array_elements(configuration->'origins'->'items') items
   WHERE items ->'s3OriginConfig' -> 'originAccessIdentity' = '""');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0
+version: 0.2.5

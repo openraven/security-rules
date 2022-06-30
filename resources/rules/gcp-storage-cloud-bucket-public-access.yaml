@@ -18,4 +18,4 @@ sql: >
     ) arr
    WHERE acc.resourcetype = 'GCP::Storage::Bucket' AND (members = 'allUsers' OR members = 'allAuthenticatedUsers')
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0
+version: 0.2.5

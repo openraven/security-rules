@@ -21,4 +21,4 @@ sql: >
     OR binding->>'role_' = 'roles/iam.serviceAccountUser'
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.1.3
+version: 0.2.5
