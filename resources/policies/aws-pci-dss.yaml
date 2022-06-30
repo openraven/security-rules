@@ -12,7 +12,7 @@ description: >
 enabled: true
 ruleIds:
 #  - Auto Scaling groups associated with a load balancer should use health checks # [PCI.AutoScaling.1]
-  - aws-management-tools-cloud-trail-encryption-enabled.yaml # [PCI.CloudTrail.1]
+  - aws-management-tools-cloudtrail-encryption-enabled.yaml # [PCI.CloudTrail.1]
 #  - aws-management-tools-cloudtrail-enabled-all-regions.yaml # [PCI.CloudTrail.2]  # Negative Rule
   - aws-management-tools-cloudtrail-log-file-validation-enabled.yaml # [PCI.CloudTrail.3]
   - aws-management-tools-cloudtrail-cloudwatch-logs-enabled.yaml # [PCI.CloudTrail.4]

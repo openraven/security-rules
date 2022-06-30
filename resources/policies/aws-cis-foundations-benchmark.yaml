@@ -32,7 +32,7 @@ ruleIds:
 #  - aws-iam-and-security-no-default-access-keys-with-console-password-for-all-iam-users.yaml # CIS 1.21 [MANUAL]
   - aws-security-and-identity-compliance-iam-full-admin.yaml # CIS 1.22
 #  - aws-management-tools-cloudtrail-enabled-all-regions.yaml # CIS 2.1 # Negative Rule
-  - aws-management-tools-cloud-trail-log-file-validation-enabled.yaml # CIS 2.2
+  - aws-management-tools-cloudtrail-log-file-validation-enabled.yaml # CIS 2.2
   - aws-storage-s3-bucket-cloudtrail-logs.yaml # CIS 2.3
   - aws-management-tools-cloudtrail-cloudwatch-logs-enabled.yaml # CIS 2.4
 #  - aws-config-enabled.yaml # CIS 2.5 # Negative Rule
