@@ -7,7 +7,7 @@ description: >
 
   The AWS Ransomware Prevention policy analyzes S3 buckets for three characteristics that make
   it prone to ransomware attacks.
-enabled: true
+enabled: false
 ruleIds:
   - aws-storage-s3-ransomware-prevention.yaml
 version: 0.2.6
