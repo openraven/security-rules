@@ -1,0 +1,13 @@
+id: 83e7734f-aaaa-48ec-af3d-2f0575baa7ba
+refId: aws-ransomware-prevention
+name: AWS Ransomware Prevention
+cloudProvider: AWS
+description: >
+  Source: Custom Open Raven Policy for Magpie.
+
+  The AWS Ransomware Prevention policy analyzes S3 buckets for three characteristics that make
+  it prone to ransomware attacks.
+enabled: true
+ruleIds:
+  - aws-storage-s3-ransomware-prevention.yaml
+version: 0.2.6
