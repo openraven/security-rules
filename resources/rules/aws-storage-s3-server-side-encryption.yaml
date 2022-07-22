@@ -5,7 +5,7 @@ name: >
   S3 bucket does not have the Amazon S3 default encryption enabled
 description: >
   The rule is NON_COMPLIANT if your Amazon S3 bucket is not encrypted by default.
-severity: high
+severity: medium
 enabled: true
 sql: >
   SELECT arn as assetid
