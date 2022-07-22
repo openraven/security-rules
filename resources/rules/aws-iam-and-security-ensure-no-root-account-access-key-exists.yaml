@@ -3,7 +3,7 @@ id: 47cbd0ee-e428-4fe4-9fae-85fb84b3b290
 refId: aws-iam-and-security-ensure-no-root-account-access-key-exists
 type: asset
 name: >
-  Ensure no root account access key exists
+  Root Account Access Key exists
 description: >
   The root account is the most privileged user in an AWS account. AWS Access Keys provide
   programmatic access to a given AWS account. It is recommended that all access keys
@@ -18,4 +18,4 @@ sql: >
               OR configuration->>'access_key_2_active' = 'true'));
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

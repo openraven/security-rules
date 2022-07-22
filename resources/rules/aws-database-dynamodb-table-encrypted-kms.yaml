@@ -3,8 +3,9 @@ id: bb941fe0-197f-4937-ad1c-c03ed8bd74a4
 refId: aws-database-dynamodb-table-encrypted-kms
 type: asset
 name: >
-  Checks if Amazon DynamoDB table is encrypted with AWS Key Management Service (KMS).
+  DynamoDB table is not encrypted by AWS KMS
 description: >
+  This rule checks if point Amazon DynamoDB tables are encrypted by AWS Key Management System (KMS).
   The rule is NON_COMPLIANT if Amazon DynamoDB table is not encrypted with AWS KMS.
   The rule is also NON_COMPLIANT if the encrypted AWS KMS key is not present in kmsKeyArns input parameter.
 severity: high
@@ -15,4 +16,4 @@ sql: >
   WHERE configuration->'sseDescription' = 'null'
   OR configuration->'sseDescription'->>'sseType' != 'KMS';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

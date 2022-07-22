@@ -2,9 +2,10 @@ id: 31b27d2b-7848-4add-b180-8a92e643fcbe
 refId: aws-compute-eks-endpoint-no-public-access
 type: asset
 name: >
-  Ensure Amazon Elastic Kubernetes Service (Amazon EKS) endpoint is not publicly accessible
+  EKS endpoint is publicly accessible
 description: >
-  Checks whether Amazon Elastic Kubernetes Service (Amazon EKS) endpoint is not publicly accessible. The rule is non-complaint if the endpoint is available publically.
+  This rule checks if Amazon Elastic Kubernetes Service (Amazon EKS) endpoint is not publicly accessible.
+  The rule is non-complaint if the endpoint is available publically.
 severity: high
 enabled: true
 sql: >
@@ -12,4 +13,4 @@ sql: >
   FROM ${magpie_schema}.awsekscluster
   WHERE (configuration -> 'cluster' -> 'resourcesVpcConfig' -> 'endpointPublicAccess' = 'true');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

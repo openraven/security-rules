@@ -3,11 +3,10 @@ id: 1f4045c2-739b-413f-80db-cf4d560835a1
 refId: aws-compute-ec2-ensure-all-ec2-ebs-volumes-have-snapshots
 type: asset
 name: >
-  Ensure all EC2 EBS Volumes has snapshots
+  EC2 EBS Volumes do not have snapshots
 description: >
-  Availability of the snapshot could prevent data lose and will simplify restoring in case of data encryption
-  Current rule check existence of Snapshots for EBS Volumes of running EC2 instances
-severity: low
+  This rule checks if running EC2 instance EBS Volumes have snapshots as snapshots could prevent data lose and will simplify restoring in case of data encryption.
+severity: medium
 enabled: true
 sql: >
   SELECT DISTINCT ec2.arn as assetid
@@ -22,4 +21,4 @@ sql: >
   AND arr.ebs_device ->> 'status' = 'attached'
   AND snap.configuration ->> 'snapshotId' is null
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

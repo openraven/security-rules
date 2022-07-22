@@ -13,4 +13,4 @@ ruleIds:
   - aws-compute-ec2-instance-detailed-monitoring-enabled.yaml
   - aws-iam-and-security-iam-user-mfa-enabled.yaml
   - aws-management-tools-ensure-s3-bucket-access-logging-is-enabled-on-cloudtrail-s3-bucket.yaml
-version: 0.2.5
+version: 0.2.6

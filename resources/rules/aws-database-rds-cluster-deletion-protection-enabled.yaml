@@ -1,12 +1,11 @@
 id: 2653cd5e-3d52-47ed-b7ad-d1f8243f9e70
 # opnrvn-r-166
-
 refId: aws-database-rds-cluster-deletion-protection-enabled
 type: asset
 name: >
-  Ensure deletion protection is enabled for RDS clusters
+  RDS Clusters do not have deletion protection enabled
 description: >
-  Checks if an Amazon Relational Database Service (Amazon RDS) cluster has deletion protection enabled.
+  This rule checks if an Amazon Relational Database Service (Amazon RDS) cluster has deletion protection enabled.
 severity: medium
 enabled: true
 sql: >
@@ -16,4 +15,4 @@ sql: >
   EXISTS (SELECT * FROM jsonb_array_elements(supplementaryconfiguration->'dbClusters'->'dbClusters') dbClusters
   WHERE dbClusters ->>'deletionProtection' = 'false');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

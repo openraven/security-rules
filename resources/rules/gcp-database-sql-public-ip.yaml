@@ -20,4 +20,4 @@ sql: >
      AND acc."configuration" ->> 'instanceType' = 'CLOUD_SQL_INSTANCE'
      AND acc."configuration" ->> 'ipAddresses' LIKE '%PRIMARY%'
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

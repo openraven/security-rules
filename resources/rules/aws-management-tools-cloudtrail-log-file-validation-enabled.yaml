@@ -3,7 +3,7 @@ id: 6b1fad69-b9d4-4418-8dc1-7b1a7d6cf56d
 refId: aws-management-tools-cloudtrail-log-file-validation-enabled
 type: asset
 name: >
-  Ensure CloudTrail log file validation is enabled
+  CloudTrail log file validation is not enabled
 description: >
   CloudTrail log file validation creates a digitally signed digest file containing a hash of each
   log that CloudTrail writes to S3. These digest files can be used to determine whether a log
@@ -16,4 +16,4 @@ sql: >
   FROM ${magpie_schema}.awscloudtrailtrail
   WHERE supplementaryconfiguration->'trailDetails'->'trail'->'logFileValidationEnabled' != 'true';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

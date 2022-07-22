@@ -2,7 +2,7 @@ id: 379ea727-2b8c-420b-9933-3a157707b931
 refId: aws-iam-and-security-cmk-backing-key-rotation-enabled
 type: asset
 name: >
-  Ensure rotation for customer created CMKs is enabled
+  CMKs Rotation is disabled
 description: >
   AWS Key Management Service (KMS) allows customers to rotate the backing key which is
   key material stored within the KMS which is tied to the key ID of the Customer Created
@@ -18,4 +18,4 @@ sql: >
     WHERE supplementaryconfiguration->'rotation'->'keyRotationEnabled' != 'true';
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

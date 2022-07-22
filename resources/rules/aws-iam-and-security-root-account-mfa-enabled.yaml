@@ -3,7 +3,7 @@ id: 7eb61098-a7d4-4929-a496-41130c54cd12
 refId: aws-iam-and-security-root-account-mfa-enabled
 type: asset
 name: >
-  Ensure hardware MFA is enabled for the "root" account
+  Hardware MFA is not enabled for the "root" account
 description: >
   The root account is the most privileged user in an AWS account. MFA adds an extra layer of
   protection on top of a user name and password. With MFA enabled, when a user signs in to
@@ -21,4 +21,4 @@ sql: >
                       = concat('arn:aws:iam::', awsaccountid, ':mfa/root-account-mfa-device'))));
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

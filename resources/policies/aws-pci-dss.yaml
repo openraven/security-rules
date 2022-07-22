@@ -63,4 +63,4 @@ ruleIds:
 #  - Amazon EC2 instances managed by Systems Manager should have a patch compliance status of COMPLIANT after a patch installation # [PCI.SSM.1]
 #  - Instances managed by Systems Manager should have an association compliance status of COMPLIANT # [PCI.SSM.2]
 #  - EC2 instances should be managed by AWS Systems Manager # [PCI.SSM.3]
-version: 0.2.5
+version: 0.2.6

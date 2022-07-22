@@ -2,9 +2,10 @@ id: 346162ea-32ad-480d-8564-560480153c5c
 refId: aws-storage-efs-encrypted-check
 type: asset
 name: >
-  Ensure Amazon Elastic File System (Amazon EFS) is configured to encrypt the file data using AWS Key Management Service (AWS KMS).
+  EFS is not configured to encrypt the file data using AWS KMS.
 description: >
-  Ensures Amazon Elastic File System (Amazon EFS) is configured to encrypt the file data using AWS Key Management Service (AWS KMS). The rule is NON_COMPLIANT if the encrypted key is set to false.
+  This rule checks if Amazon Elastic File System (Amazon EFS) is configured to encrypt the file data using AWS Key Management Service (AWS KMS).
+  The rule is NON_COMPLIANT if the encrypted key is set to false.
 severity: high
 enabled: true
 sql: >
@@ -12,4 +13,4 @@ sql: >
   FROM ${magpie_schema}.awsefsfilesystem
   WHERE (configuration -> 'encrypted' = 'false');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

@@ -2,9 +2,9 @@ id: 50bdffeb-0b61-4eef-a271-2de47c0abc0c
 refId: aws-storage-s3-bucket-replication-enabled
 type: asset
 name: >
-  Checks if replication is enabled for your S3 buckets.
+  S3 buckets do not have replication enabled
 description: >
-  Checks if replication is enabled for your S3 buckets.
+  This rule checks if replication is enabled for your S3 buckets.
 severity: low
 enabled: true
 sql: >
@@ -12,4 +12,4 @@ sql: >
   from ${magpie_schema}.awss3bucket
   WHERE supplementaryconfiguration->>'ReplicationConfiguration' is null;
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

@@ -3,9 +3,9 @@ id: 47f5a119-5672-4e9e-a551-049e0779672b
 refId: aws-database-rds-cluster-iam-authentication-enabled
 type: asset
 name: >
-  Ensure IAM is enabled for RDS clusters
+  RDS Clusters do not have IAM enabled
 description: >
-  Checks if an Amazon Relational Database Service (Amazon RDS) Clusters have AWS Identity and Access Management (IAM) authentication enabled.
+  This rule checks if an Amazon Relational Database Service (Amazon RDS) Clusters have AWS Identity and Access Management (IAM) authentication enabled.
 severity: medium
 enabled: true
 sql: >
@@ -15,4 +15,4 @@ sql: >
   EXISTS (SELECT * FROM jsonb_array_elements(supplementaryconfiguration->'dbClusters'->'dbClusters') dbClusters
   WHERE dbClusters ->>'iamDatabaseAuthenticationEnabled' = 'false');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

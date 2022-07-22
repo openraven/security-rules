@@ -22,4 +22,4 @@ sql: >
        WHERE value ->> 'name' = 'log_lock_waits' AND value ->> 'value' = 'on'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

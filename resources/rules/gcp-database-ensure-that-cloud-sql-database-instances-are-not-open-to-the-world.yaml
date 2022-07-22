@@ -16,4 +16,4 @@ sql: >
    WHERE resourcetype = 'GCP::SQL::Instance'
      AND acc."configuration" -> 'settings' -> 'ipConfiguration' ->> 'authorizedNetworks' LIKE '%0.0.0.0/0%'
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

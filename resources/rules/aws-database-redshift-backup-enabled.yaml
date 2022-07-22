@@ -3,9 +3,10 @@ id: 0f842c30-8dc3-4a92-9e74-1971128f8755
 refId: aws-database-redshift-backup-enabled
 type: asset
 name: >
-  Ensure Automated snapshots for RedShift Clusters are enabled
+  RedShift Clusters do not have automated snapshots enabled
 description: >
-  Checks that Amazon Redshift automated snapshots are enabled for clusters. The rule is NON_COMPLIANT if the value for automatedSnapshotRetentionPeriod is greater than MaxRetentionPeriod or less than MinRetentionPeriod or the value is 0.
+  This rule checks if Amazon Redshift automated snapshots are enabled for clusters.
+  The rule is NON_COMPLIANT if the value for automatedSnapshotRetentionPeriod is greater than MaxRetentionPeriod or less than MinRetentionPeriod or the value is 0.
 severity: medium
 enabled: true
 sql: >
@@ -13,4 +14,4 @@ sql: >
   FROM ${magpie_schema}.awsredshiftcluster
   WHERE (configuration -> 'automatedSnapshotRetentionPeriod' = '0');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

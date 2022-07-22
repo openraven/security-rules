@@ -2,9 +2,9 @@ id: ee10a42e-11a7-44ed-9283-f1c448e22b35
 refId: aws-database-rds-automatic-minor-version-upgrade-enabled
 type: asset
 name: >
-  Ensure Automatic Minor Version Upgrade is enabled.
+  RDS Automatic Minor Version Upgrade is not enabled.
 description: >
-  Checks if Amazon Relational Database Service (RDS) database instances are configured for automatic minor version upgrades.
+  This rule checks if Amazon Relational Database Service (RDS) database instances are configured for automatic minor version upgrades.
 severity: low
 enabled: true
 sql: >
@@ -12,4 +12,4 @@ sql: >
   FROM ${magpie_schema}.awsrdsdbinstance
   WHERE (configuration -> 'autoMinorVersionUpgrade' = 'false');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

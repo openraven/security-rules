@@ -18,4 +18,4 @@ sql: >
      AND configuration ->> 'autoCreateSubnetworks' is null
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

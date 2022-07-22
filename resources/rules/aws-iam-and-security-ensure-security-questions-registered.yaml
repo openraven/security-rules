@@ -3,7 +3,7 @@ id: cb1b52e0-110c-4887-8ba4-901904938080
 refId: aws-iam-and-security-ensure-security-questions-registered
 type: asset
 name: >
-  Ensure security questions are registered in the AWS account
+  Security Questions are not registered in the AWS account
 description: >
   The AWS support portal allows account owners to establish security questions that can be
   used to authenticate individuals calling AWS customer service for support. It is
@@ -12,4 +12,4 @@ manualControl: true
 severity: low
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

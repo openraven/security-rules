@@ -2,9 +2,10 @@ id: b3136831-6b18-4bc7-ae15-c249e8e2ae35
 refId: aws-compute-lambda-inside-vpc
 type: asset
 name: >
-  Ensure  AWS Lambda function is allowed access to an Amazon Virtual Private Cloud.
+  Lambda function cannot access a VPC
 description: >
-  Checks whether an AWS Lambda function is allowed access to an Amazon Virtual Private Cloud. The rule is NON_COMPLIANT if the Lambda function is not VPC enabled.
+  This rule checks if an AWS Lambda function is allowed access to an Amazon Virtual Private Cloud.
+  The rule is NON_COMPLIANT if the Lambda function is not VPC enabled.
 severity: medium
 enabled: true
 sql: >
@@ -12,4 +13,4 @@ sql: >
   FROM ${magpie_schema}.awslambdafunction
   WHERE (configuration -> 'vpcConfig' = 'null');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

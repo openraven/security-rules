@@ -22,4 +22,4 @@ sql: >
        WHERE value ->> 'name' = 'log_min_duration_statement' AND value ->> 'value' = '-1'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6
