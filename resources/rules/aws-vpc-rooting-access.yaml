@@ -2,7 +2,7 @@ id: 0c0799c4-a539-4202-8235-8d51b321db97
 refId: aws-vpc-rooting-access
 type: asset
 name: >
-  Ensure routing tables for VPC peering are "least access"
+  Routing Tables for VPC peering are not "least access"
 description: >
   Once a VPC peering connection is established, routing tables must be updated to establish
   any connections between the peered VPCs. These routes can be as specific as desired - even
@@ -11,4 +11,4 @@ manualControl: true
 severity: medium
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

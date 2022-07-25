@@ -92,4 +92,4 @@ ruleIds:
   - gcp-database-ensure-that-cloud-sql-database-instances-are-not-open-to-the-world.yaml # CIS 6.5
   - gcp-database-sql-public-ip.yaml
   - gcp-database-ensure-that-cloud-sql-database-instances-are-configured-with-automated-backups.yaml # CIS 6.7
-version: 0.2.5
+version: 0.2.6

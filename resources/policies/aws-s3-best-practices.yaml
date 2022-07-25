@@ -26,4 +26,4 @@ ruleIds:
   - aws-storage-s3-versioning-enabled.yaml
   - aws-storage-s3-default-encryption-kms.yaml
 #  - s3-version-lifecycle-policy-check - [to do]
-version: 0.2.5
+version: 0.2.6

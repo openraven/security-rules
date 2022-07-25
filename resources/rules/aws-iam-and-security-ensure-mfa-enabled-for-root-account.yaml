@@ -3,7 +3,7 @@ id: 6afd0338-43c7-48ce-9c28-a9ca2c2796df
 refId: aws-iam-and-security-ensure-mfa-enabled-for-root-account
 type: asset
 name: >
-  Ensure MFA is enabled for the "root" account
+  MFA is disabled for the "root" account
 description: >
   The root account is the most privileged user in an AWS account. MFA adds an extra layer of
   protection on top of a user name and password. With MFA enabled, when a user signs in to
@@ -17,4 +17,4 @@ sql: >
     WHERE configuration->>'AccountMFAEnabled' != '1';
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

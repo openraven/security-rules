@@ -27,4 +27,4 @@ ruleIds:
 #  - rds-snapshots-public-prohibited - [to do]
   - aws-database-rds-snapshot-encrypted.yaml
   - aws-database-rds-storage-encrypted.yaml
-version: 0.2.5
+version: 0.2.6

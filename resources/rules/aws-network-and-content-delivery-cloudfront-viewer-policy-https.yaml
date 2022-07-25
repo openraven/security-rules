@@ -2,14 +2,15 @@ id: db327574-6b6e-4f3c-b58a-a0848265d6aa
 refId: aws-network-and-content-delivery-cloudfront-viewer-policy-https
 type: asset
 name: >
-  Amazon CloudFront distributions use HTTPS (directly or via a redirection).
+  CloudFront distributions do not use HTTPS
 description: >
-  Checks whether your Amazon CloudFront distributions use HTTPS (directly or via a redirection). The rule is NON_COMPLIANT if the value of ViewerProtocolPolicy is set to 'allow-all' for the defaultCacheBehavior or for the cacheBehaviors.
-severity: high
+  This rule checks if your Amazon CloudFront distributions use HTTPS (directly or via a redirection).
+  The rule is NON_COMPLIANT if the value of ViewerProtocolPolicy is set to 'allow-all' for the defaultCacheBehavior or for the cacheBehaviors.
+severity: medium
 enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awscloudfrontdistribution
   WHERE (configuration -> 'defaultCacheBehavior' -> 'viewerProtocolPolicy' = '"allow-all"')
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

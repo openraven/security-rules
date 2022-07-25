@@ -3,9 +3,9 @@ id: 8e274e35-b1c2-45e7-a359-565be56e35b6
 refId: aws-management-tools-cloudwatch-alarm-action-check
 type: asset
 name: >
-  Ensure CloudWatch alarms have an associated alarm action
+  CloudWatch alarms do not have an associated alarm action
 description: >
-  Checks whether CloudWatch alarms have at least one alarm action, one INSUFFICIENT_DATA action, or one OK action enabled. Optionally, checks whether any of the actions matches one of the specified ARNs.
+  This rule checks whether CloudWatch alarms have at least one alarm action, one INSUFFICIENT_DATA action, or one OK action enabled. Optionally, checks whether any of the actions matches one of the specified ARNs.
 severity: low
 enabled: true
 sql: >
@@ -16,4 +16,4 @@ sql: >
     AND configuration -> 'okActions' = '[]')
     OR (configuration -> 'actionsEnabled' = 'true') AND (configuration -> 'alarmActions' = '[]');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

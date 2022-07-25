@@ -2,9 +2,10 @@ id: 5b42f614-045f-4c01-a56d-ba5ea6649679
 refId: aws-database-redshift-enchanced-vpc-routing-enabled
 type: asset
 name: >
-  Checks if Amazon Redshift cluster has enchanced VPC routing enabled
+  Redshift Cluster does not have enhanced VPC routing enabled
 description: >
-  Checks if Amazon Redshift cluster has enchanced VPC routing enabled. The rule is NON_COMPLIANT if enchanced vpc routing is not enabled.
+  This rule checks if Amazon Redshift cluster has enhanced VPC routing enabled.
+  The rule is NON_COMPLIANT if enhanced vpc routing is not enabled.
 severity: low
 enabled: true
 sql: >
@@ -12,4 +13,4 @@ sql: >
   FROM ${magpie_schema}.awsredshiftcluster
   WHERE (configuration -> 'enhancedVpcRouting' = 'false');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

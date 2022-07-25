@@ -2,9 +2,10 @@ id: cee93633-47eb-45ff-8384-173f78d18c75
 refId: aws-compute-ec2-volume-inuse-check
 type: asset
 name: >
-  Checks if EBS volumes are attached to EC2 instances.
+  EBS volumes are not attached to EC2 instances
 description: >
-  Checks if EBS volumes are attached to EC2 instances.
+  This rule checks if EBS volumes are attached to EC2 instances.
+  The rule is NON_COMPLIANT if the EBS volume is not attached to an EC2 instance.
 severity: low
 enabled: true
 sql: >
@@ -12,4 +13,4 @@ sql: >
   FROM ${magpie_schema}.awsec2volume
   WHERE (configuration->'attachments' = '[ ]');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

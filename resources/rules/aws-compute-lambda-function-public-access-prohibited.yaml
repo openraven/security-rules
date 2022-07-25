@@ -2,9 +2,10 @@ id: 426a3b06-bf37-40ff-b0cf-f2d2fae25b92
 refId: aws-compute-lambda-function-public-access-prohibited
 type: asset
 name: >
-  Ensure AWS Lambda function policy attached to the Lambda resource prohibits public access.
+  Lambda function does not have attached policy that prohibits public access
 description: >
-  Checks if the AWS Lambda function policy attached to the Lambda resource prohibits public access. If the Lambda function policy allows public access it is NON_COMPLIANT.
+  This rule checks if the AWS Lambda function policy attached to the Lambda resource prohibits public access.
+  If the Lambda function policy allows public access it is NON_COMPLIANT.
 severity: medium
 enabled: true
 sql: >
@@ -12,4 +13,4 @@ sql: >
   FROM ${magpie_schema}.awslambdafunction
   WHERE (supplementaryconfiguration -> 'AccessPolicy' -> 'policy' = 'null');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

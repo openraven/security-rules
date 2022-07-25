@@ -3,8 +3,10 @@ id: b1dc3919-5146-4bbc-93d4-7e16b6a2e684
 refId: aws-compute-ec2-instance-managed-by-systems-manager
 type: asset
 name: >
-  Ensure all EC2 instances are managed by SSM
+  EC2 instances are not managed by SSM
 description: >
+  This rule checks if EC2 instances are managed by SSM.
+  The rule is NON_COMPLIANT if SSM is not enabled.
   Systems Manager helps you maintain security and compliance by scanning your managed instances
   and reporting on (or taking corrective action on) any policy violations it detects.
   In case if SSM is enabled for specific region but EC2 instances are not managed -
@@ -20,4 +22,4 @@ sql: >
      AND ${magpie_schema}.awsssminstance.resourceid IS NULL;
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

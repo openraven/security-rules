@@ -17,4 +17,4 @@ sql: >
      AND acc."configuration" -> 'settings' -> 'backupConfiguration' -> 'enabled' IS NULL
       OR acc."configuration" -> 'settings' -> 'backupConfiguration' -> 'enabled' <> 'true'
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

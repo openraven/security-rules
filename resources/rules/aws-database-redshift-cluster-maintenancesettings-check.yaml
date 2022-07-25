@@ -2,9 +2,9 @@ id: ee05eba9-30f6-467d-a202-c10f02bf111a
 refId: aws-database-redshift-cluster-maintenancesettings-check
 type: asset
 name: >
-  Ensure Amazon Redshift Clusters allow Version upgrade
+  Redshift Clusters do not allow Version upgrade
 description: >
-  Ensures allowVersionUpgrade is enabled for Amazon Redshift clusters.
+  This rule checks if allowVersionUpgrade is enabled for Amazon Redshift clusters.
 severity: low
 enabled: true
 sql: >
@@ -12,4 +12,4 @@ sql: >
   FROM ${magpie_schema}.awsredshiftcluster
   WHERE (configuration -> 'allowVersionUpgrade' = 'false');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

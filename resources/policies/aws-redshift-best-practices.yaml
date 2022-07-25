@@ -17,4 +17,4 @@ ruleIds:
   #  - redshift-default-admin-check - [to do]
   - aws-database-redshift-enchanced-vpc-routing-enabled.yaml
   #  - redshift-require-tls-ssl - [to do]
-version: 0.2.5
+version: 0.2.6

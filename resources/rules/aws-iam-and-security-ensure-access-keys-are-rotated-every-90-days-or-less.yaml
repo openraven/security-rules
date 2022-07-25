@@ -3,7 +3,7 @@ id: a2c83730-a2eb-40ce-a378-846577a0f4a2
 refId: aws-iam-and-security-ensure-access-keys-are-rotated-every-90-days-or-less
 type: asset
 name: >
-  Ensure access keys are rotated every 90 days or less
+  Access Keys are not rotated every 90 days or less
 description: >
   Access keys consist of an access key ID and secret access key, which are used to sign
   programmatic requests that you make to AWS. AWS users need their own access keys to
@@ -21,4 +21,4 @@ sql: >
         AND TO_TIMESTAMP(configuration->>'access_key_2_last_used_date', 'YYYY-MM-DD"T"HH24:MI:SS') < now() - interval '90 days'));
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

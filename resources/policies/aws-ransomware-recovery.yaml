@@ -29,4 +29,4 @@ ruleIds:
 #  - aws-management-tools-cloudtrail-route-table-logs.yaml # Negative Rule
 #  - aws-management-tools-cloudtrail-vpc-changes.yaml # Negative Rule
 # rules for backup (to be added)
-version: 0.2.5
+version: 0.2.6

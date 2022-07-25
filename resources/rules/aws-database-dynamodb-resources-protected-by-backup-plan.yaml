@@ -3,8 +3,9 @@ id: 616fac70-c933-4fed-b831-554daff62507
 refId: aws-database-dynamodb-resources-protected-by-backup-plan
 type: asset
 name: >
-  Checks if Amazon DynamoDB tables are protected by a backup plan.
+  DynamoDB tables are not protected by a backup plan
 description: >
+  This rule checks if Amazon DynamoDB tables are protected by a backup plan.
   The rule is NON_COMPLIANT if the DynamoDB Table is not covered by a backup plan.
 severity: medium
 enabled: true
@@ -13,4 +14,4 @@ sql: >
   FROM ${magpie_schema}.awsdynamodbtable
   WHERE supplementaryconfiguration->>'awsBackupJobs' = '[]';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

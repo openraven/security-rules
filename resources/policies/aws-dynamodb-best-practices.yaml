@@ -16,4 +16,4 @@ ruleIds:
   - aws-database-dynamodb-table-encrypted-kms.yaml
   - aws-database-dynamodb-table-encryption-enabled.yaml
 #  - dynamodb-throughput-limit-check - [to do]
-version: 0.2.5
+version: 0.2.6

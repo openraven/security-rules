@@ -11,4 +11,4 @@ enabled: true
 ruleIds:
   - aws-database-rds-aurora-mysql-backtracking-enabled.yaml
 #  - aws-database-rds-covered-by-backup-plan.yaml # Negative Rule
-version: 0.2.5
+version: 0.2.6

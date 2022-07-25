@@ -3,13 +3,12 @@ id: f524b603-181b-408b-9601-de828b1c1a06
 refId: aws-iam-and-security-ensure-security-contact-information-is-registered
 type: asset
 name: >
-  Ensure security contact information is registered
+  Security Contact information is not registered
 description: >
   AWS provides customers with the option of specifying the contact information for
   account's security team. It is recommended that this information be provided.
 manualControl: true
 severity: low
 enabled: true
-
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

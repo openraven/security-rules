@@ -3,7 +3,7 @@ id: bd76fc0a-6158-4b28-bed8-0beeef079223
 refId: aws-iam-and-security-iam-instance-roles-used-for-aws-resource-access-from-instances
 type: asset
 name: >
-  Ensure IAM instance roles are used for AWS resource access from instances
+  IAM instance roles are used for AWS resource access from instances
 description: >
   AWS access from within AWS instances can be done by either encoding AWS keys into AWS
   API calls or by assigning the instance to a role which has an appropriate permissions policy
@@ -13,4 +13,4 @@ manualControl: true
 severity: low
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

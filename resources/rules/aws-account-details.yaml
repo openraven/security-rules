@@ -2,9 +2,9 @@ id: 4c27ebae-abf6-4533-beef-c955c0082edc
 refId: aws-account-details
 type: asset
 name: >
-  Maintain current contact details
+  AWS Account Contact details are not being maintained
 description: >
-  Ensure contact email and telephone details for AWS accounts are current and map to more
+  This rule checks if the contact email and telephone details for AWS accounts are current and map to more
   than one individual in your organization.
   An AWS account supports a number of contact details, and AWS will use these to contact
   the account owner if activity judged to be in breach of Acceptable Use Policy or indicative
@@ -17,4 +17,4 @@ manualControl: true
 severity: low
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

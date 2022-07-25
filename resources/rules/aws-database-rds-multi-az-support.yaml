@@ -3,8 +3,9 @@ id: dcd385e4-447d-4f8e-b1e5-0ad16a1340a9
 refId: aws-database-rds-multi-az-support
 type: asset
 name: >
-  Checks whether high availability is enabled for your RDS DB instances.
+  RDS Instances do not have high availability enabled
 description: >
+  This rule checks if high availability is enabled for RDS instances.
   In a Multi-AZ deployment, Amazon RDS automatically provisions and maintains
   a synchronous standby replica in a different Availability Zone.
 severity: low
@@ -14,4 +15,4 @@ sql: >
   FROM ${magpie_schema}.awsrdsdbinstance
   WHERE (configuration->'multiAZ' = 'false');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

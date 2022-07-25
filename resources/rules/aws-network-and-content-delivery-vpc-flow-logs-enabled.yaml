@@ -3,7 +3,7 @@ id: a93a546f-00c5-4a6d-8266-3e41480d400e
 refId: aws-network-and-content-delivery-vpc-flow-logs-enabled
 type: asset
 name: >
-  Ensure VPC flow logging is enabled in all VPCs
+  VPC flow logging is not enabled in all VPCs
 description: >
   VPC Flow Logs is a feature that enables you to capture information about the IP traffic
   going to and from network interfaces in your VPC. After you've created a flow log, you can
@@ -24,4 +24,4 @@ sql: >
          AND (flow_logs->>'trafficType' ILIKE 'ALL'
               OR flow_logs->>'trafficType' ILIKE 'REJECT'));
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6

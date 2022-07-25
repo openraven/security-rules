@@ -2,9 +2,10 @@ id: c75d0aa8-74f7-4409-bdea-6f6f498bd8a2
 refId: aws-compute-ec2-instance-multiple-eni-check
 type: asset
 name: >
-  Checks if Amazon Elastic Compute Cloud (Amazon EC2) uses multiple ENIs (Elastic Network Interfaces).
+  EC2 instances use multiple ENIs
 description: >
-  Checks if Amazon Elastic Compute Cloud (Amazon EC2) uses multiple ENIs (Elastic Network Interfaces). This rule is NON_COMPLIANT an Amazon EC2 instance use multiple network interfaces.
+  This rule checks if Amazon Elastic Compute Cloud (Amazon EC2) uses multiple ENIs (Elastic Network Interfaces).
+  This rule is NON_COMPLIANT an Amazon EC2 instance use multiple network interfaces.
 severity: low
 enabled: true
 sql: >
@@ -13,4 +14,4 @@ sql: >
   WHERE EXISTS (SELECT * FROM jsonb_array_elements(configuration->'networkInterfaces') eni
   WHERE eni ->'networkInterfaceId' = 'null');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.5
+version: 0.2.6
