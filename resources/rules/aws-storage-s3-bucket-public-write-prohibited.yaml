@@ -2,7 +2,7 @@ id: abdc897e-c23f-40a6-a310-7e868bedb797
 refId: aws-storage-s3-bucket-public-write-prohibited
 type: asset
 name: >
-  S3 buckets have public writing of files enabled
+  S3 bucket has public writing of files enabled
 description: >
   This rule checks if public writing of files is enabled for your S3 buckets.
 severity: high
@@ -25,4 +25,4 @@ sql: >
     AND
     supplementaryconfiguration->'BucketPolicy'->>'Statement' LIKE '%"Action": "s3:PutObject"%');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 0.2.7

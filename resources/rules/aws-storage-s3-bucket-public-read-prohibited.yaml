@@ -2,7 +2,7 @@ id: 6d02e788-98d7-468c-92cf-05e7838d0048
 refId: aws-storage-s3-bucket-public-read-prohibited
 type: asset
 name: >
-  S3 buckets have public reading of files enabled
+  S3 bucket has public reading of files enabled
 description: >
   This rule checks if public reading of files is enabled for your S3 buckets.
 severity: high
@@ -25,4 +25,4 @@ sql: >
     AND
     supplementaryconfiguration->'BucketPolicy'->>'Statement' LIKE '%"Action": "s3:GetObject"%');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 0.2.7
