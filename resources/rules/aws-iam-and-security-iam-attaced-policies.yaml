@@ -22,4 +22,4 @@ sql: >
   AND (a.configuration -> 'roleLastUsed' ->> 'lastUsedDate' IS NULL
       OR now() - INTERVAL '60 DAYS' > to_timestamp(a.configuration -> 'roleLastUsed' ->> 'lastUsedDate', 'YYYY-MM-DDTHH:MI:SS'))
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 1.0.1

@@ -13,4 +13,4 @@ sql: >
   WHERE EXISTS (SELECT * FROM jsonb_array_elements(supplementaryconfiguration->'dbClusters'->'dbClusters') dbClusters
   WHERE dbClusters ->>'multiAZ' = 'false');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 1.0.1

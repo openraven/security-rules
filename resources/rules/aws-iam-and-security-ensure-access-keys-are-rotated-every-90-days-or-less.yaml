@@ -21,4 +21,4 @@ sql: >
         AND TO_TIMESTAMP(configuration->>'access_key_2_last_used_date', 'YYYY-MM-DD"T"HH24:MI:SS') < now() - interval '90 days'));
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 1.0.1

@@ -16,4 +16,4 @@ sql: >
      AND acc."configuration" -> 'settings' -> 'ipConfiguration' -> 'requireSsl' IS NULL
       OR acc."configuration" -> 'settings' -> 'ipConfiguration' -> 'requireSsl' <> 'true'
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 1.0.1

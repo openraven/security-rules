@@ -14,4 +14,4 @@ sql: >
   WHERE (supplementaryconfiguration->'attributes'->) as attri
   WHERE attri #>'key' = "deletion_protection.enabled" AND 'value' = 'false'
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 1.0.1

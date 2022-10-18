@@ -15,4 +15,4 @@ sql: >
   (supplementaryconfiguration->'Versioning'->>'status' is null OR supplementaryconfiguration->'Versioning'->>'status' <> 'Enabled') AND
   (supplementaryconfiguration -> 'Versioning' ->> 'mfaDelete' is null OR supplementaryconfiguration -> 'Versioning' ->> 'mfaDelete' <> 'Enabled')
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 1.0.1

@@ -22,4 +22,4 @@ sql: >
        WHERE value ->> 'name' = 'log_min_error_statement' AND value ->> 'value' IN ('error', 'log', 'fatal', 'panic')
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 1.0.1

@@ -16,4 +16,4 @@ sql: >
   (supplementaryconfiguration->'BucketObjectLockConfiguration' = 'null'
   OR supplementaryconfiguration->'BucketObjectLockConfiguration'->>'objectLockEnabled' != 'Enabled');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.7
+version: 1.0.1

@@ -27,4 +27,4 @@ sql: >
           OR policy.stmt ->> 'Condition' not like '%x-amz-server-side-encryption-aws-kms-key-id%')
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 1.0.1

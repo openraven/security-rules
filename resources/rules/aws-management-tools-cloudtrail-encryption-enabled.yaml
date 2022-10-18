@@ -21,4 +21,4 @@ sql: >
   WHERE (supplementaryconfiguration->'trailDetails'->'trail'->>'kmsKeyId' = ''
   OR supplementaryconfiguration->'trailDetails'->'trail'->>'kmsKeyId' IS NULL);
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 1.0.1

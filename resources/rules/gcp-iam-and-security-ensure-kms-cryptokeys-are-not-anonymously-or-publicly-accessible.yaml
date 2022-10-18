@@ -22,4 +22,4 @@ sql: >
                   FROM jsonb_array_elements_text(arr.policy -> 'members_')
                  WHERE value like '%allUsers%' OR value like '%allAuthenticatedUsers%');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 1.0.1

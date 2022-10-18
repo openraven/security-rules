@@ -14,4 +14,4 @@ sql: >
   FROM ${magpie_schema}.awsec2instance
   WHERE configuration->'monitoring'->>'state' = 'disabled';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 1.0.1

@@ -12,4 +12,4 @@ manualControl: true
 severity: low
 enabled: true
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 1.0.1
