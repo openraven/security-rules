@@ -11,4 +11,4 @@ severity: high
 enabled: true
 #sql: >  DNS Policy discovery is not possible at the moment
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 1.0.1

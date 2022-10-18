@@ -13,4 +13,4 @@ sql: >
   from ${magpie_schema}.awsec2volume
   WHERE (configuration -> 'encrypted' = 'false')
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 1.0.1

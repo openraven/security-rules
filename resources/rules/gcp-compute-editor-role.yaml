@@ -20,4 +20,4 @@ sql: >
     WHERE acc.resourcetype = 'GCP::ComputeEngine::Instance'
     AND inst ->> 'email' ILIKE '%compute@developer.gserviceaccount.com%'
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 1.0.1

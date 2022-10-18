@@ -12,4 +12,4 @@ sql: >
   FROM ${magpie_schema}.awselasticsearchdomain
   WHERE (configuration->'nodeToNodeEncryptionOptions'->>'enabled' != 'true');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 1.0.1

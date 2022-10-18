@@ -32,4 +32,4 @@ sql: >
   AND (allwd.ports[1] = '3389' OR allwd.ports is null OR ('3389' BETWEEN allwd.ports[1] AND allwd.ports[2]));
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 1.0.1

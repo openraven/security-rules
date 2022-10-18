@@ -14,4 +14,4 @@ sql: >
   FROM ${magpie_schema}.awsec2instance
   WHERE configuration->'metadataOptions'->>'httpTokens' = 'optional';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 1.0.1

@@ -23,4 +23,4 @@ sql: >
        WHERE value ->> 'name' = 'external scripts enabled' AND value ->> 'value' = 'off'
      )
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 0.2.6
+version: 1.0.1
