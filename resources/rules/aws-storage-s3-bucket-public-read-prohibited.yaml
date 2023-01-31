@@ -4,7 +4,7 @@ type: asset
 name: >
   S3 bucket has public reading of files enabled
 description: >
-  This rule checks if public reading of files is enabled for your S3 buckets.
+  Identifies S3 buckets which have public reading of files enabled.
 severity: high
 enabled: true
 sql: >
@@ -25,4 +25,4 @@ sql: >
     AND
     supplementaryconfiguration->'BucketPolicy'->>'Statement' LIKE '%"Action": "s3:GetObject"%');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

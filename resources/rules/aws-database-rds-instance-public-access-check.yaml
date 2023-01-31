@@ -2,9 +2,9 @@ id: e6d6e50f-4dc0-4026-a726-9b00887baf75
 refId: aws-database-rds-instance-public-access-check
 type: asset
 name: >
-  RDS Instance is publicly accessible.
+  RDS instance is publicly accessible
 description: >
-  This rule checks if Amazon Relational Database Service (Amazon RDS) instances are publicly accessible.
+  Identifies RDS instances which are publicly accessibly to the internet.
 severity: high
 enabled: true
 sql: >
@@ -12,4 +12,4 @@ sql: >
   FROM ${magpie_schema}.awsrdsdbinstance
   WHERE (configuration -> 'publiclyAccessible' = 'true');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

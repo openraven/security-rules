@@ -5,11 +5,7 @@ type: asset
 name: >
   S3 bucket access logging is not enabled on the CloudTrail S3 bucket
 description: >
-  S3 Bucket Access Logging generates a log that contains access records for each request
-  made to your S3 bucket. An access log record contains details about the request, such as the
-  request type, the resources specified in the request worked, and the time and date the
-  request was processed. It is recommended that bucket access logging be enabled on the
-  CloudTrail S3 bucket
+  Identifies S3 buckets storing CloudTrail logs that do not have access logging enabled.
 severity: medium
 enabled: true
 sql: >
@@ -22,4 +18,4 @@ sql: >
          AND s3bucket.supplementaryconfiguration->'BucketLoggingConfiguration'->'loggingEnabled' != 'null');
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

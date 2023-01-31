@@ -4,8 +4,7 @@ type: asset
 name: >
   EC2 instance has an IAM profile attached to it
 description: >
-  This rule checks if an Amazon Elastic Compute Cloud (Amazon EC2) instance has an Identity and Access Management (IAM) profile attached to it.
-  This rule is NON_COMPLIANT if no IAM profile is attached to the Amazon EC2 instance.
+  Identifies EC2 instances which have an IAM profile attached.
 severity: low
 enabled: true
 sql: >
@@ -13,4 +12,4 @@ sql: >
   FROM ${magpie_schema}.awsec2instance
   WHERE configuration->'iamInstanceProfile' = 'null';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

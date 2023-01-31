@@ -4,8 +4,7 @@ type: asset
 name: >
   S3 bucket does not have versioning enabled
 description: >
-  This rule checks if versioning is enabled for your S3 buckets.
-  Optionally, the rule checks if MFA delete is enabled for your S3 buckets.
+  Identifies S3 buckets which do not have versioning enabled.
 severity: low
 enabled: true
 sql: >
@@ -16,4 +15,4 @@ sql: >
   OR
   supplementaryconfiguration->'Versioning'->>'status' != 'Enabled');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

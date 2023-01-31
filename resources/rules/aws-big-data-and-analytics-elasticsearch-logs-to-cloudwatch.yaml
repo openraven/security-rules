@@ -3,9 +3,9 @@ id: 6fab35d9-8ba8-4fcb-97be-97a62b16e64f
 refId: aws-big-data-and-analytics-elasticsearch-logs-to-cloudwatch
 type: asset
 name: >
-  Amazon OpenSearch Domains do not have logging enabled to send logs to Amazon CloudWatch logs
+  OpenSearch domain does not have logging enabled to send logs to Amazon CloudWatch
 description: >
-  This rule checks if Amazon OpenSearch Service (OpenSearch Service) domains are configured to send logs to Amazon CloudWatch Logs. The rule is COMPLIANT if a log is enabled for an OpenSearch Service domain. This rule is NON_COMPLIANT if logging is not configured.
+  Identifies OpenSearch service domains that do not have logging enabled and are unable to send logs to CloudWatch.
 severity: low
 enabled: true
 sql: >
@@ -13,4 +13,4 @@ sql: >
   FROM ${magpie_schema}.awselasticsearchdomain
   WHERE (configuration -> 'logPublishingOptions' = 'null');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

@@ -4,8 +4,7 @@ type: asset
 name: >
   EFS is not configured to encrypt the file data using AWS KMS.
 description: >
-  This rule checks if Amazon Elastic File System (Amazon EFS) is configured to encrypt the file data using AWS Key Management Service (AWS KMS).
-  The rule is NON_COMPLIANT if the encrypted key is set to false.
+  Identifies instances of EFS that are not configured to encrypt the file data using AWS KMS.
 severity: high
 enabled: true
 sql: >
@@ -13,4 +12,4 @@ sql: >
   FROM ${magpie_schema}.awsefsfilesystem
   WHERE (configuration -> 'encrypted' = 'false');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

@@ -2,10 +2,9 @@ id: 73d6e9c7-ecdd-4b1d-9a80-a4d3b348ce7b
 refId: aws-network-and-content-delivery-cloudfront-associated-with-waf
 type: asset
 name: >
-  CloudFront distributions are not associated with either WAF or WAFv2 web access control lists (ACLs).
+  CloudFront distributions are not associated with either WAF or WAFv2 web access control lists
 description: >
-  This rule checks if Amazon CloudFront distributions are associated with either WAF or WAFv2 web access control lists (ACLs).
-  This rule is NON_COMPLIANT if a CloudFront distribution is not associated with a web ACL.
+  Identifies CloudFront distributions that are not associated with either WAF or WAFv2 web access control lists (ACLs).
 severity: medium
 enabled: true
 sql: >
@@ -13,4 +12,4 @@ sql: >
   FROM ${magpie_schema}.awscloudfrontdistribution
   WHERE (configuration -> 'webACLId' = '""')
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

@@ -3,9 +3,9 @@ id: 71ddc520-83f3-499e-9a71-b8e7d4aacc3a
 refId: aws-application-services-sns-encrypted-kms
 type: asset
 name: >
-  Amazon SNS Topic is not Encrypted with AWS KMS Key
+  SNS topic is not encrypted with AWS KMS key
 description: >
-  This rule checks if Amazon SNS Topic is Encrypted with AWS KMS Key. To be compliant an SNS Topic needs to be encrypted with a KMS Key.
+  Identifies SNS topics that are not encrypted with an AWS KMS key.
 severity: low
 enabled: true
 sql: >
@@ -13,4 +13,4 @@ sql: >
   FROM ${magpie_schema}.awssnstopic
   WHERE (configuration -> 'attributes' -> 'KmsMasterKeyId' is null);
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

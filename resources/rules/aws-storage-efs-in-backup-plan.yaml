@@ -4,8 +4,7 @@ type: asset
 name: >
   EFS file systems are not added in the backup plans of AWS Backup
 description: >
-  This rule checks if Amazon Elastic File System (Amazon EFS) file systems are added in the backup plans of AWS Backup.
-  The rule is NON_COMPLIANT if EFS file systems are not included in the backup plans.
+  Identifies instances where EFS file systems are not added in the backup plans of AWS backup.
 severity: medium
 enabled: true
 sql: >
@@ -13,4 +12,4 @@ sql: >
   FROM ${magpie_schema}.awsefsfilesystem
   WHERE (supplementaryconfiguration -> 'awsBackupJobs' = '[]');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

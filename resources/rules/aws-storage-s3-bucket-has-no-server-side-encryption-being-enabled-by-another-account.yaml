@@ -5,10 +5,7 @@ type: asset
 name: >
   S3 bucket has server-side encryption being enabled by another account
 description: >
-  S3 bucket policies allow uploaded files to be encrypted with AES256,
-  or forcing any uploaded file to be encrypted with a specific AWS KMS key.
-  In the case when a specified KMS Key belongs to a different account it leads to a high risk of encryption of the data
-  without the ability to decrypt it.
+  Identifies S3 buckets which have server-side encryption enabled through another account.
 severity: high
 enabled: true
 sql: >
@@ -22,4 +19,4 @@ sql: >
       AND arr.ssec -> 'applyServerSideEncryptionByDefault' ->> 'kmsMasterKeyID' NOT LIKE '%:'||s3bucket.awsaccountid||':%'
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

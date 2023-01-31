@@ -4,8 +4,7 @@ type: asset
 name: >
   Lambda function does not have attached policy that prohibits public access
 description: >
-  This rule checks if the AWS Lambda function policy attached to the Lambda resource prohibits public access.
-  If the Lambda function policy allows public access it is NON_COMPLIANT.
+  Identifies Lambda functions which do not have an attached policy that prohibits public access.
 severity: medium
 enabled: true
 sql: >
@@ -13,4 +12,4 @@ sql: >
   FROM ${magpie_schema}.awslambdafunction
   WHERE (supplementaryconfiguration -> 'AccessPolicy' -> 'policy' = 'null');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

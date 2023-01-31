@@ -4,7 +4,7 @@ type: asset
 name: >
   EBS encryption is not enabled by default
 description: >
-  This rule checks if Amazon Elastic Block Store (EBS) encryption is enabled by default. The rule is NON_COMPLIANT if the encryption is not enabled.
+  Identifies instances where EBS encryption is not enabled by default.
 severity: low
 enabled: true
 sql: >
@@ -12,4 +12,4 @@ sql: >
   FROM ${magpie_schema}.awsec2volume
   WHERE (configuration->'encrypted' = 'false');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

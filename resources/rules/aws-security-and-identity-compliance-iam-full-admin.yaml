@@ -2,13 +2,9 @@ id: 8f0d6f07-5c32-4a25-8b25-6ca4c2198197
 refId: aws-security-and-identity-compliance-iam-full-admin
 type: asset
 name: >
-  IAM policies allow full "*:*" administrative privileges
+  IAM policy allows full "*:*" administrative privileges
 description: >
-  IAM policies are the means by which privileges are granted to users, groups, or roles. It is
-  recommended and considered a standard security advice to grant least privilege—that is,
-  granting only the permissions required to perform a task. Determine what users need to do
-  and then craft policies for them that let the users perform only those tasks, instead of
-  allowing full administrative privileges.
+  Identifies IAM policies which allow full "*:*" administrative privileges.
 severity: high
 enabled: true
 sql: >
@@ -32,4 +28,4 @@ sql: >
              AND statement2->>'Resource' = '*'));
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

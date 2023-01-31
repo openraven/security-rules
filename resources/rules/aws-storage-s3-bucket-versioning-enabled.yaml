@@ -2,12 +2,9 @@ id: 8706258d-c0cb-42fd-af28-b1ee42efd868
 refId: aws-storage-s3-bucket-versioning-enabled
 type: asset
 name: >
-  S3 bucket does not have MFA option enabled for changing Bucket Versioning settings and permanently deleting object versions
+  S3 bucket does not have MFA option enabled for changing bucket versioning settings and permanently deleting object versions
 description: >
-  S3 Buckets should be protected from ransomware attacks, by configuring versioning and MFA Delete,
-  in order to disallow immediate bucket content removal to encryption, or any other harmful modifications
-  Disabled versioning is also considered as violation by this rule since attacker may make the bucket vulnerable
-  by disabling object versioning with the s3:PutBucketVersioning permission
+  Identifies S3 buckets that do have a MFA option enabled for changing bucket versioning settings and permanently deleting object versions.
 severity: low
 enabled: true
 sql: >
@@ -17,6 +14,5 @@ sql: >
         OR supplementaryconfiguration -> 'Versioning' ->> 'status' <> 'Enabled'
         OR supplementaryconfiguration -> 'Versioning' ->> 'mfaDelete' is null
         OR supplementaryconfiguration -> 'Versioning' ->> 'mfaDelete' <> 'Enabled')
-
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

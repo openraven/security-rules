@@ -2,10 +2,9 @@ id: 5afe508a-39b3-410f-991f-8909625abbc7
 refId: aws-network-and-content-delivery-cloudfront-sni-enabled
 type: asset
 name: >
-  CloudFront distributions are not using a custom SSL certificate and are not configured to use SNI to serve HTTPS requests.
+  CloudFront distribution is not using a custom SSL certificate and are not configured to use SNI to serve HTTPS requests
 description: >
-  This rule checks if Amazon CloudFront distributions are using a custom SSL certificate and are configured to use SNI to serve HTTPS requests.
-  This rule is NON_COMPLIANT if a custom SSL certificate is associated but the SSL support method is a dedicated IP address.
+  Identifies CloudFront distributions that are not using a custom SSL certificate and are not configured to use SNI to serve HTTPS requests.
 severity: medium
 enabled: true
 sql: >
@@ -13,4 +12,4 @@ sql: >
   FROM ${magpie_schema}.awscloudfrontdistribution
   WHERE (configuration->'viewerCertificate' ->>'sslSupportMethod' != 'sni-only');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

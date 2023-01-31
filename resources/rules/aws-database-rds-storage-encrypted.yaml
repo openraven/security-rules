@@ -3,9 +3,9 @@ id: 0a877314-f052-4710-819a-e6d88cdc0490
 refId: aws-database-rds-storage-encrypted
 type: asset
 name: >
-  RDS DB Instance storage encryption is not enabled
+  RDS instance storage encryption is not enabled
 description: >
-  This rule checks if storage encryption is enabled for your RDS DB instances.
+  Identifies RDS instances where storage encryption is not enabled.
 severity: high
 enabled: true
 sql: >
@@ -13,4 +13,4 @@ sql: >
   FROM ${magpie_schema}.awsrdsdbinstance
   WHERE (configuration->'storageEncrypted' = 'false');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

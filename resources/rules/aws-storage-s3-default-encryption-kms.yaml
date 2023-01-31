@@ -3,9 +3,9 @@ id: 5a8669d9-a113-41b9-9547-d50a2369cecc
 refId: aws-storage-s3-default-encryption-kms
 type: asset
 name: >
-  S3 bucket is not encrypted with AWS Key Management Service (AWS KMS).
+  S3 bucket is not encrypted with KMS
 description: >
-  The rule is NON_COMPLIANT if the Amazon S3 bucket is not encrypted with AWS KMS key.
+  Identifies S3 buckets which are not encrypted with KMS.
 severity: medium
 enabled: true
 sql: >
@@ -15,4 +15,4 @@ sql: >
   (supplementaryconfiguration->'ServerSideEncryptionConfiguration' = 'null'
   OR 'aws:kms' != (SELECT CAST(jsonb_array_elements(supplementaryconfiguration->'ServerSideEncryptionConfiguration'->'rules')->'applyServerSideEncryptionByDefault'->>'sseAlgorithm' AS TEXT)));
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

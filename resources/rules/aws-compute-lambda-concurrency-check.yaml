@@ -4,8 +4,7 @@ type: asset
 name: >
   Lambda function is not configured with function-level concurrent execution limit
 description: >
-  This rule checks if the AWS Lambda function is configured with function-level concurrent execution limit.
-  The rule is NON_COMPLIANT if the Lambda function is not configured with function-level concurrent execution limit.
+  Identifies Lambda functions which are not configured with a function-level concurrent execution limit.
 severity: low
 enabled: true
 sql: >
@@ -13,4 +12,4 @@ sql: >
   FROM ${magpie_schema}.awslambdafunction
   WHERE (supplementaryconfiguration -> 'Function' -> 'concurrency' = 'null');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

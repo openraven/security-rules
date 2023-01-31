@@ -2,10 +2,9 @@ id: 1e7516a5-72d8-4a82-bfe4-07385bc96654
 refId: aws-compute-ec2-stopped-instance
 type: asset
 name: >
-  EC2 instances stopped for more than the allowed number of days
+  EC2 instance stopped for more than the allowed number of days
 description: >
-  This rule checks if there are instances stopped for more than the allowed number of days.
-  The instance is NON_COMPLIANT if the state of the EC2 instance has been stopped for longer than the allowed number of days.
+  Identifies EC2 instances which have been stopped for more than an allowed number of days.
 severity: low
 enabled: true
 sql: >
@@ -13,4 +12,4 @@ sql: >
   FROM ${magpie_schema}.awsec2instance
   WHERE (supplementaryconfiguration->'attachments' = '[ ]');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

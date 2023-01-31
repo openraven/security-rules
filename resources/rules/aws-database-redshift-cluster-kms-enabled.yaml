@@ -3,10 +3,9 @@ id: d547f850-7542-4aba-a6c8-c14ca0db7835
 refId: aws-database-redshift-cluster-kms-enabled
 type: asset
 name: >
-  RedShift Clusters are not encrypted
+  RedShift cluster is not encrypted
 description: >
-  This rule checks if Amazon RedShift Clusters are Encrypted with AWS KMS Key.
-  Rule is non_compliant if encrypted is disabled.
+  Identifies RedShift clusters which are not encrypted.
 severity: high
 enabled: true
 sql: >
@@ -14,4 +13,4 @@ sql: >
   FROM ${magpie_schema}.awsredshiftcluster
   WHERE configuration -> 'kmsKeyId' = 'null';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5
