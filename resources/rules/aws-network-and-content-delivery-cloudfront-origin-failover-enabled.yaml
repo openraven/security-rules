@@ -4,8 +4,7 @@ type: asset
 name: >
   CloudFront origin group is not configured for distribution with at least 2 origins in the origin group.
 description: >
-  This rule checks if an origin group is configured for the distribution of at least 2 origins in the origin group for Amazon CloudFront.
-  This rule is NON_COMPLIANT if there are no origin groups for the distribution.
+  Identifies CloudFront origin groups that are not configured for distribution with at least 2 origins in the origin group.
 severity: low
 enabled: true
 sql: >
@@ -13,4 +12,4 @@ sql: >
   FROM ${magpie_schema}.awscloudfrontdistribution
   WHERE (configuration -> 'originGroups' -> 'quantity' < '2')
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

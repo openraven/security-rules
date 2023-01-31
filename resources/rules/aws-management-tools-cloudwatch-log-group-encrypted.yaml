@@ -4,7 +4,7 @@ type: asset
 name: >
   CloudWatch log group is not encrypted with a KMS key
 description: >
-  This rule checks if a log group in Amazon CloudWatch Logs is encrypted with a AWS Key Management Service (KMS) managed Customer Master Keys (CMK). The rule is NON_COMPLIANT if no AWS KMS CMK is configured on the log groups.
+  Identifies CloudWatch log groups which do not have encrypted with a KMS key enabled.
 severity: medium
 enabled: true
 sql: >
@@ -12,4 +12,4 @@ sql: >
   FROM ${magpie_schema}.awswatchloggroup
   WHERE (configuration -> 'kmsKeyId' = 'null')
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

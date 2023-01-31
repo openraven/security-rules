@@ -4,8 +4,7 @@ type: asset
 name: >
   FSX file system is not protected by a backup plan
 description: >
-  This rule checks if Amazon FSx File Systems are protected by a backup plan.
-  The rule is NON_COMPLIANT if the Amazon FSx File System is not covered by a backup plan.
+  Identifies FSX file systems that are not protected by a backup plan.
 severity: medium
 enabled: true
 sql: >
@@ -13,4 +12,4 @@ sql: >
   FROM ${magpie_schema}.awsfsxfilesystem
   WHERE (configuration -> 'ontapConfiguration' -> 'automaticBackupRetentionDays' = 'null')
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

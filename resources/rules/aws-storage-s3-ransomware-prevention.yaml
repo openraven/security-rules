@@ -4,8 +4,7 @@ type: asset
 name: >
   S3 bucket is prone to ransomware attacks
 description: >
-  This rule checks for three characteristics a bucket must have in order to be an available target for ransomware.
-  The rule is NON_COMPLIANT if your Amazon S3 bucket is potential vulnerable to ransomware attacks by meeting the 3 criteria.
+  Identifies S3 buckets with three characteristics, which makes them a target for ransomware attacks.
 severity: high
 enabled: true
 sql: >
@@ -15,4 +14,4 @@ sql: >
   (supplementaryconfiguration->'Versioning'->>'status' is null OR supplementaryconfiguration->'Versioning'->>'status' <> 'Enabled') AND
   (supplementaryconfiguration -> 'Versioning' ->> 'mfaDelete' is null OR supplementaryconfiguration -> 'Versioning' ->> 'mfaDelete' <> 'Enabled')
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

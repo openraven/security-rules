@@ -2,9 +2,9 @@ id: 5c40f8f9-4d70-4b51-b138-b500f86f5457
 refId: aws-compute-ec2-managedinstance-platform-check
 type: asset
 name: >
-  EC2 managed instances do not have the desired platform configurations
+  EC2 managed instance does not have the desired platform configurations
 description: >
-  This rule checks if whether EC2 managed instances have the desired platform configurations.
+  Identifies EC2 managed instances which do not have the desired platform configurations.
 severity: low
 enabled: true
 sql: >
@@ -12,4 +12,4 @@ sql: >
   FROM ${magpie_schema}.awsec2instance
   WHERE configuration->'platform' = 'null';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

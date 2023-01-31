@@ -5,10 +5,7 @@ type: asset
 name: >
   GuardDuty is not enabled for required region
 description: >
-  By enabling GuardDuty you will get threat detection service that continuously monitors for
-  malicious activity and unauthorized behavior to protect your AWS accounts, workloads, and data stored in Amazon S3
-  by event logs analysis.
-  We are excluding verification for aws-global region from possible regions for GuardDuty
+  Identifies instances where GuardDuty is not enabled for a required region.
 severity: medium
 enabled: true
 sql: >
@@ -22,4 +19,4 @@ sql: >
     ON (reg.region_global = a.awsregion or awsregion is null)
   WHERE awsregion is null
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

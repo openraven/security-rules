@@ -3,7 +3,7 @@ id: 66b492d4-54b9-4283-a2a1-a0f59b7f9b26
 refId: aws-database-rds-enhanced-monitoring-enabled
 type: asset
 name: >
-  RDS Instances do not have enhanced monitoring.
+  RDS instance does not have enhanced monitoring.
 description: >
   This rule checks if whether enhanced monitoring is enabled for Amazon Relational Database Service (Amazon RDS) instances.
 severity: low
@@ -13,4 +13,4 @@ sql: >
   FROM ${magpie_schema}.awsrdsdbinstance
   WHERE (configuration -> 'enhancedMonitoringResourceArn' = 'null');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

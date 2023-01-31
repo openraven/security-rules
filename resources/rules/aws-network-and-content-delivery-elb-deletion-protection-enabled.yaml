@@ -4,8 +4,7 @@ type: asset
 name: >
   Elastic Load Balancing does not have deletion protection enabled
 description: >
-  This rule checks if Elastic Load Balancing has deletion protection enabled.
-  The rule is NON_COMPLIANT if deletion_protection.enabled is false.
+  Identifies Elastic Load Balancers that do not have deletion protection enabled.
 severity: high
 enabled: true
 sql: >
@@ -14,4 +13,4 @@ sql: >
   WHERE (supplementaryconfiguration->'attributes'->) as attri
   WHERE attri #>'key' = "deletion_protection.enabled" AND 'value' = 'false'
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

@@ -4,8 +4,7 @@ type: asset
 name: >
   S3 bucket does not restrict public access
 description: >
-  S3 Buckets should not be reachable outside of the project by default,
-  violation if that rule could cause major vulnerabilities and data loss
+  Identifies S3 buckets which are not restricted from public access.
 severity: high
 enabled: true
 sql: >
@@ -15,4 +14,4 @@ sql: >
         OR supplementaryconfiguration ->> 'isPublicByPolicy' <> 'false')
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

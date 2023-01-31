@@ -4,10 +4,7 @@ type: asset
 name: >
   S3 bucket used to store CloudTrail logs is publicly accessible
 description: >
-  CloudTrail logs a record of every API call made in your AWS account. These logs file are
-  stored in an S3 bucket. It is recommended that the bucket policy, or access control list
-  (ACL), applied to the S3 bucket that CloudTrail logs to prevents public access to the
-  CloudTrail logs.
+  Identifies S3 buckets that are used to store CloudTrail logs and are publicly accessible.
 severity: high
 enabled: true
 sql: >
@@ -40,4 +37,4 @@ sql: >
   FROM check_buckets_policy_statements;
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

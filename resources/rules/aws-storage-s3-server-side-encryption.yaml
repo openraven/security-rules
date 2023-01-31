@@ -2,9 +2,9 @@ id: e2ef581b-2a7e-4448-adb9-6da633b35bde
 refId: aws-storage-s3-server-side-encryption
 type: asset
 name: >
-  S3 bucket does not have the Amazon S3 default encryption enabled
+  S3 bucket does not have S3 default encryption enabled
 description: >
-  The rule is NON_COMPLIANT if your Amazon S3 bucket is not encrypted by default.
+  Identifies S3 buckets that do not have amazon S3 default encryption enabled.
 severity: medium
 enabled: true
 sql: >
@@ -13,4 +13,4 @@ sql: >
   WHERE
   (supplementaryconfiguration->'ServerSideEncryptionConfiguration' = 'null');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

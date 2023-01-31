@@ -3,10 +3,9 @@ id: aa2c777f-31f3-44cf-b708-947d41f27ab7
 refId: aws-database-rds-logging-enabled
 type: asset
 name: >
-  RDS Instances do not have Cloudwatch Logging enabled.
+  RDS instance does not have CloudWatch logging enabled
 description: >
-  This rule checks if log types exported to Amazon CloudWatch for an Amazon Relational Database Service (Amazon RDS) instance are enabled.
-  The rule is NON_COMPLIANT if any such log types are not enabled.
+  Identifies RDS instances which do not have CloudWatch logging enabled.
 severity: low
 enabled: true
 sql: >
@@ -14,4 +13,4 @@ sql: >
   FROM ${magpie_schema}.awsrdsdbinstance
   WHERE (configuration -> 'enabledCloudwatchLogsExports' = 'null');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

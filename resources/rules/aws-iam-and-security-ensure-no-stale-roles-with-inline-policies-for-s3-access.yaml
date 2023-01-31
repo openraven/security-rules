@@ -3,11 +3,9 @@ id: fe381bf0-e2ab-4f22-8834-d459c609373f
 refId: aws-iam-and-security-ensure-no-stale-roles-with-inline-policies-for-s3-access
 type: asset
 name: >
-  Stale Roles exist with Inline Policies for S3 access
+  Stale roles exist with inline policies for S3 access
 description: >
-  Avoid stale roles which could cause access leakage and uncontrolled manipulation with S3 bucket data
-  which increase risks and leads to Ransomware violations.
-  This rule checks inline policies only. The Attached policies verified under the respective rule.
+  Identifies stale roles that exist with inline policies for S3 access.
 severity: medium
 enabled: true
 sql: >
@@ -22,4 +20,4 @@ sql: >
   AND (configuration -> 'roleLastUsed' ->> 'lastUsedDate' IS NULL
       OR now() - INTERVAL '60 DAYS' > to_timestamp(configuration -> 'roleLastUsed' ->> 'lastUsedDate', 'YYYY-MM-DDTHH:MI:SS'))
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

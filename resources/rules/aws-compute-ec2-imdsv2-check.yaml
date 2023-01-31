@@ -5,8 +5,7 @@ type: asset
 name: >
   EC2 instance metadata does not use IMDSv2
 description: >
-  This rule checks if EC2 instance metadata uses Instance Metadata Service Version 2 (IMDSv2).
-  The rule is NON_COMPLIANT if the HttpTokens is set to optional.
+  Identifies EC2 instances that are not using IMDSv2.
 severity: medium
 enabled: true
 sql: >
@@ -14,4 +13,4 @@ sql: >
   FROM ${magpie_schema}.awsec2instance
   WHERE configuration->'metadataOptions'->>'httpTokens' = 'optional';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

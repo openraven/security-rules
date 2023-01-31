@@ -3,12 +3,9 @@ id: b6b640be-94b6-40fb-8e69-0c3917ffeb4f
 refId: aws-storage-s3-bucket-deny-overriding-of-default-kms-key-encryption
 type: asset
 name: >
-  S3 bucket does not deny overriding of default KMS Key encryption
+  S3 bucket does not deny overriding of default KMS key encryption
 description: >
-  Attackers which have S3:PutObject permission are still able to override default KMS Key encryption
-  on updating object operation with their own provided KMS Key, thus lead ransomware violation
-  Bucket owner should define policy to allow objects modification only using the defined default KMS Key,
-  which attack unlikely have permissions to change or modify
+  Identifies S3 buckets which do not deny overriding of the default KMS key encryption.
 severity: high
 enabled: true
 sql: >
@@ -27,4 +24,4 @@ sql: >
           OR policy.stmt ->> 'Condition' not like '%x-amz-server-side-encryption-aws-kms-key-id%')
 
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

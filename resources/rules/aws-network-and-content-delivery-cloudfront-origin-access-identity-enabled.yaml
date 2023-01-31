@@ -2,11 +2,9 @@ id: a5b866ff-f9d4-4c3c-93e2-efe17195d3b7
 refId: aws-network-and-content-delivery-cloudfront-origin-access-identity-enabled
 type: asset
 name: >
-  CloudFront distribution with S3 Origin type has Origin Access Identity (OAI) configured.
+  CloudFront distribution with S3 Origin type has Origin Access Identity (OAI) configured
 description: >
-  This rule checks if Amazon CloudFront distribution with S3 Origin type has Origin Access Identity (OAI) configured.
-  The rule is NON_COMPLIANT if the CloudFront distribution is backed by S3 and any of S3 Origin type is not OAI configured.
-  The rule is NON_COMPLIANT if the origin is not an S3 bucket; the rule does not return NOT_APPLICABLE if the origin is not as S3 bucket.
+  Identifies CloudFront distribution with S3 origin type that has Origin Access Identity (OAI) configured.
 severity: low
 enabled: true
 sql: >
@@ -15,4 +13,4 @@ sql: >
   WHERE EXISTS (SELECT * FROM jsonb_array_elements(configuration->'origins'->'items') items
   WHERE items ->'s3OriginConfig' -> 'originAccessIdentity' = '""');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

@@ -5,8 +5,7 @@ type: asset
 name: >
   S3 bucket does not have lock enabled by default
 description: >
-  This rule checks if S3 buckets has lock enabled by default.
-  The rule is NON_COMPLIANT if the lock is not enabled.
+  Identifies S3 buckets that do not have lock enabled by default.
 severity: low
 enabled: true
 sql: >
@@ -16,4 +15,4 @@ sql: >
   (supplementaryconfiguration->'BucketObjectLockConfiguration' = 'null'
   OR supplementaryconfiguration->'BucketObjectLockConfiguration'->>'objectLockEnabled' != 'Enabled');
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

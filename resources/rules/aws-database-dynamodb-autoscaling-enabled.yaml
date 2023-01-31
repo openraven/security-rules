@@ -3,10 +3,9 @@ id: e8745a5d-6464-4e94-a443-559903a2dc3a
 refId: aws-database-dynamodb-autoscaling-enabled
 type: asset
 name: >
-  DynamoDB tables do not have auto-scaling enabled
+  DynamoDB table does not have auto-scaling enabled
 description: >
-  This rule checks if Auto Scaling or On-Demand is enabled on your DynamoDB tables and/or global secondary indexes.
-  Optionally you can set the read and write capacity units for the table or global secondary index.
+  Identifies DynamoDB tables which do not have auto-scaling enabled.
 severity: low
 enabled: true
 sql: >
@@ -15,4 +14,4 @@ sql: >
   WHERE configuration->'billingModeSummary' = 'null'
   OR configuration->'billingModeSummary'->>'billingMode' != 'PAY_PER_REQUEST';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5

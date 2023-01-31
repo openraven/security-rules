@@ -2,10 +2,9 @@ id: 66d58541-3a0d-44f2-9d06-01a5bd6a67b6
 refId: aws-compute-ec2-instances-in-vpc
 type: asset
 name: >
-  EC2 instances do not belong to a VPC
+  EC2 instance does not belong to a VPC
 description: >
-  This rule checks if your EC2 instances belong to a Virtual Private Cloud (VPC).
-  The rule is NON_COMPLIANT if your EC2 instances do not belong to a VPC
+  Identifies EC2 instances which do not belong to a VPC.
 severity: low
 enabled: true
 sql: >
@@ -13,4 +12,4 @@ sql: >
   FROM ${magpie_schema}.awsec2instance
   WHERE configuration->'vpcId' = 'null';
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.1
+version: 1.0.5
