@@ -12,5 +12,7 @@ sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsiamcredentialsreport
   WHERE (configuration ->> 'mfa_active' = 'false');
+remediation: >
+  Enable MFA for IAM users.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

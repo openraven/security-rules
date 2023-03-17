@@ -12,6 +12,7 @@ sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsaccount
     WHERE configuration->>'AccountMFAEnabled' != '1';
-
+remediation: >
+  Enable MFA for the "root" account.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

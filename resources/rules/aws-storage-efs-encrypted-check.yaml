@@ -11,5 +11,7 @@ sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsefsfilesystem
   WHERE (configuration -> 'encrypted' = 'false');
+remediation: >
+  Enable AWS KMS file encryption for EFS.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

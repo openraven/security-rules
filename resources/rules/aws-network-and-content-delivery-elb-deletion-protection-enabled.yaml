@@ -12,5 +12,7 @@ sql: >
   from ${magpie_schema}.awselasticloadbalancingloadbalancer
   WHERE (supplementaryconfiguration->'attributes'->) as attri
   WHERE attri #>'key' = "deletion_protection.enabled" AND 'value' = 'false'
+remediation: >
+  Enable deletion protection for Elastic Load Balancers.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

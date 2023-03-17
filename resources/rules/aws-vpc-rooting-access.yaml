@@ -8,5 +8,7 @@ description: >
 manualControl: true
 severity: medium
 enabled: true
+remediation: >
+  This is a manual rule.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

@@ -14,5 +14,7 @@ sql: >
   WHERE
   (supplementaryconfiguration->'BucketObjectLockConfiguration' = 'null'
   OR supplementaryconfiguration->'BucketObjectLockConfiguration'->>'objectLockEnabled' != 'Enabled');
+remediation: >
+  Enable default lock for S3 buckets.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

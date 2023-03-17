@@ -35,6 +35,7 @@ sql: >
   UNION
   SELECT arn
   FROM check_buckets_policy_statements;
-
+remediation: >
+  Restrict public access for S3 buckets used to store CloudTrail logs.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

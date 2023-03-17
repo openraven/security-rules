@@ -12,5 +12,7 @@ sql: >
   FROM ${magpie_schema}.awsrdsdbinstance
   WHERE EXISTS (SELECT * FROM jsonb_array_elements(supplementaryconfiguration->'dbClusters'->'dbClusters') dbClusters
   WHERE dbClusters ->>'multiAZ' = 'false');
+remediation: >
+  Enable multi-az replication for RDS.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

@@ -17,6 +17,7 @@ sql: >
     ) arr
       WHERE arr.ssec -> 'applyServerSideEncryptionByDefault' ->> 'sseAlgorithm' = 'aws:kms'
       AND arr.ssec -> 'applyServerSideEncryptionByDefault' ->> 'kmsMasterKeyID' NOT LIKE '%:'||s3bucket.awsaccountid||':%'
-
+remediation: >
+  Investigate and disable cross-account enablement of server-side encryption for S3 buckets.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

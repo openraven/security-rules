@@ -18,5 +18,7 @@ sql: >
                   WHERE "configuration" ->> 'status' = 'ENABLED') a
     ON (reg.region_global = a.awsregion or awsregion is null)
   WHERE awsregion is null
+remediation: >
+  Enable GuardDuty for required regions.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

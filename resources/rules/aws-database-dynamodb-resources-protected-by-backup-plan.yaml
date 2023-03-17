@@ -12,5 +12,7 @@ sql: >
   select arn as assetid
   FROM ${magpie_schema}.awsdynamodbtable
   WHERE supplementaryconfiguration->>'awsBackupJobs' = '[]';
+remediation: >
+  Enable protection by a back-up plan for DynamoDB tables.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

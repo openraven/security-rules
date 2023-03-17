@@ -11,5 +11,7 @@ sql: >
   SELECT arn as assetid
   from ${magpie_schema}.awsec2instance
   WHERE (configuration -> 'ebsOptimized' = 'false')
+remediation: >
+  Enable EBS optimization for EC2 instances that can be EBS-optimized.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

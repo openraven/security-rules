@@ -20,5 +20,7 @@ sql: >
   WHERE ec2.configuration -> 'state' ->> 'name' = 'running'
   AND arr.ebs_device ->> 'status' = 'attached'
   AND snap.configuration ->> 'snapshotId' is null
+remediation: >
+  Enable EBS volume snapshots for running EC2 instances that do not have snapshots enabled.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

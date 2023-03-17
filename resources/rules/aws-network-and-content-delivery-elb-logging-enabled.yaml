@@ -11,5 +11,7 @@ sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awselasticloadbalancingloadbalancer
   WHERE (supplementaryconfiguration -> 'attributes' -> 'loadBalancerAttributes' -> 'accessLog' -> 'enabled' = 'false')
+remediation: >
+  Enable logging for Elastic Load Balancers.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

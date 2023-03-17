@@ -14,5 +14,7 @@ sql: >
   WHERE
   EXISTS (SELECT * FROM jsonb_array_elements(supplementaryconfiguration->'dbClusters'->'dbClusters') dbClusters
   WHERE dbClusters ->>'deletionProtection' = 'false');
+remediation: >
+  Enable deletion protection for RDS.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

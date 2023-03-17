@@ -28,6 +28,7 @@ sql: >
   )
 
   SELECT * FROM get_cidrIp;
-
+remediation: >
+  Remove or restrict ingress to specific IP ranges for port 22 rather than allowing internet wide access.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

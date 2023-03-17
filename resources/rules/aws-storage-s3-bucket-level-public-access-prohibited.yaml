@@ -12,6 +12,7 @@ sql: >
     FROM ${magpie_schema}.awss3bucket
      WHERE (supplementaryconfiguration ->> 'isPublicByACL' <> 'false'
         OR supplementaryconfiguration ->> 'isPublicByPolicy' <> 'false')
-
+remediation: >
+  Disable public access via either ACL or policy for S3 buckets.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

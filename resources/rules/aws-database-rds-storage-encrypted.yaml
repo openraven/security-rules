@@ -12,5 +12,7 @@ sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsrdsdbinstance
   WHERE (configuration->'storageEncrypted' = 'false');
+remediation: >
+  Enable encryption for RDS DB instance storage.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

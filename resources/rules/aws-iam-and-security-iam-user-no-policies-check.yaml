@@ -12,5 +12,7 @@ sql: >
   FROM ${magpie_schema}.awsiamuser
     WHERE (supplementaryconfiguration->>'attachedPolicies' != '[]'
          OR supplementaryconfiguration->>'userPolicies' != '[]');
+remediation: >
+  Amend IAM policies that are not attached only to groups or roles.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

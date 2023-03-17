@@ -11,5 +11,7 @@ sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awselasticsearchdomain
   WHERE (configuration->'nodeToNodeEncryptionOptions'->>'enabled' != 'true');
+remediation: >
+  Enable node-to-node encryption on OpenSearch domains.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

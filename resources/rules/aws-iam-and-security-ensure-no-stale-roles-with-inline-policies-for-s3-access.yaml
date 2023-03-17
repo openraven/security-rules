@@ -19,5 +19,7 @@ sql: >
   AND configuration ->> 'roleLastUsed' IS NOT NULL
   AND (configuration -> 'roleLastUsed' ->> 'lastUsedDate' IS NULL
       OR now() - INTERVAL '60 DAYS' > to_timestamp(configuration -> 'roleLastUsed' ->> 'lastUsedDate', 'YYYY-MM-DDTHH:MI:SS'))
+remediation: >
+  Remove stale roles or remove their inline policies for access to S3.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

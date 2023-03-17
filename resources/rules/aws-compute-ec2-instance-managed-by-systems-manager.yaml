@@ -15,5 +15,7 @@ sql: >
       ON (${magpie_schema}.awsec2instance.resourceid = ${magpie_schema}.awsssminstance.resourceid)
    WHERE ${magpie_schema}.awsec2instance.configuration -> 'state' ->> 'name' = 'running'
      AND ${magpie_schema}.awsssminstance.resourceid IS NULL;
+remediation: >
+  Enable SSM for EC2 instances that are not currently managed by SSM.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6
