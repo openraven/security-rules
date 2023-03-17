@@ -12,5 +12,7 @@ sql: >
   FROM ${magpie_schema}.awscloudfrontdistribution
   WHERE EXISTS (SELECT * FROM jsonb_array_elements(configuration->'origins'->'items') items
   WHERE items ->'s3OriginConfig' -> 'originAccessIdentity' = '""');
+remediation: >
+  Disable OAI and use OAC as a more secure alternative.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

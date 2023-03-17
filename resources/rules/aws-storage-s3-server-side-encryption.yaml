@@ -12,5 +12,7 @@ sql: >
   from ${magpie_schema}.awss3bucket
   WHERE
   (supplementaryconfiguration->'ServerSideEncryptionConfiguration' = 'null');
+remediation: >
+  Enable default encryption for S3 buckets.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

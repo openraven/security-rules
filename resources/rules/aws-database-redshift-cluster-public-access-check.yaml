@@ -11,5 +11,7 @@ sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsredshiftcluster
   WHERE (configuration -> 'publiclyAccessible' = 'true')
+remediation: >
+  Disable public access for RedShift clusters.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

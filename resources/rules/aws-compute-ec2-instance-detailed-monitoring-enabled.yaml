@@ -12,5 +12,7 @@ sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsec2instance
   WHERE configuration->'monitoring'->>'state' = 'disabled';
+remediation: >
+  Enable detailed monitoring for EC2 instances that do not have it enabled.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

@@ -13,5 +13,7 @@ sql: >
   FROM ${magpie_schema}.awsdynamodbtable
   WHERE configuration->'billingModeSummary' = 'null'
   OR configuration->'billingModeSummary'->>'billingMode' != 'PAY_PER_REQUEST';
+remediation: >
+  Enable auto-scaling for DynamoDB tables.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

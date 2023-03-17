@@ -14,5 +14,7 @@ sql: >
   (supplementaryconfiguration->'Versioning'->>'status' is null
   OR
   supplementaryconfiguration->'Versioning'->>'status' != 'Enabled');
+remediation: >
+  Enable versioning for S3 buckets.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

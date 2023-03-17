@@ -11,5 +11,7 @@ sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsfsxfilesystem
   WHERE (configuration -> 'ontapConfiguration' -> 'automaticBackupRetentionDays' = 'null')
+remediation: >
+  Enable backup plan protection for FSX file systems.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

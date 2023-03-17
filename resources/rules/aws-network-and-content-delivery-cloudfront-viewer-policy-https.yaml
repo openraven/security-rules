@@ -11,5 +11,7 @@ sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awscloudfrontdistribution
   WHERE (configuration -> 'defaultCacheBehavior' -> 'viewerProtocolPolicy' = '"allow-all"')
+remediation: >
+  Enable HTTPS on CloudFront distributions.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

@@ -13,5 +13,7 @@ sql: >
   WHERE (supplementaryconfiguration ->> 'isPublic')::boolean IS TRUE AND
   (supplementaryconfiguration->'Versioning'->>'status' is null OR supplementaryconfiguration->'Versioning'->>'status' <> 'Enabled') AND
   (supplementaryconfiguration -> 'Versioning' ->> 'mfaDelete' is null OR supplementaryconfiguration -> 'Versioning' ->> 'mfaDelete' <> 'Enabled')
+remediation: >
+  Remove public access, enable versioning and ensure MFA delete is enabled for S3 buckets.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

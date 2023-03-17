@@ -14,6 +14,7 @@ sql: >
     WHERE (resourcename = '<root_account>'
          AND (configuration->>'access_key_1_active' = 'true'
               OR configuration->>'access_key_2_active' = 'true'));
-
+remediation: >
+  Delete access keys that belong to the root account.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

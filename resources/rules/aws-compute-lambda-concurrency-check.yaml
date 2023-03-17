@@ -11,5 +11,7 @@ sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awslambdafunction
   WHERE (supplementaryconfiguration -> 'Function' -> 'concurrency' = 'null');
+remediation: >
+  Enable a concurrent execution limit for Lambda functions.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

@@ -11,5 +11,7 @@ sql: >
   SELECT arn as assetid
   from ${magpie_schema}.awsec2volume
   WHERE (configuration -> 'encrypted' = 'false')
+remediation: >
+  Enable encryption for EBS volumes in an attached state.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

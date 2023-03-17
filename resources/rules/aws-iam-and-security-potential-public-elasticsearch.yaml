@@ -28,6 +28,7 @@ sql: >
   )
 
   SELECT * FROM get_cidrIp;
-
+remediation: >
+  Restrict the security group ingress to specific IP ranges for port 9200 rather than the full internet.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

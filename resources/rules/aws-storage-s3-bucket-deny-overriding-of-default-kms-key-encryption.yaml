@@ -22,6 +22,7 @@ sql: >
     WHERE policy.stmt ->> 'Action' LIKE '%s3:PutObject%'
     AND (policy.stmt ->> 'Condition' IS NULL
           OR policy.stmt ->> 'Condition' not like '%x-amz-server-side-encryption-aws-kms-key-id%')
-
+remediation: >
+  Ensure S3 buckets deny overriding of default KMS key encryption.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

@@ -14,5 +14,7 @@ sql: >
   WHERE
   (supplementaryconfiguration->'ServerSideEncryptionConfiguration' = 'null'
   OR 'aws:kms' != (SELECT CAST(jsonb_array_elements(supplementaryconfiguration->'ServerSideEncryptionConfiguration'->'rules')->'applyServerSideEncryptionByDefault'->>'sseAlgorithm' AS TEXT)));
+remediation: >
+  Enable KMS encryption for S3 buckets.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

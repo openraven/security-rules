@@ -24,5 +24,7 @@ sql: >
     supplementaryconfiguration->'BucketPolicy'->>'Statement' LIKE '%"Principal": "*"%'
     AND
     supplementaryconfiguration->'BucketPolicy'->>'Statement' LIKE '%"Action": "s3:PutObject"%');
+remediation: >
+  Disable public writing of files for S3 buckets.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

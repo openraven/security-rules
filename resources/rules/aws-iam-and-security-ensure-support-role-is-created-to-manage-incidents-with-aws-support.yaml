@@ -13,6 +13,7 @@ sql: >
   FROM ${magpie_schema}.awsiampolicy
     WHERE resourcename = 'AWSSupportAccess'
     AND configuration->>'attachmentCount' = '0';
-
+remediation: >
+  Create a support role to manage incidents with AWS support.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

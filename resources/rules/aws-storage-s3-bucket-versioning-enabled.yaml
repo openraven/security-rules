@@ -14,5 +14,7 @@ sql: >
         OR supplementaryconfiguration -> 'Versioning' ->> 'status' <> 'Enabled'
         OR supplementaryconfiguration -> 'Versioning' ->> 'mfaDelete' is null
         OR supplementaryconfiguration -> 'Versioning' ->> 'mfaDelete' <> 'Enabled')
+remediation: >
+  Enable MFA option for changing bucket versioning settings and permanently deleting object versions.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

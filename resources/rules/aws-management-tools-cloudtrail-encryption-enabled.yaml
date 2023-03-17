@@ -13,5 +13,7 @@ sql: >
   FROM ${magpie_schema}.awscloudtrailtrail
   WHERE (supplementaryconfiguration->'trailDetails'->'trail'->>'kmsKeyId' = ''
   OR supplementaryconfiguration->'trailDetails'->'trail'->>'kmsKeyId' IS NULL);
+remediation: >
+  Enable encryption via KMS CMKs for CloudTrail logs.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

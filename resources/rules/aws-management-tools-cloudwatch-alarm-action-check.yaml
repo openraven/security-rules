@@ -15,5 +15,7 @@ sql: >
     AND configuration -> 'insuffiecientDataActions' = '[]'
     AND configuration -> 'okActions' = '[]')
     OR (configuration -> 'actionsEnabled' = 'true') AND (configuration -> 'alarmActions' = '[]');
+remediation: >
+  Enable an associated alarm action for a CloudWatch alarm.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

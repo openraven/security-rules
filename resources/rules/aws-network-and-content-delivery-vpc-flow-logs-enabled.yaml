@@ -20,5 +20,7 @@ sql: >
        WHERE flow_logs->>'flowLogStatus' ILIKE 'ACTIVE'
          AND (flow_logs->>'trafficType' ILIKE 'ALL'
               OR flow_logs->>'trafficType' ILIKE 'REJECT'));
+remediation: >
+  Enable VPC flow logging for all VPCs.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

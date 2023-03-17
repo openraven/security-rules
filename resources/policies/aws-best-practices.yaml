@@ -32,7 +32,7 @@ ruleIds:
   - aws-iam-and-security-ensure-iam-password-policy-requires-one-uppercase-letter.yaml
   - aws-iam-and-security-iam-user-no-policies-check.yaml
 #  - aws-iam-and-security-iam-instance-roles-used-for-aws-resource-access-from-instances.yaml
-  - aws-iam-and-security-iam-attaced-policies.yaml
+  - aws-iam-and-security-iam-attached-policies.yaml
   - aws-iam-and-security-ensure-no-stale-roles-with-inline-policies-for-s3-access.yaml
  # - aws-account-details.yaml
 #  - aws-management-tools-cloudtrail-ensure-log-metric-filter-and-alarm-exist-for-aws-config-changes.yaml # Negative Rule
@@ -143,4 +143,4 @@ ruleIds:
   - aws-network-and-content-delivery-cloudfront-origin-failover-enabled.yaml
   - aws-network-and-content-delivery-cloudfront-origin-access-identity-enabled.yaml
   - aws-network-and-content-delivery-cloudfront-associated-with-waf.yaml
-version: 0.2.6
+version: 0.2.7

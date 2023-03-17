@@ -11,5 +11,7 @@ sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsekscluster
   WHERE (configuration -> 'cluster' -> 'resourcesVpcConfig' -> 'endpointPublicAccess' = 'true');
+remediation: >
+  Disable public access to EKS endpoints which are not meant to be exposed to the internet.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6

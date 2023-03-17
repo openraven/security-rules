@@ -12,5 +12,7 @@ sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awscloudtrailtrail
   WHERE supplementaryconfiguration->'trailDetails'->'trail'->'logFileValidationEnabled' != 'true';
+remediation: >
+  Enable log file validation for CloudTrail.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.5
+version: 1.0.6
