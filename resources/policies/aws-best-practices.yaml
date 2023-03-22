@@ -136,4 +136,5 @@ ruleIds:
   - aws-compute-ec2-ebs-encryption-by-default.yaml
   - aws-compute-ec2-stopped-instance.yaml
   - aws-compute-ec2-instance-multiple-eni-check.yaml
+  - aws-network-and-content-delivery-elb-deletion-protection-enabled.yaml
 version: 1.0

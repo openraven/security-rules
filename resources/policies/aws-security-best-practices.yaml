@@ -116,3 +116,4 @@ ruleIds:
   - aws-network-and-content-delivery-cloudfront-origin-access-identity-enabled.yaml
   - aws-network-and-content-delivery-cloudfront-associated-with-waf.yaml
   - aws-iam-and-security-default-security-group-for-vpc-restricts-all-traffic.yaml
+  - aws-network-and-content-delivery-elb-deletion-protection-enabled.yaml

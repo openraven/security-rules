@@ -9,8 +9,8 @@ severity: high
 enabled: true
 sql: >
   SELECT arn as assetid
-  from ${magpie_schema}.awselasticloadbalancingloadbalancer
-  WHERE (supplementaryconfiguration->'attributes'->) as attri
-  WHERE attri #>'key' = "deletion_protection.enabled" AND 'value' = 'false'
+  from ${magpie_schema}.awselasticloadbalancingv2loadbalancer
+  where exists (select * FROM jsonb_array_elements(supplementaryconfiguration->'attributes'->'attributes') attr
+  WHERE (attr -> 'key' = '"deletion_protection.enabled"' and attr -> 'value' = '"false"'));
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 1.0
