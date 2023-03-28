@@ -15,4 +15,4 @@ sql: >
 remediation: >
   Enable deletion protection for Elastic Load Balancers.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.6
+version: 1.0.7
