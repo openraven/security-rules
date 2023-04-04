@@ -18,4 +18,4 @@ sql: >
 remediation: >
   Rotate access keys that have not been rotated in the last 90 days.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.6
+version: 1.0.7
