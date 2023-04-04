@@ -17,6 +17,12 @@ sql: >
     AND
     supplementaryconfiguration->'BucketACLConfiguration'->>'grants' LIKE '%http://acs.amazonaws.com/groups/global/AllUsers%')
   OR
+  (supplementaryconfiguration->'PublicAccessBlockConfiguration'->>'blockPublicAcls' = 'false'
+    AND
+    supplementaryconfiguration->'BucketACLConfiguration'->>'grants' like '%WRITE%'
+    AND
+    supplementaryconfiguration->'BucketACLConfiguration'->>'grants' LIKE '%http://acs.amazonaws.com/groups/global/AuthenticatedUsers%')
+  OR
   (supplementaryconfiguration->'PublicAccessBlockConfiguration'->>'blockPublicPolicy' = 'false'
     AND
     supplementaryconfiguration->'BucketPolicy'->>'Statement' LIKE '%"Effect": "Allow"%'
