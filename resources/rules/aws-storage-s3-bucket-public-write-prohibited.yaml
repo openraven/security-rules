@@ -33,4 +33,4 @@ sql: >
 remediation: >
   Disable public writing of files for S3 buckets.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.6
+version: 1.0.7
