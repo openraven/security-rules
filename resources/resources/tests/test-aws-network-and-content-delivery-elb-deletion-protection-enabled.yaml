@@ -1,0 +1,133 @@
+ruleId: aws-network-and-content-delivery-elb-deletion-protection-enabled
+cloudProvider: aws
+description: >
+  - Insecure Assets do not have Elastic Load Balancing has deletion protection enabled
+  - Secure Assets have Elastic Load Balancing has deletion protection enabled
+insecureAssets:
+  arn:aws:elasticloadbalancing:us-east-1:000000000000:loadbalancer/true: >
+    [ {
+      "documentId" : "T52h-7gYOIC2fuS-nIkiQw",
+      "arn" : "arn:aws:elasticloadbalancing:us-east-1:00000000000:loadbalancer",
+      "resourceName" : "test4rules-f69efcf921e604f4.elb.us-east-1.amazonaws.com",
+      "resourceId" : "test4rules",
+      "resourceType" : "AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "awsRegion" : "us-east-1",
+      "awsAccountId" : "00000000000",
+      "createdIso" : "2023-03-22T12:48:02.834Z",
+      "updatedIso" : "2023-03-22T15:16:41.425306Z",
+      "discoverySessionId" : "2ad63441-a5f6-44cf-b6f2-6c8997c2fc06",
+      "maxSizeInBytes" : null,
+      "sizeInBytes" : null,
+      "configuration" : {
+        "loadBalancerArn" : "arn:aws:elasticloadbalancing:us-east-1:00000000000:loadbalancer",
+        "dnsName" : "test4rules-f69efcf921e604f4.elb.us-east-1.amazonaws.com",
+        "canonicalHostedZoneId" : "Z26RNL4JYFTOTI",
+        "createdTime" : "2023-03-22T12:48:02.834Z",
+        "loadBalancerName" : "test4rules",
+        "scheme" : "internal",
+        "vpcId" : "vpc-01c7edd4f681880d0",
+        "state" : {
+          "code" : "active",
+          "reason" : null
+        },
+        "type" : "network",
+        "availabilityZones" : [ {
+          "zoneName" : "us-east-1a",
+          "subnetId" : "subnet-0b5ce5cde3e5e2048",
+          "outpostId" : null,
+          "loadBalancerAddresses" : [ ]
+        } ],
+        "securityGroups" : null,
+        "ipAddressType" : "ipv4",
+        "customerOwnedIpv4Pool" : null
+      },
+      "supplementaryConfiguration" : {
+        "attributes" : {
+          "attributes" : [ {
+            "key" : "access_logs.s3.prefix",
+            "value" : ""
+          }, {
+            "key" : "deletion_protection.enabled",
+            "value" : "false"
+          }, {
+            "key" : "load_balancing.cross_zone.enabled",
+            "value" : "false"
+          }, {
+            "key" : "access_logs.s3.enabled",
+            "value" : "false"
+          }, {
+            "key" : "access_logs.s3.bucket",
+            "value" : ""
+          } ]
+        }
+      },
+      "tags" : { },
+      "discoveryMeta" : [ "io.openraven.magpie.api.Session", {
+        "id" : "2ad63441-a5f6-44cf-b6f2-6c8997c2fc06",
+        "createdAt" : "2023-03-22T15:16:05.224224Z"
+  } ]
+} ]
+secureAssets:
+  arn:aws:elasticloadbalancing:us-east-1:000000000000:loadbalancer/false: >
+        [ {
+          "documentId" : "T52h-7gYOIC2fuS-nIkiQw",
+          "arn" : "arn:aws:elasticloadbalancing:us-east-1:00000000000:loadbalancer",
+          "resourceName" : "test4rules-f69efcf921e604f4.elb.us-east-1.amazonaws.com",
+          "resourceId" : "test4rules",
+          "resourceType" : "AWS::ElasticLoadBalancingV2::LoadBalancer",
+          "awsRegion" : "us-east-1",
+          "awsAccountId" : "00000000000",
+          "createdIso" : "2023-03-22T12:48:02.834Z",
+          "updatedIso" : "2023-03-22T15:16:41.425306Z",
+          "discoverySessionId" : "2ad63441-a5f6-44cf-b6f2-6c8997c2fc06",
+          "maxSizeInBytes" : null,
+          "sizeInBytes" : null,
+          "configuration" : {
+            "loadBalancerArn" : "arn:aws:elasticloadbalancing:us-east-1:00000000000:loadbalancer",
+            "dnsName" : "test4rules-f69efcf921e604f4.elb.us-east-1.amazonaws.com",
+            "canonicalHostedZoneId" : "Z26RNL4JYFTOTI",
+            "createdTime" : "2023-03-22T12:48:02.834Z",
+            "loadBalancerName" : "test4rules",
+            "scheme" : "internal",
+            "vpcId" : "vpc-01c7edd4f681880d0",
+            "state" : {
+              "code" : "active",
+              "reason" : null
+            },
+            "type" : "network",
+            "availabilityZones" : [ {
+              "zoneName" : "us-east-1a",
+              "subnetId" : "subnet-0b5ce5cde3e5e2048",
+              "outpostId" : null,
+              "loadBalancerAddresses" : [ ]
+            } ],
+            "securityGroups" : null,
+            "ipAddressType" : "ipv4",
+            "customerOwnedIpv4Pool" : null
+          },
+          "supplementaryConfiguration" : {
+            "attributes" : {
+              "attributes" : [ {
+                "key" : "access_logs.s3.prefix",
+                "value" : ""
+              }, {
+                "key" : "deletion_protection.enabled",
+                "value" : "true"
+              }, {
+                "key" : "load_balancing.cross_zone.enabled",
+                "value" : "false"
+              }, {
+                "key" : "access_logs.s3.enabled",
+                "value" : "false"
+              }, {
+                "key" : "access_logs.s3.bucket",
+                "value" : ""
+              } ]
+            }
+          },
+          "tags" : { },
+          "discoveryMeta" : [ "io.openraven.magpie.api.Session", {
+            "id" : "2ad63441-a5f6-44cf-b6f2-6c8997c2fc06",
+            "createdAt" : "2023-03-22T15:16:05.224224Z"
+      } ]
+    } ]
