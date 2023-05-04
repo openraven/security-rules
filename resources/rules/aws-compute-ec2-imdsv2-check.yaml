@@ -3,16 +3,17 @@ id: 903a628b-3c9d-46e7-bcb0-c0904fdbb0dd
 refId: aws-compute-ec2-imdsv2-check
 type: asset
 name: >
-  EC2 instance metadata does not use IMDSv2
+  EC2 instance metadata does not enforce use of IMDSv2
 description: >
-  Identifies EC2 instances that are not using IMDSv2.
+  Identifies EC2 instances that are not enforcing use of IMDSv2.
 severity: medium
 enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsec2instance
-  WHERE configuration->'metadataOptions'->>'httpTokens' = 'optional';
+  WHERE (configuration->'metadataOptions'->>'httpTokens'!= 'required') AND
+  (configuration->'metadataOptions'->>'httpEndpoint' = 'enabled')
 remediation: >
   Enable IMDSv2 for EC2 instances where it is not being used.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.6
+version: 1.0.7
