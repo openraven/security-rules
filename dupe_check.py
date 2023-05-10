@@ -7,6 +7,7 @@ id_to_files = {}
 
 for file in os.listdir(sub_path):
   if file.endswith(".yaml"):
+    print(f"Processing {file}")
     with open(sub_path + file, 'r') as f:
       line = f.readline().strip()
       uuid = line.split(":")[1].strip()
