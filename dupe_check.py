@@ -1,8 +1,8 @@
 
 import os
 
+print(f"Initializing in {os.getcwd()}")
 sub_path = "resources/rules/"
-
 id_to_files = {}
 
 for file in os.listdir(sub_path):
