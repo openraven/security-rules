@@ -27,6 +27,8 @@ jobs:
 
         #   Clones the magpie repository, build it and then validate the security rules
         #   using the SecurityRuleValidator in magpie core
+      - name: Verify Rule IDs
+        run: python3 dupe_check.py
       - name: Clone Magpie
         run: git clone https://github.com/openraven/magpie.git
       - name: Build Magpie
