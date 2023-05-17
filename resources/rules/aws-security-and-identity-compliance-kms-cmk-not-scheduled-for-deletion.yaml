@@ -10,8 +10,8 @@ enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awskmskey
-  WHERE (supplementaryconfiguration -> 'rotation' -> 'keyRotationEnabled' = 'true');
+  WHERE (supplementaryconfiguration -> 'rotation' -> 'keyRotationEnabled' = 'false');
 remediation: >
   Stop deletion of KMS key if it should not be deleted.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.6
+version: 1.0.7
