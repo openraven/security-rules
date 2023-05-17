@@ -26,7 +26,7 @@ insecureAssets:
       },
       "supplementaryConfiguration" : {
         "rotation" : {
-          "keyRotationEnabled" : true
+          "keyRotationEnabled" : false
         },
         "aliases" : [ {
           "aliasName" : "alias/aws/lightsail",
@@ -70,7 +70,7 @@ secureAssets:
       },
       "supplementaryConfiguration" : {
         "rotation" : {
-          "keyRotationEnabled" : false
+          "keyRotationEnabled" : true
         },
         "aliases" : [ {
           "aliasName" : "alias/aws/lightsail",
