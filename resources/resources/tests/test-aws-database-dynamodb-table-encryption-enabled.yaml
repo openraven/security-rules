@@ -62,7 +62,7 @@ insecureAssets:
           "replicas" : null,
           "restoreSummary" : null,
           "sseDescription" : {
-            "status" : "null"
+            "status" : null
           },
           "archivalSummary" : null
         },

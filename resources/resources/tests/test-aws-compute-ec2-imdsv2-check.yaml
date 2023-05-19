@@ -147,7 +147,7 @@ insecureAssets:
         },
         "licenses" : null,
         "metadataOptions" : {
-          "state" : "applied",
+          "state" : "pending",
           "httpTokens" : "optional",
           "httpPutResponseHopLimit" : 1,
           "httpEndpoint" : "disabled"
