@@ -61,9 +61,7 @@ insecureAssets:
           "globalTableVersion" : null,
           "replicas" : null,
           "restoreSummary" : null,
-          "sseDescription" : {
-            "status" : null
-          },
+          "sseDescription" : null,
           "archivalSummary" : null
         },
         "supplementaryConfiguration" : {
