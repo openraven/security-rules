@@ -150,7 +150,7 @@ insecureAssets:
           "state" : "applied",
           "httpTokens" : "optional",
           "httpPutResponseHopLimit" : 1,
-          "httpEndpoint" : "enabled"
+          "httpEndpoint" : "disabled"
         },
         "enclaveOptions" : {
           "enabled" : false

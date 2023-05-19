@@ -133,7 +133,6 @@ ruleIds:
   - aws-compute-ec2-instance-profile-attached.yaml
   - aws-compute-ec2-volume-inuse-check.yaml
   - aws-compute-ec2-ebs-encryption-by-default.yaml
-  - aws-compute-ec2-stopped-instance.yaml
   - aws-compute-ec2-instance-multiple-eni-check.yaml
   - aws-compute-ebs-optimized-instance.yaml
   - aws-compute-ebs-encrypted-volumes.yaml
@@ -143,4 +142,4 @@ ruleIds:
   - aws-network-and-content-delivery-cloudfront-origin-access-identity-enabled.yaml
   - aws-network-and-content-delivery-cloudfront-associated-with-waf.yaml
   - aws-network-and-content-delivery-elb-deletion-protection-enabled.yaml
-version: 0.2.8
+version: 0.2.9

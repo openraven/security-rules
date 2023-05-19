@@ -11,9 +11,8 @@ enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsec2instance
-  WHERE (configuration->'metadataOptions'->>'httpTokens'!= 'required') AND
-  (configuration->'metadataOptions'->>'httpEndpoint' = 'enabled')
+  WHERE (configuration->'metadataOptions'->>'state' <> 'applied')
 remediation: >
   Enable IMDSv2 for EC2 instances where it is not being used.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.7
+version: 1.0.9
