@@ -377,23 +377,23 @@ secureAssets:
           "createdBy" : {
              "backupPlanId" : "bf7d7158-b5a1-4b23-8bef-f821cafb5ad3",
              "backupRuleId" : "bf0be7da-6421-42d7-aae9-a556653a7af4",
-             "backupPlanArn" : "arn:aws:backup:us-east-1:321859670049:backup-plan:bf7d7158-b5a1-4b23-8bef-f821cafb5ad3",
+             "backupPlanArn" : "arn:aws:backup:us-east-1:000000000000:backup-plan:bf7d7158-b5a1-4b23-8bef-f821cafb5ad3",
              "backupPlanVersion" : "MTVjZTY0NGUtZDc3NS00YjUxLTk2ZTItMWQ4YjZkMDE5NjRi"
           },
           "backupType" : null,
-          "iamRoleArn" : "arn:aws:iam::321859670049:role/service-role/AWSBackupDefaultServiceRole",
+          "iamRoleArn" : "arn:aws:iam::000000000000:role/service-role/AWSBackupDefaultServiceRole",
           "backupJobId" : "5C95F246-8546-9CEE-499C-E59D3E01CF9A",
           "percentDone" : "100.0",
-          "resourceArn" : "arn:aws:rds:us-east-1:321859670049:db:mike-sdss-test-2",
+          "resourceArn" : "arn:aws:rds:us-east-1:000000000000:db:mike-sdss-test-2",
           "creationDate" : "2023-05-01T05:00:00Z",
           "resourceType" : "RDS",
           "backupOptions" : null,
           "statusMessage" : null,
-          "backupVaultArn" : "arn:aws:backup:us-east-1:321859670049:backup-vault:Default",
+          "backupVaultArn" : "arn:aws:backup:us-east-1:000000000000:backup-vault:Default",
           "completionDate" : "2023-05-01T08:33:15.289Z",
           "backupVaultName" : "Default",
           "bytesTransferred" : null,
-          "recoveryPointArn" : "arn:aws:rds:us-east-1:321859670049:snapshot:awsbackup:job-5c95f246-8546-9cee-499c-e59d3e01cf9a",
+          "recoveryPointArn" : "arn:aws:rds:us-east-1:000000000000:snapshot:awsbackup:job-5c95f246-8546-9cee-499c-e59d3e01cf9a",
           "backupSizeInBytes" : 0,
           "expectedCompletionDate" : null
        } ]
