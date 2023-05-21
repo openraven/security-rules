@@ -11,8 +11,8 @@ enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsdynamodbtable
-  where (configuration -> 'sseDescription' = 'null')
+  where (configuration -> 'sseDescription' IS NULL)
 remediation: >
   Enable encryption for DynamoDB tables.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.7
+version: 1.0.8

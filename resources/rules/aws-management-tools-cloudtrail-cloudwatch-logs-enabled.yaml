@@ -11,10 +11,10 @@ enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awscloudtrailtrail
-  WHERE (supplementaryconfiguration->'trailDetails'->'trail'->'cloudWatchLogsLogGroupArn' = 'null'
-  OR supplementaryconfiguration->'status'->'latestCloudWatchLogsDeliveryTime' = 'null'
+  WHERE (supplementaryconfiguration->'trailDetails'->'trail'->'cloudWatchLogsLogGroupArn' IS NULL
+  OR supplementaryconfiguration->'status'->'latestCloudWatchLogsDeliveryTime' IS NULL
   OR TO_TIMESTAMP(supplementaryconfiguration->'status'->>'latestCloudWatchLogsDeliveryTime', 'YYYY-MM-DD"T"HH24:MI:SS') < now() - interval '1 day');
 remediation: >
   Integrate CloudTrail trails with CloudWatch logs.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.6
+version: 1.0.7

@@ -11,8 +11,8 @@ enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsrdsdbinstance
-  WHERE (configuration -> 'enabledCloudwatchLogsExports' = 'null');
+  WHERE (configuration -> 'enabledCloudwatchLogsExports' IS NULL);
 remediation: >
   Enable CloudWatch logging for RDS DB instances.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.6
+version: 1.0.7

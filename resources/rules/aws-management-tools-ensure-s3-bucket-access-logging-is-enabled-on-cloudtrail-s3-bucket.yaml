@@ -15,8 +15,8 @@ sql: >
       (SELECT *
        FROM ${magpie_schema}.awss3bucket s3bucket
          WHERE s3bucket.resourcename = cloudtrail.supplementaryconfiguration->'trailDetails'->'trail'->>'s3BucketName'
-         AND s3bucket.supplementaryconfiguration->'BucketLoggingConfiguration'->'loggingEnabled' = 'null');
+         AND s3bucket.supplementaryconfiguration->'BucketLoggingConfiguration'->'loggingEnabled' IS NULL);
 remediation: >
   Enable S3 bucket access logging for CloudTrail S3 buckets.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.7
+version: 1.0.8

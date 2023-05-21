@@ -11,8 +11,8 @@ sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsec2instance
   WHERE EXISTS (SELECT * FROM jsonb_array_elements(configuration->'networkInterfaces') eni
-  WHERE eni ->'networkInterfaceId' = 'null');
+  WHERE eni ->'networkInterfaceId' IS NULL);
 remediation: >
   Disable additional unnecessary network interfaces for EC2 instances that use multiple.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.6
+version: 1.0.7

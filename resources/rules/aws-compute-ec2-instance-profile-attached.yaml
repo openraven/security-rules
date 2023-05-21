@@ -10,8 +10,8 @@ enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsec2instance
-  WHERE configuration->'iamInstanceProfile' = 'null';
+  WHERE configuration->'iamInstanceProfile' IS NULL;
 remediation: >
   Remove the IAM profile associated with EC2 instances in cases where the IAM profile should not be used.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.8
+version: 1.0.9
