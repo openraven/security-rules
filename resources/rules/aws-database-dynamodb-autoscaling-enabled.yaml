@@ -11,7 +11,7 @@ enabled: true
 sql: >
   select arn as assetid
   FROM ${magpie_schema}.awsdynamodbtable
-  WHERE (configuration->'billingModeSummary' IS NULL)
+  WHERE (configuration->>'billingModeSummary' IS NULL)
   OR configuration->'billingModeSummary'->>'billingMode' != 'PAY_PER_REQUEST';
 remediation: >
   Enable auto-scaling for DynamoDB tables.

@@ -10,7 +10,7 @@ enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsec2instance
-  WHERE configuration->'vpcId' IS NULL;
+  WHERE configuration->>'vpcId' IS NULL;
 remediation: >
   Ensure that EC2 instances belong to the appropriate VPC.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

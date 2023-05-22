@@ -10,7 +10,7 @@ enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsec2instance
-  WHERE configuration->'publicIpAddress' IS NOT NULL;
+  WHERE configuration->>'publicIpAddress' IS NOT NULL;
 remediation: >
   Remove the public IP address associated with EC2 instances that are for internal use only.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

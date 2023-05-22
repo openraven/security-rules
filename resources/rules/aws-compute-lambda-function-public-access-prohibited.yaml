@@ -10,7 +10,7 @@ enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awslambdafunction
-  WHERE (supplementaryconfiguration -> 'AccessPolicy' -> 'policy' IS NULL);
+  WHERE (supplementaryconfiguration -> 'AccessPolicy' ->> 'policy' IS NULL);
 remediation: >
   Enable a policy that prevents public access to Lambda functions.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

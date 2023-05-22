@@ -10,7 +10,7 @@ enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsbackupbackupvault
-  WHERE (configuration -> 'encryptionKeyArn' IS NULL);
+  WHERE (configuration ->> 'encryptionKeyArn' IS NULL);
 remediation: >
   Enable encryption for AWS backup recovery points.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

@@ -11,7 +11,7 @@ sql: >
   SELECT arn as assetid
   from ${magpie_schema}.awss3bucket
   WHERE
-  (supplementaryconfiguration->'ServerSideEncryptionConfiguration' IS NULL);
+  (supplementaryconfiguration->>'ServerSideEncryptionConfiguration' IS NULL);
 remediation: >
   Enable default encryption for S3 buckets.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

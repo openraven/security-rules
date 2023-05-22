@@ -10,7 +10,7 @@ enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsec2instance
-  WHERE configuration->'platform' IS NULL;
+  WHERE configuration->>'platform' IS NULL;
 remediation: >
   Enable the desired platform configurations for EC2 instances.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

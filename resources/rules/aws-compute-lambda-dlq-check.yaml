@@ -10,7 +10,7 @@ enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awslambdafunction
-  WHERE (configuration -> 'deadLetterConfig' IS NULL);
+  WHERE (configuration ->> 'deadLetterConfig' IS NULL);
 remediation: >
   Enable a dead-letter queue for Lambda functions.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki

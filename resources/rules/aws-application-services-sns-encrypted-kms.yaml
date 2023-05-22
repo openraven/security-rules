@@ -11,7 +11,7 @@ enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awssnstopic
-  WHERE (configuration -> 'attributes' -> 'KmsMasterKeyId' is null);
+  WHERE (configuration -> 'attributes' ->> 'KmsMasterKeyId' is null);
 remediation: >
   Enable encryption with an AWS KMS key on SNS topics that currently have is disabled.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
