@@ -12,9 +12,9 @@ sql: >
   SELECT arn as assetid
   from ${magpie_schema}.awss3bucket
   WHERE
-  (supplementaryconfiguration->'ServerSideEncryptionConfiguration' = 'null'
+  (supplementaryconfiguration->>'ServerSideEncryptionConfiguration' IS NULL
   OR 'aws:kms' != (SELECT CAST(jsonb_array_elements(supplementaryconfiguration->'ServerSideEncryptionConfiguration'->'rules')->'applyServerSideEncryptionByDefault'->>'sseAlgorithm' AS TEXT)));
 remediation: >
   Enable KMS encryption for S3 buckets.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.6
+version: 1.0.7

@@ -10,8 +10,8 @@ enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awslambdafunction
-  WHERE (configuration -> 'vpcConfig' = 'null');
+  WHERE (configuration ->> 'vpcConfig' IS NULL);
 remediation: >
   Ensure Lambda functions are associated with and can access the appropriate VPC.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.6
+version: 1.0.7

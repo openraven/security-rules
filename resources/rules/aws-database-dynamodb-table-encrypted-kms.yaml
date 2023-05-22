@@ -11,9 +11,9 @@ enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsdynamodbtable
-  WHERE configuration->'sseDescription' = 'null'
-  OR configuration->'sseDescription'->>'sseType' != 'KMS';
+  WHERE (configuration->>'sseDescription' IS NULL)
+  OR (configuration->'sseDescription'->>'sseType' != 'KMS');
 remediation: >
   Enable AWS KMS encryption for DynamoDB tables.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.6
+version: 1.0.7

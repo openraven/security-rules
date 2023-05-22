@@ -11,8 +11,8 @@ enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsrdsdbinstance
-  WHERE (configuration -> 'enhancedMonitoringResourceArn' = 'null');
+  WHERE (configuration ->> 'enhancedMonitoringResourceArn' IS NULL);
 remediation: >
   Enable enhanced monitoring for RDS DB instances.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.6
+version: 1.0.7

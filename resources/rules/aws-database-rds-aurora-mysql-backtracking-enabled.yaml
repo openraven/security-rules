@@ -11,8 +11,8 @@ sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsrdsdbinstance
   WHERE EXISTS (SELECT * FROM jsonb_array_elements(supplementaryconfiguration->'dbClusters'->'dbClusters') dbClusters
-  WHERE dbClusters ->'backtrackWindow' = 'null');
+  WHERE dbClusters ->>'backtrackWindow' IS NULL);
 remediation: >
   Enable backtracking for Aurora MySQL databases.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.6
+version: 1.0.7

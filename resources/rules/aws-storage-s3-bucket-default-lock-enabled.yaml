@@ -12,9 +12,9 @@ sql: >
   SELECT arn as assetid
   from ${magpie_schema}.awss3bucket
   WHERE
-  (supplementaryconfiguration->'BucketObjectLockConfiguration' = 'null'
+  (supplementaryconfiguration->>'BucketObjectLockConfiguration' IS NULL
   OR supplementaryconfiguration->'BucketObjectLockConfiguration'->>'objectLockEnabled' != 'Enabled');
 remediation: >
   Enable default lock for S3 buckets.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.6
+version: 1.0.7

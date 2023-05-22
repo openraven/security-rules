@@ -10,8 +10,8 @@ enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awswatchloggroup
-  WHERE (configuration -> 'kmsKeyId' = 'null')
+  WHERE (configuration ->> 'kmsKeyId' IS NULL);
 remediation: >
   Enable encryption with a KMS key for CloudWatch log groups.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.6
+version: 1.0.7

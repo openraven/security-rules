@@ -2,16 +2,16 @@ id: cb86e4fc-08ec-451b-8b3b-ca7327435d64
 refId: aws-compute-ec2-instance-profile-attached
 type: asset
 name: >
-  EC2 instance has an IAM profile attached to it
+  EC2 instance does not have an IAM profile attached to it
 description: >
-  Identifies EC2 instances which have an IAM profile attached.
+  Identifies EC2 instances which do not have an IAM profile attached.
 severity: low
 enabled: true
 sql: >
   SELECT arn as assetid
   FROM ${magpie_schema}.awsec2instance
-  WHERE configuration->'iamInstanceProfile' = 'null';
+  WHERE configuration->>'iamInstanceProfile' IS NULL;
 remediation: >
   Remove the IAM profile associated with EC2 instances in cases where the IAM profile should not be used.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.6
+version: 1.0.9
