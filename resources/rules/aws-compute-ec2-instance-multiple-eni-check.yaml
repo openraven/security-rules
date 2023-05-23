@@ -4,7 +4,7 @@ type: asset
 name: >
   EC2 instance uses multiple elastic network interfaces
 description: >
-  Identifies EC2 instances that use multiple elastic network interfaces.
+  This rule identifies EC2 instances that use multiple elastic network interfaces. Using multiple ENIs adds network security complexity and can add unintended network paths and access to data.
 severity: low
 enabled: true
 sql: >
