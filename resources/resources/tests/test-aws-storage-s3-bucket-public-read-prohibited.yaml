@@ -175,7 +175,7 @@ secureAssets:
                 "emailAddress" : null,
                 "id" : null,
                 "type" : "Group",
-                "uri" : "http://acs.amazonaws.com/groups/global/AuthenticatedUsers"
+                "uri" : "http://acs.amazonaws.com/groups/global/"
               },
               "permission" : "READ"
             }, {
@@ -184,7 +184,7 @@ secureAssets:
                 "emailAddress" : null,
                 "id" : null,
                 "type" : "Group",
-                "uri" : "http://acs.amazonaws.com/groups/global/AuthenticatedUsers"
+                "uri" : "http://acs.amazonaws.com/groups/global/"
               },
               "permission" : "READ_ACP"
             } ]

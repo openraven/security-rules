@@ -14,8 +14,8 @@ sql: >
   WHERE ((configuration->>'access_key_1_active' = 'true'
          AND TO_TIMESTAMP(configuration->>'access_key_1_last_rotated', 'YYYY-MM-DD"T"HH24:MI:SS') < now() - interval '90 days')
     OR (configuration->>'access_key_2_active' = 'true'
-        AND TO_TIMESTAMP(configuration->>'access_key_2_last_used_date', 'YYYY-MM-DD"T"HH24:MI:SS') < now() - interval '90 days'));
+        AND TO_TIMESTAMP(configuration->>'access_key_2_last_rotated', 'YYYY-MM-DD"T"HH24:MI:SS') < now() - interval '90 days'));
 remediation: >
   Rotate access keys that have not been rotated in the last 90 days.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.6
+version: 1.0.7

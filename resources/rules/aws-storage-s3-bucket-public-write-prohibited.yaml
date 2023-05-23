@@ -17,6 +17,12 @@ sql: >
     AND
     supplementaryconfiguration->'BucketACLConfiguration'->>'grants' LIKE '%http://acs.amazonaws.com/groups/global/AllUsers%')
   OR
+  (supplementaryconfiguration->'PublicAccessBlockConfiguration'->>'blockPublicAcls' = 'false'
+    AND
+    supplementaryconfiguration->'BucketACLConfiguration'->>'grants' like '%WRITE%'
+    AND
+    supplementaryconfiguration->'BucketACLConfiguration'->>'grants' LIKE '%http://acs.amazonaws.com/groups/global/AuthenticatedUsers%')
+  OR
   (supplementaryconfiguration->'PublicAccessBlockConfiguration'->>'blockPublicPolicy' = 'false'
     AND
     supplementaryconfiguration->'BucketPolicy'->>'Statement' LIKE '%"Effect": "Allow"%'
@@ -27,4 +33,4 @@ sql: >
 remediation: >
   Disable public writing of files for S3 buckets.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
-version: 1.0.6
+version: 1.0.7
