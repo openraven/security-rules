@@ -4,7 +4,7 @@ type: asset
 name: >
   S3 bucket does not have versioning enabled
 description: >
-  Identifies S3 buckets which do not have versioning enabled.
+  This rule finds when versioning is not enabled on an S3 bucket, which could leave data vulnerable to being unrecoverable in case of intentional or accidental deletion or overwriting.
 severity: low
 enabled: true
 sql: >
