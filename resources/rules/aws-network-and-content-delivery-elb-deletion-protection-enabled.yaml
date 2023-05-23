@@ -1,0 +1,18 @@
+id: 5e958816-7392-4fd1-9463-ce94818ab1b4
+refId: aws-network-and-content-delivery-elb-deletion-protection-enabled
+type: asset
+name: >
+  Elastic Load Balancing does not have deletion protection enabled
+description: >
+  Identifies Elastic Load Balancers that do not have deletion protection enabled.
+severity: high
+enabled: true
+sql: >
+  SELECT arn as assetid
+  from ${magpie_schema}.awselasticloadbalancingv2loadbalancer
+  where exists (select * FROM jsonb_array_elements(supplementaryconfiguration->'attributes'->'attributes') attr
+  WHERE (attr -> 'key' = '"deletion_protection.enabled"' and attr -> 'value' = '"false"'));
+remediation: >
+  Enable deletion protection for Elastic Load Balancers.
+remediationDocURLs: https://github.com/openraven/security-rules/wiki
+version: 1.0.7
