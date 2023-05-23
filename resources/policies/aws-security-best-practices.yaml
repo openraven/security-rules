@@ -9,7 +9,7 @@ description: >
   and is modelled on guidance published by the Center for Information Security.
 enabled: true
 ruleIds:
-  - aws-iam-and-security-iam-users-w-password-mfa-enabled.yaml
+  - aws-iam-and-security-iam-user-w-password-mfa-enabled.yaml
   - aws-iam-and-security-iam-user-unused-credentials-check.yaml
   - aws-iam-and-security-ensure-access-keys-are-rotated-every-90-days-or-less.yaml
   - aws-iam-and-security-ensure-iam-password-policy-requires-one-uppercase-letter.yaml
