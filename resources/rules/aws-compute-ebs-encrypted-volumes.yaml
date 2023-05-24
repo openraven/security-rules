@@ -2,9 +2,9 @@ id: abff855c-3bba-4fb6-be90-213a6ed13157
 refId: aws-compute-ebs-encrypted-volumes
 type: asset
 name: >
-  EBS volume in an attached state are not encrypted
+  EBS volume(s) in an attached state are not encrypted
 description: >
-  Identifies attached EBS volumes which have no encryption enabled.
+  This rule identifies attached EBS volumes which have no encryption enabled.
 severity: high
 enabled: true
 sql: >
