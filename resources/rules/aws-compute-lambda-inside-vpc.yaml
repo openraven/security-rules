@@ -4,7 +4,7 @@ type: asset
 name: >
   Lambda function cannot access a VPC
 description: >
-  Identifies Lambda functions which cannot access a VPC.
+  This rule identifies Lambda functions which cannot access a Virtual Private Cloud (VPC). Check that your Amazon Lambda functions have access to VPC-based resources that are only accessible from within a particular VPC.
 severity: medium
 enabled: true
 sql: >
