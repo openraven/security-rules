@@ -3,9 +3,9 @@ id: 1f4045c2-739b-413f-80db-cf4d560835a1
 refId: aws-compute-ec2-ensure-all-ec2-ebs-volumes-have-snapshots
 type: asset
 name: >
-  EC2 EBS volume does not have snapshots
+  EC2 EBS volume does not have snapshots enabled
 description: >
-  Identifies running EC2 instances without EBS volume snapshots enabled.
+  This rule identifies running EC2 instances without EBS volume snapshots enabled. A lack of snapshots may impair your ability to efficiently recover your data in the event of a failure.
 severity: medium
 enabled: true
 sql: >
