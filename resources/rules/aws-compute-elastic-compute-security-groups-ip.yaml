@@ -4,7 +4,7 @@ type: asset
 name: >
   Security group allows ingress from 0.0.0.0/0 to port 22
 description: >
-  Identifies security groups which allow ingress from the IP range 0.0.0.0/0 to port 22.
+  This rule identifies security groups which allow ingress from the IP range 0.0.0.0/0 to port 22. Removing unrestricted access to remote console services, such as SSH, reduces an asset's risk of exposure.
 severity: medium
 enabled: true
 sql: >
