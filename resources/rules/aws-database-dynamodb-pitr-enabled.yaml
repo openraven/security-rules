@@ -5,7 +5,7 @@ type: asset
 name: >
   DynamoDB table does not have PITR enabled
 description: >
-  Identifies DynamoDB tables which do not have point in time recovery enabled.
+  This rule identifies DynamoDB tables which do not have point in time recovery (PITR) enabled. PITR is an automatic backup service for DynamoDB table data that helps protect your DynamoDB tables from accidental write or delete operations. Enabling this provides continuous backups.
 severity: medium
 enabled: true
 sql: >
