@@ -5,7 +5,7 @@ type: asset
 name: >
   CloudTrail log file validation is not enabled
 description: >
-  Identifies CloudTrail trails that do not have log file validation enabled.
+  This rule shows CloudTrail trails that lack log file integrity validation. Without file integrity validation enabled, an analyst cannot determine if these log files were modified or deleted after Amazon CloudTrail delivered them to the designated S3 bucket.
 severity: medium
 enabled: true
 sql: >
