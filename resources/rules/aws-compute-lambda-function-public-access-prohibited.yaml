@@ -2,9 +2,9 @@ id: 426a3b06-bf37-40ff-b0cf-f2d2fae25b92
 refId: aws-compute-lambda-function-public-access-prohibited
 type: asset
 name: >
-  Lambda function does not have attached policy that prohibits public access
+  Lambda function does not have an attached policy that prohibits public access
 description: >
-  Identifies Lambda functions which do not have an attached policy that prohibits public access.
+  This rule identifies Lambda functions which do not have an attached policy prohibiting public access. Prohibiting public access will help with protecting the function against unauthorized users sending requests to invoke these functions.
 severity: medium
 enabled: true
 sql: >
