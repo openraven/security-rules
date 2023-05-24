@@ -4,7 +4,7 @@ type: asset
 name: >
   Account contact details are not being maintained
 description: >
-  Identifies if the contact email and telephone details for AWS accounts are current and map to more than one individual in your organization.
+  This rule identifies if the contact email and telephone details for AWS accounts are current and map to more than one individual in your organization.
 manualControl: true
 severity: low
 enabled: true
