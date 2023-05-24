@@ -4,7 +4,7 @@ type: asset
 name: >
   EBS optimization is not enabled for EC2 instance that can be EBS-optimized
 description: >
-  Identifies EC2 Instances that do not have EBS optimization enabled where it should be.
+  This rule identifies EC2 Instances that do not have EBS optimization enabled where it could be. EBS optimization uses a separate network connection for EBS traffic, which can reduce network latency and improve the performance of EBS-intensive workloads.
 severity: low
 enabled: true
 sql: >
