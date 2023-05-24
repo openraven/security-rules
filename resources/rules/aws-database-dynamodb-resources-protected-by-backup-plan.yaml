@@ -5,7 +5,7 @@ type: asset
 name: >
   DynamoDB table is not protected by a backup plan
 description: >
-  Identifies DynamoDB tables which are not protected by a backup plan.
+  This rule identifies DynamoDB tables which are not protected by a backup plan. Adding DynamnoDB tables to a backup plan can help restore data if necessary.
 severity: medium
 enabled: true
 sql: >
