@@ -1,10 +1,10 @@
-id: 4155e524-11fd-4990-9254-23507665a071
+.id: 4155e524-11fd-4990-9254-23507665a071
 refId: aws-compute-lambda-dlq-check
 type: asset
 name: >
-  Lambda function is not configured with a dead-letter queue
+  Lambda function is not configured with a DLQ
 description: >
-  Identifies Lambda functions which are not configured with a dead-letter queue.
+  This rule identifies Lambda functions which are not configured with a dead-letter queue (DLQ). Setting up a DLQ allows the possibility to investigate errors or failed requests to the connected Lambda function, which can be useful for an investigation.
 severity: low
 enabled: true
 sql: >
