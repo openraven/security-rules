@@ -5,7 +5,7 @@ type: asset
 name: >
   RDS cluster does not have IAM authentication enabled
 description: >
-  Identifies RDS clusters that do not have IAM authentication enabled.
+  This rule identifies RDS clusters that do not have IAM authentication enabled. IAM authentication uses IAM policies and multi-factor authentication to securely control access to your database.
 severity: medium
 enabled: true
 sql: >
