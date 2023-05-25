@@ -5,7 +5,7 @@ type: asset
 name: >
   RDS cluster does not have deletion protection enabled
 description: >
-  This rule checks if an Amazon Relational Database Service (Amazon RDS) cluster has deletion protection enabled.
+  This rule checks if an Amazon Relational Database Service (Amazon RDS) cluster has deletion protection enabled. Enabling this helps prevent a loss of data from accidental or unauthorized, intentional deletion.
 severity: medium
 enabled: true
 sql: >
