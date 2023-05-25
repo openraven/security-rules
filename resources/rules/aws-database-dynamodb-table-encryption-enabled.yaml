@@ -5,7 +5,7 @@ type: asset
 name: >
   DynamoDB table is not encrypted
 description: >
-  Identifies DynamoDB tables which are not encrypted.
+  This rule identifies DynamoDB tables which are not encrypted. Encrypting your Amazon DynamoDB tables helps protect your data from unauthorized access or tampering.
 severity: high
 enabled: true
 sql: >
