@@ -4,7 +4,7 @@ type: asset
 name: >
   Aurora MySQL database does not have backtracking enabled
 description: >
-  Identifies Aurora MySQL databases which do not have backtracking enabled.
+  This rule identifies Aurora MySQL databases which do not have backtracking enabled. Backtracking allows moving your MySQL database to a prior point in time without the need to restore from a recent backup.
 severity: low
 enabled: true
 sql: >
