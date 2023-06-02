@@ -5,7 +5,7 @@ type: asset
 name: >
   DynamoDB table is not encrypted by AWS KMS
 description: >
-  This rule identifies DynamoDB tables which are not encrypted by AWS Key Management Service (AWS KMS). Enabling DynamoDB encryption provides enhanced security for data at rest by encrypting data using keys stored within AWS KMS.
+  This rule identifies DynamoDB tables which are not encrypted by AWS Key Management Service (AWS KMS). Enabling KMS encryption provides enhanced security for data at rest by encrypting data using keys stored within AWS KMS.
 severity: high
 enabled: true
 sql: >
