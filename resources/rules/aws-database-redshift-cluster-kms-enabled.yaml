@@ -3,10 +3,10 @@ id: d547f850-7542-4aba-a6c8-c14ca0db7835
 refId: aws-database-redshift-cluster-kms-enabled
 type: asset
 name: >
-  RedShift cluster is not encrypted
+  RedShift cluster is not KMS encrypted
 description: >
-  Identifies RedShift clusters which are not encrypted.
-severity: high
+  This rule identifies Redshift clusters which are not encrypted by AWS Key Management Service (AWS KMS). Enabling KMS encryption provides enhanced security for data at rest by encrypting data using keys stored within AWS KMS.
+severity: medium
 enabled: true
 sql: >
   SELECT arn as assetid
