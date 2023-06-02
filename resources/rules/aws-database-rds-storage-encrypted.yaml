@@ -5,7 +5,7 @@ type: asset
 name: >
   RDS instance storage encryption is not enabled
 description: >
-  Identifies RDS instances where storage encryption is not enabled.
+  This rule identifies RDS instances where storage encryption is not enabled. With RDS encryption enabled, the data stored on the instance underlying storage, like automated backups, Read Replicas, and snapshots, all become encrypted.
 severity: high
 enabled: true
 sql: >
