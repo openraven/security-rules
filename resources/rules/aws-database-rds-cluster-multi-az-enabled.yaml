@@ -4,7 +4,7 @@ type: asset
 name: >
   RDS cluster does not have multi-az replication enabled
 description: >
-  This rule identifies RDS instances that do not have multi-availability zone replication enabled which aids in failover ability.
+  This rule identifies RDS clusters that do not have multi-availability zone (multi-az) replication enabled which aids in failover ability.
 severity: low
 enabled: true
 sql: >
