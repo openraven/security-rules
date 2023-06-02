@@ -2,9 +2,9 @@ id: d827bbe6-2fdf-4302-884d-485bb047c9f1
 refId: aws-database-rds-db-instance-backup-enabled
 type: asset
 name: >
-  RDS database instance does not have backup enabled
+  RDS database instance does not have backups enabled
 description: >
-  Identifies RDS database instances which do not have backups enabled.
+  This rule identifies RDS database instances which do not have backups enabled which could aid with data recovery from accidental or intentional deletion.
 severity: medium
 enabled: true
 sql: >
