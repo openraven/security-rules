@@ -4,7 +4,7 @@ type: asset
 name: >
   RedShift cluster does not allow version upgrade
 description: >
-  Identifies RedShift clusters which do not allow version upgrades.
+  This rule identifies RedShift clusters which do not allow version upgrades. Enabling version upgrades helps ensure that the Reshift cluster is running with the latest available major version.
 severity: low
 enabled: true
 sql: >
