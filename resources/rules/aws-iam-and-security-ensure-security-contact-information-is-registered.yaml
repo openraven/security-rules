@@ -5,7 +5,7 @@ type: asset
 name: >
   Security contact information is not registered
 description: >
-  Identifies security contact information not being registered.
+  This rule identifies security contact information as not being registered. Providing security-specific contact information will ensure that AWS security advisories reach the appropriate team in your organization to take action.
 manualControl: true
 severity: low
 enabled: true
