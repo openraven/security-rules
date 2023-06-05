@@ -4,7 +4,7 @@ type: asset
 name: >
   AWS backup recovery point is not encrypted
 description: >
-  Identifies AWS backup recovery points which are not encrypted.
+  This rule identifies AWS backup recovery points which are not encrypted. Enabling AWS backup recovery encryption helps protect data at rest.
 severity: high
 enabled: true
 sql: >
