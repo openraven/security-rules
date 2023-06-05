@@ -3,9 +3,9 @@ id: 3f6d5049-58e9-4bf0-b653-989b0545537e
 refId: aws-security-identity-and-compliance-ensure-guardduty-enabled-for-required-region
 type: asset
 name: >
-  GuardDuty is not enabled for required region
+  GuardDuty is not enabled for a region
 description: >
-  Identifies instances where GuardDuty is not enabled for a required region.
+  This rule identifies instances where GuardDuty is not enabled for a region. Enabling this service allows for the monitoring and alerting of anomalous activity within your AWS environment.
 severity: medium
 enabled: true
 sql: >
