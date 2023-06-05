@@ -4,7 +4,7 @@ type: asset
 name: >
   Elasticsearch instance potentially exposed due to security groups allow ingress from 0.0.0.0/0 to port 9200
 description: >
-  Identifies potentially exposed Elasticsearch instances due to security groups which allow ingress from 0.0.0.0/0 to port 9200.
+  This rule identifies potentially exposed Elasticsearch instances due to security groups which allow ingress from 0.0.0.0/0 to port 9200. Unrestricted connectivity to Elasticsearch, increases a resource's exposure to risk.
 severity: medium
 enabled: true
 sql: >
