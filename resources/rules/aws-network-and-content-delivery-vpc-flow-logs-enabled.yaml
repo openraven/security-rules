@@ -5,7 +5,7 @@ type: asset
 name: >
   VPC flow logging is not enabled in all VPCs
 description: >
-  Identifies cases where VPC flow logging is not enabled in all VPCs.
+  This rule identifies cases where VPC flow logging is not enabled in all VPCs. Enabling VPC flow logging data can be useful in detecting and troubleshooting security issues and auditing.
 severity: high
 enabled: true
 sql: >
