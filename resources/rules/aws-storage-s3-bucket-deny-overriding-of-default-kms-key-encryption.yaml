@@ -3,9 +3,9 @@ id: b6b640be-94b6-40fb-8e69-0c3917ffeb4f
 refId: aws-storage-s3-bucket-deny-overriding-of-default-kms-key-encryption
 type: asset
 name: >
-  S3 bucket does not deny overriding of default KMS key encryption
+  S3 bucket does not deny overriding of default KMS key encryption during upload
 description: >
-  Identifies S3 buckets which do not deny overriding of the default KMS key encryption.
+  This rule identifies S3 buckets which do not deny overriding the encryption settings specified in the upload of a new object.
 severity: high
 enabled: true
 sql: >
