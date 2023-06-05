@@ -2,9 +2,9 @@ id: 51780e0c-1640-4e8a-8661-197478080114
 refId: aws-storage-efs-in-backup-plan
 type: asset
 name: >
-  EFS file systems are not added in the backup plans of AWS Backup
+  EFS is not included in an AWS Backup backup plan
 description: >
-  Identifies instances where EFS file systems are not added in the backup plans of AWS backup.
+  This rule identifies instances where EFS is not configured to be included in an AWS Backup backup plan. Configuring this can ensure that your EFS data is regularly backed up and can be recovered from data loss or corruption.
 severity: medium
 enabled: true
 sql: >
