@@ -2,9 +2,9 @@ id: 428f0da4-f640-4806-b948-e7d5c701741c
 refId: aws-network-and-content-delivery-elb-logging-enabled
 type: asset
 name: >
-  Elastic Load Balancer does not have logging enabled
+  Elastic Load Balancer does not have access logging enabled
 description: >
-  Identifies Elastic Load Balancers that do not have logging enabled.
+  This rule identifies Elastic Load Balancers that do not have access logging enabled. Enabling access logging can aid with security, troubleshooting, and audit purposes.
 severity: low
 enabled: true
 sql: >
