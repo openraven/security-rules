@@ -4,7 +4,7 @@ type: asset
 name: >
   S3 bucket used to store CloudTrail logs is publicly accessible
 description: >
-  Identifies S3 buckets that are used to store CloudTrail logs and are publicly accessible.
+  This rule identifies S3 buckets that are used to store CloudTrail logs and are publicly accessible.
 severity: high
 enabled: true
 sql: >
