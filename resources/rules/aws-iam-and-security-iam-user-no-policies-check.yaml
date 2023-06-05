@@ -4,8 +4,7 @@ type: asset
 name: >
   IAM policy is not attached only to groups or roles
 description: >
-  Identifies IAM policies which are not only attached to groups or roles.
-severity: medium
+  This rule identifies IAM policies which are not only attached to groups or roles.  IAM policies are the means by which privileges are granted, generally, through application to groups and roles but not to users.
 enabled: true
 sql: >
   SELECT arn as assetid
