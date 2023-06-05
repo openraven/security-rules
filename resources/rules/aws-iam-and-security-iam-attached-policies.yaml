@@ -4,7 +4,7 @@ type: asset
 name: >
   Stale role exists with attached policies for S3 access
 description: >
-  Identifies stales roles that exist with attached policies for S3 access.
+  This rule identifies stales roles that exist with attached policies for S3 access. Unused roles provide a potential opportunity for unauthorized access to resources.
 severity: medium
 enabled: true
 sql: >
