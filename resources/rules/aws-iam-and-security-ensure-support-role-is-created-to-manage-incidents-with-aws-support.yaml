@@ -5,7 +5,7 @@ type: asset
 name: >
   Support role has not been created to manage incidents with AWS Support
 description: >
-  Identifies instances where a support role has not been created to manage incidents with AWS support.
+  This rule identifies instances where a support role has not been created to manage incidents with AWS support. Creating this role allows AWS support services to provide incident notification and response, as well as technical support and customer services.
 severity: low
 enabled: true
 sql: >
