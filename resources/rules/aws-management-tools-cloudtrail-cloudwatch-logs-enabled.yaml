@@ -5,7 +5,7 @@ type: asset
 name: >
   CloudTrail trail is not integrated with CloudWatch logs
 description: >
-  Identifies CloudTrail trails that are not integrated with CloudWatch logs.
+  This rule identifies CloudTrail trails that are not integrated with CloudWatch logs. This allows for CloudWatch Logs metric filters to search for specific terms, like a user or resource, or create CloudWatch alarms that trigger based on thresholds or anomalous activity.
 severity: low
 enabled: true
 sql: >
