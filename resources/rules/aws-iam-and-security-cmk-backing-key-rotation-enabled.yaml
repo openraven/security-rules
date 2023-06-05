@@ -2,9 +2,9 @@ id: 379ea727-2b8c-420b-9933-3a157707b931
 refId: aws-iam-and-security-cmk-backing-key-rotation-enabled
 type: asset
 name: >
-  CMKs rotation is disabled
+  CMK rotation is disabled
 description: >
-  Identifies Customer Master Keys (CMKs) where rotation is disabled.
+  This rule identifies Customer Master Keys (CMKs) where rotation is disabled. Enabling key rotation ensures that keys are rotated once a year.
 severity: medium
 enabled: true
 sql: >
