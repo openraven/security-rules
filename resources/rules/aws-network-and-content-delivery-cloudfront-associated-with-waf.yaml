@@ -4,7 +4,7 @@ type: asset
 name: >
   CloudFront distributions are not associated with either WAF or WAFv2 web access control lists
 description: >
-  Identifies CloudFront distributions that are not associated with either WAF or WAFv2 web access control lists (ACLs).
+  This rule identifies CloudFront distributions that are not associated with either Web Application Firewall (WAF) or WAFv2 web access control lists (ACLs). These protect against application-layer attacks that can compromise the security of your web applications.
 severity: medium
 enabled: true
 sql: >
