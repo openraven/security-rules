@@ -4,7 +4,7 @@ type: asset
 name: >
   CloudFront distribution is not using a custom SSL certificate and are not configured to use SNI to serve HTTPS requests
 description: >
-  Identifies CloudFront distributions that are not using a custom SSL certificate and are not configured to use SNI to serve HTTPS requests.
+  This rule identifies CloudFront distributions that are not using a custom SSL certificate and are not configured to use SNI to serve HTTPS requests.
 severity: medium
 enabled: true
 sql: >
