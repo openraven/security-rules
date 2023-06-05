@@ -5,7 +5,7 @@ type: asset
 name: >
   S3 bucket access logging is not enabled on the CloudTrail S3 bucket
 description: >
-  Identifies S3 buckets storing CloudTrail logs that do not have access logging enabled.
+  This rule identifies S3 buckets storing CloudTrail logs that do not have access logging enabled. Enabling access logging captures historical access if necessary for an investigation.
 severity: medium
 enabled: true
 sql: >
