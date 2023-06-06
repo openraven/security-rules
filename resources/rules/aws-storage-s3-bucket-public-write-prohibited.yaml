@@ -2,9 +2,9 @@ id: abdc897e-c23f-40a6-a310-7e868bedb797
 refId: aws-storage-s3-bucket-public-write-prohibited
 type: asset
 name: >
-  S3 bucket has public writing of files enabled
+  S3 bucket has public writing of objects enabled
 description: >
-  Identifies S3 buckets which have public writing of files enabled.
+  This rule identifies S3 buckets which have public writing of objects enabled. This increases the risk of data exposure, access, and modification.
 severity: high
 enabled: true
 sql: >
