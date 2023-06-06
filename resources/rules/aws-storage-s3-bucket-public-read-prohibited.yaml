@@ -2,9 +2,9 @@ id: 6d02e788-98d7-468c-92cf-05e7838d0048
 refId: aws-storage-s3-bucket-public-read-prohibited
 type: asset
 name: >
-  S3 bucket has public reading of files enabled
+  S3 bucket has public reading of objects enabled
 description: >
-  Identifies S3 buckets which have public reading of files enabled.
+  This rule identifies S3 buckets which have public reading of objects enabled. This increases the risk of data exposure and access.
 severity: high
 enabled: true
 sql: >
