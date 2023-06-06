@@ -4,7 +4,7 @@ type: asset
 name: >
   Routing Tables for VPC Peering Are Not Least Access
 description: >
-  Identifies VPC peering with routing tables that are not configured for least access.
+  This rule identifies VPC peering with routing tables that are not configured for least access. Configuring routing tables with least access is an effective way of minimizing breach breadth as resources outside of these routes are inaccessible to the peered VPC.
 manualControl: true
 severity: medium
 enabled: true
