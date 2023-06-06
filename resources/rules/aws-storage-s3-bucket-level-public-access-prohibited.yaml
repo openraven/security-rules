@@ -4,7 +4,7 @@ type: asset
 name: >
   S3 bucket does not restrict public access
 description: >
-  Identifies S3 buckets which are not restricted from public access.
+  This rule identifies S3 buckets which are not restricted from public access. This increases the risk of data access and exposure.
 severity: high
 enabled: true
 sql: >
