@@ -2,9 +2,9 @@ id: 1fb62a14-da79-4bdd-b199-1f9868004a38
 refId: aws-network-and-content-delivery-cloudfront-origin-failover-enabled.yaml
 type: asset
 name: >
-  CloudFront origin group is not configured for distribution with at least 2 origins in the origin group.
+  CloudFront origin group is not configured for distribution with at least two origins in the origin group
 description: >
-  Identifies CloudFront origin groups that are not configured for distribution with at least 2 origins in the origin group.
+  This rule identifies CloudFront origin groups that are not configured for distribution with at least two origins in the origin group. Configuring two origins improves the availability of the web content delivered to your end users.
 severity: low
 enabled: true
 sql: >

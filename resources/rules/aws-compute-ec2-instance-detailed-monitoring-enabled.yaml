@@ -3,9 +3,9 @@ id: 837e1f6a-4bf4-48a3-b2dd-62352ab8ee22
 refId: aws-compute-ec2-instance-detailed-monitoring-enabled
 type: asset
 name: >
-  AWS EC2 instance does not have detailed monitoring enabled
+  AWS EC2 Instance does not have detailed monitoring enabled
 description: >
-  Identifies EC2 instances that do not have detailed monitoring enabled.
+  This rule identifies EC2 Instances that do not have detailed monitoring enabled. Enabling detailed monitoring data aids in making better decisions on architecting and managing compute resources within your AWS account. Monitoring data will then be available at 1-minute periods or less.
 severity: low
 enabled: true
 sql: >

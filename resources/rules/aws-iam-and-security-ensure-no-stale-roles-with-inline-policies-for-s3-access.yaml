@@ -5,7 +5,7 @@ type: asset
 name: >
   Stale roles exist with inline policies for S3 access
 description: >
-  Identifies stale roles that exist with inline policies for S3 access.
+  This rule identifies stale roles that exist with inline policies for S3 access. Unused roles provide a potential opportunity for unauthorized access to resources.
 severity: medium
 enabled: true
 sql: >

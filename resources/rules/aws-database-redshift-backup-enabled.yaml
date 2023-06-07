@@ -5,7 +5,7 @@ type: asset
 name: >
   RedShift cluster does not have automated snapshots enabled
 description: >
-  Identifies RedShift clusters which do not have automated snapshots enabled.
+  This rule identifies RedShift clusters which do not have automated snapshots enabled which could aid with data recovery from accidental or intentional deletion.
 severity: medium
 enabled: true
 sql: >

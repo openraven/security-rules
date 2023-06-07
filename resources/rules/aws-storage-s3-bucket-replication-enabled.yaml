@@ -4,7 +4,7 @@ type: asset
 name: >
   S3 bucket does not have replication enabled
 description: >
-  Identifies S3 buckets which do not have replication enabled.
+  This rule identifies S3 buckets which do not have replication enabled. Enabling replication provides data redundancy and ensures you can recover from accidental or intentional data deletion.
 severity: low
 enabled: true
 sql: >

@@ -3,9 +3,9 @@ id: 903a628b-3c9d-46e7-bcb0-c0904fdbb0dd
 refId: aws-compute-ec2-imdsv2-check
 type: asset
 name: >
-  EC2 instance metadata does not enforce use of IMDSv2
+  EC2 Instance metadata does not enforce the use of IMDSv2
 description: >
-  Identifies EC2 instances that are not enforcing use of IMDSv2.
+  This rule identifies EC2 Instances that are not enforcing use of Instance Metadata Service V2 (IMDSv2). A lack of enforcement of IMDSv2 makes other misconfigurations and in-code mistakes more impactful and risky.
 severity: medium
 enabled: true
 sql: >

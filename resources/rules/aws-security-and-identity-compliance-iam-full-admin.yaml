@@ -4,7 +4,7 @@ type: asset
 name: >
   IAM policy allows full "*:*" administrative privileges
 description: >
-  Identifies IAM policies which allow full "*:*" administrative privileges.
+  This rule identifies IAM policies which allow full "*:*" administrative privileges. Ideally, a policy should include the minimal amount of access required to perform a task.
 severity: high
 enabled: true
 sql: >

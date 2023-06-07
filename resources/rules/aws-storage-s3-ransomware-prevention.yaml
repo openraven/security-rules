@@ -4,7 +4,7 @@ type: asset
 name: >
   S3 bucket is prone to ransomware attacks
 description: >
-  Identifies S3 buckets with three characteristics, which makes them a target for ransomware attacks.
+  This rule identifies S3 buckets with three characteristics that make them a target for ransomware attacks; versioning is disabled, mfaDelete is disabled, bucket is public facing.
 severity: high
 enabled: true
 sql: >

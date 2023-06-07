@@ -5,7 +5,7 @@ type: asset
 name: >
   S3 bucket has server-side encryption being enabled by another account
 description: >
-  Identifies S3 buckets which have server-side encryption enabled through another account.
+  This rule identifies S3 buckets which have server-side encryption enabled through another account.
 severity: high
 enabled: true
 sql: >

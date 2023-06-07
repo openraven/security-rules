@@ -5,7 +5,7 @@ type: asset
 name: >
   OpenSearch domain does not have logging enabled to send logs to Amazon CloudWatch
 description: >
-  Identifies OpenSearch service domains that do not have logging enabled and are unable to send logs to CloudWatch.
+  This rule identifies OpenSearch service domains that do not have logging enabled and are unable to send logs to CloudWatch.
 severity: low
 enabled: true
 sql: >

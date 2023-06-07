@@ -4,7 +4,7 @@ type: asset
 name: >
   Lambda function is not configured with function-level concurrent execution limit
 description: >
-  Identifies Lambda functions which are not configured with a function-level concurrent execution limit.
+  This rule identifies Lambda functions that lack function-level concurrent execution limit configuration. Adding concurrency limits can prevent a spike in usage and costs, while also increasing or lowering the default concurrency limit.
 severity: low
 enabled: true
 sql: >

@@ -5,7 +5,7 @@ type: asset
 name: >
   Security group allows ingress from 0.0.0.0/0 to port 3389
 description: >
-  Identifies security groups which allow ingress from 0.0.0.0/0 to port 3389.
+  This rule identifies security groups which allow ingress from 0.0.0.0/0 to port 3389. Unrestricted connectivity to remote console services, such as RDP, increases a resource's exposure to risk.
 severity: medium
 enabled: true
 sql: >

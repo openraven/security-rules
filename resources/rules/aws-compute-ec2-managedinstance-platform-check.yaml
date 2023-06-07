@@ -4,7 +4,7 @@ type: asset
 name: >
   EC2 managed instance does not have the desired platform configurations
 description: >
-  Identifies EC2 managed instances which do not have the desired platform configurations.
+  This rule identifies EC2 managed instances which do not have the desired platform configurations. 
 severity: low
 enabled: true
 sql: >

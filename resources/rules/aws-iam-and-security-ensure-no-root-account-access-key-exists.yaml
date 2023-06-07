@@ -5,7 +5,7 @@ type: asset
 name: >
   Root account access key exists
 description: >
-  Identifies access keys that exist for the root account.
+  This rule identifies access keys that exist for the root account. Removing access keys associated with the root account limits attack options for account compromise.
 severity: high
 enabled: true
 sql: >

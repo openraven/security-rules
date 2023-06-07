@@ -4,7 +4,7 @@ type: asset
 name: >
   EC2 instance does not have an IAM profile attached to it
 description: >
-  Identifies EC2 instances which do not have an IAM profile attached.
+  Identifies EC2 instances which do not have an IAM profile attached. Use IAM Roles/Instance Profiles to appropriately grant access permissions to any application that performs AWS API requests running on your Amazon EC2 instances.
 severity: low
 enabled: true
 sql: >

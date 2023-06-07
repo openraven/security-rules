@@ -5,7 +5,7 @@ type: asset
 name: >
   S3 bucket is not encrypted with KMS
 description: >
-  Identifies S3 buckets which are not encrypted with KMS.
+  This rule identifies S3 buckets which are not encrypted with AWS Key Management Service (AWS KMS). Enabling KMS encryption provides enhanced security for data at rest by encrypting data using keys stored within AWS KMS.
 severity: medium
 enabled: true
 sql: >

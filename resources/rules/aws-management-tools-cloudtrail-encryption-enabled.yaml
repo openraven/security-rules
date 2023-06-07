@@ -5,7 +5,7 @@ type: asset
 name: >
   CloudTrail logs are not encrypted at rest using KMS CMKs
 description: >
-  Identifies CloudTrail logs which are not encrypted at rest using KMS CMKs.
+  This rule identifies CloudTrail logs which are not encrypted at rest using KMS CMKs. CloudTrail logs can be configured to leverage SSE and KMS CMK to further protect CloudTrail logs.
 severity: medium
 enabled: true
 sql: >

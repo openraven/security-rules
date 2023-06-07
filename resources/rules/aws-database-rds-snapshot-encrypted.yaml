@@ -5,7 +5,7 @@ type: asset
 name: >
   RDS database snapshots are not encrypted
 description: >
-  Identifies RDS database snapshots which are not encrypted.
+  This rule identifies RDS database snapshots which are not encrypted. Enabling snapshot encryption helps protect data at rest.
 severity: high
 enabled: true
 sql: >

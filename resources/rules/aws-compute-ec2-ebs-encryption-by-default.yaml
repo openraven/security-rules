@@ -4,7 +4,7 @@ type: asset
 name: >
   EBS encryption is not enabled by default
 description: >
-  Identifies instances where EBS encryption is not enabled by default.
+  This rule identifies instances where EBS encryption is not enabled by default.
 severity: low
 enabled: true
 sql: >

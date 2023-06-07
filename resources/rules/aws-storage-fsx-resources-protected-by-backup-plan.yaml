@@ -2,9 +2,9 @@ id: 33490ff3-aa1f-463a-ab0b-ea78b988efed
 refId: aws-storage-fsx-resources-protected-by-backup-plan
 type: asset
 name: >
-  FSX file system is not protected by a backup plan
+  FSx file system is not protected by a backup plan
 description: >
-  Identifies FSX file systems that are not protected by a backup plan.
+  This rule identifies FSx systems that are not protected by a backup plan. Configuring this can ensure that your FSx data is regularly backed up and can be recovered from data loss or corruption.
 severity: medium
 enabled: true
 sql: >
@@ -12,6 +12,6 @@ sql: >
   FROM ${magpie_schema}.awsfsxfilesystem
   WHERE (configuration -> 'ontapConfiguration' ->> 'automaticBackupRetentionDays' IS NULL)
 remediation: >
-  Enable backup plan protection for FSX file systems.
+  Enable backup plan protection for FSx file systems.
 remediationDocURLs: https://github.com/openraven/security-rules/wiki
 version: 1.0.7

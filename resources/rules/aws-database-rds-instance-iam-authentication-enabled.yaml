@@ -5,7 +5,7 @@ type: asset
 name: >
   RDS instance does not have IAM authentication enabled
 description: >
-  Identifies RDS instances which do not have IAM authentication enabled.
+  This rule identifies RDS instances that do not have IAM authentication enabled. IAM authentication uses IAM policies and multi-factor authentication to securely control access to your database.
 severity: medium
 enabled: true
 sql: >

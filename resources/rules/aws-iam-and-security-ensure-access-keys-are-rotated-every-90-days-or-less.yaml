@@ -3,9 +3,9 @@ id: a2c83730-a2eb-40ce-a378-846577a0f4a2
 refId: aws-iam-and-security-ensure-access-keys-are-rotated-every-90-days-or-less
 type: asset
 name: >
-  Access Key is not rotated every 90 days or less
+  Access key is not configured to rotate every 90 days or less
 description: >
-  Identifies access keys which are not rotated every 90 days or less.
+  This rule identifies access keys which are not rotated every 90 days or less. Configuring this protects against the likelihood of accidental exposure and unauthorized access to resources.
 severity: medium
 enabled: true
 sql: >

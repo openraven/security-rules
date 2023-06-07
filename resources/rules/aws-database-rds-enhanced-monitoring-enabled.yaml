@@ -3,9 +3,9 @@ id: 66b492d4-54b9-4283-a2a1-a0f59b7f9b26
 refId: aws-database-rds-enhanced-monitoring-enabled
 type: asset
 name: >
-  RDS instance does not have enhanced monitoring.
+  RDS instance does not have enhanced monitoring enabled
 description: >
-  This rule checks if whether enhanced monitoring is enabled for Amazon Relational Database Service (Amazon RDS) instances.
+  This rule checks if enhanced monitoring is enabled for Amazon Relational Database Service (Amazon RDS) instances. Enabling detailed monitoring allows for real-time metrics which are available in 1-minute periods or less.
 severity: low
 enabled: true
 sql: >

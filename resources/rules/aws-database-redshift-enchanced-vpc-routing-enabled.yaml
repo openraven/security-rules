@@ -4,7 +4,7 @@ type: asset
 name: >
   RedShift cluster does not have enhanced VPC routing enabled
 description: >
-  Identifies RedShift clusters which do not have enhanced VPC routing enabled.
+  This rule identifies RedShift clusters which do not have enhanced Virtual Private Cloud (VPC) routing enabled. Enabling this feature forces the traffic to pass through the VPC and not through the Internet, allowing you to control your network traffic.
 severity: low
 enabled: true
 sql: >

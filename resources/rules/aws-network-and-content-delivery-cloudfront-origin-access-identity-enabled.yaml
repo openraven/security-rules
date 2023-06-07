@@ -4,7 +4,7 @@ type: asset
 name: >
   CloudFront distribution with S3 Origin type has Origin Access Identity (OAI) configured
 description: >
-  Identifies CloudFront distribution with S3 origin type that has Origin Access Identity (OAI) configured.
+  This rule identifies CloudFront distribution with S3 origin type that has Origin Access Identity (OAI) configured. CloudFront provides two ways to send authenticated requests to an Amazon S3 origin and OAI is no longer the recommended method.
 severity: low
 enabled: true
 sql: >

@@ -5,7 +5,7 @@ type: asset
 name: >
   DynamoDB table does not have auto-scaling enabled
 description: >
-  Identifies DynamoDB tables which do not have auto-scaling enabled.
+  This rule identifies DynamoDB tables which do not have auto-scaling enabled. Enabling this allows monitoring of your tables and indexes in order to automatically adjust throughput in response to changes in application workload, making it easier to administer your DynamoDB data.
 severity: low
 enabled: true
 sql: >

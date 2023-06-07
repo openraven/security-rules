@@ -4,8 +4,7 @@ type: asset
 name: >
   S3 bucket does not have S3 default encryption enabled
 description: >
-  Identifies S3 buckets that do not have amazon S3 default encryption enabled.
-severity: medium
+  This rule identifies S3 buckets that do not have Amazon S3 default encryption enabled. This is especially applicable to S3 buckets created before January 5, 2023, when encryption was not enabled by default.
 enabled: true
 sql: >
   SELECT arn as assetid

@@ -4,7 +4,7 @@ type: asset
 name: >
   CloudWatch log group is not encrypted with a KMS key
 description: >
-  Identifies CloudWatch log groups which do not have encrypted with a KMS key enabled.
+  This rule identifies CloudWatch log groups which do not have encrypted with a KMS key enabled. Enabling KMS encryption provides enhanced security for data at rest by encrypting data using keys stored within AWS KMS.
 severity: medium
 enabled: true
 sql: >

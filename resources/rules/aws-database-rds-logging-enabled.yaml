@@ -3,9 +3,9 @@ id: aa2c777f-31f3-44cf-b708-947d41f27ab7
 refId: aws-database-rds-logging-enabled
 type: asset
 name: >
-  RDS instance does not have CloudWatch logging enabled
+  RDS instance does not have CloudWatch logs export enabled
 description: >
-  Identifies RDS instances which do not have CloudWatch logging enabled.
+  This rule identifies RDS instances which do not have exporting of CloudWatch logs enabled. Enable this feature in order to publish database log events directly to AWS CloudWatch Logs.
 severity: low
 enabled: true
 sql: >

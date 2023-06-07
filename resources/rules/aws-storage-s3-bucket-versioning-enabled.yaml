@@ -4,7 +4,7 @@ type: asset
 name: >
   S3 bucket does not have MFA option enabled for changing bucket versioning settings and permanently deleting object versions
 description: >
-  Identifies S3 buckets that do have a MFA option enabled for changing bucket versioning settings and permanently deleting object versions.
+  This rule identifies S3 buckets that do have a MFA option enabled for changing bucket versioning settings and permanently deleting object versions. Enabling MFA provides an extra layer of security to prevent data deletion.
 severity: low
 enabled: true
 sql: >

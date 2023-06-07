@@ -4,7 +4,7 @@ type: asset
 name: >
   RDS automatic minor version upgrade is not enabled
 description: >
-  Identifies RDS instances which do not have automatic minor version upgrade enabled.
+  This rule detects RDS instances lacking automatic minor version upgrades. Enabling minor version upgrades helps ensure that the RDS instance is running with the latest available minor version.
 severity: low
 enabled: true
 sql: >

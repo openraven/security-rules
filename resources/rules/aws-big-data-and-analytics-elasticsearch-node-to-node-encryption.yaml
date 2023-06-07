@@ -4,7 +4,7 @@ type: asset
 name: >
   OpenSearch domain does not have node-to-node encryption enabled
 description: >
-  Identifies OpenSearch domains that do not have node-to-node encryption enabled.
+  This rule identifies OpenSearch domains that do not have node-to-node encryption enabled. Node-to-node encryption helps ensure that your data remains encrypted (via TLS) for all communications throughout the cluster. If data arrives unencrypted (HTTP), enabling this encrypts the data after it reaches the cluster.
 severity: medium
 enabled: true
 sql: >

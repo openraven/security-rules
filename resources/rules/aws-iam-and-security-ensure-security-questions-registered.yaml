@@ -3,9 +3,9 @@ id: cb1b52e0-110c-4887-8ba4-901904938080
 refId: aws-iam-and-security-ensure-security-questions-registered
 type: asset
 name: >
-  Security questions are not registered in the AWS account
+  Security questions are not registered in the AWS account for support authentication
 description: >
-  Identifies if security questions are not registered in the AWS account.
+  This rule identifies if security questions are not registered in the AWS account. These questions can be used to authenticate individuals calling AWS customer service for support. 
 manualControl: true
 severity: low
 enabled: true

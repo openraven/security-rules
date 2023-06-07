@@ -4,7 +4,7 @@ type: asset
 name: >
   RDS instance is publicly accessible
 description: >
-  Identifies RDS instances which are publicly accessibly to the internet.
+  This rule identifies RDS instances which are publicly accessible to the internet. Data hosted on these instances could be public facing.
 severity: high
 enabled: true
 sql: >

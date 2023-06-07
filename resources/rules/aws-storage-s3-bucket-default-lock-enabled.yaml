@@ -3,9 +3,9 @@ id: d6de98db-4750-40c0-928b-8578b2f2791c
 refId: aws-storage-s3-bucket-default-lock-enabled
 type: asset
 name: >
-  S3 bucket does not have lock enabled by default
+  S3 bucket does not have Object Lock enabled by default
 description: >
-  Identifies S3 buckets that do not have lock enabled by default.
+  This rule identifies S3 buckets that do not have Object Lock enabled by default. Enabling Object Lock helps prevent the objects stored in an S3 bucket from being deleted to conform to retention policies.
 severity: low
 enabled: true
 sql: >

@@ -4,7 +4,7 @@ type: asset
 name: >
   S3 bucket does not have logging enabled
 description: >
-  Identifies S3 buckets which do not have logging enabled.
+  This rule identifies S3 buckets which do not have logging enabled. Enabling logging captures historical access and other events that can be useful during investigation.
 severity: medium
 enabled: true
 sql: >

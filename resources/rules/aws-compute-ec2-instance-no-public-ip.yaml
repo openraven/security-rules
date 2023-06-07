@@ -2,9 +2,9 @@ id: 85b27c1b-6f18-4973-84e4-722ba0aaf5b8
 refId: aws-compute-ec2-instance-no-public-ip
 type: asset
 name: >
-  EC2 instance has a public IP address associated
+  EC2 instance is associated with a public IP address
 description: >
-  Identifies EC2 instances which have a public IP address associated.
+  This rule identifies EC2 instances which have a public IP address. Public IP addresses increase the risk of unauthorized access to your EC2 instances.
 severity: low
 enabled: true
 sql: >

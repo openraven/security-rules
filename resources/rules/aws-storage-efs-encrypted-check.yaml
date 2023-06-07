@@ -2,9 +2,9 @@ id: 346162ea-32ad-480d-8564-560480153c5c
 refId: aws-storage-efs-encrypted-check
 type: asset
 name: >
-  EFS is not configured to encrypt the file data using AWS KMS.
+  EFS is not configured to encrypt the file data using AWS KMS
 description: >
-  Identifies instances of EFS that are not configured to encrypt the file data using AWS KMS.
+  This rule identifies instances of EFS that are not configured to encrypt data using AWS Key Management Service (AWS KMS). Enabling KMS encryption provides enhanced security for data at rest by encrypting data using keys stored within AWS KMS.
 severity: high
 enabled: true
 sql: >

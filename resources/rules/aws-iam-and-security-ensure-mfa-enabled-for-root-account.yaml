@@ -5,7 +5,7 @@ type: asset
 name: >
   MFA is disabled for the "root" account
 description: >
-  Identifies MFA being disabled for the "root" account.
+  This rule identifies MFA being disabled for the "root" account. Enabling MFA on the "root" account further secures your cloud environment and adheres to IAM security best practices.
 severity: high
 enabled: true
 sql: >

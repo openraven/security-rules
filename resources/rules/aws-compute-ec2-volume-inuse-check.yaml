@@ -4,7 +4,7 @@ type: asset
 name: >
   EBS volume is not attached to an EC2 instance
 description: >
-  Identifies EBS volumes which are not attached to any EC2 instances.
+  This rule identifies EBS volumes which are not attached to any EC2 instances. An unattached volume provides the potential for data to persist unintentionally.
 severity: low
 enabled: true
 sql: >

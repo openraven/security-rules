@@ -5,7 +5,7 @@ type: asset
 name: >
   Hardware MFA is not enabled for the "root" account
 description: >
-  Identifies where hardware MFA is not enabled for the "root" account.
+  This rule identifies where hardware MFA is not enabled for the "root" account. Enabling MFA on the "root" account further secures your cloud environment and adheres to IAM security best practices.
 severity: medium
 enabled: true
 sql: >

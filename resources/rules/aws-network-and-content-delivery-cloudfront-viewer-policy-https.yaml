@@ -4,7 +4,7 @@ type: asset
 name: >
   CloudFront distribution does not use HTTPS
 description: >
-  Identifies CloudFront distributions that do not use HTTPS.
+  This rule identifies CloudFront distributions that do not use HTTPS. Enabling HTTPS ensures secure communication between resources.
 severity: medium
 enabled: true
 sql: >

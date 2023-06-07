@@ -3,9 +3,9 @@ id: 55b62465-1bdb-4388-9adf-b88d5e83812b
 refId: aws-iam-and-security-default-security-group-for-vpc-restricts-all-traffic
 type: asset
 name: >
-  Default security group of every VPC does not restrict all traffic
+  Default security group of the VPC does not restrict all traffic
 description: >
-  Identifies a default security group that is used for every VPC which does not restrict all incoming traffic.
+  This rule identifies default security groups within VPCs that do not restrict all traffic. Configuring all VPC default security groups to restrict all traffic will encourage least privilege security group development and reduce potential exposure of resources.
 severity: medium
 enabled: true
 sql: >

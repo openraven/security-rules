@@ -4,7 +4,7 @@ type: asset
 name: >
   EKS endpoint is publicly accessible
 description: >
-  Identifies EKS endpoints which are publicly accessible to the internet.
+  This rule identifies EKS endpoints which are publicly accessible to the internet. Public access increases the risk of unauthorized access to your EKS endpoint as well as the potential for data exposure.
 severity: high
 enabled: true
 sql: >

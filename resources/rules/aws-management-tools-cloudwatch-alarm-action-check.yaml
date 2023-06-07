@@ -5,7 +5,7 @@ type: asset
 name: >
   CloudWatch alarm does not have an associated alarm action
 description: >
-  Identifies CloudWatch alarms which do not have an associated alarm action.
+  This rule identifies CloudWatch alarms which do not have an associated alarm action.
 severity: low
 enabled: true
 sql: >
