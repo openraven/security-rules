@@ -4,7 +4,7 @@
 
     <groupId>io.openraven.magpie</groupId>
     <artifactId>security-rules</artifactId>
-    <version>0.0.27-SNAPSHOT</version>
+    <version>0.0.27</version>
     <name>Open Raven Security Rules</name>
     <url>https://github.com/openraven/security-rules</url>
     <description>Open Raven's Security Rules Project</description>
@@ -27,7 +27,7 @@
         <connection>scm:git:https://github.com/openraven/security-rules.git</connection>
         <developerConnection>scm:git:https://github.com/openraven/security-rules.git</developerConnection>
         <url>https://github.com/openraven/security-rules.git</url>
-      <tag>HEAD</tag>
+      <tag>security-rules-0.0.27</tag>
   </scm>
 
     <developers>
