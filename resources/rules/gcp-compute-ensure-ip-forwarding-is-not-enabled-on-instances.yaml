@@ -3,9 +3,9 @@ id: b3ff7ae6-32ec-42e9-9261-6cddb63205b2
 refId: gcp-compute-ensure-ip-forwarding-is-not-enabled-on-instances
 type: asset
 name: >
-  Ensure that IP forwarding is not enabled on Instances
+  IP forwarding is enabled on Instances
 description: >
-  Forwarding of data packets should be disabled to prevent data loss or information disclosure.
+  Unless it is required for a business function, forwarding of data packets should be disabled to prevent data loss or accidental information disclosure.
 severity: high
 enabled: true
 sql: >
