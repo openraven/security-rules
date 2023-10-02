@@ -2,7 +2,7 @@ id: bdc8ebf8-a8a1-47fb-9171-1d4e2d0880f1
 refId: gcp-compute-editor-role
 type: asset
 name: >
- Instances are configured to use the default Compute Engine service account
+ Instances are configured to use the default Compute Engine service account with Editor Role
 description: >
   The default Compute Engine service account has the Editor role on the project, which allows read and write access to most Google Cloud Services.
   To defend against privilege escalations if your VM is compromised and prevent an attacker from gaining access to all of your project,
