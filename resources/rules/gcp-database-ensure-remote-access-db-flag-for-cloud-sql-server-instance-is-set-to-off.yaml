@@ -3,7 +3,7 @@ id: 96ccfe84-0465-4e70-9d2a-9ca5dedbf495
 refId: gcp-database-ensure-remote-access-db-flag-for-cloud-sql-server-instance-is-set-to-off
 type: asset
 name: >
-  The "remote access database flag for Cloud SQL, SQL Server instance is set to "on"
+  The "remote access" database flag for Cloud SQL, SQL Server instance is set to "on"
 description: >
   The "remote access" option controls the execution of stored procedures from local or remote servers on which SQL Servier instances are running.
   The default value for this option is "1".
