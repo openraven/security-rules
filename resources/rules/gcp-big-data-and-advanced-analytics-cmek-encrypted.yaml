@@ -10,7 +10,7 @@ description: >
   However, if you want to have greater control, Customer-managed encryption keys (CMEK) can be used as encryption key management solution for BigQuery Data Sets.
   If CMEK is used, the CMEK is used to encrypt the data encryption keys instead of using google-managed encryption keys.
 severity: medium # by default encrypted by GMCK which also acceptable
-enabled: true
+enabled: false
 sql: >
   SELECT acc.assetid
     FROM ${magpie_schema}.gcp acc,
