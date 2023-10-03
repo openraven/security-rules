@@ -3,7 +3,7 @@ id: 35e1bf60-1df4-45fb-8b8f-f7b6e7bf58da
 refId: gcp-database-ensure-contained-database-authentication-db-flag-for-cloud-sql-on-the-sql-server-instance-is-set-to-off
 type: asset
 name: >
-  The 'contained database authentication' database flag for Cloud SQL on the SQL Server instance is set to 'on'
+  The "contained database authentication" database flag for Cloud SQL on the SQL Server instance is set to "on"
 description: >
   A contained database includes all database settings and metadata required to define the database
   and has no configuration dependencies on the instance of the Database Engine where the database is installed.
