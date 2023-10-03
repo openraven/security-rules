@@ -6,7 +6,7 @@ name: >
 description: >
   It is recommended to create a sink that will export copies of all the log entries to ensure visibility.
   This can help aggregate logs from multiple projects and export them to a Security Information and Event Management (SIEM) for analysis.
-  By default, there are no sinks configured.
+  By default, there are no log sinks configured.
 severity: high
 enabled: true
 sql: >
