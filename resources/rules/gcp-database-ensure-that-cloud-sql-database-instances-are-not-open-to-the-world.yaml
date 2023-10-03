@@ -5,9 +5,9 @@ type: asset
 name: >
   Cloud SQL database instances are accessible to the internet
 description: >
-  To minimize attack surface on a database server instance, only trusted/known and required IP(s) should be white-listed to connect to it.
+  To minimize the attack surface on a database server instance, only trusted/known and required IP addresses should be white-listed to connect to it.
   An authorized network should not have IPs/networks configured to 0.0.0.0/0 which allows access to the instance from anywhere in the world.
-  Note that authorized networks apply only to instances with public IPs.
+  Note that authorized networks apply only to instances with public IPs addresses.
 severity: high
 enabled: true
 sql: >
