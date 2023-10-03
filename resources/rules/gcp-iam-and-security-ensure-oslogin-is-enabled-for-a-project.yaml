@@ -3,9 +3,9 @@ id: e7fbcaf2-509b-4eb5-8d86-c9627d0bfdb4
 refId: gcp-iam-and-security-ensure-oslogin-is-enabled-for-a-project
 type: asset
 name: >
-  Ensure oslogin is enabled for a Project
+  OS Login is not enabled for a Project
 description: >
-  Enabling OS login binds SSH certificates to IAM users and facilitates effective SSH certificate management.
+  Enabling OS Login binds SSH certificates to IAM users and facilitates effective SSH certificate management.
 severity: high
 enabled: true
 sql: >
