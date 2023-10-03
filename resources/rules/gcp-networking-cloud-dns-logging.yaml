@@ -2,10 +2,10 @@ id: e9e1dec8-8f7e-4356-b18d-21dda2f63a97
 refId: gcp-networking-cloud-dns-logging
 type: asset
 name: >
-  Ensure that Cloud DNS logging is enabled for all VPC networks
+  Cloud DNS logging is not enabled for all VPC networks
 description: >
   Cloud DNS logging records the queries from the name servers within your VPC to Stackdriver.
-  Logged queries can come from Compute Engine VMs, GKE containers, or other GCP resources provisioned within the VPC.
+  Logged queries can come from Compute Engine VMs, GKE containers, or other GCP resources provisioned within the VPC and can be useful for investigating incidents or troubleshooting.
 manualControl: true
 severity: high
 enabled: true
