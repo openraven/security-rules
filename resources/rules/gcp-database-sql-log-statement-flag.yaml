@@ -2,11 +2,11 @@ id: a8cb700d-7651-4f97-8124-bf42e6a6c8b9
 refId: gcp-database-sql-log-statement-flag
 type: asset
 name: >
-  Ensure 'log_statement_stats' database flag for Cloud SQL PostgreSQL instance is set to 'off'
+  The "log_statement_stats" database flag for Cloud SQL PostgreSQL instance is set to "on"
 description: >
-  The log_statement_stats flag enables a crude profiling method for logging end to end performance statistics of a SQL query.
+  The "log_statement_stats" flag enables a crude profiling method for logging end to end performance statistics of a SQL query.
   This can be useful for troubleshooting but may increase the amount of logs significantly and have performance overhead.
-  By default log_statement_stats is off.
+  By default, "log_statement_stats" is "off".
 severity: medium
 enabled: true
 sql: >
