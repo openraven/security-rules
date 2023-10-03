@@ -3,7 +3,7 @@ id: ec77e0e3-dda9-4871-9a96-badaf03ca992
 refId: gcp-iam-and-security-ensure-kms-cryptokeys-are-not-anonymously-or-publicly-accessible
 type: asset
 name: >
-  Ensure that Cloud KMS cryptokeys are not anonymously or publicly accessible
+  Cloud KMS cryptokeys are anonymously or publicly accessible
 description: >
   Granting permissions to allUsers or allAuthenticatedUsers allows anyone to access the dataset.
   Such access might not be desirable if sensitive data is stored at the location.

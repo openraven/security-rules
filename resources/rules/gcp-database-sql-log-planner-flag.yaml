@@ -2,11 +2,11 @@ id: ac8c38e5-9259-4154-a6ad-48fa663cbfe8
 refId: gcp-database-sql-log-planner-flag
 type: asset
 name: >
-  Ensure 'log_planner_stats' database flag for Cloud SQL PostgreSQL instance is set to 'off'
+  The "log_planner_stats" database flag for Cloud SQL PostgreSQL instance is set to "on"
 description: >
-  The log_planner_stats flag enables a crude profiling method for logging PostgreSQL planner performance statistics
+  The "log_planner_stats" flag enables a crude profiling method for logging PostgreSQL planner performance statistics, 
   which even though can be useful for troubleshooting, it may increase the amount of logs significantly and have performance overhead.
-  By default log_planner_stats is off.
+  By default, "log_planner_stats" is "off".
 severity: medium
 enabled: true
 sql: >

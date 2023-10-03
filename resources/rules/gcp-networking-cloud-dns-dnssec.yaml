@@ -2,11 +2,11 @@ id: 6358bd0b-1930-4947-b5a8-734e3a8f5f5c
 refId: gcp-networking-cloud-dns-dnssec
 type: asset
 name: >
-  Ensure that DNSSEC is enabled for Cloud DNS
+  DNSSEC is not enabled for Cloud DNS
 description: >
   Domain Name System Security Extensions (DNSSEC) adds security to the DNS protocol by enabling DNS responses to be validated.
-  Attackers can hijack this process of domain/IP lookup and redirect users to a malicious site through DNS hijacking and man-in- the-middle attacks.
-  DNSSEC helps mitigate the risk of such attacks by cryptographically signing DNS records. As a result,
+  Attackers can hijack this process of domain/IP lookup and redirect users to a malicious site through DNS hijacking and man-in-the-middle (MITM) attacks.
+  Enabling DNSSEC helps mitigate the risk of such attacks by cryptographically signing DNS records. As a result,
   it prevents attackers from issuing fake DNS responses that may misdirect browsers to nefarious websites.
 severity: high
 enabled: true

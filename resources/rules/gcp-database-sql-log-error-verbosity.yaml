@@ -2,11 +2,11 @@ id: 6e4b34e3-73d6-481e-a8a9-70611966b836
 refId: gcp-database-sql-log-error-verbosity
 type: asset
 name: >
-  Ensure 'log_error_verbosity' database flag for Cloud SQL PostgreSQL instance is set to 'DEFAULT' or stricter
+  The "log_error_verbosity" database flag for Cloud SQL PostgreSQL instance is not set to "DEFAULT" or stricter
 description: >
-  The log_error_verbosity flag controls the verbosity/details of messages logged.
-  Ensure an appropriate value is set to 'DEFAULT' or stricter.
-  By default log_error_verbosity is DEFAULT.
+  The "log_error_verbosity" flag controls the level of details of messages logged.
+  Ensure an appropriate value is set to "DEFAULT" or stricter.
+  By default, "log_error_verbosity" is "DEFAULT".
 severity: high
 enabled: true
 sql: >

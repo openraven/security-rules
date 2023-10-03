@@ -2,9 +2,10 @@ id: 00b910b7-6dd9-4fb7-bf5d-014d18b6a1a8
 refId: gcp-monitoring-tools-log-alerts-vpc
 type: asset
 name: >
-  Ensure that the log metric filter and alerts exist for VPC network route changes
+  Log metric filter and alerts do not exist for VPC network route changes
 description: >
-  Monitoring changes to route tables will help ensure that all VPC traffic flows through an expected path.
+  Monitoring changes to route tables will help ensure that all VPC traffic flows through an expected and intended path. 
+  As a best practice, network route changes should be captured and logged to enable alerting.
 severity: high
 enabled: true
 sql: >

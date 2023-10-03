@@ -2,14 +2,10 @@ id: 41d06ab4-c374-4163-a5b4-7a6904e45f0e
 refId: gcp-database-sql-db-flag-off
 type: asset
 name: >
-  Ensure '3625 (trace flag)' database flag for Cloud SQL SQL Server instance is set to 'off'
+  The "3625 (trace flag)" database flag for Cloud SQL, SQL Server instance is set to "on"
 description: >
-  Trace flags are frequently used to diagnose performance issues or to debug stored procedures or complex computer systems,
-  but they may also be recommended by Microsoft Support to address behavior that is negatively impacting a specific workload.
-  All documented trace flags and those recommended by Microsoft Support are fully supported in a production environment when used as directed.
-  3625(trace log) Limits the amount of information returned to users who are not members of the sysadmin fixed server role,
-  by masking the parameters of some error messages using '******'.
-  This can help prevent disclosure of sensitive information, hence this is recommended to disable this flag
+  Setting this trace flag to a Google Cloud SQL Server database instance allows for security through obscurity and prevents the disclosure of sensitive information. 
+  It is strongly recommended to set this flag globally to "off" in order to prevent the flag having been left on, or turned on by malicious actors.
 severity: high
 enabled: true
 sql: >

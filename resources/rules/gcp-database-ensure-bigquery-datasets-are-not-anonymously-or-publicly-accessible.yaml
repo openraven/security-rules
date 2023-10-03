@@ -3,7 +3,7 @@ id: 3c72b7c4-af80-42cf-a227-ccffe86427e6
 refId: gcp-database-ensure-bigquery-datasets-are-not-anonymously-or-publicly-accessible
 type: asset
 name: >
-  Ensure that BigQuery datasets are not anonymously or publicly accessible
+  BigQuery datasets are anonymously or publicly accessible
 description: >
   It is recommended that the IAM policy on BigQuery datasets does not allow anonymous and/or public access.
   Granting permissions to allUsers or allAuthenticatedUsers allows anyone to access the dataset.

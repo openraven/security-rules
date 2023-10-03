@@ -2,10 +2,10 @@ id: a9a6c97f-9081-426f-85be-41c485a48b99
 refId: gcp-management-tools-log-alert-custom-role
 type: asset
 name: >
-  Ensure that the log metric filter and alerts exist for Custom Role changes
+  Log metric filter and alerts do not exist for Custom Role changes
 description: >
   It is recommended that a metric filter and alarm be established for changes to Identity and Access Management (IAM) role
-  creation, deletion and updating activities.
+  creation, deletion and updating activities. As a best practice, custom role changes should be captured and logged to enable alerting.
 severity: high
 enabled: true
 sql: >

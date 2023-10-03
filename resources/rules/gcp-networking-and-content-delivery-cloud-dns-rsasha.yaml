@@ -2,11 +2,11 @@ id: 7a067ef8-3c8f-4a27-bd95-971db8e1c6d6
 refId: gcp-networking-and-content-delivery-cloud-dns-rsasha
 type: asset
 name: >
-  Ensure that RSASHA1 is not used for the zone-signing key in Cloud DNS DNSSEC
+  RSASHA1 is used for the zone-signing key in Cloud DNS DNSSEC
 description: >
-  DNSSEC algorithm numbers in this registry may be used in CERT RRs.
-  Zone signing (DNSSEC) and transaction security mechanisms (SIG(0) and TSIG) make use of particular subsets of these algorithms.
-  The algorithm used for key signing should be a recommended one and it should be strong.
+  When enabling DNSSEC security feature for a managed DNS zone, or creating a managed zone with DNSSEC, you can select the DNSSEC signing algorithms and the denial-of-existence type. 
+  To implement security best practices, do not use the RSASHA1 signature algorithm for DNSSEC signing unless it is required for compatibility reasons, as SHA1 is considered weak and vulnerable to collision attacks. 
+  The algorithm used for DNSSEC signing should be a strong one, such as ECDSAP256SHA256 algorithm, as this is secure and widely deployed, and therefore it is a good choice for both DNSSEC validation and signing.
 severity: high
 enabled: true
 sql: >

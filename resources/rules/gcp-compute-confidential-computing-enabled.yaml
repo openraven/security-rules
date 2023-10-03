@@ -2,11 +2,11 @@ id: ac6e6512-279b-428d-a513-e21d42d009ee
 refId: gcp-compute-confidential-computing-enabled
 type: asset
 name: >
-  Ensure that Compute instances have Confidential Computing enabled
+  Compute instances do not have Confidential Computing enabled
 description: >
-  Confidential Computing enables customers' sensitive code and other data encrypted in memory during processing.
+  Confidential Computing enables customers' sensitive code and other data to be encrypted in memory during processing.
   Google does not have access to the encryption keys.
-  Confidential VM can help alleviate concerns about risk related to either dependency on Google infrastructure
+  Confidential VMs can help alleviate concerns about risk related to either dependency on Google infrastructure
   or Google insiders' access to customer data in the clear.
   Note: Confidential Computing is currently only supported on N2D machines
 manualControl: true

@@ -3,9 +3,9 @@ id: d78be2e4-5158-45e9-8e3a-67b1d8e41f5d
 refId: gcp-compute-ensure-compute-instances-are-launched-with-shielded-vm-enabled
 type: asset
 name: >
-  Ensure Compute instances are launched with Shielded VM enabled
+  Compute instances are not launched with Shielded VM enabled
 description: >
-  To defend against against advanced threats and ensure that the boot loader and firmware on your VMs are signed and untampered,
+  To defend against advanced threats and ensure that the boot loader and firmware on your VMs are signed and untampered,
   it is recommended that Compute instances are launched with Shielded VM enabled.
 severity: high
 enabled: true

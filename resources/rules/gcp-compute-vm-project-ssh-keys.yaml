@@ -2,10 +2,10 @@ id: 2cafde41-c4b6-4b74-a7a9-33583cd6ea47
 refId: gcp-compute-vm-project-ssh-keys
 type: asset
 name: >
-  Ensure "Block Project-wide SSH keys" is enabled for VM instances
+  "Block Project-wide SSH keys" is not enabled for VM instances
 description: >
-  It is recommended to use Instance specific SSH key(s) instead of using common/shared project-wide SSH key(s) to access Instances.
-  By Default Block Project-wide SSH keys is not enabled.
+  Instance specific SSH key(s) should be used instead of using common/shared project-wide SSH key(s) to access Instances.
+  By default, Block Project-wide SSH keys is not enabled.
 severity: high
 enabled: true
 sql: >

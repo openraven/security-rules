@@ -2,13 +2,13 @@ id: 1acbbe7a-dd6a-4af4-a3e6-7f1d1ebbb66e
 refId: gcp-database-sql-log-lock-flag
 type: asset
 name: >
-  Ensure that the 'log_lock_waits' database flag for Cloud SQL PostgreSQL instance is set to 'on'
+  The "log_lock_waits" database flag for a Cloud SQL PostgreSQL instance is set to "off"
 description: >
-  Enabling the log_lock_waits flag for a PostgreSQL instance creates a log
-  for any session waits that take longer than the alloted deadlock_timeout time to acquire a lock.
+  Enabling the "log_lock_waits" flag for a PostgreSQL instance creates a log
+  for any session waits that take longer than the alloted "deadlock_timeout" time to acquire a lock.
   This can be used to identify poor performance due to locking delays
-  or if a specially-crafted SQL is attempting to starve resources through holding locks for excessive amounts of time
-  By default log_lock_waits is off.
+  or, identify specially-crafted SQL queries attempting to starve resources through holding locks for excessive amounts of time.
+  By default, "log_lock_waits" is off.
 severity: high
 enabled: true
 sql: >

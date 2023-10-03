@@ -2,10 +2,10 @@ id: 05719be1-836c-496f-b7fe-d6a7c9756638
 refId: gcp-database-sql-require-ssl
 type: asset
 name: >
-  Ensure that the Cloud SQL database instance requires all incoming connections to use SSL
+  Cloud SQL database instance does not require all incoming connections to use SSL
 description: >
-  SQL database connections if successfully trapped (MITM); can reveal sensitive data like credentials, database queries, query outputs etc.
-  For security, it is recommended to always use SSL encryption when connecting to your instance.
+  SQL database connections, if successfully trapped using a man-in-the-middle (MITM) attack, can reveal sensitive data like credentials, database queries, query outputs, etc.
+  For security, it is recommended to always use SSL encryption when connecting to your instance to protect communication.
   This recommendation is applicable for Postgresql, MySql generation 1, MySql generation 2 and SQL Server 2017 instances.
 severity: high
 enabled: true

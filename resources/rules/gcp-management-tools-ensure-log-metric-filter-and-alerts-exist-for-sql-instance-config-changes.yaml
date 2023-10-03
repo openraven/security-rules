@@ -3,9 +3,10 @@ id: 4eb29b39-ef5e-48f6-bc63-0984b831e7b8
 refId: gcp-management-tools-ensure-log-metric-filter-and-alerts-exist-for-sql-instance-config-changes
 type: asset
 name: >
-  Ensure that the log metric filter and alerts exist for SQL instance configuration changes
+  Log metric filter and alerts do not exist for SQL instance configuration changes
 description: >
   Monitoring changes to SQL instance configuration changes may reduce the time needed to detect and correct misconfigurations done on the SQL server.
+  As a best practice, configuration changes should be captured and logged to enable alerting.
 severity: high
 enabled: true
 sql: >

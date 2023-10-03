@@ -2,12 +2,11 @@ id: 214fb814-f818-4881-8d69-0ea5453f62f5
 refId: gcp-networking-and-content-delivery-rdp-access
 type: asset
 name: >
-  Ensure that RDP access is restricted from the Internet
+  RDP access is not restricted from the Internet
 description: >
-  To have outgoing Internet access, the network must have a valid Internet gateway route or custom route whose destination IP is specified.
-  This route simply defines the path to the Internet,
-  to avoid the most general (0.0.0.0/0) destination IP Range specified from the Internet through RDP with the default Port 3389.
-  Generic access from the Internet to a specific IP Range should be restricted.
+  For outgoing Internet access, the network must have a valid Internet gateway route or custom route whose destination IP is specified.
+  To avoid allowing public internet access to RDP (noramlly, default port 3389), specify a limited IP range for access. 
+  Avoid using "0.0.0.0/0" which allows all connections to/from the public internet.
 severity: high
 enabled: true
 sql: >

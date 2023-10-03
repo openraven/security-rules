@@ -2,14 +2,12 @@ id: b0e593c6-7283-4bce-8561-f1db88cb462f
 refId: gcp-database-sql-public-ip
 type: asset
 name: >
-  Ensure that Cloud SQL database instances do not have public IPs
+  Cloud SQL database instances have public IP addresses
 description: >
-  To lower the organization's attack surface, Cloud SQL databases should not have public IPs.
+  To lower the organization's attack surface, Cloud SQL databases should not have public IP addresses.
   Private IPs provide improved network security and lower latency for your application.
-  It is recommended to configure Second Generation Sql instance to use private IPs instead of public IPs.
-  PRIMARY ipAddress type is prohibited
-  An instance can have both a private and public address at the same time.
-  Note also that you cannot use private IP with First Generation instances.
+  It is recommended to configure Second Generation Sql instances to use private IPs instead of public IPs.
+  Please note that an instance can have both a private and public address at the same time and that you cannot use private IPs with First Generation instances.
 severity: high
 enabled: true
 sql: >

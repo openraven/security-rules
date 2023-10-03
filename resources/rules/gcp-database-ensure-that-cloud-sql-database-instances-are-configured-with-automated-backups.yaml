@@ -3,7 +3,7 @@ id: 75a124e6-1820-4e71-96f0-396b5c4719a5
 refId: gcp-database-ensure-that-cloud-sql-database-instances-are-configured-with-automated-backups
 type: asset
 name: >
-  Ensure that Cloud SQL database instances are configured with automated backups
+  Cloud SQL database instances are not configured with automated backups
 description: >
   Backups provide a way to restore a Cloud SQL instance to recover lost data or recover from a problem with that instance.
   Automated backups need to be set for any instance that contains data that should be protected from loss or damage.

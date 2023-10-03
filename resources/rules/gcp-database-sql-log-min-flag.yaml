@@ -2,13 +2,12 @@ id: e3aa8bc6-3ccb-4081-ab64-4cd158841779
 refId: gcp-database-sql-log-min-flag
 type: asset
 name: >
-  Ensure that the 'log_min_duration_statement' database flag for Cloud SQL PostgreSQL instance is set to '-1' (disabled)
+  The "log_min_duration_statement" database flag for Cloud SQL PostgreSQL instance is set to "0" (enabled)
 description: >
-  The log_min_duration_statement flag defines the minimum amount of execution time of a statement in milliseconds
-  where the total duration of the statement is logged.
-  Ensure that log_min_duration_statement is disabled, i.e., a value of -1 is set.
-  Logging SQL statements may include sensitive information that should not be recorded in logs
-  By default log_min_duration_statement is -1.
+  The "log_min_duration_statement" flag causes the duration of each completed SQL statement to be logged if the statement executes for at least the specified number of milliseconds. 
+  Setting this flag to "0" logs all statement durations, whereas setting it to "-1" disables logging statement durations. 
+  Logging SQL statements may include sensitive information that should not be recorded in log files, therefore the "log_min_duration_statement" database flag should be disabled or set to "-1".
+  By default, "log_min_duration_statement" is -1.
 severity: medium
 enabled: true
 sql: >

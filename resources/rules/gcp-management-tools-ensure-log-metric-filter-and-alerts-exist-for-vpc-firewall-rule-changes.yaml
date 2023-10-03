@@ -3,10 +3,11 @@ id: efa76fbc-1467-4a0b-abf6-d71374c340f1
 refId: gcp-management-tools-ensure-log-metric-filter-and-alerts-exist-for-vpc-firewall-rule-changes
 type: asset
 name: >
-  Ensure that the log metric filter and alerts exist for VPC Network Firewall rule changes
+  Log metric filter and alerts do not exist for VPC Network Firewall rule changes
 description: >
   Monitoring for Create or Update Firewall rule events gives insight to network access changes
-  and may reduce the time it takes to detect suspicious activity.
+  and may reduce the time it takes to detect suspicious activity. 
+  As a best practice, rule changes should be captured and logged to enable alerting.
 severity: high
 enabled: true
 sql: >

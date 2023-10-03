@@ -3,13 +3,12 @@ id: 46f8ec51-3408-4f9d-8d68-f8666de27b09
 refId: gcp-database-ensure-the-log-connections-db-flag-for-cloud-sql-postgres-instance-is-set-to-on
 type: asset
 name: >
-  Ensure that the 'log_connections' database flag for Cloud SQL PostgreSQL instance is set to 'on'
+  The "log_connections" database flag for Cloud SQL PostgreSQL instance is set to "off"
 description: >
   PostgreSQL does not log attempted connections by default.
-  Enabling the log_connections setting will create log entries for each attempted connection
-  as well as successful completion of client authentication
-  which can be useful in troubleshooting issues and to determine any unusual connection attempts to the server
-  By default log_connections is off.
+  Enabling the "log_connections" setting will create log entries for each attempted connection as well as successful completion of client authentication. 
+  This can be useful in troubleshooting issues and help in determining any unusual connection attempts to the server.
+  By default, "log_connections" is "off".
 severity: high
 enabled: true
 sql: >
