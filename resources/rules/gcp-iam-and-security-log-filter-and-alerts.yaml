@@ -2,10 +2,10 @@ id: f16ef4ec-332b-45e1-bbfb-16b9bc9e85cc
 refId: gcp-iam-and-security-log-filter-and-alerts
 type: asset
 name: >
-  Ensure that the log metric filter and alerts exist for Cloud Storage IAM permission changes
+  Log metric filter and alerts do not exist for Cloud Storage IAM permission changes
 description: >
   Monitoring changes to cloud storage bucket permissions may reduce the time needed to detect and correct permissions
-  on sensitive cloud storage buckets and objects inside the bucket.
+  on sensitive cloud storage buckets and objects inside the bucket. As a best practice, permission changes should be captured and logged to enable alerting.
 severity: high
 enabled: true
 sql: >
