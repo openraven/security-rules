@@ -3,12 +3,12 @@ id: 6faa55e6-abba-47d0-ad3b-0e0c23b54465
 refId: gcp-database-ensure-log-duration-db-flag-for-cloud-sql-postgres-instance-is-set-to-on
 type: asset
 name: >
-  Ensure 'log_duration' database flag for Cloud SQL PostgreSQL instance is set to 'on'
+  The "log_duration" database flag for Cloud SQL PostgreSQL instance is set to "off"
 description: >
   Enabling the log_duration setting causes the duration of each completed statement to be logged.
-  This does not logs the text of the query and thus behaves different from the log_min_duration_statement flag
+  This does not log the text of the query and thus behaves differently from the "log_min_duration_statement" flag.
   Monitoring the time taken to execute the queries can be crucial in identifying any resource hogging queries and assessing the performance of the server.
-  Further steps such as load balancing and use of optimized queries can be taken to ensure the performance and stability of the server.
+  Further steps, such as load balancing and use of optimized queries, can be taken to ensure the performance and stability of the server.
   By default log_duration is off.
 severity: high
 enabled: true
