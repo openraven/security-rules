@@ -2,14 +2,14 @@ id: fc80bcf6-34cd-4207-9805-342873951710
 refId: gcp-database-sql-log-hostname-flag
 type: asset
 name: >
-  Ensure 'log_hostname' database flag for Cloud SQL PostgreSQL instance is set appropriately
+  The "log_hostname" database flag for Cloud SQL PostgreSQL instance is not set appropriately
 description: >
-  Logging hostnames can incur overhead on server performance as for each statement logged,
-  DNS resolution will be required to convert IP address to hostname.
+  Logging hostnames can incur overhead on server performance since each statement logged,
+  rquires DNS resolution to convert IP addresses to hostnames.
   Depending on the setup, this may be non-negligible.
   Additionally, the IP addresses that are logged can be resolved to their DNS names later
   when reviewing the logs excluding the cases where dynamic hostnames are used.
-  By default log_hostname is off.
+  By default, "log_hostname" is off.
 severity: low # Could be defined by organisation
 enabled: true
 sql: >
