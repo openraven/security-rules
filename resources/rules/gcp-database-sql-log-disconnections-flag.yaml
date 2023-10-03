@@ -2,13 +2,13 @@ id: 29bc38e9-6413-4cd4-b9a4-9b6cb21d2e7c
 refId: gcp-database-sql-log-disconnections-flag
 type: asset
 name: >
-  Ensure that the 'log_disconnections' database flag for Cloud SQL PostgreSQL instance is set to 'on'
+  The "log_disconnections" database flag for Cloud SQL PostgreSQL instance is set to "off"
 description: >
   PostgreSQL does not log session details such as duration and session end by default.
-  Enabling the log_disconnections setting will create log entries at the end of each session
-  which can be useful in troubleshooting issues and determine any unusual activity across a time period.
-  The log_disconnections and log_connections work hand in hand and generally, the pair would be enabled/disabled together.
-  By default log_disconnections is off.
+  Enabling the "log_disconnections" setting will create log entries at the end of each session
+  which can be useful in troubleshooting issues and determining any unusual activity across a time period.
+  The "log_disconnections" and "log_connections" work hand in hand, and generally, the pair would be enabled/disabled together.
+  By default "log_disconnections" is off.
 severity: high
 enabled: true
 sql: >
