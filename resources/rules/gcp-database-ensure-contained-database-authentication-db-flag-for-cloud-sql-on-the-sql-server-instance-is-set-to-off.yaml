@@ -3,16 +3,16 @@ id: 35e1bf60-1df4-45fb-8b8f-f7b6e7bf58da
 refId: gcp-database-ensure-contained-database-authentication-db-flag-for-cloud-sql-on-the-sql-server-instance-is-set-to-off
 type: asset
 name: >
-  Ensure that the 'contained database authentication' database flag for Cloud SQL on the SQL Server instance is set to 'off'
+  The 'contained database authentication' database flag for Cloud SQL on the SQL Server instance is set to 'on'
 description: >
   A contained database includes all database settings and metadata required to define the database
   and has no configuration dependencies on the instance of the Database Engine where the database is installed.
-  Users can connect to the database without authenticating a login at the Database Engine level.
+  Users can connect to the database without authenticating at the Database Engine level login.
   Isolating the database from the Database Engine makes it possible to easily move the database to another instance of SQL Server.
   Contained databases have some unique threats that should be understood and mitigated by SQL Server Database Engine administrators.
   Most of the threats are related to the USER WITH PASSWORD authentication process,
   which moves the authentication boundary from the Database Engine level to the database level,
-  hence this is recommended to disable this flag.
+  hence it is recommended to disable this flag.
 severity: high
 enabled: true
 sql: >
