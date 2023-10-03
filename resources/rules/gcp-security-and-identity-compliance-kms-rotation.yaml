@@ -2,12 +2,11 @@ id: 3a8a8691-b8e7-4ebb-aa0e-f65777e46bff
 refId: gcp-security-and-identity-compliance-kms-rotation
 type: asset
 name: >
-  Ensure KMS encryption keys are rotated within a period of 90 days
+  KMS encryption keys are not rotated within a period of 90 days
 description: >
-  A key is used to protect some corpus of data.
-  A collection of files could be encrypted with the same key and people with decrypt permissions on that key would be able to decrypt those files.
-  Therefore, it's necessary to make sure the rotation period is set to a specific time
-  By default, KMS encryption keys are rotated every 90 days (7776000 seconds)
+  A key is used to protect data. A collection of files could be encrypted with the same key and people with decrypt permissions on that key would be able to decrypt those files.
+  Therefore, best practice suggests ensuring a rotation period is set to a specific time, ideally 90 days or less.
+  By default, KMS encryption keys are rotated every 90 days (7776000 seconds).
 severity: high
 enabled: true
 sql: >
