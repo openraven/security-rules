@@ -8,7 +8,7 @@ description: >
   Enabling the "log_disconnections" setting will create log entries at the end of each session
   which can be useful in troubleshooting issues and determining any unusual activity across a time period.
   The "log_disconnections" and "log_connections" work hand in hand, and generally, the pair would be enabled/disabled together.
-  By default "log_disconnections" is off.
+  By default, "log_disconnections" is off.
 severity: high
 enabled: true
 sql: >
