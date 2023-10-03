@@ -3,12 +3,12 @@ id: 9b271b06-1140-4b20-898c-07fe1e34b6f8
 refId: gcp-network-and-content-delivery-ensure-legacy-networks-do-not-exist-for-a-project
 type: asset
 name: >
-  Ensure legacy networks do not exist for a project
+  Legacy networks exist for a project
 description: >
-  Legacy networks have a single network IPv4 prefix range and a single gateway IP address for the whole network.
-  The network is global in scope and spans all cloud regions.
-  Subnetworks cannot be created in a legacy network and are unable to switch from legacy to auto or custom subnet networks.
-  Legacy networks can have an impact for high network traffic projects and are subject to a single point of contention or failure.
+  Legacy networks are not recommended by Google Cloud and can no longer be created. 
+  Many newer Google Cloud features are not supported in legacy networks. Instead, use Virtual Private Cloud (VPC) networks.
+  For a legacy network, you can explicitly delete the network only if the network is not in use by any resources.
+  Consider migrating over any important resources that are still on a legacy network.
 severity: high
 enabled: true
 sql: >
