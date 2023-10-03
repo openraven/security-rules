@@ -2,10 +2,11 @@ id: 17a72b4d-cf1a-46f6-8f60-0b9e08894f62
 refId: gcp-management-tools-sinks-enabled
 type: asset
 name: >
-  Ensure that sinks are configured for all log entries
+  Log sinks are not configured for all log entries
 description: >
-  It is recommended to create a sink that will export copies of all the log entries.
-  This can help aggregate logs from multiple projects and export them to a Security Information and Event Management (SIEM).
+  It is recommended to create a sink that will export copies of all the log entries to ensure visibility.
+  This can help aggregate logs from multiple projects and export them to a Security Information and Event Management (SIEM) for analysis.
+  By default, there are no sinks configured.
 severity: high
 enabled: true
 sql: >
