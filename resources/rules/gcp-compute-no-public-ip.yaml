@@ -2,7 +2,7 @@ id: 076b7371-2136-4629-a531-8e9a74f209b7
 refId: gcp-compute-no-public-ip
 type: asset
 name: >
-  Ensure that Compute instances do not have public IP addresses
+  Compute instance has a public IP address
 description: >
   To reduce your attack surface, Compute instances should not have public IP addresses.
   Instead, instances should be configured behind load balancers, to minimize the instance's exposure to the internet.
