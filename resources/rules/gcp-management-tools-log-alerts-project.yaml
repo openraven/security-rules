@@ -2,10 +2,11 @@ id: a33e03e3-d53f-4f76-802b-96274a475bec
 refId: gcp-management-tools-log-alerts-project
 type: asset
 name: >
-  Ensure log metric filter and alerts exist for project ownership assignments/changes
+  Log metric filter and alerts do not exist for project ownership assignments or changes
 description: >
   In order to prevent unnecessary project ownership assignments to users/service-accounts and further misuses of projects and resources,
-  all roles/Owner assignments should be monitored.
+  all roles/Owner assignments should be monitored. 
+  As a best practice, project owner assignmments and changes should be captured and logged to enable alerting.
 severity: high
 enabled: true
 sql: >
