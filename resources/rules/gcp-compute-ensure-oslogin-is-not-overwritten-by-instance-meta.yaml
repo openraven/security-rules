@@ -3,10 +3,11 @@ id: 0d828d3c-3704-47af-bf32-3bbe3cdf98f7
 refId: gcp-compute-ensure-oslogin-is-not-overwritten-by-instance-meta
 type: asset
 name: >
-  Ensure oslogin is not overwritten by Instance meta
+  Ensure OS Login is not overwritten by Instance meta
 description: >
-  Enabling OS login binds SSH certificates to IAM users and facilitates effective SSH certificate management.
-  By default, parameter enable-oslogin is not set, which is equivalent to setting it to FALSE.
+  Enabling OS Login binds SSH certificates to IAM users and facilitates effective SSH certificate management.
+  By default, parameter enable-oslogin is not set, which is equivalent to setting it to FALSE or disabled. 
+  Enabling OS Login on project disables metadata-based SSH key configurations on all instances from a project. Disabling OS Login restores SSH keys that you have configured in project or instance meta-data.
 severity: high
 enabled: true
 sql: >
