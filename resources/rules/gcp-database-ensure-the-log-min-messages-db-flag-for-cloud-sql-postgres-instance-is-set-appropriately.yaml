@@ -3,14 +3,14 @@ id: 825a0a30-6ee9-4d62-b889-c5647a4d78a1
 refId: gcp-database-ensure-the-log-min-messages-db-flag-for-cloud-sql-postgres-instance-is-set-appropriately
 type: asset
 name: >
-  Ensure that the 'log_min_messages' database flag for Cloud SQL PostgreSQL instance is set appropriately
+  The "log_min_messages" database flag for Cloud SQL PostgreSQL instance is not set appropriately
 description: >
   Auditing helps in troubleshooting operational problems and also permits forensic analysis.
-  If log_min_error_statement is not set to the correct value, messages may not be classified as error messages appropriately.
+  If this flag is not set to the correct value, messages may not be classified as error messages appropriately.
   Considering general log messages as error messages would make it difficult to find actual errors,
   while considering only stricter severity levels as error messages may skip actual errors to log their SQL statements.
   ERROR is considered the best practice setting. Changes should only be made in accordance with the organization's logging policy.
-  By default log_min_messages is ERROR.
+  By default "log_min_messages" is set to ERROR.
 severity: low
 enabled: true
 sql: >
