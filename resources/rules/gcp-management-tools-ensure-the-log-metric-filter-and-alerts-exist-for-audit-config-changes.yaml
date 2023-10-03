@@ -3,11 +3,11 @@ id: e7e0e5ab-3fd0-4a8e-b505-f791f0e499ee
 refId: gcp-management-tools-ensure-the-log-metric-filter-and-alerts-exist-for-audit-config-changes
 type: asset
 name: >
-  Ensure that the log metric filter and alerts exist for Audit Configuration changes
+  Log metric filter and alerts do not exist for Audit Configuration changes
 description: >
-  Admin activity and data access logs produced by cloud audit logging enable security analysis, resource change tracking, and compliance auditing.
+  Administrative activity and data access logs produced by cloud audit logging enables security analysis, resource change tracking, and compliance auditing.
   Configuring the metric filter and alerts for audit configuration changes ensures the recommended state of audit configuration is maintained
-  so that all activities in the project are audit-able at any point in time.
+  so that all activities in a project are audit-able at any point in time.
 severity: high
 enabled: true
 sql: >
