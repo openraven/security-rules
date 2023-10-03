@@ -5,7 +5,7 @@ name: >
   Log metric filter and alerts do not exist for VPC network route changes
 description: >
   Monitoring changes to route tables will help ensure that all VPC traffic flows through an expected and intended path. 
-  As a best practice, permission changes should be captured and logged to enable alerting.
+  As a best practice, network route changes should be captured and logged to enable alerting.
 severity: high
 enabled: true
 sql: >
