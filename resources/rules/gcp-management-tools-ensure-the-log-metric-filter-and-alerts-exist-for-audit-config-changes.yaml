@@ -7,7 +7,7 @@ name: >
 description: >
   Administrative activity and data access logs produced by cloud audit logging enables security analysis, resource change tracking, and compliance auditing.
   Configuring the metric filter and alerts for audit configuration changes ensures the recommended state of audit configuration is maintained
-  so that all activities in a project are audit-able at any point in time.
+  so that all activities in a project are audit-able at any point in time. As a best practice, audit configuration changes should be captured and logged to enable alerting.
 severity: high
 enabled: true
 sql: >
