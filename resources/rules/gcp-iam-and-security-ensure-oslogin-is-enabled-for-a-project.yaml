@@ -5,7 +5,8 @@ type: asset
 name: >
   OS Login is not enabled for a Project
 description: >
-  Enabling OS Login binds SSH certificates to IAM users and facilitates effective SSH certificate management.
+  Enabling OS Login binds SSH certificates to IAM users and facilitates effective, centralized SSH certificate management instead of depending on local metadata.
+  Unless there is a notable reason, best practice recommends that OS Login is enabled for a project.
 severity: high
 enabled: true
 sql: >
