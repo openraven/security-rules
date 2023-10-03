@@ -3,10 +3,10 @@ id: 8a1d92f8-b06b-4fdf-87ff-b660016a44b3
 refId: gcp-database-ensure-external-scripts-enabled-db-flag-for-cloud-sql-server-instance-is-set-to-off
 type: asset
 name: >
-  Ensure 'external scripts enabled' database flag for Cloud SQL SQL Server instance is set to 'off'
+  The "external scripts enabled" database flag for Cloud SQL, SQL Server instance is set to "on"
 description: >
-  external scripts enabled enable the execution of scripts with certain remote language extensions.
-  This property is OFF by default.
+  The "external scripts enabled" flag enables the execution of scripts with certain remote language extensions.
+  This property is set to "off" by default.
   When Advanced Analytics Services is installed, setup can optionally set this property to true.
   As the External Scripts Enabled feature allows scripts external to SQL such as files located in an R library to be executed,
   which could adversely affect the security of the system, hence this should be disabled.
