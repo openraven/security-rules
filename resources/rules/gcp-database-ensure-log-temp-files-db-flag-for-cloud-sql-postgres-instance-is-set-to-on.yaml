@@ -3,11 +3,11 @@ id: e7272b89-73e0-4250-aa74-5314d555c917
 refId: gcp-database-ensure-log-temp-files-db-flag-for-cloud-sql-postgres-instance-is-set-to-on
 type: asset
 name: >
-  Ensure that the 'log_temp_files' database flag for Cloud SQL PostgreSQL instance is set to '0' (on)
+  The "log_temp_files" database flag for Cloud SQL PostgreSQL instance is set to "1" (off)
 description: >
   If all temporary files are not logged, it may be more difficult to identify potential performance issues
-  that may be due to either poor application coding or deliberate resource starvation attempts.
-  By default log_temp_files is -1.
+  caused by either poor application coding or deliberate resource starvation attempts.
+  By default "log_temp_files" is set to "-1" but it is recommended to be set to "0".
 severity: medium
 enabled: true
 sql: >
