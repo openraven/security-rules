@@ -3,10 +3,11 @@ id: 5d8ef213-468f-4a15-8bbf-ab61e0f83cca
 refId: gcp-iam-and-security-ensure-separation-of-duties-is-enforced-while-assigning-kms-related-roles-to-users
 type: asset
 name: >
-  Ensure that Separation of duties is enforced while assigning KMS related roles to users
+  Separation of duties is not enforced while assigning KMS related roles to users
 description: >
   Separation of duties is the concept of ensuring that one individual does not have all necessary permissions to be able to complete a malicious action.
-  In Cloud KMS, this could be an action such as using a key to access and decrypt data a user should not normally have access to
+  In Cloud KMS, this could be an action such as using a key to access and decrypt data a user should not normally have access to.
+  Please review existing roles assigned users.
 severity: high
 enabled: true
 sql: >
