@@ -2,11 +2,11 @@ id: f5839d08-f236-49ae-9d8c-c584f79578a8
 refId: gcp-database-sql-db-flag-configured
 type: asset
 name: >
-  Ensure 'user options' database flag for Cloud SQL SQL Server instance is not configured
+  The "user options" database flag for Cloud SQL, SQL Server instance is configured
 description: >
   The user options option specifies global defaults for all users.
   A list of default query processing options is established for the duration of a user's work session.
-  The user options option allows you to change the default values of the SET options
+  The "user options" option allows you to change the default values of the SET options (if the server's default settings are not appropriate).
 severity: medium
 enabled: true
 sql: >
