@@ -6,9 +6,8 @@ name: >
   The "log_connections" database flag for Cloud SQL PostgreSQL instance is set to "off"
 description: >
   PostgreSQL does not log attempted connections by default.
-  Enabling the "log_connections" setting will create log entries for each attempted connection
-  as well as successful completion of client authentication. 
-  This can be useful in troubleshooting issues and help in determining any unusual connection attempts to the server
+  Enabling the "log_connections" setting will create log entries for each attempted connection as well as successful completion of client authentication. 
+  This can be useful in troubleshooting issues and help in determining any unusual connection attempts to the server.
   By default, "log_connections" is "off".
 severity: high
 enabled: true
