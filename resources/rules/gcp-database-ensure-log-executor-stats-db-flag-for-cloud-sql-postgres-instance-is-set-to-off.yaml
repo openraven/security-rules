@@ -3,11 +3,11 @@ id: bacfb48f-ac5a-49f2-b829-aabb5328680b
 refId: gcp-database-ensure-log-executor-stats-db-flag-for-cloud-sql-postgres-instance-is-set-to-off
 type: asset
 name: >
-  Ensure 'log_executor_stats' database flag for Cloud SQL PostgreSQL instance is set to 'off'
+  The "log_executor_stats" database flag for Cloud SQL PostgreSQL instance is set to "on"
 description: >
-  The log_executor_stats flag enables a crude profiling method for logging PostgreSQL executor performance statistics
+  The "log_executor_stats" flag enables a crude profiling method for logging PostgreSQL executor performance statistics,
   which even though can be useful for troubleshooting, it may increase the amount of logs significantly and have performance overhead.
-  By default log_executor_stats is off.
+  By default "log_executor_stats" flag is off.
 severity: medium
 enabled: true
 sql: >
