@@ -7,7 +7,7 @@ description: >
   By default, connecting to serial ports is not enabled. The interactive serial console does not support IP-based access restrictions such as IP whitelists.
   If you enable the interactive serial console on an instance, clients can attempt to connect to that instance from any IP address.
   This allows anybody to connect to that instance if they know the correct SSH key, username, project ID, zone, and instance name.
-  Therefore interactive serial console support should be disabled.
+  Therefore, best practice recommends that interactive serial console support should be disabled.
 severity: high
 enabled: true
 sql: >
