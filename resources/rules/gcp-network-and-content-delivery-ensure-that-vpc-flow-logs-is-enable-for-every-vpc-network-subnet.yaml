@@ -3,11 +3,10 @@ id: ce3190cf-f57f-4a70-be56-9857459d43ed
 refId: gcp-network-and-content-delivery-ensure-that-vpc-flow-logs-is-enable-for-every-vpc-network-subnet
 type: asset
 name: >
-  Ensure that VPC Flow Logs is enabled for every subnet in a VPC Network
+  VPC Flow Logs are not enabled for every subnet in a VPC Network
 description: >
-  Flow Logs is a feature that enables users to capture information about the IP traffic going to and from network interfaces in the organization's VPC Subnets.
-  Once a flow log is created, the user can view and retrieve its data in Stackdriver Logging.
-  It is recommended that Flow Logs be enabled for every business-critical VPC subnet.
+  Flow Logs is a feature that enables users to capture information about the IP traffic going to and from network interfaces in the organization's VPC subnets.
+  It is recommended that Flow Logs be enabled for all business-critical VPC subnets.
 severity: high
 enabled: true
 sql: >
