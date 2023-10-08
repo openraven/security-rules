@@ -10,9 +10,6 @@ This repository is packaged into a Maven artifact identified as:
 The top level resources folder is to adhere to the Maven convention for resource files, the folder structure within
 matches the pre-existing structure defined for rule repositories.
 
-See https://docs.openraven.com/docs/overview-10 for documentation on writing rules for Magpie.
-
-
 ## Rule Validation
 
 To run a rule validation using the SecurityRuleValidator in Magpie core against security rules in Github:
