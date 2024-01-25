@@ -2,8 +2,7 @@ id: 3111574f-4af8-4fac-bd68-839f9f8d6477
 refId: gcp-iam-and-security-iam-project-roles
 type: asset
 name: >
-  IAM users are assigned the Service Account User or
-  Service Account Token Creator roles at project level
+  IAM users are assigned the Service Account User or Service Account Token Creator roles at project level
 description: >
   It is recommended to assign the Service Account User (iam.serviceAccountUser) and
   Service Account Token Creator (iam.serviceAccountTokenCreator) roles to a user for
